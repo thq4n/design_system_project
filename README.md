@@ -1,16 +1,28 @@
-# design_system_project
+# Flutter Design System Project
 
-A new Flutter project.
+This project is a **Design System** built with **Flutter**. It provides a modular structure that includes reusable components, design tokens, and theming to maintain consistency and scalability across Flutter applications.
+
+## Project Structure
+
+The project is organized into several key modules:
+
+- **design_system_core**: Contains design tokens (colors, typography, spacing).
+- **components**: Reusable UI components like buttons, inputs, checkboxes, etc.
+- **theme**: Manages global styling and themes for the app.
+- **utils**: Contains helper functions and utilities.
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+To get started with this project, follow the steps below:
 
-A few resources to get you started if this is your first Flutter project:
+### Prerequisites
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+Make sure you have Flutter installed. You can check the official Flutter installation guide for detailed instructions:
+[Flutter Installation](https://flutter.dev/docs/get-started/install)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+### Installing
+
+1. Clone this repository:
+   ```bash
+   git clone https://github.com/yourusername/flutter_design_system_project.git
+   cd flutter_design_system_project
