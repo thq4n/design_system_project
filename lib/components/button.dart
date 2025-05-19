@@ -1,4 +1,5 @@
 // lib/components/button.dart
+
 import 'package:flutter/material.dart';
 
 class CustomButton extends StatelessWidget {
@@ -13,7 +14,7 @@ class CustomButton extends StatelessWidget {
       style: ElevatedButton.styleFrom(
           // backgroundColor: DesignColors.primaryColor,
           ),
-      onPressed: () => onPressed(),
+      onPressed: () => onPressed.call(),
       child: Text(text),
     );
   }

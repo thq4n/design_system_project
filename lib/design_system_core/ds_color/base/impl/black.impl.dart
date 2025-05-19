@@ -5,29 +5,29 @@ class _DSBlackColor extends DSColor {
 
   // Black color shades from darkest to lightest
   @override
-  DSColor get shade950 => _DSBlackColor(0xFF000000); // Pure black
+  DSColor get shade950 => const _DSBlackColor(0xFF000000); // Pure black
   @override
-  DSColor get shade900 => _DSBlackColor(0xFF141414);
+  DSColor get shade900 => const _DSBlackColor(0xFF141414);
   @override
-  DSColor get shade800 => _DSBlackColor(0xFF292929);
+  DSColor get shade800 => const _DSBlackColor(0xFF292929);
   @override
-  DSColor get shade700 => _DSBlackColor(0xFF3D3D3D);
+  DSColor get shade700 => const _DSBlackColor(0xFF3D3D3D);
   @override
-  DSColor get shade600 => _DSBlackColor(0xFF525252);
+  DSColor get shade600 => const _DSBlackColor(0xFF525252);
   @override
-  DSColor get shade500 => _DSBlackColor(0xFF666666);
+  DSColor get shade500 => const _DSBlackColor(0xFF666666);
 
   // Black color tints (getting lighter)
   @override
-  DSColor get tint400 => _DSBlackColor(0xFF808080);
+  DSColor get tint400 => const _DSBlackColor(0xFF808080);
   @override
-  DSColor get tint300 => _DSBlackColor(0xFF999999);
+  DSColor get tint300 => const _DSBlackColor(0xFF999999);
   @override
-  DSColor get tint200 => _DSBlackColor(0xFFB3B3B3);
+  DSColor get tint200 => const _DSBlackColor(0xFFB3B3B3);
   @override
-  DSColor get tint100 => _DSBlackColor(0xFFCCCCCC);
+  DSColor get tint100 => const _DSBlackColor(0xFFCCCCCC);
   @override
-  DSColor get tint50 => _DSBlackColor(0xFFE6E6E6);
+  DSColor get tint50 => const _DSBlackColor(0xFFE6E6E6);
 
   // You might want to add a more semantic name for the primary shade
   @override

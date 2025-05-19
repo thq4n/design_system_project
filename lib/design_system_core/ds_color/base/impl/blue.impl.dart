@@ -4,27 +4,27 @@ class _DSBlueColor extends DSColor {
   const _DSBlueColor([super.value = 0xFF2970FF]);
 
   @override
-  DSColor get shade950 => _DSBlueColor(0xFF002266);
+  DSColor get shade950 => const _DSBlueColor(0xFF002266);
   @override
-  DSColor get shade900 => _DSBlueColor(0xFF00359E);
+  DSColor get shade900 => const _DSBlueColor(0xFF00359E);
   @override
-  DSColor get shade800 => _DSBlueColor(0xFF0040C1);
+  DSColor get shade800 => const _DSBlueColor(0xFF0040C1);
   @override
-  DSColor get shade700 => _DSBlueColor(0xFF004EEB);
+  DSColor get shade700 => const _DSBlueColor(0xFF004EEB);
   @override
-  DSColor get shade600 => _DSBlueColor(0xFF155EEF);
+  DSColor get shade600 => const _DSBlueColor(0xFF155EEF);
   @override
-  DSColor get shade500 => _DSBlueColor(0xFF2970FF); // Primary Blue
+  DSColor get shade500 => const _DSBlueColor(0xFF2970FF); // Primary Blue
   @override
-  DSColor get tint400 => _DSBlueColor(0xFF528BFF);
+  DSColor get tint400 => const _DSBlueColor(0xFF528BFF);
   @override
-  DSColor get tint300 => _DSBlueColor(0xFF84ADFF);
+  DSColor get tint300 => const _DSBlueColor(0xFF84ADFF);
   @override
-  DSColor get tint200 => _DSBlueColor(0xFFB2CCFF);
+  DSColor get tint200 => const _DSBlueColor(0xFFB2CCFF);
   @override
-  DSColor get tint100 => _DSBlueColor(0xFFD1E0FF);
+  DSColor get tint100 => const _DSBlueColor(0xFFD1E0FF);
   @override
-  DSColor get tint50 => _DSBlueColor(0xFFEFF4FF);
+  DSColor get tint50 => const _DSBlueColor(0xFFEFF4FF);
 
   @override
   DSColor get primary => shade500;

@@ -4,27 +4,27 @@ class _DSGreenColor extends DSColor {
   const _DSGreenColor([super.value = 0xFF17B26A]);
 
   @override
-  DSColor get shade950 => _DSGreenColor(0xFF053321);
+  DSColor get shade950 => const _DSGreenColor(0xFF053321);
   @override
-  DSColor get shade900 => _DSGreenColor(0xFF074D31);
+  DSColor get shade900 => const _DSGreenColor(0xFF074D31);
   @override
-  DSColor get shade800 => _DSGreenColor(0xFF085D3A);
+  DSColor get shade800 => const _DSGreenColor(0xFF085D3A);
   @override
-  DSColor get shade700 => _DSGreenColor(0xFF067647);
+  DSColor get shade700 => const _DSGreenColor(0xFF067647);
   @override
-  DSColor get shade600 => _DSGreenColor(0xFF079455);
+  DSColor get shade600 => const _DSGreenColor(0xFF079455);
   @override
-  DSColor get shade500 => _DSGreenColor(0xFF17B26A); // Primary Green
+  DSColor get shade500 => const _DSGreenColor(0xFF17B26A); // Primary Green
   @override
-  DSColor get tint400 => _DSGreenColor(0xFF47CD89);
+  DSColor get tint400 => const _DSGreenColor(0xFF47CD89);
   @override
-  DSColor get tint300 => _DSGreenColor(0xFF75E0A7);
+  DSColor get tint300 => const _DSGreenColor(0xFF75E0A7);
   @override
-  DSColor get tint200 => _DSGreenColor(0xFFABEFC6);
+  DSColor get tint200 => const _DSGreenColor(0xFFABEFC6);
   @override
-  DSColor get tint100 => _DSGreenColor(0xFFDCFAE8);
+  DSColor get tint100 => const _DSGreenColor(0xFFDCFAE8);
   @override
-  DSColor get tint50 => _DSGreenColor(0xFFECFDF3);
+  DSColor get tint50 => const _DSGreenColor(0xFFECFDF3);
 
   @override
   DSColor get primary => shade500;
