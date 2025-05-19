@@ -1,3 +1,5 @@
+import '../ds_letter_spacing/ds_letter_spacing_core.dart';
+
 part 'base/ds_font_size.dart';
 part 'usage/ds_font_sizes.dart';
 part 'usage/impl/ds_font_sizes.impl.dart';
