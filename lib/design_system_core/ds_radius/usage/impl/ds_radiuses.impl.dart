@@ -1,6 +1,6 @@
 part of '../../ds_radius_core.dart';
 
-class DSRadiuss extends _DSRadiuses {
+class DSRadiuses extends _DSRadiuses {
   static DSRadius get roundedNone => const DSRadiusRoundedNone();
   static DSRadius get roundedSm => const DSRadiusRoundedSm();
   static DSRadius get roundedMd => const DSRadiusRoundedMd();
