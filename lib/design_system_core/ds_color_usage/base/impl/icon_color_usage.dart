@@ -1,6 +1,6 @@
 // ignore_for_file: unused_element
 
-part of '../../../ds_colors_core.dart';
+part of '../../ds_color_usage_core.dart';
 
 class _IconColorUsage extends ColorUsage {
   const _IconColorUsage();

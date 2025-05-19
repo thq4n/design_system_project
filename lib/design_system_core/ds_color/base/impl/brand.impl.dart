@@ -1,4 +1,4 @@
-part of '../../../ds_colors_core.dart';
+part of '../../ds_colors_core.dart';
 
 class _DSBrandColor extends DSColor {
   const _DSBrandColor([super.value = 0xFFED2024]);

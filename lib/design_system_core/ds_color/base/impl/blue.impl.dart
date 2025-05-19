@@ -1,4 +1,4 @@
-part of '../../../ds_colors_core.dart';
+part of '../../ds_colors_core.dart';
 
 class _DSBlueColor extends DSColor {
   const _DSBlueColor([super.value = 0xFF2970FF]);

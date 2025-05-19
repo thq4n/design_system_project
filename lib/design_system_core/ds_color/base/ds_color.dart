@@ -1,4 +1,4 @@
-part of '../../ds_colors_core.dart';
+part of '../ds_colors_core.dart';
 
 abstract class DSColor extends Color {
   const DSColor(super.value);

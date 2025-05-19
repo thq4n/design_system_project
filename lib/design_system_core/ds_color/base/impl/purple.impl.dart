@@ -1,4 +1,4 @@
-part of '../../../ds_colors_core.dart';
+part of '../../ds_colors_core.dart';
 
 class _DSPurpleColor extends DSColor {
   const _DSPurpleColor([super.value = 0xFFA855F7]);

@@ -1,4 +1,4 @@
-part of '../../../ds_colors_core.dart';
+part of '../../ds_colors_core.dart';
 
 class DSColors extends _DSColors {
   const DSColors();
