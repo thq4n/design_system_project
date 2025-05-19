@@ -1,4 +1,5 @@
 import '../ds_letter_spacing/ds_letter_spacing_core.dart';
+import '../ds_line_height/ds_line_height_core.dart';
 
 part 'base/ds_font_size.dart';
 part 'usage/ds_font_sizes.dart';

@@ -4,7 +4,7 @@ class _DSTextBase extends DSFontSize {
   _DSTextBase()
       : super(
           fontSize: 16,
-          lineHeight: 24,
+          lineHeight: DSLineHeights.three,
           letterSpacing: DSLetterSpacings.seven,
         );
 }

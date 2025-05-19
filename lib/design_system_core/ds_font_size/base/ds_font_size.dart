@@ -2,7 +2,7 @@ part of '../ds_font_size_core.dart';
 
 abstract class DSFontSize {
   final double fontSize;
-  final double lineHeight;
+  final DSLineHeight lineHeight;
   final DSLetterSpacing letterSpacing;
 
   const DSFontSize({

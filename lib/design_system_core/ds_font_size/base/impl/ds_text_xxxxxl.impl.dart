@@ -4,7 +4,7 @@ class _DSTextXXXXXl extends DSFontSize {
   _DSTextXXXXXl()
       : super(
           fontSize: 40,
-          lineHeight: 48,
+          lineHeight: DSLineHeights.eight,
           letterSpacing: DSLetterSpacings.one,
         );
 }
