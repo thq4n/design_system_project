@@ -1,0 +1,12 @@
+part 'base/impl/ds_letter_spacing_one.dart';
+part 'base/impl/ds_letter_spacing_two.dart';
+part 'base/impl/ds_letter_spacing_three.dart';
+part 'base/impl/ds_letter_spacing_four.dart';
+part 'base/impl/ds_letter_spacing_five.dart';
+part 'base/impl/ds_letter_spacing_six.dart';
+part 'base/impl/ds_letter_spacing_seven.dart';
+part 'base/impl/ds_letter_spacing_eight.dart';
+part 'base/impl/ds_letter_spacing.impl.dart';
+part 'base/ds_letter_spacing.dart';
+part 'usage/impl/ds_letter_spacings.impl.dart';
+part 'usage/ds_letter_spacings.dart';
