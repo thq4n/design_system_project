@@ -2,6 +2,7 @@
 import 'package:flutter/material.dart';
 
 import 'components/button.dart';
+import 'design_system_core/ds_icon/ds_icon_core.dart';
 import 'theme/app_theme.dart';
 
 void main() {
@@ -26,14 +27,21 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    const icon = const Icon(DSIcons.dcubeBold);
+
     return Scaffold(
       appBar: AppBar(title: const Text('Design System Example')),
       body: Center(
-        child: CustomButton(
-          text: 'Press Me',
-          onPressed: () {
-            // print('Button Pressed!');
-          },
+        child: Column(
+          children: [
+            icon,
+            CustomButton(
+              text: 'Press Me',
+              onPressed: () {
+                print(icon.toStringDeep());
+              },
+            ),
+          ],
         ),
       ),
     );
