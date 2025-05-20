@@ -6,7 +6,6 @@ part 'base/impl/ds_letter_spacing_five.impl.dart';
 part 'base/impl/ds_letter_spacing_six.impl.dart';
 part 'base/impl/ds_letter_spacing_seven.impl.dart';
 part 'base/impl/ds_letter_spacing_eight.impl.dart';
-part 'base/impl/ds_letter_spacing.impl.dart';
 part 'base/ds_letter_spacing.dart';
 part 'usage/impl/ds_letter_spacings.impl.dart';
 part 'usage/ds_letter_spacings.dart';
