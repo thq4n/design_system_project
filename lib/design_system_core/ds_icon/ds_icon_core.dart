@@ -1,5 +1,7 @@
 import 'package:flutter/widgets.dart';
 
+import '../../gen/fonts.gen.dart';
+
 part 'base/ds_icon.dart';
 
 part 'base/impl/ds_icon_bold.impl.dart';

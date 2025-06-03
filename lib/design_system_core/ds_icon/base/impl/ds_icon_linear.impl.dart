@@ -5,5 +5,5 @@ part of '../../ds_icon_core.dart';
 class _DSIconLinear extends DSIcon {
   const _DSIconLinear(
     super.codePoint,
-  ) : super(fontFamily: 'IconsaxPlusLinear');
+  ) : super(fontFamily: Fonts.iconsaxPlusLinear);
 }

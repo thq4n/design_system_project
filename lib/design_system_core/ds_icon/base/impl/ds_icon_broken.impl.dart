@@ -5,5 +5,5 @@ part of '../../ds_icon_core.dart';
 class _DSIconBroken extends DSIcon {
   const _DSIconBroken(
     super.codePoint,
-  ) : super(fontFamily: 'IconsaxPlusBroken');
+  ) : super(fontFamily: Fonts.iconsaxPlusBroken);
 }
