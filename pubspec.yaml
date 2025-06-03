@@ -34,6 +34,9 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
+  
+  flutter_gen: ^5.10.0
+  build_runner: ^2.4.15
 
   # The "flutter_lints" package below contains a set of recommended lints to
   # encourage good coding practices. The lint set provided by the package is
@@ -56,10 +59,8 @@ flutter:
   # To add assets to your application, add an assets section, like this:
   assets:
     - assets/
-    - fonts/
-    - fonts/IconsaxPlusBold.ttf
-    - fonts/IconsaxPlusBroken.ttf
-    - fonts/IconsaxPlusLinear.ttf
+    - assets/empty_state/
+
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images
@@ -75,13 +76,101 @@ flutter:
   fonts:
     - family: IconsaxPlusBold
       fonts:
-        - asset: fonts/IconsaxPlusBold.ttf
+        - asset: assets/fonts/Iconsax/IconsaxPlusBold.ttf
     - family: IconsaxPlusBroken
       fonts:
-        - asset: fonts/IconsaxPlusBroken.ttf
+        - asset: assets/fonts/Iconsax/IconsaxPlusBroken.ttf
     - family: IconsaxPlusLinear
       fonts:
-        - asset: fonts/IconsaxPlusLinear.ttf
+        - asset: assets/fonts/Iconsax/IconsaxPlusLinear.ttf
+    - family: SF Pro Display # This is the name you'll use in your TextStyle
+      fonts:
+        - asset: assets/fonts/SF-Pro-Display/SF-Pro-Display-Black.otf
+          weight: 900 # Corresponds to FontWeight.w900 (Black)
+        - asset: assets/fonts/SF-Pro-Display/SF-Pro-Display-BlackItalic.otf
+          weight: 900
+          style: italic
+        - asset: assets/fonts/SF-Pro-Display/SF-Pro-Display-Bold.otf
+          weight: 700 # Corresponds to FontWeight.w700 (Bold)
+        - asset: assets/fonts/SF-Pro-Display/SF-Pro-Display-BoldItalic.otf
+          weight: 700
+          style: italic
+        - asset: assets/fonts/SF-Pro-Display/SF-Pro-Display-Heavy.otf
+          weight: 800 # Corresponds to FontWeight.w800 (ExtraBold/Heavy)
+        - asset: assets/fonts/SF-Pro-Display/SF-Pro-Display-HeavyItalic.otf
+          weight: 800
+          style: italic
+        - asset: assets/fonts/SF-Pro-Display/SF-Pro-Display-Light.otf
+          weight: 300 # Corresponds to FontWeight.w300 (Light)
+        - asset: assets/fonts/SF-Pro-Display/SF-Pro-Display-LightItalic.otf
+          weight: 300
+          style: italic
+        - asset: assets/fonts/SF-Pro-Display/SF-Pro-Display-Medium.otf
+          weight: 500 # Corresponds to FontWeight.w500 (Medium)
+        - asset: assets/fonts/SF-Pro-Display/SF-Pro-Display-MediumItalic.otf
+          weight: 500
+          style: italic
+        - asset: assets/fonts/SF-Pro-Display/SF-Pro-Display-Regular.otf
+          weight: 400 # Corresponds to FontWeight.w400 (Regular/Normal)
+        - asset: assets/fonts/SF-Pro-Display/SF-Pro-Display-RegularItalic.otf
+          weight: 400
+          style: italic
+        - asset: assets/fonts/SF-Pro-Display/SF-Pro-Display-Semibold.otf
+          weight: 600 # Corresponds to FontWeight.w600 (Semibold)
+        - asset: assets/fonts/SF-Pro-Display/SF-Pro-Display-SemiboldItalic.otf
+          weight: 600
+          style: italic
+        - asset: assets/fonts/SF-Pro-Display/SF-Pro-Display-Thin.otf
+          weight: 100 # Corresponds to FontWeight.w100 (Thin)
+        - asset: assets/fonts/SF-Pro-Display/SF-Pro-Display-ThinItalic.otf
+          weight: 100
+          style: italic
+        - asset: assets/fonts/SF-Pro-Display/SF-Pro-Display-Ultralight.otf
+          weight: 200 # Corresponds to FontWeight.w200 (ExtraLight/Ultralight)
+        - asset: assets/fonts/SF-Pro-Display/SF-Pro-Display-UltralightItalic.otf
+          weight: 200
+          style: italic
   
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/to/font-from-package
+
+# flutter_gen: A code generator for assets, fonts, colors and more. It generates code to help you access assets type-safely.
+flutter_gen:
+  output: lib/gen/ # Optional (default: lib/gen/)
+  line_length: 80 # Optional (default: 80)
+
+  # Optional
+  integrations:
+    image: true
+    flutter_svg: true
+    rive: true
+    lottie: true
+  
+  assets:
+    # Optional
+    enabled: true
+    # Optional
+    outputs:
+      # Optional
+      # Set to true if you want this package to be a package dependency
+      # See: https://flutter.dev/docs/development/ui/assets-and-images#from-packages
+      package_parameter_enabled: false
+      # Optional
+      # Available values:
+      # - camel-case
+      # - snake-case
+      # - dot-delimiter
+      style: dot-delimiter
+      class_name: Assets
+    exclude:
+      - "**/@2x/**"
+      - "**/@3x/**"
+      - "**/*@2x.*"
+      - "**/*@3x.*"
+
+  fonts:
+    # Optional
+    enabled: true
+    # Optional
+    outputs:
+      class_name: Fonts
