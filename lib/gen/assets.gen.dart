@@ -9,6 +9,34 @@
 
 import 'package:flutter/widgets.dart';
 
+class $AssetsBrandingGen {
+  const $AssetsBrandingGen();
+
+  /// File path: assets/branding/ic_logo_alone_red.png
+  AssetGenImage get icLogoAloneRed =>
+      const AssetGenImage('assets/branding/ic_logo_alone_red.png');
+
+  /// File path: assets/branding/ic_logo_alone_white.png
+  AssetGenImage get icLogoAloneWhite =>
+      const AssetGenImage('assets/branding/ic_logo_alone_white.png');
+
+  /// File path: assets/branding/ic_logo_full_red.png
+  AssetGenImage get icLogoFullRed =>
+      const AssetGenImage('assets/branding/ic_logo_full_red.png');
+
+  /// File path: assets/branding/ic_logo_full_white.png
+  AssetGenImage get icLogoFullWhite =>
+      const AssetGenImage('assets/branding/ic_logo_full_white.png');
+
+  /// List of all assets
+  List<AssetGenImage> get values => [
+    icLogoAloneRed,
+    icLogoAloneWhite,
+    icLogoFullRed,
+    icLogoFullWhite,
+  ];
+}
+
 class $AssetsEmptyStateGen {
   const $AssetsEmptyStateGen();
 
@@ -40,6 +68,7 @@ class $AssetsEmptyStateGen {
 class Assets {
   const Assets._();
 
+  static const $AssetsBrandingGen branding = $AssetsBrandingGen();
   static const $AssetsEmptyStateGen emptyState = $AssetsEmptyStateGen();
 }
 
