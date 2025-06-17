@@ -1,10 +1,11 @@
 part of '../ds_icon_core.dart';
 
-abstract class DSIcon extends IconData {
-  const DSIcon(
-    super.codePoint, {
-    super.fontFamily,
-    super.matchTextDirection,
-    super.fontFamilyFallback,
+abstract class DSIcon<T> {
+  final T library;
+  final _DSIconTypeConstants type;
+
+  const DSIcon({
+    required this.library,
+    required this.type,
   });
 }
