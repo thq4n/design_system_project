@@ -1,3 +1,5 @@
+import 'package:flutter/widgets.dart';
+
 part 'base/ds_font_weight.dart';
 part 'usage/ds_font_weights.dart';
 part 'usage/impl/ds_font_weights.impl.dart';

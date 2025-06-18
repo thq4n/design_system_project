@@ -1,6 +1,6 @@
 part of '../../ds_spacing_core.dart';
 
-class DSRadiuses extends _DSRadiuses {
+class DSSpacings extends _DSSpacings {
   static double get none => 0.0;
   static double get xxs => 4.0;
   static double get xs => 8.0;

@@ -1,5 +1,5 @@
 part of '../../ds_font_weight_core.dart';
 
 class _DSFontWeightBold extends DSFontWeight {
-  const _DSFontWeightBold() : super(value: 700);
+  const _DSFontWeightBold() : super(value: FontWeight.w700);
 }
