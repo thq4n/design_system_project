@@ -68,6 +68,279 @@ class $AssetsEmptyStateGen {
   ];
 }
 
+class $AssetsSocialGen {
+  const $AssetsSocialGen();
+
+  /// File path: assets/social/ic_apple_negative.svg
+  SvgGenImage get icAppleNegative =>
+      const SvgGenImage('assets/social/ic_apple_negative.svg');
+
+  /// File path: assets/social/ic_apple_original.svg
+  SvgGenImage get icAppleOriginal =>
+      const SvgGenImage('assets/social/ic_apple_original.svg');
+
+  /// File path: assets/social/ic_clubhouse_negative.svg
+  SvgGenImage get icClubhouseNegative =>
+      const SvgGenImage('assets/social/ic_clubhouse_negative.svg');
+
+  /// File path: assets/social/ic_clubhouse_original.svg
+  SvgGenImage get icClubhouseOriginal =>
+      const SvgGenImage('assets/social/ic_clubhouse_original.svg');
+
+  /// File path: assets/social/ic_discord_negative.svg
+  SvgGenImage get icDiscordNegative =>
+      const SvgGenImage('assets/social/ic_discord_negative.svg');
+
+  /// File path: assets/social/ic_discord_original.svg
+  SvgGenImage get icDiscordOriginal =>
+      const SvgGenImage('assets/social/ic_discord_original.svg');
+
+  /// File path: assets/social/ic_dribbble_negative.svg
+  SvgGenImage get icDribbbleNegative =>
+      const SvgGenImage('assets/social/ic_dribbble_negative.svg');
+
+  /// File path: assets/social/ic_dribbble_original.svg
+  SvgGenImage get icDribbbleOriginal =>
+      const SvgGenImage('assets/social/ic_dribbble_original.svg');
+
+  /// File path: assets/social/ic_facebook_negative.svg
+  SvgGenImage get icFacebookNegative =>
+      const SvgGenImage('assets/social/ic_facebook_negative.svg');
+
+  /// File path: assets/social/ic_facebook_original.svg
+  SvgGenImage get icFacebookOriginal =>
+      const SvgGenImage('assets/social/ic_facebook_original.svg');
+
+  /// File path: assets/social/ic_figma_negative.svg
+  SvgGenImage get icFigmaNegative =>
+      const SvgGenImage('assets/social/ic_figma_negative.svg');
+
+  /// File path: assets/social/ic_figma_original.svg
+  SvgGenImage get icFigmaOriginal =>
+      const SvgGenImage('assets/social/ic_figma_original.svg');
+
+  /// File path: assets/social/ic_github_negative.svg
+  SvgGenImage get icGithubNegative =>
+      const SvgGenImage('assets/social/ic_github_negative.svg');
+
+  /// File path: assets/social/ic_github_original.svg
+  SvgGenImage get icGithubOriginal =>
+      const SvgGenImage('assets/social/ic_github_original.svg');
+
+  /// File path: assets/social/ic_google_negative.svg
+  SvgGenImage get icGoogleNegative =>
+      const SvgGenImage('assets/social/ic_google_negative.svg');
+
+  /// File path: assets/social/ic_google_original.svg
+  SvgGenImage get icGoogleOriginal =>
+      const SvgGenImage('assets/social/ic_google_original.svg');
+
+  /// File path: assets/social/ic_instagram_negative.svg
+  SvgGenImage get icInstagramNegative =>
+      const SvgGenImage('assets/social/ic_instagram_negative.svg');
+
+  /// File path: assets/social/ic_instagram_original.svg
+  SvgGenImage get icInstagramOriginal =>
+      const SvgGenImage('assets/social/ic_instagram_original.svg');
+
+  /// File path: assets/social/ic_linkedin_negative.svg
+  SvgGenImage get icLinkedinNegative =>
+      const SvgGenImage('assets/social/ic_linkedin_negative.svg');
+
+  /// File path: assets/social/ic_linkedin_original.svg
+  SvgGenImage get icLinkedinOriginal =>
+      const SvgGenImage('assets/social/ic_linkedin_original.svg');
+
+  /// File path: assets/social/ic_medium_negative.svg
+  SvgGenImage get icMediumNegative =>
+      const SvgGenImage('assets/social/ic_medium_negative.svg');
+
+  /// File path: assets/social/ic_medium_original.svg
+  SvgGenImage get icMediumOriginal =>
+      const SvgGenImage('assets/social/ic_medium_original.svg');
+
+  /// File path: assets/social/ic_messenger_negative.svg
+  SvgGenImage get icMessengerNegative =>
+      const SvgGenImage('assets/social/ic_messenger_negative.svg');
+
+  /// File path: assets/social/ic_messenger_original.svg
+  SvgGenImage get icMessengerOriginal =>
+      const SvgGenImage('assets/social/ic_messenger_original.svg');
+
+  /// File path: assets/social/ic_pinterest_negative.svg
+  SvgGenImage get icPinterestNegative =>
+      const SvgGenImage('assets/social/ic_pinterest_negative.svg');
+
+  /// File path: assets/social/ic_pinterest_original.svg
+  SvgGenImage get icPinterestOriginal =>
+      const SvgGenImage('assets/social/ic_pinterest_original.svg');
+
+  /// File path: assets/social/ic_reddit_negative.svg
+  SvgGenImage get icRedditNegative =>
+      const SvgGenImage('assets/social/ic_reddit_negative.svg');
+
+  /// File path: assets/social/ic_reddit_original.svg
+  SvgGenImage get icRedditOriginal =>
+      const SvgGenImage('assets/social/ic_reddit_original.svg');
+
+  /// File path: assets/social/ic_signal_negative.svg
+  SvgGenImage get icSignalNegative =>
+      const SvgGenImage('assets/social/ic_signal_negative.svg');
+
+  /// File path: assets/social/ic_signal_original.svg
+  SvgGenImage get icSignalOriginal =>
+      const SvgGenImage('assets/social/ic_signal_original.svg');
+
+  /// File path: assets/social/ic_snapchat_negative.svg
+  SvgGenImage get icSnapchatNegative =>
+      const SvgGenImage('assets/social/ic_snapchat_negative.svg');
+
+  /// File path: assets/social/ic_snapchat_original.svg
+  SvgGenImage get icSnapchatOriginal =>
+      const SvgGenImage('assets/social/ic_snapchat_original.svg');
+
+  /// File path: assets/social/ic_spotify_negative.svg
+  SvgGenImage get icSpotifyNegative =>
+      const SvgGenImage('assets/social/ic_spotify_negative.svg');
+
+  /// File path: assets/social/ic_spotify_original.svg
+  SvgGenImage get icSpotifyOriginal =>
+      const SvgGenImage('assets/social/ic_spotify_original.svg');
+
+  /// File path: assets/social/ic_telegram_negative.svg
+  SvgGenImage get icTelegramNegative =>
+      const SvgGenImage('assets/social/ic_telegram_negative.svg');
+
+  /// File path: assets/social/ic_telegram_original.svg
+  SvgGenImage get icTelegramOriginal =>
+      const SvgGenImage('assets/social/ic_telegram_original.svg');
+
+  /// File path: assets/social/ic_threads_negative.svg
+  SvgGenImage get icThreadsNegative =>
+      const SvgGenImage('assets/social/ic_threads_negative.svg');
+
+  /// File path: assets/social/ic_threads_original.svg
+  SvgGenImage get icThreadsOriginal =>
+      const SvgGenImage('assets/social/ic_threads_original.svg');
+
+  /// File path: assets/social/ic_tiktok_negative.svg
+  SvgGenImage get icTiktokNegative =>
+      const SvgGenImage('assets/social/ic_tiktok_negative.svg');
+
+  /// File path: assets/social/ic_tiktok_original.svg
+  SvgGenImage get icTiktokOriginal =>
+      const SvgGenImage('assets/social/ic_tiktok_original.svg');
+
+  /// File path: assets/social/ic_tumblr_negative.svg
+  SvgGenImage get icTumblrNegative =>
+      const SvgGenImage('assets/social/ic_tumblr_negative.svg');
+
+  /// File path: assets/social/ic_tumblr_original.svg
+  SvgGenImage get icTumblrOriginal =>
+      const SvgGenImage('assets/social/ic_tumblr_original.svg');
+
+  /// File path: assets/social/ic_twitch_negative.svg
+  SvgGenImage get icTwitchNegative =>
+      const SvgGenImage('assets/social/ic_twitch_negative.svg');
+
+  /// File path: assets/social/ic_twitch_original.svg
+  SvgGenImage get icTwitchOriginal =>
+      const SvgGenImage('assets/social/ic_twitch_original.svg');
+
+  /// File path: assets/social/ic_vk_negative.svg
+  SvgGenImage get icVkNegative =>
+      const SvgGenImage('assets/social/ic_vk_negative.svg');
+
+  /// File path: assets/social/ic_vk_original.svg
+  SvgGenImage get icVkOriginal =>
+      const SvgGenImage('assets/social/ic_vk_original.svg');
+
+  /// File path: assets/social/ic_whatsapp_negative.svg
+  SvgGenImage get icWhatsappNegative =>
+      const SvgGenImage('assets/social/ic_whatsapp_negative.svg');
+
+  /// File path: assets/social/ic_whatsapp_original.svg
+  SvgGenImage get icWhatsappOriginal =>
+      const SvgGenImage('assets/social/ic_whatsapp_original.svg');
+
+  /// File path: assets/social/ic_x_twitter_negative.svg
+  SvgGenImage get icXTwitterNegative =>
+      const SvgGenImage('assets/social/ic_x_twitter_negative.svg');
+
+  /// File path: assets/social/ic_x_twitter_original.svg
+  SvgGenImage get icXTwitterOriginal =>
+      const SvgGenImage('assets/social/ic_x_twitter_original.svg');
+
+  /// File path: assets/social/ic_youtube_negative.svg
+  SvgGenImage get icYoutubeNegative =>
+      const SvgGenImage('assets/social/ic_youtube_negative.svg');
+
+  /// File path: assets/social/ic_youtube_original.svg
+  SvgGenImage get icYoutubeOriginal =>
+      const SvgGenImage('assets/social/ic_youtube_original.svg');
+
+  /// File path: assets/social/ic_zalo_original.svg
+  SvgGenImage get icZaloOriginal =>
+      const SvgGenImage('assets/social/ic_zalo_original.svg');
+
+  /// List of all assets
+  List<SvgGenImage> get values => [
+    icAppleNegative,
+    icAppleOriginal,
+    icClubhouseNegative,
+    icClubhouseOriginal,
+    icDiscordNegative,
+    icDiscordOriginal,
+    icDribbbleNegative,
+    icDribbbleOriginal,
+    icFacebookNegative,
+    icFacebookOriginal,
+    icFigmaNegative,
+    icFigmaOriginal,
+    icGithubNegative,
+    icGithubOriginal,
+    icGoogleNegative,
+    icGoogleOriginal,
+    icInstagramNegative,
+    icInstagramOriginal,
+    icLinkedinNegative,
+    icLinkedinOriginal,
+    icMediumNegative,
+    icMediumOriginal,
+    icMessengerNegative,
+    icMessengerOriginal,
+    icPinterestNegative,
+    icPinterestOriginal,
+    icRedditNegative,
+    icRedditOriginal,
+    icSignalNegative,
+    icSignalOriginal,
+    icSnapchatNegative,
+    icSnapchatOriginal,
+    icSpotifyNegative,
+    icSpotifyOriginal,
+    icTelegramNegative,
+    icTelegramOriginal,
+    icThreadsNegative,
+    icThreadsOriginal,
+    icTiktokNegative,
+    icTiktokOriginal,
+    icTumblrNegative,
+    icTumblrOriginal,
+    icTwitchNegative,
+    icTwitchOriginal,
+    icVkNegative,
+    icVkOriginal,
+    icWhatsappNegative,
+    icWhatsappOriginal,
+    icXTwitterNegative,
+    icXTwitterOriginal,
+    icYoutubeNegative,
+    icYoutubeOriginal,
+    icZaloOriginal,
+  ];
+}
+
 class $AssetsVuesaxGen {
   const $AssetsVuesaxGen();
 
@@ -29780,8 +30053,11 @@ class $AssetsVuesaxGen {
 class Assets {
   const Assets._();
 
+  static const String package = 'design_system_project';
+
   static const $AssetsBrandingGen branding = $AssetsBrandingGen();
   static const $AssetsEmptyStateGen emptyState = $AssetsEmptyStateGen();
+  static const $AssetsSocialGen social = $AssetsSocialGen();
   static const $AssetsVuesaxGen vuesax = $AssetsVuesaxGen();
 }
 
@@ -29789,6 +30065,8 @@ class AssetGenImage {
   const AssetGenImage(this._assetName, {this.size, this.flavors = const {}});
 
   final String _assetName;
+
+  static const String package = 'design_system_project';
 
   final Size? size;
   final Set<String> flavors;
@@ -29813,7 +30091,8 @@ class AssetGenImage {
     bool matchTextDirection = false,
     bool gaplessPlayback = true,
     bool isAntiAlias = false,
-    String? package,
+    @Deprecated('Do not specify package for a generated library asset')
+    String? package = package,
     FilterQuality filterQuality = FilterQuality.medium,
     int? cacheWidth,
     int? cacheHeight,
@@ -29846,13 +30125,17 @@ class AssetGenImage {
     );
   }
 
-  ImageProvider provider({AssetBundle? bundle, String? package}) {
+  ImageProvider provider({
+    AssetBundle? bundle,
+    @Deprecated('Do not specify package for a generated library asset')
+    String? package = package,
+  }) {
     return AssetImage(_assetName, bundle: bundle, package: package);
   }
 
   String get path => _assetName;
 
-  String get keyName => _assetName;
+  String get keyName => 'packages/design_system_project/$_assetName';
 }
 
 class SvgGenImage {
@@ -29867,11 +30150,14 @@ class SvgGenImage {
   final Set<String> flavors;
   final bool _isVecFormat;
 
+  static const String package = 'design_system_project';
+
   _svg.SvgPicture svg({
     Key? key,
     bool matchTextDirection = false,
     AssetBundle? bundle,
-    String? package,
+    @Deprecated('Do not specify package for a generated library asset')
+    String? package = package,
     double? width,
     double? height,
     BoxFit fit = BoxFit.contain,
@@ -29924,5 +30210,5 @@ class SvgGenImage {
 
   String get path => _assetName;
 
-  String get keyName => _assetName;
+  String get keyName => 'packages/design_system_project/$_assetName';
 }

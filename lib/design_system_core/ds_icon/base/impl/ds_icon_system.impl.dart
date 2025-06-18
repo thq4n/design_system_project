@@ -6,6 +6,6 @@ class _DSIconSystem<T extends $AssetsVuesaxGen> extends DSIcon<T> {
   _DSIconSystem({required T library})
       : super(
           library: library,
-          type: _DSIconTypeConstants.system,
+          type: DSIconTypeConstants.system,
         );
 }

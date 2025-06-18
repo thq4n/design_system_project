@@ -1,8 +1,6 @@
 name: design_system_project
-description: "A new Flutter project."
-# The following line prevents the package from being accidentally published to
-# pub.dev using `flutter pub publish`. This is preferred for private packages.
-publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+description: "A Flutter design system package that provides a comprehensive set of UI components, styles, and assets for building consistent and beautiful Flutter applications."
+publish_to: 'none'  # Keep as none since we're using Git
 
 # The following defines the version and build number for your application.
 # A version number is three numbers separated by dots, like 1.2.43
@@ -19,7 +17,8 @@ publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 version: 1.0.0+1
 
 environment:
-  sdk: ^3.6.2
+  sdk: '>=3.6.2 <4.0.0'
+  flutter: ">=3.0.0"
 
 # Dependencies specify other packages that your package needs in order to work.
 # To automatically upgrade your package dependencies to the latest versions
@@ -63,6 +62,7 @@ flutter:
     - assets/empty_state/
     - assets/branding/
     - assets/vuesax/
+    - assets/social/
 
 
   # An image asset can refer to one or more resolution-specific "variants", see
@@ -157,7 +157,7 @@ flutter_gen:
       # Optional
       # Set to true if you want this package to be a package dependency
       # See: https://flutter.dev/docs/development/ui/assets-and-images#from-packages
-      package_parameter_enabled: false
+      package_parameter_enabled: true  # Changed to true for package publishing
       # Optional
       # Available values:
       # - camel-case
