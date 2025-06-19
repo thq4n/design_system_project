@@ -16,6 +16,7 @@ class DSAppTheme {
     textTheme: _textTheme,
     extensions: [
       DSTextThemeExtension(textTheme: _textTheme),
+      DsColorThemeExtension(),
     ],
   );
 

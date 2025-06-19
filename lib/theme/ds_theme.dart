@@ -9,3 +9,4 @@ part 'base/color_scheme/ds_color_scheme.dart';
 part 'base/typography/ds_text_theme.dart';
 
 part 'extensions/typography/ds_text_theme.ext.dart';
+part 'extensions/color/ds_color_theme.ext.dart';

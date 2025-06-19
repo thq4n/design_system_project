@@ -11,4 +11,8 @@ class DSColors extends _DSColors {
   static DSColor get purple => const _DSPurpleColor();
   static DSColor get white => const _DSWhiteColor();
   static DSColor get black => const _DSBlackColor();
+
+  DSColors lerp(DSColors? other, double t) {
+    return const DSColors();
+  }
 }
