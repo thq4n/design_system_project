@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 
 class Helpers {
   static double adjustFontSize(BuildContext context) {
-    double width = MediaQuery.of(context).size.width;
+    final double width = MediaQuery.of(context).size.width;
     if (width < 360) {
       return 12.0;
     } else if (width < 480) {

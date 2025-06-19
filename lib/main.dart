@@ -1,10 +1,12 @@
 // lib/main.dart
 import 'package:flutter/material.dart';
-import 'theme/app_theme.dart';
+
 import 'components/button.dart';
+import 'design_system_core/ds_icon/ds_icon_core.dart';
+import 'theme/app_theme.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -15,7 +17,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Design System Project',
       theme: AppTheme.lightTheme, // Sử dụng theme đã định nghĩa
-      home: HomePage(),
+      home: const HomePage(),
     );
   }
 }
@@ -25,14 +27,21 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    const icon = const Icon(DSIcons.dcubeBold);
+
     return Scaffold(
-      appBar: AppBar(title: Text('Design System Example')),
+      appBar: AppBar(title: const Text('Design System Example')),
       body: Center(
-        child: CustomButton(
-          text: 'Press Me',
-          onPressed: () {
-            print('Button Pressed!');
-          },
+        child: Column(
+          children: [
+            icon,
+            CustomButton(
+              text: 'Press Me',
+              onPressed: () {
+                print(icon.toStringDeep());
+              },
+            ),
+          ],
         ),
       ),
     );

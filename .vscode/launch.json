@@ -1,0 +1,11 @@
+{
+    "version": "1.0.0",
+    "configurations": [
+        {
+            "name": "Example",
+            "request": "launch",
+            "type": "dart",
+            "program": "${workspaceRoot}/example/lib/main.dart",
+        },
+    ]
+}
