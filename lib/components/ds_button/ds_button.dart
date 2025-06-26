@@ -180,6 +180,7 @@ class _DSButtonState extends DSStateBase<DSButton> {
                     // Let foregroundColor handle text color changes
                   ),
                   if (widget.suffixIcon != null) ...[
+                    SizedBox(width: widget.size.elementSpacing),
                     SizedBox(
                       width: widget.size.suffixIconSize,
                       height: widget.size.suffixIconSize,
@@ -189,7 +190,6 @@ class _DSButtonState extends DSStateBase<DSButton> {
                         componentTheme.pressedState.suffixIconColor,
                       ),
                     ),
-                    SizedBox(width: widget.size.elementSpacing),
                   ],
                 ],
               ),
