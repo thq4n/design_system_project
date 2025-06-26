@@ -6,7 +6,7 @@ extension DSStateBaseExt on DSStateBase {
   DSTextTheme get textTheme =>
       theme.extension<DSTextThemeExtension>()!.textTheme;
 
-  DSColors get themeColor => theme.extension<DsColorThemeExtension>()!.colors;
+  DSColors get colorTheme => theme.extension<DsColorThemeExtension>()!.colors;
 
   void hideKeyBoard() {
     return focusNode.requestFocus(FocusNode());

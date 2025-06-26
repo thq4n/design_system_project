@@ -2,14 +2,16 @@
 
 part of '../../ds_color_usage_core.dart';
 
-class _IconColorUsage extends ColorUsage {
-  const _IconColorUsage();
+class _DSIconColorUsage extends DSColorUsage {
+  const _DSIconColorUsage();
 
-  static DSColor get primary => DSColors.gray.shade700;
-  static DSColor get secondary => DSColors.gray.tint400;
-  static DSColor get tertiary => DSColors.gray.tint400;
-  static DSColor get brand => DSColors.brand.shade500;
-  static DSColor get disable => DSColors.gray.tint400;
-  static DSColor get white => DSColors.gray.tint50;
-  static DSColor get solid => DSColors.gray.shade950;
+  DSColors get colors => const DSColors();
+
+  DSColor get primary => colors.gray.shade700;
+  DSColor get secondary => colors.gray.tint400;
+  DSColor get tertiary => colors.gray.tint400;
+  DSColor get brand => colors.brand.shade500;
+  DSColor get disable => colors.gray.tint400;
+  DSColor get white => colors.gray.tint50;
+  DSColor get solid => colors.gray.shade950;
 }

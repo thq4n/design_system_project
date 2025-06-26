@@ -41,14 +41,14 @@ class DSTextStyle extends TextStyle {
           fontWeight: variant?.fontWeight,
           fontSize: size?.dsFontSize.fontSize,
           letterSpacing: size?.dsFontSize.letterSpacing.value,
-          height: size?.dsFontSize.lineHeight.value,
+          // height: size?.dsFontSize.lineHeight.value,
         );
 
   DSTextStyle.fromSize(DSTextStyleSize size)
       : super(
           fontSize: size.dsFontSize.fontSize,
           letterSpacing: size.dsFontSize.letterSpacing.value,
-          height: size.dsFontSize.lineHeight.value,
+          // height: size.dsFontSize.lineHeight.value,
         );
 
   DSTextStyle.fromTextStyle(TextStyle? textStyle)
@@ -94,9 +94,13 @@ class DSTextStyle extends TextStyle {
       copyWith(
         fontSize: size.dsFontSize.fontSize,
         letterSpacing: size.dsFontSize.letterSpacing.value,
-        height: size.dsFontSize.lineHeight.value,
+        // height: size.dsFontSize.lineHeight.value,
       ),
     );
+  }
+
+  DSTextStyle copyWithColor(DSColor color) {
+    return DSTextStyle.fromTextStyle(copyWith(color: color));
   }
 }
 
