@@ -6,7 +6,8 @@ import 'ds_button_story.dart';
 /// Storybook App - Main application for component stories
 ///
 /// This app provides an organized way to browse and test all component stories.
-/// Each story showcases different aspects and configurations of design system components.
+/// Each story showcases different aspects and configurations of
+/// design system components.
 class StorybookApp extends StatelessWidget {
   const StorybookApp({super.key});
 

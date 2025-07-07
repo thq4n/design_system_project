@@ -30,8 +30,8 @@ class ImageViewDemo extends StatelessWidget {
           ),
           const SizedBox(height: 8),
           const Text(
-            'A versatile image component that supports local assets, network images, and SVG files. '
-            'Includes built-in loading states, error handling, and placeholder support.',
+            '''A versatile image component that supports local assets, network images, and SVG files. '''
+            '''Includes built-in loading states, error handling, and placeholder support.''',
             style: TextStyle(fontSize: 16),
           ),
           const SizedBox(height: 24),

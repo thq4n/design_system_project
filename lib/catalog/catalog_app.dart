@@ -6,7 +6,8 @@ import 'widget_demos.g.dart';
 
 /// Catalog App - Main application to showcase all design system components
 ///
-/// This app automatically loads all demo widgets and displays them in a organized list.
+/// This app automatically loads all demo widgets and
+/// displays them in a organized list.
 /// Each demo can be tapped to view the full component showcase.
 class CatalogApp extends StatelessWidget {
   const CatalogApp({super.key});
@@ -71,7 +72,7 @@ class CatalogHomePage extends StatelessWidget {
                         color: Theme.of(context)
                             .colorScheme
                             .onPrimaryContainer
-                            .withOpacity(0.8),
+                            .withValues(alpha: 0.8),
                       ),
                 ),
               ],

@@ -36,7 +36,7 @@ class _TokensShowcaseState extends DSStateBase<TokensShowcase> {
             ),
             const SizedBox(height: 8),
             const Text(
-              'Core design tokens that define the visual language of the design system',
+              '''Core design tokens that define the visual language of the design system.''',
               style: TextStyle(
                 fontSize: 16,
                 color: Colors.grey,
@@ -148,7 +148,7 @@ class _TokensShowcaseState extends DSStateBase<TokensShowcase> {
                   ),
                 ),
                 Text(
-                  '#${color.value.toRadixString(16).substring(2).toUpperCase()}',
+                  '''#${color.toARGB32().toRadixString(16).substring(2).toUpperCase()}''',
                   style: const TextStyle(
                     fontSize: 12,
                     color: Colors.grey,

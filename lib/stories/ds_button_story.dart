@@ -12,7 +12,7 @@ class DSButtonStory extends Story {
       : super(
           name: 'DSButton',
           description:
-              'A customizable button component with multiple variants, sizes, and states',
+              '''A customizable button component with multiple variants, sizes, and states.''',
           builder: (context) => const DSButtonStoryWidget(),
         );
 }
@@ -223,7 +223,10 @@ class DSButtonStoryWidget extends StatelessWidget {
   }
 
   Widget _buildSection(
-      String title, String description, List<Widget> children) {
+    String title,
+    String description,
+    List<Widget> children,
+  ) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [

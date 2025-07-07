@@ -30,8 +30,8 @@ class LoadingDemo extends StatelessWidget {
           ),
           const SizedBox(height: 8),
           const Text(
-            'A customizable loading indicator component with different sizes, colors, and brightness modes. '
-            'Based on CupertinoActivityIndicator for consistent iOS-style loading animations.',
+            '''A customizable loading indicator component with different sizes, colors, and brightness modes. '''
+            '''Based on CupertinoActivityIndicator for consistent iOS-style loading animations.''',
             style: TextStyle(fontSize: 16),
           ),
           const SizedBox(height: 24),
