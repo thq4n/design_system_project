@@ -15,161 +15,158 @@ class LoadingDemo extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('Loading Demo'),
-        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-      ),
-      body: SingleChildScrollView(
-        padding: const EdgeInsets.all(16),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            // Description
-            const Text(
-              'Loading Component',
-              style: TextStyle(
-                fontSize: 24,
-                fontWeight: FontWeight.bold,
+    return SingleChildScrollView(
+      padding: const EdgeInsets.all(16),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          // Description
+          const Text(
+            'Loading Component',
+            style: TextStyle(
+              fontSize: 24,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+          const SizedBox(height: 8),
+          const Text(
+            'A customizable loading indicator component with different sizes, colors, and brightness modes. '
+            'Based on CupertinoActivityIndicator for consistent iOS-style loading animations.',
+            style: TextStyle(fontSize: 16),
+          ),
+          const SizedBox(height: 24),
+
+          // Default Loading
+          _buildSection(
+            'Default Loading',
+            'Basic loading indicator with default settings',
+            [
+              const Loading(),
+            ],
+          ),
+
+          // Different Sizes
+          _buildSection(
+            'Different Sizes',
+            'Loading indicators with various radius values',
+            [
+              const Row(
+                children: [
+                  Text('Small: '),
+                  Loading(radius: 8),
+                  SizedBox(width: 20),
+                  Text('Medium: '),
+                  Loading(radius: 15),
+                  SizedBox(width: 20),
+                  Text('Large: '),
+                  Loading(radius: 25),
+                ],
               ),
-            ),
-            const SizedBox(height: 8),
-            const Text(
-              'A customizable loading indicator component with different sizes, colors, and brightness modes. '
-              'Based on CupertinoActivityIndicator for consistent iOS-style loading animations.',
-              style: TextStyle(fontSize: 16),
-            ),
-            const SizedBox(height: 24),
+            ],
+          ),
 
-            // Default Loading
-            _buildSection(
-              'Default Loading',
-              'Basic loading indicator with default settings',
-              [
-                const Loading(),
-              ],
-            ),
+          // Different Colors
+          _buildSection(
+            'Different Colors',
+            'Loading indicators with custom colors',
+            [
+              const Row(
+                children: [
+                  Text('Red: '),
+                  Loading(color: Colors.red, radius: 15),
+                  SizedBox(width: 20),
+                  Text('Blue: '),
+                  Loading(color: Colors.blue, radius: 15),
+                  SizedBox(width: 20),
+                  Text('Green: '),
+                  Loading(color: Colors.green, radius: 15),
+                ],
+              ),
+            ],
+          ),
 
-            // Different Sizes
-            _buildSection(
-              'Different Sizes',
-              'Loading indicators with various radius values',
-              [
-                const Row(
+          // Brightness Modes
+          _buildSection(
+            'Brightness Modes',
+            'Loading indicators with different brightness settings',
+            [
+              Container(
+                padding: const EdgeInsets.all(16),
+                color: Colors.black,
+                child: const Row(
                   children: [
-                    Text('Small: '),
-                    Loading(radius: 8),
-                    SizedBox(width: 20),
-                    Text('Medium: '),
-                    Loading(radius: 15),
-                    SizedBox(width: 20),
-                    Text('Large: '),
-                    Loading(radius: 25),
+                    Text(
+                      'Dark Mode: ',
+                      style: TextStyle(color: Colors.white),
+                    ),
+                    Loading(brightness: Brightness.dark),
                   ],
                 ),
-              ],
-            ),
-
-            // Different Colors
-            _buildSection(
-              'Different Colors',
-              'Loading indicators with custom colors',
-              [
-                const Row(
+              ),
+              const SizedBox(height: 16),
+              Container(
+                padding: const EdgeInsets.all(16),
+                color: Colors.white,
+                child: const Row(
                   children: [
-                    Text('Red: '),
-                    Loading(color: Colors.red, radius: 15),
-                    SizedBox(width: 20),
-                    Text('Blue: '),
-                    Loading(color: Colors.blue, radius: 15),
-                    SizedBox(width: 20),
-                    Text('Green: '),
-                    Loading(color: Colors.green, radius: 15),
+                    Text('Light Mode: '),
+                    Loading(brightness: Brightness.light),
                   ],
                 ),
-              ],
-            ),
+              ),
+            ],
+          ),
 
-            // Brightness Modes
-            _buildSection(
-              'Brightness Modes',
-              'Loading indicators with different brightness settings',
-              [
+          // Usage Examples
+          _buildSection(
+            'Usage Examples',
+            'Common use cases for loading indicators',
+            [
+              _buildUsageExample(
+                'Button Loading State',
                 Container(
                   padding: const EdgeInsets.all(16),
-                  color: Colors.black,
+                  decoration: BoxDecoration(
+                    border: Border.all(color: Colors.grey[300]!),
+                    borderRadius: BorderRadius.circular(8),
+                  ),
                   child: const Row(
                     children: [
-                      Text(
-                        'Dark Mode: ',
-                        style: TextStyle(color: Colors.white),
-                      ),
-                      Loading(brightness: Brightness.dark),
+                      Loading(radius: 12),
+                      SizedBox(width: 12),
+                      Text('Processing...'),
                     ],
                   ),
                 ),
-                const SizedBox(height: 16),
+              ),
+              _buildUsageExample(
+                'Full Screen Loading',
                 Container(
-                  padding: const EdgeInsets.all(16),
-                  color: Colors.white,
-                  child: const Row(
-                    children: [
-                      Text('Light Mode: '),
-                      Loading(brightness: Brightness.light),
-                    ],
+                  height: 100,
+                  decoration: BoxDecoration(
+                    border: Border.all(color: Colors.grey[300]!),
+                    borderRadius: BorderRadius.circular(8),
+                  ),
+                  child: const Center(
+                    child: Loading(radius: 20),
                   ),
                 ),
-              ],
-            ),
+              ),
+            ],
+          ),
 
-            // Usage Examples
-            _buildSection(
-              'Usage Examples',
-              'Common use cases for loading indicators',
-              [
-                _buildUsageExample(
-                  'Button Loading State',
-                  Container(
-                    padding: const EdgeInsets.all(16),
-                    decoration: BoxDecoration(
-                      border: Border.all(color: Colors.grey[300]!),
-                      borderRadius: BorderRadius.circular(8),
-                    ),
-                    child: const Row(
-                      children: [
-                        Loading(radius: 12),
-                        SizedBox(width: 12),
-                        Text('Processing...'),
-                      ],
-                    ),
-                  ),
-                ),
-                _buildUsageExample(
-                  'Full Screen Loading',
-                  Container(
-                    height: 100,
-                    decoration: BoxDecoration(
-                      border: Border.all(color: Colors.grey[300]!),
-                      borderRadius: BorderRadius.circular(8),
-                    ),
-                    child: const Center(
-                      child: Loading(radius: 20),
-                    ),
-                  ),
-                ),
-              ],
-            ),
-
-            // Code Examples
-            _buildCodeSection(),
-          ],
-        ),
+          // Code Examples
+          _buildCodeSection(),
+        ],
       ),
     );
   }
 
   Widget _buildSection(
-      String title, String description, List<Widget> children,) {
+    String title,
+    String description,
+    List<Widget> children,
+  ) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [

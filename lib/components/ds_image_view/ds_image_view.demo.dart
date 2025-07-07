@@ -15,176 +15,173 @@ class ImageViewDemo extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('ImageView Demo'),
-        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-      ),
-      body: SingleChildScrollView(
-        padding: const EdgeInsets.all(16),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            // Description
-            const Text(
-              'ImageView Component',
-              style: TextStyle(
-                fontSize: 24,
-                fontWeight: FontWeight.bold,
+    return SingleChildScrollView(
+      padding: const EdgeInsets.all(16),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          // Description
+          const Text(
+            'ImageView Component',
+            style: TextStyle(
+              fontSize: 24,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+          const SizedBox(height: 8),
+          const Text(
+            'A versatile image component that supports local assets, network images, and SVG files. '
+            'Includes built-in loading states, error handling, and placeholder support.',
+            style: TextStyle(fontSize: 16),
+          ),
+          const SizedBox(height: 24),
+
+          // Basic Usage
+          _buildSection(
+            'Basic Usage',
+            'Simple image display with default settings',
+            [
+              const ImageView(
+                source: 'assets/branding/ic_logo_full_red.png',
+                width: 200,
+                height: 100,
               ),
-            ),
-            const SizedBox(height: 8),
-            const Text(
-              'A versatile image component that supports local assets, network images, and SVG files. '
-              'Includes built-in loading states, error handling, and placeholder support.',
-              style: TextStyle(fontSize: 16),
-            ),
-            const SizedBox(height: 24),
+            ],
+          ),
 
-            // Basic Usage
-            _buildSection(
-              'Basic Usage',
-              'Simple image display with default settings',
-              [
-                const ImageView(
-                  source: 'assets/branding/ic_logo_full_red.png',
-                  width: 200,
-                  height: 100,
-                ),
-              ],
-            ),
+          // Different Sizes
+          _buildSection(
+            'Different Sizes',
+            'Images with various dimensions',
+            [
+              const Row(
+                children: [
+                  ImageView(
+                    source: 'assets/branding/ic_logo_alone_red.png',
+                    width: 50,
+                    height: 50,
+                  ),
+                  SizedBox(width: 16),
+                  ImageView(
+                    source: 'assets/branding/ic_logo_alone_red.png',
+                    width: 100,
+                    height: 100,
+                  ),
+                  SizedBox(width: 16),
+                  ImageView(
+                    source: 'assets/branding/ic_logo_alone_red.png',
+                    width: 150,
+                    height: 150,
+                  ),
+                ],
+              ),
+            ],
+          ),
 
-            // Different Sizes
-            _buildSection(
-              'Different Sizes',
-              'Images with various dimensions',
-              [
-                const Row(
-                  children: [
-                    ImageView(
-                      source: 'assets/branding/ic_logo_alone_red.png',
-                      width: 50,
-                      height: 50,
-                    ),
-                    SizedBox(width: 16),
-                    ImageView(
-                      source: 'assets/branding/ic_logo_alone_red.png',
-                      width: 100,
-                      height: 100,
-                    ),
-                    SizedBox(width: 16),
-                    ImageView(
-                      source: 'assets/branding/ic_logo_alone_red.png',
-                      width: 150,
-                      height: 150,
-                    ),
-                  ],
-                ),
-              ],
-            ),
+          // Different Fit Modes
+          _buildSection(
+            'Different Fit Modes',
+            'Images with various BoxFit options',
+            [
+              _buildFitExample('cover', BoxFit.cover),
+              const SizedBox(height: 16),
+              _buildFitExample('contain', BoxFit.contain),
+              const SizedBox(height: 16),
+              _buildFitExample('fill', BoxFit.fill),
+            ],
+          ),
 
-            // Different Fit Modes
-            _buildSection(
-              'Different Fit Modes',
-              'Images with various BoxFit options',
-              [
-                _buildFitExample('cover', BoxFit.cover),
-                const SizedBox(height: 16),
-                _buildFitExample('contain', BoxFit.contain),
-                const SizedBox(height: 16),
-                _buildFitExample('fill', BoxFit.fill),
-              ],
-            ),
+          // Network Images
+          _buildSection(
+            'Network Images',
+            'Loading images from URLs with built-in loading states',
+            [
+              const ImageView(
+                source: 'https://picsum.photos/200/100',
+                width: 200,
+                height: 100,
+              ),
+              const SizedBox(height: 16),
+              const ImageView(
+                source: 'https://picsum.photos/200/100?random=1',
+                width: 200,
+                height: 100,
+                fit: BoxFit.cover,
+              ),
+            ],
+          ),
 
-            // Network Images
-            _buildSection(
-              'Network Images',
-              'Loading images from URLs with built-in loading states',
-              [
-                const ImageView(
-                  source: 'https://picsum.photos/200/100',
-                  width: 200,
-                  height: 100,
-                ),
-                const SizedBox(height: 16),
-                const ImageView(
-                  source: 'https://picsum.photos/200/100?random=1',
-                  width: 200,
-                  height: 100,
-                  fit: BoxFit.cover,
-                ),
-              ],
-            ),
+          // SVG Images
+          _buildSection(
+            'SVG Images',
+            'Vector graphics with color customization',
+            [
+              const Row(
+                children: [
+                  ImageView(
+                    source: 'assets/social/ic_apple_original.svg',
+                    width: 50,
+                    height: 50,
+                  ),
+                  SizedBox(width: 16),
+                  ImageView(
+                    source: 'assets/social/ic_apple_original.svg',
+                    width: 50,
+                    height: 50,
+                    color: Colors.blue,
+                  ),
+                  SizedBox(width: 16),
+                  ImageView(
+                    source: 'assets/social/ic_apple_original.svg',
+                    width: 50,
+                    height: 50,
+                    color: Colors.green,
+                  ),
+                ],
+              ),
+            ],
+          ),
 
-            // SVG Images
-            _buildSection(
-              'SVG Images',
-              'Vector graphics with color customization',
-              [
-                const Row(
-                  children: [
-                    ImageView(
-                      source: 'assets/social/ic_apple_original.svg',
-                      width: 50,
-                      height: 50,
-                    ),
-                    SizedBox(width: 16),
-                    ImageView(
-                      source: 'assets/social/ic_apple_original.svg',
-                      width: 50,
-                      height: 50,
-                      color: Colors.blue,
-                    ),
-                    SizedBox(width: 16),
-                    ImageView(
-                      source: 'assets/social/ic_apple_original.svg',
-                      width: 50,
-                      height: 50,
-                      color: Colors.green,
-                    ),
-                  ],
-                ),
-              ],
-            ),
+          // Error Handling
+          _buildSection(
+            'Error Handling',
+            'Images with fallback placeholders',
+            [
+              const ImageView(
+                source: 'https://invalid-url-that-will-fail.com/image.jpg',
+                width: 200,
+                height: 100,
+                placeHolder: 'assets/branding/ic_logo_alone_red.png',
+              ),
+            ],
+          ),
 
-            // Error Handling
-            _buildSection(
-              'Error Handling',
-              'Images with fallback placeholders',
-              [
-                const ImageView(
-                  source: 'https://invalid-url-that-will-fail.com/image.jpg',
-                  width: 200,
-                  height: 100,
-                  placeHolder: 'assets/branding/ic_logo_alone_red.png',
-                ),
-              ],
-            ),
+          // Custom Loading
+          _buildSection(
+            'Custom Loading',
+            'Images with custom loading radius',
+            [
+              const ImageView(
+                source: 'https://picsum.photos/200/100?random=2',
+                width: 200,
+                height: 100,
+                loadingRadius: 8,
+              ),
+            ],
+          ),
 
-            // Custom Loading
-            _buildSection(
-              'Custom Loading',
-              'Images with custom loading radius',
-              [
-                const ImageView(
-                  source: 'https://picsum.photos/200/100?random=2',
-                  width: 200,
-                  height: 100,
-                  loadingRadius: 8,
-                ),
-              ],
-            ),
-
-            // Code Examples
-            _buildCodeSection(),
-          ],
-        ),
+          // Code Examples
+          _buildCodeSection(),
+        ],
       ),
     );
   }
 
   Widget _buildSection(
-      String title, String description, List<Widget> children,) {
+    String title,
+    String description,
+    List<Widget> children,
+  ) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
