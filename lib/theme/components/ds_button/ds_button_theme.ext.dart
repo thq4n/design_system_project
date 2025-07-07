@@ -5,7 +5,6 @@ enum DSButtonVariants {
   secondary,
   outline,
   ghost,
-  // TODO: Define variants for DSButton component
 }
 
 enum DSButtonSize {

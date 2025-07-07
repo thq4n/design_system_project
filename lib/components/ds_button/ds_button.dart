@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 
 import '../../base/ds_base.dart';
 import '../../theme/ds_theme.dart';
+import '../ds_image_view/ds_image_view.dart';
 
 class DSButton extends StatefulWidget {
   /// The visual variant/style of the button (primary, secondary, ghost etc)
@@ -50,7 +51,7 @@ class DSButton extends StatefulWidget {
 }
 
 class _DSButtonState extends DSStateBase<DSButton> {
-  bool _isPressed = false;
+  final ValueNotifier<bool> _isPressedNotifier = ValueNotifier<bool>(false);
 
   @override
   Widget build(BuildContext context) {
@@ -90,9 +91,9 @@ class _DSButtonState extends DSStateBase<DSButton> {
             : componentTheme.defaultState.textStyle;
 
     return GestureDetector(
-      onTapDown: (_) => setState(() => _isPressed = true),
-      onTapUp: (_) => setState(() => _isPressed = false),
-      onTapCancel: () => setState(() => _isPressed = false),
+      onTapDown: (_) => _isPressedNotifier.value = true,
+      onTapUp: (_) => _isPressedNotifier.value = false,
+      onTapCancel: () => _isPressedNotifier.value = false,
       child: ElevatedButton(
         onPressed: onPressed,
         style: ButtonStyle(
@@ -201,20 +202,25 @@ class _DSButtonState extends DSStateBase<DSButton> {
   /// Applies appropriate colors based on button state
   Widget _buildIcon(dynamic icon, Color defaultColor, Color pressedColor) {
     if (icon is String) {
-      // If icon is a string (path), use ColorFiltered to change color
-      final iconColor = _isPressed ? pressedColor : defaultColor;
+      return ValueListenableBuilder(
+        valueListenable: _isPressedNotifier,
+        builder: (context, isPressed, child) {
+          // If icon is a string (path), use ColorFiltered to change color
+          final iconColor = isPressed ? pressedColor : defaultColor;
 
-      return ColorFiltered(
-        colorFilter: ColorFilter.mode(
-          iconColor,
-          BlendMode.srcIn,
-        ),
-        child: Image.asset(
-          icon,
-          width: widget.size.prefixIconSize,
-          height: widget.size.prefixIconSize,
-          fit: BoxFit.contain,
-        ),
+          return ColorFiltered(
+            colorFilter: ColorFilter.mode(
+              iconColor,
+              BlendMode.srcIn,
+            ),
+            child: ImageView(
+              source: icon,
+              width: widget.size.prefixIconSize,
+              height: widget.size.prefixIconSize,
+              fit: BoxFit.contain,
+            ),
+          );
+        },
       );
     } else if (icon is Widget) {
       // If icon is a Widget, return it as is

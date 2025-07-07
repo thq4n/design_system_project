@@ -32,7 +32,7 @@ class DSButtonDemo extends StatelessWidget {
           ),
           const SizedBox(height: 8),
           const Text(
-            'A customizable button component with multiple variants, sizes, and states. '
+            '''A customizable button component with multiple variants, sizes, and states. '''
             'Supports icons, loading states, and different visual styles.',
             style: TextStyle(fontSize: 16),
           ),
