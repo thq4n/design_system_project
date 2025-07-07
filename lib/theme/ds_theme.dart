@@ -16,5 +16,7 @@ part 'extensions/typography/ds_text_theme.ext.dart';
 part 'extensions/color/ds_color_theme.ext.dart';
 
 // Component Theme
+part 'components/ds_icon_button/ds_icon_button_theme.dart';
+part 'components/ds_icon_button/ds_icon_button_theme.ext.dart';
 part 'components/ds_button/ds_button_theme.dart';
 part 'components/ds_button/ds_button_theme.ext.dart';
