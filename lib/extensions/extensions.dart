@@ -6,3 +6,4 @@ import '../gen/assets.gen.dart';
 
 part 'state.extension.dart';
 part 'svg.extension.dart';
+part 'build_context.extension.dart';
