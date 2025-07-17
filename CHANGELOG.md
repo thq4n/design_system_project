@@ -25,6 +25,36 @@ và dự án này tuân thủ [Semantic Versioning](https://semver.org/spec/v2.0
 ### Security
 - TBD
 
+## [1.2.0] - 2024-01-XX
+
+### Added
+- 🌟 **Shadow System**: Hệ thống shadow tokens hoàn chỉnh với 5 variants
+  - Subtle: Shadow nhẹ cho subtle elevation
+  - Light: Shadow vừa cho light elevation  
+  - Medium: Shadow trung bình cho medium elevation
+  - Strong: Shadow mạnh cho strong elevation
+  - Intense: Shadow rất mạnh cho intense elevation
+
+- 🧭 **Navigation Bar Utilities**: Tiện ích quản lý system UI
+  - `setNavigationBarColor()`: Tùy chỉnh màu navigation bar
+  - `setLightNavigationBar()`: Navigation bar light theme
+  - `setDarkNavigationBar()`: Navigation bar dark theme
+  - `setTransparentNavigationBar()`: Navigation bar trong suốt
+  - `setLightSystemBars()`: Cả status bar và navigation bar light
+  - `setDarkSystemBars()`: Cả status bar và navigation bar dark
+
+### Changed
+- Enhanced build context extensions với shadow support
+- Improved helper utilities với navigation bar functions
+- Better type safety cho shadow system
+- Optimized exports trong design system core
+
+### Technical Details
+- Shadow system với 5 variants: subtle, light, medium, strong, intense
+- Navigation bar utilities cho iOS và Android
+- Enhanced build context extensions
+- Improved helper utilities organization
+
 ## [1.0.0] - 2024-01-XX
 
 ### Added
