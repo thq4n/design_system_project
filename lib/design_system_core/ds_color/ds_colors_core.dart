@@ -1,3 +1,4 @@
+import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
 // Colors
@@ -14,3 +15,4 @@ part 'base/impl/green.impl.dart';
 part 'base/impl/orange.impl.dart';
 part 'base/impl/purple.impl.dart';
 part 'base/impl/white.impl.dart';
+part 'base/impl/transparent.impl.dart';

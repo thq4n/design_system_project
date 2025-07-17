@@ -1,11 +1,40 @@
 {
-    "version": "1.0.0",
+    "version": "0.2.0",
     "configurations": [
         {
-            "name": "Example",
+            "name": "📱 Example App",
             "request": "launch",
             "type": "dart",
-            "program": "${workspaceRoot}/example/lib/main.dart",
+            "program": "example/lib/main.dart",
+            "args": [],
+            "console": "debugConsole"
+        },
+        {
+            "name": "🎨 Design System Catalog",
+            "request": "launch",
+            "type": "dart",
+            "program": "lib/catalog/main.dart",
+            "args": [],
+            "console": "debugConsole"
+        },
+        {
+            "name": "📚 Storybook App",
+            "request": "launch",
+            "type": "dart",
+            "program": "lib/stories/main.dart",
+            "args": [
+                "-d",
+                "chrome"
+            ],
+            "console": "debugConsole"
+        },
+        {
+            "name": "🔧 Generate Catalog",
+            "request": "launch",
+            "type": "dart",
+            "program": "lib/scripts/generate_catalog.dart",
+            "args": [],
+            "console": "debugConsole"
         },
     ]
 }

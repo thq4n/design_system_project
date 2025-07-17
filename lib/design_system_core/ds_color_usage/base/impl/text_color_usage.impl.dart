@@ -2,17 +2,19 @@
 
 part of '../../ds_color_usage_core.dart';
 
-class _TextColorUsage extends ColorUsage {
-  const _TextColorUsage();
+class _DSTextColorUsage extends DSColorUsage {
+  const _DSTextColorUsage();
 
-  static DSColor get primary => DSColors.gray.shade950;
-  static DSColor get secondary => DSColors.gray.shade700;
-  static DSColor get tertiary => DSColors.gray.shade500;
-  static DSColor get quaternary => DSColors.gray.tint400;
-  static DSColor get white => DSColors.gray.tint50;
-  static DSColor get disable => DSColors.gray.tint400;
-  static DSColor get linkRed => DSColors.brand.shade500;
-  static DSColor get linkBlue => DSColors.blue.shade500;
-  static DSColor get error => DSColors.orange.shade500;
-  static DSColor get success => DSColors.green.shade500;
+  DSColors get colors => const DSColors();
+
+  DSColor get primary => colors.gray.shade950;
+  DSColor get secondary => colors.gray.shade700;
+  DSColor get tertiary => colors.gray.shade500;
+  DSColor get quaternary => colors.gray.tint400;
+  DSColor get white => colors.gray.tint50;
+  DSColor get disable => colors.gray.tint400;
+  DSColor get linkRed => colors.brand.shade500;
+  DSColor get linkBlue => colors.blue.shade500;
+  DSColor get error => colors.orange.shade500;
+  DSColor get success => colors.green.shade500;
 }

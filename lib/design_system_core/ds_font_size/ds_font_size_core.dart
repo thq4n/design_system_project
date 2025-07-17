@@ -6,6 +6,7 @@ part 'usage/ds_font_sizes.dart';
 part 'usage/impl/ds_font_sizes.impl.dart';
 
 // Text sizes from smallest to largest
+part 'base/impl/ds_text_xxs.impl.dart';
 part 'base/impl/ds_text_xs.impl.dart';
 part 'base/impl/ds_text_sm.impl.dart';
 part 'base/impl/ds_text_base.impl.dart';

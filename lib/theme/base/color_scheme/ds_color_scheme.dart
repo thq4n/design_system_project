@@ -33,13 +33,15 @@ class DSColorScheme {
   //   surfaceTint: DSColors.brand.primary,
   // );
 
+  static const DSColors _colors = DSColors();
+
   static final ColorScheme lightScheme = ColorScheme.fromSeed(
-    seedColor: DSColors.brand.primary, // Màu chủ đạo
+    seedColor: _colors.brand.primary, // Màu chủ đạo
     brightness: Brightness.light,
   );
 
   static final ColorScheme darkScheme = ColorScheme.fromSeed(
-    seedColor: DSColors.brand.primary, // Cùng màu seed
+    seedColor: _colors.brand.primary, // Cùng màu seed
     brightness: Brightness.dark,
   );
 }

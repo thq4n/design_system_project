@@ -1,3 +1,4 @@
+import 'package:design_system_project/components/ds_icon_button/ds_icon_button.dart';
 import 'package:flutter/material.dart';
 import 'package:design_system_project/design_system_project.dart';
 
@@ -42,6 +43,7 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       appBar: AppBar(
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
         title: Text('Large Title Bold', style: textTheme.base?.bold),
@@ -54,6 +56,25 @@ class _MyHomePageState extends State<MyHomePage> {
             Text(
               '$_counter',
               style: Theme.of(context).textTheme.headlineMedium,
+            ),
+            DSButton(
+              key: Key('button'),
+              variant: DSButtonVariants.primary,
+              size: DSButtonSize.lg,
+              label: 'Button',
+              onPressed: () {},
+              isDisabled: false,
+              isLoading: true,
+            ),
+            DSIconButton(
+              variant: DSIconButtonVariants.tertiary,
+              size: DSIconButtonSize.lg,
+              icon: DSSystemIcons.icon(
+                (icons) => icons.addBold,
+                getSize: (sizes) => sizes.size24,
+              ),
+              onPressed: () {},
+              isActivated: true,
             ),
           ],
         ),

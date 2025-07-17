@@ -14,7 +14,9 @@ class DsColorThemeExtension extends ThemeExtension<DsColorThemeExtension> {
 
   @override
   ThemeExtension<DsColorThemeExtension> lerp(
-      covariant ThemeExtension<DsColorThemeExtension>? other, double t) {
+    covariant ThemeExtension<DsColorThemeExtension>? other,
+    double t,
+  ) {
     if (other is! DsColorThemeExtension) {
       return this;
     }

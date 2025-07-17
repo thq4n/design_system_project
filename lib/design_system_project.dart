@@ -1,8 +1,5 @@
 // Core Design System Exports
-// Components
-export 'components/button.dart';
-export 'components/checkbox.dart';
-export 'components/input_field.dart';
+export 'components/ds_components.dart';
 // Constants
 export 'constants/constants.dart';
 export 'design_system_core/ds_color/ds_colors_core.dart';

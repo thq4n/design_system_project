@@ -2,13 +2,15 @@
 
 part of '../../ds_color_usage_core.dart';
 
-class _BorderColorUsage extends ColorUsage {
-  const _BorderColorUsage();
+class _DSBorderColorUsage extends DSColorUsage {
+  const _DSBorderColorUsage();
 
-  static DSColor get primary => DSColors.gray.tint300;
-  static DSColor get secondary => DSColors.gray.tint200;
-  static DSColor get tertiary => DSColors.gray.tint100;
-  static DSColor get brand => DSColors.brand.shade500;
-  static DSColor get error => DSColors.orange.shade600;
-  static DSColor get success => DSColors.green.shade500;
+  DSColors get colors => const DSColors();
+
+  DSColor get primary => colors.gray.tint300;
+  DSColor get secondary => colors.gray.tint200;
+  DSColor get tertiary => colors.gray.tint100;
+  DSColor get brand => colors.brand.shade500;
+  DSColor get error => colors.orange.shade600;
+  DSColor get success => colors.green.shade500;
 }
