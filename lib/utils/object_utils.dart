@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+// Object utilities extension
 
 extension ObjectExt<T> on T? {
   R let<R>(R Function(T? it) op) => op(this);

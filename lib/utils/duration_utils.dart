@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+// Duration utilities extension
 
 extension DurationUtils on String {
   Duration parseDuration() {
