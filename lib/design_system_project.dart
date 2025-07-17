@@ -10,6 +10,7 @@ export 'design_system_core/ds_icon/ds_icon_core.dart';
 export 'design_system_core/ds_letter_spacing/ds_letter_spacing_core.dart';
 export 'design_system_core/ds_line_height/ds_line_height_core.dart';
 export 'design_system_core/ds_radius/ds_radius_core.dart';
+export 'design_system_core/ds_shadow/ds_shadow_core.dart';
 export 'design_system_core/ds_spacing/ds_spacing_core.dart';
 // Extensions
 export 'extensions/extensions.dart';
