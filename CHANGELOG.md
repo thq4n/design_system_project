@@ -25,6 +25,27 @@ và dự án này tuân thủ [Semantic Versioning](https://semver.org/spec/v2.0
 ### Security
 - TBD
 
+## [1.2.1] - 2024-01-XX
+
+### Changed
+- **Breaking Change**: Renamed `Assets` class to `DSAssets` for better naming consistency
+- Added `helpers.dart` export to main design system file
+- Improved code quality with better linting compliance
+
+### Fixed
+- Added `ignore_for_file` directive for long lines in navigation utils
+- Updated generated assets file with new class name
+
+### Migration Guide
+Update your asset usage from `Assets` to `DSAssets`:
+```dart
+// Old
+Assets.images.logo.path
+
+// New
+DSAssets.images.logo.path
+```
+
 ## [1.2.0] - 2024-01-XX
 
 ### Added

@@ -31,6 +31,7 @@ flutter pub get
 
 | Version | Release Date | Description |
 |---------|--------------|-------------|
+| [v1.2.1](https://github.com/yourusername/design_system_project/releases/tag/v1.2.1) | 2024-01-XX | Code quality improvements and naming consistency |
 | [v1.2.0](https://github.com/yourusername/design_system_project/releases/tag/v1.2.0) | 2024-01-XX | Shadow system and navigation utilities |
 | [v1.0.0](https://github.com/yourusername/design_system_project/releases/tag/v1.0.0) | 2024-01-XX | Initial release with core components |
 
