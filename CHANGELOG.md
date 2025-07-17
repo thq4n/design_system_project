@@ -25,6 +25,25 @@ và dự án này tuân thủ [Semantic Versioning](https://semver.org/spec/v2.0
 ### Security
 - TBD
 
+## [1.2.2] - 2024-01-XX
+
+### Added
+- **Shadow System Export**: Added `ds_shadow_core.dart` export to main design system file
+- **Easy Shadow Access**: Shadow tokens now accessible through main import
+
+### Changed
+- **Simplified Imports**: Reduced import complexity for shadow usage
+- **Better Integration**: Shadow system better integrated with main design system
+
+### Usage Improvement
+```dart
+// Before: Required separate import
+import 'package:design_system_project/design_system_core/ds_shadow/ds_shadow_core.dart';
+
+// After: Available through main import
+import 'package:design_system_project/design_system_project.dart';
+```
+
 ## [1.2.1] - 2024-01-XX
 
 ### Changed
