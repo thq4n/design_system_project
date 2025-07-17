@@ -168,7 +168,7 @@ flutter_gen:
       # - snake-case
       # - dot-delimiter
       style: dot-delimiter
-      class_name: Assets
+      class_name: DSAssets
     exclude:
       - "**/@2x/**"
       - "**/@3x/**"

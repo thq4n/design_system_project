@@ -18,3 +18,5 @@ export 'gen/assets.gen.dart';
 export 'gen/fonts.gen.dart';
 // Theme
 export 'theme/ds_theme.dart';
+// Utils
+export 'utils/helpers.dart';
