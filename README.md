@@ -19,13 +19,19 @@ dependencies:
   design_system_project:
     git:
       url: https://github.com/yourusername/design_system_project.git
-      ref: main  # or any branch/tag you want to use
+      ref: v1.0.0  # Use specific version tag for stability
 ```
 
 Then run:
 ```bash
 flutter pub get
 ```
+
+### Version History
+
+| Version | Release Date | Description |
+|---------|--------------|-------------|
+| [v1.0.0](https://github.com/yourusername/design_system_project/releases/tag/v1.0.0) | 2024-01-XX | Initial release with core components |
 
 ## Usage
 
