@@ -1,15 +1,6 @@
-// lib/utils/helpers.dart
-import 'package:flutter/material.dart';
-
-class Helpers {
-  static double adjustFontSize(BuildContext context) {
-    double width = MediaQuery.of(context).size.width;
-    if (width < 360) {
-      return 12.0;
-    } else if (width < 480) {
-      return 14.0;
-    } else {
-      return 16.0;
-    }
-  }
-}
+export 'color_utils.dart';
+export 'context_utils.dart';
+export 'duration_utils.dart';
+export 'object_utils.dart';
+export 'status_bar_utils.dart';
+export 'string_utils.dart';
