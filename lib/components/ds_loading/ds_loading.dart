@@ -1,11 +1,11 @@
 import 'package:flutter/cupertino.dart';
 
-class Loading extends StatelessWidget {
+class DSLoading extends StatelessWidget {
   final Brightness? brightness;
   final double radius;
   final Color? color;
 
-  const Loading({super.key, this.brightness, this.radius = 15, this.color});
+  const DSLoading({super.key, this.brightness, this.radius = 15, this.color});
 
   @override
   Widget build(BuildContext context) {

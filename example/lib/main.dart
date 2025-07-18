@@ -71,7 +71,7 @@ class _MyHomePageState extends State<MyHomePage> {
       floatingActionButton: FloatingActionButton(
         onPressed: _incrementCounter,
         tooltip: 'Increment',
-        child: ImageView(source: DSAssets.vuesax.a24SupportBold),
+        child: DSImageView(source: DSAssets.vuesax.a24SupportBold),
       ),
     );
   }

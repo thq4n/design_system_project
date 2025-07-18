@@ -41,7 +41,7 @@ class ImageViewDemo extends StatelessWidget {
             'Basic Usage',
             'Simple image display with default settings',
             [
-              const ImageView(
+              const DSImageView(
                 source: 'assets/branding/ic_logo_full_red.png',
                 width: 200,
                 height: 100,
@@ -56,19 +56,19 @@ class ImageViewDemo extends StatelessWidget {
             [
               const Row(
                 children: [
-                  ImageView(
+                  DSImageView(
                     source: 'assets/branding/ic_logo_alone_red.png',
                     width: 50,
                     height: 50,
                   ),
                   SizedBox(width: 16),
-                  ImageView(
+                  DSImageView(
                     source: 'assets/branding/ic_logo_alone_red.png',
                     width: 100,
                     height: 100,
                   ),
                   SizedBox(width: 16),
-                  ImageView(
+                  DSImageView(
                     source: 'assets/branding/ic_logo_alone_red.png',
                     width: 150,
                     height: 150,
@@ -96,13 +96,13 @@ class ImageViewDemo extends StatelessWidget {
             'Network Images',
             'Loading images from URLs with built-in loading states',
             [
-              const ImageView(
+              const DSImageView(
                 source: 'https://picsum.photos/200/100',
                 width: 200,
                 height: 100,
               ),
               const SizedBox(height: 16),
-              const ImageView(
+              const DSImageView(
                 source: 'https://picsum.photos/200/100?random=1',
                 width: 200,
                 height: 100,
@@ -118,20 +118,20 @@ class ImageViewDemo extends StatelessWidget {
             [
               const Row(
                 children: [
-                  ImageView(
+                  DSImageView(
                     source: 'assets/social/ic_apple_original.svg',
                     width: 50,
                     height: 50,
                   ),
                   SizedBox(width: 16),
-                  ImageView(
+                  DSImageView(
                     source: 'assets/social/ic_apple_original.svg',
                     width: 50,
                     height: 50,
                     color: Colors.blue,
                   ),
                   SizedBox(width: 16),
-                  ImageView(
+                  DSImageView(
                     source: 'assets/social/ic_apple_original.svg',
                     width: 50,
                     height: 50,
@@ -147,7 +147,7 @@ class ImageViewDemo extends StatelessWidget {
             'Error Handling',
             'Images with fallback placeholders',
             [
-              const ImageView(
+              const DSImageView(
                 source: 'https://invalid-url-that-will-fail.com/image.jpg',
                 width: 200,
                 height: 100,
@@ -161,7 +161,7 @@ class ImageViewDemo extends StatelessWidget {
             'Custom Loading',
             'Images with custom loading radius',
             [
-              const ImageView(
+              const DSImageView(
                 source: 'https://picsum.photos/200/100?random=2',
                 width: 200,
                 height: 100,
@@ -225,7 +225,7 @@ class ImageViewDemo extends StatelessWidget {
           decoration: BoxDecoration(
             border: Border.all(color: Colors.grey[300]!),
           ),
-          child: const ImageView(
+          child: const DSImageView(
             source: 'assets/branding/ic_logo_alone_red.png',
             width: 200,
             height: 100,

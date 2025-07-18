@@ -1,4 +1,9 @@
 export 'availability_widget.dart';
 export 'box_color.dart';
 export 'footer_widget.dart';
+export 'hero_widget.dart';
+export 'image_gallery_widget.dart';
+export 'image_view_wrapper.dart';
+export 'image_zoom.dart';
+export 'page_indicator.dart';
 export 'title_widget.dart';

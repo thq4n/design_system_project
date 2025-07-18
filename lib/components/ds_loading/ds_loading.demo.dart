@@ -41,7 +41,7 @@ class LoadingDemo extends StatelessWidget {
             'Default Loading',
             'Basic loading indicator with default settings',
             [
-              const Loading(),
+              const DSLoading(),
             ],
           ),
 
@@ -53,13 +53,13 @@ class LoadingDemo extends StatelessWidget {
               const Row(
                 children: [
                   Text('Small: '),
-                  Loading(radius: 8),
+                  DSLoading(radius: 8),
                   SizedBox(width: 20),
                   Text('Medium: '),
-                  Loading(radius: 15),
+                  DSLoading(radius: 15),
                   SizedBox(width: 20),
                   Text('Large: '),
-                  Loading(radius: 25),
+                  DSLoading(radius: 25),
                 ],
               ),
             ],
@@ -73,13 +73,13 @@ class LoadingDemo extends StatelessWidget {
               const Row(
                 children: [
                   Text('Red: '),
-                  Loading(color: Colors.red, radius: 15),
+                  DSLoading(color: Colors.red, radius: 15),
                   SizedBox(width: 20),
                   Text('Blue: '),
-                  Loading(color: Colors.blue, radius: 15),
+                  DSLoading(color: Colors.blue, radius: 15),
                   SizedBox(width: 20),
                   Text('Green: '),
-                  Loading(color: Colors.green, radius: 15),
+                  DSLoading(color: Colors.green, radius: 15),
                 ],
               ),
             ],
@@ -99,7 +99,7 @@ class LoadingDemo extends StatelessWidget {
                       'Dark Mode: ',
                       style: TextStyle(color: Colors.white),
                     ),
-                    Loading(brightness: Brightness.dark),
+                    DSLoading(brightness: Brightness.dark),
                   ],
                 ),
               ),
@@ -110,7 +110,7 @@ class LoadingDemo extends StatelessWidget {
                 child: const Row(
                   children: [
                     Text('Light Mode: '),
-                    Loading(brightness: Brightness.light),
+                    DSLoading(brightness: Brightness.light),
                   ],
                 ),
               ),
@@ -132,7 +132,7 @@ class LoadingDemo extends StatelessWidget {
                   ),
                   child: const Row(
                     children: [
-                      Loading(radius: 12),
+                      DSLoading(radius: 12),
                       SizedBox(width: 12),
                       Text('Processing...'),
                     ],
@@ -148,7 +148,7 @@ class LoadingDemo extends StatelessWidget {
                     borderRadius: BorderRadius.circular(8),
                   ),
                   child: const Center(
-                    child: Loading(radius: 20),
+                    child: DSLoading(radius: 20),
                   ),
                 ),
               ),

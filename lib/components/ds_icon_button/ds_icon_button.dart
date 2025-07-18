@@ -139,7 +139,7 @@ class _DSIconButtonState extends DSStateBase<DSIconButton> {
   /// Applies appropriate colors based on button state
   Widget _buildIcon(dynamic icon, Color defaultColor, Color pressedColor) {
     if (icon is String) {
-      return ImageView(
+      return DSImageView(
         source: icon,
         width: widget.size.iconSize,
         height: widget.size.iconSize,

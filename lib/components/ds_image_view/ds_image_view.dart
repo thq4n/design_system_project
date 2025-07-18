@@ -9,8 +9,8 @@ import 'package:flutter_svg_provider/flutter_svg_provider.dart' as svg_provider;
 import '../../utils/helpers.dart';
 import '../ds_loading/ds_loading.dart';
 
-class ImageView extends StatelessWidget {
-  const ImageView({
+class DSImageView extends StatelessWidget {
+  const DSImageView({
     super.key,
     required this.source,
     this.width,
@@ -41,7 +41,7 @@ class ImageView extends StatelessWidget {
   Widget _buildImage(String image) {
     if (image.isEmpty) {
       if (placeHolder?.isNotEmpty ?? false) {
-        return ImageView(
+        return DSImageView(
           source: placeHolder!,
           width: width,
           height: height,
@@ -132,7 +132,7 @@ class ExtendedNetworkImage extends StatelessWidget {
         switch (state.extendedImageLoadState) {
           case LoadState.loading:
             return loadingBuilder?.call(state) ??
-                Loading(
+                DSLoading(
                   brightness:
                       brightness ?? MediaQuery.of(context).platformBrightness,
                   radius: maxLoadingSize,
@@ -142,7 +142,7 @@ class ExtendedNetworkImage extends StatelessWidget {
               return errorBuilder!.call(state);
             }
             if (placeHolder?.isNotEmpty ?? false) {
-              return ImageView(
+              return DSImageView(
                 source: placeHolder!,
                 width: width,
                 height: height,

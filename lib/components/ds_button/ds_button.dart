@@ -213,7 +213,7 @@ class _DSButtonState extends DSStateBase<DSButton> {
               iconColor,
               BlendMode.srcIn,
             ),
-            child: ImageView(
+            child: DSImageView(
               source: icon,
               width: widget.size.prefixIconSize,
               height: widget.size.prefixIconSize,

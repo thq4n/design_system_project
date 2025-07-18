@@ -117,3 +117,7 @@ extension StringDataHelper on String {
     });
   }
 }
+
+extension NullableStringDataHelper on String? {
+  bool get isNotNullOrEmpty => this != null && this!.isNotEmpty;
+}
