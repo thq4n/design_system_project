@@ -19,7 +19,6 @@ class DSImageView extends StatelessWidget {
     this.color,
     this.alignment = Alignment.center,
     this.placeHolder,
-    this.package,
     this.loadingRadius,
   });
 
@@ -30,7 +29,7 @@ class DSImageView extends StatelessWidget {
   final Color? color;
   final Alignment alignment;
   final String? placeHolder;
-  final String? package;
+  final String package = 'design_system_project';
   final double? loadingRadius;
 
   @override
@@ -48,7 +47,6 @@ class DSImageView extends StatelessWidget {
           fit: fit,
           color: color,
           alignment: alignment,
-          package: package,
         );
       }
       return SizedBox(width: width, height: height);
