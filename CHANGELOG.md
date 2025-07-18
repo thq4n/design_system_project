@@ -25,6 +25,24 @@ và dự án này tuân thủ [Semantic Versioning](https://semver.org/spec/v2.0
 ### Security
 - TBD
 
+## [1.2.5] - 2024-01-XX
+
+### Changed
+- **DSImageView**: Simplified package parameter handling
+  - Removed optional package parameter
+  - Set package to 'design_system_project' by default
+  - Reduced component complexity
+
+### Breaking Changes
+- **DSImageView**: Package parameter removed from constructor
+  - Migration: Remove package parameter from DSImageView usage
+  - Package is automatically set to 'design_system_project'
+
+### Technical Details
+- Simplified DSImageView component usage
+- Improved code consistency
+- Reduced component complexity
+
 ## [1.2.4] - 2024-01-XX
 
 ### Added
