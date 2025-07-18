@@ -25,6 +25,34 @@ và dự án này tuân thủ [Semantic Versioning](https://semver.org/spec/v2.0
 ### Security
 - TBD
 
+## [1.2.3] - 2024-01-XX
+
+### Added
+- **XXS Text Size**: Added xxs text size to typography system
+  - Smallest text size for captions and micro text
+  - Available in DSTextTheme and DSTextStyleSize
+- **DSInput Component**: Complete input component with theme support
+  - Text input with validation and formatting
+  - Decimal and integer formatters
+  - Controller pattern for state management
+- **New Widgets**: Added utility widgets
+  - AvailabilityWidget: Status display widget
+  - BoxColor: Color display widget
+  - FooterWidget: Footer component
+  - TitleWidget: Title component
+
+### Changed
+- **Typography System**: Enhanced with xxs size support
+- **Icon System**: Updated social icons and system icons
+- **Theme Integration**: Better integration between components and theme
+- **Code Quality**: Disabled unused flutter_gen integrations
+
+### Technical Details
+- Added xxs to DSTextStyleSize enum
+- Updated DSTextTheme with xxs property and lerp support
+- Enhanced component system with new widgets
+- Improved theme system integration
+
 ## [1.2.2] - 2024-01-XX
 
 ### Added
