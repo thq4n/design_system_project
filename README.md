@@ -31,6 +31,7 @@ flutter pub get
 
 | Version | Release Date | Description |
 |---------|--------------|-------------|
+| [v1.2.4](https://github.com/yourusername/design_system_project/releases/tag/v1.2.4) | 2024-01-XX | Image gallery and page indicator widgets |
 | [v1.2.3](https://github.com/yourusername/design_system_project/releases/tag/v1.2.3) | 2024-01-XX | XXS text size and DSInput component |
 | [v1.2.2](https://github.com/yourusername/design_system_project/releases/tag/v1.2.2) | 2024-01-XX | Shadow system export and import simplification |
 | [v1.2.1](https://github.com/yourusername/design_system_project/releases/tag/v1.2.1) | 2024-01-XX | Code quality improvements and naming consistency |

@@ -25,6 +25,31 @@ và dự án này tuân thủ [Semantic Versioning](https://semver.org/spec/v2.0
 ### Security
 - TBD
 
+## [1.2.4] - 2024-01-XX
+
+### Added
+- **Image Gallery Widget**: Complete image gallery với zoom và hero support
+  - Full-screen image gallery với PageView
+  - Image zoom functionality với ExtendedImage
+  - Hero animations cho smooth transitions
+  - Page indicator với dots navigation
+- **Page Indicator Widget**: Customizable page indicator với dots_indicator package
+- **Image Zoom Widget**: Image zooming functionality với pinch to zoom
+- **Hero Widget**: Hero animation wrapper cho smooth transitions
+- **ImageView Wrapper**: Image display wrapper với error handling
+- **New Dependency**: dots_indicator ^3.0.0
+
+### Changed
+- Enhanced existing components với improvements
+- Added string utilities và helper functions
+- Better widget organization và exports
+
+### Technical Details
+- Added dots_indicator dependency for page indicators
+- Enhanced image gallery functionality với ExtendedImage
+- Improved widget exports và organization
+- Added comprehensive image handling widgets
+
 ## [1.2.3] - 2024-01-XX
 
 ### Added
