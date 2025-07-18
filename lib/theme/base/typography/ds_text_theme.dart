@@ -113,6 +113,7 @@ extension DSTextStyleExtension on DSTextStyle {
 }
 
 class DSTextTheme extends TextTheme {
+  final DSTextStyle? xxs;
   final DSTextStyle? xs;
   final DSTextStyle? sm;
   final DSTextStyle? base;
@@ -124,6 +125,7 @@ class DSTextTheme extends TextTheme {
   final DSTextStyle? xxxxxl;
 
   DSTextTheme({
+    required this.xxs,
     required this.xs,
     required this.sm,
     required this.base,
@@ -137,6 +139,7 @@ class DSTextTheme extends TextTheme {
 
   factory DSTextTheme._create() {
     return DSTextTheme(
+      xxs: DSTextStyle.fromSize(DSTextStyleSize.xxs),
       xs: DSTextStyle.fromSize(DSTextStyleSize.xs),
       sm: DSTextStyle.fromSize(DSTextStyleSize.sm),
       base: DSTextStyle.fromSize(DSTextStyleSize.base),
@@ -181,6 +184,7 @@ class DSTextTheme extends TextTheme {
 
   DSTextTheme lerp(covariant DSTextTheme? other, double t) {
     return DSTextTheme(
+      xxs: xxs?.lerp(xxs, other?.xxs, t),
       xs: xs?.lerp(xs, other?.xs, t),
       sm: sm?.lerp(sm, other?.sm, t),
       base: base?.lerp(base, other?.base, t),

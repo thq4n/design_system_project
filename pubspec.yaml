@@ -148,10 +148,10 @@ flutter_gen:
 
   # Optional
   integrations:
-    image: true
-    flutter_svg: true
-    rive: true
-    lottie: true
+    image: false
+    flutter_svg: false
+    rive: false
+    lottie: false
   
   assets:
     # Optional

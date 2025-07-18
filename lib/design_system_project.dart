@@ -21,3 +21,5 @@ export 'gen/fonts.gen.dart';
 export 'theme/ds_theme.dart';
 // Utils
 export 'utils/helpers.dart';
+// Widgets
+export 'widgets/widgets.dart';

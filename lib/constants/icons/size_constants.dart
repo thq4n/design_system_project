@@ -13,9 +13,9 @@ enum _DSIconSizeConstants {
 }
 
 class DSSystemIconSizes {
-  final size16 = _DSIconSizeConstants.size16.value;
-  final size20 = _DSIconSizeConstants.size20.value;
-  final size24 = _DSIconSizeConstants.size24.value;
-  final size40 = _DSIconSizeConstants.size40.value;
-  final size48 = _DSIconSizeConstants.size48.value;
+  static final size16 = _DSIconSizeConstants.size16.value;
+  static final size20 = _DSIconSizeConstants.size20.value;
+  static final size24 = _DSIconSizeConstants.size24.value;
+  static final size40 = _DSIconSizeConstants.size40.value;
+  static final size48 = _DSIconSizeConstants.size48.value;
 }

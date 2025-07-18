@@ -1,4 +1,3 @@
-import 'package:design_system_project/components/ds_icon_button/ds_icon_button.dart';
 import 'package:flutter/material.dart';
 import 'package:design_system_project/design_system_project.dart';
 
@@ -66,26 +65,13 @@ class _MyHomePageState extends State<MyHomePage> {
               isDisabled: false,
               isLoading: true,
             ),
-            DSIconButton(
-              variant: DSIconButtonVariants.tertiary,
-              size: DSIconButtonSize.lg,
-              icon: DSSystemIcons.icon(
-                (icons) => icons.addBold,
-                getSize: (sizes) => sizes.size24,
-              ),
-              onPressed: () {},
-              isActivated: true,
-            ),
           ],
         ),
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: _incrementCounter,
         tooltip: 'Increment',
-        child: DSSystemIcons.icon(
-          (icons) => icons.addBold,
-          getSize: (sizes) => sizes.size20,
-        ),
+        child: ImageView(source: DSAssets.vuesax.a24SupportBold),
       ),
     );
   }

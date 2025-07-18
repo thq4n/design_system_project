@@ -4,5 +4,4 @@ import 'package:flutter_svg/flutter_svg.dart' as _svg;
 import '../design_system_project.dart';
 
 part 'state.extension.dart';
-part 'svg.extension.dart';
 part 'build_context.extension.dart';

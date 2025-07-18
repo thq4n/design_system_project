@@ -24,6 +24,7 @@ enum DSTextStyleVariant {
 }
 
 enum DSTextStyleSize {
+  xxs,
   xs,
   sm,
   base,
@@ -36,6 +37,8 @@ enum DSTextStyleSize {
 
   DSFontSize get dsFontSize {
     switch (this) {
+      case DSTextStyleSize.xxs:
+        return DSFontSizes.xxs;
       case DSTextStyleSize.xs:
         return DSFontSizes.xs;
       case DSTextStyleSize.sm:

@@ -20,3 +20,5 @@ part 'components/ds_icon_button/ds_icon_button_theme.dart';
 part 'components/ds_icon_button/ds_icon_button_theme.ext.dart';
 part 'components/ds_button/ds_button_theme.dart';
 part 'components/ds_button/ds_button_theme.ext.dart';
+part 'components/ds_input/ds_input_theme.ext.dart';
+part 'components/ds_input/ds_input_theme.dart';
