@@ -20,6 +20,7 @@ class DSImageView extends StatelessWidget {
     this.alignment = Alignment.center,
     this.placeHolder,
     this.loadingRadius,
+    this.package = 'design_system_project',
   });
 
   final String source;
@@ -29,7 +30,7 @@ class DSImageView extends StatelessWidget {
   final Color? color;
   final Alignment alignment;
   final String? placeHolder;
-  final String package = 'design_system_project';
+  final String package;
   final double? loadingRadius;
 
   @override
