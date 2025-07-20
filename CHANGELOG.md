@@ -25,6 +25,27 @@ và dự án này tuân thủ [Semantic Versioning](https://semver.org/spec/v2.0
 ### Security
 - TBD
 
+## [1.2.7] - 2024-01-XX
+
+### Added
+- **DSImageView Package Parameter**: Made package parameter optional (nullable)
+  - Package parameter is now optional for maximum flexibility
+  - Maintains backward compatibility
+  - Allows for cleaner API when package is not needed
+  - Better null safety implementation
+
+### Changed
+- **DSInput Component**: Updated close icon to closeCircleLinear
+- **Example App**: Added DSInput component showcase
+- **Example App**: Updated floating action button icon to a3dCubeScanBold
+- **Dependencies**: Updated to latest versions
+
+### Technical Details
+- DSImageView package parameter now optional (String?)
+- DSInput close icon updated for better UX
+- Example app enhanced with DSInput showcase
+- Dependencies updated in pubspec.lock
+
 ## [1.2.6] - 2024-01-XX
 
 ### Added
