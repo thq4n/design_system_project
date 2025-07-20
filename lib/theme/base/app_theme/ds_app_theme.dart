@@ -14,6 +14,62 @@ class DSAppTheme {
   static final ThemeData _baseTheme = ThemeData(
     fontFamily: Fonts.sFProDisplay,
     textTheme: _textTheme,
+    inputDecorationTheme: InputDecorationTheme(
+      filled: true,
+      fillColor: DSColorUsages.background.primary,
+      contentPadding: const EdgeInsets.symmetric(vertical: 16, horizontal: 16),
+      border: OutlineInputBorder(
+        borderRadius: BorderRadius.circular(8),
+        borderSide: BorderSide(
+          color: DSColorUsages.border.primary,
+          width: 1,
+        ),
+      ),
+      enabledBorder: OutlineInputBorder(
+        borderRadius: BorderRadius.circular(8),
+        borderSide: BorderSide(
+          color: DSColorUsages.border.primary,
+          width: 1,
+        ),
+      ),
+      focusedBorder: OutlineInputBorder(
+        borderRadius: BorderRadius.circular(8),
+        borderSide: BorderSide(
+          color: DSColorUsages.border.brand.tint200,
+          width: 1,
+        ),
+      ),
+      errorBorder: OutlineInputBorder(
+        borderRadius: BorderRadius.circular(8),
+        borderSide: BorderSide(
+          color: DSColorUsages.border.error,
+          width: 1,
+        ),
+      ),
+      focusedErrorBorder: OutlineInputBorder(
+        borderRadius: BorderRadius.circular(8),
+        borderSide: BorderSide(
+          color: DSColorUsages.border.error,
+          width: 1,
+        ),
+      ),
+      disabledBorder: OutlineInputBorder(
+        borderRadius: BorderRadius.circular(8),
+        borderSide: BorderSide(
+          color: DSColorUsages.border.primary,
+          width: 1,
+        ),
+      ),
+      labelStyle:
+          _textTheme.base?.medium.copyWithColor(DSColorUsages.text.tertiary),
+      floatingLabelStyle:
+          _textTheme.xs?.medium.copyWithColor(DSColorUsages.text.tertiary),
+      hintStyle:
+          _textTheme.base?.medium.copyWithColor(DSColorUsages.text.tertiary),
+      errorStyle: _textTheme.xs?.medium.copyWithColor(DSColorUsages.text.error),
+      suffixIconColor: DSColorUsages.icon.secondary,
+      prefixIconColor: DSColorUsages.icon.secondary,
+    ),
     extensions: [
       DSTextThemeExtension(textTheme: _textTheme),
       DsColorThemeExtension(),

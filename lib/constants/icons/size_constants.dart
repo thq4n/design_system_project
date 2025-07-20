@@ -12,7 +12,9 @@ enum _DSIconSizeConstants {
   const _DSIconSizeConstants(this.value);
 }
 
-class DSSystemIconSizes {
+class DSIconSizes {
+  DSIconSizes._();
+
   static final size16 = _DSIconSizeConstants.size16.value;
   static final size20 = _DSIconSizeConstants.size20.value;
   static final size24 = _DSIconSizeConstants.size24.value;

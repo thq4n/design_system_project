@@ -1,7 +1,7 @@
 part of '../../ds_color_usage_core.dart';
 
 class DSColorUsages extends _DSColorUsages {
-  const DSColorUsages();
+  const DSColorUsages._();
 
   static _DSBorderColorUsage get border => const _DSBorderColorUsage();
   static _DSBackgroundColorUsage get background =>

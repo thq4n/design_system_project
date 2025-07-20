@@ -1,4 +1,3 @@
-import '../../constants/icons/size_constants.dart';
 import '../../constants/icons/type_constants.dart';
 import '../../gen/assets.gen.dart';
 

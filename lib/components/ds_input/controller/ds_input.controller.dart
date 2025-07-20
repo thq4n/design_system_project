@@ -29,6 +29,8 @@ class DSInputController extends ValueNotifier<InputContainerProperties> {
           value ?? InputContainerProperties(),
         );
 
+  bool get isFocused => value.focusNode.hasFocus;
+
   String get text => value.tdController.text;
 
   String get trimmedText => value.tdController.text.trim();
