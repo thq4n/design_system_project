@@ -31,6 +31,7 @@ flutter pub get
 
 | Version | Release Date | Description |
 |---------|--------------|-------------|
+| [v1.2.6](https://github.com/yourusername/design_system_project/releases/tag/v1.2.6) | 2024-01-XX | DSImageView package parameter restoration |
 | [v1.2.5](https://github.com/yourusername/design_system_project/releases/tag/v1.2.5) | 2024-01-XX | DSImageView simplification and improvements |
 | [v1.2.4](https://github.com/yourusername/design_system_project/releases/tag/v1.2.4) | 2024-01-XX | Image gallery and page indicator widgets |
 | [v1.2.3](https://github.com/yourusername/design_system_project/releases/tag/v1.2.3) | 2024-01-XX | XXS text size and DSInput component |

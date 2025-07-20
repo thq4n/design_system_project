@@ -25,6 +25,24 @@ và dự án này tuân thủ [Semantic Versioning](https://semver.org/spec/v2.0
 ### Security
 - TBD
 
+## [1.2.6] - 2024-01-XX
+
+### Added
+- **DSImageView Package Parameter**: Restored package parameter với default value
+  - Added back package parameter với default 'design_system_project'
+  - Maintains backward compatibility
+  - Provides flexibility for custom package specification
+
+### Changed
+- **DSImageView**: Restored package parameter functionality
+- **Backward Compatibility**: Previous usage patterns still work
+- **Flexibility**: Can specify custom package when needed
+
+### Technical Details
+- Restored package parameter với default value
+- Maintained backward compatibility từ v1.2.5
+- Added flexibility for custom package specification
+
 ## [1.2.5] - 2024-01-XX
 
 ### Changed
