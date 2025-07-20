@@ -32,6 +32,7 @@ class _MyHomePageState extends State<MyHomePage> {
   int _counter = 0;
   DSTextTheme get textTheme =>
       Theme.of(context).extension<DSTextThemeExtension>()!.textTheme;
+  final DSInputController controller = DSInputController();
 
   void _incrementCounter() {
     setState(() {
@@ -56,14 +57,26 @@ class _MyHomePageState extends State<MyHomePage> {
               '$_counter',
               style: Theme.of(context).textTheme.headlineMedium,
             ),
-            DSInput(),
+            DSInput(
+              controller: controller,
+              title: 'Title',
+              required: true,
+              hint: 'Hint',
+              enable: true,
+              onTextChanged: (text, controller) {},
+              prefixIcon: DSImageView(source: DSAssets.vuesax.a24SupportBold),
+              suffixIcon: DSImageView(
+                source: DSAssets.vuesax.alignBottomLinear,
+              ),
+            ),
+
             DSButton(
               key: Key('button'),
               variant: DSButtonVariants.primary,
               size: DSButtonSize.lg,
               label: 'Button',
               onPressed: () {},
-              isDisabled: false,
+              isDisabled: true,
               isLoading: true,
             ),
           ],

@@ -31,6 +31,7 @@ flutter pub get
 
 | Version | Release Date | Description |
 |---------|--------------|-------------|
+| [v1.2.8](https://github.com/yourusername/design_system_project/releases/tag/v1.2.8) | 2024-01-XX | Major DSInput redesign with Material 3 styling and theme improvements |
 | [v1.2.7](https://github.com/yourusername/design_system_project/releases/tag/v1.2.7) | 2024-01-XX | DSImageView optional package parameter and DSInput improvements |
 | [v1.2.6](https://github.com/yourusername/design_system_project/releases/tag/v1.2.6) | 2024-01-XX | DSImageView package parameter restoration |
 | [v1.2.5](https://github.com/yourusername/design_system_project/releases/tag/v1.2.5) | 2024-01-XX | DSImageView simplification and improvements |

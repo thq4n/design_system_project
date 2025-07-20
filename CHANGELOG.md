@@ -25,6 +25,44 @@ và dự án này tuân thủ [Semantic Versioning](https://semver.org/spec/v2.0
 ### Security
 - TBD
 
+## [1.2.8] - 2024-01-XX
+
+### Added
+- **DSInput Component Redesign**: Complete modern Material 3 redesign
+  - Modern Material 3 styling with proper input decoration theme
+  - Comprehensive border states (enabled, focused, error, disabled)
+  - Enhanced error display with warning icon and proper styling
+  - Focus state management with ValueNotifier
+  - Improved accessibility and user experience
+- **Input Decoration Theme**: Comprehensive theme system
+  - Proper border states for all input conditions
+  - Consistent spacing and padding
+  - Brand color integration for focused states
+  - Error state styling with proper color usage
+  - Disabled state handling
+- **DSInputController**: Added `isFocused` getter for focus state management
+
+### Changed
+- **DSInput Suffix Icons**: Redesigned layout with clear button and separator
+- **DSInput Prefix Icons**: Improved layout and spacing
+- **Password Visibility**: Updated icons to use DSImageView
+- **Icon System**: Renamed `DSSystemIconSizes` to `DSIconSizes` for consistency
+- **Color Usage**: Improved implementation with proper constructor
+- **API Cleanup**: Removed unused padding parameters for cleaner API
+
+### Breaking Changes
+- `DSSystemIconSizes` renamed to `DSIconSizes`
+- Removed unused padding parameters from DSInput
+- DSInput now uses comprehensive input decoration theme
+
+### Technical Details
+- Complete DSInput redesign with Material 3 principles
+- Added comprehensive input decoration theme
+- Enhanced error display with warning icon
+- Added focus state management with ValueNotifier
+- Improved icon system consistency
+- Better encapsulation and code organization
+
 ## [1.2.7] - 2024-01-XX
 
 ### Added
