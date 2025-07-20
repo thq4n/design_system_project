@@ -56,6 +56,7 @@ class _MyHomePageState extends State<MyHomePage> {
               '$_counter',
               style: Theme.of(context).textTheme.headlineMedium,
             ),
+            DSInput(),
             DSButton(
               key: Key('button'),
               variant: DSButtonVariants.primary,
@@ -71,7 +72,7 @@ class _MyHomePageState extends State<MyHomePage> {
       floatingActionButton: FloatingActionButton(
         onPressed: _incrementCounter,
         tooltip: 'Increment',
-        child: DSImageView(source: DSAssets.vuesax.a24SupportBold),
+        child: DSImageView(source: DSAssets.vuesax.a3dCubeScanBold),
       ),
     );
   }

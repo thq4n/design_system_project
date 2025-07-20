@@ -349,7 +349,7 @@ class _DSInputState extends State<DSInput> {
             child: Padding(
               padding: padding,
               child: DSImageView(
-                source: DSAssets.vuesax.a24SupportBold,
+                source: DSAssets.vuesax.closeCircleLinear,
                 width: DSSystemIconSizes.size24,
               ),
             ),
