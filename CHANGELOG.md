@@ -25,6 +25,36 @@ và dự án này tuân thủ [Semantic Versioning](https://semver.org/spec/v2.0
 ### Security
 - TBD
 
+## [1.4.0] - 2024-01-XX
+
+### Added
+- **DSRadio Component**: Modern radio button component with design system integration
+  - Customizable radio button with smooth animations
+  - Design system color integration
+  - Theme system support with variants
+  - Gesture-based interaction
+  - Animated selection states
+  - Generic type support for different value types
+
+- **DSImageViewWrapper Component**: Convenient wrapper for DSImageView with presets
+  - Avatar preset with logo placeholder
+  - Item preset with full logo placeholder
+  - Banner preset with full logo placeholder
+  - Simplified usage for common image types
+  - Consistent placeholder handling
+
+### Changed
+- **DSBasicScreenForm Improvements**: Enhanced default behavior
+  - Background color now defaults to `DSColorUsages.background.secondary`
+  - Better visual consistency across different themes
+  - Improved code formatting with line length limits
+
+### Technical Details
+- New DSRadio component with modern design and animations
+- DSImageViewWrapper with convenient presets for common use cases
+- Enhanced theme system integration for new components
+- Improved default values for better UX
+
 ## [1.3.1] - 2024-01-XX
 
 ### Changed

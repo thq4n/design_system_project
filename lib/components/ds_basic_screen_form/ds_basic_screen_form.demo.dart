@@ -162,7 +162,7 @@ class _DSBasicScreenFormWithHeaderDemoState
                   ),
                   const SizedBox(height: 8),
                   Text(
-                    'Configure your account preferences and personal information.',
+                    '''Configure your account preferences and personal information.''',
                     style: textTheme.sm?.regular.copyWith(
                       color: DSColorUsages.text.secondary,
                     ),
@@ -245,7 +245,7 @@ class _DSBasicScreenFormCustomDemoState
                   ),
                   const SizedBox(height: 8),
                   Text(
-                    'This is an example of a custom styled form with different colors and layout.',
+                    '''This is an example of a custom styled form with different colors and layout.''',
                     style: textTheme.sm?.regular.copyWith(
                       color: DSColorUsages.text.secondary,
                     ),

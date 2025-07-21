@@ -31,6 +31,7 @@ flutter pub get
 
 | Version | Release Date | Description |
 |---------|--------------|-------------|
+| [v1.4.0](https://github.com/yourusername/design_system_project/releases/tag/v1.4.0) | 2024-01-XX | DSRadio component, DSImageViewWrapper presets, and enhanced defaults |
 | [v1.3.1](https://github.com/yourusername/design_system_project/releases/tag/v1.3.1) | 2024-01-XX | DSBasicScreenForm type safety improvements and enhanced defaults |
 | [v1.3.0](https://github.com/yourusername/design_system_project/releases/tag/v1.3.0) | 2024-01-XX | DSBasicScreenForm component - complete screen form layout solution |
 | [v1.2.9](https://github.com/yourusername/design_system_project/releases/tag/v1.2.9) | 2024-01-XX | DSInput autofill support and enhanced form accessibility |

@@ -77,6 +77,7 @@ class DSAppTheme {
       DSIconButtonThemeExtension(),
       DSInputThemeExtension(),
       DSBasicScreenFormThemeExtension(_textTheme),
+      DSRadioThemeExtension(),
     ],
   );
 

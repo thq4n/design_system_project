@@ -1,3 +1,5 @@
+// ignore_for_file: lines_longer_than_80_chars
+
 import 'dart:math';
 
 import 'package:flutter/material.dart';
@@ -34,7 +36,7 @@ class DSBasicScreenForm extends StatefulWidget {
 
   /// Background color for the entire screen.
   ///
-  /// Defaults to [DSColorUsages.background.primary] if not provided.
+  /// Defaults to [DSColorUsages.background.secondary] if not provided.
   final Color? bgColor;
 
   /// Background color for the app bar.
@@ -243,7 +245,7 @@ class _DSBasicScreenFormState extends DSStateBase<DSBasicScreenForm> {
             textTheme.base?.medium.copyWithColor(DSColorUsages.text.white),
 
         // Background color: widget -> theme -> system default
-        backgroundColor: widget.bgColor ?? DSColorUsages.background.primary,
+        backgroundColor: widget.bgColor ?? DSColorUsages.background.secondary,
       );
 
   @override
@@ -292,7 +294,7 @@ class _DSBasicScreenFormState extends DSStateBase<DSBasicScreenForm> {
             Expanded(
               child: Material(
                 color: screenTheme.backgroundColor ??
-                    DSColorUsages.background.primary,
+                    DSColorUsages.background.secondary,
                 child: Container(
                   width: double.infinity,
                   height: double.infinity,
