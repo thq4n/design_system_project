@@ -25,6 +25,29 @@ và dự án này tuân thủ [Semantic Versioning](https://semver.org/spec/v2.0
 ### Security
 - TBD
 
+## [1.2.9] - 2024-01-XX
+
+### Added
+- **DSInput Autofill Support**: Enhanced form accessibility
+  - Added `autofillHints` parameter for better form autofill support
+  - Improved integration with system autofill features
+  - Better user experience with automatic form filling
+  - Enhanced accessibility for form inputs
+
+### Changed
+- **DSInput Theme Integration**: Cleaner theme handling
+  - Removed redundant `hintStyle` and `errorStyle` properties
+  - Better integration with Material 3 input decoration theme
+  - Cleaner API with automatic theme styling
+  - Improved consistency across all input states
+
+### Technical Details
+- Added autofillHints parameter to DSInput component
+- Improved form accessibility and user experience
+- Better integration with system autofill features
+- Cleaner API with automatic theme styling
+- Enhanced form input accessibility
+
 ## [1.2.8] - 2024-01-XX
 
 ### Added
