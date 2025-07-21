@@ -53,6 +53,7 @@ class DSInput extends StatefulWidget {
   final void Function(DSInputController? controller)? onTapOutSide;
   final bool isAutoUnfocus;
   final String? initialValue;
+  final List<String>? autofillHints;
 
   const DSInput({
     Key? key,
@@ -94,6 +95,7 @@ class DSInput extends StatefulWidget {
     this.onTapOutSide,
     this.isAutoUnfocus = true,
     this.initialValue,
+    this.autofillHints,
   }) : super(key: key);
 
   @override
@@ -160,6 +162,7 @@ class _DSInputState extends State<DSInput> {
           readOnly: widget.readOnly || !widget.enable,
           controller: value.tdController,
           maxLength: widget.maxLength,
+          autofillHints: widget.autofillHints,
           decoration: InputDecoration(
             error: value.validation != null
                 ? RichText(
@@ -203,8 +206,6 @@ class _DSInputState extends State<DSInput> {
               ),
             ),
             hintText: widget.hint,
-            hintStyle: widget.hintStyle ?? textTheme.xs,
-            errorStyle: textTheme.sm,
             errorMaxLines: 2,
             suffixIcon: _getSuffixIcon()?.let(
               (it) => it != null
