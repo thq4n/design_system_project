@@ -42,13 +42,17 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: Colors.white,
-      appBar: AppBar(
-        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-        title: Text('Large Title Bold', style: textTheme.base?.bold),
+    return DSBasicScreenForm(
+      title: 'Basic Screen Form Demo',
+      showBackButton: true,
+      centerTitle: true,
+
+      floatingActionButton: FloatingActionButton(
+        onPressed: _incrementCounter,
+        tooltip: 'Increment',
+        child: DSImageView(source: DSAssets.vuesax.a3dCubeScanBold),
       ),
-      body: Center(
+      child: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
@@ -81,11 +85,6 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
           ],
         ),
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: DSImageView(source: DSAssets.vuesax.a3dCubeScanBold),
       ),
     );
   }

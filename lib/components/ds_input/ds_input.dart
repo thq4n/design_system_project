@@ -149,7 +149,6 @@ class _DSInputState extends State<DSInput> {
 
   @override
   Widget build(BuildContext context) {
-    final themeData = context.theme;
     if (widget.justShowPrefixIconWhenEmpty) {
       showPrefixIcon = _controller?.text.isEmpty == true;
     }

@@ -5,7 +5,6 @@ enum DSInputVariants {
   secondary,
   outline,
   ghost,
-  // TODO: Define variants for DSInput component
 }
 
 class DSInputThemeExtension extends ThemeExtension<DSInputThemeExtension> {

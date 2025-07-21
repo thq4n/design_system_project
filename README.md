@@ -31,6 +31,7 @@ flutter pub get
 
 | Version | Release Date | Description |
 |---------|--------------|-------------|
+| [v1.3.0](https://github.com/yourusername/design_system_project/releases/tag/v1.3.0) | 2024-01-XX | DSBasicScreenForm component - complete screen form layout solution |
 | [v1.2.9](https://github.com/yourusername/design_system_project/releases/tag/v1.2.9) | 2024-01-XX | DSInput autofill support and enhanced form accessibility |
 | [v1.2.8](https://github.com/yourusername/design_system_project/releases/tag/v1.2.8) | 2024-01-XX | Major DSInput redesign with Material 3 styling and theme improvements |
 | [v1.2.7](https://github.com/yourusername/design_system_project/releases/tag/v1.2.7) | 2024-01-XX | DSImageView optional package parameter and DSInput improvements |

@@ -25,6 +25,48 @@ và dự án này tuân thủ [Semantic Versioning](https://semver.org/spec/v2.0
 ### Security
 - TBD
 
+## [1.3.0] - 2024-01-XX
+
+### Added
+- **DSBasicScreenForm Component**: Complete screen form layout solution
+  - Modern Material 3 app bar with title, description, and actions
+  - Automatic status bar styling and keyboard dismissal
+  - Flexible layout with customizable colors and styling
+  - Built-in back button with custom styling
+  - Support for header images and custom extensions
+  - Comprehensive theme system integration
+  - Floating action button and bottom navigation support
+
+### Component Features
+- **App Bar Customization**: Full control over app bar appearance
+  - Customizable title and description with flexible styling
+  - Action buttons support with proper positioning
+  - Optional back button with custom styling
+  - Header image support with automatic status bar management
+  - Rounded bottom corners with customizable border radius
+  - Gradient background with optional divider
+
+- **Layout Management**: Smart layout handling
+  - Automatic keyboard dismissal on tap outside
+  - Resizable body with keyboard avoidance
+  - Flexible content area with proper constraints
+  - Support for floating action buttons
+  - Bottom navigation bar integration
+
+- **Theme Integration**: Comprehensive theme system
+  - Complete theme configuration with defaults
+  - Widget parameter overrides for customization
+  - Automatic fallback to system defaults
+  - Smooth theme transitions with lerp support
+
+### Technical Details
+- New DSBasicScreenForm component with comprehensive screen layout
+- Complete theme system integration for screen forms
+- Automatic status bar styling management
+- Built-in keyboard dismissal and avoidance
+- Smart layout with proper constraints
+- Enhanced accessibility features
+
 ## [1.2.9] - 2024-01-XX
 
 ### Added
