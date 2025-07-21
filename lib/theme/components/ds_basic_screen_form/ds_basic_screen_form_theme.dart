@@ -14,8 +14,8 @@ class DSBasicScreenFormTheme {
   final Color? appbarColor;
   final Color? appbarForegroundColor;
   final int? titleMaxLines;
-  final TextStyle? titleStyle;
-  final TextStyle? desStyle;
+  final DSTextStyle? titleStyle;
+  final DSTextStyle? desStyle;
   final Color? backgroundColor;
   final double borderRadius;
 
@@ -45,8 +45,8 @@ class DSBasicScreenFormTheme {
     Color? appbarColor,
     Color? appbarForegroundColor,
     int? titleMaxLines,
-    TextStyle? titleStyle,
-    TextStyle? desStyle,
+    DSTextStyle? titleStyle,
+    DSTextStyle? desStyle,
     Color? backgroundColor,
     double? borderRadius,
   }) {
@@ -92,8 +92,8 @@ class DSBasicScreenFormTheme {
       appbarForegroundColor:
           Color.lerp(appbarForegroundColor, other.appbarForegroundColor, t),
       backgroundColor: Color.lerp(backgroundColor, other.backgroundColor, t),
-      titleStyle: TextStyle.lerp(other.titleStyle, titleStyle, t),
-      desStyle: TextStyle.lerp(other.desStyle, desStyle, t),
+      titleStyle: titleStyle?.lerp(titleStyle, other.titleStyle, t),
+      desStyle: desStyle?.lerp(desStyle, other.desStyle, t),
     );
   }
 }

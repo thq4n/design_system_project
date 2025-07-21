@@ -25,6 +25,31 @@ và dự án này tuân thủ [Semantic Versioning](https://semver.org/spec/v2.0
 ### Security
 - TBD
 
+## [1.3.1] - 2024-01-XX
+
+### Changed
+- **DSBasicScreenForm Type Safety**: Enhanced type safety and consistency
+  - Changed from `TextStyle` to `DSTextStyle` for better design system integration
+  - Improved default text styles using design system typography
+  - Better consistency with design system standards
+
+- **DSBasicScreenForm Default Values**: Improved default behavior
+  - `hasBottomBorderRadius` now defaults to `false` for cleaner appearance
+  - Title style defaults to `textTheme.lg?.semibold` with white color
+  - Description style defaults to `textTheme.base?.medium` with white color
+  - Better visual hierarchy and readability
+
+- **Code Quality**: Cleaner and more maintainable code
+  - Removed unused imports and variables
+  - Improved code organization and readability
+  - Better separation of concerns
+
+### Technical Details
+- Enhanced type safety with DSTextStyle instead of TextStyle
+- Improved default behavior for better UX
+- Cleaner code organization and maintainability
+- Better integration with design system standards
+
 ## [1.3.0] - 2024-01-XX
 
 ### Added

@@ -5,7 +5,6 @@ import 'package:flutter/material.dart';
 import '../../base/ds_base.dart';
 import '../../constants/icons/size_constants.dart';
 import '../../design_system_core/ds_color_usage/ds_color_usage_core.dart';
-import '../../extensions/extensions.dart';
 import '../../gen/assets.gen.dart';
 import '../../theme/ds_theme.dart';
 import '../../utils/object_utils.dart';
@@ -85,7 +84,7 @@ class DSBasicScreenForm extends StatefulWidget {
 
   /// Whether the app bar has rounded bottom corners.
   ///
-  /// Defaults to true if not provided.
+  /// Defaults to false if not provided.
   final bool? hasBottomBorderRadius;
 
   /// Whether to center the title.
@@ -116,13 +115,13 @@ class DSBasicScreenForm extends StatefulWidget {
 
   /// Custom text style for the title.
   ///
-  /// Defaults to [TextTheme.titleLarge] if not provided.
-  final TextStyle? titleStyle;
+  /// Defaults to [textTheme.lg?.semibold] with white color if not provided.
+  final DSTextStyle? titleStyle;
 
   /// Custom text style for the description.
   ///
-  /// Defaults to [TextTheme.titleSmall] if not provided.
-  final TextStyle? desStyle;
+  /// Defaults to [textTheme.base?.medium] with white color if not provided.
+  final DSTextStyle? desStyle;
 
   /// A button displayed floating above the body, in the bottom right corner.
   ///
@@ -197,8 +196,6 @@ class _DSBasicScreenFormState extends DSStateBase<DSBasicScreenForm> {
       .extension<DSBasicScreenFormThemeExtension>()!
       .dSBasicScreenFormTheme;
 
-  late ThemeData _theme = context.theme;
-
   /// Gets the theme configuration with widget-specific overrides.
   ///
   /// Applies widget parameters over theme defaults, with fallbacks to system defaults.
@@ -209,8 +206,8 @@ class _DSBasicScreenFormState extends DSStateBase<DSBasicScreenForm> {
         // Back button: defaults to true
         showBackButton: widget.showBackButton ?? true,
 
-        // Border radius: defaults to true
-        hasBottomBorderRadius: widget.hasBottomBorderRadius ?? true,
+        // Border radius: defaults to false
+        hasBottomBorderRadius: widget.hasBottomBorderRadius ?? false,
 
         // Border radius value: defaults to 12.0
         borderRadius: widget.borderRadius ?? 12.0,
@@ -238,12 +235,12 @@ class _DSBasicScreenFormState extends DSStateBase<DSBasicScreenForm> {
         // Title style: widget -> theme -> system default
         titleStyle: widget.titleStyle ??
             componentTheme.titleStyle ??
-            _theme.textTheme.titleLarge,
+            textTheme.lg?.semibold.copyWithColor(DSColorUsages.text.white),
 
         // Description style: widget -> theme -> system default
         desStyle: widget.desStyle ??
             componentTheme.desStyle ??
-            _theme.textTheme.titleSmall,
+            textTheme.base?.medium.copyWithColor(DSColorUsages.text.white),
 
         // Background color: widget -> theme -> system default
         backgroundColor: widget.bgColor ?? DSColorUsages.background.primary,
@@ -280,8 +277,6 @@ class _DSBasicScreenFormState extends DSStateBase<DSBasicScreenForm> {
 
   @override
   Widget build(BuildContext context) {
-    _theme = context.theme;
-
     return Scaffold(
       backgroundColor: widget.bgColor,
       resizeToAvoidBottomInset: widget.resizeToAvoidBottomInset,
