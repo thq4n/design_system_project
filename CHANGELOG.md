@@ -25,6 +25,43 @@ và dự án này tuân thủ [Semantic Versioning](https://semver.org/spec/v2.0
 ### Security
 - TBD
 
+## [1.4.1] - 2024-01-XX
+
+### Added
+- **DSRadio Component Enhancement**: Major redesign with comprehensive features
+  - Multiple variants: Primary, Secondary, Outline, Ghost
+  - Different sizes: Small (16px), Medium (20px), Large (24px)
+  - Labels & descriptions support
+  - Custom content with widgets
+  - Label positioning (left/right)
+  - Disabled state handling
+  - Enhanced accessibility support
+  - Smooth animations and transitions
+
+- **Comprehensive Documentation**: Complete documentation system
+  - DSRadio README with detailed usage examples
+  - Interactive demo showcasing all features
+  - Migration guide from Flutter's Radio widget
+  - API reference with prop documentation
+
+### Changed
+- **DSRadio Component**: Complete redesign with enhanced functionality
+  - Enhanced visual design with multiple variants
+  - Better color integration with design system
+  - Improved accessibility and user experience
+  - More flexible and customizable component
+
+- **Example App Integration**: Enhanced example app
+  - Added DSRadio examples to example app
+  - Added DSImageViewWrapper examples
+  - Better showcase of new components
+
+### Technical Details
+- DSRadio component with 4 variants and 3 sizes
+- Comprehensive documentation and demo system
+- Enhanced visual design and accessibility
+- Better integration with design system
+
 ## [1.4.0] - 2024-01-XX
 
 ### Added

@@ -1,6 +1,7 @@
 import 'package:flutter/widgets.dart';
 
 import '../components/ds_image_view/ds_image_view.dart';
+import '../gen/assets.gen.dart';
 
 class ImageViewWrapper extends DSImageView {
   ImageViewWrapper.avatar(
@@ -14,7 +15,7 @@ class ImageViewWrapper extends DSImageView {
     super.loadingRadius,
   }) : super(
           source: source,
-          // placeHolder: coreImageConstant.icUserAvatar,
+          placeHolder: DSAssets.branding.icLogoAloneRed,
         );
 
   ImageViewWrapper.item(
@@ -28,7 +29,7 @@ class ImageViewWrapper extends DSImageView {
     super.loadingRadius,
   }) : super(
           source: source,
-          // placeHolder: coreImageConstant.icDefaultItem,
+          placeHolder: DSAssets.branding.icLogoFullRed,
         );
 
   ImageViewWrapper.banner(
@@ -42,6 +43,6 @@ class ImageViewWrapper extends DSImageView {
     super.loadingRadius,
   }) : super(
           source: source,
-          // placeHolder: coreImageConstant.icDefaultItem,
+          placeHolder: DSAssets.branding.icLogoFullRed,
         );
 }

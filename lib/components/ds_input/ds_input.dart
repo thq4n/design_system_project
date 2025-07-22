@@ -188,22 +188,24 @@ class _DSInputState extends State<DSInput> {
                     ),
                   )
                 : null,
-            label: RichText(
-              text: TextSpan(
-                text: widget.title ?? '',
-                style: widget.titleStyle ??
-                    textTheme.sm?.regular.copyWith(
-                      color: DSColorUsages.text.secondary,
+            label: widget.title != null
+                ? RichText(
+                    text: TextSpan(
+                      text: widget.title ?? '',
+                      style: widget.titleStyle ??
+                          textTheme.sm?.regular.copyWith(
+                            color: DSColorUsages.text.secondary,
+                          ),
+                      children: [
+                        TextSpan(
+                          text: '*',
+                          style: textTheme.sm?.regular
+                              .copyWith(color: DSColorUsages.text.error),
+                        ),
+                      ],
                     ),
-                children: [
-                  TextSpan(
-                    text: '*',
-                    style: textTheme.sm?.regular
-                        .copyWith(color: DSColorUsages.text.error),
-                  ),
-                ],
-              ),
-            ),
+                  )
+                : null,
             hintText: widget.hint,
             errorMaxLines: 2,
             suffixIcon: _getSuffixIcon()?.let(

@@ -150,6 +150,7 @@ class ExtendedNetworkImage extends StatelessWidget {
                 color: color,
               );
             }
+
             return Icon(Icons.error, size: maxLoadingSize);
           case LoadState.completed:
             if (state.wasSynchronouslyLoaded) {

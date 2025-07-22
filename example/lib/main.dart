@@ -83,6 +83,18 @@ class _MyHomePageState extends State<MyHomePage> {
               isDisabled: true,
               isLoading: true,
             ),
+            const SizedBox(height: 20),
+            Text(
+              'Radio Buttons:',
+              style: Theme.of(context).textTheme.titleMedium,
+            ),
+            const SizedBox(height: 12),
+
+            const SizedBox(height: 8),
+            ImageViewWrapper.item(
+              'https://hrmv0-files-dev.247tech.vn/companies/download/images-a748af894d00454f9b846ae2f4da41a5.jpg',
+            ),
+            const SizedBox(height: 8),
           ],
         ),
       ),
