@@ -1,4 +1,4 @@
-import '../../constants/icons/type_constants.dart';
+import '../../constants/constants.dart';
 import '../../gen/assets.gen.dart';
 
 part 'base/ds_icon.dart';

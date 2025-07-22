@@ -5,7 +5,7 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 
 import '../../base/ds_base.dart';
-import '../../constants/icons/size_constants.dart';
+import '../../constants/constants.dart';
 import '../../design_system_core/ds_color_usage/ds_color_usage_core.dart';
 import '../../gen/assets.gen.dart';
 import '../../theme/ds_theme.dart';

@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-import '../../constants/icons/size_constants.dart';
 import '../../design_system_project.dart';
 
 class DSBasicScreenFormDemo extends StatefulWidget {

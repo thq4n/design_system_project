@@ -1,3 +1,4 @@
+part of '../constants.dart';
 // ignore_for_file: unused_field
 
 enum DSIconTypeConstants {

@@ -4,7 +4,6 @@ import '../../base/ds_base.dart';
 import '../../components/ds_basic_screen_form/ds_basic_screen_form.dart';
 import '../../design_system_core/ds_color_usage/ds_color_usage_core.dart';
 import '../../extensions/extensions.dart';
-import '../../theme/ds_theme.dart';
 import 'ds_radio.dart';
 
 class DSRadioDemo extends StatefulWidget {

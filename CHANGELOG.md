@@ -25,6 +25,31 @@ và dự án này tuân thủ [Semantic Versioning](https://semver.org/spec/v2.0
 ### Security
 - TBD
 
+## [1.4.2] - 2024-01-XX
+
+### Changed
+- **Code Organization**: Import optimization and better structure
+  - Consolidated imports into centralized constants file
+  - Improved organization of constants and icons
+  - Removed unused imports and improved code quality
+  - Enhanced maintainability with better code structure
+
+- **DSInput Component**: Enhanced required field handling
+  - Conditional required indicator (asterisk only shows when required)
+  - Better user experience with cleaner visual feedback
+  - Improved validation logic for required fields
+
+- **Constants Management**: Better organization
+  - Centralized constants through single entry point
+  - Better organization of icon size and type constants
+  - Import simplification across the codebase
+
+### Technical Details
+- Import optimization for better maintainability
+- DSInput enhancement with conditional required indicators
+- Constants management improvements
+- Code quality and structure improvements
+
 ## [1.4.1] - 2024-01-XX
 
 ### Added

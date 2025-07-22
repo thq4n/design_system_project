@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
-import '../../constants/icons/size_constants.dart';
+import '../../constants/constants.dart';
 import '../../design_system_core/ds_color_usage/ds_color_usage_core.dart';
 import '../../extensions/extensions.dart';
 import '../../gen/assets.gen.dart';
@@ -197,11 +197,12 @@ class _DSInputState extends State<DSInput> {
                             color: DSColorUsages.text.secondary,
                           ),
                       children: [
-                        TextSpan(
-                          text: '*',
-                          style: textTheme.sm?.regular
-                              .copyWith(color: DSColorUsages.text.error),
-                        ),
+                        if (widget.required)
+                          TextSpan(
+                            text: '*',
+                            style: textTheme.sm?.regular
+                                .copyWith(color: DSColorUsages.text.error),
+                          ),
                       ],
                     ),
                   )
