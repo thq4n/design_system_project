@@ -6,8 +6,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:flutter_svg_provider/flutter_svg_provider.dart' as svg_provider;
 
-import '../../utils/helpers.dart';
-import '../ds_loading/ds_loading.dart';
+import '../../design_system_project.dart';
 
 class DSImageView extends StatelessWidget {
   const DSImageView({
@@ -151,7 +150,16 @@ class ExtendedNetworkImage extends StatelessWidget {
               );
             }
 
-            return Icon(Icons.error, size: maxLoadingSize);
+            return Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: DSImageView(
+                source: DSAssets.vuesax.infoCircleBold,
+                width: DSIconSizes.size24,
+                height: DSIconSizes.size24,
+                fit: BoxFit.contain,
+                alignment: Alignment.center,
+              ),
+            );
           case LoadState.completed:
             if (state.wasSynchronouslyLoaded) {
               return state.completedWidget;

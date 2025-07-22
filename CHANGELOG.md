@@ -25,6 +25,35 @@ và dự án này tuân thủ [Semantic Versioning](https://semver.org/spec/v2.0
 ### Security
 - TBD
 
+## [1.4.3] - 2024-01-XX
+
+### Changed
+- **DSBasicScreenForm**: Enhanced back button with proper white color
+  - Better visibility and contrast against dark backgrounds
+  - Improved visual consistency with design system standards
+  - Enhanced accessibility for navigation elements
+
+- **DSImageView**: Improved error handling with custom error icons
+  - Replaced generic error icon with design system icon
+  - Better user experience with more informative error states
+  - Consistent error handling across components
+
+- **Example App**: Simplified usage and better documentation
+  - Cleaner ImageViewWrapper usage in example app
+  - Better showcase of component capabilities
+  - Improved examples for developers
+
+- **File Organization**: Better code structure and organization
+  - Moved ImageViewWrapper to proper location
+  - Improved import structure and optimization
+  - Better code organization and maintainability
+
+### Technical Details
+- UI enhancement for better visual consistency and accessibility
+- Error handling improvements with custom error icons
+- Example app updates with simplified usage
+- File organization improvements for better maintainability
+
 ## [1.4.2] - 2024-01-XX
 
 ### Changed

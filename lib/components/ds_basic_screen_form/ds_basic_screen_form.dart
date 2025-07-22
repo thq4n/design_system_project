@@ -391,6 +391,7 @@ class _DSBasicScreenFormState extends DSStateBase<DSBasicScreenForm> {
                               height: DSIconSizes.size24,
                               width: DSIconSizes.size24,
                               fit: BoxFit.fitHeight,
+                              color: DSColorUsages.text.white,
                             ),
                           ),
                         ),

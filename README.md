@@ -31,6 +31,7 @@ flutter pub get
 
 | Version | Release Date | Description |
 |---------|--------------|-------------|
+| [v1.4.3](https://github.com/yourusername/design_system_project/releases/tag/v1.4.3) | 2024-01-XX | UI enhancements, error handling improvements, and example app updates |
 | [v1.4.2](https://github.com/yourusername/design_system_project/releases/tag/v1.4.2) | 2024-01-XX | Code organization improvements, DSInput enhancement, and constants management |
 | [v1.4.1](https://github.com/yourusername/design_system_project/releases/tag/v1.4.1) | 2024-01-XX | DSRadio component enhancement with variants, sizes, and comprehensive documentation |
 | [v1.4.0](https://github.com/yourusername/design_system_project/releases/tag/v1.4.0) | 2024-01-XX | DSRadio component, DSImageViewWrapper presets, and enhanced defaults |
