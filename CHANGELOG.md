@@ -1,5 +1,18 @@
 # Changelog
 
+All notable changes to this project will be documented in this file.
+
+## [1.4.5] - 2024-12-19
+
+### 🚨 Breaking Changes
+- **DSBottomNavigationBar**: Changed requirement from odd number of items to even number of items for proper floating button layout
+  - This affects the API behavior and may require updates to existing implementations
+  - Updated assertion logic and documentation to reflect the new requirement
+
+### 📝 Documentation
+- Updated DSBottomNavigationBar documentation to reflect the new even number requirement
+- Improved code comments and examples for better clarity
+
 Tất cả những thay đổi quan trọng trong dự án này sẽ được ghi lại trong file này.
 
 Format dựa trên [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),

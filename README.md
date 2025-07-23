@@ -1,6 +1,8 @@
 # Design System Project
 
-A Flutter design system package that provides a comprehensive set of UI components, styles, and assets for building consistent and beautiful Flutter applications.
+A comprehensive Flutter design system package that provides a complete set of UI components, styles, and assets for building consistent and beautiful Flutter applications.
+
+**Current Version:** 1.4.5
 
 ## 📦 Installation
 

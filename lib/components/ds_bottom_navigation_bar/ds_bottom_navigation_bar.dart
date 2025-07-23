@@ -4,8 +4,8 @@ import '../../design_system_project.dart';
 
 /// AppBottomNavigationBar with floating button support
 ///
-/// This widget requires an odd number of items to properly layout the floating
-/// button in the center. The assertion will throw an error if an even number of
+/// This widget requires an even number of items to properly layout the floating
+/// button in the center. The assertion will throw an error if an odd number of
 /// items is provided.
 ///
 /// Example usage:
@@ -22,17 +22,12 @@ import '../../design_system_project.dart';
 ///       inactiveIcon: 'profile_outline',
 ///       activeIcon: 'profile_bold',
 ///     ),
-///     AppBottomNavigationBarItemData(
-///       title: 'Settings',
-///       inactiveIcon: 'settings_outline',
-///       activeIcon: 'settings_bold',
-///     ),
-///   ], // 3 items (odd number) - ✅ Valid
+///   ], // 2 items (even number) - ✅ Valid
 ///   floatingButtonIconTitle: 'Scan QR',
 /// )
 ///
 /// // This would throw an assertion error:
-/// // items: [item1, item2] // 2 items (even number) - ❌ Invalid
+/// // items: [item1, item2, item3] // 3 items (odd number) - ❌ Invalid
 /// ```
 
 class AppBottomNavigationBarItemData {
@@ -80,11 +75,11 @@ class _AppBottomNavigationBarState extends State<AppBottomNavigationBar> {
   @override
   void initState() {
     super.initState();
-    // Assert that items list has odd number of elements for proper layout with
+    // Assert that items list has even number of elements for proper layout with
     // floating button
     assert(
-      widget.items.length.isOdd,
-      'AppBottomNavigationBar requires an odd number of items for proper '
+      widget.items.length.isEven,
+      'AppBottomNavigationBar requires an even number of items for proper '
       'layout with floating button. Current count: ${widget.items.length}',
     );
   }
