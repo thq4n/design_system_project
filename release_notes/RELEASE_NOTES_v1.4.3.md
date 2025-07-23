@@ -490,7 +490,7 @@ class ErrorHandlingExample extends StatelessWidget {
 - **DSImageView Documentation**: [lib/components/ds_image_view/ds_image_view.dart](lib/components/ds_image_view/ds_image_view.dart)
 - **ImageViewWrapper Documentation**: [lib/components/ds_image_view/ds_image_view_wrapper.dart](lib/components/ds_image_view/ds_image_view_wrapper.dart)
 - **Catalog**: [CATALOG_README.md](CATALOG_README.md)
-- **Changelog**: [CHANGELOG.md](CHANGELOG.md)
+- **Changelog**: [../CHANGELOG.md](../CHANGELOG.md)
 
 ## 🙏 Contributors
 

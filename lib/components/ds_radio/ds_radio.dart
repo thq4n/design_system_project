@@ -1,22 +1,9 @@
 import 'package:flutter/material.dart';
 
 import '../../base/ds_base.dart';
+import '../../constants/constants.dart';
 import '../../design_system_core/ds_color_usage/ds_color_usage_core.dart';
-import '../../extensions/extensions.dart';
 import '../../theme/ds_theme.dart';
-
-enum DSRadioSize {
-  sm,
-  md,
-  lg,
-}
-
-enum DSRadioVariant {
-  primary,
-  secondary,
-  outline,
-  ghost,
-}
 
 class DSRadio<T> extends StatefulWidget {
   /// The value represented by this radio button.
@@ -44,17 +31,17 @@ class DSRadio<T> extends StatefulWidget {
   /// gets rebuilt; for example:
   ///
   /// ```dart
-  /// Radio<SingingCharacter>(
-  ///   value: SingingCharacter.lafayette,
-  ///   groupValue: _character,
-  ///   onChanged: (SingingCharacter? newValue) {
+  /// DSRadio<String>(
+  ///   value: 'option1',
+  ///   groupValue: _selectedValue,
+  ///   onChanged: (String? newValue) {
   ///     setState(() {
-  ///       _character = newValue;
+  ///       _selectedValue = newValue;
   ///     });
   ///   },
   /// )
   /// ```
-  final ValueChanged<T?>? onChanged;
+  final void Function(T?) onChanged;
 
   /// The label text to display next to the radio button.
   final String? label;
@@ -64,12 +51,6 @@ class DSRadio<T> extends StatefulWidget {
 
   /// Whether the radio button is disabled.
   final bool isDisabled;
-
-  /// The size of the radio button.
-  final DSRadioSize size;
-
-  /// The variant of the radio button.
-  final DSRadioVariant variant;
 
   /// Whether to show the label on the right side of the radio button.
   final bool labelOnRight;
@@ -85,125 +66,84 @@ class DSRadio<T> extends StatefulWidget {
     this.label,
     this.description,
     this.isDisabled = false,
-    this.size = DSRadioSize.md,
-    this.variant = DSRadioVariant.primary,
     this.labelOnRight = true,
     this.child,
   });
 
   @override
-  State<DSRadio> createState() => _DSRadioState();
+  State<DSRadio<T>> createState() => _DSRadioState<T>();
 }
 
-class _DSRadioState extends DSStateBase<DSRadio> {
+class _DSRadioState<T> extends DSStateBase<DSRadio<T>> {
   late DSRadioTheme componentTheme =
       theme.extension<DSRadioThemeExtension>()!.dSRadioTheme;
 
   bool get isSelected => widget.value == widget.groupValue;
-  bool get isEnabled => !widget.isDisabled && widget.onChanged != null;
+  bool get isEnabled => !widget.isDisabled;
 
-  double get _radioSize {
-    switch (widget.size) {
-      case DSRadioSize.sm:
-        return 16.0;
-      case DSRadioSize.md:
-        return 20.0;
-      case DSRadioSize.lg:
-        return 24.0;
-    }
-  }
+  double get _radioSize => DSIconSizes.size24;
 
-  double get _borderWidth {
-    if (isSelected) {
-      switch (widget.size) {
-        case DSRadioSize.sm:
-          return 4.0;
-        case DSRadioSize.md:
-          return 6.0;
-        case DSRadioSize.lg:
-          return 8.0;
-      }
-    }
-    return 1.5;
-  }
+  double get _radioInnerSize => 18;
 
-  Color _getBorderColor() {
+  double get _borderWidth => isSelected ? 4 : 1;
+
+  Gradient _getBorderColor() {
     if (!isEnabled) {
-      return DSColorUsages.border.tertiary;
+      return LinearGradient(
+        colors: [
+          DSColorUsages.border.secondary,
+          DSColorUsages.border.secondary,
+        ],
+      );
     }
 
     if (isSelected) {
-      switch (widget.variant) {
-        case DSRadioVariant.primary:
-          return colors.brand.primary;
-        case DSRadioVariant.secondary:
-          return colors.brand.tint400;
-        case DSRadioVariant.outline:
-          return colors.brand.primary;
-        case DSRadioVariant.ghost:
-          return colors.brand.primary;
-      }
+      return const LinearGradient(
+        colors: [
+          Color(0xFFFF3F3F),
+          Color(0xFFD02727),
+        ],
+      );
     }
 
-    return DSColorUsages.border.primary;
+    return LinearGradient(
+      colors: [
+        DSColorUsages.border.secondary,
+        DSColorUsages.border.secondary,
+      ],
+    );
   }
 
   Color _getBackgroundColor() {
-    if (!isEnabled) {
-      return DSColorUsages.background.disable;
-    }
-
-    switch (widget.variant) {
-      case DSRadioVariant.primary:
-        return isSelected ? colors.brand.primary : colors.white;
-      case DSRadioVariant.secondary:
-        return isSelected ? colors.brand.tint400 : colors.white;
-      case DSRadioVariant.outline:
-        return colors.white;
-      case DSRadioVariant.ghost:
-        return isSelected
-            ? colors.brand.primary.withOpacity(0.1)
-            : colors.transparent;
-    }
+    return DSColorUsages.background.primary;
   }
 
   @override
   Widget build(BuildContext context) {
+    void _handleTap() {
+      if (isEnabled) {
+        widget.onChanged(widget.value);
+      }
+    }
+
     final radioWidget = GestureDetector(
-      onTap: isEnabled ? () => widget.onChanged!(widget.value) : null,
+      onTap: isEnabled ? _handleTap : null,
       child: AnimatedContainer(
         duration: const Duration(milliseconds: 200),
         width: _radioSize,
         height: _radioSize,
+        margin: EdgeInsets.all(_radioSize - _radioInnerSize),
+        padding: EdgeInsets.all(_borderWidth),
         decoration: BoxDecoration(
-          color: _getBackgroundColor(),
           shape: BoxShape.circle,
-          border: Border.all(
-            color: _getBorderColor(),
-            width: _borderWidth,
-          ),
-          boxShadow: widget.variant == DSRadioVariant.ghost && isSelected
-              ? [
-                  BoxShadow(
-                    color: colors.brand.primary.withOpacity(0.2),
-                    blurRadius: 8,
-                    offset: const Offset(0, 2),
-                  ),
-                ]
-              : null,
+          gradient: _getBorderColor(),
         ),
-        child: isSelected && widget.variant != DSRadioVariant.outline
-            ? Center(
-                child: Container(
-                  width: _radioSize * 0.3,
-                  height: _radioSize * 0.3,
-                  decoration: const BoxDecoration(
-                    color: Colors.white,
-                    shape: BoxShape.circle,
-                  ),
-                ),
-              )
-            : null,
+        child: Container(
+          decoration: BoxDecoration(
+            color: _getBackgroundColor(),
+            shape: BoxShape.circle,
+          ),
+        ),
       ),
     );
 
@@ -253,7 +193,7 @@ class _DSRadioState extends DSStateBase<DSRadio> {
         : [Expanded(child: content), const SizedBox(width: 12), radioWidget];
 
     return GestureDetector(
-      onTap: isEnabled ? () => widget.onChanged!(widget.value) : null,
+      onTap: isEnabled ? _handleTap : null,
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: children,

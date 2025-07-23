@@ -68,7 +68,7 @@ git push origin v1.1.0
 
 ### ✅ Documentation
 - [ ] Update README.md nếu cần
-- [ ] Update CHANGELOG.md
+- [ ] Update ../CHANGELOG.md
 - [ ] Update version trong example/pubspec.yaml
 
 ### ✅ Communication

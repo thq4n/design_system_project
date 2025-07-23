@@ -16,6 +16,8 @@ part 'extensions/typography/ds_text_theme.ext.dart';
 part 'extensions/color/ds_color_theme.ext.dart';
 
 // Component Theme
+part 'components/ds_bottom_navigation_bar/ds_bottom_navigation_bar_theme.dart';
+part 'components/ds_bottom_navigation_bar/ds_bottom_navigation_bar_theme.ext.dart';
 part 'components/ds_radio/ds_radio_theme.dart';
 part 'components/ds_radio/ds_radio_theme.ext.dart';
 part 'components/ds_basic_screen_form/ds_basic_screen_form_theme.dart';

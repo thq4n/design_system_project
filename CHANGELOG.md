@@ -25,6 +25,46 @@ và dự án này tuân thủ [Semantic Versioning](https://semver.org/spec/v2.0
 ### Security
 - TBD
 
+## [1.4.4] - 2024-01-XX
+
+### Added
+- **DSBottomNavigationBar Component**: New bottom navigation bar with floating button support
+  - Floating action button integration with proper layout
+  - Customizable navigation items with active/inactive states
+  - Support for odd number of items for proper floating button placement
+  - Customizable colors, text styles, and icons
+  - Smooth animations and transitions
+
+- **TransparentInkWell Widget**: New utility widget for transparent touch feedback
+  - Transparent splash, hover, highlight, and focus colors
+  - Useful for custom touch interactions without visual feedback
+  - Simplified API for common use cases
+
+### Changed
+- **DSRadio Component**: Simplified design and improved performance
+  - Removed complex variants and size options for better consistency
+  - Streamlined API with focus on core functionality
+  - Improved gradient-based design with better visual hierarchy
+  - Enhanced accessibility and touch interactions
+  - Better integration with design system tokens
+
+- **File Organization**: Improved project structure
+  - Moved release notes to dedicated `release_notes/` folder
+  - Better organization of documentation and release artifacts
+  - Cleaner project root directory structure
+
+- **Example App**: Updated with simplified DSRadio usage
+  - Cleaner example showcasing basic radio button functionality
+  - Removed complex examples for better clarity
+  - Better demonstration of component capabilities
+
+### Technical Details
+- New bottom navigation component with floating button support
+- Utility widget for transparent touch interactions
+- DSRadio component simplification and performance improvements
+- File organization improvements for better maintainability
+- Example app updates with cleaner demonstrations
+
 ## [1.4.3] - 2024-01-XX
 
 ### Changed

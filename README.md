@@ -1,16 +1,8 @@
-# Flutter Design System
+# Design System Project
 
-A comprehensive Flutter design system package that provides a modular structure including reusable components, design tokens, and theming to maintain consistency and scalability across Flutter applications.
+A Flutter design system package that provides a comprehensive set of UI components, styles, and assets for building consistent and beautiful Flutter applications.
 
-## Features
-
-- 🎨 **Design Tokens**: Colors, typography, spacing, and other design constants
-- 🧩 **Reusable Components**: Buttons, inputs, checkboxes, and more
-- 🌓 **Theme Support**: Light and dark theme support
-- 📦 **Asset Management**: Integrated asset management with code generation
-- 🎯 **Type Safety**: Generated code for type-safe asset access
-
-## Installation
+## 📦 Installation
 
 Add this to your package's `pubspec.yaml` file:
 
@@ -19,103 +11,110 @@ dependencies:
   design_system_project:
     git:
       url: https://github.com/yourusername/design_system_project.git
-      ref: v1.0.0  # Use specific version tag for stability
+      ref: v1.4.4
 ```
 
-Then run:
-```bash
-flutter pub get
-```
-
-### Version History
-
-| Version | Release Date | Description |
-|---------|--------------|-------------|
-| [v1.4.3](https://github.com/yourusername/design_system_project/releases/tag/v1.4.3) | 2024-01-XX | UI enhancements, error handling improvements, and example app updates |
-| [v1.4.2](https://github.com/yourusername/design_system_project/releases/tag/v1.4.2) | 2024-01-XX | Code organization improvements, DSInput enhancement, and constants management |
-| [v1.4.1](https://github.com/yourusername/design_system_project/releases/tag/v1.4.1) | 2024-01-XX | DSRadio component enhancement with variants, sizes, and comprehensive documentation |
-| [v1.4.0](https://github.com/yourusername/design_system_project/releases/tag/v1.4.0) | 2024-01-XX | DSRadio component, DSImageViewWrapper presets, and enhanced defaults |
-| [v1.3.1](https://github.com/yourusername/design_system_project/releases/tag/v1.3.1) | 2024-01-XX | DSBasicScreenForm type safety improvements and enhanced defaults |
-| [v1.3.0](https://github.com/yourusername/design_system_project/releases/tag/v1.3.0) | 2024-01-XX | DSBasicScreenForm component - complete screen form layout solution |
-| [v1.2.9](https://github.com/yourusername/design_system_project/releases/tag/v1.2.9) | 2024-01-XX | DSInput autofill support and enhanced form accessibility |
-| [v1.2.8](https://github.com/yourusername/design_system_project/releases/tag/v1.2.8) | 2024-01-XX | Major DSInput redesign with Material 3 styling and theme improvements |
-| [v1.2.7](https://github.com/yourusername/design_system_project/releases/tag/v1.2.7) | 2024-01-XX | DSImageView optional package parameter and DSInput improvements |
-| [v1.2.6](https://github.com/yourusername/design_system_project/releases/tag/v1.2.6) | 2024-01-XX | DSImageView package parameter restoration |
-| [v1.2.5](https://github.com/yourusername/design_system_project/releases/tag/v1.2.5) | 2024-01-XX | DSImageView simplification and improvements |
-| [v1.2.4](https://github.com/yourusername/design_system_project/releases/tag/v1.2.4) | 2024-01-XX | Image gallery and page indicator widgets |
-| [v1.2.3](https://github.com/yourusername/design_system_project/releases/tag/v1.2.3) | 2024-01-XX | XXS text size and DSInput component |
-| [v1.2.2](https://github.com/yourusername/design_system_project/releases/tag/v1.2.2) | 2024-01-XX | Shadow system export and import simplification |
-| [v1.2.1](https://github.com/yourusername/design_system_project/releases/tag/v1.2.1) | 2024-01-XX | Code quality improvements and naming consistency |
-| [v1.2.0](https://github.com/yourusername/design_system_project/releases/tag/v1.2.0) | 2024-01-XX | Shadow system and navigation utilities |
-| [v1.0.0](https://github.com/yourusername/design_system_project/releases/tag/v1.0.0) | 2024-01-XX | Initial release with core components |
-
-## Usage
-
-### Import the package
+## 🚀 Quick Start
 
 ```dart
 import 'package:design_system_project/design_system_project.dart';
+
+void main() {
+  runApp(MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      theme: DSTheme.light,
+      home: MyHomePage(),
+    );
+  }
+}
 ```
 
-### Using Design Tokens
+## 📚 Documentation
 
-```dart
-import 'package:design_system_project/tokens/colors.dart';
-import 'package:design_system_project/tokens/typography.dart';
+- [Catalog App](CATALOG_README.md) - Interactive component showcase
+- [Quick Start Guide](QUICK_START.md) - Getting started tutorial
+- [Changelog](CHANGELOG.md) - Version history and updates
 
-// Use design tokens
-final primaryColor = AppColors.primary;
-final headingStyle = AppTypography.heading1;
+## 🎨 Components
+
+### Core Components
+- **DSButton** - Versatile button component with multiple variants
+- **DSInput** - Form input component with validation support
+- **DSLoading** - Loading indicators and spinners
+- **DSImageView** - Image display with error handling
+- **DSIconButton** - Icon-based button component
+- **DSRadio** - Radio button component with modern design
+- **DSBasicScreenForm** - Complete screen form layout solution
+- **DSBottomNavigationBar** - Bottom navigation with floating button support
+
+### Utility Widgets
+- **TransparentInkWell** - Transparent touch feedback widget
+- **ImageViewWrapper** - Image wrapper with presets
+
+## 🎯 Design Tokens
+
+### Colors
+- Brand colors with primary, secondary, and accent variants
+- Semantic colors for success, warning, error, and info states
+- Background, surface, and border color system
+
+### Typography
+- SF Pro Display font family
+- Comprehensive text style system
+- Responsive font sizing
+
+### Spacing
+- Consistent spacing scale
+- Margin and padding utilities
+
+### Icons
+- Iconsax icon library integration
+- Multiple icon styles (Linear, Bold, Broken)
+- Customizable icon sizes
+
+## 🔧 Development
+
+### Running the Catalog
+```bash
+flutter run -t lib/catalog/main.dart
 ```
 
-### Using Components
-
-```dart
-import 'package:design_system_project/components/button.dart';
-
-// Use components
-AppButton(
-  onPressed: () {},
-  child: Text('Click me'),
-);
+### Running Storybook
+```bash
+flutter run -t lib/stories/main.dart
 ```
 
-### Using Theme
-
-```dart
-import 'package:design_system_project/theme/app_theme.dart';
-
-// Apply theme to your app
-MaterialApp(
-  theme: AppTheme.lightTheme,
-  darkTheme: AppTheme.darkTheme,
-  // ...
-);
+### Running Tests
+```bash
+flutter test
+flutter analyze
 ```
 
-## Additional Information
-
-### Assets
-
-The package includes various assets that are automatically generated for type-safe access:
-
-```dart
-import 'package:design_system_project/gen/assets.gen.dart';
-
-// Use generated asset references
-Image.asset(Assets.images.logo.path);
-```
-
-### Fonts
-
-The package includes the following font families:
-- SF Pro Display (with all weights and styles)
-- Iconsax Plus (Bold, Broken, Linear variants)
-
-## Contributing
-
-Contributions are welcome! Please feel free to submit a Pull Request.
-
-## License
+## 📄 License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+## 📞 Support
+
+If you encounter any issues:
+
+1. Check the [documentation](README.md)
+2. Search existing [issues](https://github.com/yourusername/design_system_project/issues)
+3. Create a new [issue](https://github.com/yourusername/design_system_project/issues/new)
+
+---
+
+**Happy coding! 🚀**

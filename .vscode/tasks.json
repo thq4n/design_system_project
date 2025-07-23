@@ -1,0 +1,135 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "🔧 Generate Component",
+            "type": "shell",
+            "command": "dart",
+            "args": [
+                "pub",
+                "run",
+                "component_creator"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": false,
+                "panel": "shared",
+                "showReuseMessage": true,
+                "clear": false
+            },
+            "problemMatcher": [],
+            "detail": "Generate new component using component_creator package (interactive)"
+        },
+        {
+            "label": "📚 Generate Catalog",
+            "type": "shell",
+            "command": "dart",
+            "args": [
+                "run",
+                "lib/scripts/generate_catalog.dart"
+            ],
+            "group": "build",
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": false,
+                "panel": "shared",
+                "showReuseMessage": true,
+                "clear": false
+            },
+            "problemMatcher": [],
+            "detail": "Generate catalog from .demo.dart files"
+        },
+        {
+            "label": "⚡ Generate Component (Custom)",
+            "type": "shell",
+            "command": "dart",
+            "args": [
+                "run",
+                "lib/scripts/generate_component.dart"
+            ],
+            "group": "build",
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": false,
+                "panel": "shared",
+                "showReuseMessage": true,
+                "clear": false
+            },
+            "problemMatcher": [],
+            "detail": "Generate component with custom script (requires component name argument)"
+        },
+        {
+            "label": "🔄 Build Runner",
+            "type": "shell",
+            "command": "flutter",
+            "args": [
+                "packages",
+                "pub",
+                "run",
+                "build_runner",
+                "build",
+                "--delete-conflicting-outputs"
+            ],
+            "group": "build",
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": false,
+                "panel": "shared",
+                "showReuseMessage": true,
+                "clear": false
+            },
+            "problemMatcher": [],
+            "detail": "Run build_runner to generate assets and other files"
+        },
+        {
+            "label": "🧹 Clean & Get",
+            "type": "shell",
+            "command": "flutter",
+            "args": [
+                "clean"
+            ],
+            "group": "build",
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": false,
+                "panel": "shared",
+                "showReuseMessage": true,
+                "clear": false
+            },
+            "problemMatcher": [],
+            "detail": "Clean Flutter project and get dependencies",
+            "dependsOn": [
+                "flutter pub get"
+            ]
+        },
+        {
+            "label": "flutter pub get",
+            "type": "shell",
+            "command": "flutter",
+            "args": [
+                "pub",
+                "get"
+            ],
+            "group": "build",
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": false,
+                "panel": "shared",
+                "showReuseMessage": true,
+                "clear": false
+            },
+            "problemMatcher": [],
+            "detail": "Get Flutter dependencies"
+        }
+    ]
+}

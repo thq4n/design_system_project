@@ -1,22 +1,17 @@
-# Release Notes - v1.2.6
+# Release Notes - v1.2.5
 
 ## 🎉 What's New
 
-### ✨ New Features
-- **DSImageView Package Parameter**: Restored package parameter với default value
-  - Added back package parameter với default 'design_system_project'
-  - Maintains backward compatibility
-  - Provides flexibility for custom package specification
-  - Best of both worlds: simplicity và flexibility
-
 ### 🔧 Improvements
-- **Backward Compatibility**: Restored package parameter functionality
-- **Flexibility**: Allow custom package specification when needed
-- **Default Behavior**: Maintains simple usage với default package
+- **DSImageView Simplification**: Simplified package parameter handling
+  - Removed optional package parameter
+  - Set package to 'design_system_project' by default
+  - Reduced component complexity
+  - Improved usage consistency
 
 ### 📚 Documentation
 - Updated DSImageView usage examples
-- Clarified package parameter behavior
+- Simplified component documentation
 
 ## 🚀 Installation
 
@@ -26,7 +21,7 @@ dependencies:
   design_system_project:
     git:
       url: https://github.com/yourusername/design_system_project.git
-      ref: v1.2.6
+      ref: v1.2.5
 ```
 
 ### For Existing Users
@@ -36,7 +31,7 @@ dependencies:
   design_system_project:
     git:
       url: https://github.com/yourusername/design_system_project.git
-      ref: v1.2.6  # Update this line
+      ref: v1.2.5  # Update this line
 ```
 
 Then run:
@@ -47,33 +42,33 @@ flutter pub get
 ## 🔍 What's Changed
 
 ### DSImageView Component
-- **Package Parameter**: Restored với default value 'design_system_project'
-- **Backward Compatibility**: Previous usage patterns still work
-- **Flexibility**: Can specify custom package when needed
+- **Package Parameter**: Removed optional package parameter
+- **Default Package**: Set to 'design_system_project' by default
+- **Simplified Usage**: Reduced complexity in component usage
 
-### Usage Patterns
-```dart
-// Simple usage (uses default package)
-DSImageView(
-  imageUrl: 'assets/image.png',
-);
-
-// Custom package usage
-DSImageView(
-  imageUrl: 'assets/image.png',
-  package: 'my_custom_package',
-);
-
-// Both patterns work seamlessly
-```
+### Breaking Changes
+- **DSImageView**: Package parameter removed
+  ```dart
+  // Before (v1.2.4)
+  DSImageView(
+    imageUrl: 'assets/image.png',
+    package: 'my_package', // This parameter is no longer needed
+  );
+  
+  // After (v1.2.5)
+  DSImageView(
+    imageUrl: 'assets/image.png',
+    // Package is automatically set to 'design_system_project'
+  );
+  ```
 
 ## 🧪 Testing
 
 ### Manual Testing Checklist
-- [x] DSImageView renders correctly với default package
-- [x] Custom package specification works
-- [x] Backward compatibility maintained
+- [x] DSImageView renders correctly
+- [x] Package parameter removal works
 - [x] All existing functionality preserved
+- [x] No breaking changes for basic usage
 
 ### Automated Testing
 ```bash
@@ -85,23 +80,24 @@ flutter run -t lib/catalog/main.dart
 ## 📊 Technical Details
 
 ### Changes
-- **DSImageView**: Restored package parameter với default value
-- **Backward Compatibility**: Maintained previous functionality
-- **Flexibility**: Added custom package support
+- **DSImageView**: Simplified package handling
+- **Code Quality**: Reduced component complexity
+- **Consistency**: Improved usage consistency
 
-### Migration from v1.2.5
-If you were using DSImageView in v1.2.5, no changes needed:
+### Migration Guide
+If you were using the package parameter in DSImageView:
 
 ```dart
-// v1.2.5 usage (still works in v1.2.6)
+// Old usage (v1.2.4)
 DSImageView(
   imageUrl: 'assets/image.png',
+  package: 'my_package',
 );
 
-// v1.2.6 also supports custom package
+// New usage (v1.2.5)
 DSImageView(
   imageUrl: 'assets/image.png',
-  package: 'my_package', // Optional
+  // Package parameter removed - automatically uses 'design_system_project'
 );
 ```
 
@@ -110,7 +106,7 @@ DSImageView(
 - **Documentation**: [README.md](README.md)
 - **Catalog**: [CATALOG_README.md](CATALOG_README.md)
 - **Quick Start**: [QUICK_START.md](QUICK_START.md)
-- **Changelog**: [CHANGELOG.md](CHANGELOG.md)
+- **Changelog**: [../CHANGELOG.md](../CHANGELOG.md)
 
 ## 🎯 Usage Examples
 
@@ -118,22 +114,14 @@ DSImageView(
 ```dart
 import 'package:design_system_project/design_system_project.dart';
 
-// Basic usage (uses default package)
+// Basic usage
 DSImageView(
   imageUrl: 'https://example.com/image.jpg',
   width: 200,
   height: 200,
 );
 
-// With custom package
-DSImageView(
-  imageUrl: 'assets/custom_image.png',
-  package: 'my_custom_package',
-  width: 200,
-  height: 200,
-);
-
-// With placeholder (uses default package)
+// With placeholder
 DSImageView(
   imageUrl: 'https://example.com/image.jpg',
   placeHolder: 'assets/placeholder.png',
@@ -141,10 +129,9 @@ DSImageView(
   height: 200,
 );
 
-// With custom fit và package
+// With custom fit
 DSImageView(
-  imageUrl: 'assets/image.png',
-  package: 'my_package',
+  imageUrl: 'https://example.com/image.jpg',
   fit: BoxFit.cover,
   width: 200,
   height: 200,
@@ -156,7 +143,7 @@ DSImageView(
 Thanks to everyone who contributed to this release:
 
 - Development team
-- Component flexibility improvements
+- Component simplification improvements
 
 ## 📞 Support
 

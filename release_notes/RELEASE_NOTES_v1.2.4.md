@@ -132,7 +132,7 @@ flutter run -t lib/catalog/main.dart
 - **Documentation**: [README.md](README.md)
 - **Catalog**: [CATALOG_README.md](CATALOG_README.md)
 - **Quick Start**: [QUICK_START.md](QUICK_START.md)
-- **Changelog**: [CHANGELOG.md](CHANGELOG.md)
+- **Changelog**: [../CHANGELOG.md](../CHANGELOG.md)
 
 ## 🎯 Usage Examples
 

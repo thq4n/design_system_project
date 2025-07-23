@@ -29,16 +29,10 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
+  String? _selectedRadioValue = 'groupValue';
   DSTextTheme get textTheme =>
       Theme.of(context).extension<DSTextThemeExtension>()!.textTheme;
   final DSInputController controller = DSInputController();
-
-  void _incrementCounter() {
-    setState(() {
-      _counter++;
-    });
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -47,51 +41,30 @@ class _MyHomePageState extends State<MyHomePage> {
       showBackButton: true,
       centerTitle: true,
 
-      floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: DSImageView(source: DSAssets.vuesax.a3dCubeScanBold),
-      ),
       child: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            const Text('You have pushed the button this many times:'),
-            Text(
-              '$_counter',
-              style: Theme.of(context).textTheme.headlineMedium,
+            DSRadio<String>(
+              value: 'value',
+              groupValue: _selectedRadioValue,
+              onChanged: (value) {
+                print('value: $value');
+                setState(() {
+                  _selectedRadioValue = value;
+                });
+              },
             ),
-            DSInput(
-              controller: controller,
-              title: 'Title',
-              required: true,
-              hint: 'Hint',
-              enable: true,
-              onTextChanged: (text, controller) {},
-              prefixIcon: DSImageView(source: DSAssets.vuesax.a24SupportBold),
-              suffixIcon: DSImageView(
-                source: DSAssets.vuesax.alignBottomLinear,
-              ),
+            DSRadio<String>(
+              value: 'value2',
+              groupValue: _selectedRadioValue,
+              onChanged: (value) {
+                print('value: $value');
+                setState(() {
+                  _selectedRadioValue = value;
+                });
+              },
             ),
-
-            DSButton(
-              key: Key('button'),
-              variant: DSButtonVariants.primary,
-              size: DSButtonSize.lg,
-              label: 'Button',
-              onPressed: () {},
-              isDisabled: true,
-              isLoading: true,
-            ),
-            const SizedBox(height: 20),
-            Text(
-              'Radio Buttons:',
-              style: Theme.of(context).textTheme.titleMedium,
-            ),
-            const SizedBox(height: 12),
-            const SizedBox(height: 8),
-            ImageViewWrapper.banner(''),
-            const SizedBox(height: 8),
           ],
         ),
       ),

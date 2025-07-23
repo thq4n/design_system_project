@@ -1,12 +1,5 @@
 part of '../../ds_theme.dart';
 
-enum DSRadioVariants {
-  primary,
-  secondary,
-  outline,
-  ghost,
-}
-
 class DSRadioThemeExtension extends ThemeExtension<DSRadioThemeExtension> {
   final DSRadioTheme dSRadioTheme = DSRadioTheme();
 

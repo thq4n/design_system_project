@@ -366,7 +366,7 @@ class _SettingsFormState extends State<SettingsForm> {
 - **DSInput Documentation**: [lib/components/ds_input/ds_input.dart](lib/components/ds_input/ds_input.dart)
 - **Constants Documentation**: [lib/constants/constants.dart](lib/constants/constants.dart)
 - **Catalog**: [CATALOG_README.md](CATALOG_README.md)
-- **Changelog**: [CHANGELOG.md](CHANGELOG.md)
+- **Changelog**: [../CHANGELOG.md](../CHANGELOG.md)
 
 ## 🙏 Contributors
 

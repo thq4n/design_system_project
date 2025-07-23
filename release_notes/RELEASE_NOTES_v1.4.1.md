@@ -613,7 +613,7 @@ class _RadioOnlyExampleState extends State<RadioOnlyExample> {
 - **DSRadio Documentation**: [lib/components/ds_radio/README.md](lib/components/ds_radio/README.md)
 - **DSRadio Demo**: [lib/components/ds_radio/ds_radio.demo.dart](lib/components/ds_radio/ds_radio.demo.dart)
 - **Catalog**: [CATALOG_README.md](CATALOG_README.md)
-- **Changelog**: [CHANGELOG.md](CHANGELOG.md)
+- **Changelog**: [../CHANGELOG.md](../CHANGELOG.md)
 
 ## 🙏 Contributors
 
