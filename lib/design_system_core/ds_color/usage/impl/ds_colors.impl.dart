@@ -12,6 +12,7 @@ class DSColors extends _DSColors {
   DSColor get white => const _DSWhiteColor();
   DSColor get black => const _DSBlackColor();
   DSColor get transparent => const _DSTransparentColor();
+  DSColor get other => const _DSOtherColor();
 
   DSColors lerp(DSColors? other, double t) {
     return const DSColors();

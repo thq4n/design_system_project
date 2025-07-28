@@ -181,8 +181,9 @@ class _DSInputState extends State<DSInput> {
                         ),
                         TextSpan(
                           text: value.validation ?? '',
-                          style: textTheme.sm?.regular
-                              .copyWith(color: DSColorUsages.text.error),
+                          style: textTheme.sm?.regular.copyWith(
+                            color: DSColorUsages.text.error,
+                          ),
                         ),
                       ],
                     ),
@@ -200,8 +201,9 @@ class _DSInputState extends State<DSInput> {
                         if (widget.required)
                           TextSpan(
                             text: '*',
-                            style: textTheme.sm?.regular
-                                .copyWith(color: DSColorUsages.text.error),
+                            style: textTheme.sm?.regular.copyWith(
+                              color: DSColorUsages.text.error,
+                            ),
                           ),
                       ],
                     ),
@@ -211,10 +213,7 @@ class _DSInputState extends State<DSInput> {
             errorMaxLines: 2,
             suffixIcon: _getSuffixIcon()?.let(
               (it) => it != null
-                  ? AvailabilityWidget(
-                      enable: widget.enable,
-                      child: it,
-                    )
+                  ? AvailabilityWidget(enable: widget.enable, child: it)
                   : null,
             ),
             suffixIconConstraints: BoxConstraints(
@@ -231,8 +230,7 @@ class _DSInputState extends State<DSInput> {
           ),
           keyboardType: widget.keyboardType,
           textCapitalization: widget.textCapitalization,
-          style: widget.textStyle ??
-              (widget.enable ? textTheme.base : textTheme.xs),
+          style: _getStyle(),
           obscureText: widget.isPassword && _controller?.isShowPass != true,
           onChanged: (text) {
             _showPrefixFilterFn(text);
@@ -355,10 +353,7 @@ class _DSInputState extends State<DSInput> {
     }
 
     if (result != null) {
-      return Padding(
-        padding: const EdgeInsets.only(right: 16),
-        child: result,
-      );
+      return Padding(padding: const EdgeInsets.only(right: 16), child: result);
     }
     return null;
   }
@@ -366,8 +361,8 @@ class _DSInputState extends State<DSInput> {
   Widget _getPasswordIcon() {
     return DSImageView(
       source: _controller?.isShowPass == true
-          ? DSAssets.vuesax.eyeSlashLinear
-          : DSAssets.vuesax.eyeLinear,
+          ? DSAssets.vuesax.eyeLinear
+          : DSAssets.vuesax.eyeSlashLinear,
       width: DSIconSizes.size24,
     );
   }
@@ -394,5 +389,19 @@ class _DSInputState extends State<DSInput> {
         showPrefixIcon = isEmpty;
       });
     }
+  }
+
+  TextStyle? _getStyle() {
+    final endableStyle = widget.textStyle ?? textTheme.base;
+    final disabledStyle = widget.textStyle ?? textTheme.xs;
+    if (widget.enable) {
+      if (widget.isPassword && _controller?.isShowPass == false) {
+        return endableStyle?.copyWith(
+          fontFamily: 'monospace',
+        );
+      }
+      return endableStyle;
+    }
+    return disabledStyle;
   }
 }

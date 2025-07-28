@@ -21,4 +21,6 @@ class DSIconSizes {
   static final size24 = _DSIconSizeConstants.size24.value;
   static final size40 = _DSIconSizeConstants.size40.value;
   static final size48 = _DSIconSizeConstants.size48.value;
+
+  static double custom(double value) => value;
 }

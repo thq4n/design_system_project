@@ -41,6 +41,10 @@ abstract class DSColor extends Color {
   static DSColor fromColor(Color color) {
     return _DSColorWrapper(color.toARGB32());
   }
+
+  DSColor custom(int value) {
+    return _DSColorWrapper(value);
+  }
 }
 
 class _DSColorWrapper extends DSColor {

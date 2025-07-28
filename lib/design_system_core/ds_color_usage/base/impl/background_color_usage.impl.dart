@@ -20,4 +20,5 @@ class _DSBackgroundColorUsage extends DSColorUsage {
   DSColor get waitingSecondary => colors.blue.tint100;
   DSColor get overlay => colors.gray.shade950.withOpacity(0.5);
   DSColor get transparent => colors.transparent;
+  DSColor get scaffoldBackground => colors.other.custom(0xFFF7F2EE);
 }

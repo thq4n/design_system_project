@@ -130,15 +130,15 @@ class _DSRadioState<T> extends DSStateBase<DSRadio<T>> {
       onTap: isEnabled ? _handleTap : null,
       child: AnimatedContainer(
         duration: const Duration(milliseconds: 200),
-        width: _radioSize,
-        height: _radioSize,
-        margin: EdgeInsets.all(_radioSize - _radioInnerSize),
-        padding: EdgeInsets.all(_borderWidth),
+        width: _radioInnerSize,
+        height: _radioInnerSize,
+        margin: EdgeInsets.all((_radioSize - _radioInnerSize) / 2),
         decoration: BoxDecoration(
           shape: BoxShape.circle,
           gradient: _getBorderColor(),
         ),
         child: Container(
+          margin: EdgeInsets.all(_borderWidth),
           decoration: BoxDecoration(
             color: _getBackgroundColor(),
             shape: BoxShape.circle,
