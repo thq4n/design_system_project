@@ -1,13 +1,5 @@
 part of '../../ds_theme.dart';
 
-enum DSBottomNavigationBarVariants {
-  primary,
-  secondary,
-  outline,
-  ghost,
-  // TODO: Define variants for DSBottomNavigationBar component
-}
-
 class DSBottomNavigationBarThemeExtension
     extends ThemeExtension<DSBottomNavigationBarThemeExtension> {
   final DSBottomNavigationBarTheme dSBottomNavigationBarTheme =
