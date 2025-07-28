@@ -6,5 +6,6 @@ export 'image_gallery_widget.dart';
 export 'image_view_wrapper.dart';
 export 'image_zoom.dart';
 export 'page_indicator.dart';
+export 'shimmer_loading.dart';
 export 'title_widget.dart';
 export 'transparent_ink_well.dart';
