@@ -49,7 +49,6 @@ class _MyHomePageState extends State<MyHomePage> {
               value: 'value',
               groupValue: _selectedRadioValue,
               onChanged: (value) {
-                print('value: $value');
                 setState(() {
                   _selectedRadioValue = value;
                 });
@@ -59,7 +58,6 @@ class _MyHomePageState extends State<MyHomePage> {
               value: 'value2',
               groupValue: _selectedRadioValue,
               onChanged: (value) {
-                print('value: $value');
                 setState(() {
                   _selectedRadioValue = value;
                 });
