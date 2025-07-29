@@ -17,6 +17,50 @@ extension StringDataHelper on String {
     return RegExp(r'^(84|0[3|5|7|8|9])+([0-9]{8})$').hasMatch(this);
   }
 
+  /// Formats Vietnamese phone number with proper spacing
+  ///
+  /// Examples:
+  /// - "0909090909" -> "+84 909 090 909"
+  /// - "84909090909" -> "+84 909 090 909"
+  /// - "942003360" -> "+84 942 003 360"
+  String get formatedPhoneNumberString {
+    if (isEmpty) {
+      return this;
+    }
+
+    // Remove any non-digit characters
+    final cleanNumber = replaceAll(RegExp(r'[^\d]'), '');
+
+    if (cleanNumber.isEmpty) {
+      return this;
+    }
+
+    // Handle Vietnamese phone number patterns
+    String formattedNumber;
+
+    // If starts with 84 (country code), remove it
+    if (cleanNumber.startsWith('84') && cleanNumber.length >= 11) {
+      formattedNumber = cleanNumber.substring(2);
+    } else if (cleanNumber.startsWith('0') && cleanNumber.length == 10) {
+      // Remove leading 0 for national format
+      formattedNumber = cleanNumber.substring(1);
+    } else if (cleanNumber.length == 9 && !cleanNumber.startsWith('0')) {
+      // 9-digit number without leading 0
+      formattedNumber = cleanNumber;
+    } else {
+      // Return original if doesn't match Vietnamese patterns
+      return this;
+    }
+
+    // Format with international format: +84 xxx xxx xxx
+    if (formattedNumber.length == 9) {
+      return '''+84 ${formattedNumber.substring(0, 3)} ${formattedNumber.substring(3, 6)} ${formattedNumber.substring(6)}''';
+    }
+
+    // Return formatted number if it doesn't match expected length
+    return formattedNumber;
+  }
+
   bool get hasLowerCase {
     return RegExp(r'^(?=.*[a-z])').hasMatch(this);
   }
