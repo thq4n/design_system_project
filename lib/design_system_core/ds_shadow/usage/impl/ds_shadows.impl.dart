@@ -1,23 +1,25 @@
 part of '../../ds_shadow_core.dart';
 
 class DSShadows extends _DSShadows {
+  DSShadows._();
+
   /// Subtle shadow - very light shadow for subtle elevation
-  static DSShadow get subtle => const _DSSubtleShadow();
+  static List<BoxShadow> get subtle => const _DSSubtleShadow().boxShadows;
 
   /// Light shadow - light shadow for slight elevation
-  static DSShadow get light => const _DSLightShadow();
+  static List<BoxShadow> get light => const _DSLightShadow().boxShadows;
 
   /// Medium shadow - medium shadow for moderate elevation
-  static DSShadow get medium => const _DSMediumShadow();
+  static List<BoxShadow> get medium => const _DSMediumShadow().boxShadows;
 
   /// Strong shadow - strong shadow for significant elevation
-  static DSShadow get strong => const _DSStrongShadow();
+  static List<BoxShadow> get strong => const _DSStrongShadow().boxShadows;
 
   /// Intense shadow - intense shadow for maximum elevation
-  static DSShadow get intense => const _DSIntenseShadow();
+  static List<BoxShadow> get intense => const _DSIntenseShadow().boxShadows;
 
   /// Creates a custom shadow with specified parameters
-  static DSShadow custom({
+  static List<BoxShadow> custom({
     Offset offset = const Offset(0, 4),
     double blurRadius = 8,
     double spreadRadius = 0,
@@ -30,7 +32,7 @@ class DSShadows extends _DSShadows {
       spreadRadius: spreadRadius,
       color: color,
       opacity: opacity,
-    );
+    ).boxShadows;
   }
 }
 

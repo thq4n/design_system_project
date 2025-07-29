@@ -90,7 +90,7 @@ class _DSBasicScreenFormDemoState extends State<DSBasicScreenFormDemo> {
             ),
             const SizedBox(height: 16),
             DSButton(
-              variant: DSButtonVariants.outline,
+              variant: DSButtonVariants.tertiary,
               size: DSButtonSize.lg,
               label: 'Clear Form',
               onPressed: () {

@@ -28,7 +28,7 @@ class FooterWidget extends StatelessWidget {
       decoration: decoration ??
           BoxDecoration(
             color: backgroundColor ?? DSColorUsages.background.primary,
-            boxShadow: DSShadows.light.boxShadows,
+            boxShadow: DSShadows.light,
           ),
       padding: EdgeInsets.only(
         bottom: max(paddingBottom, padding.bottom),

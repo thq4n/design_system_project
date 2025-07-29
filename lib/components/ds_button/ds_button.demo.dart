@@ -56,7 +56,7 @@ class DSButtonDemo extends StatelessWidget {
               const SizedBox(height: 12),
               DSButton(
                 label: 'Ghost Button',
-                variant: DSButtonVariants.ghost,
+                variant: DSButtonVariants.ghostBrand,
                 onPressed: () {},
               ),
             ],

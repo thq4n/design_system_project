@@ -127,7 +127,7 @@ class _DSButtonState extends DSStateBase<DSButton> {
           elevation: WidgetStateProperty.all(0),
 
           // Disable ripple effect for ghost variant
-          splashFactory: widget.variant == DSButtonVariants.ghost
+          splashFactory: widget.variant == DSButtonVariants.ghostBrand
               ? NoSplash.splashFactory
               : null,
 

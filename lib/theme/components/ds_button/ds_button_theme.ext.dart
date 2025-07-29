@@ -3,8 +3,9 @@ part of '../../ds_theme.dart';
 enum DSButtonVariants {
   primary,
   secondary,
-  outline,
-  ghost,
+  tertiary,
+  ghostBrand,
+  ghostGrey,
 }
 
 enum DSButtonSize {
@@ -113,7 +114,7 @@ class DSButtonThemeExtension extends ThemeExtension<DSButtonThemeExtension> {
         ),
       );
 
-  DSButtonTheme get dSOutlineButtonTheme => DSButtonTheme(
+  DSButtonTheme get dSTertiaryButtonTheme => DSButtonTheme(
         defaultState: DSButtonStateTheme(
           textStyle:
               textTheme.base?.bold.copyWithColor(DSColorUsages.text.primary),
@@ -144,7 +145,7 @@ class DSButtonThemeExtension extends ThemeExtension<DSButtonThemeExtension> {
         ),
       );
 
-  DSButtonTheme get dSGhostButtonTheme => DSButtonTheme(
+  DSButtonTheme get dSGhostBrandButtonTheme => DSButtonTheme(
         defaultState: DSButtonStateTheme(
           textStyle: textTheme.sm?.bold
               .copyWithColor(DSColorUsages.text.linkRed.shade500),
@@ -175,16 +176,49 @@ class DSButtonThemeExtension extends ThemeExtension<DSButtonThemeExtension> {
         ),
       );
 
+  DSButtonTheme get dSGhostGreyButtonTheme => DSButtonTheme(
+        defaultState: DSButtonStateTheme(
+          textStyle:
+              textTheme.sm?.bold.copyWithColor(DSColorUsages.text.primary),
+          backgroundColor: DSColorUsages.background.transparent,
+          prefixIconColor: DSColorUsages.icon.primary,
+          suffixIconColor: DSColorUsages.icon.primary,
+        ),
+        pressedState: DSButtonStateTheme(
+          textStyle:
+              textTheme.sm?.bold.copyWithColor(DSColorUsages.text.primary),
+          backgroundColor: DSColorUsages.background.transparent,
+          prefixIconColor: DSColorUsages.icon.primary,
+          suffixIconColor: DSColorUsages.icon.primary,
+        ),
+        activeState: DSButtonStateTheme(
+          textStyle:
+              textTheme.sm?.bold.copyWithColor(DSColorUsages.text.primary),
+          backgroundColor: DSColorUsages.background.transparent,
+          prefixIconColor: DSColorUsages.icon.primary,
+          suffixIconColor: DSColorUsages.icon.primary,
+        ),
+        disableState: DSButtonStateTheme(
+          textStyle:
+              textTheme.sm?.bold.copyWithColor(DSColorUsages.text.disable),
+          backgroundColor: DSColorUsages.background.disable,
+          prefixIconColor: DSColorUsages.icon.disable,
+          suffixIconColor: DSColorUsages.icon.disable,
+        ),
+      );
+
   DSButtonTheme getDSPrimaryButtonTheme(DSButtonVariants variant) {
     switch (variant) {
       case DSButtonVariants.primary:
         return dSPrimaryButtonTheme;
       case DSButtonVariants.secondary:
         return dSSecondaryButtonTheme;
-      case DSButtonVariants.outline:
-        return dSOutlineButtonTheme;
-      case DSButtonVariants.ghost:
-        return dSGhostButtonTheme;
+      case DSButtonVariants.tertiary:
+        return dSTertiaryButtonTheme;
+      case DSButtonVariants.ghostBrand:
+        return dSGhostBrandButtonTheme;
+      case DSButtonVariants.ghostGrey:
+        return dSGhostGreyButtonTheme;
     }
   }
 

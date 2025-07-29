@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../design_system_core/ds_color_usage/ds_color_usage_core.dart';
 
 /// A shimmer loading widget that provides a beautiful loading animation effect.
 ///
@@ -8,164 +9,197 @@ import 'package:flutter/material.dart';
 ///
 /// Example usage:
 /// ```dart
-/// ShimmerLoading(
-///   isLoading: true,
-///   child: Container(
-///     height: 100,
-///     decoration: BoxDecoration(
-///       color: Colors.grey[300],
-///       borderRadius: BorderRadius.circular(8),
-///     ),
+/// Shimmer(
+///   linearGradient: shimmerGradient,
+///   child: ListView(
+///     children: [
+///       ShimmerLoading(
+///         isLoading: true,
+///         child: YourWidget(),
+///       ),
+///     ],
 ///   ),
 /// )
 /// ```
-class ShimmerLoading extends StatefulWidget {
-  /// Whether the shimmer effect should be active.
-  final bool isLoading;
+class Shimmer extends StatefulWidget {
+  /// Returns the ShimmerState from the widget tree.
+  static ShimmerState? of(BuildContext context) {
+    return context.findAncestorStateOfType<ShimmerState>();
+  }
 
-  /// The child widget to apply the shimmer effect to.
-  final Widget child;
+  /// Creates a shimmer widget with default design system gradient.
+  static Widget withDefaultGradient({required Widget child}) {
+    return Shimmer(
+      linearGradient: _defaultShimmerGradient,
+      child: child,
+    );
+  }
 
-  /// The gradient used for the shimmer effect.
-  ///
-  /// Defaults to a light gray shimmer gradient.
-  final LinearGradient? shimmerGradient;
+  /// Creates a shimmer widget with light gray gradient (subtle effect).
+  static Widget withLightGradient({required Widget child}) {
+    return Shimmer(
+      linearGradient: _lightShimmerGradient,
+      child: child,
+    );
+  }
 
-  /// The duration of one complete shimmer cycle.
-  ///
-  /// Defaults to 1000 milliseconds.
-  final Duration duration;
+  /// Creates a shimmer widget with medium gray gradient (standard effect).
+  static Widget withMediumGradient({required Widget child}) {
+    return Shimmer(
+      linearGradient: _mediumShimmerGradient,
+      child: child,
+    );
+  }
 
-  /// Creates a shimmer loading widget.
-  ///
-  /// [isLoading] determines if the shimmer effect is active.
-  /// [child] is the widget to apply the shimmer effect to.
-  /// [shimmerGradient] is the gradient for the shimmer effect.
-  /// [duration] is the duration of one complete shimmer cycle.
-  const ShimmerLoading({
-    super.key,
-    required this.isLoading,
-    required this.child,
-    this.shimmerGradient,
-    this.duration = const Duration(milliseconds: 1000),
-  });
+  /// Creates a shimmer widget with dark gray gradient (strong effect).
+  static Widget withDarkGradient({required Widget child}) {
+    return Shimmer(
+      linearGradient: _darkShimmerGradient,
+      child: child,
+    );
+  }
 
-  @override
-  State<ShimmerLoading> createState() => _ShimmerLoadingState();
-}
+  /// Creates a shimmer widget with brand color gradient.
+  static Widget withBrandGradient({required Widget child}) {
+    return Shimmer(
+      linearGradient: _brandShimmerGradient,
+      child: child,
+    );
+  }
 
-class _ShimmerLoadingState extends State<ShimmerLoading>
-    with SingleTickerProviderStateMixin {
-  late AnimationController _shimmerController;
-  Listenable? _shimmerChanges;
+  /// Creates a shimmer widget with rainbow gradient effect.
+  static Widget withRainbowGradient({required Widget child}) {
+    return Shimmer(
+      linearGradient: _rainbowShimmerGradient,
+      child: child,
+    );
+  }
 
-  /// Default shimmer gradient with light gray colors.
+  /// Creates a shimmer widget with pulse effect.
+  static Widget withPulseEffect({required Widget child}) {
+    return Shimmer(
+      linearGradient: _pulseShimmerGradient,
+      child: child,
+    );
+  }
+
+  /// Creates a shimmer widget with wave effect.
+  static Widget withWaveEffect({required Widget child}) {
+    return Shimmer(
+      linearGradient: _waveShimmerGradient,
+      child: child,
+    );
+  }
+
+  /// Default shimmer gradient using design system gray colors.
   static const LinearGradient _defaultShimmerGradient = LinearGradient(
-    colors: [Color(0xFFEBEBF4), Color(0xFFF4F4F4), Color(0xFFEBEBF4)],
+    colors: [
+      Color(0xFFF1F4F5), // DSColors.gray.tint100
+      Color(0xFFE5E5E5), // DSColors.gray.tint200
+      Color(0xFFF1F4F5), // DSColors.gray.tint100
+    ],
     stops: [0.1, 0.3, 0.4],
     begin: Alignment(-1.0, -0.3),
     end: Alignment(1.0, 0.3),
     tileMode: TileMode.clamp,
   );
 
-  @override
-  void initState() {
-    super.initState();
-    _shimmerController = AnimationController.unbounded(vsync: this)
-      ..repeat(
-        min: -0.5,
-        max: 1.5,
-        period: widget.duration,
-      );
-  }
+  /// Light shimmer gradient for subtle effects.
+  static const LinearGradient _lightShimmerGradient = LinearGradient(
+    colors: [
+      Color(0xFFF9FAFB), // DSColors.gray.tint50
+      Color(0xFFF1F4F5), // DSColors.gray.tint100
+      Color(0xFFF9FAFB), // DSColors.gray.tint50
+    ],
+    stops: [0.1, 0.3, 0.4],
+    begin: Alignment(-1.0, -0.3),
+    end: Alignment(1.0, 0.3),
+    tileMode: TileMode.clamp,
+  );
 
-  @override
-  void didChangeDependencies() {
-    super.didChangeDependencies();
-    if (_shimmerChanges != null) {
-      _shimmerChanges!.removeListener(_onShimmerChange);
-    }
-    _shimmerChanges = Shimmer.of(context)?.shimmerChanges;
-    if (_shimmerChanges != null) {
-      _shimmerChanges!.addListener(_onShimmerChange);
-    }
-  }
+  /// Medium shimmer gradient for standard effects.
+  static const LinearGradient _mediumShimmerGradient = LinearGradient(
+    colors: [
+      Color(0xFFE5E5E5), // DSColors.gray.tint200
+      Color(0xFFD4D4D4), // DSColors.gray.tint300
+      Color(0xFFE5E5E5), // DSColors.gray.tint200
+    ],
+    stops: [0.1, 0.3, 0.4],
+    begin: Alignment(-1.0, -0.3),
+    end: Alignment(1.0, 0.3),
+    tileMode: TileMode.clamp,
+  );
 
-  @override
-  void dispose() {
-    _shimmerController.dispose();
-    _shimmerChanges?.removeListener(_onShimmerChange);
-    super.dispose();
-  }
+  /// Dark shimmer gradient for strong effects.
+  static const LinearGradient _darkShimmerGradient = LinearGradient(
+    colors: [
+      Color(0xFFD4D4D4), // DSColors.gray.tint300
+      Color(0xFFA3A3A3), // DSColors.gray.tint400
+      Color(0xFFD4D4D4), // DSColors.gray.tint300
+    ],
+    stops: [0.1, 0.3, 0.4],
+    begin: Alignment(-1.0, -0.3),
+    end: Alignment(1.0, 0.3),
+    tileMode: TileMode.clamp,
+  );
 
-  void _onShimmerChange() {
-    if (widget.isLoading) {
-      setState(() {
-        // Update the shimmer painting.
-      });
-    }
-  }
+  /// Brand shimmer gradient using brand colors.
+  static const LinearGradient _brandShimmerGradient = LinearGradient(
+    colors: [
+      Color(0xFFFEE4E2), // DSColors.brand.tint100
+      Color(0xFFFECDCA), // DSColors.brand.tint200
+      Color(0xFFFEE4E2), // DSColors.brand.tint100
+    ],
+    stops: [0.1, 0.3, 0.4],
+    begin: Alignment(-1.0, -0.3),
+    end: Alignment(1.0, 0.3),
+    tileMode: TileMode.clamp,
+  );
 
-  @override
-  Widget build(BuildContext context) {
-    if (!widget.isLoading) {
-      return widget.child;
-    }
+  /// Rainbow shimmer gradient for colorful effects.
+  static const LinearGradient _rainbowShimmerGradient = LinearGradient(
+    colors: [
+      Color(0xFFFEE4E2), // Brand tint100
+      Color(0xFFE5E5E5), // Gray tint200
+      Color(0xFFF1F4F5), // Gray tint100
+      Color(0xFFE5E5E5), // Gray tint200
+      Color(0xFFFEE4E2), // Brand tint100
+    ],
+    stops: [0.0, 0.25, 0.5, 0.75, 1.0],
+    begin: Alignment(-1.0, -0.3),
+    end: Alignment(1.0, 0.3),
+    tileMode: TileMode.clamp,
+  );
 
-    // Collect ancestor shimmer info.
-    final shimmer = Shimmer.of(context);
-    if (shimmer == null) {
-      // If no ancestor Shimmer widget, wrap with one
-      return Shimmer(
-        linearGradient: widget.shimmerGradient ?? _defaultShimmerGradient,
-        child: _buildShimmerEffect(),
-      );
-    }
+  /// Pulse shimmer gradient for pulsing effect.
+  static const LinearGradient _pulseShimmerGradient = LinearGradient(
+    colors: [
+      Color(0xFFF1F4F5), // Gray tint100
+      Color(0xFFE5E5E5), // Gray tint200
+      Color(0xFFD4D4D4), // Gray tint300
+      Color(0xFFE5E5E5), // Gray tint200
+      Color(0xFFF1F4F5), // Gray tint100
+    ],
+    stops: [0.0, 0.2, 0.5, 0.8, 1.0],
+    begin: Alignment(-1.0, -0.3),
+    end: Alignment(1.0, 0.3),
+    tileMode: TileMode.clamp,
+  );
 
-    if (!shimmer.isSized) {
-      // The ancestor Shimmer widget has not laid itself out yet.
-      return const SizedBox();
-    }
-
-    return _buildShimmerEffect();
-  }
-
-  Widget _buildShimmerEffect() {
-    final shimmer = Shimmer.of(context);
-    if (shimmer == null) return widget.child;
-
-    final shimmerSize = shimmer.size;
-    final gradient = shimmer.gradient;
-    final offsetWithinShimmer = shimmer.getDescendantOffset(
-      descendant: context.findRenderObject() as RenderBox,
-    );
-
-    return ShaderMask(
-      blendMode: BlendMode.srcATop,
-      shaderCallback: (bounds) {
-        return gradient.createShader(
-          Rect.fromLTWH(
-            -offsetWithinShimmer.dx,
-            -offsetWithinShimmer.dy,
-            shimmerSize.width,
-            shimmerSize.height,
-          ),
-        );
-      },
-      child: widget.child,
-    );
-  }
-}
-
-/// A shimmer widget that provides the shimmer animation context.
-///
-/// This widget should be placed as an ancestor to ShimmerLoading widgets
-/// to provide the shimmer animation context.
-class Shimmer extends StatefulWidget {
-  /// Returns the ShimmerState from the widget tree.
-  static ShimmerState? of(BuildContext context) {
-    return context.findAncestorStateOfType<ShimmerState>();
-  }
+  /// Wave shimmer gradient for wave effect.
+  static const LinearGradient _waveShimmerGradient = LinearGradient(
+    colors: [
+      Color(0xFFF9FAFB), // Gray tint50
+      Color(0xFFF1F4F5), // Gray tint100
+      Color(0xFFE5E5E5), // Gray tint200
+      Color(0xFFF1F4F5), // Gray tint100
+      Color(0xFFF9FAFB), // Gray tint50
+    ],
+    stops: [0.0, 0.25, 0.5, 0.75, 1.0],
+    begin: Alignment(-1.0, -0.3),
+    end: Alignment(1.0, 0.3),
+    tileMode: TileMode.clamp,
+  );
 
   /// Creates a shimmer widget.
   ///
@@ -194,12 +228,19 @@ class ShimmerState extends State<Shimmer> with SingleTickerProviderStateMixin {
   @override
   void initState() {
     super.initState();
-    _shimmerController = AnimationController.unbounded(vsync: this)
-      ..repeat(
-        min: -0.5,
-        max: 1.5,
+    _shimmerController = AnimationController.unbounded(vsync: this);
+
+    // Start the animation with proper error handling
+    try {
+      _shimmerController.repeat(
+        min: 0.0,
+        max: 1.0,
         period: const Duration(milliseconds: 1000),
       );
+    } catch (e) {
+      // Fallback to simple repeat if the above fails
+      _shimmerController.repeat(period: const Duration(milliseconds: 1000));
+    }
   }
 
   @override
@@ -209,7 +250,9 @@ class ShimmerState extends State<Shimmer> with SingleTickerProviderStateMixin {
   }
 
   /// The gradient with the current animation transform applied.
-  LinearGradient get gradient => LinearGradient(
+  LinearGradient get gradient {
+    try {
+      return LinearGradient(
         colors: widget.linearGradient.colors,
         stops: widget.linearGradient.stops,
         begin: widget.linearGradient.begin,
@@ -218,21 +261,46 @@ class ShimmerState extends State<Shimmer> with SingleTickerProviderStateMixin {
           slidePercent: _shimmerController.value,
         ),
       );
+    } catch (e) {
+      // Fallback to original gradient if transform fails
+      return widget.linearGradient;
+    }
+  }
 
   /// Whether the shimmer widget has been sized.
-  bool get isSized =>
-      (context.findRenderObject() as RenderBox?)?.hasSize ?? false;
+  bool get isSized {
+    try {
+      final renderBox = context.findRenderObject() as RenderBox?;
+      return renderBox?.hasSize ?? false;
+    } catch (e) {
+      return false;
+    }
+  }
 
   /// The size of the shimmer widget.
-  Size get size => (context.findRenderObject() as RenderBox).size;
+  Size get size {
+    try {
+      final renderBox = context.findRenderObject() as RenderBox?;
+      return renderBox?.size ?? Size.zero;
+    } catch (e) {
+      return Size.zero;
+    }
+  }
 
   /// Gets the offset of a descendant widget within the shimmer.
   Offset getDescendantOffset({
     required RenderBox descendant,
     Offset offset = Offset.zero,
   }) {
-    final shimmerBox = context.findRenderObject() as RenderBox?;
-    return descendant.localToGlobal(offset, ancestor: shimmerBox);
+    try {
+      final shimmerBox = context.findRenderObject() as RenderBox?;
+      if (shimmerBox == null) {
+        return Offset.zero;
+      }
+      return descendant.localToGlobal(offset, ancestor: shimmerBox);
+    } catch (e) {
+      return Offset.zero;
+    }
   }
 
   /// The listenable for shimmer changes.
@@ -240,7 +308,12 @@ class ShimmerState extends State<Shimmer> with SingleTickerProviderStateMixin {
 
   @override
   Widget build(BuildContext context) {
-    return widget.child ?? const SizedBox();
+    return AnimatedBuilder(
+      animation: _shimmerController,
+      builder: (context, child) {
+        return widget.child ?? const SizedBox();
+      },
+    );
   }
 }
 
@@ -248,7 +321,7 @@ class ShimmerState extends State<Shimmer> with SingleTickerProviderStateMixin {
 class _SlidingGradientTransform extends GradientTransform {
   /// Creates a sliding gradient transform.
   ///
-  /// [slidePercent] is the percentage to slide the gradient (0.0 to 1.0).
+  /// [slidePercent] is the percentage to slide the gradient.
   const _SlidingGradientTransform({required this.slidePercent});
 
   /// The percentage to slide the gradient.
@@ -256,10 +329,124 @@ class _SlidingGradientTransform extends GradientTransform {
 
   @override
   Matrix4? transform(Rect bounds, {TextDirection? textDirection}) {
-    return Matrix4.translationValues(
-      bounds.width * slidePercent,
-      0.0,
-      0.0,
+    try {
+      // Convert the 0-1 animation value to a sliding effect
+      // We want the shimmer to slide from left (-1.0) to right (2.0)
+      final slideOffset = (slidePercent * 3.0) - 1.0;
+      return Matrix4.translationValues(
+        bounds.width * slideOffset,
+        0.0,
+        0.0,
+      );
+    } catch (e) {
+      // Fallback to no transform if calculation fails
+      return null;
+    }
+  }
+}
+
+/// A shimmer loading widget that applies the shimmer effect to its child.
+///
+/// This widget should be used as a descendant of a Shimmer widget.
+class ShimmerLoading extends StatefulWidget {
+  /// Creates a shimmer loading widget.
+  ///
+  /// [isLoading] determines if the shimmer effect is active.
+  /// [child] is the widget to apply the shimmer effect to.
+  const ShimmerLoading({
+    super.key,
+    required this.isLoading,
+    required this.child,
+  });
+
+  /// Whether the shimmer effect should be active.
+  final bool isLoading;
+
+  /// The child widget to apply the shimmer effect to.
+  final Widget child;
+
+  @override
+  State<ShimmerLoading> createState() => _ShimmerLoadingState();
+}
+
+class _ShimmerLoadingState extends State<ShimmerLoading> {
+  Listenable? _shimmerChanges;
+
+  @override
+  void didChangeDependencies() {
+    super.didChangeDependencies();
+    if (_shimmerChanges != null) {
+      _shimmerChanges!.removeListener(_onShimmerChange);
+    }
+    _shimmerChanges = Shimmer.of(context)?.shimmerChanges;
+    if (_shimmerChanges != null) {
+      _shimmerChanges!.addListener(_onShimmerChange);
+    }
+  }
+
+  @override
+  void dispose() {
+    _shimmerChanges?.removeListener(_onShimmerChange);
+    super.dispose();
+  }
+
+  void _onShimmerChange() {
+    if (widget.isLoading) {
+      setState(() {
+        // Update the shimmer painting.
+      });
+    }
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    if (!widget.isLoading) {
+      return widget.child;
+    }
+
+    // Collect ancestor shimmer info.
+    final shimmer = Shimmer.of(context);
+    if (shimmer == null) {
+      // If no ancestor Shimmer widget, return the child without shimmer
+      return widget.child;
+    }
+
+    if (!shimmer.isSized) {
+      // The ancestor Shimmer widget has not laid itself out yet.
+      return const SizedBox();
+    }
+
+    return AnimatedBuilder(
+      animation: shimmer.shimmerChanges,
+      builder: (context, child) {
+        final shimmerSize = shimmer.size;
+        final gradient = shimmer.gradient;
+
+        // Get the render object safely
+        final renderObject = context.findRenderObject();
+        if (renderObject == null || !renderObject.attached) {
+          return widget.child;
+        }
+
+        final offsetWithinShimmer = shimmer.getDescendantOffset(
+          descendant: renderObject as RenderBox,
+        );
+
+        return ShaderMask(
+          blendMode: BlendMode.srcATop,
+          shaderCallback: (bounds) {
+            return gradient.createShader(
+              Rect.fromLTWH(
+                -offsetWithinShimmer.dx,
+                -offsetWithinShimmer.dy,
+                shimmerSize.width,
+                shimmerSize.height,
+              ),
+            );
+          },
+          child: widget.child,
+        );
+      },
     );
   }
 }
@@ -312,6 +499,12 @@ class ShimmerSkeleton extends StatelessWidget {
         return _buildAvatarSkeleton();
       case ShimmerSkeletonType.text:
         return _buildTextSkeleton();
+      case ShimmerSkeletonType.button:
+        return _buildButtonSkeleton();
+      case ShimmerSkeletonType.chip:
+        return _buildChipSkeleton();
+      case ShimmerSkeletonType.progress:
+        return _buildProgressSkeleton();
       case ShimmerSkeletonType.custom:
         return child ?? const SizedBox();
     }
@@ -321,8 +514,106 @@ class ShimmerSkeleton extends StatelessWidget {
     return Container(
       height: 200,
       decoration: BoxDecoration(
-        color: Colors.grey[300],
+        color: DSColorUsages
+            .background.secondary, // Using design system background color
         borderRadius: BorderRadius.circular(12),
+      ),
+      child: Padding(
+        padding: const EdgeInsets.all(16.0),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            // Header with avatar and text
+            Row(
+              children: [
+                Container(
+                  width: 40,
+                  height: 40,
+                  decoration: BoxDecoration(
+                    color: DSColorUsages.background.primary,
+                    shape: BoxShape.circle,
+                  ),
+                ),
+                const SizedBox(width: 12),
+                Expanded(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Container(
+                        height: 16,
+                        width: 120,
+                        decoration: BoxDecoration(
+                          color: DSColorUsages.background.primary,
+                          borderRadius: BorderRadius.circular(4),
+                        ),
+                      ),
+                      const SizedBox(height: 4),
+                      Container(
+                        height: 12,
+                        width: 80,
+                        decoration: BoxDecoration(
+                          color: DSColorUsages.background.primary,
+                          borderRadius: BorderRadius.circular(4),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ],
+            ),
+            const SizedBox(height: 16),
+            // Content lines
+            Container(
+              height: 12,
+              width: double.infinity,
+              decoration: BoxDecoration(
+                color: DSColorUsages.background.primary,
+                borderRadius: BorderRadius.circular(4),
+              ),
+            ),
+            const SizedBox(height: 8),
+            Container(
+              height: 12,
+              width: double.infinity,
+              decoration: BoxDecoration(
+                color: DSColorUsages.background.primary,
+                borderRadius: BorderRadius.circular(4),
+              ),
+            ),
+            const SizedBox(height: 8),
+            Container(
+              height: 12,
+              width: 200,
+              decoration: BoxDecoration(
+                color: DSColorUsages.background.primary,
+                borderRadius: BorderRadius.circular(4),
+              ),
+            ),
+            const Spacer(),
+            // Footer with action buttons
+            Row(
+              children: [
+                Container(
+                  height: 32,
+                  width: 80,
+                  decoration: BoxDecoration(
+                    color: DSColorUsages.background.primary,
+                    borderRadius: BorderRadius.circular(16),
+                  ),
+                ),
+                const Spacer(),
+                Container(
+                  height: 32,
+                  width: 32,
+                  decoration: BoxDecoration(
+                    color: DSColorUsages.background.primary,
+                    shape: BoxShape.circle,
+                  ),
+                ),
+              ],
+            ),
+          ],
+        ),
       ),
     );
   }
@@ -332,8 +623,74 @@ class ShimmerSkeleton extends StatelessWidget {
       height: 80,
       margin: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
       decoration: BoxDecoration(
-        color: Colors.grey[300],
+        color: DSColorUsages
+            .background.secondary, // Using design system background color
         borderRadius: BorderRadius.circular(8),
+      ),
+      child: Padding(
+        padding: const EdgeInsets.all(12.0),
+        child: Row(
+          children: [
+            // Left side - image or icon
+            Container(
+              width: 56,
+              height: 56,
+              decoration: BoxDecoration(
+                color: DSColorUsages.background.primary,
+                borderRadius: BorderRadius.circular(8),
+              ),
+            ),
+            const SizedBox(width: 12),
+            // Right side - content
+            Expanded(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Container(
+                    height: 16,
+                    width: double.infinity,
+                    decoration: BoxDecoration(
+                      color: DSColorUsages.background.primary,
+                      borderRadius: BorderRadius.circular(4),
+                    ),
+                  ),
+                  const SizedBox(height: 8),
+                  Container(
+                    height: 12,
+                    width: 150,
+                    decoration: BoxDecoration(
+                      color: DSColorUsages.background.primary,
+                      borderRadius: BorderRadius.circular(4),
+                    ),
+                  ),
+                  const SizedBox(height: 8),
+                  Row(
+                    children: [
+                      Container(
+                        height: 8,
+                        width: 60,
+                        decoration: BoxDecoration(
+                          color: DSColorUsages.background.primary,
+                          borderRadius: BorderRadius.circular(4),
+                        ),
+                      ),
+                      const Spacer(),
+                      Container(
+                        height: 8,
+                        width: 40,
+                        decoration: BoxDecoration(
+                          color: DSColorUsages.background.primary,
+                          borderRadius: BorderRadius.circular(4),
+                        ),
+                      ),
+                    ],
+                  ),
+                ],
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }
@@ -342,9 +699,20 @@ class ShimmerSkeleton extends StatelessWidget {
     return Container(
       width: 50,
       height: 50,
-      decoration: const BoxDecoration(
-        color: Colors.grey,
+      decoration: BoxDecoration(
+        color: DSColorUsages
+            .background.secondary, // Using design system background color
         shape: BoxShape.circle,
+      ),
+      child: Center(
+        child: Container(
+          width: 20,
+          height: 20,
+          decoration: BoxDecoration(
+            color: DSColorUsages.background.primary,
+            shape: BoxShape.circle,
+          ),
+        ),
       ),
     );
   }
@@ -353,21 +721,141 @@ class ShimmerSkeleton extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
+        // Title line
         Container(
-          height: 16,
+          height: 18,
           width: double.infinity,
           decoration: BoxDecoration(
-            color: Colors.grey[300],
+            color: DSColorUsages.background.secondary,
             borderRadius: BorderRadius.circular(4),
           ),
         ),
         const SizedBox(height: 8),
+        // Subtitle line
         Container(
-          height: 16,
+          height: 14,
           width: 200,
           decoration: BoxDecoration(
-            color: Colors.grey[300],
+            color: DSColorUsages.background.secondary,
             borderRadius: BorderRadius.circular(4),
+          ),
+        ),
+        const SizedBox(height: 8),
+        // Description lines
+        Container(
+          height: 12,
+          width: double.infinity,
+          decoration: BoxDecoration(
+            color: DSColorUsages.background.secondary,
+            borderRadius: BorderRadius.circular(4),
+          ),
+        ),
+        const SizedBox(height: 4),
+        Container(
+          height: 12,
+          width: 180,
+          decoration: BoxDecoration(
+            color: DSColorUsages.background.secondary,
+            borderRadius: BorderRadius.circular(4),
+          ),
+        ),
+        const SizedBox(height: 4),
+        Container(
+          height: 12,
+          width: 160,
+          decoration: BoxDecoration(
+            color: DSColorUsages.background.secondary,
+            borderRadius: BorderRadius.circular(4),
+          ),
+        ),
+      ],
+    );
+  }
+
+  Widget _buildButtonSkeleton() {
+    return Container(
+      height: 48,
+      width: 120,
+      decoration: BoxDecoration(
+        color: DSColorUsages.background.secondary,
+        borderRadius: BorderRadius.circular(24),
+      ),
+      child: Center(
+        child: Container(
+          height: 16,
+          width: 60,
+          decoration: BoxDecoration(
+            color: DSColorUsages.background.primary,
+            borderRadius: BorderRadius.circular(4),
+          ),
+        ),
+      ),
+    );
+  }
+
+  Widget _buildChipSkeleton() {
+    return Container(
+      height: 32,
+      width: 80,
+      decoration: BoxDecoration(
+        color: DSColorUsages.background.secondary,
+        borderRadius: BorderRadius.circular(16),
+      ),
+      child: Center(
+        child: Container(
+          height: 12,
+          width: 40,
+          decoration: BoxDecoration(
+            color: DSColorUsages.background.primary,
+            borderRadius: BorderRadius.circular(4),
+          ),
+        ),
+      ),
+    );
+  }
+
+  Widget _buildProgressSkeleton() {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Container(
+              height: 14,
+              width: 60,
+              decoration: BoxDecoration(
+                color: DSColorUsages.background.secondary,
+                borderRadius: BorderRadius.circular(4),
+              ),
+            ),
+            Container(
+              height: 14,
+              width: 30,
+              decoration: BoxDecoration(
+                color: DSColorUsages.background.secondary,
+                borderRadius: BorderRadius.circular(4),
+              ),
+            ),
+          ],
+        ),
+        const SizedBox(height: 8),
+        Container(
+          height: 8,
+          width: double.infinity,
+          decoration: BoxDecoration(
+            color: DSColorUsages.background.secondary,
+            borderRadius: BorderRadius.circular(4),
+          ),
+          child: FractionallySizedBox(
+            alignment: Alignment.centerLeft,
+            widthFactor: 0.7, // 70% progress
+            child: Container(
+              decoration: BoxDecoration(
+                color: DSColorUsages.background.primary,
+                borderRadius: BorderRadius.circular(4),
+              ),
+            ),
           ),
         ),
       ],
@@ -388,6 +876,15 @@ enum ShimmerSkeletonType {
 
   /// A text skeleton.
   text,
+
+  /// A button skeleton.
+  button,
+
+  /// A chip skeleton.
+  chip,
+
+  /// A progress skeleton.
+  progress,
 
   /// A custom skeleton using the child widget.
   custom,

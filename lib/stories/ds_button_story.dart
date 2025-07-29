@@ -118,13 +118,13 @@ class DSButtonStoryWidget extends StatelessWidget {
                 const SizedBox(height: 12),
                 DSButton(
                   label: 'Outline Button',
-                  variant: DSButtonVariants.outline,
+                  variant: DSButtonVariants.tertiary,
                   onPressed: () {},
                 ),
                 const SizedBox(height: 12),
                 DSButton(
                   label: 'Ghost Button',
-                  variant: DSButtonVariants.ghost,
+                  variant: DSButtonVariants.ghostBrand,
                   onPressed: () {},
                 ),
               ],
