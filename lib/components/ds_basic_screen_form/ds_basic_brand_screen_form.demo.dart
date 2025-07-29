@@ -2,23 +2,25 @@ import 'package:flutter/material.dart';
 
 import '../../design_system_project.dart';
 
-class DSBasicScreenFormDemo extends StatefulWidget {
-  const DSBasicScreenFormDemo({super.key});
+class DSBasicBrandScreenFormDemo extends StatefulWidget {
+  const DSBasicBrandScreenFormDemo({super.key});
 
   @override
-  State<DSBasicScreenFormDemo> createState() => _DSBasicScreenFormDemoState();
+  State<DSBasicBrandScreenFormDemo> createState() =>
+      _DSBasicBrandScreenFormDemoState();
 }
 
-class _DSBasicScreenFormDemoState extends State<DSBasicScreenFormDemo> {
+class _DSBasicBrandScreenFormDemoState
+    extends State<DSBasicBrandScreenFormDemo> {
   final DSInputController _nameController = DSInputController();
   final DSInputController _emailController = DSInputController();
   final DSInputController _phoneController = DSInputController();
 
   @override
   Widget build(BuildContext context) {
-    return DSBasicScreenForm(
+    return DSBAsicBrandScreenForm(
       title: 'Basic Screen Form Demo',
-      description: 'This is a demo of the DSBasicScreenForm component',
+      description: 'This is a demo of the DSBasicBrandScreenForm component',
       showBackButton: true,
       hasBottomBorderRadius: true,
       centerTitle: true,
@@ -107,19 +109,19 @@ class _DSBasicScreenFormDemoState extends State<DSBasicScreenFormDemo> {
 }
 
 // Example with header image
-class DSBasicScreenFormWithHeaderDemo extends StatefulWidget {
-  const DSBasicScreenFormWithHeaderDemo({super.key});
+class DSBasicBrandScreenFormWithHeaderDemo extends StatefulWidget {
+  const DSBasicBrandScreenFormWithHeaderDemo({super.key});
 
   @override
-  State<DSBasicScreenFormWithHeaderDemo> createState() =>
-      _DSBasicScreenFormWithHeaderDemoState();
+  State<DSBasicBrandScreenFormWithHeaderDemo> createState() =>
+      _DSBasicBrandScreenFormWithHeaderDemoState();
 }
 
-class _DSBasicScreenFormWithHeaderDemoState
-    extends State<DSBasicScreenFormWithHeaderDemo> {
+class _DSBasicBrandScreenFormWithHeaderDemoState
+    extends State<DSBasicBrandScreenFormWithHeaderDemo> {
   @override
   Widget build(BuildContext context) {
-    return DSBasicScreenForm(
+    return DSBAsicBrandScreenForm(
       title: 'Profile Settings',
       description: 'Manage your account preferences',
       showHeaderImage: true,
@@ -177,19 +179,19 @@ class _DSBasicScreenFormWithHeaderDemoState
 }
 
 // Example with custom styling
-class DSBasicScreenFormCustomDemo extends StatefulWidget {
-  const DSBasicScreenFormCustomDemo({super.key});
+class DSBasicBrandScreenFormCustomDemo extends StatefulWidget {
+  const DSBasicBrandScreenFormCustomDemo({super.key});
 
   @override
-  State<DSBasicScreenFormCustomDemo> createState() =>
-      _DSBasicScreenFormCustomDemoState();
+  State<DSBasicBrandScreenFormCustomDemo> createState() =>
+      _DSBasicBrandScreenFormCustomDemoState();
 }
 
-class _DSBasicScreenFormCustomDemoState
-    extends State<DSBasicScreenFormCustomDemo> {
+class _DSBasicBrandScreenFormCustomDemoState
+    extends State<DSBasicBrandScreenFormCustomDemo> {
   @override
   Widget build(BuildContext context) {
-    return DSBasicScreenForm(
+    return DSBAsicBrandScreenForm(
       title: 'Custom Styled Form',
       description: 'With custom colors and styling',
       showBackButton: true,

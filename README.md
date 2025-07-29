@@ -51,7 +51,7 @@ class MyApp extends StatelessWidget {
 - **DSImageView** - Image display with error handling
 - **DSIconButton** - Icon-based button component
 - **DSRadio** - Radio button component with modern design
-- **DSBasicScreenForm** - Complete screen form layout solution
+- **DSBasicBrandScreenForm** - Complete screen form layout solution
 - **DSBottomNavigationBar** - Bottom navigation with floating button support
 
 ### Utility Widgets

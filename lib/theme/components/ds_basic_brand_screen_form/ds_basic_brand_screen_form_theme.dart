@@ -1,10 +1,10 @@
 part of '../../ds_theme.dart';
 
-/// Theme configuration for the DSBasicScreenForm component.
+/// Theme configuration for the DSBasicBrandScreenForm component.
 ///
 /// Provides default styling and behavior for the basic screen form.
 /// All values can be overridden by widget parameters.
-class DSBasicScreenFormTheme {
+class DSBasicBrandScreenFormTheme {
   final bool showHeaderImage;
   final bool showBackButton;
   final bool hasBottomBorderRadius;
@@ -19,7 +19,7 @@ class DSBasicScreenFormTheme {
   final Color? backgroundColor;
   final double borderRadius;
 
-  const DSBasicScreenFormTheme({
+  const DSBasicBrandScreenFormTheme({
     this.showHeaderImage = false,
     this.showBackButton = true,
     this.hasBottomBorderRadius = true,
@@ -35,7 +35,7 @@ class DSBasicScreenFormTheme {
     this.borderRadius = 12.0,
   });
 
-  DSBasicScreenFormTheme copyWith({
+  DSBasicBrandScreenFormTheme copyWith({
     bool? showHeaderImage,
     bool? showBackButton,
     bool? hasBottomBorderRadius,
@@ -50,7 +50,7 @@ class DSBasicScreenFormTheme {
     Color? backgroundColor,
     double? borderRadius,
   }) {
-    return DSBasicScreenFormTheme(
+    return DSBasicBrandScreenFormTheme(
       showHeaderImage: showHeaderImage ?? this.showHeaderImage,
       showBackButton: showBackButton ?? this.showBackButton,
       hasBottomBorderRadius:
@@ -72,14 +72,14 @@ class DSBasicScreenFormTheme {
   /// Linearly interpolates between two themes.
   ///
   /// Used for smooth transitions between different theme states.
-  DSBasicScreenFormTheme lerp(
-    covariant DSBasicScreenFormTheme? other,
+  DSBasicBrandScreenFormTheme lerp(
+    covariant DSBasicBrandScreenFormTheme? other,
     double t,
   ) {
     if (other == null) {
       return copyWith();
     }
-    return DSBasicScreenFormTheme(
+    return DSBasicBrandScreenFormTheme(
       showHeaderImage: other.showHeaderImage,
       showBackButton: other.showBackButton,
       hasBottomBorderRadius: other.hasBottomBorderRadius,
