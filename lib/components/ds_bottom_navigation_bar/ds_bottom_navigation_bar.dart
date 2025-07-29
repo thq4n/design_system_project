@@ -203,33 +203,74 @@ class AppBottomNavigationBarItem<T> extends StatelessWidget {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          AnimatedContainer(
+          // Animated indicator
+          AnimatedSize(
             duration: const Duration(milliseconds: 300),
-            height: isSelected ? 2 : 0,
-            margin: const EdgeInsets.symmetric(horizontal: 12),
-            decoration: isSelected
-                ? BoxDecoration(
-                    color: DSColorUsages.background.brandPrimary,
-                    borderRadius: const BorderRadius.only(
-                      bottomLeft: Radius.circular(8),
-                      bottomRight: Radius.circular(8),
-                    ),
-                  )
-                : null,
-          ),
-          SizedBox(
-            height: 24,
-            width: 24,
-            child: DSImageView(
-              source: isSelected ? itemData.activeIcon : itemData.inactiveIcon,
-              width: DSIconSizes.size24,
-              height: DSIconSizes.size24,
-              color: iconColor,
+            child: Container(
+              height: isSelected ? 2 : 0,
+              margin: const EdgeInsets.symmetric(horizontal: 12),
+              decoration: isSelected
+                  ? BoxDecoration(
+                      color: DSColorUsages.background.brandPrimary,
+                      borderRadius: const BorderRadius.only(
+                        bottomLeft: Radius.circular(8),
+                        bottomRight: Radius.circular(8),
+                      ),
+                    )
+                  : null,
             ),
           ),
-          Text(
-            itemData.title,
-            style: textStyle,
+          // Animated icon with scale and color transition
+          AnimatedContainer(
+            duration: const Duration(milliseconds: 300),
+            curve: Curves.easeInOut,
+            child: AnimatedScale(
+              duration: const Duration(milliseconds: 200),
+              scale: isSelected ? 1.1 : 1.0,
+              child: AnimatedSwitcher(
+                duration: const Duration(milliseconds: 200),
+                transitionBuilder: (Widget child, Animation<double> animation) {
+                  return ScaleTransition(
+                    scale: animation,
+                    child: FadeTransition(
+                      opacity: animation,
+                      child: child,
+                    ),
+                  );
+                },
+                child: SizedBox(
+                  key: ValueKey(isSelected ? 'active' : 'inactive'),
+                  height: 24,
+                  width: 24,
+                  child: DSImageView(
+                    source: isSelected
+                        ? itemData.activeIcon
+                        : itemData.inactiveIcon,
+                    width: DSIconSizes.size24,
+                    height: DSIconSizes.size24,
+                    color: iconColor,
+                  ),
+                ),
+              ),
+            ),
+          ),
+          // Animated text with color and weight transition
+          AnimatedDefaultTextStyle(
+            duration: const Duration(milliseconds: 300),
+            curve: Curves.easeInOut,
+            style: (isSelected
+                    ? itemData.activeTextStyle
+                    : itemData.inactiveTextStyle) ??
+                textTheme.xs?.medium.copyWith(
+                  color: isSelected
+                      ? DSColorUsages.text.linkRed
+                      : DSColorUsages.text.tertiary,
+                  fontWeight: isSelected ? FontWeight.w600 : FontWeight.w400,
+                ) ??
+                const TextStyle(),
+            child: Text(
+              itemData.title,
+            ),
           ),
         ],
       ),
