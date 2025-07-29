@@ -1,33 +1,29 @@
 // ignore_for_file: lines_longer_than_80_chars
 
 import 'dart:math';
+import 'dart:ui';
 
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 import '../../base/ds_base.dart';
 import '../../constants/constants.dart';
 import '../../design_system_core/ds_color_usage/ds_color_usage_core.dart';
 import '../../gen/assets.gen.dart';
 import '../../theme/ds_theme.dart';
-import '../../utils/object_utils.dart';
-import '../../utils/status_bar_utils.dart';
+import '../../utils/helpers.dart';
 import '../ds_components.dart';
 
-/// A basic screen form component that provides a consistent layout for form screens.
+/// A modern screen form component with blur effect app bar.
 ///
-/// This component includes an app bar with title, description, back button, and actions,
-/// plus a body area for form content. It automatically handles status bar styling
-/// and keyboard dismissal.
-class DSBAsicBrandScreenForm extends StatefulWidget {
+/// This component provides a modern UI with a blur effect app bar, similar to iOS design.
+/// It includes an app bar with title, back button, and a body area for form content.
+/// It automatically handles status bar styling and keyboard dismissal.
+class DSBasicScreenForm extends StatefulWidget {
   /// The title displayed in the app bar.
   ///
   /// Defaults to empty string if not provided.
   final String? title;
-
-  /// The description displayed below the title in the app bar.
-  ///
-  /// Optional - only shown if provided and not empty.
-  final String? description;
 
   /// The main content widget displayed in the body area.
   ///
@@ -49,11 +45,6 @@ class DSBAsicBrandScreenForm extends StatefulWidget {
   /// Defaults to [DSColorUsages.text.white] if not provided.
   final Color? appbarForegroundColor;
 
-  /// Whether to show a header image in the app bar.
-  ///
-  /// Defaults to false. When true, sets dark status bar.
-  final bool? showHeaderImage;
-
   /// List of action widgets displayed in the app bar.
   ///
   /// Defaults to empty list.
@@ -69,11 +60,6 @@ class DSBAsicBrandScreenForm extends StatefulWidget {
   /// Defaults to true if not provided.
   final bool? resizeToAvoidBottomInset;
 
-  /// Additional widget displayed below the app bar content.
-  ///
-  /// Optional - only shown if provided.
-  final Widget? extentions;
-
   /// Whether to show the back button.
   ///
   /// Defaults to true if not provided.
@@ -84,46 +70,41 @@ class DSBAsicBrandScreenForm extends StatefulWidget {
   /// If not provided, uses default back button with chevron icon.
   final Widget? backButton;
 
-  /// Whether the app bar has rounded bottom corners.
-  ///
-  /// Defaults to false if not provided.
-  final bool? hasBottomBorderRadius;
-
   /// Whether to center the title.
   ///
-  /// Defaults to true if not provided. Automatically centers if actions <= 1
-  /// and no description, unless [forceCenterTitle] is true.
+  /// Defaults to true if not provided.
   final bool? centerTitle;
-
-  /// Whether to show a divider in the app bar.
-  ///
-  /// Defaults to false if not provided.
-  final bool? showAppbarDivider;
-
-  /// Force center title regardless of other conditions.
-  ///
-  /// Defaults to false if not provided.
-  final bool? forceCenterTitle;
 
   /// Maximum number of lines for the title.
   ///
   /// Defaults to 1 if not provided.
   final int? titleMaxLines;
 
-  /// Border radius for the app bar bottom corners.
-  ///
-  /// Defaults to 12.0 if not provided.
-  final double? borderRadius;
-
   /// Custom text style for the title.
   ///
   /// Defaults to [textTheme.lg?.semibold] with white color if not provided.
   final DSTextStyle? titleStyle;
 
-  /// Custom text style for the description.
-  ///
-  /// Defaults to [textTheme.base?.medium] with white color if not provided.
-  final DSTextStyle? desStyle;
+  /// Whether to enable blur effect, defaults to true
+  final bool enableBlur;
+
+  /// The maximum blur opacity, defaults to 0.7
+  final double maxBlurOpacity;
+
+  /// The padding of the child, defaults to 0
+  final EdgeInsets? padding;
+
+  /// Result to return when back button is pressed
+  final dynamic result;
+
+  /// Whether to automatically pop with result when back is pressed
+  final bool popWithResult;
+
+  /// The widget to display at the bottom of the screen
+  final Widget? bottomWidget;
+
+  /// Custom padding for the child
+  final EdgeInsets Function(EdgeInsets padding)? onCustomPadding;
 
   /// A button displayed floating above the body, in the bottom right corner.
   ///
@@ -156,33 +137,32 @@ class DSBAsicBrandScreenForm extends StatefulWidget {
   /// Optional - only shown if provided.
   final Widget? bottomNavigationBar;
 
-  /// Creates a basic screen form widget.
+  /// Creates a modern screen form widget with blur effect.
   ///
   /// All parameters are optional and have sensible defaults based on the design system.
   /// The component automatically handles status bar styling and keyboard dismissal.
-  const DSBAsicBrandScreenForm({
+  const DSBasicScreenForm({
     super.key,
     this.title,
-    this.description,
     this.child,
     this.bgColor,
     this.appbarColor,
     this.appbarForegroundColor,
-    this.showHeaderImage,
     this.actions = const <Widget>[],
     this.onBack,
     this.resizeToAvoidBottomInset,
-    this.extentions,
     this.showBackButton,
     this.backButton,
-    this.hasBottomBorderRadius,
     this.centerTitle,
-    this.showAppbarDivider,
-    this.forceCenterTitle,
     this.titleMaxLines,
-    this.borderRadius,
     this.titleStyle,
-    this.desStyle,
+    this.enableBlur = true,
+    this.maxBlurOpacity = 0.7,
+    this.padding,
+    this.result,
+    this.popWithResult = false,
+    this.bottomWidget,
+    this.onCustomPadding,
     this.floatingActionButton,
     this.floatingActionButtonLocation,
     this.floatingActionButtonAnimator,
@@ -190,63 +170,13 @@ class DSBAsicBrandScreenForm extends StatefulWidget {
   });
 
   @override
-  State<DSBAsicBrandScreenForm> createState() => _DSBAsicBrandScreenFormState();
+  State<DSBasicScreenForm> createState() => _DSBasicScreenFormState();
 }
 
-class _DSBAsicBrandScreenFormState extends DSStateBase<DSBAsicBrandScreenForm> {
-  late DSBasicBrandScreenFormTheme componentTheme = theme
-      .extension<DSBasicBrandScreenFormThemeExtension>()!
-      .dSBasicBrandScreenFormTheme;
-
-  /// Gets the theme configuration with widget-specific overrides.
-  ///
-  /// Applies widget parameters over theme defaults, with fallbacks to system defaults.
-  DSBasicBrandScreenFormTheme get screenTheme => componentTheme.copyWith(
-        // Header image: defaults to false
-        showHeaderImage: widget.showHeaderImage ?? false,
-
-        // Back button: defaults to true
-        showBackButton: widget.showBackButton ?? true,
-
-        // Border radius: defaults to false
-        hasBottomBorderRadius: widget.hasBottomBorderRadius ?? false,
-
-        // Border radius value: defaults to 12.0
-        borderRadius: widget.borderRadius ?? 12.0,
-
-        // Center title: defaults to true
-        centerTitle: widget.centerTitle ?? true,
-
-        // App bar divider: defaults to false
-        showAppbarDivider: widget.showAppbarDivider ?? false,
-
-        // Force center title: defaults to false
-        forceCenterTitle: widget.forceCenterTitle ?? false,
-
-        // App bar color: defaults to brand primary
-        appbarColor:
-            widget.appbarColor ?? DSColorUsages.background.brandPrimary,
-
-        // App bar foreground color: defaults to white
-        appbarForegroundColor:
-            widget.appbarForegroundColor ?? DSColorUsages.text.white,
-
-        // Title max lines: defaults to 1
-        titleMaxLines: widget.titleMaxLines ?? 1,
-
-        // Title style: widget -> theme -> system default
-        titleStyle: widget.titleStyle ??
-            componentTheme.titleStyle ??
-            textTheme.lg?.semibold.copyWithColor(DSColorUsages.text.white),
-
-        // Description style: widget -> theme -> system default
-        desStyle: widget.desStyle ??
-            componentTheme.desStyle ??
-            textTheme.base?.medium.copyWithColor(DSColorUsages.text.white),
-
-        // Background color: widget -> theme -> system default
-        backgroundColor: widget.bgColor ?? DSColorUsages.background.secondary,
-      );
+class _DSBasicScreenFormState extends DSStateBase<DSBasicScreenForm> {
+  late DSBasicScreenFormTheme componentTheme = theme
+      .extension<DSBasicScreenFormThemeExtension>()!
+      .dSBasicScreenFormTheme;
 
   @override
   void didChangeDependencies() {
@@ -254,204 +184,262 @@ class _DSBAsicBrandScreenFormState extends DSStateBase<DSBAsicBrandScreenForm> {
     _updateStatusBar();
   }
 
-  /// Updates the status bar style based on header image setting.
+  /// Updates the status bar style.
   ///
-  /// Sets dark status bar when [showHeaderImage] is true,
-  /// light status bar otherwise.
+  /// Sets light status bar for this basic form.
   void _updateStatusBar() {
-    if (screenTheme.showHeaderImage) {
-      setDarkStatusBar();
-    } else {
-      setLightStatusBar();
-    }
+    setLightStatusBar();
   }
 
   /// Determines whether the title should be centered.
   ///
-  /// Returns true if:
-  /// - [forceCenterTitle] is true, OR
-  /// - [centerTitle] is true AND actions <= 1 AND no description
-  bool get isCenterTitle =>
-      screenTheme.forceCenterTitle ||
-      (screenTheme.centerTitle &&
-          widget.actions.length <= 1 &&
-          widget.description?.isNotEmpty != true);
+  /// Returns true if [centerTitle] is true.
+  bool get isCenterTitle => componentTheme.centerTitle;
 
   @override
   Widget build(BuildContext context) {
+    final mediaQuery = MediaQuery.of(context);
+    final topPadding = mediaQuery.padding.top;
+
     return Scaffold(
-      backgroundColor: widget.bgColor,
+      backgroundColor: widget.bgColor ?? componentTheme.backgroundColor,
       resizeToAvoidBottomInset: widget.resizeToAvoidBottomInset,
       floatingActionButton: widget.floatingActionButton,
       floatingActionButtonLocation: widget.floatingActionButtonLocation,
       floatingActionButtonAnimator: widget.floatingActionButtonAnimator,
       bottomNavigationBar: widget.bottomNavigationBar,
-      body: GestureDetector(
-        onTap: hideKeyBoard,
-        child: Column(
-          children: [
-            _buildAppBar(),
-            Expanded(
-              child: Material(
-                color: screenTheme.backgroundColor ??
-                    DSColorUsages.background.secondary,
-                child: Container(
-                  width: double.infinity,
-                  height: double.infinity,
-                  child: widget.child ?? const SizedBox(),
+      body: Stack(
+        children: [
+          // Main content
+          _buildBody(),
+          // Blur effect container behind AppBar
+          if (widget.enableBlur)
+            Positioned(
+              top: 0,
+              left: 0,
+              right: 0,
+              child: ClipRect(
+                child: BackdropFilter(
+                  filter: ImageFilter.blur(sigmaX: 10.0, sigmaY: 10.0),
+                  child: Container(
+                    height: topPadding + kToolbarHeight,
+                    decoration: BoxDecoration(
+                      color: Colors.white.withValues(
+                        alpha: widget.maxBlurOpacity,
+                      ),
+                    ),
+                  ),
                 ),
               ),
             ),
-          ],
-        ),
+          // AppBar on top
+          Positioned(
+            top: 0,
+            left: 0,
+            right: 0,
+            child: PreferredSize(
+              preferredSize: const Size.fromHeight(kToolbarHeight),
+              child: Container(
+                decoration: BoxDecoration(
+                  border: Border(
+                    bottom: BorderSide(
+                      color: DSColorUsages.border.secondary,
+                      width: 0.5,
+                    ),
+                  ),
+                ),
+                child: _buildAppBar(),
+              ),
+            ),
+          ),
+        ],
       ),
     );
   }
 
-  /// Builds the app bar widget with title, description, back button, and actions.
+  /// Builds the main body content
+  Widget _buildBody() {
+    final mediaQuery = MediaQuery.of(context);
+    final topPadding = mediaQuery.padding.top + kToolbarHeight;
+    final bottomPadding = mediaQuery.padding.bottom;
+
+    final defaultPadding = (widget.padding ?? EdgeInsets.zero).let(
+          (it) => it?.copyWith(
+            top: topPadding + (it.top),
+            bottom: max(bottomPadding, it.bottom),
+          ),
+        ) ??
+        EdgeInsets.zero;
+
+    final customPadding =
+        widget.onCustomPadding?.call(defaultPadding) ?? defaultPadding;
+
+    Widget bodyWidget;
+
+    if (_isChildScrollable) {
+      // If child is scrollable, wrap it with padding
+      bodyWidget = Padding(padding: customPadding, child: widget.child);
+    } else if (_hasExpandedChildren) {
+      // If child has Expanded widgets, wrap with SafeArea and padding
+      bodyWidget = Padding(padding: customPadding, child: widget.child);
+    } else {
+      // If child is not scrollable, wrap it with ListView
+      bodyWidget = ListView(
+        padding: customPadding,
+        children: [widget.child ?? const SizedBox()],
+      );
+    }
+
+    if (widget.bottomWidget != null) {
+      bodyWidget = Column(
+        children: [
+          Expanded(child: bodyWidget),
+          widget.bottomWidget!,
+        ],
+      );
+    }
+
+    return GestureDetector(
+      onTap: hideKeyBoard,
+      child: bodyWidget,
+    );
+  }
+
+  /// Check if the child is a scrollable widget
+  bool get _isChildScrollable {
+    return widget.child is ListView ||
+        widget.child is SingleChildScrollView ||
+        widget.child is CustomScrollView ||
+        widget.child is GridView ||
+        widget.child is PageView ||
+        widget.child is TabBarView;
+  }
+
+  /// Check if the child contains Expanded widgets that need special handling
+  bool get _hasExpandedChildren {
+    if (widget.child is Column) {
+      final column = widget.child as Column;
+      return column.children.any((child) => child is Expanded);
+    }
+    return false;
+  }
+
+  /// Default leading widget (back button)
+  Widget get _defaultLeading {
+    if (!(widget.showBackButton ?? true)) {
+      return const SizedBox.shrink();
+    }
+
+    // Check if we can pop from current route
+    final navigator = Navigator.of(context);
+
+    // Check if there's a dialog or overlay showing
+    // We can detect this by checking if the current route is not the topmost
+    final currentRoute = ModalRoute.of(context);
+    final isTopRoute = currentRoute?.isCurrent == true;
+
+    // Don't show back button if:
+    // 1. Can't pop (no previous routes)
+    // 2. There's a dialog/overlay showing (back button would be covered)
+    if (!navigator.canPop() || !isTopRoute) {
+      return const SizedBox.shrink();
+    }
+
+    return IconButton(
+      icon: DSImageView(
+        source: DSAssets.vuesax.arrowLeft2Linear,
+        height: DSIconSizes.size20,
+        width: DSIconSizes.size20,
+        color: componentTheme.appbarForegroundColor,
+      ),
+      onPressed: _handleBackPress,
+      splashRadius: 20,
+    );
+  }
+
+  /// Handle back button press with proper navigation logic
+  void _handleBackPress() {
+    // If custom back handler is provided, use it
+    if (widget.onBack != null) {
+      widget.onBack!();
+      return;
+    }
+
+    final navigator = Navigator.of(context);
+
+    // If popWithResult is true and result is provided, pop with result
+    if (widget.popWithResult && widget.result != null) {
+      navigator.pop(widget.result);
+      return;
+    }
+
+    // Check if we can pop from current route
+    if (navigator.canPop()) {
+      navigator.pop();
+    } else {
+      // If can't pop, try to go to home or show dialog
+      _showBackConfirmationDialog();
+    }
+  }
+
+  /// Show confirmation dialog when back navigation is not possible
+  void _showBackConfirmationDialog() {
+    showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        return AlertDialog(
+          title: const Text('Exit App'),
+          content: const Text('Are you sure you want to exit the app?'),
+          actions: [
+            TextButton(
+              onPressed: () => Navigator.of(context).pop(),
+              child: const Text('Cancel'),
+            ),
+            TextButton(
+              onPressed: () {
+                Navigator.of(context).pop();
+                // Exit app
+                SystemNavigator.pop();
+              },
+              child: const Text('Exit'),
+            ),
+          ],
+        );
+      },
+    );
+  }
+
+  /// Builds the app bar widget with title, back button, and actions.
   ///
   /// The app bar includes:
   /// - Status bar padding
   /// - Back button (if enabled)
-  /// - Title and description
+  /// - Title
   /// - Action buttons
-  /// - Optional extensions widget
-  Widget _buildAppBar() {
-    final appbarColor =
-        screenTheme.appbarColor ?? DSColorUsages.background.brandPrimary;
-    final appbarForegroundColor =
-        screenTheme.appbarForegroundColor ?? DSColorUsages.text.white;
+  PreferredSizeWidget _buildAppBar() {
+    return AppBar(
+      backgroundColor: Colors.transparent,
+      elevation: 1,
+      surfaceTintColor: Colors.transparent,
+      shadowColor: Colors.transparent,
+      scrolledUnderElevation: 0,
+      leading: widget.backButton ?? _defaultLeading,
+      actions: widget.actions,
+      centerTitle: widget.centerTitle ?? true,
+      foregroundColor: componentTheme.titleStyle?.color,
+      title: _buildTitle(),
+    );
+  }
 
-    return Container(
-      width: double.infinity,
-      decoration: BoxDecoration(
-        borderRadius:
-            screenTheme.hasBottomBorderRadius.let((hasBottomBorderRadius) {
-          if (hasBottomBorderRadius == true) {
-            return BorderRadius.only(
-              bottomLeft: Radius.circular(screenTheme.borderRadius),
-              bottomRight: Radius.circular(screenTheme.borderRadius),
-            );
-          }
-          return BorderRadius.zero;
-        }),
-        image: screenTheme.showHeaderImage.let((image) {
-          if (image == true) {
-            // Note: You'll need to add header image asset to your assets
-            // return DecorationImage(
-            //   image: AssetImage('path_to_header_image'),
-            //   fit: BoxFit.cover,
-            //   alignment: Alignment.bottomCenter,
-            // );
-            return null;
-          }
-          return null;
-        }),
-        gradient: LinearGradient(
-          begin: Alignment.bottomCenter,
-          end: Alignment.topCenter,
-          stops: const [0.01, 0.01],
-          colors: [
-            screenTheme.showAppbarDivider ? Colors.black12 : appbarColor,
-            appbarColor,
-          ],
-        ),
+  Widget _buildTitle() {
+    return Text(
+      widget.title ?? '',
+      style: (widget.titleStyle ?? componentTheme.titleStyle)?.copyWith(
+        fontWeight: FontWeight.w600,
+        fontSize: 18,
       ),
-      child: Column(
-        children: [
-          SizedBox(
-            height: max(
-              MediaQuery.of(context).padding.top,
-              24,
-            ),
-          ),
-          Stack(
-            alignment: AlignmentDirectional.center,
-            children: [
-              Row(
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: [
-                  if (screenTheme.showBackButton) ...[
-                    GestureDetector(
-                      onTap: widget.onBack ?? () => Navigator.pop(context),
-                      child: Container(
-                        margin: const EdgeInsets.all(10),
-                        padding: const EdgeInsets.all(6),
-                        decoration: BoxDecoration(
-                          color:
-                              DSColorUsages.background.overlay.withOpacity(0.1),
-                          shape: BoxShape.circle,
-                        ),
-                        child: SizedBox(
-                          height: 24,
-                          width: 24,
-                          child: FittedBox(
-                            child: DSImageView(
-                              source: DSAssets.vuesax.arrowLeft2Linear,
-                              height: DSIconSizes.size24,
-                              width: DSIconSizes.size24,
-                              fit: BoxFit.fitHeight,
-                              color: DSColorUsages.text.white,
-                            ),
-                          ),
-                        ),
-                      ),
-                    ),
-                  ] else ...[
-                    const SizedBox(width: 56),
-                  ],
-                  Expanded(
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.stretch,
-                      children: [
-                        ConstrainedBox(
-                          constraints: const BoxConstraints(minHeight: 56),
-                          child: Align(
-                            alignment: Alignment.center,
-                            child: Text(
-                              widget.title ?? '',
-                              style: screenTheme.titleStyle?.copyWith(
-                                color: appbarForegroundColor,
-                              ),
-                              textAlign: isCenterTitle
-                                  ? TextAlign.center
-                                  : TextAlign.start,
-                              maxLines: screenTheme.titleMaxLines,
-                              overflow: TextOverflow.ellipsis,
-                            ),
-                          ),
-                        ),
-                        if (widget.description?.isNotEmpty == true) ...[
-                          const SizedBox(height: 4),
-                          Text(
-                            widget.description!,
-                            style: screenTheme.desStyle?.copyWith(
-                              color: appbarForegroundColor,
-                            ),
-                          ),
-                        ],
-                      ],
-                    ),
-                  ),
-                  const SizedBox(width: 56),
-                ],
-              ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.end,
-                children: [
-                  ...widget.actions,
-                ],
-              ),
-            ],
-          ),
-          if (widget.extentions != null) ...[
-            widget.extentions!,
-            const SizedBox(
-              height: 12,
-            ),
-          ],
-        ],
-      ),
+      maxLines: widget.titleMaxLines ?? 1,
+      overflow: TextOverflow.ellipsis,
     );
   }
 }
