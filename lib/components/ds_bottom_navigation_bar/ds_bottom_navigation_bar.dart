@@ -185,13 +185,6 @@ class AppBottomNavigationBarItem<T> extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final textTheme = context.textTheme;
-    final TextStyle? textStyle =
-        (isSelected ? itemData.activeTextStyle : itemData.inactiveTextStyle) ??
-            textTheme.xs?.medium.copyWith(
-              color: isSelected
-                  ? DSColorUsages.text.linkRed
-                  : DSColorUsages.text.tertiary,
-            );
 
     final Color? iconColor = (isSelected
             ? itemData.activeIconColor
@@ -258,15 +251,14 @@ class AppBottomNavigationBarItem<T> extends StatelessWidget {
           AnimatedDefaultTextStyle(
             duration: const Duration(milliseconds: 300),
             curve: Curves.easeInOut,
-            style: (isSelected
-                    ? itemData.activeTextStyle
-                    : itemData.inactiveTextStyle) ??
-                textTheme.xs?.medium.copyWith(
-                  color: isSelected
-                      ? DSColorUsages.text.linkRed
-                      : DSColorUsages.text.tertiary,
-                  fontWeight: isSelected ? FontWeight.w600 : FontWeight.w400,
-                ) ??
+            style: ((isSelected
+                        ? itemData.activeTextStyle
+                        : itemData.inactiveTextStyle) ??
+                    textTheme.xs?.medium.copyWith(
+                      color: isSelected
+                          ? DSColorUsages.text.linkRed
+                          : DSColorUsages.text.tertiary,
+                    )) ??
                 const TextStyle(),
             child: Text(
               itemData.title,
