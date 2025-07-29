@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.4.6] - 2024-12-19
+
+### 🔧 Code Quality
+- Fixed linting issues in example app and test files
+- Removed unused import in example/lib/main.dart
+- Improved code formatting with proper trailing commas
+- Enhanced test file organization with better import ordering
+
+### 📝 Documentation
+- Updated code comments and examples for better clarity
+- Improved test file structure and readability
+
 ## [1.4.5] - 2024-12-19
 
 ### 🚨 Breaking Changes

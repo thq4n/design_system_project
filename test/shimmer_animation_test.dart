@@ -1,6 +1,6 @@
+import 'package:design_system_project/design_system_project.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:design_system_project/design_system_project.dart';
 
 void main() {
   group('Shimmer Animation Tests', () {
@@ -143,14 +143,20 @@ void main() {
         );
 
         await tester.pump();
-        expect(tester.takeException(), isNull,
-            reason: 'Error with skeleton type: $type');
+        expect(
+          tester.takeException(),
+          isNull,
+          reason: 'Error with skeleton type: $type',
+        );
 
         // Pump a few more frames
         for (int i = 0; i < 5; i++) {
           await tester.pump(const Duration(milliseconds: 100));
-          expect(tester.takeException(), isNull,
-              reason: 'Error with skeleton type: $type at frame $i');
+          expect(
+            tester.takeException(),
+            isNull,
+            reason: 'Error with skeleton type: $type at frame $i',
+          );
         }
       }
     });
@@ -180,14 +186,20 @@ void main() {
         );
 
         await tester.pump();
-        expect(tester.takeException(), isNull,
-            reason: 'Error with gradient builder $i');
+        expect(
+          tester.takeException(),
+          isNull,
+          reason: 'Error with gradient builder $i',
+        );
 
         // Pump a few more frames
         for (int j = 0; j < 3; j++) {
           await tester.pump(const Duration(milliseconds: 100));
-          expect(tester.takeException(), isNull,
-              reason: 'Error with gradient builder $i at frame $j');
+          expect(
+            tester.takeException(),
+            isNull,
+            reason: 'Error with gradient builder $i at frame $j',
+          );
         }
       }
     });

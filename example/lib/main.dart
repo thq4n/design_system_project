@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:design_system_project/design_system_project.dart';
 import 'simple_shimmer_test.dart';
 
 void main() {
