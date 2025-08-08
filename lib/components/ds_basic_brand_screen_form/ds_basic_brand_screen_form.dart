@@ -189,6 +189,64 @@ class DSBasicBrandScreenForm extends StatefulWidget {
     this.bottomNavigationBar,
   });
 
+  /// Creates a standardized app bar action button with consistent styling.
+  ///
+  /// This method creates an action button that follows the same design pattern
+  /// as the back button, with proper styling, touch area, and visual feedback.
+  ///
+  /// [icon] The icon path to display in the button. Should be a [DSAssets] icon path (e.g., DSAssets.vuesax.searchNormal1Linear).
+  /// [onPressed] Callback function when the button is pressed.
+  /// [iconColor] Optional custom color for the icon. Defaults to white.
+  /// [backgroundColor] Optional custom background color. Defaults to overlay with 0.1 opacity.
+  /// [iconSize] Optional custom size for the icon. Defaults to 24x24.
+  /// [buttonSize] Optional custom size for the button container. Defaults to 40x40.
+  /// [margin] Optional custom margin around the button. Defaults to 10px all sides.
+  /// [padding] Optional custom padding inside the button. Defaults to 6px all sides.
+  ///
+  /// Returns a [Widget] that can be added to the actions list.
+  static Widget createAppBarActionButton({
+    required String icon,
+    required VoidCallback onPressed,
+    Color? iconColor,
+    Color? backgroundColor,
+    double? iconSize,
+    double? buttonSize,
+    EdgeInsets? margin,
+    EdgeInsets? padding,
+  }) {
+    final effectiveIconColor = iconColor ?? DSColorUsages.text.white;
+    final effectiveBackgroundColor =
+        backgroundColor ?? DSColorUsages.background.overlay.withOpacity(0.1);
+    final effectiveIconSize = iconSize ?? DSIconSizes.size24;
+    final effectiveMargin = margin ?? const EdgeInsets.all(10);
+    final effectivePadding = padding ?? const EdgeInsets.all(6);
+
+    return GestureDetector(
+      onTap: onPressed,
+      child: Container(
+        margin: effectiveMargin,
+        padding: effectivePadding,
+        decoration: BoxDecoration(
+          color: effectiveBackgroundColor,
+          shape: BoxShape.circle,
+        ),
+        child: SizedBox(
+          height: effectiveIconSize,
+          width: effectiveIconSize,
+          child: FittedBox(
+            child: DSImageView(
+              source: icon,
+              height: effectiveIconSize,
+              width: effectiveIconSize,
+              fit: BoxFit.fitHeight,
+              color: effectiveIconColor,
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+
   @override
   State<DSBasicBrandScreenForm> createState() => _DSBasicBrandScreenFormState();
 }
