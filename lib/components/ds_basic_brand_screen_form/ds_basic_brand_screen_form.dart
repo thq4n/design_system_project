@@ -430,31 +430,11 @@ class _DSBasicBrandScreenFormState extends DSStateBase<DSBasicBrandScreenForm> {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   if (screenTheme.showBackButton) ...[
-                    GestureDetector(
-                      onTap: widget.onBack ?? () => Navigator.pop(context),
-                      child: Container(
-                        margin: const EdgeInsets.all(10),
-                        padding: const EdgeInsets.all(6),
-                        decoration: BoxDecoration(
-                          color:
-                              DSColorUsages.background.overlay.withOpacity(0.1),
-                          shape: BoxShape.circle,
+                    widget.backButton ??
+                        DSBasicBrandScreenForm.createAppBarActionButton(
+                          icon: DSAssets.vuesax.arrowLeftLinear,
+                          onPressed: widget.onBack ?? () {},
                         ),
-                        child: SizedBox(
-                          height: 24,
-                          width: 24,
-                          child: FittedBox(
-                            child: DSImageView(
-                              source: DSAssets.vuesax.arrowLeft2Linear,
-                              height: DSIconSizes.size24,
-                              width: DSIconSizes.size24,
-                              fit: BoxFit.fitHeight,
-                              color: DSColorUsages.text.white,
-                            ),
-                          ),
-                        ),
-                      ),
-                    ),
                   ] else ...[
                     const SizedBox(width: 56),
                   ],
