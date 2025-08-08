@@ -79,11 +79,6 @@ class DSBasicBrandScreenForm extends StatefulWidget {
   /// Defaults to true if not provided.
   final bool? showBackButton;
 
-  /// Custom back button widget.
-  ///
-  /// If not provided, uses default back button with chevron icon.
-  final Widget? backButton;
-
   /// Whether the app bar has rounded bottom corners.
   ///
   /// Defaults to false if not provided.
@@ -174,7 +169,6 @@ class DSBasicBrandScreenForm extends StatefulWidget {
     this.resizeToAvoidBottomInset,
     this.extentions,
     this.showBackButton,
-    this.backButton,
     this.hasBottomBorderRadius,
     this.centerTitle,
     this.showAppbarDivider,
@@ -191,6 +185,36 @@ class DSBasicBrandScreenForm extends StatefulWidget {
 
   @override
   State<DSBasicBrandScreenForm> createState() => _DSBasicBrandScreenFormState();
+
+  static Widget AppBarActionButton({
+    required String icon,
+    required VoidCallback onPressed,
+  }) {
+    return GestureDetector(
+      onTap: onPressed,
+      child: Container(
+        margin: const EdgeInsets.all(10),
+        padding: const EdgeInsets.all(6),
+        decoration: BoxDecoration(
+          color: DSColorUsages.background.overlay.withOpacity(0.1),
+          shape: BoxShape.circle,
+        ),
+        child: SizedBox(
+          height: 24,
+          width: 24,
+          child: FittedBox(
+            child: DSImageView(
+              source: icon,
+              height: DSIconSizes.size24,
+              width: DSIconSizes.size24,
+              fit: BoxFit.fitHeight,
+              color: DSColorUsages.text.white,
+            ),
+          ),
+        ),
+      ),
+    );
+  }
 }
 
 class _DSBasicBrandScreenFormState extends DSStateBase<DSBasicBrandScreenForm> {
@@ -372,30 +396,9 @@ class _DSBasicBrandScreenFormState extends DSStateBase<DSBasicBrandScreenForm> {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   if (screenTheme.showBackButton) ...[
-                    GestureDetector(
-                      onTap: widget.onBack ?? () => Navigator.pop(context),
-                      child: Container(
-                        margin: const EdgeInsets.all(10),
-                        padding: const EdgeInsets.all(6),
-                        decoration: BoxDecoration(
-                          color:
-                              DSColorUsages.background.overlay.withOpacity(0.1),
-                          shape: BoxShape.circle,
-                        ),
-                        child: SizedBox(
-                          height: 24,
-                          width: 24,
-                          child: FittedBox(
-                            child: DSImageView(
-                              source: DSAssets.vuesax.arrowLeft2Linear,
-                              height: DSIconSizes.size24,
-                              width: DSIconSizes.size24,
-                              fit: BoxFit.fitHeight,
-                              color: DSColorUsages.text.white,
-                            ),
-                          ),
-                        ),
-                      ),
+                    DSBasicBrandScreenForm.AppBarActionButton(
+                      icon: DSAssets.vuesax.arrowLeft2Linear,
+                      onPressed: widget.onBack ?? () => Navigator.pop(context),
                     ),
                   ] else ...[
                     const SizedBox(width: 56),
