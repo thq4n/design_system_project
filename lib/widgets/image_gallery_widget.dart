@@ -3,6 +3,7 @@ import 'dart:math';
 import 'package:extended_image/extended_image.dart';
 import 'package:flutter/material.dart';
 
+import '../extensions/extensions.dart';
 import '../utils/helpers.dart';
 import 'hero_widget.dart';
 import 'image_zoom.dart';

@@ -17,6 +17,8 @@ export 'extensions/extensions.dart';
 // Generated Files
 export 'gen/assets.gen.dart';
 export 'gen/fonts.gen.dart';
+// Services
+export 'services/services.dart';
 // Theme
 export 'theme/ds_theme.dart';
 // Utils
