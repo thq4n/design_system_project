@@ -353,7 +353,8 @@ class _DSInputState extends State<DSInput> {
     }
 
     if (result != null) {
-      return Padding(padding: const EdgeInsets.only(right: 16), child: result);
+      return Padding(
+          padding: const EdgeInsets.only(right: 16, left: 4), child: result);
     }
     return null;
   }
@@ -372,7 +373,7 @@ class _DSInputState extends State<DSInput> {
       return null;
     }
     return Padding(
-      padding: const EdgeInsets.only(left: 16),
+      padding: const EdgeInsets.only(left: 16, right: 4),
       child: AvailabilityWidget(
         enable: widget.enable,
         child: widget.prefixIcon!,

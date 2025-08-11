@@ -17,7 +17,7 @@ class DSAppTheme {
     inputDecorationTheme: InputDecorationTheme(
       filled: true,
       fillColor: DSColorUsages.background.primary,
-      contentPadding: const EdgeInsets.symmetric(vertical: 16, horizontal: 16),
+      contentPadding: const EdgeInsets.symmetric(vertical: 12, horizontal: 16),
       border: OutlineInputBorder(
         borderRadius: BorderRadius.circular(8),
         borderSide: BorderSide(
@@ -80,6 +80,7 @@ class DSAppTheme {
       DSBasicScreenFormThemeExtension(_textTheme),
       DSRadioThemeExtension(),
       DSBottomNavigationBarThemeExtension(),
+      DSMediaPickerThemeExtension(textTheme: _textTheme),
     ],
   );
 
