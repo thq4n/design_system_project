@@ -354,7 +354,9 @@ class _DSInputState extends State<DSInput> {
 
     if (result != null) {
       return Padding(
-          padding: const EdgeInsets.only(right: 16, left: 4), child: result);
+        padding: const EdgeInsets.only(right: 16, left: 4),
+        child: result,
+      );
     }
     return null;
   }

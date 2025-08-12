@@ -5,7 +5,6 @@ import 'package:flutter/material.dart';
 
 import '../components/ds_loading/ds_loading.dart';
 import '../extensions/extensions.dart';
-import '../utils/helpers.dart';
 
 class ImageZoom extends StatefulWidget {
   final String url;
