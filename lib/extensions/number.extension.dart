@@ -39,7 +39,8 @@ extension DateTimeConverter on int? {
 
 extension CurrencyExt on num? {
   String toAppCurrencyString({bool isWithSymbol = true, String? locale}) {
-    // Note: NumberFormatUtils.getCurrencyNumberFormat() would need to be implemented
+    // Note: NumberFormatUtils.getCurrencyNumberFormat() would
+    // need to be implemented
     // return NumberFormatUtils.getCurrencyNumberFormat(
     //   isWithSymbol: isWithSymbol,
     // ).format(this ?? 0);

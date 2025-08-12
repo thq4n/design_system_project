@@ -8,7 +8,8 @@ extension NullableStringIsNullOrEmptyExtension on String? {
 }
 
 extension StringExt on String {
-  // Email validation - Comprehensive email validation with detailed regex explanation
+  // Email validation - Comprehensive email validation with detailed regex
+  // explanation
   /// Validates email format using comprehensive regex pattern
   ///
   /// Examples of valid emails:
@@ -41,7 +42,8 @@ extension StringExt on String {
             r'|' // OR
             r'(' // Group 6: Standard domain
             r'([a-zA-Z\-0-9]+\.)+' // One or more domain parts separated by dots (like example.co)
-            r'[a-zA-Z]{2,}' // Top-level domain with at least 2 letters (like com, uk, org)
+            r'[a-zA-Z]{2,}' // Top-level domain with at least 2 letters (like
+            // com, uk, org)
             r')' // End Group 6
             r')' // End Group 4
             r'$' // End of string
@@ -52,7 +54,8 @@ extension StringExt on String {
   /// Alias for isEmailValid for backward compatibility
   bool isEmail() => isEmailValid;
 
-  // Password validation - Strong password validation with detailed regex explanation
+  // Password validation - Strong password validation with detailed regex
+  // explanation
   /// Validates strong password with specific requirements
   ///
   /// Requirements:
@@ -74,11 +77,15 @@ extension StringExt on String {
   /// - My@ss (too short)
   bool get isPasswordValid {
     return RegExp(r'^' // Start of string
-            r'(?=.*[a-z])' // Positive lookahead: must contain at least one lowercase letter
-            r'(?=.*[A-Z])' // Positive lookahead: must contain at least one uppercase letter
+            r'(?=.*[a-z])' // Positive lookahead: must contain at least one
+            // lowercase letter
+            r'(?=.*[A-Z])' // Positive lookahead: must contain at least one
+            // uppercase letter
             r'(?=.*\d)' // Positive lookahead: must contain at least one digit
-            r'(?=.*[@$!%*?&])' // Positive lookahead: must contain at least one special character
-            r'[A-Za-z\d@$!%*?&]{8,}' // Main pattern: 8 or more characters from allowed set
+            r'(?=.*[@$!%*?&])' // Positive lookahead: must contain at least one
+            // special character
+            r'[A-Za-z\d@$!%*?&]{8,}' // Main pattern: 8 or more characters from
+            // allowed set
             r'$' // End of string
             )
         .hasMatch(this);
@@ -103,9 +110,11 @@ extension StringExt on String {
   bool get isValidPassword {
     final length = this.length;
     final hasLetter = contains(
-        RegExp(r'[a-zA-Z]')); // Contains at least one letter (a-z or A-Z)
-    final hasNumber =
-        contains(RegExp(r'[0-9]')); // Contains at least one digit (0-9)
+      RegExp(r'[a-zA-Z]'), // Contains at least one letter (a-z or A-Z)
+    );
+    final hasNumber = contains(
+      RegExp(r'[0-9]'), // Contains at least one digit (0-9)
+    );
     final isValid = (length >= 8) && hasLetter && hasNumber;
     return isValid;
   }
@@ -130,12 +139,15 @@ extension StringExt on String {
   /// - St@ff (too short)
   bool get isValidStaffPassword {
     final length = this.length;
-    final hasLowerCase =
-        contains(RegExp(r'[a-z]')); // Contains at least one lowercase letter
-    final hasUpperCase =
-        contains(RegExp(r'[A-Z]')); // Contains at least one uppercase letter
+    final hasLowerCase = contains(
+      RegExp(r'[a-z]'), // Contains at least one lowercase letter
+    );
+    final hasUpperCase = contains(
+      RegExp(r'[A-Z]'), // Contains at least one uppercase letter
+    );
     final hasSpecialChar = contains(
-        RegExp(r'[.,*?!@#\$&*~]')); // Contains at least one special character
+      RegExp(r'[.,*?!@#\$&*~]'), // Contains at least one special character
+    );
     final isValid =
         (length >= 6) && hasLowerCase && hasUpperCase && hasSpecialChar;
     return isValid;
@@ -150,7 +162,8 @@ extension StringExt on String {
   /// - "123456" -> false (no letters at all)
   bool get hasLowerCase {
     return RegExp(r'^' // Start of string
-            r'(?=.*[a-z])' // Positive lookahead: must contain at least one lowercase letter
+            r'(?=.*[a-z])' // Positive lookahead: must contain at least one
+            // lowercase letter
             )
         .hasMatch(this);
   }
@@ -163,7 +176,8 @@ extension StringExt on String {
   /// - "123456" -> false (no letters at all)
   bool get hasUpperCase {
     return RegExp(r'^' // Start of string
-            r'(?=.*[A-Z])' // Positive lookahead: must contain at least one uppercase letter
+            r'(?=.*[A-Z])' // Positive lookahead: must contain at least one
+            // uppercase letter
             )
         .hasMatch(this);
   }
@@ -176,7 +190,8 @@ extension StringExt on String {
   /// - "abc" -> false (no digits)
   bool get hasNumber {
     return RegExp(r'^' // Start of string
-            r'(?=.*?[0-9])' // Positive lookahead: must contain at least one digit (non-greedy)
+            r'(?=.*?[0-9])' // Positive lookahead: must contain at least one
+            // digit (non-greedy)
             )
         .hasMatch(this);
   }
@@ -192,7 +207,8 @@ extension StringExt on String {
   /// - "Pass word" -> false (space is not considered special character)
   bool get hasSpecialCharacter {
     return RegExp(r'^' // Start of string
-            r'(?=.*?[#?!@$%^&*-])' // Positive lookahead: must contain at least one special character (non-greedy)
+            r'(?=.*?[#?!@$%^&*-])' // Positive lookahead: must contain at least
+            // one special character (non-greedy)
             )
         .hasMatch(this);
   }
@@ -205,12 +221,14 @@ extension StringExt on String {
   /// - "P@ss1" -> false (5 characters)
   bool get hasMinLength {
     return RegExp(r'^' // Start of string
-            r'(?=.{8,})' // Positive lookahead: must be at least 8 characters long
+            r'(?=.{8,})' // Positive lookahead: must be at least 8 characters
+            // long
             )
         .hasMatch(this);
   }
 
-  // Phone number validation - Vietnamese phone number validation with detailed regex explanation
+  // Phone number validation - Vietnamese phone number validation with detailed
+  // regex explanation
   /// Validates Vietnamese phone number format
   ///
   /// Valid formats:
@@ -229,7 +247,8 @@ extension StringExt on String {
   /// - 849012345678 (too long)
   bool get isVietnamPhoneNumberValid {
     return RegExp(r'^' // Start of string
-            r'(84|0[3|5|7|8|9])' // Country code (84) OR national format (0 followed by 3,5,7,8,9)
+            r'(84|0[3|5|7|8|9])' // Country code (84) OR national format (0
+            // followed by 3,5,7,8,9)
             r'([0-9]{8})' // Exactly 8 digits
             r'$' // End of string
             )
@@ -316,7 +335,8 @@ extension StringExt on String {
         r'[(]{0,1}' // Optional opening parenthesis
         r'[0-9]{1,4}' // 1-4 digits (country code or area code)
         r'[)]{0,1}' // Optional closing parenthesis
-        r'[-\s\./0-9]*' // Optional separators (hyphen, space, dot, slash) and digits
+        r'[-\s\./0-9]*' // Optional separators (hyphen, space, dot, slash) and
+        // digits
         r'$'; // End of string
     final regExp = RegExp(pattern);
 
@@ -358,14 +378,261 @@ extension StringExt on String {
   }
 
   String displayNationalNumber() {
-    // Note: This method uses the formatedPhoneNumberString from string_utils.dart
-    // which is already available through the StringDataHelper extension
+    // Note: This method uses the formatedPhoneNumberString from
+    // string_utils.dart which is already available through the
+    // StringDataHelper extension
     return this;
   }
 
-  // Text formatting - using methods from StringDataHelper extension
+  /// Capitalizes the first character of the string
+  ///
+  /// This method handles edge cases like:
+  /// - Empty strings (returns empty string)
+  /// - Single character strings (returns uppercase)
+  /// - Strings starting with whitespace (preserves whitespace)
+  /// - Strings with special characters or numbers
+  ///
+  /// Examples:
+  /// - "hello" -> "Hello"
+  /// - "world" -> "World"
+  /// - "a" -> "A"
+  /// - "" -> ""
+  /// - " hello" -> " Hello"
+  /// - "123abc" -> "123abc" (no change for numbers)
+  /// - "!test" -> "!test" (no change for special characters)
   String get capitalize {
-    return this[0].toUpperCase() + substring(1);
+    if (isEmpty) {
+      return this;
+    }
+
+    // Find the first alphabetic character
+    int firstAlphaIndex = -1;
+    for (int i = 0; i < length; i++) {
+      if (RegExp(r'[a-zA-Z]').hasMatch(this[i])) {
+        firstAlphaIndex = i;
+        break;
+      }
+    }
+
+    if (firstAlphaIndex == -1) {
+      // No alphabetic characters found, return as is
+      return this;
+    }
+
+    if (firstAlphaIndex == 0) {
+      // First character is alphabetic, capitalize it
+      return this[0].toUpperCase() + substring(1);
+    } else {
+      // First alphabetic character is not at index 0,
+      // capitalize it and preserve
+      // prefix
+      final prefix = substring(0, firstAlphaIndex);
+      final char = this[firstAlphaIndex];
+      final capitalized = char.toUpperCase();
+      final suffix = substring(firstAlphaIndex + 1);
+      final buffer = StringBuffer();
+      final prefixStr = prefix.toString();
+      final capitalizedStr = capitalized.toString();
+      final suffixStr = suffix.toString();
+      buffer
+        ..write(prefixStr)
+        ..write(capitalizedStr)
+        ..write(suffixStr);
+      final result = buffer.toString();
+      return result;
+    }
+  }
+
+  /// Capitalizes the first character and converts the rest to lowercase
+  ///
+  /// This method is useful for normalizing text to title case format
+  ///
+  /// Examples:
+  /// - "hello" -> "Hello"
+  /// - "WORLD" -> "World"
+  /// - "HeLLo WoRLD" -> "Hello world"
+  /// - "a" -> "A"
+  /// - "" -> ""
+  String capitalizeFirst() {
+    if (isEmpty) {
+      return this;
+    }
+    return '${this[0].toUpperCase()}${substring(1).toLowerCase()}';
+  }
+
+  /// Capitalizes the first character of each word in the string
+  ///
+  /// This method uses regex to identify word boundaries and capitalizes
+  /// the first letter of each word while preserving punctuation and spacing
+  ///
+  /// Examples:
+  /// - "hello world" -> "Hello World"
+  /// - "john doe" -> "John Doe"
+  /// - "hello, world!" -> "Hello, World!"
+  /// - "user@example.com" -> "User@Example.Com"
+  /// - "123 abc def" -> "123 Abc Def"
+  String capitalizeFirstOfEach() {
+    return replaceAllMapped(RegExp(r'[^\s.,;!?":/()\[\]{}|\\]+'), (match) {
+      if (match.group(0) == null) {
+        return '';
+      }
+      return '${match.group(0)?.capitalizeFirst()}';
+    });
+  }
+
+  /// Converts the entire string to title case (first letter of each word
+  /// capitalized)
+  ///
+  /// This method splits the string by spaces and capitalizes the first letter
+  /// of each word, then joins them back together
+  ///
+  /// Examples:
+  /// - "hello world" -> "Hello World"
+  /// - "john doe smith" -> "John Doe Smith"
+  /// - "hello" -> "Hello"
+  /// - "" -> ""
+  /// - "a b c" -> "A B C"
+  String toTitleCase() {
+    if (isEmpty) {
+      return this;
+    }
+
+    return split(' ').map((word) {
+      if (word.isEmpty) {
+        return word;
+      }
+      return word[0].toUpperCase() + word.substring(1).toLowerCase();
+    }).join(' ');
+  }
+
+  /// Converts the string to sentence case (first letter capitalized, rest
+  /// lowercase)
+  ///
+  /// This method capitalizes only the first letter of the entire string
+  /// and converts all other letters to lowercase
+  ///
+  /// Examples:
+  /// - "hello world" -> "Hello world"
+  /// - "HELLO WORLD" -> "Hello world"
+  /// - "Hello World" -> "Hello world"
+  /// - "a" -> "A"
+  /// - "" -> ""
+  String toSentenceCase() {
+    if (isEmpty) {
+      return this;
+    }
+    return this[0].toUpperCase() + substring(1).toLowerCase();
+  }
+
+  /// Converts the string to camel case (first word lowercase, subsequent words
+  /// capitalized)
+  ///
+  /// This method removes spaces and capitalizes the first letter of each word
+  /// except the first word
+  ///
+  /// Examples:
+  /// - "hello world" -> "helloWorld"
+  /// - "user name" -> "userName"
+  /// - "first name last name" -> "firstNameLastName"
+  /// - "hello" -> "hello"
+  /// - "" -> ""
+  String toCamelCase() {
+    if (isEmpty) {
+      return this;
+    }
+
+    final words = split(' ').where((word) => word.isNotEmpty).toList();
+    if (words.isEmpty) {
+      return this;
+    }
+
+    final firstWord = words[0].toLowerCase();
+    final buffer = StringBuffer(firstWord);
+    for (int i = 1; i < words.length; i++) {
+      final word = words[i];
+      final firstChar = word[0];
+      final upperFirst = firstChar.toUpperCase();
+      final restPart = word.substring(1);
+      final rest = restPart.toLowerCase();
+      final upperStr = upperFirst.toString();
+      final restStr = rest.toString();
+      buffer
+        ..write(upperStr)
+        ..write(restStr);
+    }
+    return buffer.toString();
+  }
+
+  /// Converts the string to Pascal case (first letter of each word capitalized,
+  /// no spaces)
+  ///
+  /// This method removes spaces and capitalizes the first letter of each word
+  ///
+  /// Examples:
+  /// - "hello world" -> "HelloWorld"
+  /// - "user name" -> "UserName"
+  /// - "first name last name" -> "FirstNameLastName"
+  /// - "hello" -> "Hello"
+  /// - "" -> ""
+  String toPascalCase() {
+    if (isEmpty) {
+      return this;
+    }
+
+    final words = split(' ').where((word) => word.isNotEmpty).toList();
+    if (words.isEmpty) {
+      return this;
+    }
+
+    final buffer = StringBuffer();
+    for (final word in words) {
+      final firstChar = word[0];
+      final upperFirst = firstChar.toUpperCase();
+      final restPart = word.substring(1);
+      final rest = restPart.toLowerCase();
+      final upperStr = upperFirst.toString();
+      final restStr = rest.toString();
+      buffer
+        ..write(upperStr)
+        ..write(restStr);
+    }
+    return buffer.toString();
+  }
+
+  /// Converts the string to snake case (lowercase with underscores)
+  ///
+  /// This method converts spaces to underscores and makes everything lowercase
+  ///
+  /// Examples:
+  /// - "hello world" -> "hello_world"
+  /// - "User Name" -> "user_name"
+  /// - "firstName" -> "firstname"
+  /// - "hello" -> "hello"
+  /// - "" -> ""
+  String toSnakeCase() {
+    if (isEmpty) {
+      return this;
+    }
+    final lower = toLowerCase();
+    return lower.replaceAll(' ', '_');
+  }
+
+  /// Converts the string to kebab case (lowercase with hyphens)
+  ///
+  /// This method converts spaces to hyphens and makes everything lowercase
+  ///
+  /// Examples:
+  /// - "hello world" -> "hello-world"
+  /// - "User Name" -> "user-name"
+  /// - "firstName" -> "firstname"
+  /// - "hello" -> "hello"
+  /// - "" -> ""
+  String toKebabCase() {
+    if (isEmpty) {
+      return this;
+    }
+    final lower = toLowerCase();
+    return lower.replaceAll(' ', '-');
   }
 
   // URL utilities
@@ -421,12 +688,77 @@ extension StringExt on String {
 }
 
 extension PhoneNumberExt on String? {
-  String displayPhoneNumber() {
+  /// Format số điện thoại Việt Nam theo chuẩn: 0xxx xxx xxxx
+  /// Hỗ trợ các định dạng đầu vào:
+  /// - 0123456789
+  /// - +84123456789
+  /// - 84123456789
+  /// - 123456789
+  String get displayPhoneNumber {
     if (isNullOrEmpty) {
       return '';
     }
-    // Note: formatedPhoneNumberString is available from StringDataHelper extension
-    return this!;
+
+    // Loại bỏ tất cả ký tự không phải số
+    String cleanNumber = this!.replaceAll(RegExp(r'[^\d]'), '');
+
+    // Nếu số điện thoại quá ngắn hoặc quá dài, trả về nguyên bản
+    if (cleanNumber.length < 9 || cleanNumber.length > 11) {
+      return this!;
+    }
+
+    // Xử lý các trường hợp khác nhau
+    if (cleanNumber.length == 11) {
+      // Trường hợp: 84123456789 hoặc 01234567890
+      if (cleanNumber.startsWith('84')) {
+        // Loại bỏ mã quốc gia 84 và thêm 0
+        cleanNumber = '0${cleanNumber.substring(2)}';
+      } else if (cleanNumber.startsWith('0')) {
+        // Đã đúng định dạng 0xxxxxxxxx
+        cleanNumber = cleanNumber;
+      } else {
+        return this!;
+      }
+    } else if (cleanNumber.length == 10) {
+      // Trường hợp: 0123456789 (đã đúng)
+      if (!cleanNumber.startsWith('0')) {
+        return this!;
+      }
+    } else if (cleanNumber.length == 9) {
+      // Trường hợp: 123456789 (thiếu số 0 đầu)
+      cleanNumber = '0$cleanNumber';
+    }
+
+    // Kiểm tra lại độ dài sau khi xử lý
+    if (cleanNumber.length != 10 || !cleanNumber.startsWith('0')) {
+      return this!;
+    }
+
+    // Format theo chuẩn Việt Nam: 0xxx xxx xxxx
+    return '''${cleanNumber.substring(0, 4)} ${cleanNumber.substring(4, 7)} ${cleanNumber.substring(7)}''';
+  }
+
+  /// Kiểm tra xem có phải là số điện thoại Việt Nam hợp lệ không
+  bool get isValidVietnamesePhoneNumber {
+    if (isNullOrEmpty) {
+      return false;
+    }
+
+    final String cleanNumber = this!.replaceAll(RegExp(r'[^\d]'), '');
+
+    // Số điện thoại Việt Nam có 10 chữ số, bắt đầu bằng 0
+    if (cleanNumber.length == 10 && cleanNumber.startsWith('0')) {
+      // Kiểm tra các đầu số phổ biến của Việt Nam
+      final List<String> validPrefixes = [
+        '03', '05', '07', '08', '09', // Di động
+        '02', '04', '06', // Cố định
+      ];
+
+      final String prefix = cleanNumber.substring(0, 2);
+      return validPrefixes.contains(prefix);
+    }
+
+    return false;
   }
 }
 
