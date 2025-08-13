@@ -157,7 +157,7 @@ class DSMediaPickerController extends ValueNotifier<List<DSMediaPicked>> {
     List<DSMediaPicked> medias = const [],
     this.onUploadUnstagedDone,
     this.onRemoveMedia,
-    this.allowMultiple = true,
+    this.allowMultiple = false,
     this.genFileName,
     this.onMediaPicked,
   }) : super(medias);
@@ -166,6 +166,9 @@ class DSMediaPickerController extends ValueNotifier<List<DSMediaPicked>> {
 
   bool get isUploading => _uploadUnstagedMediaRequest != 0;
   bool get isProcessing => value.any((e) => e.isProcessing);
+
+  /// Check if multiple selection is allowed based on allowMultiple flag
+  bool get canSelectMultiple => allowMultiple;
 
   void addAll(List<DSMediaPicked> medias) {
     value = [
@@ -305,6 +308,7 @@ class DSMediaPicker extends StatefulWidget {
   final bool autoUpload;
   final String uploadFolder;
   final String saveLocalFolder;
+  final String? title;
 
   const DSMediaPicker({
     super.key,
@@ -316,13 +320,14 @@ class DSMediaPicker extends StatefulWidget {
     this.pickDialogMessage,
     this.mediaType = DSMediaPickerType.photo,
     this.canBeDeleteWhen,
-    this.maxMedia,
+    this.maxMedia = 1,
     this.crossAxisCount = 4,
     this.mediaSource = DSMediaSource.camera,
     this.getFileName,
     this.autoUpload = true,
     this.uploadFolder = 'uploads',
     required this.saveLocalFolder,
+    this.title,
   });
 
   @override
@@ -347,6 +352,11 @@ class _DSMediaPickerState extends DSStateBase<DSMediaPicker> {
         final canAdd =
             widget.maxMedia == null || medias.length < widget.maxMedia!;
 
+        // If maxMedia is 1, use a simple layout instead of GridView
+        if (widget.maxMedia == 1) {
+          return _buildSingleItemLayout(medias, canBeDelete, canAdd);
+        }
+
         return GridView.count(
           physics: const NeverScrollableScrollPhysics(),
           shrinkWrap: true,
@@ -365,6 +375,30 @@ class _DSMediaPickerState extends DSStateBase<DSMediaPicker> {
           ],
         );
       },
+    );
+  }
+
+  Widget _buildSingleItemLayout(
+    List<DSMediaPicked> medias,
+    bool canBeDelete,
+    bool canAdd,
+  ) {
+    final items = <Widget>[];
+
+    // Add existing media items
+    for (final media in medias) {
+      items.add(_buildMedia(media, canBeDelete));
+    }
+
+    // Add empty state if can add more
+    if (canAdd) {
+      items.add(_buildEmptyState());
+    }
+
+    return Wrap(
+      spacing: 20.0,
+      runSpacing: 18.0,
+      children: items,
     );
   }
 
@@ -392,11 +426,25 @@ class _DSMediaPickerState extends DSStateBase<DSMediaPicker> {
               child: Container(
                 alignment: Alignment.center,
                 color: componentTheme.backgroundColor,
-                child: DSImageView(
-                  source: DSAssets.vuesax.addCircleLinear,
-                  width: componentTheme.iconSize,
-                  height: componentTheme.iconSize,
-                  color: componentTheme.iconColor,
+                child: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    DSImageView(
+                      source: DSAssets.vuesax.addCircleLinear,
+                      width: componentTheme.iconSize,
+                      height: componentTheme.iconSize,
+                      color: componentTheme.iconColor,
+                    ),
+                    if (widget.title != null) ...[
+                      const SizedBox(
+                        height: 4,
+                      ),
+                      Text(
+                        widget.title!,
+                        style: componentTheme.textStyle,
+                      ),
+                    ],
+                  ],
                 ),
               ),
             ),
@@ -573,7 +621,7 @@ class _DSMediaPickerState extends DSStateBase<DSMediaPicker> {
           const SizedBox(height: 8),
           Text(
             'Lỗi tải file',
-            style: componentTheme.textStyle.copyWith(
+            style: componentTheme.textStyle?.copyWith(
               fontSize: 12,
               fontWeight: FontWeight.w500,
             ),
@@ -582,7 +630,7 @@ class _DSMediaPickerState extends DSStateBase<DSMediaPicker> {
             const SizedBox(height: 4),
             Text(
               media.errorMessage!,
-              style: componentTheme.textStyle.copyWith(
+              style: componentTheme.textStyle?.copyWith(
                 fontSize: 10,
               ),
               textAlign: TextAlign.center,
@@ -840,7 +888,18 @@ class _DSMediaPickerState extends DSStateBase<DSMediaPicker> {
         }
       }
 
-      final List<XFile> pickedFiles = await _imagePicker.pickMultiImage();
+      List<XFile> pickedFiles;
+
+      // Use single image picker for maxMedia = 1, multi image picker otherwise
+      if (widget.maxMedia == 1) {
+        final XFile? pickedFile = await _imagePicker.pickImage(
+          source: ImageSource.gallery,
+          imageQuality: 80,
+        );
+        pickedFiles = pickedFile != null ? [pickedFile] : [];
+      } else {
+        pickedFiles = await _imagePicker.pickMultiImage();
+      }
 
       if (pickedFiles.isNotEmpty) {
         final files = pickedFiles.map((xFile) => File(xFile.path)).toList();
@@ -913,19 +972,31 @@ class _DSMediaPickerState extends DSStateBase<DSMediaPicker> {
       );
     }).toList();
 
-    // Apply max media limit
-    if (widget.maxMedia != null) {
-      final availableSlots = widget.maxMedia! - widget.controller.value.length;
-      if (availableSlots > 0) {
-        for (final media in newMedias.take(availableSlots)) {
+    // Handle single selection mode
+    if (widget.maxMedia == 1) {
+      // Clear existing media and add only the first new media
+      widget.controller.removeAll(deleteOnDevice: true);
+      if (newMedias.isNotEmpty) {
+        final media = newMedias.first;
+        widget.controller.addAll([media]);
+        widget.onMediaPicked?.call(media);
+      }
+    } else {
+      // Apply max media limit for multiple selection
+      if (widget.maxMedia != null) {
+        final availableSlots =
+            widget.maxMedia! - widget.controller.value.length;
+        if (availableSlots > 0) {
+          for (final media in newMedias.take(availableSlots)) {
+            widget.controller.addAll([media]);
+            widget.onMediaPicked?.call(media);
+          }
+        }
+      } else {
+        for (final media in newMedias) {
           widget.controller.addAll([media]);
           widget.onMediaPicked?.call(media);
         }
-      }
-    } else {
-      for (final media in newMedias) {
-        widget.controller.addAll([media]);
-        widget.onMediaPicked?.call(media);
       }
     }
 

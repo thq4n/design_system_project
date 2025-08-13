@@ -26,13 +26,15 @@ class DSTextStyle extends TextStyle {
     super.decorationThickness,
     super.debugLabel,
     super.shadows,
-    super.color,
+    Color? color,
     super.inherit,
     super.leadingDistribution,
     super.overflow,
     super.package,
     super.wordSpacing,
-  });
+  }) : super(
+          color: color ?? DSColorUsages.text.primary,
+        );
 
   DSTextStyle.fromVariantAndSize(
     DSTextStyleVariant? variant,
@@ -41,6 +43,7 @@ class DSTextStyle extends TextStyle {
           fontWeight: variant?.fontWeight,
           fontSize: size?.dsFontSize.fontSize,
           letterSpacing: size?.dsFontSize.letterSpacing.value,
+          color: DSColorUsages.text.primary,
           // height: size?.dsFontSize.lineHeight.value,
         );
 
@@ -48,6 +51,7 @@ class DSTextStyle extends TextStyle {
       : super(
           fontSize: size.dsFontSize.fontSize,
           letterSpacing: size.dsFontSize.letterSpacing.value,
+          color: DSColorUsages.text.primary,
           // height: size.dsFontSize.lineHeight.value,
         );
 

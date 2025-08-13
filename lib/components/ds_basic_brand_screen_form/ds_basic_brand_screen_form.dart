@@ -432,7 +432,7 @@ class _DSBasicBrandScreenFormState extends DSStateBase<DSBasicBrandScreenForm> {
                   if (screenTheme.showBackButton) ...[
                     widget.backButton ??
                         DSBasicBrandScreenForm.createAppBarActionButton(
-                          icon: DSAssets.vuesax.arrowLeftLinear,
+                          icon: DSAssets.vuesax.arrowLeft2Linear,
                           onPressed: widget.onBack ?? () {},
                         ),
                   ] else ...[

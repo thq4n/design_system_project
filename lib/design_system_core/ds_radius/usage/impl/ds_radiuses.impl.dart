@@ -1,14 +1,17 @@
 part of '../../ds_radius_core.dart';
 
 class DSRadiuses extends _DSRadiuses {
-  static DSRadius get roundedNone => const DSRadiusRoundedNone();
-  static DSRadius get roundedSm => const DSRadiusRoundedSm();
-  static DSRadius get roundedMd => const DSRadiusRoundedMd();
-  static DSRadius get roundedLg => const DSRadiusRoundedLg();
-  static DSRadius get roundedXL => const DSRadiusRoundedXL();
-  static DSRadius get rounded2XL => const DSRadiusRounded2XL();
-  static DSRadius get rounded3XL => const DSRadiusRounded3XL();
-  static DSRadius get rounded4XL => const DSRadiusRounded4XL();
-  static DSRadius get rounded5XL => const DSRadiusRounded5XL();
-  static DSRadius get roundedFull => const DSRadiusRoundedFull();
+  DSRadiuses._();
+
+  static DSRadius get radiusNone => const _DSRadiusRoundedNone();
+  static DSRadius get radiusXxs => const _DSRadiusRoundedXxs();
+  static DSRadius get radiusXs => const _DSRadiusRoundedXs();
+  static DSRadius get radiusSm => const _DSRadiusRoundedSm();
+  static DSRadius get radiusMd => const _DSRadiusRoundedMd();
+  static DSRadius get radiusLg => const _DSRadiusRoundedLg();
+  static DSRadius get radiusXl => const _DSRadiusRoundedXL();
+  static DSRadius get radius2xl => const _DSRadiusRounded2XL();
+  static DSRadius get radius3xl => const _DSRadiusRounded3XL();
+  static DSRadius get radius4xl => const _DSRadiusRounded4XL();
+  static DSRadius get radiusFull => const _DSRadiusRoundedFull();
 }

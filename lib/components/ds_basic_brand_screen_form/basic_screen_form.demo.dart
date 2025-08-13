@@ -114,7 +114,7 @@ class _BasicScreenFormDemoState extends DSStateBase<BasicScreenFormDemo> {
           () => DSBasicScreenForm(
             title: 'Custom Colors',
             appbarColor: DSColorUsages.background.brandSecondary,
-            bgColor: DSColorUsages.background.primary,
+            backgroundColor: DSColorUsages.background.primary,
             child: const Center(
               child: Text('Custom colored form'),
             ),

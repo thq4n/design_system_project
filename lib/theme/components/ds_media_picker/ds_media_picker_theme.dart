@@ -5,7 +5,7 @@ class DSMediaPickerTheme {
   final DSColor borderColor;
   final DSColor iconColor;
   final DSColor textColor;
-  final TextStyle textStyle;
+  final TextStyle? textStyle;
   final double iconSize;
   final double mediaPickSize;
   final double dashLength;
@@ -17,7 +17,7 @@ class DSMediaPickerTheme {
     required this.borderColor,
     required this.iconColor,
     required this.textColor,
-    required this.textStyle,
+    this.textStyle,
     required this.iconSize,
     required this.mediaPickSize,
     required this.dashLength,

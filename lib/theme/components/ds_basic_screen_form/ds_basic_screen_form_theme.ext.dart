@@ -8,7 +8,7 @@ class DSBasicScreenFormThemeExtension
         titleStyle: textTheme.lg?.semibold,
         appbarColor: DSColorUsages.background.primary,
         appbarForegroundColor: DSColorUsages.text.primary,
-        backgroundColor: DSColorUsages.background.primary,
+        backgroundColor: DSColorUsages.background.scaffoldBackground,
         enableBlur: true,
         maxBlurOpacity: 0.7,
       );

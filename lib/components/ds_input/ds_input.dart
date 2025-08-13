@@ -1,15 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
-import '../../constants/constants.dart';
-import '../../design_system_core/ds_color_usage/ds_color_usage_core.dart';
-import '../../extensions/extensions.dart';
-import '../../gen/assets.gen.dart';
-import '../../theme/ds_theme.dart';
-import '../../utils/object_utils.dart';
-
-import '../../widgets/widgets.dart';
-import '../ds_image_view/ds_image_view.dart';
+import '../../design_system_project.dart';
 
 part 'controller/ds_input.controller.dart';
 
@@ -163,6 +155,30 @@ class _DSInputState extends State<DSInput> {
           maxLength: widget.maxLength,
           autofillHints: widget.autofillHints,
           decoration: InputDecoration(
+            alignLabelWithHint: true,
+            // counter: widget.maxLength != null
+            //     ? Container(
+            //         padding: const EdgeInsets.symmetric(
+            //           horizontal: 4,
+            //           vertical: 2,
+            //         ),
+            //         decoration: BoxDecoration(
+            //           color: colors.gray.tint100,
+            //           borderRadius: DSRadiuses.radiusXs.borderRadiusGeometry,
+            //         ),
+            //         child: ValueListenableBuilder(
+            //           valueListenable: _controller!,
+            //           builder: (context, value, child) {
+            //             return Text(
+            //               '${value.tdController.text.length}/${widget.maxLength}',
+            //               style: textTheme.xs?.copyWithColor(
+            //                 DSColorUsages.text.tertiary,
+            //               ),
+            //             );
+            //           },
+            //         ),
+            //       )
+            //     : null,
             error: value.validation != null
                 ? RichText(
                     text: TextSpan(

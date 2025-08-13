@@ -33,7 +33,7 @@ class DSBasicScreenForm extends StatefulWidget {
   /// Background color for the entire screen.
   ///
   /// Defaults to [DSColorUsages.background.secondary] if not provided.
-  final Color? bgColor;
+  final Color? backgroundColor;
 
   /// Background color for the app bar.
   ///
@@ -137,6 +137,9 @@ class DSBasicScreenForm extends StatefulWidget {
   /// Optional - only shown if provided.
   final Widget? bottomNavigationBar;
 
+  /// Whether to use safe area, defaults to true
+  final bool? useSafeArea;
+
   /// Creates a modern screen form widget with blur effect.
   ///
   /// All parameters are optional and have sensible defaults based on the design system.
@@ -145,7 +148,7 @@ class DSBasicScreenForm extends StatefulWidget {
     super.key,
     this.title,
     this.child,
-    this.bgColor,
+    this.backgroundColor,
     this.appbarColor,
     this.appbarForegroundColor,
     this.actions = const <Widget>[],
@@ -167,7 +170,54 @@ class DSBasicScreenForm extends StatefulWidget {
     this.floatingActionButtonLocation,
     this.floatingActionButtonAnimator,
     this.bottomNavigationBar,
+    this.useSafeArea = true,
   });
+
+  /// Creates a standardized app bar action button with consistent styling.
+  ///
+  /// This method creates an action button that follows the same design pattern
+  /// as the back button, with proper styling, touch area, and visual feedback.
+  /// The button uses the same styling approach as the back button in this component.
+  ///
+  /// [icon] The icon path to display in the button. Should be a [DSAssets] icon path (e.g., DSAssets.vuesax.searchNormal1Linear).
+  /// [onPressed] Callback function when the button is pressed.
+  /// [iconColor] Optional custom color for the icon. Defaults to the app bar foreground color.
+  /// [iconSize] Optional custom size for the icon. Defaults to 20x20 (same as back button).
+  /// [splashRadius] Optional custom splash radius. Defaults to 20 (same as back button).
+  ///
+  /// Returns a [Widget] that can be added to the actions list.
+  static Widget createAppBarActionButton({
+    required String icon,
+    required VoidCallback onPressed,
+    Color? iconColor,
+    double? iconSize,
+    double? splashRadius,
+  }) {
+    return Builder(
+      builder: (context) {
+        final theme = Theme.of(context);
+        final componentTheme = theme
+            .extension<DSBasicScreenFormThemeExtension>()!
+            .dSBasicScreenFormTheme;
+
+        final effectiveIconColor =
+            iconColor ?? componentTheme.appbarForegroundColor;
+        final effectiveIconSize = iconSize ?? DSIconSizes.size24;
+        final effectiveSplashRadius = splashRadius ?? 20;
+
+        return IconButton(
+          icon: DSImageView(
+            source: icon,
+            height: effectiveIconSize,
+            width: effectiveIconSize,
+            color: effectiveIconColor,
+          ),
+          onPressed: onPressed,
+          splashRadius: effectiveSplashRadius,
+        );
+      },
+    );
+  }
 
   @override
   State<DSBasicScreenForm> createState() => _DSBasicScreenFormState();
@@ -202,7 +252,7 @@ class _DSBasicScreenFormState extends DSStateBase<DSBasicScreenForm> {
     final topPadding = mediaQuery.padding.top;
 
     return Scaffold(
-      backgroundColor: widget.bgColor ?? componentTheme.backgroundColor,
+      backgroundColor: widget.backgroundColor ?? componentTheme.backgroundColor,
       resizeToAvoidBottomInset: widget.resizeToAvoidBottomInset,
       floatingActionButton: widget.floatingActionButton,
       floatingActionButtonLocation: widget.floatingActionButtonLocation,
@@ -266,7 +316,9 @@ class _DSBasicScreenFormState extends DSStateBase<DSBasicScreenForm> {
     final defaultPadding = (widget.padding ?? EdgeInsets.zero).let(
           (it) => it?.copyWith(
             top: topPadding + (it.top),
-            bottom: max(bottomPadding, it.bottom),
+            bottom: widget.useSafeArea == true
+                ? max(bottomPadding, it.bottom)
+                : it.bottom,
           ),
         ) ??
         EdgeInsets.zero;
@@ -348,8 +400,8 @@ class _DSBasicScreenFormState extends DSStateBase<DSBasicScreenForm> {
     return IconButton(
       icon: DSImageView(
         source: DSAssets.vuesax.arrowLeft2Linear,
-        height: DSIconSizes.size20,
-        width: DSIconSizes.size20,
+        height: DSIconSizes.size24,
+        width: DSIconSizes.size24,
         color: componentTheme.appbarForegroundColor,
       ),
       onPressed: _handleBackPress,
@@ -420,6 +472,7 @@ class _DSBasicScreenFormState extends DSStateBase<DSBasicScreenForm> {
     return AppBar(
       backgroundColor: Colors.transparent,
       elevation: 1,
+      actionsPadding: const EdgeInsets.only(right: 4),
       surfaceTintColor: Colors.transparent,
       shadowColor: Colors.transparent,
       scrolledUnderElevation: 0,
@@ -434,10 +487,7 @@ class _DSBasicScreenFormState extends DSStateBase<DSBasicScreenForm> {
   Widget _buildTitle() {
     return Text(
       widget.title ?? '',
-      style: (widget.titleStyle ?? componentTheme.titleStyle)?.copyWith(
-        fontWeight: FontWeight.w600,
-        fontSize: 18,
-      ),
+      style: widget.titleStyle ?? componentTheme.titleStyle,
       maxLines: widget.titleMaxLines ?? 1,
       overflow: TextOverflow.ellipsis,
     );

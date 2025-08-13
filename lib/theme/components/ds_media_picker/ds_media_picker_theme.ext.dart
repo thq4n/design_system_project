@@ -10,7 +10,7 @@ class DSMediaPickerThemeExtension
   DSColor get backgroundColor => DSColorUsages.background.primary;
 
   // Border color
-  DSColor get borderColor => DSColorUsages.border.brand;
+  DSColor get borderColor => DSColorUsages.border.primary;
 
   // Icon color
   DSColor get iconColor => DSColorUsages.icon.brand;
@@ -19,11 +19,7 @@ class DSMediaPickerThemeExtension
   DSColor get textColor => DSColorUsages.text.primary;
 
   // Text style
-  TextStyle get textStyle =>
-      textTheme.bodyMedium?.copyWith(
-        color: DSColorUsages.text.primary,
-      ) ??
-      const TextStyle();
+  TextStyle? get textStyle => textTheme.sm?.medium;
 
   // Icon size
   final double iconSize = DSIconSizes.size24;

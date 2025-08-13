@@ -1,5 +1,8 @@
 part of '../../ds_radius_core.dart';
 
-class DSRadiusRoundedNone extends DSRadius {
-  const DSRadiusRoundedNone() : super.circular(0);
+class _DSRadiusRoundedNone extends DSRadius {
+  const _DSRadiusRoundedNone() : super.circular(0);
+
+  @override
+  BorderRadiusGeometry? get borderRadiusGeometry => BorderRadius.circular(0);
 }
