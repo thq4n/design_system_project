@@ -1,8 +1,8 @@
 import 'dart:io';
 
+import 'package:design_system_project/components/ds_media_picker/ds_media_picker.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:design_system_project/components/ds_media_picker/ds_media_picker.dart';
 
 void main() {
   group('DSMediaPicker Initial Media Tests', () {
@@ -16,7 +16,8 @@ void main() {
       controller.dispose();
     });
 
-    testWidgets('should initialize with initialMedia when maxMedia = 1', (tester) async {
+    testWidgets('should initialize with initialMedia when maxMedia = 1',
+        (tester) async {
       // Arrange
       final initialMedia = DSMediaPicked.fromUrl(
         key: 'test_media_1',
@@ -43,7 +44,8 @@ void main() {
       expect(controller.value.first.url, 'https://example.com/image.jpg');
     });
 
-    testWidgets('should initialize with initialMedia when maxMedia > 1', (tester) async {
+    testWidgets('should initialize with initialMedia when maxMedia > 1',
+        (tester) async {
       // Arrange
       final initialMedia = DSMediaPicked.fromUrl(
         key: 'test_media_1',
@@ -127,7 +129,8 @@ void main() {
       expect(controller.value.length, 0); // Media đã bị xóa
     });
 
-    testWidgets('should update initialMedia when widget is rebuilt', (tester) async {
+    testWidgets('should update initialMedia when widget is rebuilt',
+        (tester) async {
       // Arrange
       final initialMedia1 = DSMediaPicked.fromUrl(
         key: 'test_media_1',
@@ -176,7 +179,8 @@ void main() {
       expect(controller.value.first.key, 'test_media_2');
     });
 
-    testWidgets('should call onMediaPicked callback when initialMedia is added', (tester) async {
+    testWidgets('should call onMediaPicked callback when initialMedia is added',
+        (tester) async {
       // Arrange
       final initialMedia = DSMediaPicked.fromUrl(
         key: 'test_media_1',

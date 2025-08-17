@@ -403,8 +403,10 @@ class _DSMediaPickerState extends DSStateBase<DSMediaPicker> {
   }
 
   // Fallback values khi không có theme
-  Color get _backgroundColor => _componentTheme?.backgroundColor ?? const Color(0xFFF5F5F5);
-  Color get _borderColor => _componentTheme?.borderColor ?? const Color(0xFFE0E0E0);
+  Color get _backgroundColor =>
+      _componentTheme?.backgroundColor ?? const Color(0xFFF5F5F5);
+  Color get _borderColor =>
+      _componentTheme?.borderColor ?? const Color(0xFFE0E0E0);
   Color get _iconColor => _componentTheme?.iconColor ?? const Color(0xFF757575);
   Color get _textColor => _componentTheme?.textColor ?? const Color(0xFF757575);
   double get _iconSize => _componentTheme?.iconSize ?? 24.0;
@@ -586,16 +588,16 @@ class _DSMediaPickerState extends DSStateBase<DSMediaPicker> {
           _viewImage(media);
         }
       },
-              child: Container(
-          width: _mediaPickSize,
-          height: _mediaPickSize,
-          child: Stack(
-            fit: StackFit.expand,
-            children: [
-              // Background container với border theo trạng thái
-              Container(
-                width: _mediaPickSize,
-                height: _mediaPickSize,
+      child: Container(
+        width: _mediaPickSize,
+        height: _mediaPickSize,
+        child: Stack(
+          fit: StackFit.expand,
+          children: [
+            // Background container với border theo trạng thái
+            Container(
+              width: _mediaPickSize,
+              height: _mediaPickSize,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(borderRadius),
                 border: media.isErrorState
@@ -758,7 +760,7 @@ class _DSMediaPickerState extends DSStateBase<DSMediaPicker> {
       width: _mediaPickSize,
       height: _mediaPickSize,
       decoration: BoxDecoration(
-        color: _backgroundColor.withOpacity(0.1),
+        color: _backgroundColor.withValues(alpha: 0.1),
         borderRadius: BorderRadius.circular(borderRadius),
       ),
       child: Column(
