@@ -15,10 +15,7 @@ class MyApp extends StatelessWidget {
       theme: DSAppTheme.lightTheme,
       home: Scaffold(
         body: Center(
-          child: DSMediaPicker(
-            controller: DSMediaPickerController(),
-            saveLocalFolder: 'uploads',
-          ),
+          child: DSMediaPicker(controller: DSMediaPickerController()),
         ),
       ),
     );

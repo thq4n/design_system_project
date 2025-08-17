@@ -69,7 +69,6 @@ class _MediaPickerTestState extends State<MediaPickerTest> {
               mediaSource: DSMediaSource.camera,
               maxMedia: 5,
               crossAxisCount: 3,
-              saveLocalFolder: 'media_picker_test',
               onMediaPicked: (media) {
                 // print('Single media picked: ${media.key}');
               },
@@ -89,7 +88,6 @@ class _MediaPickerTestState extends State<MediaPickerTest> {
               mediaSource: DSMediaSource.both,
               maxMedia: 3,
               crossAxisCount: 4,
-              saveLocalFolder: 'media_picker_test_both',
               autoUpload: false,
             ),
             const SizedBox(height: 24),
@@ -104,7 +102,6 @@ class _MediaPickerTestState extends State<MediaPickerTest> {
               mediaSource: DSMediaSource.gallery,
               maxMedia: 2,
               crossAxisCount: 2,
-              saveLocalFolder: 'media_picker_test_gallery',
             ),
           ],
         ),

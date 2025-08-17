@@ -11,4 +11,8 @@ extension DSStateBaseExt on DSStateBase {
   void hideKeyBoard() {
     return focusNode.requestFocus(FocusNode());
   }
+
+  void triggerSelectionHaptic() {
+    Gaimon.selection();
+  }
 }

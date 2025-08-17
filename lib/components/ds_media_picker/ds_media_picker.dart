@@ -5,8 +5,6 @@ import 'dart:typed_data';
 import 'package:dotted_border/dotted_border.dart';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
-import 'package:path/path.dart' as path_import;
-import 'package:path_provider/path_provider.dart';
 
 import '../../base/ds_base.dart';
 import '../../extensions/extensions.dart';
@@ -68,6 +66,38 @@ class DSMediaPicked {
   }
 
   String? get fileName => mediaFile?.path.split('/').last;
+
+  /// Tạo DSMediaPicked từ URL (cho media từ server)
+  factory DSMediaPicked.fromUrl({
+    required String key,
+    required String url,
+    String? mimetype,
+    int? fileSize,
+  }) {
+    return DSMediaPicked(
+      key: key,
+      url: url,
+      mimetype: mimetype,
+      state: DSMediaState.complete,
+      fileSize: fileSize,
+    );
+  }
+
+  /// Tạo DSMediaPicked từ File (cho media từ device)
+  factory DSMediaPicked.fromFile({
+    required String key,
+    required File file,
+    String? mimetype,
+    int? fileSize,
+  }) {
+    return DSMediaPicked(
+      key: key,
+      mediaFile: file,
+      mimetype: mimetype,
+      state: DSMediaState.complete,
+      fileSize: fileSize,
+    );
+  }
 
   // Helper methods cho trạng thái
   bool get isBaseState => state == DSMediaState.base;
@@ -152,6 +182,29 @@ class DSMediaPickerController extends ValueNotifier<List<DSMediaPicked>> {
 
   /// Call when gen file name
   String Function(DSMediaPicked pickedMedia)? genFileName;
+
+  /// Set initial media programmatically
+  void setInitialMedia(DSMediaPicked? media) {
+    if (media != null && !media.isEmpty) {
+      // Xử lý đặc biệt cho trường hợp maxMedia = 1
+      if (allowMultiple == false || value.length == 1) {
+        // Xóa tất cả media hiện tại và thêm media mới
+        removeAll(deleteOnDevice: true);
+        addAll([media]);
+      } else {
+        // Kiểm tra xem media đã có trong controller chưa
+        final existingMedia =
+            value.where((existing) => existing.key == media.key).toList();
+
+        if (existingMedia.isEmpty) {
+          addAll([media]);
+        }
+      }
+    } else {
+      // Nếu media là null, xóa tất cả media hiện tại
+      removeAll(deleteOnDevice: true);
+    }
+  }
 
   DSMediaPickerController({
     List<DSMediaPicked> medias = const [],
@@ -307,8 +360,13 @@ class DSMediaPicker extends StatefulWidget {
   final String? Function(File file)? getFileName;
   final bool autoUpload;
   final String uploadFolder;
-  final String saveLocalFolder;
   final String? title;
+  final bool showFileInfo;
+
+  /// Media ban đầu được hiển thị khi component được khởi tạo
+  /// Nếu maxMedia = 1, initialMedia sẽ thay thế media hiện tại
+  /// Nếu maxMedia > 1, initialMedia sẽ được thêm vào danh sách hiện tại
+  final DSMediaPicked? initialMedia;
 
   const DSMediaPicker({
     super.key,
@@ -326,8 +384,9 @@ class DSMediaPicker extends StatefulWidget {
     this.getFileName,
     this.autoUpload = true,
     this.uploadFolder = 'uploads',
-    required this.saveLocalFolder,
     this.title,
+    this.showFileInfo = false,
+    this.initialMedia,
   });
 
   @override
@@ -335,13 +394,78 @@ class DSMediaPicker extends StatefulWidget {
 }
 
 class _DSMediaPickerState extends DSStateBase<DSMediaPicker> {
-  late DSMediaPickerTheme componentTheme =
-      theme.extension<DSMediaPickerThemeExtension>()!.mediaPickerTheme;
+  DSMediaPickerTheme? get _componentTheme {
+    try {
+      return theme.extension<DSMediaPickerThemeExtension>()?.mediaPickerTheme;
+    } catch (e) {
+      return null;
+    }
+  }
+
+  // Fallback values khi không có theme
+  Color get _backgroundColor => _componentTheme?.backgroundColor ?? const Color(0xFFF5F5F5);
+  Color get _borderColor => _componentTheme?.borderColor ?? const Color(0xFFE0E0E0);
+  Color get _iconColor => _componentTheme?.iconColor ?? const Color(0xFF757575);
+  Color get _textColor => _componentTheme?.textColor ?? const Color(0xFF757575);
+  double get _iconSize => _componentTheme?.iconSize ?? 24.0;
+  double get _mediaPickSize => _componentTheme?.mediaPickSize ?? 100.0;
+  double get _dashLength => _componentTheme?.dashLength ?? 8.0;
+  double get _dashGap => _componentTheme?.dashGap ?? 4.0;
+  double get _borderWidth => _componentTheme?.borderWidth ?? 1.0;
+  TextStyle? get _textStyle => _componentTheme?.textStyle;
 
   final _emptyState = DSMediaPicked(key: '');
   final _imagePicker = ImagePicker();
 
   double get borderRadius => 8.0; // Fixed border radius
+
+  @override
+  void initState() {
+    super.initState();
+    _initializeMedia();
+  }
+
+  @override
+  void didUpdateWidget(DSMediaPicker oldWidget) {
+    super.didUpdateWidget(oldWidget);
+    // Kiểm tra nếu initialMedia thay đổi
+    if (oldWidget.initialMedia?.key != widget.initialMedia?.key) {
+      _initializeMedia();
+    }
+  }
+
+  /// Khởi tạo media ban đầu nếu có initialMedia
+  void _initializeMedia() {
+    if (widget.initialMedia != null && !widget.initialMedia!.isEmpty) {
+      // Kiểm tra xem initialMedia đã có trong controller chưa
+      final existingMedia = widget.controller.value
+          .where((media) => media.key == widget.initialMedia!.key)
+          .toList();
+
+      if (existingMedia.isEmpty) {
+        // Xử lý đặc biệt cho trường hợp maxMedia = 1
+        if (widget.maxMedia == 1) {
+          // Xóa tất cả media hiện tại và thêm initialMedia
+          widget.controller.removeAll(deleteOnDevice: true);
+          widget.controller.addAll([widget.initialMedia!]);
+        } else {
+          // Kiểm tra giới hạn maxMedia trước khi thêm
+          if (widget.maxMedia == null ||
+              widget.controller.value.length < widget.maxMedia!) {
+            widget.controller.addAll([widget.initialMedia!]);
+          }
+        }
+
+        // Gọi callback nếu có
+        widget.onMediaPicked?.call(widget.initialMedia!);
+      }
+    } else if (widget.initialMedia == null &&
+        widget.controller.value.isNotEmpty) {
+      // Nếu initialMedia bị xóa (set về null) và controller có media
+      // Xóa tất cả media trong controller
+      widget.controller.removeAll(deleteOnDevice: true);
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -403,49 +527,46 @@ class _DSMediaPickerState extends DSStateBase<DSMediaPicker> {
   }
 
   Widget _buildEmptyState() {
-    return Padding(
-      padding: const EdgeInsets.only(top: 6, right: 6),
-      child: Material(
-        color: componentTheme.backgroundColor,
+    return Material(
+      color: _backgroundColor,
+      borderRadius: BorderRadius.circular(borderRadius),
+      child: InkWell(
+        onTap: _showMediaPickerActionDialog,
         borderRadius: BorderRadius.circular(borderRadius),
-        child: InkWell(
-          onTap: _showMediaPickerActionDialog,
-          borderRadius: BorderRadius.circular(borderRadius),
-          child: Container(
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(borderRadius),
-            ),
-            width: componentTheme.mediaPickSize,
-            height: componentTheme.mediaPickSize,
-            child: DottedBorder(
-              color: componentTheme.borderColor,
-              strokeWidth: componentTheme.borderWidth,
-              borderType: BorderType.RRect,
-              radius: const Radius.circular(8),
-              dashPattern: [componentTheme.dashLength, componentTheme.dashGap],
-              child: Container(
-                alignment: Alignment.center,
-                color: componentTheme.backgroundColor,
-                child: Column(
-                  mainAxisSize: MainAxisSize.min,
-                  children: [
-                    DSImageView(
-                      source: DSAssets.vuesax.addCircleLinear,
-                      width: componentTheme.iconSize,
-                      height: componentTheme.iconSize,
-                      color: componentTheme.iconColor,
+        child: Container(
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(borderRadius),
+          ),
+          width: _mediaPickSize,
+          height: _mediaPickSize,
+          child: DottedBorder(
+            color: _borderColor,
+            strokeWidth: _borderWidth,
+            borderType: BorderType.RRect,
+            radius: const Radius.circular(8),
+            dashPattern: [_dashLength, _dashGap],
+            child: Container(
+              alignment: Alignment.center,
+              color: _backgroundColor,
+              child: Column(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  DSImageView(
+                    source: DSAssets.vuesax.addCircleLinear,
+                    width: _iconSize,
+                    height: _iconSize,
+                    color: _iconColor,
+                  ),
+                  if (widget.title != null) ...[
+                    const SizedBox(
+                      height: 4,
                     ),
-                    if (widget.title != null) ...[
-                      const SizedBox(
-                        height: 4,
-                      ),
-                      Text(
-                        widget.title!,
-                        style: componentTheme.textStyle,
-                      ),
-                    ],
+                    Text(
+                      widget.title!,
+                      style: _textStyle,
+                    ),
                   ],
-                ),
+                ],
               ),
             ),
           ),
@@ -465,46 +586,72 @@ class _DSMediaPickerState extends DSStateBase<DSMediaPicker> {
           _viewImage(media);
         }
       },
-      child: LayoutBuilder(
-        builder: (context, constraints) {
-          return Stack(
+              child: Container(
+          width: _mediaPickSize,
+          height: _mediaPickSize,
+          child: Stack(
             fit: StackFit.expand,
             children: [
               // Background container với border theo trạng thái
               Container(
-                width: componentTheme.mediaPickSize,
-                height: componentTheme.mediaPickSize,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(borderRadius),
-                  border: media.isErrorState
-                      ? Border.all(
-                          color: componentTheme.borderColor,
-                          width: componentTheme.borderWidth,
-                        )
-                      : null,
+                width: _mediaPickSize,
+                height: _mediaPickSize,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(borderRadius),
+                border: media.isErrorState
+                    ? Border.all(
+                        color: _borderColor,
+                        width: _borderWidth,
+                      )
+                    : null,
+              ),
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(borderRadius),
+                child: _buildMediaContent(
+                  media,
+                  BoxConstraints(
+                    maxWidth: _mediaPickSize,
+                    maxHeight: _mediaPickSize,
+                  ),
                 ),
-                child: ClipRRect(
-                  borderRadius: BorderRadius.circular(borderRadius),
-                  child: _buildMediaContent(media, constraints),
+              ),
+            ),
+
+            // Progress overlay cho trạng thái inProgress
+            if (media.isInProgressState)
+              _buildProgressOverlay(
+                media,
+                BoxConstraints(
+                  maxWidth: _mediaPickSize,
+                  maxHeight: _mediaPickSize,
                 ),
               ),
 
-              // Progress overlay cho trạng thái inProgress
-              if (media.isInProgressState)
-                _buildProgressOverlay(media, constraints),
+            // Error overlay cho trạng thái error
+            if (media.isErrorState)
+              _buildErrorOverlay(
+                media,
+                BoxConstraints(
+                  maxWidth: _mediaPickSize,
+                  maxHeight: _mediaPickSize,
+                ),
+              ),
 
-              // Error overlay cho trạng thái error
-              if (media.isErrorState) _buildErrorOverlay(media, constraints),
+            // Delete button cho các trạng thái có thể xóa
+            if (canBeDelete && !media.isViewState && !media.isBaseState)
+              _buildDeleteButton(media),
 
-              // Delete button cho các trạng thái có thể xóa
-              if (canBeDelete && !media.isViewState && !media.isBaseState)
-                _buildDeleteButton(media),
-
-              // File info overlay
-              if (!media.isBaseState) _buildFileInfoOverlay(media, constraints),
-            ],
-          );
-        },
+            // File info overlay
+            if (!media.isBaseState && widget.showFileInfo)
+              _buildFileInfoOverlay(
+                media,
+                BoxConstraints(
+                  maxWidth: _mediaPickSize,
+                  maxHeight: _mediaPickSize,
+                ),
+              ),
+          ],
+        ),
       ),
     );
   }
@@ -569,6 +716,8 @@ class _DSMediaPickerState extends DSStateBase<DSMediaPicker> {
     BoxConstraints constraints,
   ) {
     return Container(
+      width: _mediaPickSize,
+      height: _mediaPickSize,
       decoration: BoxDecoration(
         color: Colors.black.withValues(alpha: 0.5),
         borderRadius: BorderRadius.circular(borderRadius),
@@ -606,8 +755,10 @@ class _DSMediaPickerState extends DSStateBase<DSMediaPicker> {
 
   Widget _buildErrorOverlay(DSMediaPicked media, BoxConstraints constraints) {
     return Container(
+      width: _mediaPickSize,
+      height: _mediaPickSize,
       decoration: BoxDecoration(
-        color: componentTheme.backgroundColor.withOpacity(0.1),
+        color: _backgroundColor.withOpacity(0.1),
         borderRadius: BorderRadius.circular(borderRadius),
       ),
       child: Column(
@@ -616,12 +767,12 @@ class _DSMediaPickerState extends DSStateBase<DSMediaPicker> {
           Icon(
             Icons.error_outline,
             size: 32,
-            color: componentTheme.iconColor,
+            color: _iconColor,
           ),
           const SizedBox(height: 8),
           Text(
             'Lỗi tải file',
-            style: componentTheme.textStyle?.copyWith(
+            style: _textStyle?.copyWith(
               fontSize: 12,
               fontWeight: FontWeight.w500,
             ),
@@ -630,7 +781,7 @@ class _DSMediaPickerState extends DSStateBase<DSMediaPicker> {
             const SizedBox(height: 4),
             Text(
               media.errorMessage!,
-              style: componentTheme.textStyle?.copyWith(
+              style: _textStyle?.copyWith(
                 fontSize: 10,
               ),
               textAlign: TextAlign.center,
@@ -654,7 +805,7 @@ class _DSMediaPickerState extends DSStateBase<DSMediaPicker> {
           width: 20,
           height: 20,
           decoration: BoxDecoration(
-            color: componentTheme.iconColor,
+            color: _iconColor,
             borderRadius: BorderRadius.circular(10),
           ),
           child: const Icon(
@@ -705,7 +856,7 @@ class _DSMediaPickerState extends DSStateBase<DSMediaPicker> {
                 media.formattedFileSize,
                 style: TextStyle(
                   color: media.isErrorState
-                      ? componentTheme.textColor
+                      ? _textColor
                       : Colors.white.withValues(alpha: 0.8),
                   fontSize: 9,
                 ),
@@ -950,10 +1101,7 @@ class _DSMediaPickerState extends DSStateBase<DSMediaPicker> {
             1
         : 0;
 
-    // Save files to local storage
-    final savedFiles = await _saveFilesToLocal(files);
-
-    final newMedias = savedFiles
+    final newMedias = files
         .where((e) => e.path.isNotEmpty)
         .toList()
         .asMap()
@@ -1004,34 +1152,6 @@ class _DSMediaPickerState extends DSStateBase<DSMediaPicker> {
       await widget.controller.uploadUnstagedMedias(
         uploadFolder: widget.uploadFolder,
       );
-    }
-  }
-
-  Future<List<File>> _saveFilesToLocal(List<File> files) async {
-    try {
-      final directory = await getApplicationDocumentsDirectory();
-      final path = '${directory.path}/${widget.saveLocalFolder}';
-      final folder = Directory(path);
-
-      if (!await folder.exists()) {
-        await folder.create(recursive: true);
-      }
-
-      final savedFiles = <File>[];
-
-      for (final file in files) {
-        final fileName = widget.getFileName?.call(file) ??
-            '${DateTime.now().millisecondsSinceEpoch}_'
-                '${path_import.basename(file.path)}';
-        final savedPath = '$path/$fileName';
-        final savedFile = await file.copy(savedPath);
-        savedFiles.add(savedFile);
-      }
-
-      return savedFiles;
-    } catch (e) {
-      debugPrint('Error saving files: $e');
-      return files; // Return original files if saving fails
     }
   }
 

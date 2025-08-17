@@ -3,6 +3,7 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 import '../../base/ds_base.dart';
 import '../../constants/constants.dart';
@@ -433,7 +434,10 @@ class _DSBasicBrandScreenFormState extends DSStateBase<DSBasicBrandScreenForm> {
                     widget.backButton ??
                         DSBasicBrandScreenForm.createAppBarActionButton(
                           icon: DSAssets.vuesax.arrowLeft2Linear,
-                          onPressed: widget.onBack ?? () {},
+                          onPressed: widget.onBack ??
+                              () {
+                                context.pop();
+                              },
                         ),
                   ] else ...[
                     const SizedBox(width: 56),

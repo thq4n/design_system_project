@@ -156,29 +156,29 @@ class _DSInputState extends State<DSInput> {
           autofillHints: widget.autofillHints,
           decoration: InputDecoration(
             alignLabelWithHint: true,
-            // counter: widget.maxLength != null
-            //     ? Container(
-            //         padding: const EdgeInsets.symmetric(
-            //           horizontal: 4,
-            //           vertical: 2,
-            //         ),
-            //         decoration: BoxDecoration(
-            //           color: colors.gray.tint100,
-            //           borderRadius: DSRadiuses.radiusXs.borderRadiusGeometry,
-            //         ),
-            //         child: ValueListenableBuilder(
-            //           valueListenable: _controller!,
-            //           builder: (context, value, child) {
-            //             return Text(
-            //               '${value.tdController.text.length}/${widget.maxLength}',
-            //               style: textTheme.xs?.copyWithColor(
-            //                 DSColorUsages.text.tertiary,
-            //               ),
-            //             );
-            //           },
-            //         ),
-            //       )
-            //     : null,
+            counter: widget.maxLength != null
+                ? Container(
+                    padding: const EdgeInsets.symmetric(
+                      horizontal: 4,
+                      vertical: 2,
+                    ),
+                    decoration: BoxDecoration(
+                      color: colors.gray.tint100,
+                      borderRadius: DSRadiuses.radiusXs.borderRadiusGeometry,
+                    ),
+                    child: ValueListenableBuilder<TextEditingValue>(
+                      valueListenable: _controller!.value.tdController,
+                      builder: (context, value, child) {
+                        return Text(
+                          '${value.text.length}/${widget.maxLength}',
+                          style: textTheme.xs?.copyWithColor(
+                            DSColorUsages.text.tertiary,
+                          ),
+                        );
+                      },
+                    ),
+                  )
+                : null,
             error: value.validation != null
                 ? RichText(
                     text: TextSpan(

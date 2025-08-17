@@ -25,7 +25,6 @@ void main() {
             body: DSMediaPicker(
               controller: controller,
               mediaSource: DSMediaSource.camera,
-              saveLocalFolder: 'test',
             ),
           ),
         ),
@@ -43,7 +42,6 @@ void main() {
             body: DSMediaPicker(
               controller: controller,
               mediaSource: DSMediaSource.gallery,
-              saveLocalFolder: 'test',
             ),
           ),
         ),
@@ -61,7 +59,6 @@ void main() {
             body: DSMediaPicker(
               controller: controller,
               mediaSource: DSMediaSource.both,
-              saveLocalFolder: 'test',
             ),
           ),
         ),
@@ -80,7 +77,6 @@ void main() {
               controller: controller,
               mediaType: DSMediaPickerType.photo,
               mediaSource: DSMediaSource.camera,
-              saveLocalFolder: 'test',
             ),
           ),
         ),
@@ -95,7 +91,6 @@ void main() {
               controller: controller,
               mediaType: DSMediaPickerType.video,
               mediaSource: DSMediaSource.gallery,
-              saveLocalFolder: 'test',
             ),
           ),
         ),
@@ -110,7 +105,6 @@ void main() {
               controller: controller,
               mediaType: DSMediaPickerType.both,
               mediaSource: DSMediaSource.both,
-              saveLocalFolder: 'test',
             ),
           ),
         ),

@@ -126,7 +126,6 @@ class _MediaPickerStatesDemoState extends State<MediaPickerStatesDemo> {
               mediaSource: DSMediaSource.both,
               maxMedia: 8,
               crossAxisCount: 4,
-              saveLocalFolder: 'media_picker_states_demo',
               autoUpload: true,
               onMediaPicked: (media) {
                 // print(
@@ -159,7 +158,6 @@ class _MediaPickerStatesDemoState extends State<MediaPickerStatesDemo> {
               mediaSource: DSMediaSource.both,
               maxMedia: 3,
               crossAxisCount: 3,
-              saveLocalFolder: 'media_picker_view_demo',
               autoUpload: false,
             ),
           ],

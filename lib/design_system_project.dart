@@ -1,5 +1,12 @@
 // Core Design System Exports
+
+//Packages
+export 'package:go_router/go_router.dart';
+
+// Base
+export 'base/ds_base.dart';
 export 'components/ds_components.dart';
+
 // Constants
 export 'constants/constants.dart';
 export 'design_system_core/ds_color/ds_colors_core.dart';
@@ -12,16 +19,22 @@ export 'design_system_core/ds_line_height/ds_line_height_core.dart';
 export 'design_system_core/ds_radius/ds_radius_core.dart';
 export 'design_system_core/ds_shadow/ds_shadow_core.dart';
 export 'design_system_core/ds_spacing/ds_spacing_core.dart';
+
 // Extensions
 export 'extensions/extensions.dart';
+
 // Generated Files
 export 'gen/assets.gen.dart';
 export 'gen/fonts.gen.dart';
+
 // Services
 export 'services/services.dart';
+
 // Theme
 export 'theme/ds_theme.dart';
+
 // Utils
 export 'utils/helpers.dart';
+
 // Widgets
 export 'widgets/widgets.dart';
