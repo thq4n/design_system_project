@@ -7,6 +7,7 @@ import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 
 import '../../base/ds_base.dart';
+import '../../design_system_core/ds_color_usage/ds_color_usage_core.dart';
 import '../../extensions/extensions.dart';
 import '../../gen/assets.gen.dart';
 import '../../services/permission/permission_service.dart';
@@ -798,25 +799,23 @@ class _DSMediaPickerState extends DSStateBase<DSMediaPicker> {
 
   Widget _buildDeleteButton(DSMediaPicked media) {
     return Positioned(
-      right: -13,
-      top: -13,
-      child: IconButton(
-        iconSize: 20,
-        padding: EdgeInsets.zero,
-        icon: Container(
-          width: 20,
-          height: 20,
+      top: -2,
+      right: -2,
+      child: GestureDetector(
+        onTap: () => _removeMedia(media),
+        child: Container(
+          padding: const EdgeInsets.all(1),
           decoration: BoxDecoration(
-            color: _iconColor,
-            borderRadius: BorderRadius.circular(10),
+            color: _backgroundColor,
+            shape: BoxShape.circle,
           ),
-          child: const Icon(
-            Icons.close,
-            size: 10,
-            color: Colors.white,
+          child: DSImageView(
+            source: DSAssets.vuesax.closeCircleBold,
+            width: 24,
+            height: 24,
+            color: DSColorUsages.icon.secondary,
           ),
         ),
-        onPressed: () => _removeMedia(media),
       ),
     );
   }
