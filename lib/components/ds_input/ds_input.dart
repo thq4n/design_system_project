@@ -46,6 +46,7 @@ class DSInput extends StatefulWidget {
   final bool isAutoUnfocus;
   final String? initialValue;
   final List<String>? autofillHints;
+  final String? measureUnit;
 
   const DSInput({
     Key? key,
@@ -88,6 +89,7 @@ class DSInput extends StatefulWidget {
     this.isAutoUnfocus = true,
     this.initialValue,
     this.autofillHints,
+    this.measureUnit,
   }) : super(key: key);
 
   @override

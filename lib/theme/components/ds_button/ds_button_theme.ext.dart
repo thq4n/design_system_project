@@ -207,7 +207,7 @@ class DSButtonThemeExtension extends ThemeExtension<DSButtonThemeExtension> {
         ),
       );
 
-  DSButtonTheme getDSPrimaryButtonTheme(DSButtonVariants variant) {
+  DSButtonTheme getDSButtonTheme(DSButtonVariants variant) {
     switch (variant) {
       case DSButtonVariants.primary:
         return dSPrimaryButtonTheme;

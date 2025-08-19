@@ -56,7 +56,7 @@ class _DSButtonState extends DSStateBase<DSButton> {
   @override
   Widget build(BuildContext context) {
     final DSButtonTheme componentTheme =
-        theme.extension<DSButtonThemeExtension>()!.getDSPrimaryButtonTheme(
+        theme.extension<DSButtonThemeExtension>()!.getDSButtonTheme(
               widget.variant,
             );
 

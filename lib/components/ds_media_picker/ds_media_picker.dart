@@ -550,7 +550,10 @@ class _DSMediaPickerState extends DSStateBase<DSMediaPicker> {
             dashPattern: [_dashLength, _dashGap],
             child: Container(
               alignment: Alignment.center,
-              color: _backgroundColor,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(borderRadius),
+                color: _backgroundColor,
+              ),
               child: Column(
                 mainAxisSize: MainAxisSize.min,
                 children: [
@@ -728,10 +731,25 @@ class _DSMediaPickerState extends DSStateBase<DSMediaPicker> {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          const DSLoading(
-            brightness: Brightness.light,
-            radius: 16,
-          ),
+          if (media.uploadProgress != null) ...[
+            const SizedBox(height: 8),
+            Container(
+              width: _mediaPickSize * 0.6,
+              height: 4,
+              decoration: BoxDecoration(
+                color: Colors.white,
+                borderRadius: BorderRadius.circular(2),
+              ),
+              child: LinearProgressIndicator(
+                value: media.uploadProgress,
+                backgroundColor: Colors.transparent,
+                valueColor: AlwaysStoppedAnimation<Color>(
+                  colors.blue.shade500,
+                ),
+                borderRadius: BorderRadius.circular(2),
+              ),
+            ),
+          ],
           const SizedBox(height: 8),
           const Text(
             'Đang tải...',
@@ -741,16 +759,6 @@ class _DSMediaPickerState extends DSStateBase<DSMediaPicker> {
               fontWeight: FontWeight.w500,
             ),
           ),
-          if (media.uploadProgress != null) ...[
-            const SizedBox(height: 4),
-            Text(
-              media.progressPercentage,
-              style: const TextStyle(
-                color: Colors.white,
-                fontSize: 10,
-              ),
-            ),
-          ],
         ],
       ),
     );
