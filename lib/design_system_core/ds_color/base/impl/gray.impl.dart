@@ -4,6 +4,11 @@ class _DSGrayColor extends DSColor {
   const _DSGrayColor([super.value = 0xFF737373]);
 
   @override
+  DSColor get black => const _DSBlueColor(0xFF000000);
+  @override
+  DSColor get white => const _DSBlueColor(0xFFFFFFFF);
+  @override
+  @override
   DSColor get shade950 => const _DSGrayColor(0xFF0a0a0a);
   @override
   DSColor get shade900 => const _DSGrayColor(0xFF171717);

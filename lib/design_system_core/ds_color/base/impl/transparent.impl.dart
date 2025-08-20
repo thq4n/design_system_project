@@ -3,6 +3,11 @@ part of '../../ds_colors_core.dart';
 class _DSTransparentColor extends DSColor {
   const _DSTransparentColor([super.value = 0x00000000]);
 
+  @override
+  DSColor get black => const _DSBlueColor(0xFF000000);
+  @override
+  DSColor get white => const _DSBlueColor(0xFFFFFFFF);
+  @override
   // Black color shades from darkest to lightest
   @override
   DSColor get shade950 => this; // Pure black

@@ -4,6 +4,12 @@ class _DSOtherColor extends DSColor {
   const _DSOtherColor([super.value = 0xFFFFFFFF]);
 
   @override
+  DSColor get black => const _DSBlueColor(0xFF000000);
+
+  @override
+  DSColor get white => const _DSBlueColor(0xFFFFFFFF);
+
+  @override
   DSColor get shade500 => throw UnimplementedError();
 
   @override

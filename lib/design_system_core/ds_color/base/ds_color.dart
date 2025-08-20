@@ -3,6 +3,8 @@ part of '../ds_colors_core.dart';
 abstract class DSColor extends Color {
   const DSColor(super.value);
 
+  DSColor get black;
+
   DSColor get shade950;
   DSColor get shade900;
   DSColor get shade800;
@@ -15,6 +17,8 @@ abstract class DSColor extends Color {
   DSColor get tint200;
   DSColor get tint100;
   DSColor get tint50;
+
+  DSColor get white;
 
   DSColor get primary => shade500;
 
@@ -51,6 +55,8 @@ class _DSColorWrapper extends DSColor {
   const _DSColorWrapper(super.value);
 
   @override
+  DSColor get black => this;
+  @override
   DSColor get shade950 => this;
   @override
   DSColor get shade900 => this;
@@ -72,6 +78,8 @@ class _DSColorWrapper extends DSColor {
   DSColor get tint100 => this;
   @override
   DSColor get tint50 => this;
+  @override
+  DSColor get white => this;
 
   @override
   DSColor withOpacity(double opacity) {
