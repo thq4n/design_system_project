@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import '../constants/constants.dart';
 import '../design_system_core/ds_color/ds_colors_core.dart';
 import '../design_system_core/ds_color_usage/ds_color_usage_core.dart';
+import '../extensions/extensions.dart';
 import '../gen/fonts.gen.dart';
 
 // Base theme components
@@ -32,3 +33,5 @@ part 'components/ds_button/ds_button_theme.dart';
 part 'components/ds_button/ds_button_theme.ext.dart';
 part 'components/ds_input/ds_input_theme.ext.dart';
 part 'components/ds_input/ds_input_theme.dart';
+part 'components/ds_badge_notification/ds_badge_notification_theme.dart';
+part 'components/ds_badge_notification/ds_badge_notification_theme.ext.dart';

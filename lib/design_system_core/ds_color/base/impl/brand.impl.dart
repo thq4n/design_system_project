@@ -5,6 +5,11 @@ class _DSBrandColor extends DSColor {
 
   // Primary Brand Color and its shades
   @override
+  DSColor get black => const _DSBlueColor(0xFF000000);
+  @override
+  DSColor get white => const _DSBlueColor(0xFFFFFFFF);
+  @override
+  @override
   DSColor get shade950 => const _DSBrandColor(0xFF55160C);
   @override
   DSColor get shade900 => const _DSBrandColor(0xFF7A271A);

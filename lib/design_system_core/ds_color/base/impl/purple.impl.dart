@@ -4,6 +4,11 @@ class _DSPurpleColor extends DSColor {
   const _DSPurpleColor([super.value = 0xFFA855F7]);
 
   @override
+  DSColor get black => const _DSBlueColor(0xFF000000);
+  @override
+  DSColor get white => const _DSBlueColor(0xFFFFFFFF);
+  @override
+  @override
   DSColor get shade950 => const _DSPurpleColor(0xFF3B0764);
   @override
   DSColor get shade900 => const _DSPurpleColor(0xFF581C87);

@@ -1,3 +1,4 @@
+export 'ds_badge_notification/ds_badge_notification.dart';
 export 'ds_basic_brand_screen_form/ds_basic_brand_screen_form.dart';
 export 'ds_basic_screen_form/ds_basic_screen_form.dart';
 export 'ds_bottom_navigation_bar/ds_bottom_navigation_bar.dart';

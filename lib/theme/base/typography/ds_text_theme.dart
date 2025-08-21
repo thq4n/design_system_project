@@ -103,7 +103,7 @@ class DSTextStyle extends TextStyle {
     );
   }
 
-  DSTextStyle copyWithColor(DSColor color) {
+  DSTextStyle copyWithColor(DSColor? color) {
     return DSTextStyle.fromTextStyle(copyWith(color: color));
   }
 }

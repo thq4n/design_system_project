@@ -7,7 +7,7 @@ class _DSBackgroundColorUsage extends DSColorUsage {
 
   DSColors get colors => const DSColors();
 
-  DSColor get primary => colors.white.primary;
+  DSColor get primary => colors.gray.white;
   DSColor get secondary => colors.gray.tint100;
   DSColor get disable => colors.gray.tint100;
   DSColor get brandPrimary => colors.brand.shade500;

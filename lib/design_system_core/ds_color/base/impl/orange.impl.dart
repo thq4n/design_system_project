@@ -4,6 +4,11 @@ class _DSOrangeColor extends DSColor {
   const _DSOrangeColor([super.value = 0xFFF44405]);
 
   @override
+  DSColor get black => const _DSBlueColor(0xFF000000);
+  @override
+  DSColor get white => const _DSBlueColor(0xFFFFFFFF);
+  @override
+  @override
   DSColor get shade950 => const _DSOrangeColor(0xFF57130A);
   @override
   DSColor get shade900 => const _DSOrangeColor(0xFF771A0D);
