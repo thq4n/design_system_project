@@ -12,23 +12,19 @@ enum DSBadgeNotificationSize {
       horizontal: 5,
       vertical: 1,
     ),
-    borderRadius: 1000,
     borderWidth: 1,
   ),
 
   md(
     padding: EdgeInsets.symmetric(horizontal: 4),
-    borderRadius: 1000,
     borderWidth: 1,
   ),
   xs(
     padding: EdgeInsets.symmetric(horizontal: 3, vertical: 1),
-    borderRadius: 1000,
     borderWidth: 1,
   );
 
   final EdgeInsets padding;
-  final double borderRadius;
   final double borderWidth;
 
   DSTextStyle? getTextStyle(BuildContext context) {
@@ -43,9 +39,19 @@ enum DSBadgeNotificationSize {
     }
   }
 
+  BorderRadiusGeometry? getBorderRadius() {
+    switch (this) {
+      case DSBadgeNotificationSize.xs:
+        return DSRadiuses.radiusFull.borderRadiusGeometry;
+      case DSBadgeNotificationSize.md:
+        return DSRadiuses.radiusFull.borderRadiusGeometry;
+      case DSBadgeNotificationSize.lg:
+        return DSRadiuses.radiusFull.borderRadiusGeometry;
+    }
+  }
+
   const DSBadgeNotificationSize({
     required this.padding,
-    required this.borderRadius,
     required this.borderWidth,
   });
 }
@@ -61,6 +67,7 @@ class DSBadgeNotificationThemeExtension
     return DSBadgeNotificationStateTheme(
       backgroundColor: colors.brand.shade500,
       textColor: colors.gray.white,
+      borderColor: colors.gray.white,
     );
   }
 
@@ -69,6 +76,7 @@ class DSBadgeNotificationThemeExtension
     return DSBadgeNotificationStateTheme(
       backgroundColor: DSColorUsages.icon.secondary,
       textColor: colors.gray.white,
+      borderColor: colors.gray.white,
     );
   }
 
@@ -76,6 +84,7 @@ class DSBadgeNotificationThemeExtension
       DSBadgeNotificationStateTheme(
         backgroundColor: DSColorUsages.background.primary,
         textColor: DSColorUsages.text.linkRed,
+        borderColor: const DSColors().transparent,
       );
 
   DSBadgeNotificationStateTheme getDSPrimaryBadgeNotificationTheme(

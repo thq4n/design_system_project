@@ -22,6 +22,6 @@ class DSChipTheme {
     required this.textColor,
     required this.iconColor,
     required this.badgeVariant,
-    this.padding = const EdgeInsets.symmetric(horizontal: 11, vertical: 5),
+    this.padding = const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
   });
 }

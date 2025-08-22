@@ -89,7 +89,7 @@ class DSChip extends StatelessWidget {
 
   Widget _buildBadge(DSBadgeNotificationVariants badgeVariant) {
     return Padding(
-      padding: const EdgeInsets.only(left: 4),
+      padding: const EdgeInsets.only(left: 6),
       child: DSBadgeNotification(
         size: DSBadgeNotificationSize.md,
         count: badgeNumber,

@@ -61,9 +61,9 @@ class DSBadgeNotification extends StatelessWidget {
       padding: size.padding,
       decoration: BoxDecoration(
         color: backgroundColor,
-        borderRadius: BorderRadius.circular(size.borderRadius),
+        borderRadius: size.getBorderRadius(),
         border: Border.all(
-          color: context.colors.gray.white,
+          color: componentTheme.borderColor,
           width: size.borderWidth,
         ),
       ),
