@@ -39,16 +39,14 @@ enum DSBadgeNotificationSize {
     }
   }
 
-  BorderRadiusGeometry? getBorderRadius() {
-    switch (this) {
-      case DSBadgeNotificationSize.xs:
-        return DSRadiuses.radiusFull.borderRadiusGeometry;
-      case DSBadgeNotificationSize.md:
-        return DSRadiuses.radiusFull.borderRadiusGeometry;
-      case DSBadgeNotificationSize.lg:
-        return DSRadiuses.radiusFull.borderRadiusGeometry;
-    }
-  }
+  BorderRadiusGeometry? get getBorderRadius => switch (this) {
+        DSBadgeNotificationSize.xs =>
+          DSRadiuses.radiusFull.borderRadiusGeometry,
+        DSBadgeNotificationSize.md =>
+          DSRadiuses.radiusFull.borderRadiusGeometry,
+        DSBadgeNotificationSize.lg =>
+          DSRadiuses.radiusFull.borderRadiusGeometry,
+      };
 
   const DSBadgeNotificationSize({
     required this.padding,
