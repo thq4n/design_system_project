@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../../design_system_project.dart';
 
-class DsChip extends StatelessWidget {
+class DSChip extends StatelessWidget {
   final String label;
   final dynamic prefix;
   final dynamic suffix;
@@ -11,7 +11,7 @@ class DsChip extends StatelessWidget {
   final DSChipStates? state;
   final VoidCallback? onTap;
 
-  const DsChip({
+  const DSChip({
     super.key,
     required this.label,
     this.prefix,
