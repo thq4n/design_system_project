@@ -7,35 +7,36 @@ enum DSBadgeNotificationVariants {
 }
 
 enum DSBadgeNotificationSize {
-  lg(borderRadius: 16, borderWidth: 1),
+  lg(
+    padding: EdgeInsets.symmetric(
+      horizontal: 5,
+      vertical: 1,
+    ),
+  ),
 
   md(
-    borderRadius: 12,
-    borderWidth: 1,
+    padding: EdgeInsets.symmetric(horizontal: 4),
   ),
   xs(
-    borderRadius: 8,
-    borderWidth: 1,
+    padding: EdgeInsets.symmetric(horizontal: 3, vertical: 1),
   );
 
-  final double borderRadius;
-  final double borderWidth;
+  final EdgeInsets padding;
 
-  DSTextStyle? textStyle(BuildContext context) {
+  DSTextStyle? getTextStyle(BuildContext context) {
     final textTheme = context.textTheme;
     switch (this) {
-      case DSBadgeNotificationSize.lg:
-        return textTheme.xxs?.semibold;
-      case DSBadgeNotificationSize.md:
-        return textTheme.xs?.semibold;
       case DSBadgeNotificationSize.xs:
+        return textTheme.base?.medium.custom(fontSize: 8);
+      case DSBadgeNotificationSize.md:
+        return textTheme.xs?.medium;
+      case DSBadgeNotificationSize.lg:
         return textTheme.sm?.semibold;
     }
   }
 
   const DSBadgeNotificationSize({
-    required this.borderRadius,
-    required this.borderWidth,
+    required this.padding,
   });
 }
 
@@ -48,7 +49,6 @@ class DSBadgeNotificationThemeExtension
   DSBadgeNotificationStateTheme get _dSPrimaryBadgeNotificationTheme {
     const colors = DSColors();
     return DSBadgeNotificationStateTheme(
-      borderColor: colors.gray.white,
       backgroundColor: colors.brand.shade500,
       textColor: colors.gray.white,
     );
@@ -57,7 +57,6 @@ class DSBadgeNotificationThemeExtension
   DSBadgeNotificationStateTheme get _dSSecondaryBadgeNotificationTheme {
     const colors = DSColors();
     return DSBadgeNotificationStateTheme(
-      borderColor: colors.gray.white,
       backgroundColor: DSColorUsages.icon.secondary,
       textColor: colors.gray.white,
     );
@@ -65,7 +64,6 @@ class DSBadgeNotificationThemeExtension
 
   DSBadgeNotificationStateTheme get _dSTertiaryBadgeNotificationTheme =>
       DSBadgeNotificationStateTheme(
-        borderColor: DSColorUsages.background.brandPrimary,
         backgroundColor: DSColorUsages.background.primary,
         textColor: DSColorUsages.text.linkRed,
       );

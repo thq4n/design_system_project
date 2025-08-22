@@ -82,6 +82,7 @@ class DSAppTheme {
       DSBottomNavigationBarThemeExtension(),
       DSMediaPickerThemeExtension(textTheme: _textTheme),
       DSBadgeNotificationThemeExtension(textTheme: _textTheme),
+      DSChipThemeExtension(textTheme: _textTheme),
     ],
   );
 

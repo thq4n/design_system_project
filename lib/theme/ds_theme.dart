@@ -35,3 +35,5 @@ part 'components/ds_input/ds_input_theme.ext.dart';
 part 'components/ds_input/ds_input_theme.dart';
 part 'components/ds_badge_notification/ds_badge_notification_theme.dart';
 part 'components/ds_badge_notification/ds_badge_notification_theme.ext.dart';
+part 'components/ds_chip/ds_chip_theme.dart';
+part 'components/ds_chip/ds_chip_theme.ext.dart';
