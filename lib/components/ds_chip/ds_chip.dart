@@ -36,8 +36,11 @@ class DSChip extends StatelessWidget {
         padding: _componentTheme.padding,
         decoration: BoxDecoration(
           color: _componentTheme.backgroundColor,
-          border: Border.all(color: _componentTheme.borderColor),
-          borderRadius: DSRadiuses.radiusFull.borderRadiusGeometry,
+          border: Border.all(
+            color: _componentTheme.borderColor,
+            width: _componentTheme.borderWidth,
+          ),
+          borderRadius: BorderRadius.circular(_componentTheme.borderRadius),
         ),
         child: Row(
           mainAxisSize: MainAxisSize.min,
