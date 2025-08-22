@@ -11,21 +11,21 @@ class DSChipThemeExtension extends ThemeExtension<DSChipThemeExtension> {
       borderColor: DSColorUsages.border.secondary,
       textColor: DSColorUsages.text.primary,
       iconColor: DSColorUsages.icon.primary,
-      badgeVariants: DSBadgeNotificationVariants.secondary,
+      badgeVariant: DSBadgeNotificationVariants.secondary,
     );
     final selectedState = DSChipTheme(
       backgroundColor: DSColorUsages.background.primary,
       borderColor: DSColorUsages.border.brand,
       textColor: DSColorUsages.text.linkRed,
       iconColor: DSColorUsages.icon.brand,
-      badgeVariants: DSBadgeNotificationVariants.primary,
+      badgeVariant: DSBadgeNotificationVariants.primary,
     );
     final disableState = DSChipTheme(
       backgroundColor: DSColorUsages.background.disable,
       borderColor: DSColorUsages.border.secondary,
       textColor: DSColorUsages.text.disable,
       iconColor: DSColorUsages.icon.disable,
-      badgeVariants: DSBadgeNotificationVariants.secondary,
+      badgeVariant: DSBadgeNotificationVariants.secondary,
     );
 
     return switch (state) {
@@ -41,21 +41,21 @@ class DSChipThemeExtension extends ThemeExtension<DSChipThemeExtension> {
       borderColor: DSColorUsages.border.secondary,
       textColor: DSColorUsages.text.primary,
       iconColor: DSColorUsages.icon.primary,
-      badgeVariants: DSBadgeNotificationVariants.secondary,
+      badgeVariant: DSBadgeNotificationVariants.secondary,
     );
     final selectedState = DSChipTheme(
       backgroundColor: DSColorUsages.background.brandSecondary,
       borderColor: DSColorUsages.border.brand,
       textColor: DSColorUsages.text.linkRed,
       iconColor: DSColorUsages.icon.brand,
-      badgeVariants: DSBadgeNotificationVariants.primary,
+      badgeVariant: DSBadgeNotificationVariants.primary,
     );
     final disableState = DSChipTheme(
       backgroundColor: DSColorUsages.background.disable,
       borderColor: DSColorUsages.border.secondary,
       textColor: DSColorUsages.text.disable,
       iconColor: DSColorUsages.icon.disable,
-      badgeVariants: DSBadgeNotificationVariants.secondary,
+      badgeVariant: DSBadgeNotificationVariants.secondary,
     );
 
     return switch (state) {
@@ -71,21 +71,21 @@ class DSChipThemeExtension extends ThemeExtension<DSChipThemeExtension> {
       borderColor: DSColorUsages.border.brand,
       textColor: DSColorUsages.text.white,
       iconColor: DSColorUsages.icon.white,
-      badgeVariants: DSBadgeNotificationVariants.tertiary,
+      badgeVariant: DSBadgeNotificationVariants.tertiary,
     );
     final selectedState = DSChipTheme(
       backgroundColor: const DSColors().orange.shade700,
       borderColor: const DSColors().orange.shade700,
       textColor: DSColorUsages.text.white,
       iconColor: DSColorUsages.icon.white,
-      badgeVariants: DSBadgeNotificationVariants.tertiary,
+      badgeVariant: DSBadgeNotificationVariants.tertiary,
     );
     final disableState = DSChipTheme(
       backgroundColor: const DSColors().brand.tint50,
       borderColor: const DSColors().brand.tint50,
       textColor: const DSColors().brand.tint400,
       iconColor: const DSColors().brand.tint400,
-      badgeVariants: DSBadgeNotificationVariants.primary,
+      badgeVariant: DSBadgeNotificationVariants.primary,
     );
 
     return switch (state) {

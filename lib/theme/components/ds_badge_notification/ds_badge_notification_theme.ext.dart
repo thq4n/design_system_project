@@ -12,16 +12,24 @@ enum DSBadgeNotificationSize {
       horizontal: 5,
       vertical: 1,
     ),
+    borderRadius: 1000,
+    borderWidth: 1,
   ),
 
   md(
     padding: EdgeInsets.symmetric(horizontal: 4),
+    borderRadius: 1000,
+    borderWidth: 1,
   ),
   xs(
     padding: EdgeInsets.symmetric(horizontal: 3, vertical: 1),
+    borderRadius: 1000,
+    borderWidth: 1,
   );
 
   final EdgeInsets padding;
+  final double borderRadius;
+  final double borderWidth;
 
   DSTextStyle? getTextStyle(BuildContext context) {
     final textTheme = context.textTheme;
@@ -37,6 +45,8 @@ enum DSBadgeNotificationSize {
 
   const DSBadgeNotificationSize({
     required this.padding,
+    required this.borderRadius,
+    required this.borderWidth,
   });
 }
 
