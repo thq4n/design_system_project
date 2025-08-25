@@ -64,6 +64,7 @@ class ServiceTemplate extends BaseService {
   //////////////////////////////////////////////////////////////////
 
   /// Example private method
+  // ignore: unused_element
   void _examplePrivateMethod() {
     // TODO: Add your private method implementation here
   }

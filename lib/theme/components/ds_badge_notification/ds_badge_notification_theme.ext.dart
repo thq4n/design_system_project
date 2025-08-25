@@ -39,13 +39,8 @@ enum DSBadgeNotificationSize {
     }
   }
 
-  BorderRadiusGeometry? get getBorderRadius => switch (this) {
-        DSBadgeNotificationSize.xs =>
-          DSRadiuses.radiusFull.borderRadiusGeometry,
-        DSBadgeNotificationSize.md =>
-          DSRadiuses.radiusFull.borderRadiusGeometry,
-        DSBadgeNotificationSize.lg =>
-          DSRadiuses.radiusFull.borderRadiusGeometry,
+  BorderRadiusGeometry? get borderRadius => switch (this) {
+        _ => DSRadiuses.radiusFull.borderRadiusGeometry,
       };
 
   const DSBadgeNotificationSize({
