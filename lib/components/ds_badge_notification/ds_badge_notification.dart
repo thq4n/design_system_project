@@ -2,7 +2,7 @@
 
 import 'package:flutter/material.dart';
 
-import '../../theme/ds_theme.dart';
+import '../../design_system_project.dart';
 
 /// A configuration class for the badge notification component.
 ///
@@ -52,22 +52,27 @@ class DSBadgeNotification extends StatelessWidget {
         );
 
     final backgroundColor = componentTheme.backgroundColor;
-    final borderColor = componentTheme.borderColor;
 
     if (count == null || count == 0) {
       return const SizedBox.shrink();
     }
 
     return Container(
-      padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
+      padding: size.padding,
       decoration: BoxDecoration(
         color: backgroundColor,
-        borderRadius: BorderRadius.circular(size.borderRadius),
-        border: Border.all(color: borderColor, width: size.borderWidth),
+        borderRadius: size.borderRadius,
+        border: Border.all(
+          color: componentTheme.borderColor,
+          width: size.borderWidth,
+        ),
       ),
       child: Text(
         _getDisplayLabel(),
-        style: size.textStyle(context)?.copyWithColor(componentTheme.textColor),
+        style: size
+            .getTextStyle(context)
+            ?.copyWithColor(componentTheme.textColor)
+            .copyWith(height: 0),
         textAlign: TextAlign.center,
       ),
     );

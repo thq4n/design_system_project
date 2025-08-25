@@ -98,13 +98,21 @@ class DSTextStyle extends TextStyle {
       copyWith(
         fontSize: size.dsFontSize.fontSize,
         letterSpacing: size.dsFontSize.letterSpacing.value,
-        // height: size.dsFontSize.lineHeight.value,
+        height: size.dsFontSize.lineHeight.value / size.dsFontSize.fontSize,
       ),
     );
   }
 
   DSTextStyle copyWithColor(DSColor? color) {
     return DSTextStyle.fromTextStyle(copyWith(color: color));
+  }
+
+  DSTextStyle custom({
+    required double fontSize,
+  }) {
+    return DSTextStyle(
+      fontSize: fontSize,
+    );
   }
 }
 

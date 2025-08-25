@@ -8,7 +8,7 @@ class _DSIconColorUsage extends DSColorUsage {
   DSColors get colors => const DSColors();
 
   DSColor get primary => colors.gray.shade700;
-  DSColor get secondary => colors.gray.tint400;
+  DSColor get secondary => colors.gray.shade500;
   DSColor get tertiary => colors.gray.tint400;
   DSColor get brand => colors.brand.shade500;
   DSColor get disable => colors.gray.tint400;

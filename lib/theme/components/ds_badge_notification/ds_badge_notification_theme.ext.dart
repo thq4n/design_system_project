@@ -7,34 +7,44 @@ enum DSBadgeNotificationVariants {
 }
 
 enum DSBadgeNotificationSize {
-  lg(borderRadius: 16, borderWidth: 1),
+  lg(
+    padding: EdgeInsets.symmetric(
+      horizontal: 5,
+      vertical: 1,
+    ),
+    borderWidth: 1,
+  ),
 
   md(
-    borderRadius: 12,
+    padding: EdgeInsets.symmetric(horizontal: 4),
     borderWidth: 1,
   ),
   xs(
-    borderRadius: 8,
+    padding: EdgeInsets.symmetric(horizontal: 3, vertical: 1),
     borderWidth: 1,
   );
 
-  final double borderRadius;
+  final EdgeInsets padding;
   final double borderWidth;
 
-  DSTextStyle? textStyle(BuildContext context) {
+  DSTextStyle? getTextStyle(BuildContext context) {
     final textTheme = context.textTheme;
     switch (this) {
-      case DSBadgeNotificationSize.lg:
-        return textTheme.xxs?.semibold;
-      case DSBadgeNotificationSize.md:
-        return textTheme.xs?.semibold;
       case DSBadgeNotificationSize.xs:
+        return textTheme.base?.medium.custom(fontSize: 8);
+      case DSBadgeNotificationSize.md:
+        return textTheme.xs?.medium;
+      case DSBadgeNotificationSize.lg:
         return textTheme.sm?.semibold;
     }
   }
 
+  BorderRadiusGeometry? get borderRadius => switch (this) {
+        _ => DSRadiuses.radiusFull.borderRadiusGeometry,
+      };
+
   const DSBadgeNotificationSize({
-    required this.borderRadius,
+    required this.padding,
     required this.borderWidth,
   });
 }
@@ -48,26 +58,26 @@ class DSBadgeNotificationThemeExtension
   DSBadgeNotificationStateTheme get _dSPrimaryBadgeNotificationTheme {
     const colors = DSColors();
     return DSBadgeNotificationStateTheme(
-      borderColor: colors.gray.white,
       backgroundColor: colors.brand.shade500,
       textColor: colors.gray.white,
+      borderColor: colors.gray.white,
     );
   }
 
   DSBadgeNotificationStateTheme get _dSSecondaryBadgeNotificationTheme {
     const colors = DSColors();
     return DSBadgeNotificationStateTheme(
-      borderColor: colors.gray.white,
       backgroundColor: DSColorUsages.icon.secondary,
       textColor: colors.gray.white,
+      borderColor: colors.gray.white,
     );
   }
 
   DSBadgeNotificationStateTheme get _dSTertiaryBadgeNotificationTheme =>
       DSBadgeNotificationStateTheme(
-        borderColor: DSColorUsages.background.brandPrimary,
         backgroundColor: DSColorUsages.background.primary,
         textColor: DSColorUsages.text.linkRed,
+        borderColor: const DSColors().transparent,
       );
 
   DSBadgeNotificationStateTheme getDSPrimaryBadgeNotificationTheme(

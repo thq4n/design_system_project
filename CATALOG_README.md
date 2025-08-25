@@ -170,7 +170,7 @@ class YourComponentDemo extends StatelessWidget {
       decoration: BoxDecoration(
         color: Colors.grey[100],
         borderRadius: BorderRadius.circular(8),
-        border: Border.all(color: Colors.grey[300]!),
+        border: Border.all(color: Colors.grey[300]!,),
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
