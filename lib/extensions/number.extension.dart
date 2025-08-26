@@ -47,7 +47,7 @@ extension CurrencyExt on num? {
     final value = this ?? 0;
     final formatted = value.toStringAsFixed(0).replaceAllMapped(
           RegExp(r'(\d{1,3})(?=(\d{3})+(?!\d))'),
-          (Match match) => '${match[1]},',
+          (Match match) => '${match[1]}${UtilsConstants.thousandSeparator}',
         );
     return isWithSymbol ? '$formatted đ' : formatted;
   }
