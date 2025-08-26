@@ -18,6 +18,8 @@ part 'extensions/typography/ds_text_theme.ext.dart';
 part 'extensions/color/ds_color_theme.ext.dart';
 
 // Component Theme
+part 'components/ds_calendar/ds_calendar_theme.dart';
+part 'components/ds_calendar/ds_calendar_theme.ext.dart';
 part 'components/ds_media_picker/ds_media_picker_theme.dart';
 part 'components/ds_media_picker/ds_media_picker_theme.ext.dart';
 part 'components/ds_bottom_navigation_bar/ds_bottom_navigation_bar_theme.dart';

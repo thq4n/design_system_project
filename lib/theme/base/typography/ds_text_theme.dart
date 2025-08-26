@@ -44,7 +44,7 @@ class DSTextStyle extends TextStyle {
           fontSize: size?.dsFontSize.fontSize,
           letterSpacing: size?.dsFontSize.letterSpacing.value,
           color: DSColorUsages.text.primary,
-          // height: size?.dsFontSize.lineHeight.value,
+          height: size?.dsFontSize.lineHeight.value,
         );
 
   DSTextStyle.fromSize(DSTextStyleSize size)
@@ -52,7 +52,7 @@ class DSTextStyle extends TextStyle {
           fontSize: size.dsFontSize.fontSize,
           letterSpacing: size.dsFontSize.letterSpacing.value,
           color: DSColorUsages.text.primary,
-          // height: size.dsFontSize.lineHeight.value,
+          height: size.dsFontSize.lineHeight.value / size.dsFontSize.fontSize,
         );
 
   DSTextStyle.fromTextStyle(TextStyle? textStyle)
