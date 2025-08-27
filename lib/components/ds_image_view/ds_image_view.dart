@@ -151,7 +151,7 @@ class ExtendedNetworkImage extends StatelessWidget {
             }
 
             return Padding(
-              padding: const EdgeInsets.all(8.0),
+              padding: const EdgeInsets.all(24),
               child: DSImageView(
                 source: DSAssets.vuesax.infoCircleBold,
                 width: DSIconSizes.size24,

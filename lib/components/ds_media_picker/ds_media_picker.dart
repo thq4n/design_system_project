@@ -369,6 +369,9 @@ class DSMediaPicker extends StatefulWidget {
   /// Nếu maxMedia > 1, initialMedia sẽ được thêm vào danh sách hiện tại
   final DSMediaPicked? initialMedia;
 
+  /// Cờ chỉ đọc - khi true, component chỉ hiển thị media mà không cho phép thêm/xóa
+  final bool readOnly;
+
   const DSMediaPicker({
     super.key,
     required this.controller,
@@ -388,6 +391,7 @@ class DSMediaPicker extends StatefulWidget {
     this.title,
     this.showFileInfo = false,
     this.initialMedia,
+    this.readOnly = false,
   });
 
   @override
@@ -475,9 +479,13 @@ class _DSMediaPickerState extends DSStateBase<DSMediaPicker> {
     return ValueListenableBuilder<List<DSMediaPicked>>(
       valueListenable: widget.controller,
       builder: (context, medias, snapshot) {
-        final canBeDelete = widget.canBeDeleteWhen?.call(medias) ?? true;
-        final canAdd =
-            widget.maxMedia == null || medias.length < widget.maxMedia!;
+        // Trong chế độ readOnly, không cho phép xóa và thêm mới
+        final canBeDelete = widget.readOnly
+            ? false
+            : (widget.canBeDeleteWhen?.call(medias) ?? true);
+        final canAdd = widget.readOnly
+            ? false
+            : (widget.maxMedia == null || medias.length < widget.maxMedia!);
 
         // If maxMedia is 1, use a simple layout instead of GridView
         if (widget.maxMedia == 1) {
@@ -530,6 +538,11 @@ class _DSMediaPickerState extends DSStateBase<DSMediaPicker> {
   }
 
   Widget _buildEmptyState() {
+    // Trong chế độ readOnly, không hiển thị empty state
+    if (widget.readOnly) {
+      return const SizedBox.shrink();
+    }
+
     return Material(
       color: _backgroundColor,
       borderRadius: BorderRadius.circular(borderRadius),
@@ -584,6 +597,12 @@ class _DSMediaPickerState extends DSStateBase<DSMediaPicker> {
   Widget _buildMedia(DSMediaPicked media, bool canBeDelete) {
     return GestureDetector(
       onTap: () {
+        // Trong chế độ readOnly, chỉ cho phép xem ảnh
+        if (widget.readOnly) {
+          _viewImage(media);
+          return;
+        }
+
         if (media.isViewState) {
           _viewImage(media);
         } else if (widget.onTap != null) {
@@ -643,8 +662,11 @@ class _DSMediaPickerState extends DSStateBase<DSMediaPicker> {
                 ),
               ),
 
-            // Delete button cho các trạng thái có thể xóa
-            if (canBeDelete && !media.isViewState && !media.isBaseState)
+            // Delete button cho các trạng thái có thể xóa (không hiển thị trong readOnly)
+            if (canBeDelete &&
+                !media.isViewState &&
+                !media.isBaseState &&
+                !widget.readOnly)
               _buildDeleteButton(media),
 
             // File info overlay
@@ -877,6 +899,11 @@ class _DSMediaPickerState extends DSStateBase<DSMediaPicker> {
   }
 
   void _removeMedia(DSMediaPicked media) {
+    // Trong chế độ readOnly, không cho phép xóa media
+    if (widget.readOnly) {
+      return;
+    }
+
     widget.controller.remove(media);
     if (widget.onMediaRemoved != null) {
       widget.onMediaRemoved!(media);
@@ -990,6 +1017,11 @@ class _DSMediaPickerState extends DSStateBase<DSMediaPicker> {
   }
 
   Future<void> _showMediaPickerActionDialog() async {
+    // Trong chế độ readOnly, không cho phép chọn media
+    if (widget.readOnly) {
+      return;
+    }
+
     // Kiểm tra quyền trước khi hiển thị dialog
     final hasPermissions = await _checkAndRequestPermissions();
     if (!hasPermissions) {
