@@ -7,3 +7,4 @@ part 'typography/text_style_constants.dart';
 part 'icons/size_constants.dart';
 part 'icons/type_constants.dart';
 part 'utils/utils_constants.dart';
+part 'ui/toast_type_constants.dart';
