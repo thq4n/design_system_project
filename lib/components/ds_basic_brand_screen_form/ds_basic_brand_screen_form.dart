@@ -488,10 +488,10 @@ class _DSBasicBrandScreenFormState extends DSStateBase<DSBasicBrandScreenForm> {
           ),
           if (widget.extentions != null) ...[
             widget.extentions!,
-            const SizedBox(
-              height: 12,
-            ),
           ],
+          const SizedBox(
+            height: 8,
+          ),
         ],
       ),
     );

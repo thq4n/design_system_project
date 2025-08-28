@@ -11,7 +11,7 @@ class AppToastWidget extends StatelessWidget {
     super.key,
     required this.message,
     this.icon,
-    this.toastType = ToastType.info,
+    this.toastType = ToastType.error,
   });
 
   @override

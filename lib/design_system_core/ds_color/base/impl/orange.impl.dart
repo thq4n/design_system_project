@@ -19,15 +19,15 @@ class _DSOrangeColor extends DSColor {
   @override
   DSColor get shade600 => const _DSOrangeColor(0xFFE62E05);
   @override
-  DSColor get shade500 => const _DSOrangeColor(0xFFF44405); // Primary Orange
+  DSColor get shade500 => const _DSOrangeColor(0xFFFF4405); // Primary Orange
   @override
-  DSColor get tint400 => const _DSOrangeColor(0xFFF6926E);
+  DSColor get tint400 => const _DSOrangeColor(0xFFFF692E);
   @override
-  DSColor get tint300 => const _DSOrangeColor(0xFFF9C6B6);
+  DSColor get tint300 => const _DSOrangeColor(0xFFFF9C66);
   @override
-  DSColor get tint200 => const _DSOrangeColor(0xFFFED6AE);
+  DSColor get tint200 => const _DSOrangeColor(0xFFFFD6AE);
   @override
-  DSColor get tint100 => const _DSOrangeColor(0xFFFEE6D5);
+  DSColor get tint100 => const _DSOrangeColor(0xFFFFE6D5);
   @override
   DSColor get tint50 => const _DSOrangeColor(0xFFFFF4ED);
 
