@@ -20,7 +20,7 @@ extension DSStateBaseExt on DSStateBase {
     required String message,
     String? icon,
     ToastType? toastType,
-    double? top,
+    double? top = 85,
     double? left,
     double? right,
     double? bottom,
@@ -31,7 +31,7 @@ extension DSStateBaseExt on DSStateBase {
       child: AppToastWidget(
         message: message,
         icon: icon,
-        toastType: toastType ?? ToastType.info,
+        toastType: toastType ?? ToastType.error,
       ),
       toastDuration: const Duration(seconds: 3),
       positionedToastBuilder: (context, child, gravity) {
