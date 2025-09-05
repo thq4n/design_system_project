@@ -480,12 +480,10 @@ class _DSMediaPickerState extends DSStateBase<DSMediaPicker> {
       valueListenable: widget.controller,
       builder: (context, medias, snapshot) {
         // Trong chế độ readOnly, không cho phép xóa và thêm mới
-        final canBeDelete = widget.readOnly
-            ? false
-            : (widget.canBeDeleteWhen?.call(medias) ?? true);
-        final canAdd = widget.readOnly
-            ? false
-            : (widget.maxMedia == null || medias.length < widget.maxMedia!);
+        final canBeDelete =
+            !widget.readOnly && (widget.canBeDeleteWhen?.call(medias) ?? true);
+        final canAdd = !widget.readOnly &&
+            (widget.maxMedia == null || medias.length < widget.maxMedia!);
 
         // If maxMedia is 1, use a simple layout instead of GridView
         if (widget.maxMedia == 1) {
@@ -662,7 +660,8 @@ class _DSMediaPickerState extends DSStateBase<DSMediaPicker> {
                 ),
               ),
 
-            // Delete button cho các trạng thái có thể xóa (không hiển thị trong readOnly)
+            // Delete button cho các trạng thái có thể xóa
+            // (không hiển thị trong readOnly)
             if (canBeDelete &&
                 !media.isViewState &&
                 !media.isBaseState &&
