@@ -43,6 +43,7 @@ class DSMediaPicked {
   final double? uploadProgress; // 0.0 - 1.0
   final String? errorMessage;
   final int? fileSize; // bytes
+  final Future<String?> Function(File file)? uploadImageToServer;
 
   DSMediaPicked({
     required this.key,
@@ -56,6 +57,7 @@ class DSMediaPicked {
     this.uploadProgress,
     this.errorMessage,
     this.fileSize,
+    this.uploadImageToServer,
   });
 
   bool get isVideo => mimetype?.contains('video') == true;
@@ -74,6 +76,7 @@ class DSMediaPicked {
     required String url,
     String? mimetype,
     int? fileSize,
+    Future<String?> Function(File file)? uploadImageToServer,
   }) {
     return DSMediaPicked(
       key: key,
@@ -81,6 +84,7 @@ class DSMediaPicked {
       mimetype: mimetype,
       state: DSMediaState.complete,
       fileSize: fileSize,
+      uploadImageToServer: uploadImageToServer,
     );
   }
 
@@ -90,6 +94,7 @@ class DSMediaPicked {
     required File file,
     String? mimetype,
     int? fileSize,
+    Future<String?> Function(File file)? uploadImageToServer,
   }) {
     return DSMediaPicked(
       key: key,
@@ -97,6 +102,7 @@ class DSMediaPicked {
       mimetype: mimetype,
       state: DSMediaState.complete,
       fileSize: fileSize,
+      uploadImageToServer: uploadImageToServer,
     );
   }
 
@@ -141,6 +147,7 @@ class DSMediaPicked {
     double? uploadProgress,
     String? errorMessage,
     int? fileSize,
+    Future<String?> Function(File file)? uploadImageToServer,
   }) {
     return DSMediaPicked(
       key: key ?? this.key,
@@ -154,6 +161,7 @@ class DSMediaPicked {
       uploadProgress: uploadProgress ?? this.uploadProgress,
       errorMessage: errorMessage ?? this.errorMessage,
       fileSize: fileSize ?? this.fileSize,
+      uploadImageToServer: uploadImageToServer ?? this.uploadImageToServer,
     );
   }
 
@@ -183,6 +191,14 @@ class DSMediaPickerController extends ValueNotifier<List<DSMediaPicked>> {
 
   /// Call when gen file name
   String Function(DSMediaPicked pickedMedia)? genFileName;
+
+  /// Upload callback function
+  Future<String?> Function(File file)? _uploadImageToServer;
+
+  /// Set upload callback function
+  set setUploadCallback(Future<String?> Function(File file)? callback) {
+    _uploadImageToServer = callback;
+  }
 
   /// Set initial media programmatically
   void setInitialMedia(DSMediaPicked? media) {
@@ -295,6 +311,18 @@ class DSMediaPickerController extends ValueNotifier<List<DSMediaPicked>> {
     String uploadFolder = 'uploads',
   }) async {
     try {
+      // Kiểm tra xem có uploadImageToServer callback không
+      if (_uploadImageToServer == null) {
+        // Nếu không có callback, sử dụng placeholder upload
+        await _simulateUpload(media);
+        return;
+      }
+
+      // Kiểm tra xem có mediaFile không
+      if (media.mediaFile == null) {
+        throw Exception('Không có file để upload');
+      }
+
       // Simulate upload progress
       for (int i = 0; i <= 10; i++) {
         await Future.delayed(const Duration(milliseconds: 100));
@@ -305,18 +333,23 @@ class DSMediaPickerController extends ValueNotifier<List<DSMediaPicked>> {
         );
       }
 
-      // Placeholder for upload service
-      // In real implementation, you would use your upload service
-      final url =
-          'https://example.com/uploaded/${genFileName != null ? genFileName!(media) : _generateFileName()}';
-      _updateMedia(
-        media.copyWith(
-          url: url,
-          isInUploadProgress: false,
-          state: DSMediaState.complete,
-          uploadProgress: 1.0,
-        ),
-      );
+      // Gọi uploadImageToServer callback
+      final url = await _uploadImageToServer!(media.mediaFile!);
+
+      if (url != null && url.isNotEmpty) {
+        // Upload thành công
+        _updateMedia(
+          media.copyWith(
+            url: url,
+            isInUploadProgress: false,
+            state: DSMediaState.complete,
+            uploadProgress: 1.0,
+          ),
+        );
+      } else {
+        // Upload thất bại - không có URL trả về
+        throw Exception('Upload thất bại - không nhận được URL');
+      }
     } catch (e) {
       // Handle error
       debugPrint('Upload error: $e');
@@ -328,6 +361,33 @@ class DSMediaPickerController extends ValueNotifier<List<DSMediaPicked>> {
         ),
       );
     }
+  }
+
+  /// Simulate upload khi không có uploadImageToServer callback
+  Future<void> _simulateUpload(DSMediaPicked media) async {
+    // Simulate upload progress
+    for (int i = 0; i <= 10; i++) {
+      await Future.delayed(const Duration(milliseconds: 100));
+      _updateMedia(
+        media.copyWith(
+          uploadProgress: i / 10.0,
+        ),
+      );
+    }
+
+    // Placeholder for upload service
+    // In real implementation, you would use your upload service
+    final url =
+        'https://example.com/uploaded/${genFileName != null ? genFileName!(media) : _generateFileName()}';
+
+    _updateMedia(
+      media.copyWith(
+        url: url,
+        isInUploadProgress: false,
+        state: DSMediaState.complete,
+        uploadProgress: 1.0,
+      ),
+    );
   }
 
   void _updateMedia(DSMediaPicked media) {
@@ -372,6 +432,9 @@ class DSMediaPicker extends StatefulWidget {
   /// Cờ chỉ đọc - khi true, component chỉ hiển thị media mà không cho phép thêm/xóa
   final bool readOnly;
 
+  /// Upload callback function
+  final Future<String?> Function(File file)? uploadImageToServer;
+
   const DSMediaPicker({
     super.key,
     required this.controller,
@@ -392,6 +455,7 @@ class DSMediaPicker extends StatefulWidget {
     this.showFileInfo = false,
     this.initialMedia,
     this.readOnly = false,
+    this.uploadImageToServer,
   });
 
   @override
@@ -429,6 +493,8 @@ class _DSMediaPickerState extends DSStateBase<DSMediaPicker> {
   @override
   void initState() {
     super.initState();
+    // Set upload callback vào controller
+    widget.controller.setUploadCallback = widget.uploadImageToServer;
     _initializeMedia();
   }
 
@@ -438,6 +504,10 @@ class _DSMediaPickerState extends DSStateBase<DSMediaPicker> {
     // Kiểm tra nếu initialMedia thay đổi
     if (oldWidget.initialMedia?.key != widget.initialMedia?.key) {
       _initializeMedia();
+    }
+    // Kiểm tra nếu uploadImageToServer callback thay đổi
+    if (oldWidget.uploadImageToServer != widget.uploadImageToServer) {
+      widget.controller.setUploadCallback = widget.uploadImageToServer;
     }
   }
 
@@ -503,7 +573,11 @@ class _DSMediaPickerState extends DSStateBase<DSMediaPicker> {
               if (media.isEmpty) {
                 return _buildEmptyState();
               }
-              return _buildMedia(media, canBeDelete);
+              return SizedBox(
+                width: 100,
+                height: 100,
+                child: _buildMedia(media, canBeDelete),
+              );
             }),
           ],
         );
@@ -1157,6 +1231,7 @@ class _DSMediaPickerState extends DSStateBase<DSMediaPicker> {
         state:
             widget.autoUpload ? DSMediaState.inProgress : DSMediaState.complete,
         fileSize: fileSize,
+        uploadImageToServer: widget.uploadImageToServer,
       );
     }).toList();
 
@@ -1241,18 +1316,11 @@ class _DSMediaPickerState extends DSStateBase<DSMediaPicker> {
     if (image.mediaFile == null && image.url.isNullOrEmpty) {
       return;
     }
-    // Implement image viewer
-    await showDialog(
-      context: context,
-      builder: (context) => Dialog(
-        child: Container(
-          width: 300,
-          height: 300,
-          child: image.mediaFile != null
-              ? Image.file(image.mediaFile!)
-              : DSImageView(source: image.url!),
-        ),
-      ),
+
+    await viewImage(
+      imageProvider: image.mediaFile != null
+          ? FileImage(image.mediaFile!)
+          : NetworkImage(image.url!),
     );
   }
 }

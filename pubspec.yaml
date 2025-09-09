@@ -43,6 +43,7 @@ dependencies:
   intl: ^0.20.2
   gaimon: ^1.4.1
   fluttertoast: ^8.2.1
+  photo_view: ^0.15.0
 
   geocoding: ^3.0.0
   
