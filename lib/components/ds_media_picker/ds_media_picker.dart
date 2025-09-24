@@ -435,6 +435,22 @@ class DSMediaPicker extends StatefulWidget {
   /// Upload callback function
   final Future<String?> Function(File file)? uploadImageToServer;
 
+  /// Enable automatic image resizing to FullHD (1920x1080)
+  ///  using image_picker's built-in parameters
+  final bool enableImageResize;
+
+  /// Maximum width for image resizing (default: 1920)
+  /// This is passed to image_picker's maxWidth parameter
+  final int maxImageWidth;
+
+  /// Maximum height for image resizing (default: 1080)
+  /// This is passed to image_picker's maxHeight parameter
+  final int maxImageHeight;
+
+  /// JPEG quality for images (0-100, default: 85)
+  /// This is passed to image_picker's imageQuality parameter
+  final int imageQuality;
+
   const DSMediaPicker({
     super.key,
     required this.controller,
@@ -456,6 +472,10 @@ class DSMediaPicker extends StatefulWidget {
     this.initialMedia,
     this.readOnly = false,
     this.uploadImageToServer,
+    this.enableImageResize = true,
+    this.maxImageWidth = 1920,
+    this.maxImageHeight = 1080,
+    this.imageQuality = 85,
   });
 
   @override
@@ -1159,11 +1179,23 @@ class _DSMediaPickerState extends DSStateBase<DSMediaPicker> {
       if (widget.maxMedia == 1) {
         final XFile? pickedFile = await _imagePicker.pickImage(
           source: ImageSource.gallery,
-          imageQuality: 80,
+          maxWidth:
+              widget.enableImageResize ? widget.maxImageWidth.toDouble() : null,
+          maxHeight: widget.enableImageResize
+              ? widget.maxImageHeight.toDouble()
+              : null,
+          imageQuality: widget.imageQuality,
         );
         pickedFiles = pickedFile != null ? [pickedFile] : [];
       } else {
-        pickedFiles = await _imagePicker.pickMultiImage();
+        pickedFiles = await _imagePicker.pickMultiImage(
+          maxWidth:
+              widget.enableImageResize ? widget.maxImageWidth.toDouble() : null,
+          maxHeight: widget.enableImageResize
+              ? widget.maxImageHeight.toDouble()
+              : null,
+          imageQuality: widget.imageQuality,
+        );
       }
 
       if (pickedFiles.isNotEmpty) {
@@ -1190,7 +1222,11 @@ class _DSMediaPickerState extends DSStateBase<DSMediaPicker> {
 
       final XFile? pickedFile = await _imagePicker.pickImage(
         source: ImageSource.camera,
-        imageQuality: 80,
+        maxWidth:
+            widget.enableImageResize ? widget.maxImageWidth.toDouble() : null,
+        maxHeight:
+            widget.enableImageResize ? widget.maxImageHeight.toDouble() : null,
+        imageQuality: widget.imageQuality,
       );
 
       if (pickedFile != null) {
