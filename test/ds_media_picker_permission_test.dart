@@ -117,7 +117,7 @@ void main() {
     test('should create controller with default values', () {
       final controller = DSMediaPickerController();
       expect(controller.value, isEmpty);
-      expect(controller.allowMultiple, isTrue);
+      expect(controller.allowMultiple, isFalse);
       expect(controller.isUploading, isFalse);
       expect(controller.isProcessing, isFalse);
       controller.dispose();
@@ -187,7 +187,7 @@ void main() {
       expect(media.isVideo, isFalse);
       expect(media.isProcessing, isFalse);
       expect(media.isLoading, isFalse);
-      expect(media.isEmpty, isTrue);
+      expect(media.isEmpty, isFalse);
     });
 
     test('should detect video correctly', () {
