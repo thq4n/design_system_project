@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:pull_to_refresh_flutter3/pull_to_refresh_flutter3.dart';
 
-import '../components/ds_loading/ds_loading.dart';
+import '../design_system_project.dart';
+
+export 'package:pull_to_refresh_flutter3/pull_to_refresh_flutter3.dart';
+export 'package:pull_to_refresh_flutter3/pull_to_refresh_flutter3.dart'
+    show RefreshController;
 
 class SmartRefresherWrapper extends StatelessWidget {
   const SmartRefresherWrapper({
@@ -28,8 +31,8 @@ class SmartRefresherWrapper extends StatelessWidget {
     return SmartRefresher(
       physics: const BouncingScrollPhysics(),
       header: MaterialClassicHeader(
-        backgroundColor: Theme.of(context).primaryColor,
-        color: Theme.of(context).colorScheme.primary,
+        backgroundColor: DSColorUsages.background.primary,
+        color: DSColorUsages.icon.brand,
       ),
       enablePullDown: enablePullDown,
       enablePullUp: enablePullUp,
