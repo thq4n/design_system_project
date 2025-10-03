@@ -12,6 +12,7 @@ A comprehensive media picker widget for Flutter applications that supports photo
 - 🎨 **Customizable UI**: Configurable grid layout and styling
 - 🗑️ **Media Management**: Add, remove, and manage multiple media items
 - 📊 **Progress Tracking**: Visual feedback for upload and processing states
+- 🖼️ **Image Resizing**: Automatic image resizing to FullHD (1920x1080) with quality control
 
 ## Dependencies
 
@@ -20,6 +21,7 @@ Add these dependencies to your `pubspec.yaml`:
 ```yaml
 dependencies:
   image_picker: ^1.0.7
+  image: ^4.1.7
   permission_handler: ^11.3.1
   path_provider: ^2.1.2
   mime: ^1.0.5
@@ -133,6 +135,10 @@ final controller = DSMediaPickerController(
 - `getFileName`: Custom file name generator
 - `pickDialogTitle`: Custom dialog title
 - `pickDialogMessage`: Custom dialog message
+- `enableImageResize`: Enable automatic image resizing to FullHD (default: true)
+- `maxImageWidth`: Maximum width for image resizing (default: 1920)
+- `maxImageHeight`: Maximum height for image resizing (default: 1080)
+- `imageQuality`: JPEG quality for images (0-100, default: 85)
 
 ## Media Types
 
@@ -172,6 +178,63 @@ class DSMediaPicked {
 - `isProcressing`: Check if media is in processing state
 - `isEmpty`: Check if media is empty
 - `fileName`: Get file name
+
+## Image Resizing
+
+The DSMediaPicker includes built-in image resizing functionality that automatically resizes images to FullHD resolution (1920x1080) while maintaining aspect ratio. This helps reduce file sizes and improve app performance.
+
+### Resize Configuration
+
+```dart
+DSMediaPicker(
+  controller: controller,
+  enableImageResize: true,    // Enable/disable resizing
+  maxImageWidth: 1920,        // Maximum width in pixels
+  maxImageHeight: 1080,       // Maximum height in pixels
+  imageQuality: 85,           // JPEG quality (0-100)
+  // ... other properties
+)
+```
+
+### How It Works
+
+- **Automatic Resizing**: When `enableImageResize` is true, images are automatically resized during the pick process
+- **Aspect Ratio Preservation**: The original aspect ratio is maintained during resizing
+- **Quality Control**: You can control the JPEG compression quality (0-100)
+- **Performance**: Uses image_picker's built-in parameters for efficient processing
+- **Fallback**: If resizing fails, the original image is used
+
+### Resize Examples
+
+#### FullHD Resize (Default)
+```dart
+DSMediaPicker(
+  controller: controller,
+  enableImageResize: true,
+  maxImageWidth: 1920,
+  maxImageHeight: 1080,
+  imageQuality: 85,
+)
+```
+
+#### HD Resize
+```dart
+DSMediaPicker(
+  controller: controller,
+  enableImageResize: true,
+  maxImageWidth: 1280,
+  maxImageHeight: 720,
+  imageQuality: 90,
+)
+```
+
+#### No Resize
+```dart
+DSMediaPicker(
+  controller: controller,
+  enableImageResize: false,
+)
+```
 
 ## Examples
 

@@ -15,4 +15,34 @@ extension DSStateBaseExt on DSStateBase {
   void triggerSelectionHaptic() {
     Gaimon.selection();
   }
+
+  void showToast({
+    required String message,
+    String? icon,
+    ToastType? toastType,
+    double? top = 85,
+    double? left,
+    double? right,
+    double? bottom,
+  }) {
+    fToast.removeQueuedCustomToasts();
+    fToast.removeCustomToast();
+    fToast.showToast(
+      child: AppToastWidget(
+        message: message,
+        icon: icon,
+        toastType: toastType ?? ToastType.error,
+      ),
+      toastDuration: const Duration(seconds: 3),
+      positionedToastBuilder: (context, child, gravity) {
+        return Positioned(
+          top: top != null ? max(16, top) : null,
+          left: left,
+          right: right,
+          bottom: bottom,
+          child: child,
+        );
+      },
+    );
+  }
 }

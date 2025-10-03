@@ -37,6 +37,7 @@ dependencies:
   permission_handler: ^11.3.1
   pull_to_refresh_flutter3: ^2.0.1
   image_picker: ^1.0.7
+  image: ^4.1.7
   path_provider: ^2.1.2
   mime: ^1.0.5
   flutter_multi_formatter: ^2.13.8
@@ -44,6 +45,11 @@ dependencies:
   gaimon: ^1.4.1
   date_format: ^2.0.9
   timeago: ^3.7.1
+  fluttertoast: ^8.2.1
+  photo_view: ^0.15.0
+
+  geocoding: ^3.0.0
+  
 
   # Routing
   go_router: ^14.6.1

@@ -8,6 +8,80 @@ import 'package:flutter_svg_provider/flutter_svg_provider.dart' as svg_provider;
 
 import '../../design_system_project.dart';
 
+/// Helper class for creating authentication headers
+class AuthHeadersHelper {
+  /// Creates headers with Bearer token
+  static Map<String, String> createBearerHeaders(String token) {
+    return {
+      'Authorization': 'Bearer $token',
+    };
+  }
+
+  /// Creates headers with custom authorization header
+  static Map<String, String> createAuthHeaders(String authorization) {
+    return {
+      'Authorization': authorization,
+    };
+  }
+
+  /// Creates headers with multiple custom headers
+  static Map<String, String> createCustomHeaders(Map<String, String> headers) {
+    return Map<String, String>.from(headers);
+  }
+}
+
+/// A versatile image widget that supports local assets,
+///  network images, and SVG files.
+///
+/// This widget automatically detects the image type based on the source:
+/// - Network URLs: Uses ExtendedImage with caching and loading states
+/// - SVG files: Uses SvgPicture for vector graphics
+/// - Local assets: Uses Image.asset for regular images
+///
+/// For authenticated network images, use the [headers] parameter to provide
+/// authentication tokens or other required headers.
+///
+/// Example usage:
+/// ```dart
+/// // Basic usage
+/// DSImageView(
+///   source: 'https://example.com/image.jpg',
+///   width: 100,
+///   height: 100,
+/// )
+///
+/// // With authentication headers
+/// DSImageView(
+///   source: 'https://api.example.com/protected-image.jpg',
+///   headers: {
+///     'Authorization': 'Bearer your_token_here',
+///     'X-API-Key': 'your_api_key',
+///   },
+///   width: 100,
+///   height: 100,
+/// )
+///
+/// // Using extension methods for authenticated images
+/// 'https://api.example.com/protected-image.jpg'
+///   .withBearerToken('your_token_here')
+///   .withAuthHeader('Bearer your_token_here')
+///   .withHeaders({'Authorization': 'Bearer your_token_here'})
+///
+/// // With placeholder
+/// DSImageView(
+///   source: 'https://example.com/image.jpg',
+///   placeHolder: 'assets/images/placeholder.png',
+///   width: 100,
+///   height: 100,
+/// )
+///
+/// // Getting token from local storage (in your app)
+/// final token = localDataManager.token?.accessToken;
+/// if (token != null) {
+///   'https://api.example.com/protected-image.jpg'
+///     .withBearerToken(token)
+/// }
+/// ```
 class DSImageView extends StatelessWidget {
   const DSImageView({
     super.key,
@@ -20,17 +94,38 @@ class DSImageView extends StatelessWidget {
     this.placeHolder,
     this.loadingRadius,
     this.package,
+    this.headers,
   });
 
+  /// The image source URL, asset path, or SVG path
   final String source;
+
+  /// The width of the image
   final double? width;
+
+  /// The height of the image
   final double? height;
+
+  /// How the image should be fitted within its bounds
   final BoxFit? fit;
+
+  /// Color filter to apply to the image
   final Color? color;
+
+  /// How the image should be aligned within its bounds
   final Alignment alignment;
+
+  /// Placeholder image to show when the main image fails to load
   final String? placeHolder;
+
+  /// Package name for asset images
   final String? package;
+
+  /// Radius for the loading indicator
   final double? loadingRadius;
+
+  /// HTTP headers to include with network requests (useful for authentication)
+  final Map<String, String>? headers;
 
   @override
   Widget build(BuildContext context) {
@@ -60,6 +155,7 @@ class DSImageView extends StatelessWidget {
         color: color,
         alignment: alignment,
         loadingRadius: loadingRadius,
+        headers: headers,
       );
     }
     if (image.contains('.svg')) {
@@ -86,6 +182,12 @@ class DSImageView extends StatelessWidget {
   }
 }
 
+/// Extended network image widget with support for authentication
+///  headers and custom loading/error states.
+///
+/// This widget wraps ExtendedImage.network
+///  and provides additional functionality
+/// for handling authenticated image requests and custom UI states.
 class ExtendedNetworkImage extends StatelessWidget {
   const ExtendedNetworkImage(
     this.image, {
@@ -101,20 +203,47 @@ class ExtendedNetworkImage extends StatelessWidget {
     this.brightness,
     this.cached = true,
     this.loadingRadius,
+    this.headers,
   });
 
+  /// The network image URL
   final String image;
+
+  /// The width of the image
   final double? width;
+
+  /// The height of the image
   final double? height;
+
+  /// How the image should be fitted within its bounds
   final BoxFit? fit;
+
+  /// Color filter to apply to the image
   final Color? color;
+
+  /// How the image should be aligned within its bounds
   final Alignment alignment;
+
+  /// Placeholder image to show when the main image fails to load
   final String? placeHolder;
+
+  /// Custom error widget builder
   final Widget Function(ExtendedImageState state)? errorBuilder;
+
+  /// Custom loading widget builder
   final Widget Function(ExtendedImageState state)? loadingBuilder;
+
+  /// Brightness for the loading indicator
   final Brightness? brightness;
+
+  /// Whether to cache the image
   final bool cached;
+
+  /// Radius for the loading indicator
   final double? loadingRadius;
+
+  /// HTTP headers to include with network requests (useful for authentication)
+  final Map<String, String>? headers;
 
   @override
   Widget build(BuildContext context) {
@@ -126,6 +255,7 @@ class ExtendedNetworkImage extends StatelessWidget {
       color: color,
       alignment: alignment,
       cache: cached,
+      headers: headers,
       loadStateChanged: (state) {
         switch (state.extendedImageLoadState) {
           case LoadState.loading:
@@ -151,7 +281,7 @@ class ExtendedNetworkImage extends StatelessWidget {
             }
 
             return Padding(
-              padding: const EdgeInsets.all(8.0),
+              padding: const EdgeInsets.all(24),
               child: DSImageView(
                 source: DSAssets.vuesax.infoCircleBold,
                 width: DSIconSizes.size24,
@@ -181,11 +311,36 @@ class ExtendedNetworkImage extends StatelessWidget {
   }
 }
 
+/// Factory class for creating ImageProvider instances
+///  with support for authentication headers.
+///
+/// This factory automatically detects the image
+///  type and creates the appropriate
+/// ImageProvider with optional headers for network requests.
+///
+/// Example usage:
+/// ```dart
+/// // For authenticated images
+/// final provider = ImageViewProviderFactory(
+///   'https://api.example.com/protected-image.jpg',
+///   headers: {
+///     'Authorization': 'Bearer your_token_here',
+///   },
+/// ).provider;
+///
+/// // For regular images
+/// final provider = ImageViewProviderFactory(
+///   'https://example.com/image.jpg',
+/// ).provider;
+/// ```
 class ImageViewProviderFactory {
-  ImageViewProviderFactory(this.source)
+  ImageViewProviderFactory(this.source, {this.headers})
       : provider = source.let((it) {
           if (it?.isUrl ?? false) {
-            return ExtendedNetworkImageProvider(it!);
+            return ExtendedNetworkImageProvider(
+              it!,
+              headers: headers,
+            );
           }
           if (it?.contains('.svg') ?? false) {
             return svg_provider.Svg(it!);
@@ -193,6 +348,12 @@ class ImageViewProviderFactory {
           return AssetImage(it!);
         });
 
+  /// The image source URL, asset path, or SVG path
   final String source;
+
+  /// HTTP headers to include with network requests (useful for authentication)
+  final Map<String, String>? headers;
+
+  /// The created ImageProvider instance
   final ImageProvider provider;
 }

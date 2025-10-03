@@ -316,7 +316,7 @@ class _DSBasicScreenFormState extends DSStateBase<DSBasicScreenForm> {
     final defaultPadding = (widget.padding ?? EdgeInsets.zero).let(
           (it) => it?.copyWith(
             top: topPadding + (it.top),
-            bottom: widget.useSafeArea == true
+            bottom: widget.useSafeArea == true && widget.bottomWidget == null
                 ? max(bottomPadding, it.bottom)
                 : it.bottom,
           ),
