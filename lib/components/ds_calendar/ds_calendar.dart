@@ -16,12 +16,20 @@ class DSCalendar extends StatefulWidget {
   /// Initial selected end date
   final DateTime? initialEndDate;
 
+  /// Min date
+  final DateTime? minDate;
+
+  /// Max date
+  final DateTime? maxDate;
+
   const DSCalendar({
     super.key,
     this.locale = AppLocaleSupportConstants.vi,
     this.onRangeSelected,
     this.initialStartDate,
     this.initialEndDate,
+    this.minDate,
+    this.maxDate,
   });
 
   @override
@@ -29,30 +37,69 @@ class DSCalendar extends StatefulWidget {
 }
 
 class _DSCalendarState extends DSStateBase<DSCalendar> {
-  // Constants
+  // ===========================================================================
+  // CONSTANTS
+  // ===========================================================================
   static const Duration _animationDuration = Duration(milliseconds: 300);
-  static const double _iconSize = 24.0;
-  static const double _iconPadding = 16.0;
-  static const double _daysOfWeekHeight = 40.0;
-  static const double _markerSize = 5.0;
-  static const double _dateDisplayFontSize = 16.0;
   static const int _yearJump = 12;
+  static final DateTime _defaultMinDate = DateTime(1990, 1, 1);
+  static final DateTime _defaultMaxDate = DateTime(2099, 12, 31);
 
-  // Date range constants
-  static final DateTime _firstDay = DateTime(1990, 1, 1);
-  static final DateTime _lastDay = DateTime(2099, 12, 31);
-
-  // State management
+  // ===========================================================================
+  // THEME & STYLING
+  // ===========================================================================
   late DSCalendarTheme componentTheme =
       theme.extension<DSCalendarThemeExtension>()!.dSCalendarTheme;
 
+  // ===========================================================================
+  // STATE MANAGEMENT
+  // ===========================================================================
   final selectedDateNotifier = ValueNotifier<DateTime?>(null);
   final selectedStartDayNotifier = ValueNotifier<DateTime?>(null);
   final selectedEndDayNotifier = ValueNotifier<DateTime?>(null);
   final focusedDayNotifier = ValueNotifier<DateTime?>(DateTime.now());
 
+  // ===========================================================================
+  // CONTROLLERS
+  // ===========================================================================
   late PageController _pageController;
 
+  // ===========================================================================
+  // COMPUTED PROPERTIES
+  // ===========================================================================
+  DateTime get _firstDay {
+    final _minDate = widget.minDate ?? _defaultMinDate;
+    final _initialStart = widget.initialStartDate;
+    final _initialEnd = widget.initialEndDate;
+    DateTime? _candidate = _minDate;
+
+    if (_initialStart != null && _initialStart.isBefore(_candidate)) {
+      _candidate = _initialStart;
+    }
+    if (_initialEnd != null && _initialEnd.isBefore(_candidate)) {
+      _candidate = _initialEnd;
+    }
+    return _candidate;
+  }
+
+  DateTime get _lastDay {
+    final _maxDate = widget.maxDate ?? _defaultMaxDate;
+    final _initialStart = widget.initialStartDate;
+    final _initialEnd = widget.initialEndDate;
+    DateTime? _candidate = _maxDate;
+
+    if (_initialStart != null && _initialStart.isAfter(_candidate)) {
+      _candidate = _initialStart;
+    }
+    if (_initialEnd != null && _initialEnd.isAfter(_candidate)) {
+      _candidate = _initialEnd;
+    }
+    return _candidate;
+  }
+
+  // ===========================================================================
+  // LIFECYCLE METHODS
+  // ===========================================================================
   @override
   void initState() {
     super.initState();
@@ -82,15 +129,17 @@ class _DSCalendarState extends DSStateBase<DSCalendar> {
           children: [
             _buildCalendarHeader(),
             _buildTableCalendar(),
-            const SizedBox(height: 16),
-            _buildDateRangeDisplay(),
           ],
         );
       },
     );
   }
 
-  /// Builds the calendar header with navigation controls
+  // ===========================================================================
+  // UI BUILDING METHODS
+  // ===========================================================================
+
+  /// Builds the calendar header with navigation controls.
   Widget _buildCalendarHeader() {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -124,11 +173,11 @@ class _DSCalendarState extends DSStateBase<DSCalendar> {
     return GestureDetector(
       onTap: onTap,
       child: Padding(
-        padding: const EdgeInsets.all(_iconPadding),
+        padding: EdgeInsets.all(componentTheme.navigationIconPadding),
         child: Icon(
           icon,
-          size: _iconSize,
-          color: DSColorUsages.icon.brand,
+          size: componentTheme.navigationIconSize,
+          color: componentTheme.navigationIconColor,
         ),
       ),
     );
@@ -147,7 +196,7 @@ class _DSCalendarState extends DSStateBase<DSCalendar> {
           final date = DateTime(value.year, value.month, 1);
           return Text(
             date.toLocalmmCommayyyy(),
-            style: textTheme.base?.medium,
+            style: componentTheme.headerTextStyle,
             textAlign: TextAlign.center,
           );
         },
@@ -175,11 +224,11 @@ class _DSCalendarState extends DSStateBase<DSCalendar> {
       rangeStartDay: selectedStartDayNotifier.value,
       rangeEndDay: selectedEndDayNotifier.value,
       rangeSelectionMode: RangeSelectionMode.toggledOn,
-      daysOfWeekHeight: _daysOfWeekHeight,
+      daysOfWeekHeight: componentTheme.dayOfWeekHeight,
       calendarBuilders: _buildCalendarBuilders(),
       onRangeSelected: _onRangeSelected,
       selectedDayPredicate: _isDaySelected,
-      calendarStyle: _buildCalendarStyle(),
+      calendarStyle: componentTheme.calendarStyle,
       eventLoader: _getEventsForDay,
     );
   }
@@ -218,70 +267,9 @@ class _DSCalendarState extends DSStateBase<DSCalendar> {
     );
   }
 
-  /// Builds calendar style
-  CalendarStyle _buildCalendarStyle() {
-    return CalendarStyle(
-      markerSize: _markerSize,
-      outsideDaysVisible: false,
-      markerDecoration: BoxDecoration(
-        color: DSColorUsages.icon.brand,
-        shape: BoxShape.circle,
-      ),
-      todayDecoration: BoxDecoration(
-        color: colors.transparent,
-        shape: BoxShape.circle,
-      ),
-      todayTextStyle:
-          textTheme.base?.regular.copyWith(color: DSColorUsages.text.linkRed) ??
-              const TextStyle(),
-      defaultTextStyle:
-          textTheme.base?.regular.copyWith(color: DSColorUsages.text.primary) ??
-              const TextStyle(),
-      selectedDecoration: BoxDecoration(
-        color: DSColorUsages.background.brandPrimary,
-        shape: BoxShape.circle,
-        border: Border.all(
-          color: colors.gray.white,
-          width: 2,
-        ),
-      ),
-      rangeHighlightColor: DSColorUsages.background.brandSecondary,
-      withinRangeTextStyle:
-          textTheme.base?.regular.copyWith(color: DSColorUsages.text.linkRed) ??
-              const TextStyle(),
-    );
-  }
-
-  /// Builds the date range display
-  Widget _buildDateRangeDisplay() {
-    return ValueListenableBuilder(
-      valueListenable: selectedStartDayNotifier,
-      builder: (context, startDate, child) {
-        return ValueListenableBuilder(
-          valueListenable: selectedEndDayNotifier,
-          builder: (context, endDate, child) {
-            if (startDate == null && endDate == null) {
-              return const SizedBox.shrink();
-            }
-
-            final startText = startDate != null
-                ? '${startDate.day}/${startDate.month}/${startDate.year}'
-                : '';
-            final endText = endDate != null
-                ? '${endDate.day}/${endDate.month}/${endDate.year}'
-                : '';
-
-            return Text(
-              '$startText - $endText',
-              style: const TextStyle(fontSize: _dateDisplayFontSize),
-            );
-          },
-        );
-      },
-    );
-  }
-
-  // Navigation methods
+  // ===========================================================================
+  // NAVIGATION METHODS
+  // ===========================================================================
   void _goToPreviousMonth() {
     _pageController.previousPage(
       duration: _animationDuration,
@@ -312,7 +300,9 @@ class _DSCalendarState extends DSStateBase<DSCalendar> {
     );
   }
 
-  // Event handlers
+  // ===========================================================================
+  // EVENT HANDLERS
+  // ===========================================================================
   void _onRangeSelected(DateTime? start, DateTime? end, DateTime focusedDay) {
     selectedStartDayNotifier.value = start;
     selectedEndDayNotifier.value = end;
