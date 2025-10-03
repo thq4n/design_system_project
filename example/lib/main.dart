@@ -1,8 +1,9 @@
 import 'package:design_system_project/design_system_project.dart';
 import 'package:flutter/material.dart';
+import 'package:intl/date_symbol_data_local.dart';
 
 void main() {
-  runApp(const MyApp());
+  initializeDateFormatting().then((_) => runApp(MyApp()));
 }
 
 class MyApp extends StatelessWidget {
@@ -13,11 +14,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'DS Media Picker Demo',
       theme: DSAppTheme.lightTheme,
-      home: Scaffold(
-        body: Center(
-          child: DSMediaPicker(controller: DSMediaPickerController()),
-        ),
-      ),
+      home: Scaffold(body: SafeArea(child: Center(child: DSCalendar()))),
     );
   }
 }

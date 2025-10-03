@@ -1,6 +1,7 @@
 export 'color_utils.dart';
 export 'context_utils.dart';
 export 'data_checker_utils.dart';
+export 'date_utils.dart';
 export 'duration_utils.dart';
 export 'navigation_bar_utils.dart';
 export 'number_format_utils.dart';

@@ -81,3 +81,258 @@ extension DateOnlyCompare on DateTime {
         .endOfDay;
   }
 }
+
+extension DateUtilsExtention on DateTime {
+  String customFormat(
+    List<String> format, {
+    DateLocale locale = const EnglishDateLocale(),
+  }) {
+    return formatDate(
+      toLocal(),
+      format,
+      locale: locale,
+    );
+  }
+
+  /// **[mm, ' ', yyyy]**
+  ///
+  /// **01 2000**
+  String toLocalmmyyyy() {
+    return formatDate(
+      toLocal(),
+      DateTimeFormat().mmSpaceyyyy,
+    );
+  }
+
+  /// **[dd, '/', mm, '/', yyyy]**
+  ///
+  /// **01/01/2000**
+  String toLocalddmmyyyy() {
+    return formatDate(
+      toLocal(),
+      DateTimeFormat().ddmmyyyy,
+    );
+  }
+
+  /// **[dd, '/', mm, '/', yyyy]**
+  ///
+  /// **01/01/2000**
+  String toddmmyyyy() {
+    return formatDate(
+      this,
+      DateTimeFormat().ddmmyyyy,
+    );
+  }
+
+  /// **[HH, ':', nn, ' - ', dd, '/', mm, '/', yyyy]**
+  ///
+  /// **10:59 - 01/01/2000**
+  String toLocalHHnnddmmyyyy() {
+    return formatDate(
+      toLocal(),
+      DateTimeFormat().HHnnddmmyyyy,
+    );
+  }
+
+  /// **[ dd, '/', mm, '/', yyyy, ' ', HH, ':', nn]**
+  ///
+  /// **01/01/2000 10:59**
+  String toLocalddmmyyyyHHnn() {
+    return formatDate(
+      toLocal(),
+      DateTimeFormat().ddmmyyyyHHnn,
+    );
+  }
+
+  /// **[ dd, '/', mm, '/', yyyy, ' ', HH, ':', nn, ':', ss]**
+  ///
+  /// **01/01/2000 10:59:59**
+  String toLocalddmmyyyyHHnnss() {
+    return formatDate(
+      toLocal(),
+      DateTimeFormat().ddmmyyyyHHnnss,
+    );
+  }
+
+  /// **[ yyyy, '/', mm, '/', dd, ' ', HH, ':', nn]**
+  ///
+  /// **01/01/2000 10:59**
+  String toLocalyyyymmddHHnn() {
+    return formatDate(
+      toLocal(),
+      DateTimeFormat().yyyymmddHHnn,
+    );
+  }
+
+  /// **[HH, ':', nn, ' - ', dd, '/', mm, '/', yyyy]**
+  ///
+  /// **10:59 - 01/01/2000**
+  String toUTCHHnnddmmyyyy() {
+    return formatDate(
+      toUtc(),
+      DateTimeFormat().HHnnddmmyyyy,
+    );
+  }
+
+  /// **[yyyy, '/', mm, '/', dd]**
+  ///
+  /// **2000/01/01**
+  String toUTCyyyymmdd() {
+    return formatDate(
+      toUtc(),
+      DateTimeFormat().yyyymmdd,
+    );
+  }
+
+  /// **[yyyy, '-', mm, '-', dd, ' ', HH, ':', nn, ':', ss]**
+  ///
+  /// **2000-01-01 10:59:59**
+  String toUTCyyyymmddHHnnss() {
+    return formatDate(
+      toUtc(),
+      DateTimeFormat().yyyymmddHHnnss,
+    );
+  }
+
+  /// **2000-01-01 10:59:59**
+  String toLocalyyyymmddHHnnss() {
+    return formatDate(
+      toLocal(),
+      DateTimeFormat().yyyymmddHHnnss,
+    );
+  }
+
+  /// **[HH, ':', nn, ', ', dd, '/', mm, '/', yyyy]**
+  ///
+  /// **10:59, 01/01/2000**
+  String toLocalHHnnddmmyyWithCommas() {
+    return formatDate(
+      toLocal(),
+      DateTimeFormat().HHnnddmmyyWithCommas,
+    );
+  }
+
+  /// **[yyyy, mm, dd, HH, nn, ss]**
+  ///
+  /// **20001225105959**
+  String toLocalyyyymmddHHnnssWithoutSeparate() {
+    return formatDate(
+      toLocal(),
+      DateTimeFormat().yyyymmddHHnnssWithoutSeparate,
+    );
+  }
+
+  /// **[dd, mm, yyyy, HH, nn, ss]**
+  ///
+  /// **26072024105959**
+  String toLocalddmmyyyyHHnnssWithoutSeparate() {
+    return formatDate(
+      toLocal(),
+      DateTimeFormat().ddmmyyyyHHnnssWithoutSeparate,
+    );
+  }
+
+  /// **[yyyy-mm]**
+  ///
+  /// **2024-07**
+  String toLocalyyyyDashmm() {
+    return formatDate(
+      toLocal(),
+      DateTimeFormat().yyyyDashmm,
+    );
+  }
+
+  /// **[yyyy-mm-dd]**
+  ///
+  /// **2024-07-23**
+  String toLocalyyyyDashmmDashdd() {
+    return formatDate(
+      toLocal(),
+      DateTimeFormat().yyyyDashmmDashdd,
+    );
+  }
+
+  String? timeago([String? locale]) {
+    return tag_format.format(
+      this,
+      locale: locale,
+      allowFromNow: true,
+    );
+  }
+
+  /// **[HH, ':', nn]**
+  ///
+  /// **10:59**
+  String toTimeFormat() {
+    return formatDate(
+      toLocal(),
+      DateTimeFormat().timeFormat,
+    );
+  }
+
+  /// **[D, ', ', dd, '/', mm, '/', yyyy]**
+  ///
+  /// **Tue, 01/01/2000**
+  String toLocalDddmmyyyy({
+    DateLocale locale = const EnglishDateLocale(),
+  }) {
+    return formatDate(
+      toLocal(),
+      DateTimeFormat().Dddmmyyyy,
+      locale: locale,
+    );
+  }
+
+  /// **[D, '\n', dd]**
+  ///
+  /// **Tue**
+  ///
+  /// **01**
+  String toLocalDAbovedd({
+    DateLocale locale = const EnglishDateLocale(),
+  }) {
+    return formatDate(
+      toLocal(),
+      DateTimeFormat().DAbovedd,
+      locale: locale,
+    );
+  }
+
+  /// **[dd-mm-yyyy]**
+  ///
+  /// **01-01-2000**
+  String toLocalddDashmmDashyyyy({
+    DateLocale locale = const EnglishDateLocale(),
+  }) {
+    return formatDate(
+      toLocal(),
+      DateTimeFormat().ddDashmmDashyyyy,
+      locale: locale,
+    );
+  }
+
+  /// **[HH, nn, ss]**
+  ///
+  /// **105959**
+  String toLocalHHmmss({
+    DateLocale locale = const EnglishDateLocale(),
+  }) {
+    return formatDate(
+      toLocal(),
+      DateTimeFormat().HHmmss,
+      locale: locale,
+    );
+  }
+
+  /// **[Tháng mm, yyyy]**
+  /// **Tháng 01, 2024**
+  String toLocalmmCommayyyy({
+    DateLocale locale = const EnglishDateLocale(),
+  }) {
+    return formatDate(
+      toLocal(),
+      DateTimeFormat().mmCommayyyy,
+      locale: locale,
+    );
+  }
+}

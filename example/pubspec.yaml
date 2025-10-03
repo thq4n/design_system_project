@@ -38,6 +38,7 @@ dependencies:
   design_system_project:
     path: ../
   flutter_svg: ^2.2.0
+  intl: ^0.20.2
 
 dev_dependencies:
   flutter_test:
