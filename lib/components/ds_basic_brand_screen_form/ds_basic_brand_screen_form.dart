@@ -157,6 +157,8 @@ class DSBasicBrandScreenForm extends StatefulWidget {
   /// Optional - only shown if provided.
   final Widget? bottomNavigationBar;
 
+  final void Function(String searchText)? onSearching;
+
   /// Creates a basic screen form widget.
   ///
   /// All parameters are optional and have sensible defaults based on the design system.
@@ -188,6 +190,7 @@ class DSBasicBrandScreenForm extends StatefulWidget {
     this.floatingActionButtonLocation,
     this.floatingActionButtonAnimator,
     this.bottomNavigationBar,
+    this.onSearching,
   });
 
   /// Creates a standardized app bar action button with consistent styling.
@@ -336,6 +339,9 @@ class _DSBasicBrandScreenFormState extends DSStateBase<DSBasicBrandScreenForm> {
           widget.actions.length <= 1 &&
           widget.description?.isNotEmpty != true);
 
+  final isSearchingNotifier = ValueNotifier<bool>(false);
+  final _searchController = DSInputController();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -434,53 +440,134 @@ class _DSBasicBrandScreenFormState extends DSStateBase<DSBasicBrandScreenForm> {
                     widget.backButton ??
                         DSBasicBrandScreenForm.createAppBarActionButton(
                           icon: DSAssets.vuesax.arrowLeft2Linear,
-                          onPressed: widget.onBack ??
-                              () {
-                                context.pop();
-                              },
+                          onPressed: () {
+                            if (isSearchingNotifier.value) {
+                              isSearchingNotifier.value = false;
+                              if (_searchController.text.isNotEmpty) {
+                                _searchController.clear();
+                                widget.onSearching
+                                    ?.call(_searchController.text);
+                              }
+
+                              return;
+                            }
+
+                            if (widget.onBack != null) {
+                              widget.onBack!();
+                            } else {
+                              context.pop();
+                            }
+                          },
                         ),
                   ] else ...[
                     const SizedBox(width: 56),
                   ],
                   Expanded(
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.stretch,
-                      children: [
-                        ConstrainedBox(
-                          constraints: const BoxConstraints(minHeight: 56),
-                          child: Align(
-                            alignment: Alignment.center,
-                            child: Text(
-                              widget.title ?? '',
-                              style: screenTheme.titleStyle?.copyWith(
-                                color: appbarForegroundColor,
-                              ),
-                              textAlign: isCenterTitle
-                                  ? TextAlign.center
-                                  : TextAlign.start,
-                              maxLines: screenTheme.titleMaxLines,
-                              overflow: TextOverflow.ellipsis,
-                            ),
-                          ),
-                        ),
-                        if (widget.description?.isNotEmpty == true) ...[
-                          const SizedBox(height: 4),
-                          Text(
-                            widget.description!,
-                            style: screenTheme.desStyle?.copyWith(
-                              color: appbarForegroundColor,
-                            ),
-                          ),
-                        ],
-                      ],
+                    child: ValueListenableBuilder(
+                      valueListenable: isSearchingNotifier,
+                      builder: (context, isSearching, child) {
+                        return !isSearching
+                            ? Column(
+                                crossAxisAlignment: CrossAxisAlignment.stretch,
+                                children: [
+                                  ConstrainedBox(
+                                    constraints:
+                                        const BoxConstraints(minHeight: 56),
+                                    child: Align(
+                                      alignment: Alignment.center,
+                                      child: Text(
+                                        widget.title ?? '',
+                                        style: screenTheme.titleStyle?.copyWith(
+                                          color: appbarForegroundColor,
+                                        ),
+                                        textAlign: isCenterTitle
+                                            ? TextAlign.center
+                                            : TextAlign.start,
+                                        maxLines: screenTheme.titleMaxLines,
+                                        overflow: TextOverflow.ellipsis,
+                                      ),
+                                    ),
+                                  ),
+                                  if (widget.description?.isNotEmpty ==
+                                      true) ...[
+                                    const SizedBox(height: 4),
+                                    Text(
+                                      widget.description!,
+                                      style: screenTheme.desStyle?.copyWith(
+                                        color: appbarForegroundColor,
+                                      ),
+                                    ),
+                                  ],
+                                ],
+                              )
+                            : const SizedBox.shrink();
+                      },
                     ),
                   ),
                   const SizedBox(width: 56),
                 ],
               ),
+              if (widget.onSearching != null)
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: [
+                    const SizedBox(width: 56),
+                    Expanded(
+                      child: ValueListenableBuilder(
+                        valueListenable: isSearchingNotifier,
+                        builder: (context, isSearching, child) {
+                          return AnimatedCrossFade(
+                            alignment: Alignment.topCenter,
+                            duration: const Duration(milliseconds: 200),
+                            firstChild: DSInput(
+                              controller: _searchController,
+                              hint: 'Tìm kiếm ID, Biển số xe',
+                              withClearButton: false,
+                              prefixIcon: DSImageView(
+                                source: DSAssets.vuesax.searchNormal1Linear,
+                              ),
+                              onTextChanged: (text, controller) {
+                                widget.onSearching?.call(text);
+                              },
+                            ),
+                            secondChild: const SizedBox(
+                              width: double.infinity,
+                              height: 56,
+                            ),
+                            crossFadeState: isSearching
+                                ? CrossFadeState.showFirst
+                                : CrossFadeState.showSecond,
+                          );
+                        },
+                      ),
+                    ),
+                    if (widget.actions.isEmpty)
+                      const SizedBox(width: 16)
+                    else
+                      ...widget.actions,
+                  ],
+                ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: [
+                  if (widget.onSearching != null)
+                    ValueListenableBuilder(
+                      valueListenable: isSearchingNotifier,
+                      builder: (context, isSearching, child) {
+                        return AnimatedSize(
+                          alignment: Alignment.centerRight,
+                          duration: const Duration(milliseconds: 100),
+                          child: !isSearching
+                              ? DSBasicBrandScreenForm.createAppBarActionButton(
+                                  icon: DSAssets.vuesax.searchNormal1Linear,
+                                  onPressed: () {
+                                    isSearchingNotifier.value = true;
+                                  },
+                                )
+                              : const SizedBox.shrink(),
+                        );
+                      },
+                    ),
                   ...widget.actions,
                 ],
               ),
