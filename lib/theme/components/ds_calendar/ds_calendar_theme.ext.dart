@@ -5,7 +5,7 @@ enum DSCalendarVariants {
   secondary,
   outline,
   ghost,
-  // TODO: Define variants for DSCalendar component
+  // TODO(thq4n): Define variants for DSCalendar component
 }
 
 class DSCalendarThemeExtension

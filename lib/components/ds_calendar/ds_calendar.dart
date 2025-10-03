@@ -204,7 +204,9 @@ class _DSCalendarState extends DSStateBase<DSCalendar> {
     };
 
     final label = dayLabels[day.weekday];
-    if (label == null) return null;
+    if (label == null) {
+      return null;
+    }
 
     return Center(
       child: Text(
