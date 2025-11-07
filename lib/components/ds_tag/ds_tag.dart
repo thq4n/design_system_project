@@ -48,7 +48,7 @@ class _DSTagState extends DSStateBase<DSTag> {
   }
 
   DSColor? get _backgroundColor {
-    return _mainColor?.tint100;
+    return _mainColor?.shape100;
   }
 
   DSColor? get _labelColor {
