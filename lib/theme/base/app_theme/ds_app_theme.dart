@@ -85,6 +85,7 @@ class DSAppTheme {
       DSChipThemeExtension(textTheme: _textTheme),
       DSCalendarThemeExtension(textTheme: _textTheme),
       DSAvatarThemeExtension(textTheme: _textTheme),
+      DSTagThemeExtension(textTheme: _textTheme),
     ],
   );
 
