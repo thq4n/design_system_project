@@ -12,11 +12,11 @@ abstract class DSColor extends Color {
   DSColor get shade600;
   DSColor get shade500;
 
-  DSColor get tint400;
-  DSColor get tint300;
-  DSColor get tint200;
-  DSColor get tint100;
-  DSColor get tint50;
+  DSColor get shape400;
+  DSColor get shape300;
+  DSColor get shape200;
+  DSColor get shape100;
+  DSColor get shape50;
 
   DSColor get white;
 
@@ -69,15 +69,15 @@ class _DSColorWrapper extends DSColor {
   @override
   DSColor get shade500 => this;
   @override
-  DSColor get tint400 => this;
+  DSColor get shape400 => this;
   @override
-  DSColor get tint300 => this;
+  DSColor get shape300 => this;
   @override
-  DSColor get tint200 => this;
+  DSColor get shape200 => this;
   @override
-  DSColor get tint100 => this;
+  DSColor get shape100 => this;
   @override
-  DSColor get tint50 => this;
+  DSColor get shape50 => this;
   @override
   DSColor get white => this;
 

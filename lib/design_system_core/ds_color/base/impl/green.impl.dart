@@ -21,15 +21,15 @@ class _DSGreenColor extends DSColor {
   @override
   DSColor get shade500 => const _DSGreenColor(0xFF17B26A); // Primary Green
   @override
-  DSColor get tint400 => const _DSGreenColor(0xFF47CD89);
+  DSColor get shape400 => const _DSGreenColor(0xFF47CD89);
   @override
-  DSColor get tint300 => const _DSGreenColor(0xFF75E0A7);
+  DSColor get shape300 => const _DSGreenColor(0xFF75E0A7);
   @override
-  DSColor get tint200 => const _DSGreenColor(0xFFABEFC6);
+  DSColor get shape200 => const _DSGreenColor(0xFFABEFC6);
   @override
-  DSColor get tint100 => const _DSGreenColor(0xFFDCFAE8);
+  DSColor get shape100 => const _DSGreenColor(0xFFDCFAE8);
   @override
-  DSColor get tint50 => const _DSGreenColor(0xFFECFDF3);
+  DSColor get shape50 => const _DSGreenColor(0xFFECFDF3);
 
   @override
   DSColor get primary => shade500;

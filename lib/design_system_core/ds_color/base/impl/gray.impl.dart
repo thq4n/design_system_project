@@ -21,15 +21,15 @@ class _DSGrayColor extends DSColor {
   @override
   DSColor get shade500 => const _DSGrayColor(0xFF737373); // Primary Gray
   @override
-  DSColor get tint400 => const _DSGrayColor(0xFFA3A3A3);
+  DSColor get shape400 => const _DSGrayColor(0xFFA3A3A3);
   @override
-  DSColor get tint300 => const _DSGrayColor(0xFFD4D4D4);
+  DSColor get shape300 => const _DSGrayColor(0xFFD4D4D4);
   @override
-  DSColor get tint200 => const _DSGrayColor(0xFFE5E5E5);
+  DSColor get shape200 => const _DSGrayColor(0xFFE5E5E5);
   @override
-  DSColor get tint100 => const _DSGrayColor(0xFFF1F4F5);
+  DSColor get shape100 => const _DSGrayColor(0xFFF1F4F5);
   @override
-  DSColor get tint50 => const _DSGrayColor(0xFFF9FAFB);
+  DSColor get shape50 => const _DSGrayColor(0xFFF9FAFB);
   @override
   DSColor get primary => shade500;
 

@@ -178,7 +178,7 @@ class _FilterSelectionModalState<T> extends State<FilterSelectionModal<T>> {
             Container(
               margin: const EdgeInsets.symmetric(horizontal: 16),
               decoration: BoxDecoration(
-                color: colors.gray.tint100,
+                color: colors.gray.shape100,
                 borderRadius: BorderRadius.circular(12),
               ),
               child: DSInput(
@@ -264,7 +264,7 @@ class _FilterSelectionModalState<T> extends State<FilterSelectionModal<T>> {
                     return Container(
                       decoration: BoxDecoration(
                         color: isSelected
-                            ? colors.brand.tint50
+                            ? colors.brand.shape50
                             : colors.gray.white,
                       ),
                       padding: const EdgeInsets.symmetric(

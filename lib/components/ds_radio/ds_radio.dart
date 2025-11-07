@@ -98,11 +98,12 @@ class _DSRadioState<T> extends DSStateBase<DSRadio<T>> {
     }
 
     if (isSelected) {
-      return const LinearGradient(
+      return dsColors.brand.createGradient(
         colors: [
-          Color(0xFFFF3F3F),
-          Color(0xFFD02727),
+          dsColors.brand.custom(0xFFFF3F3F),
+          dsColors.brand.custom(0xFFD02727),
         ],
+        stops: [-0.03, 0.851], // -3% and 85.1%
       );
     }
 

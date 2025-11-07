@@ -113,7 +113,7 @@ class _AppBottomModalState<T> extends State<AppBottomModal<T>> {
             width: 32,
             height: 4,
             decoration: BoxDecoration(
-              color: colors.gray.tint200,
+              color: colors.gray.shape200,
               borderRadius: BorderRadius.circular(100),
             ),
           ),

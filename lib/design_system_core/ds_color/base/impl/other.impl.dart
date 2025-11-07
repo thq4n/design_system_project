@@ -28,19 +28,19 @@ class _DSOtherColor extends DSColor {
   DSColor get shade950 => throw UnimplementedError();
 
   @override
-  DSColor get tint100 => throw UnimplementedError();
+  DSColor get shape100 => throw UnimplementedError();
 
   @override
-  DSColor get tint200 => throw UnimplementedError();
+  DSColor get shape200 => throw UnimplementedError();
 
   @override
-  DSColor get tint300 => throw UnimplementedError();
+  DSColor get shape300 => throw UnimplementedError();
 
   @override
-  DSColor get tint400 => throw UnimplementedError();
+  DSColor get shape400 => throw UnimplementedError();
 
   @override
-  DSColor get tint50 => throw UnimplementedError();
+  DSColor get shape50 => throw UnimplementedError();
 
   @override
   DSColor withOpacity(double opacity) {

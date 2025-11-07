@@ -21,15 +21,15 @@ class _DSPurpleColor extends DSColor {
   @override
   DSColor get shade500 => const _DSPurpleColor(0xFFA855F7); // Primary Purple
   @override
-  DSColor get tint400 => const _DSPurpleColor(0xFFC084FC);
+  DSColor get shape400 => const _DSPurpleColor(0xFFC084FC);
   @override
-  DSColor get tint300 => const _DSPurpleColor(0xFFD6B4FE);
+  DSColor get shape300 => const _DSPurpleColor(0xFFD6B4FE);
   @override
-  DSColor get tint200 => const _DSPurpleColor(0xFFE9D5FF);
+  DSColor get shape200 => const _DSPurpleColor(0xFFE9D5FF);
   @override
-  DSColor get tint100 => const _DSPurpleColor(0xFFF3E8FF);
+  DSColor get shape100 => const _DSPurpleColor(0xFFF3E8FF);
   @override
-  DSColor get tint50 => const _DSPurpleColor(0xFFFAF5FF);
+  DSColor get shape50 => const _DSPurpleColor(0xFFFAF5FF);
 
   @override
   DSColor get primary => shade500;

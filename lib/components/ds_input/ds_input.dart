@@ -165,7 +165,7 @@ class _DSInputState extends State<DSInput> {
                       vertical: 2,
                     ),
                     decoration: BoxDecoration(
-                      color: colors.gray.tint100,
+                      color: colors.gray.shape100,
                       borderRadius: DSRadiuses.radiusXs.borderRadiusGeometry,
                     ),
                     child: ValueListenableBuilder<TextEditingValue>(

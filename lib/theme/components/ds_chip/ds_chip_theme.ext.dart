@@ -81,10 +81,10 @@ class DSChipThemeExtension extends ThemeExtension<DSChipThemeExtension> {
       badgeVariant: DSBadgeNotificationVariants.tertiary,
     );
     final disableState = DSChipTheme(
-      backgroundColor: const DSColors().brand.tint50,
-      borderColor: const DSColors().brand.tint50,
-      textColor: const DSColors().brand.tint400,
-      iconColor: const DSColors().brand.tint400,
+      backgroundColor: const DSColors().brand.shape50,
+      borderColor: const DSColors().brand.shape50,
+      textColor: const DSColors().brand.shape400,
+      iconColor: const DSColors().brand.shape400,
       badgeVariant: DSBadgeNotificationVariants.primary,
     );
 

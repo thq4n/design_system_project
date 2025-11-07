@@ -26,15 +26,15 @@ class _DSBrandColor extends DSColor {
 
   // Tints of the Primary Brand Color
   @override
-  DSColor get tint400 => const _DSBrandColor(0xFFFA7066);
+  DSColor get shape400 => const _DSBrandColor(0xFFFA7066);
   @override
-  DSColor get tint300 => const _DSBrandColor(0xFFFDA29B);
+  DSColor get shape300 => const _DSBrandColor(0xFFFDA29B);
   @override
-  DSColor get tint200 => const _DSBrandColor(0xFFFECDCA);
+  DSColor get shape200 => const _DSBrandColor(0xFFFECDCA);
   @override
-  DSColor get tint100 => const _DSBrandColor(0xFFFEE4E2);
+  DSColor get shape100 => const _DSBrandColor(0xFFFEE4E2);
   @override
-  DSColor get tint50 => const _DSBrandColor(0xFFFEF3F2);
+  DSColor get shape50 => const _DSBrandColor(0xFFFEF3F2);
 
   // You might want to add a more semantic name for the primary shade
   @override
