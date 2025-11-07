@@ -685,6 +685,29 @@ extension StringExt on String {
       return Duration.zero;
     }
   }
+
+  /// Extracts initials from a name string
+  ///
+  /// Returns:
+  /// - Empty string if input is empty
+  /// - First letter if single word (e.g., "Quân" -> "Q")
+  /// - First letter of first word + first letter of last word if multiple words
+  ///   (e.g., "Gian Thiệu Quân" -> "GQ", "Thiệu Quân" -> "TQ")
+  ///
+  /// Examples:
+  /// - "Gian Thiệu Quân" -> "GQ"
+  /// - "Thiệu Quân" -> "TQ"
+  /// - "Quân" -> "Q"
+  /// - "" -> ""
+  String get getInitials {
+    final words =
+        trim().split(RegExp(r'\s+')).where((w) => w.isNotEmpty).toList();
+    return switch (words.length) {
+      0 => '',
+      1 => words.first[0].toUpperCase(),
+      _ => '${words.first[0].toUpperCase()}${words.last[0].toUpperCase()}',
+    };
+  }
 }
 
 extension PhoneNumberExt on String? {

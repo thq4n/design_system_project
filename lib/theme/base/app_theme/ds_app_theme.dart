@@ -35,7 +35,7 @@ class DSAppTheme {
       focusedBorder: OutlineInputBorder(
         borderRadius: BorderRadius.circular(8),
         borderSide: BorderSide(
-          color: DSColorUsages.border.brand.tint200,
+          color: DSColorUsages.border.brand.shape200,
           width: 1,
         ),
       ),
@@ -84,6 +84,7 @@ class DSAppTheme {
       DSBadgeNotificationThemeExtension(textTheme: _textTheme),
       DSChipThemeExtension(textTheme: _textTheme),
       DSCalendarThemeExtension(textTheme: _textTheme),
+      DSAvatarThemeExtension(textTheme: _textTheme),
     ],
   );
 

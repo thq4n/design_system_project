@@ -7,6 +7,39 @@
 // ignore_for_file: type=lint
 // ignore_for_file: directives_ordering,unnecessary_import,implicit_dynamic_list_literal,deprecated_member_use
 
+class $AssetsAvatarGen {
+  const $AssetsAvatarGen();
+
+  /// File path: assets/avatar/ic_default.png
+  String get icDefault =>
+      'packages/design_system_project/assets/avatar/ic_default.png';
+
+  /// File path: assets/avatar/ic_female.png
+  String get icFemale =>
+      'packages/design_system_project/assets/avatar/ic_female.png';
+
+  /// File path: assets/avatar/ic_logo_red.png
+  String get icLogoRed =>
+      'packages/design_system_project/assets/avatar/ic_logo_red.png';
+
+  /// File path: assets/avatar/ic_logo_white.png
+  String get icLogoWhite =>
+      'packages/design_system_project/assets/avatar/ic_logo_white.png';
+
+  /// File path: assets/avatar/ic_male.png
+  String get icMale =>
+      'packages/design_system_project/assets/avatar/ic_male.png';
+
+  /// List of all assets
+  List<String> get values => [
+        icDefault,
+        icFemale,
+        icLogoRed,
+        icLogoWhite,
+        icMale,
+      ];
+}
+
 class $AssetsBrandingGen {
   const $AssetsBrandingGen();
 
@@ -30254,6 +30287,7 @@ class DSAssets {
 
   static const String package = 'design_system_project';
 
+  static const $AssetsAvatarGen avatar = $AssetsAvatarGen();
   static const $AssetsBrandingGen branding = $AssetsBrandingGen();
   static const $AssetsEmptyStateGen emptyState = $AssetsEmptyStateGen();
   static const $AssetsSocialGen social = $AssetsSocialGen();

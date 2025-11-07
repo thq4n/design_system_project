@@ -14,7 +14,18 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'DS Media Picker Demo',
       theme: DSAppTheme.lightTheme,
-      home: Scaffold(body: SafeArea(child: Center(child: DSCalendar()))),
+      home: Scaffold(
+        backgroundColor: Colors.black,
+        body: SafeArea(
+          child: Center(
+            child: DSAvatar.text(
+              source: 'asds',
+              size: DSAvatarSizes.xxl,
+              isMale: false,
+            ),
+          ),
+        ),
+      ),
     );
   }
 }
