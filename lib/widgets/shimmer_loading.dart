@@ -94,9 +94,9 @@ class Shimmer extends StatefulWidget {
   /// Default shimmer gradient using design system gray colors.
   static const LinearGradient _defaultShimmerGradient = LinearGradient(
     colors: [
-      Color(0xFFF1F4F5), // DSColors.gray.tint100
-      Color(0xFFE5E5E5), // DSColors.gray.tint200
-      Color(0xFFF1F4F5), // DSColors.gray.tint100
+      Color(0xFFF1F4F5), // DSColors.gray.shape100
+      Color(0xFFE5E5E5), // DSColors.gray.shape200
+      Color(0xFFF1F4F5), // DSColors.gray.shape100
     ],
     stops: [0.1, 0.3, 0.4],
     begin: Alignment(-1.0, -0.3),
@@ -107,9 +107,9 @@ class Shimmer extends StatefulWidget {
   /// Light shimmer gradient for subtle effects.
   static const LinearGradient _lightShimmerGradient = LinearGradient(
     colors: [
-      Color(0xFFF9FAFB), // DSColors.gray.tint50
-      Color(0xFFF1F4F5), // DSColors.gray.tint100
-      Color(0xFFF9FAFB), // DSColors.gray.tint50
+      Color(0xFFF9FAFB), // DSColors.gray.shape50
+      Color(0xFFF1F4F5), // DSColors.gray.shape100
+      Color(0xFFF9FAFB), // DSColors.gray.shape50
     ],
     stops: [0.1, 0.3, 0.4],
     begin: Alignment(-1.0, -0.3),
@@ -120,9 +120,9 @@ class Shimmer extends StatefulWidget {
   /// Medium shimmer gradient for standard effects.
   static const LinearGradient _mediumShimmerGradient = LinearGradient(
     colors: [
-      Color(0xFFE5E5E5), // DSColors.gray.tint200
-      Color(0xFFD4D4D4), // DSColors.gray.tint300
-      Color(0xFFE5E5E5), // DSColors.gray.tint200
+      Color(0xFFE5E5E5), // DSColors.gray.shape200
+      Color(0xFFD4D4D4), // DSColors.gray.shape300
+      Color(0xFFE5E5E5), // DSColors.gray.shape200
     ],
     stops: [0.1, 0.3, 0.4],
     begin: Alignment(-1.0, -0.3),
@@ -133,9 +133,9 @@ class Shimmer extends StatefulWidget {
   /// Dark shimmer gradient for strong effects.
   static const LinearGradient _darkShimmerGradient = LinearGradient(
     colors: [
-      Color(0xFFD4D4D4), // DSColors.gray.tint300
-      Color(0xFFA3A3A3), // DSColors.gray.tint400
-      Color(0xFFD4D4D4), // DSColors.gray.tint300
+      Color(0xFFD4D4D4), // DSColors.gray.shape300
+      Color(0xFFA3A3A3), // DSColors.gray.shape400
+      Color(0xFFD4D4D4), // DSColors.gray.shape300
     ],
     stops: [0.1, 0.3, 0.4],
     begin: Alignment(-1.0, -0.3),
@@ -146,9 +146,9 @@ class Shimmer extends StatefulWidget {
   /// Brand shimmer gradient using brand colors.
   static const LinearGradient _brandShimmerGradient = LinearGradient(
     colors: [
-      Color(0xFFFEE4E2), // DSColors.brand.tint100
-      Color(0xFFFECDCA), // DSColors.brand.tint200
-      Color(0xFFFEE4E2), // DSColors.brand.tint100
+      Color(0xFFFEE4E2), // DSColors.brand.shape100
+      Color(0xFFFECDCA), // DSColors.brand.shape200
+      Color(0xFFFEE4E2), // DSColors.brand.shape100
     ],
     stops: [0.1, 0.3, 0.4],
     begin: Alignment(-1.0, -0.3),

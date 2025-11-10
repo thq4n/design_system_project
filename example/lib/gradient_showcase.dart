@@ -32,35 +32,35 @@ class _GradientShowcaseState extends State<GradientShowcase> {
         children: [
           _buildGradientSection(
             'Default Gradient (Design System Gray)',
-            'Subtle effect using gray.tint100 and gray.tint200',
+            'Subtle effect using gray.shape100 and gray.shape200',
             Shimmer.withDefaultGradient(child: _buildTestItems()),
           ),
           const SizedBox(height: 24),
 
           _buildGradientSection(
             'Light Gradient (Very Subtle)',
-            'Very subtle effect using gray.tint50 and gray.tint100',
+            'Very subtle effect using gray.shape50 and gray.shape100',
             Shimmer.withLightGradient(child: _buildTestItems()),
           ),
           const SizedBox(height: 24),
 
           _buildGradientSection(
             'Medium Gradient (Standard)',
-            'Standard effect using gray.tint200 and gray.tint300',
+            'Standard effect using gray.shape200 and gray.shape300',
             Shimmer.withMediumGradient(child: _buildTestItems()),
           ),
           const SizedBox(height: 24),
 
           _buildGradientSection(
             'Dark Gradient (Strong Effect)',
-            'Strong effect using gray.tint300 and gray.tint400',
+            'Strong effect using gray.shape300 and gray.shape400',
             Shimmer.withDarkGradient(child: _buildTestItems()),
           ),
           const SizedBox(height: 24),
 
           _buildGradientSection(
             'Brand Gradient (Brand Colors)',
-            'Brand effect using brand.tint100 and brand.tint200',
+            'Brand effect using brand.shape100 and brand.shape200',
             Shimmer.withBrandGradient(child: _buildTestItems()),
           ),
           const SizedBox(height: 24),
