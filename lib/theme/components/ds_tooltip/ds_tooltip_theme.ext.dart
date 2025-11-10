@@ -8,6 +8,15 @@ class DSTooltipThemeExtension extends ThemeExtension<DSTooltipThemeExtension> {
   DSTooltipTheme tooltipTheme = DSTooltipTheme(
     borderRadius: DSRadiuses.radiusSm,
     padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
+    textStyle: DSTextStyle.fromSize(DSTextStyleSize.sm)
+        .copyWithColor(DSColorUsages.text.primary.white),
+    boxDecoration: BoxDecoration(
+      color: DSColorUsages.background.primary.black,
+      borderRadius: DSRadiuses.radiusSm.borderRadiusGeometry,
+    ),
+    showDuration: const Duration(seconds: 3),
+    waitDuration: const Duration(milliseconds: 400),
+    verticalOffset: 0,
   );
 
   @override
