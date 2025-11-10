@@ -10,17 +10,18 @@ class DSTooltip extends StatefulWidget {
   final int? waitDuration;
   final int? showDuration;
   final Widget child;
-  final bool? preferBelow;
-  const DSTooltip(
-      {super.key,
-      required this.label,
-      this.backgroundColor,
-      this.textColor,
-      this.verticalOffset,
-      this.waitDuration,
-      this.showDuration,
-      required this.child,
-      this.preferBelow = false});
+  final bool preferBelow;
+  const DSTooltip({
+    super.key,
+    required this.label,
+    this.backgroundColor,
+    this.textColor,
+    this.verticalOffset,
+    this.waitDuration,
+    this.showDuration,
+    required this.child,
+    this.preferBelow = false,
+  });
 
   @override
   State<DSTooltip> createState() => _DSTooltipState();
@@ -40,7 +41,7 @@ class _DSTooltipState extends DSStateBase<DSTooltip> {
       waitDuration: _componentTheme.waitDuration,
       showDuration: _componentTheme.showDuration,
       verticalOffset: _componentTheme.verticalOffset,
-      preferBelow: widget.preferBelow ?? false,
+      preferBelow: widget.preferBelow,
       child: widget.child,
     );
   }

@@ -5,19 +5,19 @@ class DSTooltipThemeExtension extends ThemeExtension<DSTooltipThemeExtension> {
 
   DSTooltipThemeExtension({required this.textTheme});
 
-  DSTooltipTheme tooltipTheme = DSTooltipTheme(
-    borderRadius: DSRadiuses.radiusSm,
-    padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
-    textStyle: DSTextStyle.fromSize(DSTextStyleSize.sm)
-        .copyWithColor(DSColorUsages.text.primary.white),
-    boxDecoration: BoxDecoration(
-      color: DSColorUsages.background.primary.black,
-      borderRadius: DSRadiuses.radiusSm.borderRadiusGeometry,
-    ),
-    showDuration: const Duration(seconds: 3),
-    waitDuration: const Duration(milliseconds: 400),
-    verticalOffset: 0,
-  );
+  DSTooltipTheme get tooltipTheme => DSTooltipTheme(
+        borderRadius: DSRadiuses.radiusSm,
+        padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
+        textStyle: textTheme.sm?.medium
+            .copyWithColor(DSColorUsages.text.primary.white),
+        boxDecoration: BoxDecoration(
+          color: DSColorUsages.background.primary.black,
+          borderRadius: DSRadiuses.radiusSm.borderRadiusGeometry,
+        ),
+        showDuration: const Duration(seconds: 3),
+        waitDuration: const Duration(milliseconds: 400),
+        verticalOffset: 0,
+      );
 
   @override
   ThemeExtension<DSTooltipThemeExtension> copyWith({DSTextTheme? textTheme}) {
