@@ -32,8 +32,8 @@ abstract class DSColor extends Color {
     return LinearGradient(
       colors: colors,
       stops: stops,
-      transform:
-          GradientRotation(angle * 3.14159 / 180), // Convert degrees to radians
+      // transform:
+      //     GradientRotation(angle * 3.14159 / 180), // Convert degrees to radians
       begin: begin,
       end: end,
     );
