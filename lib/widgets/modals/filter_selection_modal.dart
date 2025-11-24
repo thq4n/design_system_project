@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
-import '../design_system_project.dart';
+import '../../design_system_project.dart';
 
 class FilterSelectionModal<T> extends StatefulWidget {
   final String title;
   final EdgeInsetsGeometry? titlePadding;
-  final bool isHasFetchItems;
   final Future<List<T>> Function({
     String? searchTerm,
   })? onRefreshItems;
@@ -22,6 +21,7 @@ class FilterSelectionModal<T> extends StatefulWidget {
     T item,
     bool isSelected,
     ValueNotifier<T?>? selectedItemNotifier,
+    Function(T item)? onSelect,
   )? itemBuilder;
   final Function(T? item)? onConfirm;
   final bool isShowDismissButton;
@@ -36,7 +36,6 @@ class FilterSelectionModal<T> extends StatefulWidget {
     super.key,
     required this.title,
     this.titlePadding,
-    required this.isHasFetchItems,
     this.onRefreshItems,
     this.onLoadMoreItems,
     this.canLoadMore,
@@ -70,11 +69,16 @@ class _FilterSelectionModalState<T> extends State<FilterSelectionModal<T>> {
   String? _searchTerm;
   late Debouncer _debouncer;
   late final _refreshController =
-      widget.refreshController ?? RefreshController();
+      widget.refreshController ?? RefreshController(initialRefresh: true);
 
   set selectedItem(T? item) {
     _selectedItemNotifier.value = item;
   }
+
+  bool get isHasFetchItems =>
+      widget.onRefreshItems != null || widget.onLoadMoreItems != null;
+
+  bool get isExpandedBody => isHasFetchItems;
 
   @override
   void initState() {
@@ -104,18 +108,19 @@ class _FilterSelectionModalState<T> extends State<FilterSelectionModal<T>> {
   void _onRefresh() {
     widget.onRefreshItems
         ?.call(
-          searchTerm: _searchTerm,
-        )
+      searchTerm: _searchTerm,
+    )
         .then(
-          (items) => {
-            _itemsNotifier.value = [],
-            if (items.isNotEmpty == true) _itemsNotifier.value = [...items],
-            _refreshController
-              ..refreshCompleted()
-              ..loadComplete(),
-          },
-        )
-        .catchError((error) {
+      (items) {
+        return {
+          _itemsNotifier.value = [],
+          if (items.isNotEmpty == true) _itemsNotifier.value = [...items],
+          _refreshController
+            ..refreshCompleted()
+            ..loadComplete(),
+        };
+      },
+    ).catchError((error) {
       _refreshController
         ..refreshFailed()
         ..loadFailed();
@@ -168,13 +173,25 @@ class _FilterSelectionModalState<T> extends State<FilterSelectionModal<T>> {
       isChanged: _isNotChanged,
       selectedItemNotifier: _selectedItemNotifier,
       initialData: widget.initialSelectedItem,
-      itemBuilder: widget.itemBuilder,
+      isExpandedBody: isExpandedBody,
+      itemBuilder: (
+        item,
+        isSelected,
+        selectedItemNotifier,
+      ) {
+        return widget.itemBuilder!(
+          item,
+          isSelected,
+          selectedItemNotifier,
+          _onSelect,
+        );
+      },
       onConfirm: widget.onConfirm,
       child: Column(
         mainAxisSize: MainAxisSize.min,
         children: [
           // Search bar
-          if (widget.isHasFetchItems) ...[
+          if (isHasFetchItems) ...[
             Container(
               margin: const EdgeInsets.symmetric(horizontal: 16),
               decoration: BoxDecoration(
@@ -183,7 +200,8 @@ class _FilterSelectionModalState<T> extends State<FilterSelectionModal<T>> {
               ),
               child: DSInput(
                 controller: widget.searchController,
-                hint: widget.hintSearch,
+                hint: widget.hintSearch ??
+                    'Tìm kiếm ${widget.title.toLowerCase()}',
                 prefixIcon:
                     DSImageView(source: DSAssets.vuesax.searchNormal1Linear),
                 onTextChanged: (text, _) {
@@ -195,34 +213,32 @@ class _FilterSelectionModalState<T> extends State<FilterSelectionModal<T>> {
           ],
 
           // Items list
-          widget.isHasFetchItems
+          isExpandedBody
               ? Expanded(
-                  child: Scrollbar(
-                    child: SmartRefresherWrapper(
-                      controller: _refreshController,
-                      onLoading: _onLoadMore,
-                      onRefresh: _onRefresh,
-                      enablePullUp: widget.canLoadMore?.call() ?? false,
-                      enablePullDown: true,
-                      child: ValueListenableBuilder<List<T>>(
-                        valueListenable: _itemsNotifier,
-                        builder: (context, items, child) {
-                          return items.isEmpty
-                              ? const Center(
-                                  child: Text(
-                                    'Không có dữ liệu',
-                                  ),
-                                )
-                              : _buildListSelectionItems(items);
-                        },
-                      ),
+                  child: SmartRefresherWrapper(
+                    controller: _refreshController,
+                    onLoading: _onLoadMore,
+                    onRefresh: _onRefresh,
+                    enablePullUp: widget.canLoadMore?.call() ?? false,
+                    enablePullDown: true,
+                    child: ValueListenableBuilder<List<T>>(
+                      valueListenable: _itemsNotifier,
+                      builder: (context, items, child) {
+                        return items.isEmpty
+                            ? const Center(
+                                child: Text(
+                                  'Không có dữ liệu',
+                                ),
+                              )
+                            : _buildListSelectionItems(items);
+                      },
                     ),
                   ),
                 )
               : ValueListenableBuilder<List<T>>(
                   valueListenable: _itemsNotifier,
                   builder: (context, items, child) {
-                    return _buildListSelectionItems(items);
+                    return _buildListSelectionItemsColumn(items);
                   },
                 ),
         ],
@@ -232,8 +248,8 @@ class _FilterSelectionModalState<T> extends State<FilterSelectionModal<T>> {
 
   ListView _buildListSelectionItems(List<T> items) {
     return ListView.builder(
+      physics: const NeverScrollableScrollPhysics(),
       padding: EdgeInsets.zero,
-      shrinkWrap: true,
       itemCount: items.length,
       itemBuilder: (context, index) {
         final item = items[index];
@@ -251,7 +267,9 @@ class _FilterSelectionModalState<T> extends State<FilterSelectionModal<T>> {
             return Container(
               margin: const EdgeInsets.symmetric(horizontal: 16),
               child: TransparentInkWell(
-                onTap: () => selectedItem = item,
+                onTap: () {
+                  _onSelect(item);
+                },
                 child: Builder(
                   builder: (context) {
                     if (widget.itemBuilder != null) {
@@ -259,6 +277,7 @@ class _FilterSelectionModalState<T> extends State<FilterSelectionModal<T>> {
                         item,
                         isSelected,
                         _selectedItemNotifier,
+                        _onSelect,
                       );
                     }
                     return Container(
@@ -302,5 +321,84 @@ class _FilterSelectionModalState<T> extends State<FilterSelectionModal<T>> {
         );
       },
     );
+  }
+
+  Widget _buildListSelectionItemsColumn(List<T> items) {
+    return Column(
+      mainAxisSize: MainAxisSize.min,
+      crossAxisAlignment: CrossAxisAlignment.stretch,
+      children: items.map((item) {
+        return ValueListenableBuilder<T?>(
+          valueListenable: _selectedItemNotifier,
+          builder: (context, value, child) {
+            final isSelected = value == item;
+
+            if (widget.itemBuilder == null &&
+                widget.getItemLabel(item).isEmpty) {
+              return const SizedBox();
+            }
+
+            return Container(
+              margin: const EdgeInsets.symmetric(horizontal: 16),
+              child: TransparentInkWell(
+                onTap: () {
+                  _onSelect(item);
+                },
+                child: Builder(
+                  builder: (context) {
+                    if (widget.itemBuilder != null) {
+                      return widget.itemBuilder!(
+                        item,
+                        isSelected,
+                        _selectedItemNotifier,
+                        _onSelect,
+                      );
+                    }
+                    return Container(
+                      decoration: BoxDecoration(
+                        color: isSelected
+                            ? colors.brand.shape50
+                            : colors.gray.white,
+                      ),
+                      padding: const EdgeInsets.symmetric(
+                        horizontal: 8,
+                        vertical: 14,
+                      ),
+                      child: Row(
+                        children: [
+                          Expanded(
+                            child: Text(
+                              maxLines: 2,
+                              overflow: TextOverflow.ellipsis,
+                              widget.getItemLabel(item),
+                              style: DSTextStyle().medium,
+                            ),
+                          ),
+                          const SizedBox(width: 8),
+                          DSRadio(
+                            value: item,
+                            groupValue: value,
+                            onChanged: (newvalue) {
+                              if (newvalue != null) {
+                                selectedItem = newvalue;
+                              }
+                            },
+                          ),
+                        ],
+                      ),
+                    );
+                  },
+                ),
+              ),
+            );
+          },
+        );
+      }).toList(),
+    );
+  }
+
+  void _onSelect(T item) {
+    final newItem = item;
+    selectedItem = newItem;
   }
 }
