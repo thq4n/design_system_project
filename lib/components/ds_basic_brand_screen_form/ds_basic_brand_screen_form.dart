@@ -159,6 +159,8 @@ class DSBasicBrandScreenForm extends StatefulWidget {
 
   final void Function(String searchText)? onSearching;
 
+  final String? searchHint;
+
   /// Creates a basic screen form widget.
   ///
   /// All parameters are optional and have sensible defaults based on the design system.
@@ -191,6 +193,7 @@ class DSBasicBrandScreenForm extends StatefulWidget {
     this.floatingActionButtonAnimator,
     this.bottomNavigationBar,
     this.onSearching,
+    this.searchHint,
   });
 
   /// Creates a standardized app bar action button with consistent styling.
@@ -521,7 +524,7 @@ class _DSBasicBrandScreenFormState extends DSStateBase<DSBasicBrandScreenForm> {
                             duration: const Duration(milliseconds: 200),
                             firstChild: DSInput(
                               controller: _searchController,
-                              hint: 'Tìm kiếm ID, Biển số xe',
+                              hint: widget.searchHint,
                               withClearButton: false,
                               prefixIcon: DSImageView(
                                 source: DSAssets.vuesax.searchNormal1Linear,

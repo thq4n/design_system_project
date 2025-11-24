@@ -146,136 +146,140 @@ class _DSInputState extends State<DSInput> {
     if (widget.justShowPrefixIconWhenEmpty) {
       showPrefixIcon = _controller?.text.isEmpty == true;
     }
-    return ValueListenableBuilder<InputContainerProperties>(
-      valueListenable: _controller!,
-      builder: (ctx, value, w) {
-        final textField = TextField(
-          textAlign: widget.textAlign,
-          focusNode: value.focusNode,
-          readOnly: widget.readOnly || !widget.enable,
-          controller: value.tdController,
-          maxLength: widget.maxLength,
-          autofillHints: widget.autofillHints,
-          decoration: InputDecoration(
-            alignLabelWithHint: true,
-            counter: widget.maxLength != null
-                ? Container(
-                    padding: const EdgeInsets.symmetric(
-                      horizontal: 4,
-                      vertical: 2,
-                    ),
-                    decoration: BoxDecoration(
-                      color: colors.gray.shape100,
-                      borderRadius: DSRadiuses.radiusXs.borderRadiusGeometry,
-                    ),
-                    child: ValueListenableBuilder<TextEditingValue>(
-                      valueListenable: _controller!.value.tdController,
-                      builder: (context, value, child) {
-                        return Text(
-                          '${value.text.length}/${widget.maxLength}',
-                          style: textTheme.xs?.copyWithColor(
-                            DSColorUsages.text.tertiary,
+    return AvailabilityWidget(
+      enable: widget.enable,
+      child: ValueListenableBuilder<InputContainerProperties>(
+        valueListenable: _controller!,
+        builder: (ctx, value, w) {
+          final textField = TextField(
+            textAlign: widget.textAlign,
+            focusNode: value.focusNode,
+            readOnly: widget.readOnly || !widget.enable,
+            controller: value.tdController,
+            maxLength: widget.maxLength,
+            autofillHints: widget.autofillHints,
+            decoration: InputDecoration(
+              alignLabelWithHint: true,
+              counter: widget.maxLength != null
+                  ? Container(
+                      padding: const EdgeInsets.symmetric(
+                        horizontal: 4,
+                        vertical: 2,
+                      ),
+                      decoration: BoxDecoration(
+                        color: colors.gray.shape100,
+                        borderRadius: DSRadiuses.radiusXs.borderRadiusGeometry,
+                      ),
+                      child: ValueListenableBuilder<TextEditingValue>(
+                        valueListenable: _controller!.value.tdController,
+                        builder: (context, value, child) {
+                          return Text(
+                            '${value.text.length}/${widget.maxLength}',
+                            style: textTheme.xs?.copyWithColor(
+                              DSColorUsages.text.tertiary,
+                            ),
+                          );
+                        },
+                      ),
+                    )
+                  : null,
+              error: value.validation != null
+                  ? RichText(
+                      text: TextSpan(
+                        children: [
+                          WidgetSpan(
+                            child: Icon(
+                              Icons.warning_rounded,
+                              color: DSColorUsages.text.error,
+                              size: DSIconSizes.size16,
+                            ),
+                            alignment: PlaceholderAlignment.bottom,
                           ),
-                        );
-                      },
-                    ),
-                  )
-                : null,
-            error: value.validation != null
-                ? RichText(
-                    text: TextSpan(
-                      children: [
-                        WidgetSpan(
-                          child: Icon(
-                            Icons.warning_rounded,
-                            color: DSColorUsages.text.error,
-                            size: DSIconSizes.size16,
+                          const WidgetSpan(
+                            child: SizedBox(width: 4),
+                            alignment: PlaceholderAlignment.bottom,
                           ),
-                          alignment: PlaceholderAlignment.bottom,
-                        ),
-                        const WidgetSpan(
-                          child: SizedBox(width: 4),
-                          alignment: PlaceholderAlignment.bottom,
-                        ),
-                        TextSpan(
-                          text: value.validation ?? '',
-                          style: textTheme.sm?.regular.copyWith(
-                            color: DSColorUsages.text.error,
-                          ),
-                        ),
-                      ],
-                    ),
-                  )
-                : null,
-            label: widget.title != null
-                ? RichText(
-                    text: TextSpan(
-                      text: widget.title ?? '',
-                      style: widget.titleStyle ??
-                          textTheme.sm?.regular.copyWith(
-                            color: DSColorUsages.text.secondary,
-                          ),
-                      children: [
-                        if (widget.required)
                           TextSpan(
-                            text: '*',
+                            text: value.validation ?? '',
                             style: textTheme.sm?.regular.copyWith(
                               color: DSColorUsages.text.error,
                             ),
                           ),
-                      ],
-                    ),
-                  )
-                : null,
-            hintText: widget.hint,
-            errorMaxLines: 2,
-            suffixIcon: _getSuffixIcon()?.let(
-              (it) => it != null
-                  ? AvailabilityWidget(enable: widget.enable, child: it)
+                        ],
+                      ),
+                    )
                   : null,
+              label: widget.title != null
+                  ? RichText(
+                      text: TextSpan(
+                        text: widget.title ?? '',
+                        style: widget.titleStyle ??
+                            textTheme.sm?.regular.copyWith(
+                              color: DSColorUsages.text.secondary,
+                            ),
+                        children: [
+                          if (widget.required)
+                            TextSpan(
+                              text: '*',
+                              style: textTheme.sm?.regular.copyWith(
+                                color: DSColorUsages.text.error,
+                              ),
+                            ),
+                        ],
+                      ),
+                    )
+                  : null,
+              hintText: widget.hint,
+              errorMaxLines: 2,
+              suffixIcon: _getSuffixIcon()?.let(
+                (it) => it != null
+                    ? AvailabilityWidget(enable: widget.enable, child: it)
+                    : null,
+              ),
+              suffixIconConstraints: BoxConstraints(
+                minHeight: widget.suffixIconSize,
+                minWidth: widget.suffixIconSize,
+              ),
+              prefixIcon: _getPrefixIcon(),
+              prefixIconConstraints: BoxConstraints(
+                minHeight: widget.prefixIconSize,
+                minWidth: widget.prefixIconSize,
+              ),
+              isDense: widget.isDense,
+              counterStyle: textTheme.xs,
             ),
-            suffixIconConstraints: BoxConstraints(
-              minHeight: widget.suffixIconSize,
-              minWidth: widget.suffixIconSize,
-            ),
-            prefixIcon: _getPrefixIcon(),
-            prefixIconConstraints: BoxConstraints(
-              minHeight: widget.prefixIconSize,
-              minWidth: widget.prefixIconSize,
-            ),
-            isDense: widget.isDense,
-            counterStyle: textTheme.xs,
-          ),
-          keyboardType: widget.keyboardType,
-          textCapitalization: widget.textCapitalization,
-          style: _getStyle(),
-          obscureText: widget.isPassword && _controller?.isShowPass != true,
-          onChanged: (text) {
-            _showPrefixFilterFn(text);
+            keyboardType: widget.keyboardType,
+            textCapitalization: widget.textCapitalization,
+            style: _getStyle(),
+            obscureText: widget.isPassword && _controller?.isShowPass != true,
+            onChanged: (text) {
+              _showPrefixFilterFn(text);
 
-            if (value.validation != null) {
-              _controller?.resetValidation();
-            }
-            widget.onTextChanged?.call(text, _controller);
-          },
-          onEditingComplete: () => widget.onEditingComplete?.call(_controller),
-          maxLines: widget.maxLines,
-          minLines: widget.minLines,
-          inputFormatters: widget.inputFormatters,
-          onTap: () => widget.enable ? widget.onTap?.call(_controller) : null,
-          onSubmitted: (String text) =>
-              widget.onSubmitted?.call(text, _controller),
-          textInputAction: widget.textInputAction,
-          onTapOutside: (event) {
-            if (widget.isAutoUnfocus) {
-              _controller?.unfocus();
-            }
-            widget.onTapOutSide?.call(_controller);
-          },
-        );
+              if (value.validation != null) {
+                _controller?.resetValidation();
+              }
+              widget.onTextChanged?.call(text, _controller);
+            },
+            onEditingComplete: () =>
+                widget.onEditingComplete?.call(_controller),
+            maxLines: widget.maxLines,
+            minLines: widget.minLines,
+            inputFormatters: widget.inputFormatters,
+            onTap: () => widget.enable ? widget.onTap?.call(_controller) : null,
+            onSubmitted: (String text) =>
+                widget.onSubmitted?.call(text, _controller),
+            textInputAction: widget.textInputAction,
+            onTapOutside: (event) {
+              if (widget.isAutoUnfocus) {
+                _controller?.unfocus();
+              }
+              widget.onTapOutSide?.call(_controller);
+            },
+          );
 
-        return textField;
-      },
+          return textField;
+        },
+      ),
     );
   }
 
