@@ -21,6 +21,7 @@ class AppBottomModal<T> extends StatefulWidget {
   final Widget? child;
   final ValueNotifier<T?>? selectedItemNotifier;
   final T? initialData;
+  final bool isExpandedBody;
 
   const AppBottomModal({
     super.key,
@@ -38,6 +39,7 @@ class AppBottomModal<T> extends StatefulWidget {
     this.child,
     this.selectedItemNotifier,
     this.initialData,
+    this.isExpandedBody = false,
   });
 
   @override
@@ -57,7 +59,8 @@ class _AppBottomModalState<T> extends State<AppBottomModal<T>> {
   bool get isShowDismissButton => widget.isShowDismissButton;
   bool get isShowApplyButton => widget.onConfirm != null;
 
-  bool get isShowActionButtons => isShowDismissButton && isShowApplyButton;
+  bool get isShowActionButtons => isShowDismissButton || isShowApplyButton;
+  double get paddingBottom => MediaQuery.of(context).padding.bottom;
 
   @override
   void initState() {
@@ -101,6 +104,11 @@ class _AppBottomModalState<T> extends State<AppBottomModal<T>> {
 
   @override
   Widget build(BuildContext context) {
+    final child = widget.child != null
+        ? widget.isExpandedBody
+            ? Expanded(child: widget.child!)
+            : widget.child!
+        : null;
     return Container(
       decoration: BoxDecoration(
         color: context.colors.gray.white,
@@ -165,7 +173,7 @@ class _AppBottomModalState<T> extends State<AppBottomModal<T>> {
             ],
           ),
 
-          if (widget.child != null) widget.child!,
+          if (child != null) child,
 
           // Bottom button
           if (isShowActionButtons)
@@ -182,7 +190,7 @@ class _AppBottomModalState<T> extends State<AppBottomModal<T>> {
                           if (widget.isShowDismissButton) ...[
                             Expanded(
                               child: DSButton(
-                                label: widget.cancelText ?? 'Bỏ chọn',
+                                label: widget.cancelText ?? 'Bỏ chọn',
                                 onPressed: _onClear,
                                 variant: DSButtonVariants.tertiary,
                                 isDisabled: selectedItem == null,
@@ -192,7 +200,7 @@ class _AppBottomModalState<T> extends State<AppBottomModal<T>> {
                           ],
                           Expanded(
                             child: DSButton(
-                              label: widget.applyText ?? 'Áp dụng',
+                              label: widget.applyText ?? 'Áp dụng',
                               onPressed: _onConfirm,
                               variant: DSButtonVariants.primary,
                               isDisabled: _isNotChanged(),
@@ -204,6 +212,10 @@ class _AppBottomModalState<T> extends State<AppBottomModal<T>> {
                   );
                 },
               ),
+            )
+          else
+            SizedBox(
+              height: paddingBottom,
             ),
         ],
       ),
