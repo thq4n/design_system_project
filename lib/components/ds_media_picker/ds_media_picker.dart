@@ -1254,29 +1254,16 @@ class _DSMediaPickerState extends DSStateBase<DSMediaPicker> {
 
       List<XFile> pickedFiles = [];
 
-      if (widget.maxMedia == 1) {
-        final XFile? pickedFile = await _imagePicker.pickImage(
-          source: ImageSource.camera,
-          maxWidth:
-              widget.enableImageResize ? widget.maxImageWidth.toDouble() : null,
-          maxHeight: widget.enableImageResize
-              ? widget.maxImageHeight.toDouble()
-              : null,
-          imageQuality: widget.imageQuality,
-        );
+      final XFile? pickedFile = await _imagePicker.pickImage(
+        source: ImageSource.camera,
+        maxWidth:
+            widget.enableImageResize ? widget.maxImageWidth.toDouble() : null,
+        maxHeight:
+            widget.enableImageResize ? widget.maxImageHeight.toDouble() : null,
+        imageQuality: widget.imageQuality,
+      );
 
-        pickedFiles = pickedFile != null ? [pickedFile] : [];
-      } else {
-        pickedFiles = await _imagePicker.pickMultiImage(
-          maxWidth:
-              widget.enableImageResize ? widget.maxImageWidth.toDouble() : null,
-          maxHeight: widget.enableImageResize
-              ? widget.maxImageHeight.toDouble()
-              : null,
-          imageQuality: widget.imageQuality,
-          limit: availableSlots,
-        );
-      }
+      pickedFiles = pickedFile != null ? [pickedFile] : [];
 
       final files = pickedFiles.map((xFile) => File(xFile.path)).toList();
       await _onMediaPicked(files);
