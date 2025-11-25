@@ -41,7 +41,7 @@ class _DSTooltipState extends DSStateBase<DSTooltip> {
       waitDuration: _componentTheme.waitDuration,
       showDuration: _componentTheme.showDuration,
       verticalOffset: _componentTheme.verticalOffset,
-      preferBelow: widget.preferBelow ?? false,
+      preferBelow: widget.preferBelow,
       child: widget.child,
     );
   }
