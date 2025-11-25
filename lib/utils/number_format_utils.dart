@@ -71,16 +71,7 @@ class UsernameInputFormatter extends TextInputFormatter {
     TextEditingValue oldValue,
     TextEditingValue newValue,
   ) {
-    if (newValue.selection.baseOffset == 0) {
-      return newValue;
-    }
-
-    final newText = newValue.text.replaceAll(' ', '-').replaceAll('--', '-');
-
-    return newValue.copyWith(
-      text: newText,
-      selection: TextSelection.collapsed(offset: newText.length),
-    );
+    return newValue;
   }
 }
 

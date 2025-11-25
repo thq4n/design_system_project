@@ -41,6 +41,11 @@ class AuthHeadersHelper {
 /// For authenticated network images, use the [headers] parameter to provide
 /// authentication tokens or other required headers.
 ///
+/// To prevent memory issues and app crashes with very large images
+/// (e.g., 19000x19000 pixels), the widget automatically limits the
+/// decoded image size using [maxDecodeWidth] and [maxDecodeHeight]
+/// parameters (default: 4096x4096 pixels).
+///
 /// Example usage:
 /// ```dart
 /// // Basic usage
@@ -95,6 +100,8 @@ class DSImageView extends StatelessWidget {
     this.loadingRadius,
     this.package,
     this.headers,
+    this.maxDecodeWidth,
+    this.maxDecodeHeight,
   });
 
   /// The image source URL, asset path, or SVG path
@@ -127,6 +134,16 @@ class DSImageView extends StatelessWidget {
   /// HTTP headers to include with network requests (useful for authentication)
   final Map<String, String>? headers;
 
+  /// Maximum width for decoded image to prevent memory issues.
+  /// Defaults to 4096 pixels. Images larger than this will be
+  /// downscaled during decoding to prevent app crashes.
+  final int? maxDecodeWidth;
+
+  /// Maximum height for decoded image to prevent memory issues.
+  /// Defaults to 4096 pixels. Images larger than this will be
+  /// downscaled during decoding to prevent app crashes.
+  final int? maxDecodeHeight;
+
   @override
   Widget build(BuildContext context) {
     return _buildImage(source.isEmpty ? placeHolder ?? '' : source);
@@ -156,6 +173,8 @@ class DSImageView extends StatelessWidget {
         alignment: alignment,
         loadingRadius: loadingRadius,
         headers: headers,
+        maxDecodeWidth: maxDecodeWidth,
+        maxDecodeHeight: maxDecodeHeight,
       );
     }
     if (image.contains('.svg')) {
@@ -188,6 +207,10 @@ class DSImageView extends StatelessWidget {
 /// This widget wraps ExtendedImage.network
 ///  and provides additional functionality
 /// for handling authenticated image requests and custom UI states.
+///
+/// To prevent memory issues with very large images (e.g., 19000x19000),
+/// the widget automatically limits the decoded image size using
+/// [maxDecodeWidth] and [maxDecodeHeight] parameters.
 class ExtendedNetworkImage extends StatelessWidget {
   const ExtendedNetworkImage(
     this.image, {
@@ -204,6 +227,8 @@ class ExtendedNetworkImage extends StatelessWidget {
     this.cached = true,
     this.loadingRadius,
     this.headers,
+    this.maxDecodeWidth,
+    this.maxDecodeHeight,
   });
 
   /// The network image URL
@@ -245,17 +270,46 @@ class ExtendedNetworkImage extends StatelessWidget {
   /// HTTP headers to include with network requests (useful for authentication)
   final Map<String, String>? headers;
 
+  /// Maximum width for decoded image to prevent memory issues.
+  /// Defaults to 4096 pixels. Images larger than this will be
+  /// downscaled during decoding to prevent app crashes.
+  final int? maxDecodeWidth;
+
+  /// Maximum height for decoded image to prevent memory issues.
+  /// Defaults to 4096 pixels. Images larger than this will be
+  /// downscaled during decoding to prevent app crashes.
+  final int? maxDecodeHeight;
+
   @override
   Widget build(BuildContext context) {
-    return ExtendedImage.network(
+    // Calculate maximum decode dimensions to prevent memory issues
+    // Default to 4096x4096 to prevent crashes with very large images
+    final int effectiveMaxWidth = maxDecodeWidth ?? 4096;
+    final int effectiveMaxHeight = maxDecodeHeight ?? 4096;
+
+    // Use ExtendedNetworkImageProvider and wrap it with ResizeImage
+    // to limit decoded image size and prevent memory issues/crashes
+    // with very large images (e.g., 19000x19000)
+    final baseProvider = ExtendedNetworkImageProvider(
       image,
+      headers: headers,
+    );
+
+    // Wrap with ResizeImage to limit decode size
+    final imageProvider = ResizeImage(
+      baseProvider,
+      width: effectiveMaxWidth,
+      height: effectiveMaxHeight,
+      allowUpscaling: false,
+    );
+
+    return ExtendedImage(
+      image: imageProvider,
       width: width,
       height: height,
       fit: fit,
       color: color,
       alignment: alignment,
-      cache: cached,
-      headers: headers,
       loadStateChanged: (state) {
         switch (state.extendedImageLoadState) {
           case LoadState.loading:
@@ -312,11 +366,15 @@ class ExtendedNetworkImage extends StatelessWidget {
 }
 
 /// Factory class for creating ImageProvider instances
-///  with support for authentication headers.
+///  with support for authentication headers and size limits.
 ///
 /// This factory automatically detects the image
 ///  type and creates the appropriate
 /// ImageProvider with optional headers for network requests.
+///
+/// To prevent memory issues with very large images, the factory
+/// automatically wraps network image providers with ResizeImage
+/// to limit the decoded image size.
 ///
 /// Example usage:
 /// ```dart
@@ -332,14 +390,38 @@ class ExtendedNetworkImage extends StatelessWidget {
 /// final provider = ImageViewProviderFactory(
 ///   'https://example.com/image.jpg',
 /// ).provider;
+///
+/// // With custom size limits
+/// final provider = ImageViewProviderFactory(
+///   'https://example.com/large-image.jpg',
+///   maxDecodeWidth: 2048,
+///   maxDecodeHeight: 2048,
+/// ).provider;
 /// ```
 class ImageViewProviderFactory {
-  ImageViewProviderFactory(this.source, {this.headers})
-      : provider = source.let((it) {
+  ImageViewProviderFactory(
+    this.source, {
+    this.headers,
+    this.maxDecodeWidth,
+    this.maxDecodeHeight,
+  }) : provider = source.let((it) {
           if (it?.isUrl ?? false) {
-            return ExtendedNetworkImageProvider(
+            final baseProvider = ExtendedNetworkImageProvider(
               it!,
               headers: headers,
+            );
+
+            // Calculate maximum decode dimensions to prevent memory issues
+            // Default to 4096x4096 to prevent crashes with very large images
+            final int effectiveMaxWidth = maxDecodeWidth ?? 4096;
+            final int effectiveMaxHeight = maxDecodeHeight ?? 4096;
+
+            // Wrap with ResizeImage to limit decode size
+            return ResizeImage(
+              baseProvider,
+              width: effectiveMaxWidth,
+              height: effectiveMaxHeight,
+              allowUpscaling: false,
             );
           }
           if (it?.contains('.svg') ?? false) {
@@ -353,6 +435,16 @@ class ImageViewProviderFactory {
 
   /// HTTP headers to include with network requests (useful for authentication)
   final Map<String, String>? headers;
+
+  /// Maximum width for decoded image to prevent memory issues.
+  /// Defaults to 4096 pixels. Images larger than this will be
+  /// downscaled during decoding to prevent app crashes.
+  final int? maxDecodeWidth;
+
+  /// Maximum height for decoded image to prevent memory issues.
+  /// Defaults to 4096 pixels. Images larger than this will be
+  /// downscaled during decoding to prevent app crashes.
+  final int? maxDecodeHeight;
 
   /// The created ImageProvider instance
   final ImageProvider provider;

@@ -79,7 +79,7 @@ class DSCalendarThemeExtension
 
     final calendarStyle = CalendarStyle(
       markerSize: markerSize,
-      outsideDaysVisible: false,
+      outsideDaysVisible: true,
       markerDecoration: markerDecoration,
       todayDecoration: todayDecoration,
       todayTextStyle: todayTextStyle,

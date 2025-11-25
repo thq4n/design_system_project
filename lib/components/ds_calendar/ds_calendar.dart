@@ -3,18 +3,36 @@ import 'package:table_calendar/table_calendar.dart';
 
 import '../../design_system_project.dart';
 
-/// A customizable calendar widget with range selection support
+/// Selection mode for the calendar
+enum DSCalendarSelectionMode {
+  /// Single date selection mode
+  single,
+
+  /// Date range selection mode
+  range,
+}
+
+/// A customizable calendar widget with single date and range selection support
 class DSCalendar extends StatefulWidget {
   final Locale locale;
 
-  /// Callback when date range is selected
+  /// Selection mode: single date or range
+  final DSCalendarSelectionMode selectionMode;
+
+  /// Callback when date range is selected (for range mode)
   final void Function(DateTime? start, DateTime? end)? onRangeSelected;
 
-  /// Initial selected start date
+  /// Callback when single date is selected (for single mode)
+  final void Function(DateTime? date)? onDateSelected;
+
+  /// Initial selected start date (for range mode)
   final DateTime? initialStartDate;
 
-  /// Initial selected end date
+  /// Initial selected end date (for range mode)
   final DateTime? initialEndDate;
+
+  /// Initial selected date (for single mode)
+  final DateTime? initialSelectedDate;
 
   /// Min date
   final DateTime? minDate;
@@ -25,9 +43,12 @@ class DSCalendar extends StatefulWidget {
   const DSCalendar({
     super.key,
     this.locale = AppLocaleSupportConstants.vi,
+    this.selectionMode = DSCalendarSelectionMode.range,
     this.onRangeSelected,
+    this.onDateSelected,
     this.initialStartDate,
     this.initialEndDate,
+    this.initialSelectedDate,
     this.minDate,
     this.maxDate,
   });
@@ -71,6 +92,7 @@ class _DSCalendarState extends DSStateBase<DSCalendar> {
     final _minDate = widget.minDate ?? _defaultMinDate;
     final _initialStart = widget.initialStartDate;
     final _initialEnd = widget.initialEndDate;
+    final _initialSelected = widget.initialSelectedDate;
     DateTime? _candidate = _minDate;
 
     if (_initialStart != null && _initialStart.isBefore(_candidate)) {
@@ -79,6 +101,9 @@ class _DSCalendarState extends DSStateBase<DSCalendar> {
     if (_initialEnd != null && _initialEnd.isBefore(_candidate)) {
       _candidate = _initialEnd;
     }
+    if (_initialSelected != null && _initialSelected.isBefore(_candidate)) {
+      _candidate = _initialSelected;
+    }
     return _candidate;
   }
 
@@ -86,6 +111,7 @@ class _DSCalendarState extends DSStateBase<DSCalendar> {
     final _maxDate = widget.maxDate ?? _defaultMaxDate;
     final _initialStart = widget.initialStartDate;
     final _initialEnd = widget.initialEndDate;
+    final _initialSelected = widget.initialSelectedDate;
     DateTime? _candidate = _maxDate;
 
     if (_initialStart != null && _initialStart.isAfter(_candidate)) {
@@ -93,6 +119,9 @@ class _DSCalendarState extends DSStateBase<DSCalendar> {
     }
     if (_initialEnd != null && _initialEnd.isAfter(_candidate)) {
       _candidate = _initialEnd;
+    }
+    if (_initialSelected != null && _initialSelected.isAfter(_candidate)) {
+      _candidate = _initialSelected;
     }
     return _candidate;
   }
@@ -103,8 +132,12 @@ class _DSCalendarState extends DSStateBase<DSCalendar> {
   @override
   void initState() {
     super.initState();
-    selectedStartDayNotifier.value = widget.initialStartDate;
-    selectedEndDayNotifier.value = widget.initialEndDate;
+    if (widget.selectionMode == DSCalendarSelectionMode.range) {
+      selectedStartDayNotifier.value = widget.initialStartDate;
+      selectedEndDayNotifier.value = widget.initialEndDate;
+    } else {
+      selectedDateNotifier.value = widget.initialSelectedDate;
+    }
   }
 
   @override
@@ -221,13 +254,24 @@ class _DSCalendarState extends DSStateBase<DSCalendar> {
       focusedDay: DateTime.now(),
       firstDay: _firstDay,
       lastDay: _lastDay,
-      rangeStartDay: selectedStartDayNotifier.value,
-      rangeEndDay: selectedEndDayNotifier.value,
-      rangeSelectionMode: RangeSelectionMode.toggledOn,
+      rangeStartDay: widget.selectionMode == DSCalendarSelectionMode.range
+          ? selectedStartDayNotifier.value
+          : null,
+      rangeEndDay: widget.selectionMode == DSCalendarSelectionMode.range
+          ? selectedEndDayNotifier.value
+          : null,
+      selectedDayPredicate: _isDaySelected,
+      rangeSelectionMode: widget.selectionMode == DSCalendarSelectionMode.range
+          ? RangeSelectionMode.toggledOn
+          : RangeSelectionMode.disabled,
       daysOfWeekHeight: componentTheme.dayOfWeekHeight,
       calendarBuilders: _buildCalendarBuilders(),
-      onRangeSelected: _onRangeSelected,
-      selectedDayPredicate: _isDaySelected,
+      onRangeSelected: widget.selectionMode == DSCalendarSelectionMode.range
+          ? _onRangeSelected
+          : null,
+      onDaySelected: widget.selectionMode == DSCalendarSelectionMode.single
+          ? _onDaySelected
+          : null,
       calendarStyle: componentTheme.calendarStyle,
       eventLoader: _getEventsForDay,
     );
@@ -309,9 +353,18 @@ class _DSCalendarState extends DSStateBase<DSCalendar> {
     widget.onRangeSelected?.call(start, end);
   }
 
+  void _onDaySelected(DateTime selectedDay, DateTime focusedDay) {
+    selectedDateNotifier.value = selectedDay;
+    widget.onDateSelected?.call(selectedDay);
+  }
+
   bool _isDaySelected(DateTime day) {
-    return (selectedStartDayNotifier.value?.isSameDay(day) ?? false) ||
-        (selectedEndDayNotifier.value?.isSameDay(day) ?? false);
+    if (widget.selectionMode == DSCalendarSelectionMode.range) {
+      return (selectedStartDayNotifier.value?.isSameDay(day) ?? false) ||
+          (selectedEndDayNotifier.value?.isSameDay(day) ?? false);
+    } else {
+      return selectedDateNotifier.value?.isSameDay(day) ?? false;
+    }
   }
 
   List<DateTime> _getEventsForDay(DateTime day) {

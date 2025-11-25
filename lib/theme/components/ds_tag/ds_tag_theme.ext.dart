@@ -92,7 +92,7 @@ class DSTagThemeExtension extends ThemeExtension<DSTagThemeExtension> {
   DSTextStyle? _getTextStyleBySize(DSTagSizes size) {
     switch (size) {
       case DSTagSizes.sm:
-        return textTheme.base?.medium;
+        return textTheme.xxs?.medium;
       case DSTagSizes.md:
         return textTheme.sm?.medium;
     }

@@ -10,7 +10,7 @@ class DSTooltip extends StatefulWidget {
   final int? waitDuration;
   final int? showDuration;
   final Widget child;
-  final bool preferBelow;
+  final bool? preferBelow;
   const DSTooltip({
     super.key,
     required this.label,

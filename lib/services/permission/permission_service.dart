@@ -1,6 +1,7 @@
 import 'dart:async';
 import 'dart:io';
 
+import 'package:device_info_plus/device_info_plus.dart';
 import 'package:flutter/material.dart';
 import 'package:permission_handler/permission_handler.dart';
 import '../base/base_service.dart';
@@ -265,6 +266,21 @@ class PermissionService extends BaseService {
   ///                    Convenience Methods                      ///
   //////////////////////////////////////////////////////////////////
 
+  /// Gets Android SDK version
+  Future<int?> _getAndroidSdkVersion() async {
+    if (!Platform.isAndroid) {
+      return null;
+    }
+    try {
+      final deviceInfo = DeviceInfoPlugin();
+      final androidInfo = await deviceInfo.androidInfo;
+      return androidInfo.version.sdkInt;
+    } catch (e) {
+      handleError(e, context: 'getAndroidSdkVersion');
+      return null;
+    }
+  }
+
   /// Requests camera permission
   Future<bool> requestCameraPermission(
     BuildContext context, {
@@ -302,12 +318,41 @@ class PermissionService extends BaseService {
   }
 
   /// Requests storage permission
+  ///
+  /// For Android:
+  /// - Android 12 (API 32) or lower: uses Permission.storage
+  /// - Android 13 (API 33) and above: uses Permission.photos
+  ///
+  /// For iOS:
+  /// - Uses Permission.photos
   Future<bool> requestStoragePermission(
     BuildContext context, {
     bool showWarningDialog = true,
   }) async {
+    Permission permission;
+
+    if (Platform.isIOS) {
+      // iOS uses Permission.photos
+      permission = Permission.photos;
+    } else if (Platform.isAndroid) {
+      // Android: check SDK version
+      // Android 12 (API 32) or lower: use Permission.storage
+      // Android 13 (API 33) and above: use Permission.photos
+      final sdkVersion = await _getAndroidSdkVersion();
+      if (sdkVersion != null && sdkVersion >= 33) {
+        // Android 13 (API 33) and above
+        permission = Permission.photos;
+      } else {
+        // Android 12 (API 32) or lower
+        permission = Permission.storage;
+      }
+    } else {
+      // Fallback for other platforms
+      permission = Permission.storage;
+    }
+
     return requestPermission(
-      Permission.storage,
+      permission,
       context,
       showWarningDialog: showWarningDialog,
     );

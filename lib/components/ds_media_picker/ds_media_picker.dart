@@ -2,6 +2,7 @@ import 'dart:async';
 import 'dart:io';
 import 'dart:typed_data';
 
+import 'package:device_info_plus/device_info_plus.dart';
 import 'package:dotted_border/dotted_border.dart';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
@@ -195,6 +196,9 @@ class DSMediaPickerController extends ValueNotifier<List<DSMediaPicked>> {
   /// Upload callback function
   Future<String?> Function(File file)? _uploadImageToServer;
 
+  /// Get headers callback function
+  Map<String, String>? Function()? getHeadersCallback;
+
   /// Set upload callback function
   set setUploadCallback(Future<String?> Function(File file)? callback) {
     _uploadImageToServer = callback;
@@ -230,6 +234,7 @@ class DSMediaPickerController extends ValueNotifier<List<DSMediaPicked>> {
     this.allowMultiple = false,
     this.genFileName,
     this.onMediaPicked,
+    this.getHeadersCallback,
   }) : super(medias);
 
   var _uploadUnstagedMediaRequest = 0;
@@ -509,6 +514,8 @@ class _DSMediaPickerState extends DSStateBase<DSMediaPicker> {
   final _imagePicker = ImagePicker();
 
   double get borderRadius => 8.0; // Fixed border radius
+
+  int get availableSlots => widget.maxMedia! - widget.controller.value.length;
 
   @override
   void initState() {
@@ -829,6 +836,7 @@ class _DSMediaPickerState extends DSStateBase<DSMediaPicker> {
             fit: BoxFit.cover,
             width: constraints.maxWidth,
             height: constraints.maxHeight,
+            headers: widget.controller.getHeadersCallback?.call(),
           );
   }
 
@@ -1003,6 +1011,20 @@ class _DSMediaPickerState extends DSStateBase<DSMediaPicker> {
     }
   }
 
+  /// Lấy Android SDK version
+  Future<int?> _getAndroidSdkVersion() async {
+    if (!Platform.isAndroid) {
+      return null;
+    }
+    try {
+      final deviceInfo = DeviceInfoPlugin();
+      final androidInfo = await deviceInfo.androidInfo;
+      return androidInfo.version.sdkInt;
+    } catch (e) {
+      return null;
+    }
+  }
+
   /// Kiểm tra và request quyền cần thiết cho media picker
   Future<bool> _checkAndRequestPermissions() async {
     final permissions = <Permission>[];
@@ -1016,12 +1038,21 @@ class _DSMediaPickerState extends DSStateBase<DSMediaPicker> {
     // Thêm quyền thư viện ảnh nếu cần
     if (widget.mediaSource == DSMediaSource.gallery ||
         widget.mediaSource == DSMediaSource.both) {
-      // Trên iOS sử dụng Permission.photos,
-      //  trên Android sử dụng Permission.storage
       if (Platform.isIOS) {
+        // Trên iOS sử dụng Permission.photos
         permissions.add(Permission.photos);
-      } else {
-        permissions.add(Permission.storage);
+      } else if (Platform.isAndroid) {
+        // Trên Android: kiểm tra SDK version
+        // Android 12 (API 32) trở xuống: sử dụng Permission.storage
+        // Android 13 (API 33) trở lên: sử dụng Permission.photos
+        final sdkVersion = await _getAndroidSdkVersion();
+        if (sdkVersion != null && sdkVersion >= 33) {
+          // Android 13 (API 33) and above
+          permissions.add(Permission.photos);
+        } else {
+          // Android 12 (API 32) or lower
+          permissions.add(Permission.storage);
+        }
       }
     }
 
@@ -1131,9 +1162,9 @@ class _DSMediaPickerState extends DSStateBase<DSMediaPicker> {
       return;
     }
     if (widget.mediaSource == DSMediaSource.both) {
-      await showDialog(
+      await showAdaptiveDialog(
         context: context,
-        builder: (context) => AlertDialog(
+        builder: (context) => AlertDialog.adaptive(
           title: Text(_dialogTitle),
           content: Text(widget.pickDialogMessage ?? 'Chọn nguồn để chọn media'),
           actions: [
@@ -1195,6 +1226,7 @@ class _DSMediaPickerState extends DSStateBase<DSMediaPicker> {
               ? widget.maxImageHeight.toDouble()
               : null,
           imageQuality: widget.imageQuality,
+          limit: availableSlots,
         );
       }
 
@@ -1220,6 +1252,8 @@ class _DSMediaPickerState extends DSStateBase<DSMediaPicker> {
         }
       }
 
+      List<XFile> pickedFiles = [];
+
       final XFile? pickedFile = await _imagePicker.pickImage(
         source: ImageSource.camera,
         maxWidth:
@@ -1229,10 +1263,10 @@ class _DSMediaPickerState extends DSStateBase<DSMediaPicker> {
         imageQuality: widget.imageQuality,
       );
 
-      if (pickedFile != null) {
-        final file = File(pickedFile.path);
-        await _onMediaPicked([file]);
-      }
+      pickedFiles = pickedFile != null ? [pickedFile] : [];
+
+      final files = pickedFiles.map((xFile) => File(xFile.path)).toList();
+      await _onMediaPicked(files);
     } catch (error) {
       debugPrint('Error picking from camera: $error');
       _showPlaceholderMessage('Có lỗi xảy ra khi chụp ảnh');
@@ -1283,8 +1317,6 @@ class _DSMediaPickerState extends DSStateBase<DSMediaPicker> {
     } else {
       // Apply max media limit for multiple selection
       if (widget.maxMedia != null) {
-        final availableSlots =
-            widget.maxMedia! - widget.controller.value.length;
         if (availableSlots > 0) {
           for (final media in newMedias.take(availableSlots)) {
             widget.controller.addAll([media]);
@@ -1356,7 +1388,10 @@ class _DSMediaPickerState extends DSStateBase<DSMediaPicker> {
     await viewImage(
       imageProvider: image.mediaFile != null
           ? FileImage(image.mediaFile!)
-          : NetworkImage(image.url!),
+          : NetworkImage(
+              image.url!,
+              headers: widget.controller.getHeadersCallback?.call(),
+            ),
     );
   }
 }
