@@ -157,9 +157,25 @@ class DSBasicBrandScreenForm extends StatefulWidget {
   /// Optional - only shown if provided.
   final Widget? bottomNavigationBar;
 
+  /// Callback function for search text changed.
+  ///
+  /// Optional - only shown if provided.
   final void Function(String searchText)? onSearching;
 
+  /// Hint text for the search input.
+  ///
+  /// Optional - only shown if provided.
   final String? searchHint;
+
+  /// Whether to always show the search input.
+  ///
+  /// Defaults to false if not provided.
+  final bool isAlwaysShowSearch;
+
+  /// Whether to auto focus the search input.
+  ///
+  /// Defaults to false if not provided.
+  final bool isAutoFocusSearch;
 
   /// Creates a basic screen form widget.
   ///
@@ -194,6 +210,8 @@ class DSBasicBrandScreenForm extends StatefulWidget {
     this.bottomNavigationBar,
     this.onSearching,
     this.searchHint,
+    this.isAlwaysShowSearch = false,
+    this.isAutoFocusSearch = false,
   });
 
   /// Creates a standardized app bar action button with consistent styling.
@@ -342,8 +360,17 @@ class _DSBasicBrandScreenFormState extends DSStateBase<DSBasicBrandScreenForm> {
           widget.actions.length <= 1 &&
           widget.description?.isNotEmpty != true);
 
-  final isSearchingNotifier = ValueNotifier<bool>(false);
+  late final isSearchingNotifier =
+      ValueNotifier<bool>(widget.isAlwaysShowSearch);
   final _searchController = DSInputController();
+
+  @override
+  void initState() {
+    super.initState();
+    if (widget.isAutoFocusSearch) {
+      _searchController.requestFocus();
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -444,7 +471,8 @@ class _DSBasicBrandScreenFormState extends DSStateBase<DSBasicBrandScreenForm> {
                         DSBasicBrandScreenForm.createAppBarActionButton(
                           icon: DSAssets.vuesax.arrowLeft2Linear,
                           onPressed: () {
-                            if (isSearchingNotifier.value) {
+                            if (isSearchingNotifier.value &&
+                                !widget.isAlwaysShowSearch) {
                               isSearchingNotifier.value = false;
                               if (_searchController.text.isNotEmpty) {
                                 _searchController.clear();
@@ -510,7 +538,7 @@ class _DSBasicBrandScreenFormState extends DSStateBase<DSBasicBrandScreenForm> {
                   const SizedBox(width: 56),
                 ],
               ),
-              if (widget.onSearching != null)
+              if (widget.onSearching != null || widget.isAlwaysShowSearch)
                 Row(
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
