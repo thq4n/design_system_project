@@ -177,6 +177,11 @@ class DSBasicBrandScreenForm extends StatefulWidget {
   /// Defaults to false if not provided.
   final bool isAutoFocusSearch;
 
+  /// The controller for the search input.
+  ///
+  /// Optional - only shown if provided.
+  final DSInputController? searchController;
+
   /// Creates a basic screen form widget.
   ///
   /// All parameters are optional and have sensible defaults based on the design system.
@@ -212,6 +217,7 @@ class DSBasicBrandScreenForm extends StatefulWidget {
     this.searchHint,
     this.isAlwaysShowSearch = false,
     this.isAutoFocusSearch = false,
+    this.searchController,
   });
 
   /// Creates a standardized app bar action button with consistent styling.
@@ -362,7 +368,7 @@ class _DSBasicBrandScreenFormState extends DSStateBase<DSBasicBrandScreenForm> {
 
   late final isSearchingNotifier =
       ValueNotifier<bool>(widget.isAlwaysShowSearch);
-  final _searchController = DSInputController();
+  late final _searchController = widget.searchController ?? DSInputController();
 
   @override
   void initState() {

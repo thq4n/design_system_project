@@ -78,7 +78,7 @@ class _DSCalendarState extends DSStateBase<DSCalendar> {
   final selectedDateNotifier = ValueNotifier<DateTime?>(null);
   final selectedStartDayNotifier = ValueNotifier<DateTime?>(null);
   final selectedEndDayNotifier = ValueNotifier<DateTime?>(null);
-  final focusedDayNotifier = ValueNotifier<DateTime?>(DateTime.now());
+  final focusedDayNotifier = ValueNotifier<DateTime>(DateTime.now());
 
   // ===========================================================================
   // CONTROLLERS
@@ -222,10 +222,6 @@ class _DSCalendarState extends DSStateBase<DSCalendar> {
       child: ValueListenableBuilder(
         valueListenable: focusedDayNotifier,
         builder: (context, value, child) {
-          if (value == null) {
-            return const SizedBox.shrink();
-          }
-
           final date = DateTime(value.year, value.month, 1);
           return Text(
             date.toLocalmmCommayyyy(),
@@ -251,7 +247,7 @@ class _DSCalendarState extends DSStateBase<DSCalendar> {
       },
       headerVisible: false,
       startingDayOfWeek: StartingDayOfWeek.monday,
-      focusedDay: DateTime.now(),
+      focusedDay: focusedDayNotifier.value,
       firstDay: _firstDay,
       lastDay: _lastDay,
       rangeStartDay: widget.selectionMode == DSCalendarSelectionMode.range
@@ -350,11 +346,13 @@ class _DSCalendarState extends DSStateBase<DSCalendar> {
   void _onRangeSelected(DateTime? start, DateTime? end, DateTime focusedDay) {
     selectedStartDayNotifier.value = start;
     selectedEndDayNotifier.value = end;
+    focusedDayNotifier.value = focusedDay;
     widget.onRangeSelected?.call(start, end);
   }
 
   void _onDaySelected(DateTime selectedDay, DateTime focusedDay) {
     selectedDateNotifier.value = selectedDay;
+    focusedDayNotifier.value = focusedDay;
     widget.onDateSelected?.call(selectedDay);
   }
 
