@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import '../../base/ds_base.dart';
+import '../../extensions/extensions.dart';
 import '../../theme/ds_theme.dart';
 import '../ds_image_view/ds_image_view.dart';
 
@@ -174,14 +175,13 @@ class _DSButtonState extends DSStateBase<DSButton> {
                         componentTheme.pressedState.prefixIconColor,
                       ),
                     ),
-                    SizedBox(width: widget.size.elementSpacing),
                   ],
-                  Text(
-                    widget.label ?? '',
-                    // Let foregroundColor handle text color changes
-                  ),
+                  if (widget.label != null)
+                    Text(
+                      widget.label ?? '',
+                      // Let foregroundColor handle text color changes
+                    ),
                   if (widget.suffixIcon != null) ...[
-                    SizedBox(width: widget.size.elementSpacing),
                     SizedBox(
                       width: widget.size.suffixIconSize,
                       height: widget.size.suffixIconSize,
@@ -192,7 +192,7 @@ class _DSButtonState extends DSStateBase<DSButton> {
                       ),
                     ),
                   ],
-                ],
+                ].withSeparators(SizedBox(width: widget.size.elementSpacing)),
               ),
       ),
     );
