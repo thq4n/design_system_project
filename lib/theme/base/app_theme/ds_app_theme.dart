@@ -87,6 +87,19 @@ class DSAppTheme {
       DSAvatarThemeExtension(textTheme: _textTheme),
       DSTagThemeExtension(textTheme: _textTheme),
       DSTooltipThemeExtension(textTheme: _textTheme),
+      DSTimelineThemeExtension(textTheme: _textTheme),
+      DSExpandableThemeExtension(
+        theme: DSExpandableTheme(
+          iconColor: DSColorUsages.icon.secondary,
+          iconSize: DSIconSizes.size24,
+          headerPadding:
+              const EdgeInsets.symmetric(vertical: 12, horizontal: 4),
+          bodyPadding: const EdgeInsets.only(top: 8),
+          borderRadius: DSRadiuses.radiusSm,
+          animationDuration: const Duration(milliseconds: 300),
+          animationCurve: Curves.easeInOut,
+        ),
+      ),
     ],
   );
 
