@@ -25,25 +25,26 @@ extension DSStateBaseExt on DSStateBase {
     double? right,
     double? bottom,
   }) {
-    fToast.removeQueuedCustomToasts();
-    fToast.removeCustomToast();
-    fToast.showToast(
-      child: AppToastWidget(
-        message: message,
-        icon: icon,
-        toastType: toastType ?? ToastType.success,
-      ),
-      toastDuration: const Duration(seconds: 3),
-      positionedToastBuilder: (context, child, gravity) {
-        return Positioned(
-          top: top != null ? max(16, top) : null,
-          left: left,
-          right: right,
-          bottom: bottom,
-          child: child,
-        );
-      },
-    );
+    fToast
+      ..removeQueuedCustomToasts()
+      ..removeCustomToast()
+      ..showToast(
+        child: AppToastWidget(
+          message: message,
+          icon: icon,
+          toastType: toastType ?? ToastType.success,
+        ),
+        toastDuration: const Duration(seconds: 3),
+        positionedToastBuilder: (context, child, gravity) {
+          return Positioned(
+            top: top != null ? max(16, top) : null,
+            left: left,
+            right: right,
+            bottom: bottom,
+            child: child,
+          );
+        },
+      );
   }
 
   void showErrorToast({
@@ -54,24 +55,25 @@ extension DSStateBaseExt on DSStateBase {
     double? right,
     double? bottom,
   }) {
-    fToast.removeQueuedCustomToasts();
-    fToast.removeCustomToast();
-    fToast.showToast(
-      child: AppToastWidget(
-        message: message,
-        icon: icon,
-        toastType: ToastType.error,
-      ),
-      toastDuration: const Duration(seconds: 3),
-      positionedToastBuilder: (context, child, gravity) {
-        return Positioned(
-          top: top != null ? max(16, top) : null,
-          left: left,
-          right: right,
-          bottom: bottom,
-          child: child,
-        );
-      },
-    );
+    fToast
+      ..removeQueuedCustomToasts()
+      ..removeCustomToast()
+      ..showToast(
+        child: AppToastWidget(
+          message: message,
+          icon: icon,
+          toastType: ToastType.error,
+        ),
+        toastDuration: const Duration(seconds: 3),
+        positionedToastBuilder: (context, child, gravity) {
+          return Positioned(
+            top: top != null ? max(16, top) : null,
+            left: left,
+            right: right,
+            bottom: bottom,
+            child: child,
+          );
+        },
+      );
   }
 }
