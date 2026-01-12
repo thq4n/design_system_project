@@ -57,6 +57,4 @@ class DSExpandableController extends ValueNotifier<bool> {
     value = !value;
     onExpansionChanged?.call(value);
   }
-
 }
-

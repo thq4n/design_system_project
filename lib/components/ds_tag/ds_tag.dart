@@ -12,6 +12,7 @@ class DSTag extends StatefulWidget {
   final String? suffixIcon;
   final DSTagStyles style;
   final DSColor? mainColor;
+  final DSColor? backgroundColor;
   final Function()? onTapPrefixIcon;
   final Function()? onTapSuffixIcon;
 
@@ -23,6 +24,7 @@ class DSTag extends StatefulWidget {
     this.suffixIcon,
     required this.style,
     this.mainColor,
+    this.backgroundColor,
     this.onTapPrefixIcon,
     this.onTapSuffixIcon,
   });
@@ -48,7 +50,7 @@ class _DSTagState extends DSStateBase<DSTag> {
   }
 
   DSColor? get _backgroundColor {
-    return _mainColor?.shape100;
+    return widget.backgroundColor ?? _mainColor?.shape100;
   }
 
   DSColor? get _labelColor {

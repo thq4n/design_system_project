@@ -20,7 +20,7 @@ class _DSBrandColor extends DSColor {
   @override
   DSColor get shade600 => const _DSBrandColor(0xFFD92D20);
   @override
-  DSColor get shade500 => const _DSBrandColor(
+  DSColor get shape500 => const _DSBrandColor(
         0xFFED2024,
       ); // This is likely your main "Primary Color"
 
@@ -38,7 +38,7 @@ class _DSBrandColor extends DSColor {
 
   // You might want to add a more semantic name for the primary shade
   @override
-  DSColor get primary => shade500;
+  DSColor get primary => shape500;
 
   @override
   DSColor withOpacity(double opacity) {

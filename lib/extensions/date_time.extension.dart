@@ -336,3 +336,43 @@ extension DateUtilsExtention on DateTime {
     );
   }
 }
+
+/// Formats a date range with smart display logic.
+///
+/// If both dates are on the same day, displays:
+/// **"20/12/2025 09:00 - 09:30"**
+///
+/// If dates are on different days, displays:
+/// **"20/12/2025 09:00 - 21/12/2025 09:30"**
+///
+/// Returns "--" if either date is null.
+///
+/// Examples:
+/// - Same day: `formatDateRange(DateTime(2025, 12, 20, 9, 0),
+///   DateTime(2025, 12, 20, 9, 30))` returns "20/12/2025 09:00 - 09:30"
+/// - Different days: `formatDateRange(DateTime(2025, 12, 20, 9, 0),
+///   DateTime(2025, 12, 21, 9, 30))` returns "20/12/2025 09:00 - 21/12/2025
+///   09:30"
+/// - Null values: `formatDateRange(null, null)` returns "--"
+String formatDateRange(DateTime? fromTime, DateTime? toTime) {
+  if (fromTime == null || toTime == null) {
+    return '--';
+  }
+
+  final fromLocal = fromTime.toLocal();
+  final toLocal = toTime.toLocal();
+
+  // Check if both dates are on the same day
+  if (fromLocal.isSameDay(toLocal)) {
+    // Same day: "20/12/2025 09:00 - 09:30"
+    final datePart = fromLocal.toLocalddmmyyyy();
+    final fromTimePart = fromLocal.toTimeFormat();
+    final toTimePart = toLocal.toTimeFormat();
+    return '$datePart $fromTimePart - $toTimePart';
+  } else {
+    // Different days: "20/12/2025 09:00 - 21/12/2025 09:30"
+    final fromFormatted = fromLocal.toLocalddmmyyyyHHnn();
+    final toFormatted = toLocal.toLocalddmmyyyyHHnn();
+    return '$fromFormatted - $toFormatted';
+  }
+}

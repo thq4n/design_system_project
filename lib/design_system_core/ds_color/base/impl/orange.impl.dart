@@ -19,7 +19,7 @@ class _DSOrangeColor extends DSColor {
   @override
   DSColor get shade600 => const _DSOrangeColor(0xFFE62E05);
   @override
-  DSColor get shade500 => const _DSOrangeColor(0xFFFF4405); // Primary Orange
+  DSColor get shape500 => const _DSOrangeColor(0xFFFF4405); // Primary Orange
   @override
   DSColor get shape400 => const _DSOrangeColor(0xFFFF692E);
   @override
@@ -32,7 +32,7 @@ class _DSOrangeColor extends DSColor {
   DSColor get shape50 => const _DSOrangeColor(0xFFFFF4ED);
 
   @override
-  DSColor get primary => shade500;
+  DSColor get primary => shape500;
 
   @override
   DSColor withOpacity(double opacity) {

@@ -28,9 +28,9 @@ class AppToastWidget extends StatelessWidget {
       decoration: BoxDecoration(
         borderRadius: DSRadiuses.radiusSm.borderRadiusGeometry,
         color: switch (toastType) {
-          ToastType.success => colors.green.shade500,
-          ToastType.error => colors.orange.shade500,
-          ToastType.info => colors.blue.shade500,
+          ToastType.success => colors.green.shape500,
+          ToastType.error => colors.orange.shape500,
+          ToastType.info => colors.blue.shape500,
         },
       ),
       child: Row(

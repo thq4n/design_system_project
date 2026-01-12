@@ -148,10 +148,10 @@ class DSButtonThemeExtension extends ThemeExtension<DSButtonThemeExtension> {
   DSButtonTheme get dSGhostBrandButtonTheme => DSButtonTheme(
         defaultState: DSButtonStateTheme(
           textStyle: textTheme.sm?.bold
-              .copyWithColor(DSColorUsages.text.linkRed.shade500),
+              .copyWithColor(DSColorUsages.text.linkRed.shape500),
           backgroundColor: DSColorUsages.background.transparent,
-          prefixIconColor: DSColorUsages.icon.brand.shade500,
-          suffixIconColor: DSColorUsages.icon.brand.shade500,
+          prefixIconColor: DSColorUsages.icon.brand.shape500,
+          suffixIconColor: DSColorUsages.icon.brand.shape500,
         ),
         pressedState: DSButtonStateTheme(
           textStyle: textTheme.sm?.bold

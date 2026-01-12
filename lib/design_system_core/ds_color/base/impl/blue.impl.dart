@@ -18,7 +18,7 @@ class _DSBlueColor extends DSColor {
   @override
   DSColor get shade600 => const _DSBlueColor(0xFF155EEF);
   @override
-  DSColor get shade500 => const _DSBlueColor(0xFF2970FF); // Primary Blue
+  DSColor get shape500 => const _DSBlueColor(0xFF2970FF); // Primary Blue
   @override
   DSColor get shape400 => const _DSBlueColor(0xFF528BFF);
   @override
@@ -31,7 +31,7 @@ class _DSBlueColor extends DSColor {
   DSColor get shape50 => const _DSBlueColor(0xFFEFF4FF);
 
   @override
-  DSColor get primary => shade500;
+  DSColor get primary => shape500;
 
   @override
   DSColor withOpacity(double opacity) {

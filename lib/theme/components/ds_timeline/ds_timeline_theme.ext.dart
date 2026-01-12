@@ -10,10 +10,10 @@ class DSTimelineThemeExtension
   DSTimelineTheme getDSTimelineTheme() {
     return DSTimelineTheme(
       dotColor: dsColors.gray.white,
-      dotBorderColor: dsColors.blue.shade500,
+      dotBorderColor: dsColors.blue.shape500,
       dotSize: 16,
       dotBorderThickness: 4,
-      connectorColor: dsColors.blue.shade500,
+      connectorColor: dsColors.blue.shape500,
       connectorThickness: 2.0,
       itemSpacing: 16.0,
       animationDuration: const Duration(milliseconds: 600),

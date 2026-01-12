@@ -3,8 +3,7 @@ part of '../../ds_theme.dart';
 /// Theme extension for DSTabBar component.
 ///
 /// Provides theme configuration methods for DSTabBar styling.
-class DSTabBarThemeExtension
-    extends ThemeExtension<DSTabBarThemeExtension> {
+class DSTabBarThemeExtension extends ThemeExtension<DSTabBarThemeExtension> {
   final DSTextTheme textTheme;
   final dsColors = const DSColors();
 
@@ -14,10 +13,10 @@ class DSTabBarThemeExtension
   DSTabBarTheme getDSTabBarTheme() {
     return DSTabBarTheme(
       backgroundColor: DSColorUsages.background.primary,
-      labelStyle: textTheme.base?.semibold
-          .copyWithColor(DSColorUsages.text.linkRed),
-      unselectedLabelStyle: textTheme.base?.regular
-          .copyWithColor(DSColorUsages.text.tertiary),
+      labelStyle:
+          textTheme.base?.semibold.copyWithColor(DSColorUsages.text.linkRed),
+      unselectedLabelStyle:
+          textTheme.base?.regular.copyWithColor(DSColorUsages.text.tertiary),
       indicatorGradientColors: [
         dsColors.brand
             .custom(0xFFFF3F3F)
@@ -50,4 +49,3 @@ class DSTabBarThemeExtension
     );
   }
 }
-
