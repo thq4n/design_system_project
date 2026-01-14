@@ -193,6 +193,9 @@ class _DSTimelineState<T> extends DSStateBase<DSTimeline<T>>
   List<Animation<double>> _fadeAnimations = [];
   List<Animation<Offset>> _slideAnimations = [];
   List<Animation<double>> _lineAnimations = [];
+  AnimationController? _loadingNodeController;
+  Animation<double>? _loadingNodeFadeAnimation;
+  Animation<Offset>? _loadingNodeSlideAnimation;
   bool _animationsInitialized = false;
 
   @override
@@ -215,13 +218,15 @@ class _DSTimelineState<T> extends DSStateBase<DSTimeline<T>>
   @override
   void didUpdateWidget(DSTimeline<T> oldWidget) {
     super.didUpdateWidget(oldWidget);
-    // Re-initialize animations if item count changed
-    if (oldWidget.items.length != widget.items.length &&
+    // Re-initialize animations if item count changed or isLoading changed
+    if ((oldWidget.items.length != widget.items.length ||
+            oldWidget.isLoading != widget.isLoading) &&
         _animationsInitialized) {
       // Dispose old controllers
       for (final controller in _controllers) {
         controller.dispose();
       }
+      _loadingNodeController?.dispose();
       // Re-initialize with new item count
       _initializeAnimations();
     }
@@ -275,6 +280,39 @@ class _DSTimelineState<T> extends DSStateBase<DSTimeline<T>>
         }
       });
     }
+
+    // Initialize loading node animations if isLoading is true
+    if (widget.isLoading) {
+      _loadingNodeController = AnimationController(
+        vsync: this,
+        duration: _componentTheme.animationDuration,
+      );
+
+      _loadingNodeFadeAnimation = Tween<double>(begin: 0.0, end: 1.0).animate(
+        CurvedAnimation(
+          parent: _loadingNodeController!,
+          curve: Curves.easeOut,
+        ),
+      );
+
+      _loadingNodeSlideAnimation = Tween<Offset>(
+        begin: const Offset(-0.2, 0),
+        end: Offset.zero,
+      ).animate(
+        CurvedAnimation(
+          parent: _loadingNodeController!,
+          curve: Curves.easeOutCubic,
+        ),
+      );
+
+      // Start loading node animation after all items are animated
+      final delay = _componentTheme.animationDelay * widget.items.length;
+      Future.delayed(delay, () {
+        if (mounted && _loadingNodeController != null) {
+          _loadingNodeController!.forward();
+        }
+      });
+    }
   }
 
   @override
@@ -283,6 +321,7 @@ class _DSTimelineState<T> extends DSStateBase<DSTimeline<T>>
       for (final controller in _controllers) {
         controller.dispose();
       }
+      _loadingNodeController?.dispose();
     }
     super.dispose();
   }
@@ -544,30 +583,88 @@ class _DSTimelineState<T> extends DSStateBase<DSTimeline<T>>
   Widget _buildLoadingNode() {
     final dotSize = _componentTheme.dotSize;
     final horizontalSpacing = _componentTheme.horizontalSpacing;
+    const colors = DSColors();
+
+    // Check if animations are initialized
+    if (!_animationsInitialized ||
+        _loadingNodeController == null ||
+        _loadingNodeFadeAnimation == null ||
+        _loadingNodeSlideAnimation == null) {
+      // Return non-animated version if animations aren't ready
+      return IntrinsicHeight(
+        child: Row(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            // Left side: Dot with location icon (static, no shimmer)
+            DSImageView(
+              source: DSAssets.vuesax.locationBold,
+              width: dotSize,
+              height: dotSize,
+              color: colors.gray.shape400,
+            ),
+            SizedBox(width: horizontalSpacing),
+            // Right side: Skeleton loading content
+            Expanded(
+              child: widget.loadingItemBuilder ??
+                  Shimmer.withDefaultGradient(
+                    child: const ShimmerSkeleton(
+                      type: ShimmerSkeletonType.listItem,
+                      isLoading: true,
+                      padding: EdgeInsets.zero,
+                      margin: EdgeInsets.zero,
+                    ),
+                  ),
+            ),
+          ],
+        ),
+      );
+    }
 
     return IntrinsicHeight(
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           // Left side: Dot with location icon (static, no shimmer)
-          DSImageView(
-            source: DSAssets.vuesax.locationBold,
-            width: dotSize,
-            height: dotSize,
-            color: colors.gray.shape400,
+          AnimatedBuilder(
+            animation: _loadingNodeFadeAnimation!,
+            builder: (context, child) {
+              return Opacity(
+                opacity: _loadingNodeFadeAnimation!.value,
+                child: DSImageView(
+                  source: DSAssets.vuesax.locationBold,
+                  width: dotSize,
+                  height: dotSize,
+                  color: colors.gray.shape400,
+                ),
+              );
+            },
           ),
           SizedBox(width: horizontalSpacing),
           // Right side: Skeleton loading content
           Expanded(
-            child: widget.loadingItemBuilder ??
-                Shimmer.withDefaultGradient(
-                  child: const ShimmerSkeleton(
-                    type: ShimmerSkeletonType.listItem,
-                    isLoading: true,
-                    padding: EdgeInsets.zero,
-                    margin: EdgeInsets.zero,
+            child: AnimatedBuilder(
+              animation: Listenable.merge([
+                _loadingNodeFadeAnimation!,
+                _loadingNodeSlideAnimation!,
+              ]),
+              builder: (context, child) {
+                return Opacity(
+                  opacity: _loadingNodeFadeAnimation!.value,
+                  child: SlideTransition(
+                    position: _loadingNodeSlideAnimation!,
+                    child: widget.loadingItemBuilder ??
+                        Shimmer.withDefaultGradient(
+                          child: const ShimmerSkeleton(
+                            type: ShimmerSkeletonType.listItem,
+                            isLoading: true,
+                            padding: EdgeInsets.zero,
+                            margin: EdgeInsets.zero,
+                          ),
+                        ),
                   ),
-                ),
+                );
+              },
+            ),
           ),
         ],
       ),
