@@ -16,6 +16,7 @@ class DSTimelineTheme {
   final double separatorLineThickness;
   final EdgeInsetsGeometry separatorPadding;
   final DSTextStyle? separatorTextStyle;
+  final EdgeInsetsGeometry dotMargin; 
 
   DSTimelineTheme({
     required this.dotColor,
@@ -33,5 +34,6 @@ class DSTimelineTheme {
     required this.separatorLineThickness,
     required this.separatorPadding,
     this.separatorTextStyle,
+    required this.dotMargin,
   });
 }

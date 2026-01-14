@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../base/ds_base.dart';
-import '../../design_system_core/ds_color/ds_colors_core.dart';
-import '../../theme/ds_theme.dart';
+import '../../design_system_project.dart';
 
 /// A customizable timeline widget with animations.
 ///
@@ -44,6 +42,10 @@ class DSTimeline<T> extends StatefulWidget {
 
   final Widget? loadingItemBuilder;
 
+  /// Whether to show a loading node at the end of the timeline.
+  /// When true, a skeleton loading node with location icon will be displayed.
+  final bool isLoading;
+
   /// Builder function to create a separator before an item.
   /// Returns null if no separator is needed before this item.
   /// This allows grouping items with separators between groups.
@@ -73,6 +75,7 @@ class DSTimeline<T> extends StatefulWidget {
     required this.itemBuilder,
     this.loadingItemBuilder,
     this.separatorBuilder,
+    this.isLoading = false,
   });
 
   /// Static method to create a timeline with automatic grouping by a key.
@@ -100,12 +103,14 @@ class DSTimeline<T> extends StatefulWidget {
         itemBuilder,
     Widget? loadingItemBuilder,
     Widget? Function(BuildContext context, K key)? customSeparatorBuilder,
+    bool isLoading = false,
   }) {
     return DSTimeline<T>(
       key: key,
       items: items,
       itemBuilder: itemBuilder,
       loadingItemBuilder: loadingItemBuilder,
+      isLoading: isLoading,
       separatorBuilder: (context, currentItem, currentIndex) {
         // Show separator before first item of each group
         if (currentIndex == 0) {
@@ -184,10 +189,10 @@ class DSTimeline<T> extends StatefulWidget {
 class _DSTimelineState<T> extends DSStateBase<DSTimeline<T>>
     with TickerProviderStateMixin {
   late DSTimelineTheme _componentTheme;
-  late List<AnimationController> _controllers;
-  late List<Animation<double>> _fadeAnimations;
-  late List<Animation<Offset>> _slideAnimations;
-  late List<Animation<double>> _lineAnimations;
+  List<AnimationController> _controllers = [];
+  List<Animation<double>> _fadeAnimations = [];
+  List<Animation<Offset>> _slideAnimations = [];
+  List<Animation<double>> _lineAnimations = [];
   bool _animationsInitialized = false;
 
   @override
@@ -204,6 +209,21 @@ class _DSTimelineState<T> extends DSStateBase<DSTimeline<T>>
           .getDSTimelineTheme();
       _initializeAnimations();
       _animationsInitialized = true;
+    }
+  }
+
+  @override
+  void didUpdateWidget(DSTimeline<T> oldWidget) {
+    super.didUpdateWidget(oldWidget);
+    // Re-initialize animations if item count changed
+    if (oldWidget.items.length != widget.items.length &&
+        _animationsInitialized) {
+      // Dispose old controllers
+      for (final controller in _controllers) {
+        controller.dispose();
+      }
+      // Re-initialize with new item count
+      _initializeAnimations();
     }
   }
 
@@ -259,8 +279,10 @@ class _DSTimelineState<T> extends DSStateBase<DSTimeline<T>>
 
   @override
   void dispose() {
-    for (final controller in _controllers) {
-      controller.dispose();
+    if (_animationsInitialized) {
+      for (final controller in _controllers) {
+        controller.dispose();
+      }
     }
     super.dispose();
   }
@@ -270,7 +292,7 @@ class _DSTimelineState<T> extends DSStateBase<DSTimeline<T>>
     final children = <Widget>[];
 
     for (int index = 0; index < widget.items.length; index++) {
-      final isLast = index == widget.items.length - 1;
+      final isLast = index == widget.items.length - 1 && !widget.isLoading;
       final item = widget.items[index];
 
       // Add separator if needed (before this item)
@@ -286,13 +308,21 @@ class _DSTimelineState<T> extends DSStateBase<DSTimeline<T>>
       }
 
       // Add timeline item
+      final isNextLoading =
+          !isLast && widget.isLoading && index == widget.items.length - 1;
       children.add(
         _buildTimelineItem(
           index: index,
           item: item,
           isLast: isLast,
+          isNextLoading: isNextLoading,
         ),
       );
+    }
+
+    // Add loading node if isLoading is true
+    if (widget.isLoading) {
+      children.add(_buildLoadingNode());
     }
 
     return Padding(
@@ -308,8 +338,26 @@ class _DSTimelineState<T> extends DSStateBase<DSTimeline<T>>
     required int index,
     required T item,
     required bool isLast,
+    bool isNextLoading = false,
   }) {
+    // Safety check: ensure animations are initialized and index is valid
+    if (!_animationsInitialized ||
+        index >= _fadeAnimations.length ||
+        index >= _slideAnimations.length ||
+        index >= _lineAnimations.length) {
+      // Return non-animated version if animations aren't ready
+      final isNextLoading =
+          !isLast && widget.isLoading && index == widget.items.length - 1;
+      return _buildTimelineItemWithoutAnimation(
+        index: index,
+        item: item,
+        isLast: isLast,
+        isNextLoading: isNextLoading,
+      );
+    }
+
     final dotColor = _componentTheme.dotColor;
+    final dotMargin = _componentTheme.dotMargin;
     final dotSize = _componentTheme.dotSize;
     final dotBorderColor = _componentTheme.dotBorderColor;
     final dotBorderThickness = _componentTheme.dotBorderThickness;
@@ -333,8 +381,9 @@ class _DSTimelineState<T> extends DSStateBase<DSTimeline<T>>
                     return Opacity(
                       opacity: _fadeAnimations[index].value,
                       child: Container(
-                        width: dotSize,
-                        height: dotSize,
+                        margin: dotMargin,
+                        width: dotSize - dotMargin.vertical,
+                        height: dotSize - dotMargin.vertical,
                         decoration: BoxDecoration(
                           shape: BoxShape.circle,
                           color: dotColor,
@@ -354,11 +403,17 @@ class _DSTimelineState<T> extends DSStateBase<DSTimeline<T>>
                       animation: _lineAnimations[index],
                       builder: (context, child) {
                         return CustomPaint(
-                          painter: _ConnectorPainter(
-                            color: connectorColor,
-                            thickness: connectorThickness,
-                            progress: _lineAnimations[index].value,
-                          ),
+                          painter: isNextLoading
+                              ? _DashedConnectorPainter(
+                                  color: const DSColors().gray.shape500,
+                                  thickness: connectorThickness,
+                                  progress: _lineAnimations[index].value,
+                                )
+                              : _ConnectorPainter(
+                                  color: connectorColor,
+                                  thickness: connectorThickness,
+                                  progress: _lineAnimations[index].value,
+                                ),
                           child: Container(),
                         );
                       },
@@ -390,6 +445,129 @@ class _DSTimelineState<T> extends DSStateBase<DSTimeline<T>>
                 );
               },
             ),
+          ),
+        ],
+      ),
+    );
+  }
+
+  Widget _buildTimelineItemWithoutAnimation({
+    required int index,
+    required T item,
+    required bool isLast,
+    bool isNextLoading = false,
+  }) {
+    // Get theme safely - use existing if initialized,
+    // otherwise get from context
+    final theme = _animationsInitialized
+        ? _componentTheme
+        : Theme.of(context)
+            .extension<DSTimelineThemeExtension>()
+            ?.getDSTimelineTheme();
+
+    if (theme == null) {
+      // If theme is not available, return a simple placeholder
+      return Padding(
+        padding: const EdgeInsets.only(bottom: 8.0),
+        child: widget.itemBuilder(context, item, index),
+      );
+    }
+
+    final dotColor = theme.dotColor;
+    final dotMargin = theme.dotMargin;
+    final dotSize = theme.dotSize;
+    final dotBorderColor = theme.dotBorderColor;
+    final dotBorderThickness = theme.dotBorderThickness;
+    final connectorColor = theme.connectorColor;
+    final connectorThickness = theme.connectorThickness;
+    final itemSpacing = theme.itemSpacing;
+    final horizontalSpacing = theme.horizontalSpacing;
+    return IntrinsicHeight(
+      child: Row(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          // Left side: Dot and connector
+          SizedBox(
+            width: dotSize,
+            child: Column(
+              children: [
+                // Dot indicator (non-animated)
+                Container(
+                  margin: dotMargin,
+                  width: dotSize - dotMargin.vertical,
+                  height: dotSize - dotMargin.vertical,
+                  decoration: BoxDecoration(
+                    shape: BoxShape.circle,
+                    color: dotColor,
+                    border: Border.all(
+                      color: dotBorderColor,
+                      width: dotBorderThickness,
+                    ),
+                  ),
+                ),
+                // Connector line
+                if (!isLast)
+                  Expanded(
+                    child: CustomPaint(
+                      painter: isNextLoading
+                          ? _DashedConnectorPainter(
+                              color: const DSColors().gray.shape500,
+                              thickness: connectorThickness,
+                              progress: 1.0,
+                            )
+                          : _ConnectorPainter(
+                              color: connectorColor,
+                              thickness: connectorThickness,
+                              progress: 1.0,
+                            ),
+                      child: Container(),
+                    ),
+                  )
+                else
+                  SizedBox(height: itemSpacing),
+              ],
+            ),
+          ),
+          SizedBox(width: horizontalSpacing),
+          // Right side: Content card (non-animated)
+          Expanded(
+            child: Padding(
+              padding: EdgeInsets.only(bottom: itemSpacing),
+              child: widget.itemBuilder(context, item, index),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+
+  Widget _buildLoadingNode() {
+    final dotSize = _componentTheme.dotSize;
+    final horizontalSpacing = _componentTheme.horizontalSpacing;
+
+    return IntrinsicHeight(
+      child: Row(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          // Left side: Dot with location icon (static, no shimmer)
+          DSImageView(
+            source: DSAssets.vuesax.locationBold,
+            width: dotSize,
+            height: dotSize,
+            color: colors.gray.shape400,
+          ),
+          SizedBox(width: horizontalSpacing),
+          // Right side: Skeleton loading content
+          Expanded(
+            child: widget.loadingItemBuilder ??
+                Shimmer.withDefaultGradient(
+                  child: const ShimmerSkeleton(
+                    type: ShimmerSkeletonType.listItem,
+                    isLoading: true,
+                    padding: EdgeInsets.zero,
+                    margin: EdgeInsets.zero,
+                  ),
+                ),
           ),
         ],
       ),
@@ -432,6 +610,56 @@ class _ConnectorPainter extends CustomPainter {
 
   @override
   bool shouldRepaint(_ConnectorPainter oldDelegate) {
+    return oldDelegate.progress != progress ||
+        oldDelegate.color != color ||
+        oldDelegate.thickness != thickness;
+  }
+}
+
+/// Custom painter for the dashed connector line with animation
+class _DashedConnectorPainter extends CustomPainter {
+  final DSColor color;
+  final double thickness;
+  final double progress;
+
+  _DashedConnectorPainter({
+    required this.color,
+    required this.thickness,
+    required this.progress,
+  });
+
+  @override
+  void paint(Canvas canvas, Size size) {
+    if (progress <= 0) {
+      return;
+    }
+
+    final paint = Paint()
+      ..color = color
+      ..strokeWidth = thickness
+      ..style = PaintingStyle.stroke;
+
+    const startY = 0.0;
+    final endY = size.height * progress;
+
+    // Draw dashed line
+    const dashWidth = 4.0;
+    const dashSpace = 4.0;
+    double currentY = startY;
+
+    while (currentY < endY) {
+      final dashEnd = (currentY + dashWidth).clamp(0.0, endY);
+      canvas.drawLine(
+        Offset(size.width / 2, currentY),
+        Offset(size.width / 2, dashEnd),
+        paint,
+      );
+      currentY += dashWidth + dashSpace;
+    }
+  }
+
+  @override
+  bool shouldRepaint(_DashedConnectorPainter oldDelegate) {
     return oldDelegate.progress != progress ||
         oldDelegate.color != color ||
         oldDelegate.thickness != thickness;

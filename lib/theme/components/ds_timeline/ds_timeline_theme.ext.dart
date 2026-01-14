@@ -25,6 +25,7 @@ class DSTimelineThemeExtension
       separatorPadding: const EdgeInsets.symmetric(vertical: 8),
       separatorTextStyle:
           textTheme.sm?.regular.copyWithColor(DSColorUsages.text.tertiary),
+      dotMargin: const EdgeInsets.all(2),
     );
   }
 

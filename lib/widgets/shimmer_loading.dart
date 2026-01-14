@@ -28,10 +28,26 @@ class Shimmer extends StatefulWidget {
   }
 
   /// Creates a shimmer widget with default design system gradient.
-  static Widget withDefaultGradient({required Widget child}) {
+  ///
+  /// [child] is the widget to apply shimmer effect to.
+  /// [padding] is padding to wrap around the child. 
+  /// Defaults to EdgeInsets.zero.
+  static Widget withDefaultGradient({
+    required Widget child,
+    EdgeInsets padding = EdgeInsets.zero,
+  }) {
+    Widget content = child;
+
+    if (padding != EdgeInsets.zero) {
+      content = Padding(
+        padding: padding,
+        child: child,
+      );
+    }
+
     return Shimmer(
       linearGradient: _defaultShimmerGradient,
-      child: child,
+      child: content,
     );
   }
 
@@ -461,11 +477,15 @@ class ShimmerSkeleton extends StatelessWidget {
   /// [type] is the type of skeleton to display.
   /// [isLoading] determines if the shimmer effect is active.
   /// [child] is the child widget to show when not loading.
+  /// [padding] is the padding inside the skeleton (overrides default padding).
+  /// [margin] is the margin outside the skeleton (overrides default margin).
   const ShimmerSkeleton({
     super.key,
     required this.type,
     required this.isLoading,
     this.child,
+    this.padding,
+    this.margin,
   });
 
   /// The type of skeleton to display.
@@ -476,6 +496,12 @@ class ShimmerSkeleton extends StatelessWidget {
 
   /// The child widget to show when not loading.
   final Widget? child;
+
+  /// The padding inside the skeleton (overrides default padding).
+  final EdgeInsets? padding;
+
+  /// The margin outside the skeleton (overrides default margin).
+  final EdgeInsets? margin;
 
   @override
   Widget build(BuildContext context) {
@@ -513,13 +539,14 @@ class ShimmerSkeleton extends StatelessWidget {
   Widget _buildCardSkeleton() {
     return Container(
       height: 200,
+      margin: margin,
       decoration: BoxDecoration(
         color: DSColorUsages
             .background.secondary, // Using design system background color
         borderRadius: BorderRadius.circular(12),
       ),
       child: Padding(
-        padding: const EdgeInsets.all(16.0),
+        padding: padding ?? const EdgeInsets.all(16.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -621,14 +648,14 @@ class ShimmerSkeleton extends StatelessWidget {
   Widget _buildListItemSkeleton() {
     return Container(
       height: 80,
-      margin: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+      margin: margin ?? const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
       decoration: BoxDecoration(
         color: DSColorUsages
             .background.secondary, // Using design system background color
         borderRadius: BorderRadius.circular(8),
       ),
       child: Padding(
-        padding: const EdgeInsets.all(12.0),
+        padding: padding ?? const EdgeInsets.all(12.0),
         child: Row(
           children: [
             // Left side - image or icon
@@ -699,6 +726,7 @@ class ShimmerSkeleton extends StatelessWidget {
     return Container(
       width: 50,
       height: 50,
+      margin: margin,
       decoration: BoxDecoration(
         color: DSColorUsages
             .background.secondary, // Using design system background color
@@ -718,57 +746,60 @@ class ShimmerSkeleton extends StatelessWidget {
   }
 
   Widget _buildTextSkeleton() {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        // Title line
-        Container(
-          height: 18,
-          width: double.infinity,
-          decoration: BoxDecoration(
-            color: DSColorUsages.background.secondary,
-            borderRadius: BorderRadius.circular(4),
+    return Padding(
+      padding: padding ?? EdgeInsets.zero,
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          // Title line
+          Container(
+            height: 18,
+            width: double.infinity,
+            decoration: BoxDecoration(
+              color: DSColorUsages.background.secondary,
+              borderRadius: BorderRadius.circular(4),
+            ),
           ),
-        ),
-        const SizedBox(height: 8),
-        // Subtitle line
-        Container(
-          height: 14,
-          width: 200,
-          decoration: BoxDecoration(
-            color: DSColorUsages.background.secondary,
-            borderRadius: BorderRadius.circular(4),
+          const SizedBox(height: 8),
+          // Subtitle line
+          Container(
+            height: 14,
+            width: 200,
+            decoration: BoxDecoration(
+              color: DSColorUsages.background.secondary,
+              borderRadius: BorderRadius.circular(4),
+            ),
           ),
-        ),
-        const SizedBox(height: 8),
-        // Description lines
-        Container(
-          height: 12,
-          width: double.infinity,
-          decoration: BoxDecoration(
-            color: DSColorUsages.background.secondary,
-            borderRadius: BorderRadius.circular(4),
+          const SizedBox(height: 8),
+          // Description lines
+          Container(
+            height: 12,
+            width: double.infinity,
+            decoration: BoxDecoration(
+              color: DSColorUsages.background.secondary,
+              borderRadius: BorderRadius.circular(4),
+            ),
           ),
-        ),
-        const SizedBox(height: 4),
-        Container(
-          height: 12,
-          width: 180,
-          decoration: BoxDecoration(
-            color: DSColorUsages.background.secondary,
-            borderRadius: BorderRadius.circular(4),
+          const SizedBox(height: 4),
+          Container(
+            height: 12,
+            width: 180,
+            decoration: BoxDecoration(
+              color: DSColorUsages.background.secondary,
+              borderRadius: BorderRadius.circular(4),
+            ),
           ),
-        ),
-        const SizedBox(height: 4),
-        Container(
-          height: 12,
-          width: 160,
-          decoration: BoxDecoration(
-            color: DSColorUsages.background.secondary,
-            borderRadius: BorderRadius.circular(4),
+          const SizedBox(height: 4),
+          Container(
+            height: 12,
+            width: 160,
+            decoration: BoxDecoration(
+              color: DSColorUsages.background.secondary,
+              borderRadius: BorderRadius.circular(4),
+            ),
           ),
-        ),
-      ],
+        ],
+      ),
     );
   }
 
@@ -776,6 +807,7 @@ class ShimmerSkeleton extends StatelessWidget {
     return Container(
       height: 48,
       width: 120,
+      margin: margin,
       decoration: BoxDecoration(
         color: DSColorUsages.background.secondary,
         borderRadius: BorderRadius.circular(24),
@@ -797,6 +829,7 @@ class ShimmerSkeleton extends StatelessWidget {
     return Container(
       height: 32,
       width: 80,
+      margin: margin,
       decoration: BoxDecoration(
         color: DSColorUsages.background.secondary,
         borderRadius: BorderRadius.circular(16),
@@ -815,50 +848,53 @@ class ShimmerSkeleton extends StatelessWidget {
   }
 
   Widget _buildProgressSkeleton() {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            Container(
-              height: 14,
-              width: 60,
-              decoration: BoxDecoration(
-                color: DSColorUsages.background.secondary,
-                borderRadius: BorderRadius.circular(4),
+    return Padding(
+      padding: padding ?? EdgeInsets.zero,
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Container(
+                height: 14,
+                width: 60,
+                decoration: BoxDecoration(
+                  color: DSColorUsages.background.secondary,
+                  borderRadius: BorderRadius.circular(4),
+                ),
               ),
-            ),
-            Container(
-              height: 14,
-              width: 30,
-              decoration: BoxDecoration(
-                color: DSColorUsages.background.secondary,
-                borderRadius: BorderRadius.circular(4),
+              Container(
+                height: 14,
+                width: 30,
+                decoration: BoxDecoration(
+                  color: DSColorUsages.background.secondary,
+                  borderRadius: BorderRadius.circular(4),
+                ),
               ),
-            ),
-          ],
-        ),
-        const SizedBox(height: 8),
-        Container(
-          height: 8,
-          width: double.infinity,
-          decoration: BoxDecoration(
-            color: DSColorUsages.background.secondary,
-            borderRadius: BorderRadius.circular(4),
+            ],
           ),
-          child: FractionallySizedBox(
-            alignment: Alignment.centerLeft,
-            widthFactor: 0.7, // 70% progress
-            child: Container(
-              decoration: BoxDecoration(
-                color: DSColorUsages.background.primary,
-                borderRadius: BorderRadius.circular(4),
+          const SizedBox(height: 8),
+          Container(
+            height: 8,
+            width: double.infinity,
+            decoration: BoxDecoration(
+              color: DSColorUsages.background.secondary,
+              borderRadius: BorderRadius.circular(4),
+            ),
+            child: FractionallySizedBox(
+              alignment: Alignment.centerLeft,
+              widthFactor: 0.7, // 70% progress
+              child: Container(
+                decoration: BoxDecoration(
+                  color: DSColorUsages.background.primary,
+                  borderRadius: BorderRadius.circular(4),
+                ),
               ),
             ),
           ),
-        ),
-      ],
+        ],
+      ),
     );
   }
 }
