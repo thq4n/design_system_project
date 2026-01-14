@@ -196,6 +196,8 @@ class _DSTimelineState<T> extends DSStateBase<DSTimeline<T>>
   AnimationController? _loadingNodeController;
   Animation<double>? _loadingNodeFadeAnimation;
   Animation<Offset>? _loadingNodeSlideAnimation;
+  AnimationController? _loadingConnectorController;
+  Animation<double>? _loadingConnectorAnimation;
   bool _animationsInitialized = false;
 
   @override
@@ -227,6 +229,7 @@ class _DSTimelineState<T> extends DSStateBase<DSTimeline<T>>
         controller.dispose();
       }
       _loadingNodeController?.dispose();
+      _loadingConnectorController?.dispose();
       // Re-initialize with new item count
       _initializeAnimations();
     }
@@ -305,6 +308,23 @@ class _DSTimelineState<T> extends DSStateBase<DSTimeline<T>>
         ),
       );
 
+      // Initialize loading connector animation
+      //(repeating animation for dash loading effect)
+      _loadingConnectorController = AnimationController(
+        vsync: this,
+        duration: const Duration(milliseconds: 1200),
+      );
+
+      _loadingConnectorAnimation = Tween<double>(begin: 0.0, end: 1.0).animate(
+        CurvedAnimation(
+          parent: _loadingConnectorController!,
+          curve: Curves.linear,
+        ),
+      );
+
+      // Start loading connector animation immediately and repeat
+      _loadingConnectorController!.repeat();
+
       // Start loading node animation after all items are animated
       final delay = _componentTheme.animationDelay * widget.items.length;
       Future.delayed(delay, () {
@@ -322,6 +342,7 @@ class _DSTimelineState<T> extends DSStateBase<DSTimeline<T>>
         controller.dispose();
       }
       _loadingNodeController?.dispose();
+      _loadingConnectorController?.dispose();
     }
     super.dispose();
   }
@@ -438,25 +459,36 @@ class _DSTimelineState<T> extends DSStateBase<DSTimeline<T>>
                 // Connector line
                 if (!isLast)
                   Expanded(
-                    child: AnimatedBuilder(
-                      animation: _lineAnimations[index],
-                      builder: (context, child) {
-                        return CustomPaint(
-                          painter: isNextLoading
-                              ? _DashedConnectorPainter(
+                    child: isNextLoading
+                        ? AnimatedBuilder(
+                            animation: _loadingConnectorAnimation ??
+                                _lineAnimations[index],
+                            builder: (context, child) {
+                              return CustomPaint(
+                                painter: _LoadingDashedConnectorPainter(
                                   color: const DSColors().gray.shape500,
                                   thickness: connectorThickness,
                                   progress: _lineAnimations[index].value,
-                                )
-                              : _ConnectorPainter(
+                                  loadingProgress:
+                                      _loadingConnectorAnimation?.value ?? 0.0,
+                                ),
+                                child: Container(),
+                              );
+                            },
+                          )
+                        : AnimatedBuilder(
+                            animation: _lineAnimations[index],
+                            builder: (context, child) {
+                              return CustomPaint(
+                                painter: _ConnectorPainter(
                                   color: connectorColor,
                                   thickness: connectorThickness,
                                   progress: _lineAnimations[index].value,
                                 ),
-                          child: Container(),
-                        );
-                      },
-                    ),
+                                child: Container(),
+                              );
+                            },
+                          ),
                   )
                 else
                   SizedBox(height: itemSpacing),
@@ -547,20 +579,36 @@ class _DSTimelineState<T> extends DSStateBase<DSTimeline<T>>
                 // Connector line
                 if (!isLast)
                   Expanded(
-                    child: CustomPaint(
-                      painter: isNextLoading
-                          ? _DashedConnectorPainter(
-                              color: const DSColors().gray.shape500,
-                              thickness: connectorThickness,
-                              progress: 1.0,
-                            )
-                          : _ConnectorPainter(
-                              color: connectorColor,
-                              thickness: connectorThickness,
-                              progress: 1.0,
-                            ),
-                      child: Container(),
-                    ),
+                    child: isNextLoading && _loadingConnectorAnimation != null
+                        ? AnimatedBuilder(
+                            animation: _loadingConnectorAnimation!,
+                            builder: (context, child) {
+                              return CustomPaint(
+                                painter: _LoadingDashedConnectorPainter(
+                                  color: const DSColors().gray.shape500,
+                                  thickness: connectorThickness,
+                                  progress: 1.0,
+                                  loadingProgress:
+                                      _loadingConnectorAnimation!.value,
+                                ),
+                                child: Container(),
+                              );
+                            },
+                          )
+                        : CustomPaint(
+                            painter: isNextLoading
+                                ? _DashedConnectorPainter(
+                                    color: const DSColors().gray.shape500,
+                                    thickness: connectorThickness,
+                                    progress: 1.0,
+                                  )
+                                : _ConnectorPainter(
+                                    color: connectorColor,
+                                    thickness: connectorThickness,
+                                    progress: 1.0,
+                                  ),
+                            child: Container(),
+                          ),
                   )
                 else
                   SizedBox(height: itemSpacing),
@@ -758,6 +806,74 @@ class _DashedConnectorPainter extends CustomPainter {
   @override
   bool shouldRepaint(_DashedConnectorPainter oldDelegate) {
     return oldDelegate.progress != progress ||
+        oldDelegate.color != color ||
+        oldDelegate.thickness != thickness;
+  }
+}
+
+/// Custom painter for the loading dashed
+/// connector line with animated dash effect
+/// Dashes appear one by one from top to bottom in a repeating animation
+class _LoadingDashedConnectorPainter extends CustomPainter {
+  final DSColor color;
+  final double thickness;
+  final double progress;
+  final double loadingProgress;
+
+  _LoadingDashedConnectorPainter({
+    required this.color,
+    required this.thickness,
+    required this.progress,
+    required this.loadingProgress,
+  });
+
+  @override
+  void paint(Canvas canvas, Size size) {
+    if (progress <= 0) {
+      return;
+    }
+
+    final paint = Paint()
+      ..color = color
+      ..strokeWidth = thickness
+      ..style = PaintingStyle.stroke;
+
+    const startY = 0.0;
+    final endY = size.height * progress;
+
+    // Draw dashed line with loading animation
+    const dashWidth = 4.0;
+    const dashSpace = 4.0;
+    const totalDashLength = dashWidth + dashSpace;
+
+    // Calculate the maximum Y position where dashes should be visible
+    // loadingProgress goes from 0.0 to 1.0, repeating
+    // We want dashes to appear from top to bottom, then repeat
+    final maxVisibleY = startY + (endY - startY) * loadingProgress;
+
+    double currentY = startY;
+    while (currentY < endY) {
+      // Only draw dash if its start position is within the visible range
+      if (currentY < maxVisibleY) {
+        final dashEnd = (currentY + dashWidth).clamp(0.0, endY);
+        // Clamp dash end to maxVisibleY to create smooth reveal effect
+        final clampedDashEnd = dashEnd > maxVisibleY ? maxVisibleY : dashEnd;
+        if (clampedDashEnd > currentY) {
+          canvas.drawLine(
+            Offset(size.width / 2, currentY),
+            Offset(size.width / 2, clampedDashEnd),
+            paint,
+          );
+        }
+      }
+      currentY += totalDashLength;
+    }
+  }
+
+  @override
+  bool shouldRepaint(_LoadingDashedConnectorPainter oldDelegate) {
+    return oldDelegate.progress != progress ||
+        oldDelegate.loadingProgress != loadingProgress ||
         oldDelegate.color != color ||
         oldDelegate.thickness != thickness;
   }
