@@ -197,7 +197,7 @@ class DSMediaPickerController extends ValueNotifier<List<DSMediaPicked>> {
   Future<String?> Function(File file)? _uploadImageToServer;
 
   /// Get headers callback function
-  Map<String, String>? Function()? getHeadersCallback;
+  Future<Map<String, String>?> Function()? getHeadersCallback;
 
   /// Set upload callback function
   set setUploadCallback(Future<String?> Function(File file)? callback) {
@@ -831,12 +831,17 @@ class _DSMediaPickerState extends DSStateBase<DSMediaPicker> {
             width: constraints.maxWidth,
             height: constraints.maxHeight,
           )
-        : DSImageView(
-            source: media.url ?? '',
-            fit: BoxFit.cover,
-            width: constraints.maxWidth,
-            height: constraints.maxHeight,
-            headers: widget.controller.getHeadersCallback?.call(),
+        : FutureBuilder<Map<String, String>?>(
+            future: widget.controller.getHeadersCallback?.call(),
+            builder: (context, snapshot) {
+              return DSImageView(
+                source: media.url ?? '',
+                fit: BoxFit.cover,
+                width: constraints.maxWidth,
+                height: constraints.maxHeight,
+                headers: snapshot.data,
+              );
+            },
           );
   }
 
@@ -1390,7 +1395,7 @@ class _DSMediaPickerState extends DSStateBase<DSMediaPicker> {
           ? FileImage(image.mediaFile!)
           : NetworkImage(
               image.url!,
-              headers: widget.controller.getHeadersCallback?.call(),
+              headers: await widget.controller.getHeadersCallback?.call(),
             ),
     );
   }
