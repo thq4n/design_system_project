@@ -109,6 +109,7 @@ class _DSAvatarState extends DSStateBase<_DSAvatar> {
           placeHolder: widget.placeholder,
           width: widget.size.value,
           height: widget.size.value,
+          fit: BoxFit.cover,
         ),
       ),
     );
