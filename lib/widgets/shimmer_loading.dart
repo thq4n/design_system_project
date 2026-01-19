@@ -30,7 +30,7 @@ class Shimmer extends StatefulWidget {
   /// Creates a shimmer widget with default design system gradient.
   ///
   /// [child] is the widget to apply shimmer effect to.
-  /// [padding] is padding to wrap around the child. 
+  /// [padding] is padding to wrap around the child.
   /// Defaults to EdgeInsets.zero.
   static Widget withDefaultGradient({
     required Widget child,

@@ -57,7 +57,8 @@ class DSBadgeNotification extends StatelessWidget {
       return const SizedBox.shrink();
     }
 
-    return Container(
+    return AnimatedContainer(
+      duration: const Duration(milliseconds: 250),
       padding: size.padding,
       decoration: BoxDecoration(
         color: backgroundColor,
