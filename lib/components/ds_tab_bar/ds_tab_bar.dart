@@ -4,6 +4,7 @@ import '../../design_system_core/ds_color/ds_colors_core.dart';
 import '../../design_system_core/ds_color_usage/ds_color_usage_core.dart';
 import '../../extensions/extensions.dart';
 import '../../theme/ds_theme.dart';
+import '../ds_badge_notification/ds_badge_notification.dart';
 
 /// A custom TabBar widget following the design system standards.
 ///
@@ -18,35 +19,34 @@ import '../../theme/ds_theme.dart';
 /// ```dart
 /// DSTabBar(
 ///   controller: _tabController,
-///   tabs: [
-///     Tab(text: 'Tab 1'),
-///     Tab(text: 'Tab 2'),
-///     Tab(text: 'Tab 3'),
-///   ],
+///   tabs: ['Tab 1', 'Tab 2', 'Tab 3'],
 /// )
 /// ```
 class DSTabBar extends StatelessWidget {
   /// Creates a DSTabBar widget.
   ///
   /// [controller] - The TabController that controls the tab selection.
-  /// [tabs] - The list of tabs to display.
+  /// [tabs] - The list of tab labels as strings.
   /// [isScrollable] - Whether the tabs should be scrollable.
   ///   If null, uses theme default.
   /// [backgroundColor] - The background color of the TabBar container.
   ///   If null, uses theme default.
+  /// [getBadgeCount] - Optional callback to get badge count for each tab.
+  ///   Receives the tab index and returns the badge count.
   const DSTabBar({
     super.key,
     required this.controller,
     required this.tabs,
     this.isScrollable = true,
     this.backgroundColor,
+    this.getBadgeCount,
   });
 
   /// The TabController that controls the tab selection.
   final TabController controller;
 
-  /// The list of tabs to display.
-  final List<Tab> tabs;
+  /// The list of tab labels as strings.
+  final List<String> tabs;
 
   /// Whether the tabs should be scrollable.
   /// If null, uses theme default.
@@ -55,6 +55,10 @@ class DSTabBar extends StatelessWidget {
   /// The background color of the TabBar container.
   /// If null, uses theme default.
   final Color? backgroundColor;
+
+  /// Optional callback to get badge count for each tab.
+  /// Receives the tab index and returns the badge count.
+  final int Function(int)? getBadgeCount;
 
   @override
   Widget build(BuildContext context) {
@@ -65,13 +69,55 @@ class DSTabBar extends StatelessWidget {
 
     const dsColors = DSColors();
 
+    // Build tabs from string list
+    final builtTabs = tabs.asMap().entries.map((entry) {
+      final index = entry.key;
+      final label = entry.value;
+      final badgeCount = getBadgeCount?.call(index);
+
+      if (badgeCount != null && badgeCount > 0) {
+        return Tab(
+          child: AnimatedBuilder(
+            animation: controller,
+            builder: (context, _) {
+              final isSelected = controller.index == index;
+              final textStyle = isSelected
+                  ? componentTheme.labelStyle
+                  : componentTheme.unselectedLabelStyle;
+
+              return Row(
+                mainAxisSize: MainAxisSize.min,
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text(
+                    label,
+                    style: textStyle,
+                  ),
+                  SizedBox(width: componentTheme.badgeSpacing),
+                  DSBadgeNotification(
+                    count: badgeCount,
+                    size: DSBadgeNotificationSize.md,
+                    variant: isSelected
+                        ? DSBadgeNotificationVariants.primary
+                        : DSBadgeNotificationVariants.secondary,
+                  ),
+                ],
+              );
+            },
+          ),
+        );
+      }
+
+      return Tab(text: label);
+    }).toList();
+
     return Container(
       color: backgroundColor ?? componentTheme.backgroundColor,
       child: TabBar(
         isScrollable: isScrollable,
         labelStyle: componentTheme.labelStyle,
         unselectedLabelStyle: componentTheme.unselectedLabelStyle,
-        tabs: tabs,
+        tabs: builtTabs,
         tabAlignment: isScrollable == true ? componentTheme.tabAlignment : null,
         indicatorSize: componentTheme.indicatorSize,
         indicator: BoxDecoration(
@@ -118,6 +164,7 @@ class DSTabBar extends StatelessWidget {
       isScrollable: true,
       tabAlignment: TabAlignment.start,
       indicatorSize: TabBarIndicatorSize.tab,
+      badgeSpacing: 8,
     );
   }
 }

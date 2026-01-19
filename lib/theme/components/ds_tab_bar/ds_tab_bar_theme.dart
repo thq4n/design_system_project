@@ -41,6 +41,9 @@ class DSTabBarTheme {
   /// Indicator size.
   final TabBarIndicatorSize indicatorSize;
 
+  /// Spacing between tab label and badge.
+  final double badgeSpacing;
+
   const DSTabBarTheme({
     this.backgroundColor,
     this.labelStyle,
@@ -54,5 +57,6 @@ class DSTabBarTheme {
     this.isScrollable = true,
     this.tabAlignment = TabAlignment.start,
     this.indicatorSize = TabBarIndicatorSize.tab,
+    this.badgeSpacing = 8,
   });
 }

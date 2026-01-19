@@ -31,6 +31,7 @@ class DSTabBarThemeExtension extends ThemeExtension<DSTabBarThemeExtension> {
       isScrollable: true,
       tabAlignment: TabAlignment.start,
       indicatorSize: TabBarIndicatorSize.tab,
+      badgeSpacing: 8,
     );
   }
 
