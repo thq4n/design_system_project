@@ -95,7 +95,7 @@ T? asOrNull<T>(dynamic value, [T? defaultValue]) {
         return value as T;
       }
       if (value is String) {
-        return DateTime.parse(value).toLocal() as T;
+        return DateTime.tryParse(value)?.toLocal() as T?;
       }
       if (value is int) {
         // Handle Unix timestamp (milliseconds)
