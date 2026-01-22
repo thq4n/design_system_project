@@ -46,6 +46,9 @@ class DSTimeline<T> extends StatefulWidget {
   /// When true, a skeleton loading node with location icon will be displayed.
   final bool isLoading;
 
+  /// Padding of the timeline container.
+  final EdgeInsetsGeometry? padding;
+
   /// Builder function to create a separator before an item.
   /// Returns null if no separator is needed before this item.
   /// This allows grouping items with separators between groups.
@@ -76,6 +79,7 @@ class DSTimeline<T> extends StatefulWidget {
     this.loadingItemBuilder,
     this.separatorBuilder,
     this.isLoading = false,
+    this.padding,
   });
 
   /// Static method to create a timeline with automatic grouping by a key.
@@ -104,8 +108,10 @@ class DSTimeline<T> extends StatefulWidget {
     Widget? loadingItemBuilder,
     Widget? Function(BuildContext context, K key)? customSeparatorBuilder,
     bool isLoading = false,
+    EdgeInsetsGeometry? padding,
   }) {
     return DSTimeline<T>(
+      padding: padding,
       key: key,
       items: items,
       itemBuilder: itemBuilder,
@@ -386,7 +392,7 @@ class _DSTimelineState<T> extends DSStateBase<DSTimeline<T>>
     }
 
     return Padding(
-      padding: _componentTheme.padding,
+      padding: widget.padding ?? _componentTheme.padding,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: children,
