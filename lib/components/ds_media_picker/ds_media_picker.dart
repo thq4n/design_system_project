@@ -800,18 +800,7 @@ class _DSMediaPickerState extends DSStateBase<DSMediaPicker> {
                   height: constraints.maxHeight,
                 )
               else
-                Container(
-                  width: constraints.maxWidth,
-                  height: constraints.maxHeight,
-                  decoration: BoxDecoration(
-                    color: Colors.grey[300],
-                    borderRadius: BorderRadius.circular(borderRadius),
-                  ),
-                  child: const DSLoading(
-                    brightness: Brightness.light,
-                    radius: 12,
-                  ),
-                ),
+                _buildLoading(constraints),
               const Center(
                 child: Icon(
                   Icons.play_arrow_rounded,
@@ -835,15 +824,33 @@ class _DSMediaPickerState extends DSStateBase<DSMediaPicker> {
         : FutureBuilder<Map<String, String>?>(
             future: widget.controller.getHeadersCallback?.call(),
             builder: (context, snapshot) {
-              return DSImageView(
-                source: media.url ?? '',
-                fit: BoxFit.cover,
-                width: constraints.maxWidth,
-                height: constraints.maxHeight,
-                headers: snapshot.data,
-              );
+              return snapshot.hasData
+                  ? DSImageView(
+                      key: UniqueKey(),
+                      source: media.url ?? '',
+                      fit: BoxFit.cover,
+                      width: constraints.maxWidth,
+                      height: constraints.maxHeight,
+                      headers: snapshot.data,
+                    )
+                  : _buildLoading(constraints);
             },
           );
+  }
+
+  Container _buildLoading(BoxConstraints constraints) {
+    return Container(
+      width: constraints.maxWidth,
+      height: constraints.maxHeight,
+      decoration: BoxDecoration(
+        color: Colors.grey[300],
+        borderRadius: BorderRadius.circular(borderRadius),
+      ),
+      child: const DSLoading(
+        brightness: Brightness.light,
+        radius: 12,
+      ),
+    );
   }
 
   Widget _buildProgressOverlay(
