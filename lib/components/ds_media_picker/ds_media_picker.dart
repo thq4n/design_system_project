@@ -682,6 +682,7 @@ class _DSMediaPickerState extends DSStateBase<DSMediaPicker> {
                     Text(
                       widget.title!,
                       style: _textStyle,
+                      textAlign: TextAlign.center,
                     ),
                   ],
                 ],
