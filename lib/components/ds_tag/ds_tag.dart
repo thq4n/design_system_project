@@ -15,6 +15,8 @@ class DSTag extends StatefulWidget {
   final DSColor? backgroundColor;
   final Function()? onTapPrefixIcon;
   final Function()? onTapSuffixIcon;
+  final Axis direction;
+  final double? crossAxisSize;
 
   const DSTag({
     super.key,
@@ -27,6 +29,8 @@ class DSTag extends StatefulWidget {
     this.backgroundColor,
     this.onTapPrefixIcon,
     this.onTapSuffixIcon,
+    this.direction = Axis.horizontal,
+    this.crossAxisSize,
   });
 
   @override
@@ -118,8 +122,23 @@ class _DSTagState extends DSStateBase<DSTag> {
             borderRadius: _componentTheme.borderRadius.borderRadiusGeometry,
             color: _backgroundColor,
           ),
-          child: Row(
-            children: children,
+          child: Builder(
+            builder: (context) {
+              return switch (widget.direction) {
+                Axis.horizontal => SizedBox(
+                    height: widget.crossAxisSize,
+                    child: Row(
+                      children: children,
+                    ),
+                  ),
+                Axis.vertical => SizedBox(
+                    width: widget.crossAxisSize,
+                    child: Column(
+                      children: children,
+                    ),
+                  ),
+              };
+            },
           ),
         ),
       ),
