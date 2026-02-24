@@ -58,6 +58,9 @@ class DSUserInfo extends StatelessWidget {
   /// Margin around the container
   final EdgeInsetsGeometry? margin;
 
+  /// Function to build the avatar URL
+  final String Function(String url)? urlBuilder;
+
   const DSUserInfo({
     super.key,
     required this.name,
@@ -72,6 +75,7 @@ class DSUserInfo extends StatelessWidget {
     this.padding,
     this.borderRadius,
     this.margin,
+    this.urlBuilder,
   });
 
   @override
@@ -160,7 +164,7 @@ class DSUserInfo extends StatelessWidget {
   Widget _buildAvatar(DSColors colors) {
     if (avatarUrl != null && avatarUrl!.isNotEmpty) {
       return DSAvatar.default_(
-        source: avatarUrl!,
+        source: urlBuilder?.call(avatarUrl!) ?? avatarUrl!,
         size: avatarSize,
       );
     }
