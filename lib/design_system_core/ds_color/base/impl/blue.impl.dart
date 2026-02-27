@@ -18,20 +18,20 @@ class _DSBlueColor extends DSColor {
   @override
   DSColor get shade600 => const _DSBlueColor(0xFF155EEF);
   @override
-  DSColor get shape500 => const _DSBlueColor(0xFF2970FF); // Primary Blue
+  DSColor get shade500 => const _DSBlueColor(0xFF2970FF); // Primary Blue
   @override
-  DSColor get shape400 => const _DSBlueColor(0xFF528BFF);
+  DSColor get shade400 => const _DSBlueColor(0xFF528BFF);
   @override
-  DSColor get shape300 => const _DSBlueColor(0xFF84ADFF);
+  DSColor get shade300 => const _DSBlueColor(0xFF84ADFF);
   @override
-  DSColor get shape200 => const _DSBlueColor(0xFFB2CCFF);
+  DSColor get shade200 => const _DSBlueColor(0xFFB2CCFF);
   @override
-  DSColor get shape100 => const _DSBlueColor(0xFFD1E0FF);
+  DSColor get shade100 => const _DSBlueColor(0xFFD1E0FF);
   @override
-  DSColor get shape50 => const _DSBlueColor(0xFFEFF4FF);
+  DSColor get shade50 => const _DSBlueColor(0xFFEFF4FF);
 
   @override
-  DSColor get primary => shape500;
+  DSColor get primary => shade500;
 
   @override
   DSColor withOpacity(double opacity) {

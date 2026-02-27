@@ -472,7 +472,7 @@ class _DSTimelineState<T> extends DSStateBase<DSTimeline<T>>
                             builder: (context, child) {
                               return CustomPaint(
                                 painter: _LoadingDashedConnectorPainter(
-                                  color: const DSColors().gray.shape500,
+                                  color: const DSColors().gray.shade500,
                                   thickness: connectorThickness,
                                   progress: _lineAnimations[index].value,
                                   loadingProgress:
@@ -591,7 +591,7 @@ class _DSTimelineState<T> extends DSStateBase<DSTimeline<T>>
                             builder: (context, child) {
                               return CustomPaint(
                                 painter: _LoadingDashedConnectorPainter(
-                                  color: const DSColors().gray.shape500,
+                                  color: const DSColors().gray.shade500,
                                   thickness: connectorThickness,
                                   progress: 1.0,
                                   loadingProgress:
@@ -604,7 +604,7 @@ class _DSTimelineState<T> extends DSStateBase<DSTimeline<T>>
                         : CustomPaint(
                             painter: isNextLoading
                                 ? _DashedConnectorPainter(
-                                    color: const DSColors().gray.shape500,
+                                    color: const DSColors().gray.shade500,
                                     thickness: connectorThickness,
                                     progress: 1.0,
                                   )
@@ -654,7 +654,7 @@ class _DSTimelineState<T> extends DSStateBase<DSTimeline<T>>
               source: DSAssets.vuesax.locationBold,
               width: dotSize,
               height: dotSize,
-              color: colors.gray.shape400,
+              color: colors.gray.shade400,
             ),
             SizedBox(width: horizontalSpacing),
             // Right side: Skeleton loading content
@@ -688,7 +688,7 @@ class _DSTimelineState<T> extends DSStateBase<DSTimeline<T>>
                   source: DSAssets.vuesax.locationBold,
                   width: dotSize,
                   height: dotSize,
-                  color: colors.gray.shape400,
+                  color: colors.gray.shade400,
                 ),
               );
             },

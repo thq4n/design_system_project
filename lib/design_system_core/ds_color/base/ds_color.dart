@@ -10,17 +10,17 @@ abstract class DSColor extends Color {
   DSColor get shade800;
   DSColor get shade700;
   DSColor get shade600;
-  DSColor get shape500;
+  DSColor get shade500;
 
-  DSColor get shape400;
-  DSColor get shape300;
-  DSColor get shape200;
-  DSColor get shape100;
-  DSColor get shape50;
+  DSColor get shade400;
+  DSColor get shade300;
+  DSColor get shade200;
+  DSColor get shade100;
+  DSColor get shade50;
 
   DSColor get white;
 
-  DSColor get primary => shape500;
+  DSColor get primary => shade500;
 
   Gradient createGradient({
     required List<Color> colors,
@@ -67,17 +67,17 @@ class _DSColorWrapper extends DSColor {
   @override
   DSColor get shade600 => this;
   @override
-  DSColor get shape500 => this;
+  DSColor get shade500 => this;
   @override
-  DSColor get shape400 => this;
+  DSColor get shade400 => this;
   @override
-  DSColor get shape300 => this;
+  DSColor get shade300 => this;
   @override
-  DSColor get shape200 => this;
+  DSColor get shade200 => this;
   @override
-  DSColor get shape100 => this;
+  DSColor get shade100 => this;
   @override
-  DSColor get shape50 => this;
+  DSColor get shade50 => this;
   @override
   DSColor get white => this;
 

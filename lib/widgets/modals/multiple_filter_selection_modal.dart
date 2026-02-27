@@ -198,7 +198,7 @@ class _MultipleFilterSelectionModalState<T>
             width: 32,
             height: 4,
             decoration: BoxDecoration(
-              color: colors.gray.shape200,
+              color: colors.gray.shade200,
               borderRadius: BorderRadius.circular(100),
             ),
           ),
@@ -250,7 +250,7 @@ class _MultipleFilterSelectionModalState<T>
             Container(
               margin: const EdgeInsets.symmetric(horizontal: 16),
               decoration: BoxDecoration(
-                color: colors.gray.shape100,
+                color: colors.gray.shade100,
                 borderRadius: BorderRadius.circular(12),
               ),
               child: DSInput(
@@ -368,7 +368,7 @@ class _MultipleFilterSelectionModalState<T>
                     return Container(
                       decoration: BoxDecoration(
                         color: isSelected
-                            ? colors.brand.shape50
+                            ? colors.brand.shade50
                             : colors.gray.white,
                       ),
                       padding: const EdgeInsets.symmetric(
@@ -397,7 +397,7 @@ class _MultipleFilterSelectionModalState<T>
                                 (states) => BorderSide(
                                   color: isSelected
                                       ? colors.brand.primary
-                                      : colors.gray.shape200,
+                                      : colors.gray.shade200,
                                   width: 1,
                                 ),
                               ),
@@ -457,7 +457,7 @@ class _MultipleFilterSelectionModalState<T>
                     return Container(
                       decoration: BoxDecoration(
                         color: isSelected
-                            ? colors.brand.shape50
+                            ? colors.brand.shade50
                             : colors.gray.white,
                       ),
                       padding: const EdgeInsets.symmetric(
@@ -486,7 +486,7 @@ class _MultipleFilterSelectionModalState<T>
                                 (states) => BorderSide(
                                   color: isSelected
                                       ? colors.brand.primary
-                                      : colors.gray.shape200,
+                                      : colors.gray.shade200,
                                   width: 1,
                                 ),
                               ),

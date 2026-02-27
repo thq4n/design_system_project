@@ -19,20 +19,20 @@ class _DSOrangeColor extends DSColor {
   @override
   DSColor get shade600 => const _DSOrangeColor(0xFFE62E05);
   @override
-  DSColor get shape500 => const _DSOrangeColor(0xFFFF4405); // Primary Orange
+  DSColor get shade500 => const _DSOrangeColor(0xFFFF4405); // Primary Orange
   @override
-  DSColor get shape400 => const _DSOrangeColor(0xFFFF692E);
+  DSColor get shade400 => const _DSOrangeColor(0xFFFF692E);
   @override
-  DSColor get shape300 => const _DSOrangeColor(0xFFFF9C66);
+  DSColor get shade300 => const _DSOrangeColor(0xFFFF9C66);
   @override
-  DSColor get shape200 => const _DSOrangeColor(0xFFFFD6AE);
+  DSColor get shade200 => const _DSOrangeColor(0xFFFFD6AE);
   @override
-  DSColor get shape100 => const _DSOrangeColor(0xFFFFE6D5);
+  DSColor get shade100 => const _DSOrangeColor(0xFFFFE6D5);
   @override
-  DSColor get shape50 => const _DSOrangeColor(0xFFFFF4ED);
+  DSColor get shade50 => const _DSOrangeColor(0xFFFFF4ED);
 
   @override
-  DSColor get primary => shape500;
+  DSColor get primary => shade500;
 
   @override
   DSColor withOpacity(double opacity) {

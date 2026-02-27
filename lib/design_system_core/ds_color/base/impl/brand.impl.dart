@@ -20,25 +20,25 @@ class _DSBrandColor extends DSColor {
   @override
   DSColor get shade600 => const _DSBrandColor(0xFFD92D20);
   @override
-  DSColor get shape500 => const _DSBrandColor(
+  DSColor get shade500 => const _DSBrandColor(
         0xFFED2024,
       ); // This is likely your main "Primary Color"
 
   // Tints of the Primary Brand Color
   @override
-  DSColor get shape400 => const _DSBrandColor(0xFFFA7066);
+  DSColor get shade400 => const _DSBrandColor(0xFFFA7066);
   @override
-  DSColor get shape300 => const _DSBrandColor(0xFFFDA29B);
+  DSColor get shade300 => const _DSBrandColor(0xFFFDA29B);
   @override
-  DSColor get shape200 => const _DSBrandColor(0xFFFECDCA);
+  DSColor get shade200 => const _DSBrandColor(0xFFFECDCA);
   @override
-  DSColor get shape100 => const _DSBrandColor(0xFFFEE4E2);
+  DSColor get shade100 => const _DSBrandColor(0xFFFEE4E2);
   @override
-  DSColor get shape50 => const _DSBrandColor(0xFFFEF3F2);
+  DSColor get shade50 => const _DSBrandColor(0xFFFEF3F2);
 
   // You might want to add a more semantic name for the primary shade
   @override
-  DSColor get primary => shape500;
+  DSColor get primary => shade500;
 
   @override
   DSColor withOpacity(double opacity) {

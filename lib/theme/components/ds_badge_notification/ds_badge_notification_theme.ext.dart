@@ -58,7 +58,7 @@ class DSBadgeNotificationThemeExtension
   DSBadgeNotificationStateTheme get _dSPrimaryBadgeNotificationTheme {
     const colors = DSColors();
     return DSBadgeNotificationStateTheme(
-      backgroundColor: colors.brand.shape500,
+      backgroundColor: colors.brand.shade500,
       textColor: colors.gray.white,
       borderColor: colors.gray.white,
     );

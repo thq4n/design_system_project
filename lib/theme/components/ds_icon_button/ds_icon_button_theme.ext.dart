@@ -57,15 +57,15 @@ class DSIconButtonThemeExtension
 
   DSIconButtonTheme get dSSecondaryButtonTheme => DSIconButtonTheme(
         defaultState: DSIconButtonStateTheme(
-          backgroundColor: DSColorUsages.background.brandSecondary.shape200,
+          backgroundColor: DSColorUsages.background.brandSecondary.shade200,
           iconColor: DSColorUsages.icon.brand.shade600,
         ),
         pressedState: DSIconButtonStateTheme(
-          backgroundColor: DSColorUsages.background.brandSecondary.shape300,
+          backgroundColor: DSColorUsages.background.brandSecondary.shade300,
           iconColor: DSColorUsages.icon.brand.shade600,
         ),
         activeState: DSIconButtonStateTheme(
-          backgroundColor: DSColorUsages.background.brandSecondary.shape400,
+          backgroundColor: DSColorUsages.background.brandSecondary.shade400,
           iconColor: DSColorUsages.icon.brand.shade600,
         ),
         disableState: DSIconButtonStateTheme(
@@ -80,11 +80,11 @@ class DSIconButtonThemeExtension
           iconColor: DSColorUsages.icon.solid,
         ),
         pressedState: DSIconButtonStateTheme(
-          backgroundColor: DSColorUsages.background.secondary.shape200,
+          backgroundColor: DSColorUsages.background.secondary.shade200,
           iconColor: DSColorUsages.icon.solid,
         ),
         activeState: DSIconButtonStateTheme(
-          backgroundColor: DSColorUsages.background.secondary.shape300,
+          backgroundColor: DSColorUsages.background.secondary.shade300,
           iconColor: DSColorUsages.icon.solid,
         ),
         disableState: DSIconButtonStateTheme(

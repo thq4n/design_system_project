@@ -87,21 +87,21 @@ class DSButtonThemeExtension extends ThemeExtension<DSButtonThemeExtension> {
         defaultState: DSButtonStateTheme(
           textStyle: textTheme.base?.bold
               .copyWithColor(DSColorUsages.text.linkRed.shade600),
-          backgroundColor: DSColorUsages.background.brandSecondary.shape200,
+          backgroundColor: DSColorUsages.background.brandSecondary.shade200,
           prefixIconColor: DSColorUsages.icon.brand.shade600,
           suffixIconColor: DSColorUsages.icon.brand.shade600,
         ),
         pressedState: DSButtonStateTheme(
           textStyle: textTheme.base?.bold
               .copyWithColor(DSColorUsages.text.linkRed.shade600),
-          backgroundColor: DSColorUsages.background.brandSecondary.shape300,
+          backgroundColor: DSColorUsages.background.brandSecondary.shade300,
           prefixIconColor: DSColorUsages.icon.brand.shade600,
           suffixIconColor: DSColorUsages.icon.brand.shade600,
         ),
         activeState: DSButtonStateTheme(
           textStyle: textTheme.base?.bold
               .copyWithColor(DSColorUsages.text.linkRed.shade600),
-          backgroundColor: DSColorUsages.background.brandSecondary.shape400,
+          backgroundColor: DSColorUsages.background.brandSecondary.shade400,
           prefixIconColor: DSColorUsages.icon.brand.shade600,
           suffixIconColor: DSColorUsages.icon.brand.shade600,
         ),
@@ -125,14 +125,14 @@ class DSButtonThemeExtension extends ThemeExtension<DSButtonThemeExtension> {
         pressedState: DSButtonStateTheme(
           textStyle:
               textTheme.base?.bold.copyWithColor(DSColorUsages.text.primary),
-          backgroundColor: DSColorUsages.background.secondary.shape200,
+          backgroundColor: DSColorUsages.background.secondary.shade200,
           prefixIconColor: DSColorUsages.icon.primary,
           suffixIconColor: DSColorUsages.icon.primary,
         ),
         activeState: DSButtonStateTheme(
           textStyle:
               textTheme.base?.bold.copyWithColor(DSColorUsages.text.primary),
-          backgroundColor: DSColorUsages.background.secondary.shape300,
+          backgroundColor: DSColorUsages.background.secondary.shade300,
           prefixIconColor: DSColorUsages.icon.primary,
           suffixIconColor: DSColorUsages.icon.primary,
         ),
@@ -148,10 +148,10 @@ class DSButtonThemeExtension extends ThemeExtension<DSButtonThemeExtension> {
   DSButtonTheme get dSGhostBrandButtonTheme => DSButtonTheme(
         defaultState: DSButtonStateTheme(
           textStyle: textTheme.sm?.bold
-              .copyWithColor(DSColorUsages.text.linkRed.shape500),
+              .copyWithColor(DSColorUsages.text.linkRed.shade500),
           backgroundColor: DSColorUsages.background.transparent,
-          prefixIconColor: DSColorUsages.icon.brand.shape500,
-          suffixIconColor: DSColorUsages.icon.brand.shape500,
+          prefixIconColor: DSColorUsages.icon.brand.shade500,
+          suffixIconColor: DSColorUsages.icon.brand.shade500,
         ),
         pressedState: DSButtonStateTheme(
           textStyle: textTheme.sm?.bold

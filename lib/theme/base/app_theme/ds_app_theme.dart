@@ -35,7 +35,7 @@ class DSAppTheme {
       focusedBorder: OutlineInputBorder(
         borderRadius: BorderRadius.circular(8),
         borderSide: BorderSide(
-          color: DSColorUsages.border.brand.shape200,
+          color: DSColorUsages.border.brand.shade200,
           width: 1,
         ),
       ),

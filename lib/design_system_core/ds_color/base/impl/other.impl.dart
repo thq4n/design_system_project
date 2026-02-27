@@ -10,7 +10,7 @@ class _DSOtherColor extends DSColor {
   DSColor get white => const _DSBlueColor(0xFFFFFFFF);
 
   @override
-  DSColor get shape500 => throw UnimplementedError();
+  DSColor get shade500 => throw UnimplementedError();
 
   @override
   DSColor get shade600 => throw UnimplementedError();
@@ -28,19 +28,19 @@ class _DSOtherColor extends DSColor {
   DSColor get shade950 => throw UnimplementedError();
 
   @override
-  DSColor get shape100 => throw UnimplementedError();
+  DSColor get shade100 => throw UnimplementedError();
 
   @override
-  DSColor get shape200 => throw UnimplementedError();
+  DSColor get shade200 => throw UnimplementedError();
 
   @override
-  DSColor get shape300 => throw UnimplementedError();
+  DSColor get shade300 => throw UnimplementedError();
 
   @override
-  DSColor get shape400 => throw UnimplementedError();
+  DSColor get shade400 => throw UnimplementedError();
 
   @override
-  DSColor get shape50 => throw UnimplementedError();
+  DSColor get shade50 => throw UnimplementedError();
 
   @override
   DSColor withOpacity(double opacity) {

@@ -44,7 +44,7 @@ class DSAvatarThemeExtension extends ThemeExtension<DSAvatarThemeExtension> {
         return DSAvatarTheme(
           textColor: DSColorUsages.text.primary,
           decoration: BoxDecoration(
-            color: dsColors.green.shape500,
+            color: dsColors.green.shade500,
             shape: BoxShape.circle,
             border: Border.all(
               color: DSColorUsages.border.tertiary,

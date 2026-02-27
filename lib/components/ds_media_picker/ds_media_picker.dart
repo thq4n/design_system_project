@@ -880,7 +880,7 @@ class _DSMediaPickerState extends DSStateBase<DSMediaPicker> {
                 value: media.uploadProgress,
                 backgroundColor: Colors.transparent,
                 valueColor: AlwaysStoppedAnimation<Color>(
-                  colors.blue.shape500,
+                  colors.blue.shade500,
                 ),
                 borderRadius: BorderRadius.circular(2),
               ),

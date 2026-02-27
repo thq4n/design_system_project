@@ -54,7 +54,7 @@ class _DSTagState extends DSStateBase<DSTag> {
   }
 
   DSColor? get _backgroundColor {
-    return widget.backgroundColor ?? _mainColor?.shape100;
+    return widget.backgroundColor ?? _mainColor?.shade100;
   }
 
   DSColor? get _labelColor {

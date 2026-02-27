@@ -19,19 +19,19 @@ class _DSGrayColor extends DSColor {
   @override
   DSColor get shade600 => const _DSGrayColor(0xFF525252);
   @override
-  DSColor get shape500 => const _DSGrayColor(0xFF737373); // Primary Gray
+  DSColor get shade500 => const _DSGrayColor(0xFF737373); // Primary Gray
   @override
-  DSColor get shape400 => const _DSGrayColor(0xFFA3A3A3);
+  DSColor get shade400 => const _DSGrayColor(0xFFA3A3A3);
   @override
-  DSColor get shape300 => const _DSGrayColor(0xFFD4D4D4);
+  DSColor get shade300 => const _DSGrayColor(0xFFD4D4D4);
   @override
-  DSColor get shape200 => const _DSGrayColor(0xFFE5E5E5);
+  DSColor get shade200 => const _DSGrayColor(0xFFE5E5E5);
   @override
-  DSColor get shape100 => const _DSGrayColor(0xFFF1F4F5);
+  DSColor get shade100 => const _DSGrayColor(0xFFF1F4F5);
   @override
-  DSColor get shape50 => const _DSGrayColor(0xFFF9FAFB);
+  DSColor get shade50 => const _DSGrayColor(0xFFF9FAFB);
   @override
-  DSColor get primary => shape500;
+  DSColor get primary => shade500;
 
   @override
   DSColor withOpacity(double opacity) {

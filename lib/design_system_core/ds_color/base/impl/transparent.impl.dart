@@ -20,19 +20,19 @@ class _DSTransparentColor extends DSColor {
   @override
   DSColor get shade600 => this;
   @override
-  DSColor get shape500 => this;
+  DSColor get shade500 => this;
 
   // Black color tints (getting lighter)
   @override
-  DSColor get shape400 => this;
+  DSColor get shade400 => this;
   @override
-  DSColor get shape300 => this;
+  DSColor get shade300 => this;
   @override
-  DSColor get shape200 => this;
+  DSColor get shade200 => this;
   @override
-  DSColor get shape100 => this;
+  DSColor get shade100 => this;
   @override
-  DSColor get shape50 => this;
+  DSColor get shade50 => this;
 
   // You might want to add a more semantic name for the primary shade
   @override
