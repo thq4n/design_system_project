@@ -161,38 +161,83 @@ class _DSButtonState extends DSStateBase<DSButton> {
                 color: foregroundColor,
                 radius: (textStyle?.fontSize ?? 0) / 2,
               )
-            : Row(
-                mainAxisSize: MainAxisSize.min,
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  if (widget.prefixIcon != null) ...[
-                    SizedBox(
-                      width: widget.size.prefixIconSize,
-                      height: widget.size.prefixIconSize,
-                      child: _buildIcon(
-                        widget.prefixIcon,
-                        componentTheme.defaultState.prefixIconColor,
-                        componentTheme.pressedState.prefixIconColor,
-                      ),
+            : LayoutBuilder(
+                builder: (context, constraints) {
+                  final hasPrefix = widget.prefixIcon != null;
+                  final hasSuffix = widget.suffixIcon != null;
+                  final totalIconWidth = (hasPrefix
+                          ? widget.size.prefixIconSize +
+                              widget.size.elementSpacing
+                          : 0.0) +
+                      (hasSuffix
+                          ? widget.size.suffixIconSize +
+                              widget.size.elementSpacing
+                          : 0.0);
+                  final maxTextWidth = constraints.maxWidth.isFinite
+                      ? (constraints.maxWidth - totalIconWidth)
+                          .clamp(0.0, double.infinity)
+                      : null;
+                  final label = widget.label ?? '';
+                  final intrinsicTextWidth = maxTextWidth == null
+                      ? null
+                      : (TextPainter(
+                          text: TextSpan(text: label, style: textStyle),
+                          maxLines: 1,
+                          textDirection: TextDirection.ltr,
+                        )..layout(minWidth: 0, maxWidth: double.infinity))
+                          .size
+                          .width;
+                  final textWidth = maxTextWidth == null
+                      ? null
+                      : intrinsicTextWidth != null
+                          ? intrinsicTextWidth.clamp(0.0, maxTextWidth)
+                          : maxTextWidth;
+                  return Row(
+                    mainAxisSize: MainAxisSize.min,
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      if (widget.prefixIcon != null) ...[
+                        SizedBox(
+                          width: widget.size.prefixIconSize,
+                          height: widget.size.prefixIconSize,
+                          child: _buildIcon(
+                            widget.prefixIcon,
+                            componentTheme.defaultState.prefixIconColor,
+                            componentTheme.pressedState.prefixIconColor,
+                          ),
+                        ),
+                      ],
+                      if (widget.label != null)
+                        textWidth != null
+                            ? SizedBox(
+                                width: textWidth,
+                                child: Text(
+                                  label,
+                                  overflow: TextOverflow.ellipsis,
+                                  softWrap: false,
+                                ),
+                              )
+                            : Text(
+                                label,
+                                overflow: TextOverflow.ellipsis,
+                                softWrap: false,
+                              ),
+                      if (widget.suffixIcon != null) ...[
+                        SizedBox(
+                          width: widget.size.suffixIconSize,
+                          height: widget.size.suffixIconSize,
+                          child: _buildIcon(
+                            widget.suffixIcon,
+                            componentTheme.defaultState.suffixIconColor,
+                            componentTheme.pressedState.suffixIconColor,
+                          ),
+                        ),
+                      ],
+                    ].withSeparators(
+                      SizedBox(width: widget.size.elementSpacing),
                     ),
-                  ],
-                  if (widget.label != null)
-                    Text(
-                      widget.label ?? '',
-                      // Let foregroundColor handle text color changes
-                    ),
-                  if (widget.suffixIcon != null) ...[
-                    SizedBox(
-                      width: widget.size.suffixIconSize,
-                      height: widget.size.suffixIconSize,
-                      child: _buildIcon(
-                        widget.suffixIcon,
-                        componentTheme.defaultState.suffixIconColor,
-                        componentTheme.pressedState.suffixIconColor,
-                      ),
-                    ),
-                  ],
-                ].withSeparators(SizedBox(width: widget.size.elementSpacing)),
+                  );
+                },
               ),
       ),
     );
