@@ -52,18 +52,22 @@ extension CurrencyExt on num? {
     return isWithSymbol ? '$formatted đ' : formatted;
   }
 
+  /// Formats this number for display using app locale (decimal: comma,
+  /// thousands: dot). Uses [DecimalTextInputFormatter] so output is identical
+  /// to what the formatter produces in text fields.
   String toAppFormattedDecimalNumberString({int? maxDecimalDigits}) {
-    // Note: DecimalTextInputFormatter would need to be implemented or imported
-    // return DecimalTextInputFormatter(maxDecimalDigits: maxDecimalDigits)
-    //     .formatEditUpdate(
-    //       TextEditingValue.empty,
-    //       TextEditingValue(
-    //         text: this?.toDouble().toString() ?? '',
-    //       ),
-    //     )
-    //     .text;
-    final value = this ?? 0;
-    return value.toStringAsFixed(maxDecimalDigits ?? 2);
+    final n = this?.toDouble();
+    if (n == null) return '';
+    final raw = maxDecimalDigits != null && maxDecimalDigits >= 0
+        ? n.toStringAsFixed(maxDecimalDigits)
+        : n.toString();
+    final withAppDecimal = raw.replaceFirst('.', UtilsConstants.decimalPoint);
+    return DecimalTextInputFormatter(maxDecimalDigits: maxDecimalDigits)
+        .formatEditUpdate(
+          TextEditingValue.empty,
+          TextEditingValue(text: withAppDecimal),
+        )
+        .text;
   }
 
   String toAppFormattedNumberString() {

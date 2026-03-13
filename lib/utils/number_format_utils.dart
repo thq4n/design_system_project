@@ -42,6 +42,55 @@ class NumberFormatUtils {
     }
     return _numberFormat.parse(string).toDouble();
   }
+
+  /// Formats a number for display using app locale constants
+  /// ([UtilsConstants.decimalPoint], [UtilsConstants.thousandSeparator]).
+  /// Use this as the single source of truth for decimal number display so
+  /// that changing locale/constants in one place keeps the app consistent.
+  ///
+  /// [value] The number to format; null returns ''.
+  /// [maxDecimalDigits] Optional cap on fractional digits; trailing zeros are
+  /// removed.
+  static String formatDecimalForDisplay(num? value, {int? maxDecimalDigits}) {
+    if (value == null) return '';
+    final n = value.toDouble();
+    final isNegative = n < 0;
+    final absN = n.abs();
+
+    String intPartStr;
+    String fracPartStr;
+
+    if (maxDecimalDigits != null && maxDecimalDigits >= 0) {
+      final fixed = absN.toStringAsFixed(maxDecimalDigits);
+      final parts = fixed.split('.');
+      intPartStr = parts[0];
+      final frac = parts.length > 1 ? parts[1] : '';
+      fracPartStr = frac.replaceAll(RegExp(r'0+$'), '');
+    } else {
+      final s = absN.toString();
+      if (s.contains('e') || s.contains('E')) {
+        final fixed = absN.toStringAsFixed(10);
+        final parts = fixed.split('.');
+        intPartStr = parts[0];
+        fracPartStr = (parts.length > 1 ? parts[1] : '').replaceAll(RegExp(r'0+$'), '');
+      } else {
+        final parts = s.split('.');
+        intPartStr = parts[0];
+        fracPartStr = parts.length > 1 ? parts[1] : '';
+      }
+    }
+
+    final intFormatted = intPartStr.replaceAllMapped(
+      RegExp(r'(\d{1,3})(?=(\d{3})+(?!\d))'),
+      (Match match) => '${match[1]}${UtilsConstants.thousandSeparator}',
+    );
+
+    final formatted = fracPartStr.isEmpty
+        ? intFormatted
+        : '$intFormatted${UtilsConstants.decimalPoint}$fracPartStr';
+
+    return isNegative ? '-$formatted' : formatted;
+  }
 }
 
 class CurrencyInputFormatter extends TextInputFormatter {
@@ -102,9 +151,10 @@ class DecimalTextInputFormatter extends TextInputFormatter {
     }
 
     // Proceed with the original formatting logic
+    // Escape thousand separator so "." matches literal period, not any character
     final regEx = RegExp(
       r'^\d{1,3}('
-      '${UtilsConstants.thousandSeparator}'
+      '${RegExp.escape(UtilsConstants.thousandSeparator)}'
       r'\d{3})*(\'
       '${UtilsConstants.decimalPoint}'
       r'\d'
@@ -121,9 +171,11 @@ class DecimalTextInputFormatter extends TextInputFormatter {
     final data = newString.split(UtilsConstants.decimalPoint);
 
     // Process integer part (before the decimal point)
+    // Strip thousand separators before parsing so "25.555" -> 25555, not 25
     if (!newString.startsWith(UtilsConstants.decimalPoint)) {
       var left = data.isNotEmpty ? data[0] : '0';
-      left = left.intNumber.toAppCurrencyString(isWithSymbol: false);
+      final rawInteger = left.replaceAll(UtilsConstants.thousandSeparator, '');
+      left = rawInteger.intNumber.toAppCurrencyString(isWithSymbol: false);
       data[0] = left;
       newString = data.join(UtilsConstants.decimalPoint);
     }
