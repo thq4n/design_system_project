@@ -57,7 +57,9 @@ extension CurrencyExt on num? {
   /// to what the formatter produces in text fields.
   String toAppFormattedDecimalNumberString({int? maxDecimalDigits}) {
     final n = this?.toDouble();
-    if (n == null) return '';
+    if (n == null) {
+      return '';
+    }
     final raw = maxDecimalDigits != null && maxDecimalDigits >= 0
         ? n.toStringAsFixed(maxDecimalDigits)
         : n.toString();

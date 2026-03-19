@@ -52,7 +52,9 @@ class NumberFormatUtils {
   /// [maxDecimalDigits] Optional cap on fractional digits; trailing zeros are
   /// removed.
   static String formatDecimalForDisplay(num? value, {int? maxDecimalDigits}) {
-    if (value == null) return '';
+    if (value == null) {
+      return '';
+    }
     final n = value.toDouble();
     final isNegative = n < 0;
     final absN = n.abs();
@@ -72,7 +74,8 @@ class NumberFormatUtils {
         final fixed = absN.toStringAsFixed(10);
         final parts = fixed.split('.');
         intPartStr = parts[0];
-        fracPartStr = (parts.length > 1 ? parts[1] : '').replaceAll(RegExp(r'0+$'), '');
+        fracPartStr =
+            (parts.length > 1 ? parts[1] : '').replaceAll(RegExp(r'0+$'), '');
       } else {
         final parts = s.split('.');
         intPartStr = parts[0];
