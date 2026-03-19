@@ -19,6 +19,8 @@ part 'extensions/typography/ds_text_theme.ext.dart';
 part 'extensions/color/ds_color_theme.ext.dart';
 
 // Component Theme
+part 'components/ds_checkbox/ds_checkbox_theme.dart';
+part 'components/ds_checkbox/ds_checkbox_theme.ext.dart';
 part 'components/ds_avatar/ds_avatar_theme.dart';
 part 'components/ds_avatar/ds_avatar_theme.ext.dart';
 part 'components/ds_tag/ds_tag_theme.dart';

@@ -100,6 +100,7 @@ class DSAppTheme {
           animationCurve: Curves.easeInOut,
         ),
       ),
+      DSCheckboxThemeExtension(),
     ],
   );
 
