@@ -152,6 +152,7 @@ class _DSInputState extends State<DSInput> {
         valueListenable: _controller!,
         builder: (ctx, value, w) {
           final textField = TextField(
+            key: widget.key,
             textAlign: widget.textAlign,
             focusNode: value.focusNode,
             readOnly: widget.readOnly || !widget.enable,

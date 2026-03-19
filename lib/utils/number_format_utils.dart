@@ -14,7 +14,7 @@ class NumberFormatUtils {
       NumberFormat.currency(
         symbol: isWithSymbol ? ' đ' : '',
         customPattern:
-            '''#${UtilsConstants.thousandSeparator}###${isWithSymbol ? '\u00a4' : ''}''',
+            '''#${UtilsConstants.thousandSeparatorSymbol}###${isWithSymbol ? '\u00a4' : ''}''',
         decimalDigits: 0,
       );
 
@@ -44,7 +44,7 @@ class NumberFormatUtils {
   }
 
   /// Formats a number for display using app locale constants
-  /// ([UtilsConstants.decimalPoint], [UtilsConstants.thousandSeparator]).
+  /// ([UtilsConstants.decimalSymbol], [UtilsConstants.thousandSeparatorSymbol]).
   /// Use this as the single source of truth for decimal number display so
   /// that changing locale/constants in one place keeps the app consistent.
   ///
@@ -85,12 +85,12 @@ class NumberFormatUtils {
 
     final intFormatted = intPartStr.replaceAllMapped(
       RegExp(r'(\d{1,3})(?=(\d{3})+(?!\d))'),
-      (Match match) => '${match[1]}${UtilsConstants.thousandSeparator}',
+      (Match match) => '${match[1]}${UtilsConstants.thousandSeparatorSymbol}',
     );
 
     final formatted = fracPartStr.isEmpty
         ? intFormatted
-        : '$intFormatted${UtilsConstants.decimalPoint}$fracPartStr';
+        : '$intFormatted${UtilsConstants.decimalSymbol}$fracPartStr';
 
     return isNegative ? '-$formatted' : formatted;
   }
@@ -130,7 +130,17 @@ class UsernameInputFormatter extends TextInputFormatter {
 class DecimalTextInputFormatter extends TextInputFormatter {
   final int? maxDecimalDigits;
 
-  DecimalTextInputFormatter({this.maxDecimalDigits});
+  /// Giới hạn giá trị tối thiểu (ví dụ: 0).
+  final double? min;
+
+  /// Giới hạn giá trị tối đa (ví dụ: 100).
+  final double? max;
+
+  DecimalTextInputFormatter({
+    this.maxDecimalDigits,
+    this.min,
+    this.max,
+  }) : assert(min == null || max == null || min <= max);
 
   @override
   TextEditingValue formatEditUpdate(
@@ -143,8 +153,8 @@ class DecimalTextInputFormatter extends TextInputFormatter {
     // Validate that the new input contains only allowed characters
     final initialValidationRegEx = RegExp(
       r'^[\d' +
-          RegExp.escape(UtilsConstants.thousandSeparator) +
-          RegExp.escape(UtilsConstants.decimalPoint) +
+          RegExp.escape(UtilsConstants.thousandSeparatorSymbol) +
+          RegExp.escape(UtilsConstants.decimalSymbol) +
           r']*$',
     );
 
@@ -157,30 +167,31 @@ class DecimalTextInputFormatter extends TextInputFormatter {
     // Escape thousand separator so "." matches literal period, not any character
     final regEx = RegExp(
       r'^\d{1,3}('
-      '${RegExp.escape(UtilsConstants.thousandSeparator)}'
+      '${RegExp.escape(UtilsConstants.thousandSeparatorSymbol)}'
       r'\d{3})*(\'
-      '${UtilsConstants.decimalPoint}'
+      '${UtilsConstants.decimalSymbol}'
       r'\d'
       '${(maxDecimalDigits ?? 0) > 0 ? '{0,$maxDecimalDigits}' : '*'}'
       r')?$',
     );
 
-    if (!newString.contains(UtilsConstants.decimalPoint) &&
-        oldString.contains(UtilsConstants.decimalPoint)) {
+    if (!newString.contains(UtilsConstants.decimalSymbol) &&
+        oldString.contains(UtilsConstants.decimalSymbol)) {
       newString =
-          oldString.split(UtilsConstants.decimalPoint).firstOrNull ?? '';
+          oldString.split(UtilsConstants.decimalSymbol).firstOrNull ?? '';
     }
 
-    final data = newString.split(UtilsConstants.decimalPoint);
+    final data = newString.split(UtilsConstants.decimalSymbol);
 
     // Process integer part (before the decimal point)
     // Strip thousand separators before parsing so "25.555" -> 25555, not 25
-    if (!newString.startsWith(UtilsConstants.decimalPoint)) {
+    if (!newString.startsWith(UtilsConstants.decimalSymbol)) {
       var left = data.isNotEmpty ? data[0] : '0';
-      final rawInteger = left.replaceAll(UtilsConstants.thousandSeparator, '');
+      final rawInteger =
+          left.replaceAll(UtilsConstants.thousandSeparatorSymbol, '');
       left = rawInteger.intNumber.toAppCurrencyString(isWithSymbol: false);
       data[0] = left;
-      newString = data.join(UtilsConstants.decimalPoint);
+      newString = data.join(UtilsConstants.decimalSymbol);
     }
 
     // Ensure the input matches the desired pattern,
@@ -188,12 +199,12 @@ class DecimalTextInputFormatter extends TextInputFormatter {
     newString = regEx.stringMatch(newString) ?? oldValue.text;
 
     // Remove trailing zeros
-    if (newString.contains(UtilsConstants.decimalPoint)) {
+    if (newString.contains(UtilsConstants.decimalSymbol)) {
       newString = newString.replaceFirst(RegExp(r'0*$'), '');
     }
 
     // Handle input ending with a decimal point
-    if (newString.endsWith(UtilsConstants.decimalPoint)) {
+    if (newString.endsWith(UtilsConstants.decimalSymbol)) {
       newString = '${newString}0';
       return TextEditingValue(
         text: newString,
@@ -203,7 +214,7 @@ class DecimalTextInputFormatter extends TextInputFormatter {
     }
 
     // Handle input starting with a decimal point
-    if (newString.startsWith(UtilsConstants.decimalPoint)) {
+    if (newString.startsWith(UtilsConstants.decimalSymbol)) {
       newString = '0$newString';
       return TextEditingValue(
         text: newString,
@@ -212,12 +223,46 @@ class DecimalTextInputFormatter extends TextInputFormatter {
       );
     }
 
+    // Áp dụng giới hạn min/max nếu có
+    if (min != null || max != null) {
+      final value = _parseFormattedDecimal(newString);
+      if (value != null) {
+        var clamped = value;
+        if (min != null && clamped < min!) {
+          clamped = min!;
+        }
+        if (max != null && clamped > max!) {
+          clamped = max!;
+        }
+        if (clamped != value) {
+          final text = clamped.toAppFormattedDecimalNumberString(
+            maxDecimalDigits: maxDecimalDigits,
+          );
+          return TextEditingValue(
+            text: text,
+            selection: TextSelection.collapsed(offset: text.length),
+            composing: TextRange.empty,
+          );
+        }
+      }
+    }
+
     // Final return with proper formatting
     return TextEditingValue(
       text: newString,
       selection: TextSelection.collapsed(offset: newString.length),
       composing: TextRange.collapsed(newString.length),
     );
+  }
+
+  static double? _parseFormattedDecimal(String s) {
+    if (s.isEmpty) {
+      return null;
+    }
+    final raw = s
+        .replaceAll(UtilsConstants.thousandSeparatorSymbol, '')
+        .replaceAll(UtilsConstants.decimalSymbol, '.');
+    return double.tryParse(raw);
   }
 }
 
@@ -228,7 +273,7 @@ class IntegerTextInputFormatter extends TextInputFormatter {
     TextEditingValue newValue,
   ) {
     // Regular expression to match integer values only
-    final regEx = RegExp('^[\\d${UtilsConstants.thousandSeparator}]*\$');
+    final regEx = RegExp('^[\\d${UtilsConstants.thousandSeparatorSymbol}]*\$');
 
     var newString = newValue.text;
 

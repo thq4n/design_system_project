@@ -47,7 +47,8 @@ extension CurrencyExt on num? {
     final value = this ?? 0;
     final formatted = value.toStringAsFixed(0).replaceAllMapped(
           RegExp(r'(\d{1,3})(?=(\d{3})+(?!\d))'),
-          (Match match) => '${match[1]}${UtilsConstants.thousandSeparator}',
+          (Match match) =>
+              '${match[1]}${UtilsConstants.thousandSeparatorSymbol}',
         );
     return isWithSymbol ? '$formatted đ' : formatted;
   }
@@ -63,7 +64,7 @@ extension CurrencyExt on num? {
     final raw = maxDecimalDigits != null && maxDecimalDigits >= 0
         ? n.toStringAsFixed(maxDecimalDigits)
         : n.toString();
-    final withAppDecimal = raw.replaceFirst('.', UtilsConstants.decimalPoint);
+    final withAppDecimal = raw.replaceFirst('.', UtilsConstants.decimalSymbol);
     return DecimalTextInputFormatter(maxDecimalDigits: maxDecimalDigits)
         .formatEditUpdate(
           TextEditingValue.empty,

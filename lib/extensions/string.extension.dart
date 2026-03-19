@@ -795,6 +795,13 @@ extension IntExt on String? {
   }
 
   String? get removeCommaString {
-    return this?.replaceAll(',', '');
+    final text = this;
+
+    return text
+        ?.replaceAll(UtilsConstants.thousandSeparatorSymbol, '')
+        .replaceAll(
+          UtilsConstants.decimalSymbol,
+          UtilsConstants.languageDecimalSymbol,
+        );
   }
 }
