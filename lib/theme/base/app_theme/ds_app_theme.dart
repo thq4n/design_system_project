@@ -101,6 +101,7 @@ class DSAppTheme {
         ),
       ),
       DSCheckboxThemeExtension(),
+      DSTabsThemeExtension(),
     ],
   );
 

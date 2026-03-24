@@ -16,6 +16,7 @@ export 'ds_loading/ds_loading.dart';
 export 'ds_media_picker/ds_media_picker.dart';
 export 'ds_radio/ds_radio.dart';
 export 'ds_tab_bar/ds_tab_bar.dart';
+export 'ds_tabs/ds_tabs.dart';
 export 'ds_tag/ds_tag.dart';
 export 'ds_timeline/ds_timeline.dart';
 export 'ds_user_info/ds_user_info.dart';
