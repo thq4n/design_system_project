@@ -56,11 +56,27 @@ extension ListExtension<E> on List<E> {
 }
 
 extension WidgetListExtensions on List<Widget> {
-  List<Widget> withSeparators(Widget separator) {
+  List<Widget> withSeparators({required Widget separator}) {
     if (isEmpty) {
       return [];
     }
     final List<Widget> result = [];
+    for (int i = 0; i < length; i++) {
+      result.add(this[i]);
+      if (i < length - 1) {
+        result.add(separator);
+      }
+    }
+    return result;
+  }
+}
+
+extension ListWidgetSpanExtensions on List<InlineSpan> {
+  List<InlineSpan> withSeparators(InlineSpan separator) {
+    if (isEmpty) {
+      return [];
+    }
+    final List<InlineSpan> result = [];
     for (int i = 0; i < length; i++) {
       result.add(this[i]);
       if (i < length - 1) {

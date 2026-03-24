@@ -263,7 +263,7 @@ extension DateUtilsExtention on DateTime {
   /// **[HH, ':', nn]**
   ///
   /// **10:59**
-  String toTimeFormat() {
+  String toLocalTimeFormat() {
     return formatDate(
       toLocal(),
       DateTimeFormat().timeFormat,
@@ -366,8 +366,8 @@ String formatDateRange(DateTime? fromTime, DateTime? toTime) {
   if (fromLocal.isSameDay(toLocal)) {
     // Same day: "20/12/2025 09:00 - 09:30"
     final datePart = fromLocal.toLocalddmmyyyy();
-    final fromTimePart = fromLocal.toTimeFormat();
-    final toTimePart = toLocal.toTimeFormat();
+    final fromTimePart = fromLocal.toLocalTimeFormat();
+    final toTimePart = toLocal.toLocalTimeFormat();
     return '$datePart $fromTimePart - $toTimePart';
   } else {
     // Different days: "20/12/2025 09:00 - 21/12/2025 09:30"

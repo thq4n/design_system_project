@@ -1,5 +1,6 @@
 import 'package:collection/collection.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 import '../../design_system_project.dart';
 
@@ -30,6 +31,8 @@ class MultipleFilterSelectionModal<T> extends StatefulWidget {
   final RefreshController? refreshController;
   final bool dismissWhenAction;
   final bool Function(List<T> selectedItem)? onDisableAction;
+  final bool enableCopyTitle;
+  final Function()? onCopySuccess;
 
   const MultipleFilterSelectionModal({
     super.key,
@@ -51,6 +54,8 @@ class MultipleFilterSelectionModal<T> extends StatefulWidget {
     this.cancelText,
     required this.dismissWhenAction,
     this.onDisableAction,
+    this.enableCopyTitle = false,
+    this.onCopySuccess,
   });
 
   @override
@@ -210,9 +215,34 @@ class _MultipleFilterSelectionModalState<T>
                 child: Padding(
                   padding: widget.titlePadding ??
                       const EdgeInsets.fromLTRB(16, 5, 16, 15),
-                  child: Text(
-                    widget.title,
-                    style: textTheme.lg?.semibold,
+                  child: RichText(
+                    text: TextSpan(
+                      text: widget.title,
+                      style: textTheme.lg?.semibold,
+                      children: [
+                        if (widget.enableCopyTitle) ...[
+                          const WidgetSpan(child: SizedBox(width: 4)),
+                          WidgetSpan(
+                            alignment: PlaceholderAlignment.middle,
+                            child: GestureDetector(
+                              onTap: () {
+                                Clipboard.setData(
+                                  ClipboardData(text: widget.title),
+                                );
+                                if (widget.onCopySuccess != null) {
+                                  widget.onCopySuccess!();
+                                }
+                              },
+                              child: DSImageView(
+                                source: DSAssets.vuesax.documentCopyLinear,
+                                height: DSIconSizes.size16,
+                                width: DSIconSizes.size16,
+                              ),
+                            ),
+                          ),
+                        ],
+                      ],
+                    ),
                   ),
                 ),
               ),

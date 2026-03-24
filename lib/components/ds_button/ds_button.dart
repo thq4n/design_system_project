@@ -234,7 +234,7 @@ class _DSButtonState extends DSStateBase<DSButton> {
                         ),
                       ],
                     ].withSeparators(
-                      SizedBox(width: widget.size.elementSpacing),
+                      separator: SizedBox(width: widget.size.elementSpacing),
                     ),
                   );
                 },
