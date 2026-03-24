@@ -124,9 +124,13 @@ class _DSTabItemWidget extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               mainAxisSize: MainAxisSize.min,
               children: [
-                Text(
-                  item.label,
-                  style: labelStyle,
+                Flexible(
+                  child: Text(
+                    item.label,
+                    style: labelStyle,
+                    maxLines: 1,
+                    overflow: TextOverflow.ellipsis,
+                  ),
                 ),
                 if (item.count > 0) ...[
                   SizedBox(width: theme.badgeSpacing),
