@@ -783,6 +783,16 @@ extension PhoneNumberExt on String? {
 
     return false;
   }
+
+  String get hiddenPhoneNumber {
+    if (isNullOrEmpty) {
+      return '';
+    }
+    return displayPhoneNumber.replaceAllMapped(
+      RegExp(r'[0-9]'),
+      (match) => '*',
+    );
+  }
 }
 
 extension IntExt on String? {
