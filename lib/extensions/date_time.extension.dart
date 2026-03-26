@@ -1,6 +1,10 @@
 part of 'extensions.dart';
 
 extension DateOnlyCompare on DateTime {
+  bool get isToday {
+    return isSameDay(DateTime.now());
+  }
+
   bool isSameDay(DateTime other) {
     return year == other.year && month == other.month && day == other.day;
   }

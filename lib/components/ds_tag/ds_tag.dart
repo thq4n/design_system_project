@@ -114,6 +114,8 @@ class _DSTagState extends DSStateBase<DSTag> {
       );
     }
 
+    print('backgroundColor: $_backgroundColor');
+
     return IntrinsicWidth(
       child: IntrinsicHeight(
         child: Container(
