@@ -37,119 +37,130 @@ T? asOrNull<T>(dynamic value, [T? defaultValue]) {
   }
 
   try {
-    final tType = T.toString();
+    // Prefer "convert then type-check" to avoid relying on type names.
+    // This remains stable under --obfuscate because it uses runtime checks,
+    // not T.toString() comparisons.
 
-    // Handle bool type
-    if (tType == 'bool' || tType == 'bool?') {
-      if (value is bool) {
-        return value as T;
-      }
-      // Try to convert from common representations
-      if (value is int) {
-        return (value != 0) as T;
-      }
-      if (value is String) {
-        final lower = value.toLowerCase();
-        if (lower == 'true' || lower == '1' || lower == 'yes') {
-          return true as T;
-        }
-        if (lower == 'false' || lower == '0' || lower == 'no') {
-          return false as T;
-        }
-      }
-      return defaultValue;
-    }
-
-    // Handle String type
-    if (tType == 'String' || tType == 'String?') {
-      if (value is String) {
-        return value as T;
-      }
-      // Convert other types to string
-      return value.toString() as T;
-    }
-
-    // Handle List types
-    if (tType == 'List<String>' || tType == 'List<String>?') {
-      if (value is List) {
-        return value.cast<String>() as T;
-      }
-      return defaultValue;
-    }
-    if (tType == 'List<double>' || tType == 'List<double>?') {
-      if (value is List) {
-        return value.cast<double>() as T;
-      }
-      return defaultValue;
-    }
-    if (tType == 'List<int>' || tType == 'List<int>?') {
-      if (value is List) {
-        return value.cast<int>() as T;
-      }
-      return defaultValue;
-    }
-
-    // Handle DateTime type
-    if (tType == 'DateTime' || tType == 'DateTime?') {
-      if (value is DateTime) {
-        return value as T;
-      }
-      if (value is String) {
-        return DateTime.tryParse(value)?.toLocal() as T?;
-      }
-      if (value is int) {
-        // Handle Unix timestamp (milliseconds)
-        return DateTime.fromMillisecondsSinceEpoch(value).toLocal() as T;
-      }
-      return defaultValue;
-    }
-
-    // Handle numeric types
+    // Numbers → int/double
     if (value is num) {
-      if (tType == 'double' || tType == 'double?') {
-        return value.toDouble() as T;
+      final asInt = value.toInt();
+      if (asInt is T) {
+        return asInt as T;
       }
-      if (tType == 'int' || tType == 'int?') {
-        return value.toInt() as T;
+
+      final asDouble = value.toDouble();
+      if (asDouble is T) {
+        return asDouble as T;
       }
     }
 
-    // Handle Duration type
-    if (tType == 'Duration' || tType == 'Duration?') {
-      if (value is Duration) {
-        return value as T;
+    // String → bool/int/double/DateTime/Duration/Color (only return if cast matches T)
+    if (value is String) {
+      final lower = value.toLowerCase();
+      if (lower == 'true' || lower == '1' || lower == 'yes') {
+        const asBool = true;
+        if (asBool is T) {
+          return asBool as T;
+        }
       }
-      if (value is String) {
-        return value.parseDuration() as T;
+      if (lower == 'false' || lower == '0' || lower == 'no') {
+        const asBool = false;
+        if (asBool is T) {
+          return asBool as T;
+        }
       }
-      if (value is int) {
-        // Handle duration in milliseconds
-        return Duration(milliseconds: value) as T;
-      }
-      return defaultValue;
-    }
 
-    // Handle Color type
-    if (tType == 'Color' || tType == 'Color?') {
-      if (value is Color) {
-        return value as T;
+      final asInt = int.tryParse(value);
+      if (asInt != null && asInt is T) {
+        return asInt as T;
       }
-      if (value is String) {
+
+      final asDouble = double.tryParse(value);
+      if (asDouble != null && asDouble is T) {
+        return asDouble as T;
+      }
+
+      final asDateTime = DateTime.tryParse(value)?.toLocal();
+      if (asDateTime != null && asDateTime is T) {
+        return asDateTime as T;
+      }
+
+      try {
+        final asDuration = value.parseDuration();
+        if (asDuration is T) {
+          return asDuration as T;
+        }
+      } catch (_) {
+        // ignore
+      }
+
+      try {
         var hexColor = value.replaceAll('#', '');
         if (hexColor.length == 6) {
           hexColor = 'FF$hexColor';
         }
         if (hexColor.length == 8) {
-          return Color(int.parse('0x$hexColor')) as T;
+          final asColor = Color(int.parse('0x$hexColor'));
+          if (asColor is T) {
+            return asColor as T;
+          }
         }
+      } catch (_) {
+        // ignore
       }
-      return defaultValue;
+    }
+
+    // int milliseconds → DateTime/Duration
+    if (value is int) {
+      final asDateTime = DateTime.fromMillisecondsSinceEpoch(value).toLocal();
+      if (asDateTime is T) {
+        return asDateTime as T;
+      }
+
+      final asDuration = Duration(milliseconds: value);
+      if (asDuration is T) {
+        return asDuration as T;
+      }
+    }
+
+    // Lists → specific supported list types
+    if (value is List) {
+      try {
+        final asStringList = value.cast<String>();
+        if (asStringList is T) {
+          return asStringList as T;
+        }
+      } catch (_) {
+        // ignore
+      }
+      try {
+        final asIntList = value.cast<int>();
+        if (asIntList is T) {
+          return asIntList as T;
+        }
+      } catch (_) {
+        // ignore
+      }
+      try {
+        final asDoubleList = value.cast<double>();
+        if (asDoubleList is T) {
+          return asDoubleList as T;
+        }
+      } catch (_) {
+        // ignore
+      }
+    }
+
+    // Fallback: stringify if that matches T (e.g. T == String)
+    final asString = value.toString();
+    if (asString is T) {
+      return asString as T;
     }
 
     // Type not supported - return null or defaultValue
     if (kDebugMode) {
       debugPrint(
-        'asOrNull: Type $tType is not supported. '
+        'asOrNull: Type $T is not supported. '
         'Value: $value (${value.runtimeType})',
       );
     }
