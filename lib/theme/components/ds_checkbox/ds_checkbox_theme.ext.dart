@@ -5,7 +5,6 @@ enum DSCheckboxVariants {
   secondary,
   outline,
   ghost,
-  // TODO: Define variants for DSCheckbox component
 }
 
 class DSCheckboxThemeExtension
