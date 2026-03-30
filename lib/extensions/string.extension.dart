@@ -815,3 +815,9 @@ extension IntExt on String? {
         );
   }
 }
+
+extension LicensePlateExt on String {
+  String get removeSpecialCharacters {
+    return replaceAll(RegExp(r'[^\w\s]'), '');
+  }
+}
