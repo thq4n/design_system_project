@@ -13,7 +13,7 @@ class DSCheckboxThemeExtension
     activeBorderColor: const DSColors().brand.primary,
     inactiveBorderColor: const DSColors().gray.shade200,
     activeColor: const DSColors().brand.primary,
-    inactiveColor: const DSColors().gray.shade200,
+    inactiveColor: const DSColors().gray.white,
     checkColor: const DSColors().gray.white,
     borderRadius: 4,
     borderWidth: 1,
