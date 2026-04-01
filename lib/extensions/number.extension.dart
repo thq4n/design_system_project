@@ -39,18 +39,10 @@ extension DateTimeConverter on int? {
 
 extension CurrencyExt on num? {
   String toAppCurrencyString({bool isWithSymbol = true, String? locale}) {
-    // Note: NumberFormatUtils.getCurrencyNumberFormat() would
-    // need to be implemented
-    // return NumberFormatUtils.getCurrencyNumberFormat(
-    //   isWithSymbol: isWithSymbol,
-    // ).format(this ?? 0);
-    final value = this ?? 0;
-    final formatted = value.toStringAsFixed(0).replaceAllMapped(
-          RegExp(r'(\d{1,3})(?=(\d{3})+(?!\d))'),
-          (Match match) =>
-              '${match[1]}${UtilsConstants.thousandSeparatorSymbol}',
-        );
-    return isWithSymbol ? '$formatted đ' : formatted;
+    return AppNumericFormatHelpers.formatIntegerThousands(
+      this,
+      isWithSymbol: isWithSymbol,
+    );
   }
 
   /// Formats this number for display using app locale (decimal: comma,

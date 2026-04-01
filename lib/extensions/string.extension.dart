@@ -796,24 +796,13 @@ extension PhoneNumberExt on String? {
 }
 
 extension IntExt on String? {
-  int? get intNumber {
-    return doubleNumber?.toInt();
-  }
+  int? get intNumber => AppNumericFormatHelpers.parseToInt(this);
 
-  double? get doubleNumber {
-    return double.tryParse(removeCommaString ?? '');
-  }
+  double? get doubleNumber =>
+      AppNumericFormatHelpers.parseToDouble(this);
 
-  String? get removeCommaString {
-    final text = this;
-
-    return text
-        ?.replaceAll(UtilsConstants.thousandSeparatorSymbol, '')
-        .replaceAll(
-          UtilsConstants.decimalSymbol,
-          UtilsConstants.languageDecimalSymbol,
-        );
-  }
+  String? get removeCommaString =>
+      AppNumericFormatHelpers.normalizeForParse(this);
 }
 
 extension LicensePlateExt on String {

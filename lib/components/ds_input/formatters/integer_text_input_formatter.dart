@@ -1,26 +1,30 @@
 import 'package:flutter/services.dart';
 
-/// A [TextInputFormatter] that allows only integer numbers.
-///
-/// This formatter ensures that the input contains only digits.
-/// It prevents decimal points and non-numeric characters.
+import '../../../constants/constants.dart';
+import '../../../utils/app_numeric_format_helpers.dart';
+
 class IntegerTextInputFormatter extends TextInputFormatter {
   @override
   TextEditingValue formatEditUpdate(
     TextEditingValue oldValue,
     TextEditingValue newValue,
   ) {
-    final text = newValue.text;
-    if (text.isEmpty) {
-      return newValue;
-    }
+    final regEx = RegExp('^[\\d${UtilsConstants.thousandSeparatorSymbol}]*\$');
 
-    // Allow only digits
-    final regex = RegExp(r'^\d*$');
-    if (!regex.hasMatch(text)) {
-      return oldValue;
-    }
+    var newString = newValue.text;
 
-    return newValue;
+    newString = regEx.stringMatch(newString) ?? oldValue.text;
+
+    final intVal = AppNumericFormatHelpers.parseToInt(newString);
+    newString = AppNumericFormatHelpers.formatIntegerThousands(
+      intVal,
+      isWithSymbol: false,
+    );
+
+    return TextEditingValue(
+      text: newString,
+      selection: TextSelection.collapsed(offset: newString.length),
+      composing: TextRange.collapsed(newString.length),
+    );
   }
 }

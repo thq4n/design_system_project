@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:timeago/timeago.dart' as tag_format;
 
 import '../design_system_project.dart';
+import '../utils/app_numeric_format_helpers.dart';
 
 part 'build_context.extension.dart';
 part 'date_time.extension.dart';

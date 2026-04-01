@@ -1,3 +1,4 @@
+export '../components/ds_input/formatters/formatters.dart';
 export 'color_utils.dart';
 export 'context_utils.dart';
 export 'data_checker_utils.dart';
