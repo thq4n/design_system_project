@@ -27,6 +27,9 @@ environment:
 # the latest version available on pub.dev. To see which dependencies have newer
 # versions available, run `flutter pub outdated`.
 dependencies:
+  barcode_widget: ^2.0.4
+  core:
+    path: ../../core
   dotted_border: ^2.1.0
   extended_image: ^10.0.1
   flutter:
@@ -50,6 +53,8 @@ dependencies:
   photo_view: ^0.15.0
 
   geocoding: ^3.0.0
+  
+  speech_to_text: ^7.0.0
   
 
   # Routing

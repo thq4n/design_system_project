@@ -6,7 +6,8 @@ class UsernameInputFormatter extends TextInputFormatter {
     TextEditingValue oldValue,
     TextEditingValue newValue,
   ) {
-    final text = newValue.text.replaceAll(' ', '-').toUpperCase();
+    final text =
+        newValue.text.replaceAll(' ', '-').replaceAll('--', '-').toUpperCase();
     if (text == newValue.text) {
       return newValue;
     }

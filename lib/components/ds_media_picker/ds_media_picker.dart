@@ -528,11 +528,16 @@ class _DSMediaPickerState extends DSStateBase<DSMediaPicker> {
   @override
   void didUpdateWidget(DSMediaPicker oldWidget) {
     super.didUpdateWidget(oldWidget);
-    // Kiểm tra nếu initialMedia thay đổi
+    final hadInitial =
+        oldWidget.initialMedia != null && !oldWidget.initialMedia!.isEmpty;
+    final hasInitial =
+        widget.initialMedia != null && !widget.initialMedia!.isEmpty;
+    if (hadInitial && !hasInitial && widget.controller.value.isNotEmpty) {
+      widget.controller.removeAll(deleteOnDevice: true);
+    }
     if (oldWidget.initialMedia?.key != widget.initialMedia?.key) {
       _initializeMedia();
     }
-    // Kiểm tra nếu uploadImageToServer callback thay đổi
     if (oldWidget.uploadImageToServer != widget.uploadImageToServer) {
       widget.controller.setUploadCallback = widget.uploadImageToServer;
     }
@@ -563,11 +568,6 @@ class _DSMediaPickerState extends DSStateBase<DSMediaPicker> {
         // Gọi callback nếu có
         widget.onMediaPicked?.call(widget.initialMedia!);
       }
-    } else if (widget.initialMedia == null &&
-        widget.controller.value.isNotEmpty) {
-      // Nếu initialMedia bị xóa (set về null) và controller có media
-      // Xóa tất cả media trong controller
-      widget.controller.removeAll(deleteOnDevice: true);
     }
   }
 

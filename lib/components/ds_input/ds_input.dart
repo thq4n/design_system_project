@@ -24,7 +24,6 @@ class DSInput extends StatefulWidget {
   final String? title;
   final TextStyle? titleStyle;
   final bool required;
-  final Color fillColor;
   final Widget? prefixIcon;
   final TextStyle? hintStyle;
   final TextStyle? textStyle;
@@ -68,7 +67,6 @@ class DSInput extends StatefulWidget {
     this.title,
     this.titleStyle,
     this.required = false,
-    this.fillColor = Colors.white,
     this.prefixIcon,
     this.hintStyle,
     this.textStyle,
@@ -148,6 +146,7 @@ class _DSInputState extends State<DSInput> {
     }
     return AvailabilityWidget(
       enable: widget.enable,
+      disabledOpacity: 1,
       child: ValueListenableBuilder<InputContainerProperties>(
         valueListenable: _controller!,
         builder: (ctx, value, w) {
@@ -214,16 +213,23 @@ class _DSInputState extends State<DSInput> {
                   ? RichText(
                       text: TextSpan(
                         text: widget.title ?? '',
-                        style: widget.titleStyle ??
-                            textTheme.sm?.regular.copyWith(
-                              color: DSColorUsages.text.secondary,
-                            ),
+                        style: widget.enable
+                            ? (widget.titleStyle ??
+                                textTheme.sm?.regular.copyWith(
+                                  color: DSColorUsages.text.secondary,
+                                ))
+                            : (widget.titleStyle ?? textTheme.sm?.regular)
+                                ?.copyWith(
+                                color: DSColorUsages.text.disable,
+                              ),
                         children: [
                           if (widget.required)
                             TextSpan(
                               text: '*',
                               style: textTheme.sm?.regular.copyWith(
-                                color: DSColorUsages.text.error,
+                                color: widget.enable
+                                    ? DSColorUsages.text.error
+                                    : DSColorUsages.text.disable,
                               ),
                             ),
                         ],
@@ -248,6 +254,11 @@ class _DSInputState extends State<DSInput> {
               ),
               isDense: widget.isDense,
               counterStyle: textTheme.xs,
+              filled: true,
+              fillColor: widget.enable
+                  ? DSColorUsages.background.primary
+                  : DSColorUsages.background.disable,
+              enabled: widget.enable,
             ),
             keyboardType: widget.keyboardType,
             textCapitalization: widget.textCapitalization,
