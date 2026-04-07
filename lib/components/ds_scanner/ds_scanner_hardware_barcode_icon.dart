@@ -16,8 +16,8 @@ class DSScannerHardwareBarcodeIcon extends StatefulWidget {
       _DSScannerHardwareBarcodeIconState();
 }
 
-class _DSScannerHardwareBarcodeIconState extends State<DSScannerHardwareBarcodeIcon>
-    with TickerProviderStateMixin {
+class _DSScannerHardwareBarcodeIconState
+    extends State<DSScannerHardwareBarcodeIcon> with TickerProviderStateMixin {
   static const Color _idleColor = Colors.grey;
   late final AnimationController _blinkController;
   late final Animation<double> _blinkAnimation;
@@ -58,10 +58,12 @@ class _DSScannerHardwareBarcodeIconState extends State<DSScannerHardwareBarcodeI
         _scanLineController.repeat();
       }
     } else {
-      _blinkController.stop();
-      _blinkController.reset();
-      _scanLineController.stop();
-      _scanLineController.reset();
+      _blinkController
+        ..stop()
+        ..reset();
+      _scanLineController
+        ..stop()
+        ..reset();
     }
   }
 
@@ -101,8 +103,7 @@ class _DSScannerHardwareBarcodeIconState extends State<DSScannerHardwareBarcodeI
                 Positioned.fill(
                   child: LayoutBuilder(
                     builder: (context, constraints) {
-                      final lineLeft =
-                          _scanLineAnimation.value *
+                      final lineLeft = _scanLineAnimation.value *
                               (constraints.maxWidth + 4) -
                           2;
                       return IgnorePointer(

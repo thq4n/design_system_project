@@ -798,8 +798,7 @@ extension PhoneNumberExt on String? {
 extension IntExt on String? {
   int? get intNumber => AppNumericFormatHelpers.parseToInt(this);
 
-  double? get doubleNumber =>
-      AppNumericFormatHelpers.parseToDouble(this);
+  double? get doubleNumber => AppNumericFormatHelpers.parseToDouble(this);
 
   String? get removeCommaString =>
       AppNumericFormatHelpers.normalizeForParse(this);

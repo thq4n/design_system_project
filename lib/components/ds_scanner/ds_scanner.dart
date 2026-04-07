@@ -104,7 +104,9 @@ class _DSScannerState extends State<DSScanner> {
         Permission.camera,
         context,
       );
-      if (!mounted) return;
+      if (!mounted) {
+        return;
+      }
       _cameraPermissionNotifier.value = hasPermission;
       if (!hasPermission) {
         final granted = await permissionService.requestPermission(
@@ -115,13 +117,17 @@ class _DSScannerState extends State<DSScanner> {
         _cameraPermissionNotifier.value = granted;
       }
     } catch (e) {
-      if (mounted) _cameraPermissionNotifier.value = false;
+      if (mounted) {
+        _cameraPermissionNotifier.value = false;
+      }
     }
   }
 
   void _checkHardwareScannerAndSync() {
     DataWedgeService.isHardwareScannerAvailable().then((available) {
-      if (!mounted) return;
+      if (!mounted) {
+        return;
+      }
       setState(() => _hardwareScannerAvailable = available);
       if (available) {
         _useHardwareScannerNotifier.value = true;
@@ -145,27 +151,33 @@ class _DSScannerState extends State<DSScanner> {
   Future<void> _startDataWedge() async {
     _stopDataWedge();
     await DataWedgeService.createProfile(widget.dataWedgeProfileName);
-    if (!mounted) return;
+    if (!mounted) {
+      return;
+    }
     _dataWedgeSubscription = DataWedgeService.instance.scanStream.listen((
       code,
     ) {
-      if (!mounted) return;
+      if (!mounted) {
+        return;
+      }
       final trimmed = code.trim();
-      if (trimmed.isEmpty) return;
+      if (trimmed.isEmpty) {
+        return;
+      }
       widget.onCodeScanned(trimmed);
       HapticFeedback.mediumImpact();
     });
     final previousStatusSub = _scannerStatusSubscription;
-    _scannerStatusSubscription = DataWedgeService.instance.scannerStatusStream
-        .listen((status) {
-          if (!mounted) {
-            return;
-          }
-          final isScanning = status.isScanning;
-          if (_isHardwareScanningNotifier.value != isScanning) {
-            _isHardwareScanningNotifier.value = isScanning;
-          }
-        });
+    _scannerStatusSubscription =
+        DataWedgeService.instance.scannerStatusStream.listen((status) {
+      if (!mounted) {
+        return;
+      }
+      final isScanning = status.isScanning;
+      if (_isHardwareScanningNotifier.value != isScanning) {
+        _isHardwareScanningNotifier.value = isScanning;
+      }
+    });
     if (previousStatusSub != null) {
       unawaited(previousStatusSub.cancel());
     }
@@ -180,9 +192,13 @@ class _DSScannerState extends State<DSScanner> {
   }
 
   void _onBarcodeFromCamera(Barcode? barcode) {
-    if (barcode?.rawValue == null) return;
+    if (barcode?.rawValue == null) {
+      return;
+    }
     final value = barcode!.rawValue!.trim();
-    if (value.isEmpty) return;
+    if (value.isEmpty) {
+      return;
+    }
     widget.onCodeScanned(value);
     HapticFeedback.mediumImpact();
   }
@@ -222,9 +238,8 @@ class _DSScannerState extends State<DSScanner> {
       valueListenable: _useHardwareScannerNotifier,
       builder: (context, useHardware, _) {
         final showCamera = !_hardwareScannerAvailable || !useHardware;
-        final sectionHeight = showCamera
-            ? widget.scannerHeight
-            : widget.scannerHeightHardware;
+        final sectionHeight =
+            showCamera ? widget.scannerHeight : widget.scannerHeightHardware;
         return ValueListenableBuilder<bool>(
           valueListenable: _isHardwareScanningNotifier,
           builder: (context, isHardwareScanning, _) {
@@ -244,7 +259,8 @@ class _DSScannerState extends State<DSScanner> {
                                 controller: _barcodeController,
                                 onDetect: (result) {
                                   final list = result.barcodes;
-                                  final first = list.isEmpty ? null : list.first;
+                                  final first =
+                                      list.isEmpty ? null : list.first;
                                   _onBarcodeFromCamera(first);
                                 },
                               )

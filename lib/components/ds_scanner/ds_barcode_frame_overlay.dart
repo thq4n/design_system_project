@@ -60,7 +60,7 @@ class _DSBarcodeFrameOverlayState extends State<DSBarcodeFrameOverlay>
   @override
   Widget build(BuildContext context) {
     final controller = _controller;
-    final resolvedColor = widget.color ?? DSColors().gray.shade50;
+    final resolvedColor = widget.color ?? const DSColors().gray.shade50;
     if (controller == null) {
       return IgnorePointer(
         child: CustomPaint(
@@ -110,9 +110,8 @@ class _BarcodeFramePainter extends CustomPainter {
       ..translateByDouble(dx, dy, 0.0, 1.0)
       ..scaleByDouble(scale, scale, 1.0, 1.0);
 
-    final paths = _svgPaths()
-        .map((p) => p.transform(transform.storage))
-        .toList();
+    final paths =
+        _svgPaths().map((p) => p.transform(transform.storage)).toList();
 
     final strokeW = _strokeWidth * scale;
 
@@ -140,9 +139,10 @@ class _BarcodeFramePainter extends CustomPainter {
       ..strokeJoin = StrokeJoin.round;
 
     for (final path in paths) {
-      canvas.drawPath(path, shadowPaintB);
-      canvas.drawPath(path, shadowPaintA);
-      canvas.drawPath(path, framePaint);
+      canvas
+        ..drawPath(path, shadowPaintB)
+        ..drawPath(path, shadowPaintA)
+        ..drawPath(path, framePaint);
     }
   }
 
@@ -165,7 +165,9 @@ class _BarcodeFramePainter extends CustomPainter {
   }
 
   double _uniformScale(Size target, Size source) {
-    if (target.width <= 0 || target.height <= 0) return 1;
+    if (target.width <= 0 || target.height <= 0) {
+      return 1;
+    }
     final sx = target.width / source.width;
     final sy = target.height / source.height;
     return sx < sy ? sx : sy;

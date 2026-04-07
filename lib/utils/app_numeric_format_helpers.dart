@@ -28,9 +28,10 @@ abstract final class AppNumericFormatHelpers {
   static String formatIntegerThousands(num? value, {bool isWithSymbol = true}) {
     final v = value ?? 0;
     final formatted = v.toStringAsFixed(0).replaceAllMapped(
-      RegExp(r'(\d{1,3})(?=(\d{3})+(?!\d))'),
-      (Match match) => '${match[1]}${UtilsConstants.thousandSeparatorSymbol}',
-    );
+          RegExp(r'(\d{1,3})(?=(\d{3})+(?!\d))'),
+          (Match match) =>
+              '${match[1]}${UtilsConstants.thousandSeparatorSymbol}',
+        );
     return isWithSymbol ? '$formatted đ' : formatted;
   }
 }
