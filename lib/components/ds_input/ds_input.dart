@@ -1,3 +1,5 @@
+import 'dart:math' as math;
+
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
@@ -11,6 +13,8 @@ class DSInput extends StatefulWidget {
   final bool isPassword;
   final bool readOnly;
   final Widget? suffixIcon;
+  /// Use for 2+ trailing controls; avoids tight [suffixIcon] layout.
+  final List<Widget>? actions;
   final TextInputType? keyboardType;
   final TextCapitalization textCapitalization;
   final void Function(DSInputController? controller)? onTap;
@@ -54,6 +58,7 @@ class DSInput extends StatefulWidget {
     this.isPassword = false,
     this.readOnly = false,
     this.suffixIcon,
+    this.actions,
     this.keyboardType,
     this.textCapitalization = TextCapitalization.none,
     this.onTap,
@@ -243,10 +248,7 @@ class _DSInputState extends State<DSInput> {
                     ? AvailabilityWidget(enable: widget.enable, child: it)
                     : null,
               ),
-              suffixIconConstraints: BoxConstraints(
-                minHeight: widget.suffixIconSize,
-                minWidth: widget.suffixIconSize,
-              ),
+              suffixIconConstraints: _suffixIconConstraints(),
               prefixIcon: _getPrefixIcon(),
               prefixIconConstraints: BoxConstraints(
                 minHeight: widget.prefixIconSize,
@@ -295,6 +297,55 @@ class _DSInputState extends State<DSInput> {
     );
   }
 
+  bool get _hasMultiActions =>
+      widget.actions != null && widget.actions!.length >= 2;
+
+  Widget? _customTrailingChild() {
+    if (_hasMultiActions) {
+      return Row(
+        mainAxisSize: MainAxisSize.min,
+        mainAxisAlignment: MainAxisAlignment.end,
+        children: [
+          for (var i = 0; i < widget.actions!.length; i++) ...[
+            if (i > 0) const SizedBox(width: 4),
+            widget.actions![i],
+          ],
+        ],
+      );
+    }
+    return widget.suffixIcon;
+  }
+
+  Widget _wrapTrailingChild(Widget child) {
+    if (_hasMultiActions) {
+      return child;
+    }
+    return SizedBox(
+      width: DSIconSizes.size24,
+      height: DSIconSizes.size24,
+      child: child,
+    );
+  }
+
+  BoxConstraints _suffixIconConstraints() {
+    final minH = math.max(widget.suffixIconSize, DSIconSizes.size24);
+    if (_hasMultiActions) {
+      final n = widget.actions!.length;
+      const tapPadding = 8.0;
+      final slotW = DSIconSizes.size24 + tapPadding;
+      final rowW = n * slotW + (n - 1) * 4;
+      var minW = rowW + 20;
+      if (widget.withClearButton && widget.maxLines == 1 && !widget.readOnly) {
+        minW += DSIconSizes.size24 + 17;
+      }
+      return BoxConstraints(minWidth: minW, minHeight: minH);
+    }
+    return BoxConstraints(
+      minHeight: minH,
+      minWidth: widget.suffixIconSize,
+    );
+  }
+
   Widget? _getSuffixIcon() {
     Widget? result;
 
@@ -315,15 +366,16 @@ class _DSInputState extends State<DSInput> {
         builder: (context, value, child) {
           if (!widget.enable || widget.readOnly) {
             return const SizedBox();
-          } else if (value.text.isEmpty) {
-            return widget.suffixIcon != null
-                ? SizedBox(
-                    width: DSIconSizes.size24,
-                    height: DSIconSizes.size24,
-                    child: widget.suffixIcon,
-                  )
-                : const SizedBox();
-          } else if (widget.suffixIcon != null) {
+          }
+          final trailing = _customTrailingChild();
+          final hasTrailing = trailing != null;
+          if (value.text.isEmpty) {
+            if (!hasTrailing) {
+              return const SizedBox();
+            }
+            return _wrapTrailingChild(trailing);
+          }
+          if (hasTrailing) {
             return Row(
               mainAxisSize: MainAxisSize.min,
               children: [
@@ -349,41 +401,32 @@ class _DSInputState extends State<DSInput> {
                   height: 23,
                   color: DSColorUsages.border.primary,
                 ),
-                SizedBox(
-                  width: DSIconSizes.size24,
-                  height: DSIconSizes.size24,
-                  child: widget.suffixIcon,
-                ),
+                _wrapTrailingChild(trailing),
               ],
             );
-          } else {
-            return InkWell(
-              onTap: () {
-                _controller!.clear();
-                _showPrefixFilterFn(_controller!.text);
-                widget.onTextChanged?.call(_controller!.text, _controller);
-                widget.onClear?.call(_controller);
-              },
-              child: SizedBox(
-                width: DSIconSizes.size24,
-                height: DSIconSizes.size24,
-                child: DSImageView(
-                  source: DSAssets.vuesax.closeCircleLinear,
-                  width: DSIconSizes.size24,
-                ),
-              ),
-            );
           }
+          return InkWell(
+            onTap: () {
+              _controller!.clear();
+              _showPrefixFilterFn(_controller!.text);
+              widget.onTextChanged?.call(_controller!.text, _controller);
+              widget.onClear?.call(_controller);
+            },
+            child: SizedBox(
+              width: DSIconSizes.size24,
+              height: DSIconSizes.size24,
+              child: DSImageView(
+                source: DSAssets.vuesax.closeCircleLinear,
+                width: DSIconSizes.size24,
+              ),
+            ),
+          );
         },
       );
-    } else if (widget.suffixIcon != null) {
-      result = SizedBox(
-        width: DSIconSizes.size24,
-        height: DSIconSizes.size24,
-        child: widget.suffixIcon,
-      );
     } else {
-      result = null;
+      final trailing = _customTrailingChild();
+      result =
+          trailing != null ? _wrapTrailingChild(trailing) : null;
     }
 
     if (result != null) {
