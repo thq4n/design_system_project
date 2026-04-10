@@ -13,6 +13,7 @@ class DSInput extends StatefulWidget {
   final bool isPassword;
   final bool readOnly;
   final Widget? suffixIcon;
+
   /// Use for 2+ trailing controls; avoids tight [suffixIcon] layout.
   final List<Widget>? actions;
   final TextInputType? keyboardType;
@@ -425,8 +426,7 @@ class _DSInputState extends State<DSInput> {
       );
     } else {
       final trailing = _customTrailingChild();
-      result =
-          trailing != null ? _wrapTrailingChild(trailing) : null;
+      result = trailing != null ? _wrapTrailingChild(trailing) : null;
     }
 
     if (result != null) {
