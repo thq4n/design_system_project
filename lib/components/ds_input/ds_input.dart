@@ -473,7 +473,10 @@ class _DSInputState extends State<DSInput> {
 
   TextStyle? _getStyle() {
     final endableStyle = widget.textStyle ?? textTheme.base;
-    final disabledStyle = widget.textStyle ?? textTheme.xs;
+    final disabledStyle = widget.textStyle ??
+        textTheme.base?.copyWith(
+          color: DSColorUsages.text.tertiary,
+        );
     if (widget.enable) {
       if (widget.isPassword && _controller?.isShowPass == false) {
         return endableStyle?.copyWith(

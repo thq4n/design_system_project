@@ -37,11 +37,13 @@ class DSTabs extends StatelessWidget {
     required this.controller,
     required this.tabs,
     this.variant = DSTabsVariants.primary,
+    this.duration,
   });
 
   final TabController controller;
   final List<DSTabItem> tabs;
   final DSTabsVariants variant;
+  final Duration? duration;
 
   @override
   Widget build(BuildContext context) {
@@ -68,6 +70,7 @@ class DSTabs extends StatelessWidget {
                 index: i,
                 controller: controller,
                 theme: componentTheme,
+                duration: duration,
               ),
             ),
           ],
@@ -83,12 +86,14 @@ class _DSTabItemWidget extends StatelessWidget {
     required this.index,
     required this.controller,
     required this.theme,
+    required this.duration,
   });
 
   final DSTabItem item;
   final int index;
   final TabController controller;
   final DSTabsTheme theme;
+  final Duration? duration;
 
   @override
   Widget build(BuildContext context) {
@@ -107,7 +112,7 @@ class _DSTabItemWidget extends StatelessWidget {
           onTap: () {
             HapticFeedback.selectionClick();
             if (controller.index != index) {
-              controller.animateTo(index);
+              controller.animateTo(index, duration: duration);
             }
           },
           child: AnimatedContainer(
