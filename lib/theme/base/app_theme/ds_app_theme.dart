@@ -102,6 +102,7 @@ class DSAppTheme {
       ),
       DSCheckboxThemeExtension(),
       DSTabsThemeExtension(),
+      const DSTimeOptionSelectorThemeExtension(),
     ],
   );
 

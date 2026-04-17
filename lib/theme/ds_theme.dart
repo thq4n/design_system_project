@@ -57,3 +57,5 @@ part 'components/ds_tab_bar/ds_tab_bar_theme.dart';
 part 'components/ds_tab_bar/ds_tab_bar_theme.ext.dart';
 part 'components/ds_expandable/ds_expandable_theme.dart';
 part 'components/ds_expandable/ds_expandable_theme.ext.dart';
+part 'components/ds_time_option_selector/ds_time_option_selector_theme.dart';
+part 'components/ds_time_option_selector/ds_time_option_selector_theme.ext.dart';

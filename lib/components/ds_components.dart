@@ -21,5 +21,6 @@ export 'ds_scanner/ds_scanner.dart';
 export 'ds_tab_bar/ds_tab_bar.dart';
 export 'ds_tabs/ds_tabs.dart';
 export 'ds_tag/ds_tag.dart';
+export 'ds_time_option_selector/ds_time_option_selector.dart';
 export 'ds_timeline/ds_timeline.dart';
 export 'ds_user_info/ds_user_info.dart';
