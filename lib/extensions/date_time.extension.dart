@@ -34,6 +34,22 @@ extension DateOnlyCompare on DateTime {
     );
   }
 
+  DateTime get startOfMinute {
+    return DateTime(year, month, day, hour, minute, 0, 0);
+  }
+
+  DateTime get endOfMinute {
+    return DateTime(year, month, day, hour, minute, 59, 999);
+  }
+
+  DateTime get startOfHour {
+    return DateTime(year, month, day, hour, 0, 0, 0);
+  }
+
+  DateTime get endOfHour {
+    return DateTime(year, month, day, hour, 59, 59, 999);
+  }
+
   DateTime get startOfDay {
     return DateTime(year, month, day);
   }

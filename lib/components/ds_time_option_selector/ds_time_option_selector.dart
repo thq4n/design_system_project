@@ -61,27 +61,48 @@ class DSTimeOptionSelector extends StatelessWidget {
           ),
           const SizedBox(height: 8),
         ],
-        GridView.builder(
-          shrinkWrap: true,
-          physics: const NeverScrollableScrollPhysics(),
-          itemCount: options.length,
-          gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-            crossAxisCount: columns,
-            crossAxisSpacing: componentTheme.crossAxisSpacing,
-            mainAxisSpacing: componentTheme.mainAxisSpacing,
-            childAspectRatio: componentTheme.childAspectRatio,
-          ),
-          itemBuilder: (context, index) {
-            final value = options[index];
-            final isSelected = selectedValue == value;
-            return _DSTimeOptionTile(
-              label: effectiveLabelBuilder(value),
-              iconSource: iconSource,
-              isSelected: isSelected,
-              theme: componentTheme,
-              onTap: () => onChanged(value),
+        Column(
+          children:
+              List.generate((options.length / columns).ceil(), (rowIndex) {
+            final startIndex = rowIndex * columns;
+            final endIndex = (startIndex + columns).clamp(0, options.length);
+            final rowOptions = options.sublist(startIndex, endIndex);
+
+            return Padding(
+              padding: EdgeInsets.only(
+                bottom: rowIndex == (options.length / columns).ceil() - 1
+                    ? 0
+                    : componentTheme.mainAxisSpacing,
+              ),
+              child: Row(
+                children: List.generate(columns, (columnIndex) {
+                  final hasValue = columnIndex < rowOptions.length;
+
+                  return Expanded(
+                    child: Padding(
+                      padding: EdgeInsets.only(
+                        right: columnIndex == columns - 1
+                            ? 0
+                            : componentTheme.crossAxisSpacing,
+                      ),
+                      child: hasValue
+                          ? _DSTimeOptionTile(
+                              label: effectiveLabelBuilder(
+                                rowOptions[columnIndex],
+                              ),
+                              iconSource: iconSource,
+                              isSelected:
+                                  selectedValue == rowOptions[columnIndex],
+                              theme: componentTheme,
+                              onTap: () => onChanged(rowOptions[columnIndex]),
+                            )
+                          : const SizedBox.shrink(),
+                    ),
+                  );
+                }),
+              ),
             );
-          },
+          }),
         ),
       ],
     );

@@ -13,10 +13,9 @@ class DSTimeOptionSelectorTheme {
     required this.borderRadius,
     this.crossAxisSpacing = 16,
     this.mainAxisSpacing = 8,
-    this.childAspectRatio = 2.8,
     this.tilePadding = const EdgeInsets.symmetric(vertical: 12, horizontal: 12),
     this.iconLabelSpacing = 4,
-    this.selectionAnimationDuration = const Duration(milliseconds: 300),
+    this.selectionAnimationDuration = const Duration(milliseconds: 200),
     this.selectionAnimationCurve = Curves.easeInOut,
   });
 
@@ -31,7 +30,6 @@ class DSTimeOptionSelectorTheme {
   final DSRadius borderRadius;
   final double crossAxisSpacing;
   final double mainAxisSpacing;
-  final double childAspectRatio;
   final EdgeInsetsGeometry tilePadding;
   final double iconLabelSpacing;
   final Duration selectionAnimationDuration;

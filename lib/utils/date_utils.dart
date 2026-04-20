@@ -88,10 +88,10 @@ class DateTimeFormat {
   /// **31-07-2024**
   final ddDashmmDashyyyy = [dd, '-', mm, '-', yyyy];
 
-  /// **[HH, nn, ss]**
+  /// **[HH:nn:ss]**
   ///
-  /// **105959**
-  final HHmmss = [HH, nn, ss];
+  /// **10:59:59**
+  final HHmmss = [HH, ':', nn, ':', ss];
 
   /// **[Tháng mm, yyyy]**
   /// **Tháng 01, 2024**
