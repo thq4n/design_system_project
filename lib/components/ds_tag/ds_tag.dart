@@ -92,6 +92,7 @@ class _DSTagState extends DSStateBase<DSTag> {
         Text(
           widget.label ?? '',
           style: _componentTheme.textStyle?.copyWithColor(_labelColor),
+          textAlign: TextAlign.center,
         ),
       );
       // Chỉ thêm spacing nếu có suffixIcon
