@@ -246,4 +246,38 @@ abstract class DSStateBase<T extends StatefulWidget> extends State<T> {
       backgroundColor: backgroundColor,
     );
   }
+
+  Future<void> viewVideo({
+    File? file,
+    String? url,
+    Map<String, String>? httpHeaders,
+    String? title,
+    Color backgroundColor = Colors.black,
+    bool barrierDismissible = true,
+  }) async {
+    if (file == null && (url == null || url.isEmpty)) {
+      return;
+    }
+    if (!context.mounted) {
+      return;
+    }
+    await showDialog<void>(
+      context: context,
+      barrierDismissible: barrierDismissible,
+      builder: (BuildContext context) {
+        return Dialog(
+          backgroundColor: colors.transparent,
+          insetPadding: EdgeInsets.zero,
+          child: DSFullScreenVideoBody(
+            file: file,
+            videoUrl: url,
+            httpHeaders: httpHeaders,
+            title: title,
+            backgroundColor: backgroundColor,
+            colors: colors,
+          ),
+        );
+      },
+    );
+  }
 }

@@ -11,10 +11,18 @@ import '../../base/ds_base.dart';
 import '../../design_system_core/ds_color_usage/ds_color_usage_core.dart';
 import '../../extensions/extensions.dart';
 import '../../gen/assets.gen.dart';
-import '../../services/permission/permission_service.dart';
+import '../../services/permission/permission_service.dart'
+    show PermissionService, Permission;
 import '../../theme/ds_theme.dart';
 import '../ds_image_view/ds_image_view.dart';
 import '../ds_loading/ds_loading.dart';
+
+typedef DSMediaUploadSendProgress = void Function(int sent, int total);
+
+typedef DSMediaUploadFileToServer = Future<String?> Function(
+  File file,
+  DSMediaUploadSendProgress onSendProgress,
+);
 
 // Enum cho loại media
 enum DSMediaPickerType { video, photo, both }
@@ -170,8 +178,6 @@ class DSMediaPicked {
     if (videoThumbnail != null) {
       return videoThumbnail;
     }
-    // Placeholder for video thumbnail loading
-    // In real implementation, you would use video_thumbnail package
     return null;
   }
 }
@@ -196,12 +202,22 @@ class DSMediaPickerController extends ValueNotifier<List<DSMediaPicked>> {
   /// Upload callback function
   Future<String?> Function(File file)? _uploadImageToServer;
 
+  DSMediaUploadFileToServer? _uploadFileToServer;
+
   /// Get headers callback function
   Future<Map<String, String>?> Function()? getHeadersCallback;
 
   /// Set upload callback function
   set setUploadCallback(Future<String?> Function(File file)? callback) {
     _uploadImageToServer = callback;
+  }
+
+  void configureMediaUpload({
+    Future<String?> Function(File file)? uploadImageToServer,
+    DSMediaUploadFileToServer? uploadFileToServer,
+  }) {
+    _uploadImageToServer = uploadImageToServer;
+    _uploadFileToServer = uploadFileToServer;
   }
 
   /// Set initial media programmatically
@@ -311,24 +327,97 @@ class DSMediaPickerController extends ValueNotifier<List<DSMediaPicked>> {
     return '''${DateTime.now().millisecondsSinceEpoch}_${DateTime.now().toUtc()}''';
   }
 
+  String _mapUploadError(Object e) {
+    if (e is FileSystemException) {
+      return e.message;
+    }
+    final s = e.toString();
+    if (s.length > 120) {
+      return 'Lỗi tải lên, vui lòng thử lại';
+    }
+    return 'Lỗi tải lên: $s';
+  }
+
   Future<void> _uploadMedia(
     DSMediaPicked media, {
     String uploadFolder = 'uploads',
   }) async {
-    try {
-      // Kiểm tra xem có uploadImageToServer callback không
-      if (_uploadImageToServer == null) {
-        // Nếu không có callback, sử dụng placeholder upload
+    final file = media.mediaFile;
+    if (file == null) {
+      _updateMedia(
+        media.copyWith(
+          isInUploadProgress: false,
+          state: DSMediaState.error,
+          errorMessage: 'Không có file để tải lên',
+        ),
+      );
+      return;
+    }
+    if (_uploadFileToServer == null && _uploadImageToServer == null) {
+      try {
         await _simulateUpload(media);
-        return;
+      } catch (e) {
+        debugPrint('Upload error: $e');
+        _updateMedia(
+          media.copyWith(
+            isInUploadProgress: false,
+            state: DSMediaState.error,
+            errorMessage: _mapUploadError(e),
+          ),
+        );
       }
-
-      // Kiểm tra xem có mediaFile không
-      if (media.mediaFile == null) {
-        throw Exception('Không có file để upload');
+      return;
+    }
+    if (_uploadFileToServer != null) {
+      try {
+        _updateMedia(
+          media.copyWith(
+            isInUploadProgress: true,
+            state: DSMediaState.inProgress,
+            uploadProgress: 0.0,
+          ),
+        );
+        final String? uploadKey = await _uploadFileToServer!(file, (
+          int sent,
+          int total,
+        ) {
+          if (total <= 0) {
+            return;
+          }
+          final double p = (sent / total).clamp(0.0, 1.0);
+          _updateMedia(media.copyWith(uploadProgress: p));
+        });
+        if (uploadKey != null && uploadKey.isNotEmpty) {
+          _updateMedia(
+            media.copyWith(
+              url: uploadKey,
+              isInUploadProgress: false,
+              state: DSMediaState.complete,
+              uploadProgress: 1.0,
+            ),
+          );
+        } else {
+          _updateMedia(
+            media.copyWith(
+              isInUploadProgress: false,
+              state: DSMediaState.error,
+              errorMessage: 'Tải lên thất bại, không nhận được mã tệp',
+            ),
+          );
+        }
+      } catch (e) {
+        debugPrint('Upload error: $e');
+        _updateMedia(
+          media.copyWith(
+            isInUploadProgress: false,
+            state: DSMediaState.error,
+            errorMessage: _mapUploadError(e),
+          ),
+        );
       }
-
-      // Simulate upload progress
+      return;
+    }
+    try {
       for (int i = 0; i <= 10; i++) {
         await Future.delayed(const Duration(milliseconds: 100));
         _updateMedia(
@@ -337,12 +426,8 @@ class DSMediaPickerController extends ValueNotifier<List<DSMediaPicked>> {
           ),
         );
       }
-
-      // Gọi uploadImageToServer callback
-      final url = await _uploadImageToServer!(media.mediaFile!);
-
+      final String? url = await _uploadImageToServer!(file);
       if (url != null && url.isNotEmpty) {
-        // Upload thành công
         _updateMedia(
           media.copyWith(
             url: url,
@@ -352,17 +437,21 @@ class DSMediaPickerController extends ValueNotifier<List<DSMediaPicked>> {
           ),
         );
       } else {
-        // Upload thất bại - không có URL trả về
-        throw Exception('Upload thất bại - không nhận được URL');
+        _updateMedia(
+          media.copyWith(
+            isInUploadProgress: false,
+            state: DSMediaState.error,
+            errorMessage: 'Tải lên thất bại, không nhận được mã tệp',
+          ),
+        );
       }
     } catch (e) {
-      // Handle error
       debugPrint('Upload error: $e');
       _updateMedia(
         media.copyWith(
           isInUploadProgress: false,
           state: DSMediaState.error,
-          errorMessage: 'Lỗi tải lên: ${e.toString()}',
+          errorMessage: _mapUploadError(e),
         ),
       );
     }
@@ -440,6 +529,14 @@ class DSMediaPicker extends StatefulWidget {
   /// Upload callback function
   final Future<String?> Function(File file)? uploadImageToServer;
 
+  final DSMediaUploadFileToServer? uploadFileToServer;
+
+  final int maxVideoSizeMB;
+
+  final Duration? maxVideoDuration;
+
+  final List<String> allowedVideoExtensions;
+
   /// Enable automatic image resizing to FullHD (1920x1080)
   ///  using image_picker's built-in parameters
   final bool enableImageResize;
@@ -477,6 +574,10 @@ class DSMediaPicker extends StatefulWidget {
     this.initialMedia,
     this.readOnly = false,
     this.uploadImageToServer,
+    this.uploadFileToServer,
+    this.maxVideoSizeMB = 50,
+    this.maxVideoDuration,
+    this.allowedVideoExtensions = const ['mp4', 'mov'],
     this.enableImageResize = true,
     this.maxImageWidth = 1920,
     this.maxImageHeight = 1080,
@@ -520,8 +621,10 @@ class _DSMediaPickerState extends DSStateBase<DSMediaPicker> {
   @override
   void initState() {
     super.initState();
-    // Set upload callback vào controller
-    widget.controller.setUploadCallback = widget.uploadImageToServer;
+    widget.controller.configureMediaUpload(
+      uploadImageToServer: widget.uploadImageToServer,
+      uploadFileToServer: widget.uploadFileToServer,
+    );
     _initializeMedia();
   }
 
@@ -538,8 +641,12 @@ class _DSMediaPickerState extends DSStateBase<DSMediaPicker> {
     if (oldWidget.initialMedia?.key != widget.initialMedia?.key) {
       _initializeMedia();
     }
-    if (oldWidget.uploadImageToServer != widget.uploadImageToServer) {
-      widget.controller.setUploadCallback = widget.uploadImageToServer;
+    if (oldWidget.uploadImageToServer != widget.uploadImageToServer ||
+        oldWidget.uploadFileToServer != widget.uploadFileToServer) {
+      widget.controller.configureMediaUpload(
+        uploadImageToServer: widget.uploadImageToServer,
+        uploadFileToServer: widget.uploadFileToServer,
+      );
     }
   }
 
@@ -790,9 +897,13 @@ class _DSMediaPickerState extends DSStateBase<DSMediaPicker> {
       return FutureBuilder<Uint8List?>(
         future: media.loadVideoThumbnail(),
         builder: (context, snapshot) {
+          final bool hasThumb = snapshot.hasData &&
+              snapshot.data != null &&
+              snapshot.data!.isNotEmpty;
           return Stack(
+            fit: StackFit.expand,
             children: [
-              if (snapshot.hasData)
+              if (hasThumb)
                 Image.memory(
                   snapshot.data!,
                   fit: BoxFit.cover,
@@ -800,12 +911,22 @@ class _DSMediaPickerState extends DSStateBase<DSMediaPicker> {
                   height: constraints.maxHeight,
                 )
               else
-                _buildLoading(constraints),
+                _buildVideoPlaceholder(
+                  constraints,
+                  showSpinner:
+                      media.isInProgressState && media.url.isNullOrEmpty,
+                ),
               const Center(
                 child: Icon(
                   Icons.play_arrow_rounded,
                   size: 32,
                   color: Colors.white,
+                  shadows: [
+                    Shadow(
+                      color: Colors.black45,
+                      blurRadius: 4,
+                    ),
+                  ],
                 ),
               ),
             ],
@@ -850,6 +971,34 @@ class _DSMediaPickerState extends DSStateBase<DSMediaPicker> {
         brightness: Brightness.light,
         radius: 12,
       ),
+    );
+  }
+
+  Widget _buildVideoPlaceholder(
+    BoxConstraints constraints, {
+    bool showSpinner = false,
+  }) {
+    return Container(
+      width: constraints.maxWidth,
+      height: constraints.maxHeight,
+      decoration: BoxDecoration(
+        color: Colors.grey.shade800,
+        borderRadius: BorderRadius.circular(borderRadius),
+      ),
+      child: showSpinner
+          ? const Center(
+              child: DSLoading(
+                brightness: Brightness.dark,
+                radius: 12,
+              ),
+            )
+          : const Center(
+              child: Icon(
+                Icons.videocam_outlined,
+                color: Colors.white54,
+                size: 36,
+              ),
+            ),
     );
   }
 
@@ -1041,46 +1190,58 @@ class _DSMediaPickerState extends DSStateBase<DSMediaPicker> {
   /// Kiểm tra và request quyền cần thiết cho media picker
   Future<bool> _checkAndRequestPermissions() async {
     final permissions = <Permission>[];
+    final needsCamera = widget.mediaSource == DSMediaSource.camera ||
+        widget.mediaSource == DSMediaSource.both;
+    final needsGallery = widget.mediaSource == DSMediaSource.gallery ||
+        widget.mediaSource == DSMediaSource.both;
+    final isPhotoOnly = widget.mediaType == DSMediaPickerType.photo;
+    final isVideoOnly = widget.mediaType == DSMediaPickerType.video;
 
-    // Thêm quyền camera nếu cần
-    if (widget.mediaSource == DSMediaSource.camera ||
-        widget.mediaSource == DSMediaSource.both) {
+    if (needsCamera) {
       permissions.add(Permission.camera);
     }
 
-    // Thêm quyền thư viện ảnh nếu cần
-    if (widget.mediaSource == DSMediaSource.gallery ||
-        widget.mediaSource == DSMediaSource.both) {
+    if (needsGallery) {
       if (Platform.isIOS) {
-        // Trên iOS sử dụng Permission.photos
         permissions.add(Permission.photos);
       } else if (Platform.isAndroid) {
-        // Trên Android: kiểm tra SDK version
-        // Android 12 (API 32) trở xuống: sử dụng Permission.storage
-        // Android 13 (API 33) trở lên: sử dụng Permission.photos
         final sdkVersion = await _getAndroidSdkVersion();
+        print('sdkVersion: $sdkVersion');
         if (sdkVersion != null && sdkVersion >= 33) {
-          // Android 13 (API 33) and above
-          permissions.add(Permission.photos);
+          if (isPhotoOnly) {
+            permissions.add(Permission.photos);
+          } else if (isVideoOnly) {
+            permissions.add(Permission.videos);
+          } else {
+            permissions
+              ..add(Permission.photos)
+              ..add(Permission.videos);
+          }
         } else {
-          // Android 12 (API 32) or lower
           permissions.add(Permission.storage);
         }
       }
     }
 
+    print('permissions: $permissions');
+
     if (permissions.isEmpty) {
       return true;
+    }
+    final deduped = <Permission>[];
+    for (final p in permissions) {
+      if (!deduped.contains(p)) {
+        deduped.add(p);
+      }
     }
 
     try {
       final results = await PermissionService.instance.requestPermissions(
-        permissions,
+        deduped,
         context,
         showWarningDialog: true,
       );
-
-      return results.every((granted) => granted);
+      return results.length == deduped.length && results.every((e) => e);
     } catch (e) {
       debugPrint('Error requesting permissions: $e');
       return false;
@@ -1109,6 +1270,13 @@ class _DSMediaPickerState extends DSStateBase<DSMediaPicker> {
           context,
         );
       } else {
+        final sdk = await _getAndroidSdkVersion();
+        if (sdk != null && sdk >= 33) {
+          return await PermissionService.instance.checkPermission(
+            Permission.photos,
+            context,
+          );
+        }
         return await PermissionService.instance.checkPermission(
           Permission.storage,
           context,
@@ -1116,6 +1284,34 @@ class _DSMediaPickerState extends DSStateBase<DSMediaPicker> {
       }
     } catch (e) {
       debugPrint('Error checking photo library permission: $e');
+      return false;
+    }
+  }
+
+  Future<bool> _checkVideoLibraryPermission() async {
+    try {
+      if (Platform.isIOS) {
+        return await PermissionService.instance.checkPermission(
+          Permission.photos,
+          context,
+        );
+      }
+      if (Platform.isAndroid) {
+        final sdk = await _getAndroidSdkVersion();
+        if (sdk != null && sdk >= 33) {
+          return await PermissionService.instance.checkPermission(
+            Permission.videos,
+            context,
+          );
+        }
+        return await PermissionService.instance.checkPermission(
+          Permission.storage,
+          context,
+        );
+      }
+      return true;
+    } catch (e) {
+      debugPrint('Error checking video library permission: $e');
       return false;
     }
   }
@@ -1142,6 +1338,14 @@ class _DSMediaPickerState extends DSStateBase<DSMediaPicker> {
           showWarningDialog: true,
         );
       } else {
+        final sdk = await _getAndroidSdkVersion();
+        if (sdk != null && sdk >= 33) {
+          return await PermissionService.instance.requestPermissions(
+            [Permission.photos],
+            context,
+            showWarningDialog: true,
+          ).then((r) => r.isNotEmpty && r.every((e) => e));
+        }
         return await PermissionService.instance.requestStoragePermission(
           context,
           showWarningDialog: true,
@@ -1153,61 +1357,236 @@ class _DSMediaPickerState extends DSStateBase<DSMediaPicker> {
     }
   }
 
+  Future<bool> _requestVideoLibraryPermission() async {
+    try {
+      if (Platform.isIOS) {
+        return await PermissionService.instance.requestPhotoLibraryPermission(
+          context,
+          showWarningDialog: true,
+        );
+      }
+      if (Platform.isAndroid) {
+        final sdk = await _getAndroidSdkVersion();
+        if (sdk != null && sdk >= 33) {
+          return await PermissionService.instance.requestPermissions(
+            [Permission.videos],
+            context,
+            showWarningDialog: true,
+          ).then((r) => r.isNotEmpty && r.every((e) => e));
+        }
+        return await PermissionService.instance.requestStoragePermission(
+          context,
+          showWarningDialog: true,
+        );
+      }
+      return true;
+    } catch (e) {
+      debugPrint('Error requesting video library permission: $e');
+      return false;
+    }
+  }
+
   Future<void> _showMediaPickerActionDialog() async {
-    // Trong chế độ readOnly, không cho phép chọn media
     if (widget.readOnly) {
       return;
     }
-
-    // Kiểm tra quyền trước khi hiển thị dialog
     final hasPermissions = await _checkAndRequestPermissions();
     if (!hasPermissions) {
       _showPlaceholderMessage('Cần quyền truy cập để chọn media');
       return;
     }
-
-    if (widget.mediaSource == DSMediaSource.gallery) {
-      await _openGallery();
-      return;
-    }
-    if (widget.mediaSource == DSMediaSource.camera) {
-      await _openCamera();
-      return;
-    }
-    if (widget.mediaSource == DSMediaSource.both) {
-      await showAdaptiveDialog(
-        context: context,
-        builder: (context) => AlertDialog.adaptive(
-          title: Text(_dialogTitle),
-          content: Text(widget.pickDialogMessage ?? 'Chọn nguồn để chọn media'),
-          actions: [
-            TextButton(
-              onPressed: () {
-                Navigator.of(context).pop();
-                _openCamera();
-              },
-              child: const Text('Camera'),
-            ),
-            TextButton(
-              onPressed: () {
-                Navigator.of(context).pop();
-                _openGallery();
-              },
-              child: const Text('Thư viện'),
-            ),
-            TextButton(
-              onPressed: () => Navigator.of(context).pop(),
-              child: const Text('Hủy'),
-            ),
-          ],
-        ),
-      );
+    switch (widget.mediaType) {
+      case DSMediaPickerType.photo:
+        await _routePhotoPickerBySource();
+        return;
+      case DSMediaPickerType.video:
+        await _routeVideoPickerBySource();
+        return;
+      case DSMediaPickerType.both:
+        await _routeBothMediaBySource();
+        return;
     }
   }
 
-  Future<void> _openGallery() async {
+  Future<void> _routePhotoPickerBySource() async {
+    switch (widget.mediaSource) {
+      case DSMediaSource.gallery:
+        await _openGalleryPhoto();
+        return;
+      case DSMediaSource.camera:
+        await _openCameraPhoto();
+        return;
+      case DSMediaSource.both:
+        await _showCameraOrGalleryDialog(isVideo: false);
+        return;
+    }
+  }
+
+  Future<void> _routeVideoPickerBySource() async {
+    switch (widget.mediaSource) {
+      case DSMediaSource.gallery:
+        await _openGalleryVideo();
+        return;
+      case DSMediaSource.camera:
+        await _openCameraVideo();
+        return;
+      case DSMediaSource.both:
+        await _showCameraOrGalleryDialog(isVideo: true);
+        return;
+    }
+  }
+
+  Future<void> _routeBothMediaBySource() async {
+    switch (widget.mediaSource) {
+      case DSMediaSource.gallery:
+        await _showPhotoOrVideoGalleryDialog();
+        return;
+      case DSMediaSource.camera:
+        await _showPhotoOrVideoCameraDialog();
+        return;
+      case DSMediaSource.both:
+        await _showFourActionMediaDialog();
+        return;
+    }
+  }
+
+  Future<void> _showCameraOrGalleryDialog({required bool isVideo}) async {
+    await showAdaptiveDialog<void>(
+      context: context,
+      builder: (dialogContext) => AlertDialog.adaptive(
+        title: Text(_dialogTitle),
+        content: Text(
+          widget.pickDialogMessage ?? 'Chọn nguồn để chọn media',
+        ),
+        actions: [
+          TextButton(
+            onPressed: () {
+              Navigator.of(dialogContext).pop();
+              if (isVideo) {
+                unawaited(_openCameraVideo());
+              } else {
+                unawaited(_openCameraPhoto());
+              }
+            },
+            child: Text(isVideo ? 'Quay video' : 'Chụp ảnh'),
+          ),
+          TextButton(
+            onPressed: () {
+              Navigator.of(dialogContext).pop();
+              if (isVideo) {
+                unawaited(_openGalleryVideo());
+              } else {
+                unawaited(_openGalleryPhoto());
+              }
+            },
+            child: const Text('Thư viện'),
+          ),
+          TextButton(
+            onPressed: () => Navigator.of(dialogContext).pop(),
+            child: const Text('Hủy'),
+          ),
+        ],
+      ),
+    );
+  }
+
+  Future<void> _showPhotoOrVideoGalleryDialog() async {
+    await showModalBottomSheet<void>(
+      context: context,
+      builder: (ctx) => SafeArea(
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            ListTile(
+              title: const Text('Chọn ảnh từ thư viện'),
+              onTap: () {
+                Navigator.of(ctx).pop();
+                unawaited(_openGalleryPhoto());
+              },
+            ),
+            ListTile(
+              title: const Text('Chọn video từ thư viện'),
+              onTap: () {
+                Navigator.of(ctx).pop();
+                unawaited(_openGalleryVideo());
+              },
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+
+  Future<void> _showPhotoOrVideoCameraDialog() async {
+    await showModalBottomSheet<void>(
+      context: context,
+      builder: (ctx) => SafeArea(
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            ListTile(
+              title: const Text('Chụp ảnh'),
+              onTap: () {
+                Navigator.of(ctx).pop();
+                unawaited(_openCameraPhoto());
+              },
+            ),
+            ListTile(
+              title: const Text('Quay video'),
+              onTap: () {
+                Navigator.of(ctx).pop();
+                unawaited(_openCameraVideo());
+              },
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+
+  Future<void> _showFourActionMediaDialog() async {
+    await showModalBottomSheet<void>(
+      context: context,
+      builder: (ctx) => SafeArea(
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            ListTile(
+              title: const Text('Chụp ảnh'),
+              onTap: () {
+                Navigator.of(ctx).pop();
+                unawaited(_openCameraPhoto());
+              },
+            ),
+            ListTile(
+              title: const Text('Quay video'),
+              onTap: () {
+                Navigator.of(ctx).pop();
+                unawaited(_openCameraVideo());
+              },
+            ),
+            ListTile(
+              title: const Text('Chọn ảnh từ thư viện'),
+              onTap: () {
+                Navigator.of(ctx).pop();
+                unawaited(_openGalleryPhoto());
+              },
+            ),
+            ListTile(
+              title: const Text('Chọn video từ thư viện'),
+              onTap: () {
+                Navigator.of(ctx).pop();
+                unawaited(_openGalleryVideo());
+              },
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+
+  Future<void> _openGalleryPhoto() async {
     try {
-      // Kiểm tra quyền thư viện ảnh
       final hasPermission = await _checkPhotoLibraryPermission();
       if (!hasPermission) {
         final granted = await _requestPhotoLibraryPermission();
@@ -1216,10 +1595,7 @@ class _DSMediaPickerState extends DSStateBase<DSMediaPicker> {
           return;
         }
       }
-
-      List<XFile> pickedFiles;
-
-      // Use single image picker for maxMedia = 1, multi image picker otherwise
+      final List<XFile> pickedFiles;
       if (widget.maxMedia == 1) {
         final XFile? pickedFile = await _imagePicker.pickImage(
           source: ImageSource.gallery,
@@ -1242,10 +1618,9 @@ class _DSMediaPickerState extends DSStateBase<DSMediaPicker> {
           limit: availableSlots,
         );
       }
-
       if (pickedFiles.isNotEmpty) {
-        final files = pickedFiles.map((xFile) => File(xFile.path)).toList();
-        await _onMediaPicked(files);
+        final files = pickedFiles.map((e) => File(e.path)).toList();
+        await _onMediaPicked(files, treatAsVideo: false);
       }
     } catch (error) {
       debugPrint('Error picking from gallery: $error');
@@ -1253,9 +1628,30 @@ class _DSMediaPickerState extends DSStateBase<DSMediaPicker> {
     }
   }
 
-  Future<void> _openCamera() async {
+  Future<void> _openGalleryVideo() async {
     try {
-      // Kiểm tra quyền camera
+      final hasPermission = await _checkVideoLibraryPermission();
+      if (!hasPermission) {
+        final granted = await _requestVideoLibraryPermission();
+        if (!granted) {
+          _showPlaceholderMessage('Cần quyền truy cập thư viện');
+          return;
+        }
+      }
+      final XFile? picked = await _imagePicker.pickVideo(
+        source: ImageSource.gallery,
+      );
+      if (picked != null) {
+        await _onMediaPicked([File(picked.path)], treatAsVideo: true);
+      }
+    } catch (error) {
+      debugPrint('Error picking video from gallery: $error');
+      _showPlaceholderMessage('Có lỗi xảy ra khi chọn video từ thư viện');
+    }
+  }
+
+  Future<void> _openCameraPhoto() async {
+    try {
       final hasPermission = await _checkCameraPermission();
       if (!hasPermission) {
         final granted = await _requestCameraPermission();
@@ -1264,9 +1660,6 @@ class _DSMediaPickerState extends DSStateBase<DSMediaPicker> {
           return;
         }
       }
-
-      List<XFile> pickedFiles = [];
-
       final XFile? pickedFile = await _imagePicker.pickImage(
         source: ImageSource.camera,
         maxWidth:
@@ -1275,18 +1668,86 @@ class _DSMediaPickerState extends DSStateBase<DSMediaPicker> {
             widget.enableImageResize ? widget.maxImageHeight.toDouble() : null,
         imageQuality: widget.imageQuality,
       );
-
-      pickedFiles = pickedFile != null ? [pickedFile] : [];
-
-      final files = pickedFiles.map((xFile) => File(xFile.path)).toList();
-      await _onMediaPicked(files);
+      if (pickedFile != null) {
+        await _onMediaPicked([File(pickedFile.path)], treatAsVideo: false);
+      }
     } catch (error) {
       debugPrint('Error picking from camera: $error');
       _showPlaceholderMessage('Có lỗi xảy ra khi chụp ảnh');
     }
   }
 
-  Future<void> _onMediaPicked(List<File> files) async {
+  Future<void> _openCameraVideo() async {
+    try {
+      final hasPermission = await _checkCameraPermission();
+      if (!hasPermission) {
+        final granted = await _requestCameraPermission();
+        if (!granted) {
+          _showPlaceholderMessage('Cần quyền truy cập camera');
+          return;
+        }
+      }
+      final XFile? picked = await _imagePicker.pickVideo(
+        source: ImageSource.camera,
+      );
+      if (picked != null) {
+        await _onMediaPicked([File(picked.path)], treatAsVideo: true);
+      }
+    } catch (error) {
+      debugPrint('Error picking video from camera: $error');
+      _showPlaceholderMessage('Có lỗi xảy ra khi quay video');
+    }
+  }
+
+  String? _extensionLower(String path) {
+    final name = path.split(Platform.pathSeparator).last;
+    final dot = name.lastIndexOf('.');
+    if (dot < 0 || dot >= name.length - 1) {
+      return null;
+    }
+    return name.substring(dot + 1).toLowerCase();
+  }
+
+  String? _validatePickedVideo(File file) {
+    final ext = _extensionLower(file.path);
+    if (ext == null ||
+        !widget.allowedVideoExtensions
+            .map((e) => e.toLowerCase())
+            .contains(ext)) {
+      return 'Chỉ hỗ trợ video: ${widget.allowedVideoExtensions.join(", ")}';
+    }
+    return null;
+  }
+
+  Future<void> _onMediaPicked(
+    List<File> files, {
+    required bool treatAsVideo,
+  }) async {
+    final validFiles = <File>[];
+    for (final file in files) {
+      if (file.path.isEmpty) {
+        continue;
+      }
+      if (treatAsVideo) {
+        final err = _validatePickedVideo(file);
+        if (err != null) {
+          _showPlaceholderMessage(err);
+          continue;
+        }
+        final int size = await file.length();
+        final int maxBytes = widget.maxVideoSizeMB * 1024 * 1024;
+        if (size > maxBytes) {
+          _showPlaceholderMessage(
+            'Video vượt quá ${widget.maxVideoSizeMB} MB',
+          );
+          continue;
+        }
+      }
+      validFiles.add(file);
+    }
+    if (validFiles.isEmpty) {
+      return;
+    }
     final existedFiles = widget.controller.value;
     final currentIndex = existedFiles.isNotEmpty
         ? (existedFiles.reduce((value, element) {
@@ -1298,29 +1759,30 @@ class _DSMediaPickerState extends DSStateBase<DSMediaPicker> {
             1
         : 0;
 
-    final newMedias = files
-        .where((e) => e.path.isNotEmpty)
-        .toList()
-        .asMap()
-        .entries
-        .map((entry) {
-      final file = entry.value;
-      final fileSize = file.lengthSync();
-      return DSMediaPicked(
-        key: '${DateTime.now().millisecondsSinceEpoch}_${entry.key}',
-        mediaFile: file,
-        mimetype: _getMimeType(file.path),
-        index: currentIndex + entry.key,
-        state:
-            widget.autoUpload ? DSMediaState.inProgress : DSMediaState.complete,
-        fileSize: fileSize,
-        uploadImageToServer: widget.uploadImageToServer,
+    final newMedias = <DSMediaPicked>[];
+    var keyOffset = 0;
+    for (final file in validFiles) {
+      final int fileSize = await file.length();
+      final bool isVideo = treatAsVideo || _isVideoPath(file.path);
+      newMedias.add(
+        DSMediaPicked(
+          key: '${DateTime.now().microsecondsSinceEpoch}_$keyOffset',
+          mediaFile: file,
+          mimetype: isVideo
+              ? _getMimeTypeForVideoPath(file.path)
+              : _getMimeType(file.path),
+          index: currentIndex + keyOffset,
+          state: widget.autoUpload
+              ? DSMediaState.inProgress
+              : DSMediaState.complete,
+          fileSize: fileSize,
+          uploadImageToServer: widget.uploadImageToServer,
+        ),
       );
-    }).toList();
+      keyOffset++;
+    }
 
-    // Handle single selection mode
     if (widget.maxMedia == 1) {
-      // Clear existing media and add only the first new media
       widget.controller.removeAll(deleteOnDevice: true);
       if (newMedias.isNotEmpty) {
         final media = newMedias.first;
@@ -1328,7 +1790,6 @@ class _DSMediaPickerState extends DSStateBase<DSMediaPicker> {
         widget.onMediaPicked?.call(media);
       }
     } else {
-      // Apply max media limit for multiple selection
       if (widget.maxMedia != null) {
         if (availableSlots > 0) {
           for (final media in newMedias.take(availableSlots)) {
@@ -1343,12 +1804,24 @@ class _DSMediaPickerState extends DSStateBase<DSMediaPicker> {
         }
       }
     }
-
     if (widget.autoUpload) {
       await widget.controller.uploadUnstagedMedias(
         uploadFolder: widget.uploadFolder,
       );
     }
+  }
+
+  bool _isVideoPath(String path) {
+    final t = _getMimeType(path);
+    return t != null && t.contains('video');
+  }
+
+  String? _getMimeTypeForVideoPath(String path) {
+    final t = _getMimeType(path);
+    if (t != null && t.contains('video')) {
+      return t;
+    }
+    return 'video/mp4';
   }
 
   String? _getMimeType(String path) {
@@ -1395,6 +1868,23 @@ class _DSMediaPickerState extends DSStateBase<DSMediaPicker> {
 
   Future<void> _viewImage(DSMediaPicked image) async {
     if (image.mediaFile == null && image.url.isNullOrEmpty) {
+      return;
+    }
+    if (image.isVideo) {
+      if (widget.onTap != null) {
+        widget.onTap?.call(image);
+        return;
+      }
+      final Map<String, String>? headers =
+          await widget.controller.getHeadersCallback?.call();
+      if (!context.mounted) {
+        return;
+      }
+      await viewVideo(
+        file: image.mediaFile,
+        url: image.url,
+        httpHeaders: headers,
+      );
       return;
     }
 

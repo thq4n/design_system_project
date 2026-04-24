@@ -41,11 +41,6 @@ public final class GeneratedPluginRegistrant {
       Log.e(TAG, "Error registering plugin battery_plus, dev.fluttercommunity.plus.battery.BatteryPlusPlugin", e);
     }
     try {
-      flutterEngine.getPlugins().add(new com.example.bluetooth_print_plus.bluetooth_print_plus.BluetoothPrintPlusPlugin());
-    } catch (Exception e) {
-      Log.e(TAG, "Error registering plugin bluetooth_print_plus, com.example.bluetooth_print_plus.bluetooth_print_plus.BluetoothPrintPlusPlugin", e);
-    }
-    try {
       flutterEngine.getPlugins().add(new dev.fluttercommunity.plus.connectivity.ConnectivityPlugin());
     } catch (Exception e) {
       Log.e(TAG, "Error registering plugin connectivity_plus, dev.fluttercommunity.plus.connectivity.ConnectivityPlugin", e);

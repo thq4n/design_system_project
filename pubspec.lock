@@ -225,14 +225,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "0.2.5"
-  bluetooth_print_plus:
-    dependency: transitive
-    description:
-      name: bluetooth_print_plus
-      sha256: "9d059064e8d7d8af9dbd1bf9b4c964428cb567d2f372a85177d9ba0f4e743d71"
-      url: "https://pub.dev"
-    source: hosted
-    version: "2.4.6"
   boolean_selector:
     dependency: transitive
     description:
@@ -354,7 +346,7 @@ packages:
     source: hosted
     version: "2.0.4"
   chewie:
-    dependency: transitive
+    dependency: "direct main"
     description:
       name: chewie
       sha256: "19b93a1e60e4ba640a792208a6543f1c7d5b124d011ce0199e2f18802199d984"
@@ -2824,7 +2816,7 @@ packages:
     source: hosted
     version: "2.2.0"
   video_player:
-    dependency: transitive
+    dependency: "direct main"
     description:
       name: video_player
       sha256: "48a7bdaa38a3d50ec10c78627abdbfad863fdf6f0d6e08c7c3c040cfd80ae36f"
