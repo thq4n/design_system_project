@@ -1206,7 +1206,6 @@ class _DSMediaPickerState extends DSStateBase<DSMediaPicker> {
         permissions.add(Permission.photos);
       } else if (Platform.isAndroid) {
         final sdkVersion = await _getAndroidSdkVersion();
-        print('sdkVersion: $sdkVersion');
         if (sdkVersion != null && sdkVersion >= 33) {
           if (isPhotoOnly) {
             permissions.add(Permission.photos);
@@ -1222,8 +1221,6 @@ class _DSMediaPickerState extends DSStateBase<DSMediaPicker> {
         }
       }
     }
-
-    print('permissions: $permissions');
 
     if (permissions.isEmpty) {
       return true;

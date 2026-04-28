@@ -396,3 +396,9 @@ String formatDateRange(DateTime? fromTime, DateTime? toTime) {
     return '$fromFormatted - $toFormatted';
   }
 }
+
+extension DateTimeSLAExtension on DateTime {
+  Duration get slaDuration {
+    return difference(DateTime.now());
+  }
+}
