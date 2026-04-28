@@ -34,6 +34,7 @@ enum DSMediaSource { gallery, camera, both }
 enum DSMediaState {
   base, // Trạng thái cơ bản - chờ chọn file
   inProgress, // Đang upload/xử lý
+  paused, // Tạm dừng upload
   complete, // Hoàn thành
   error, // Lỗi
   view, // Chỉ xem
@@ -118,6 +119,7 @@ class DSMediaPicked {
   // Helper methods cho trạng thái
   bool get isBaseState => state == DSMediaState.base;
   bool get isInProgressState => state == DSMediaState.inProgress;
+  bool get isPausedState => state == DSMediaState.paused;
   bool get isCompleteState => state == DSMediaState.complete;
   bool get isErrorState => state == DSMediaState.error;
   bool get isViewState => state == DSMediaState.view;
@@ -204,6 +206,11 @@ class DSMediaPickerController extends ValueNotifier<List<DSMediaPicked>> {
 
   DSMediaUploadFileToServer? _uploadFileToServer;
 
+  void Function(DSMediaPicked media)? onPauseUpload;
+  void Function(DSMediaPicked media)? onResumeUpload;
+  void Function(DSMediaPicked media)? onCancelUpload;
+  void Function(DSMediaPicked media)? onRetryUpload;
+
   /// Get headers callback function
   Future<Map<String, String>?> Function()? getHeadersCallback;
 
@@ -218,6 +225,28 @@ class DSMediaPickerController extends ValueNotifier<List<DSMediaPicked>> {
   }) {
     _uploadImageToServer = uploadImageToServer;
     _uploadFileToServer = uploadFileToServer;
+  }
+
+  void configureUploadControls({
+    void Function(DSMediaPicked media)? onPauseUpload,
+    void Function(DSMediaPicked media)? onResumeUpload,
+    void Function(DSMediaPicked media)? onCancelUpload,
+    void Function(DSMediaPicked media)? onRetryUpload,
+  }) {
+    this.onPauseUpload = onPauseUpload;
+    this.onResumeUpload = onResumeUpload;
+    this.onCancelUpload = onCancelUpload;
+    this.onRetryUpload = onRetryUpload;
+  }
+
+  void updateMedia(DSMediaPicked media) {
+    for (var i = 0; i < value.length; i++) {
+      if (value[i].key == media.key) {
+        value[i] = media;
+        notifyListeners();
+        break;
+      }
+    }
   }
 
   /// Set initial media programmatically
@@ -298,7 +327,7 @@ class DSMediaPickerController extends ValueNotifier<List<DSMediaPicked>> {
       var media = value[i];
       if (!media.isLoading &&
           media.url.isNullOrEmpty &&
-          media.isInProgressState) {
+          (media.isInProgressState || media.isPausedState)) {
         media = media.copyWith(
           isInUploadProgress: true,
           state: DSMediaState.inProgress,
@@ -850,7 +879,7 @@ class _DSMediaPickerState extends DSStateBase<DSMediaPicker> {
             ),
 
             // Progress overlay cho trạng thái inProgress
-            if (media.isInProgressState)
+            if (media.isInProgressState || media.isPausedState)
               _buildProgressOverlay(
                 media,
                 BoxConstraints(
@@ -1006,6 +1035,8 @@ class _DSMediaPickerState extends DSStateBase<DSMediaPicker> {
     DSMediaPicked media,
     BoxConstraints constraints,
   ) {
+    final showControls =
+        media.isVideo && (widget.controller.onCancelUpload != null);
     return Container(
       width: _mediaPickSize,
       height: _mediaPickSize,
@@ -1036,17 +1067,89 @@ class _DSMediaPickerState extends DSStateBase<DSMediaPicker> {
             ),
           ],
           const SizedBox(height: 8),
-          const Text(
-            'Đang tải...',
-            style: TextStyle(
+          Text(
+            media.isPausedState ? 'Tạm dừng' : 'Đang tải...',
+            style: const TextStyle(
               color: Colors.white,
               fontSize: 12,
               fontWeight: FontWeight.w500,
             ),
           ),
+          if (media.fileSize != null && media.uploadProgress != null) ...[
+            const SizedBox(height: 4),
+            Text(
+              '${_formatBytes(_safeUploadedBytes(media).clamp(0, media.fileSize!))} / ${media.formattedFileSize}',
+              style: TextStyle(
+                color: Colors.white.withValues(alpha: 0.85),
+                fontSize: 10,
+              ),
+            ),
+          ],
+          if (media.uploadProgress != null) ...[
+            const SizedBox(height: 2),
+            Text(
+              media.progressPercentage,
+              style: TextStyle(
+                color: Colors.white.withValues(alpha: 0.85),
+                fontSize: 10,
+              ),
+            ),
+          ],
+          if (showControls) ...[
+            const SizedBox(height: 10),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                if (!media.isPausedState &&
+                    widget.controller.onPauseUpload != null)
+                  IconButton(
+                    visualDensity: VisualDensity.compact,
+                    iconSize: 20,
+                    onPressed: () =>
+                        widget.controller.onPauseUpload?.call(media),
+                    icon: const Icon(Icons.pause, color: Colors.white),
+                  ),
+                if (media.isPausedState &&
+                    widget.controller.onResumeUpload != null)
+                  IconButton(
+                    visualDensity: VisualDensity.compact,
+                    iconSize: 20,
+                    onPressed: () =>
+                        widget.controller.onResumeUpload?.call(media),
+                    icon: const Icon(Icons.play_arrow, color: Colors.white),
+                  ),
+                IconButton(
+                  visualDensity: VisualDensity.compact,
+                  iconSize: 20,
+                  onPressed: () =>
+                      widget.controller.onCancelUpload?.call(media),
+                  icon: const Icon(Icons.close, color: Colors.white),
+                ),
+              ],
+            ),
+          ],
         ],
       ),
     );
+  }
+
+  int _safeUploadedBytes(DSMediaPicked media) {
+    final total = media.fileSize ?? 0;
+    final p = media.uploadProgress ?? 0.0;
+    return (p * total).round();
+  }
+
+  String _formatBytes(int bytes) {
+    if (bytes < 1024) {
+      return '$bytes B';
+    }
+    if (bytes < 1024 * 1024) {
+      return '${(bytes / 1024).toStringAsFixed(1)} KB';
+    }
+    if (bytes < 1024 * 1024 * 1024) {
+      return '${(bytes / (1024 * 1024)).toStringAsFixed(1)} MB';
+    }
+    return '${(bytes / (1024 * 1024 * 1024)).toStringAsFixed(1)} GB';
   }
 
   Widget _buildErrorOverlay(DSMediaPicked media, BoxConstraints constraints) {
