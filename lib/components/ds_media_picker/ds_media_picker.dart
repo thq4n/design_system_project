@@ -34,7 +34,8 @@ class DSMediaPicker extends StatefulWidget {
   final String? pickDialogMessage;
   final DSMediaPickerType mediaType;
   final bool Function(List<DSMediaPicked> item)? canBeDeleteWhen;
-  final int? maxMedia;
+  final int? maxImageMedia;
+  final int? maxVideoMedia;
   final int crossAxisCount;
   final DSMediaSource mediaSource;
   final String? Function(File file)? getFileName;
@@ -64,7 +65,8 @@ class DSMediaPicker extends StatefulWidget {
     this.pickDialogMessage,
     this.mediaType = DSMediaPickerType.photo,
     this.canBeDeleteWhen,
-    this.maxMedia = 1,
+    this.maxImageMedia,
+    this.maxVideoMedia,
     this.crossAxisCount = 4,
     this.mediaSource = DSMediaSource.camera,
     this.getFileName,

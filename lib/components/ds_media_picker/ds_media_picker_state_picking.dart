@@ -202,6 +202,10 @@ extension _DSMediaPickerStatePicking on _DSMediaPickerState {
 
   Future<void> _openGalleryPhoto() async {
     try {
+      final availableSlots = _availableImageSlots;
+      if (_maxImages != null && _maxImages! > 1 && availableSlots == 0) {
+        return;
+      }
       final hasPermission = await _checkPhotoLibraryPermission();
       if (!hasPermission) {
         final granted = await _requestPhotoLibraryPermission();
@@ -211,7 +215,7 @@ extension _DSMediaPickerStatePicking on _DSMediaPickerState {
         }
       }
       final List<XFile> pickedFiles;
-      if (widget.maxMedia == 1) {
+      if (_maxImages == 1) {
         final XFile? pickedFile = await _imagePicker.pickImage(
           source: ImageSource.gallery,
           maxWidth:
@@ -245,6 +249,10 @@ extension _DSMediaPickerStatePicking on _DSMediaPickerState {
 
   Future<void> _openGalleryVideo() async {
     try {
+      final availableSlots = _availableVideoSlots;
+      if (_maxVideos != null && _maxVideos! > 1 && availableSlots == 0) {
+        return;
+      }
       final hasPermission = await _checkVideoLibraryPermission();
       if (!hasPermission) {
         final granted = await _requestVideoLibraryPermission();
@@ -269,6 +277,10 @@ extension _DSMediaPickerStatePicking on _DSMediaPickerState {
 
   Future<void> _openCameraPhoto() async {
     try {
+      final availableSlots = _availableImageSlots;
+      if (_maxImages != null && _maxImages! > 1 && availableSlots == 0) {
+        return;
+      }
       final hasPermission = await _checkCameraPermission();
       if (!hasPermission) {
         final granted = await _requestCameraPermission();
@@ -296,6 +308,10 @@ extension _DSMediaPickerStatePicking on _DSMediaPickerState {
 
   Future<void> _openCameraVideo() async {
     try {
+      final availableSlots = _availableVideoSlots;
+      if (_maxVideos != null && _maxVideos! > 1 && availableSlots == 0) {
+        return;
+      }
       final hasPermission = await _checkCameraPermission();
       if (!hasPermission) {
         final granted = await _requestCameraPermission();
@@ -399,26 +415,22 @@ extension _DSMediaPickerStatePicking on _DSMediaPickerState {
       keyOffset++;
     }
 
-    if (widget.maxMedia == 1) {
-      widget.controller.removeAll(deleteOnDevice: true);
+    final int? maxForType = treatAsVideo ? _maxVideos : _maxImages;
+    if (maxForType == 1) {
+      _removeMediaByType(isVideo: treatAsVideo, deleteOnDevice: true);
       if (newMedias.isNotEmpty) {
         final media = newMedias.first;
         widget.controller.addAll([media]);
         widget.onMediaPicked?.call(media);
       }
     } else {
-      if (widget.maxMedia != null) {
-        if (availableSlots > 0) {
-          for (final media in newMedias.take(availableSlots)) {
-            widget.controller.addAll([media]);
-            widget.onMediaPicked?.call(media);
-          }
-        }
-      } else {
-        for (final media in newMedias) {
-          widget.controller.addAll([media]);
-          widget.onMediaPicked?.call(media);
-        }
+      final int? availableSlots =
+          treatAsVideo ? _availableVideoSlots : _availableImageSlots;
+      final iterable =
+          availableSlots == null ? newMedias : newMedias.take(availableSlots);
+      for (final media in iterable) {
+        widget.controller.addAll([media]);
+        widget.onMediaPicked?.call(media);
       }
     }
     if (widget.autoUpload) {

@@ -6,7 +6,49 @@ class _DSMediaPickerState extends DSStateBase<DSMediaPicker> {
 
   double get borderRadius => 8.0;
 
-  int get availableSlots => widget.maxMedia! - widget.controller.value.length;
+  int get _imageCount =>
+      widget.controller.value.where((media) => !media.isVideo).length;
+
+  int get _videoCount =>
+      widget.controller.value.where((media) => media.isVideo).length;
+
+  int? get _maxImages => widget.maxImageMedia;
+
+  int? get _maxVideos => widget.maxVideoMedia;
+
+  int? get _availableImageSlots {
+    final limit = _maxImages;
+    if (limit == null) {
+      return null;
+    }
+    final remaining = limit - _imageCount;
+    return remaining < 0 ? 0 : remaining;
+  }
+
+  int? get _availableVideoSlots {
+    final limit = _maxVideos;
+    if (limit == null) {
+      return null;
+    }
+    final remaining = limit - _videoCount;
+    return remaining < 0 ? 0 : remaining;
+  }
+
+  void _removeMediaByType({
+    required bool isVideo,
+    required bool deleteOnDevice,
+  }) {
+    if (widget.readOnly) {
+      return;
+    }
+    for (final media in List<DSMediaPicked>.from(
+      widget.controller.value.where((m) {
+        return m.isVideo == isVideo;
+      }),
+    )) {
+      widget.controller.remove(media, deleteOnDevice: deleteOnDevice);
+    }
+  }
 
   @override
   void initState() {
@@ -47,12 +89,15 @@ class _DSMediaPickerState extends DSStateBase<DSMediaPicker> {
           .toList();
 
       if (existingMedia.isEmpty) {
-        if (widget.maxMedia == 1) {
-          widget.controller.removeAll(deleteOnDevice: true);
+        final isVideo = widget.initialMedia!.isVideo;
+        final limit = isVideo ? _maxVideos : _maxImages;
+        final currentCount = isVideo ? _videoCount : _imageCount;
+
+        if (limit == 1) {
+          _removeMediaByType(isVideo: isVideo, deleteOnDevice: true);
           widget.controller.addAll([widget.initialMedia!]);
         } else {
-          if (widget.maxMedia == null ||
-              widget.controller.value.length < widget.maxMedia!) {
+          if (limit == null || currentCount < limit) {
             widget.controller.addAll([widget.initialMedia!]);
           }
         }
@@ -70,9 +115,41 @@ class _DSMediaPickerState extends DSStateBase<DSMediaPicker> {
         final canBeDelete =
             !widget.readOnly && (widget.canBeDeleteWhen?.call(medias) ?? true);
         final canAdd = !widget.readOnly &&
-            (widget.maxMedia == null || medias.length < widget.maxMedia!);
+            (() {
+              final imageCount = medias.where((media) => !media.isVideo).length;
+              final videoCount = medias.where((media) => media.isVideo).length;
 
-        if (widget.maxMedia == 1) {
+              final maxImages = _maxImages;
+              final maxVideos = _maxVideos;
+
+              final canAddPhoto = maxImages == null || imageCount < maxImages;
+              final canAddVideo = maxVideos == null || videoCount < maxVideos;
+
+              switch (widget.mediaType) {
+                case DSMediaPickerType.photo:
+                  return canAddPhoto;
+                case DSMediaPickerType.video:
+                  return canAddVideo;
+                case DSMediaPickerType.both:
+                  return canAddPhoto || canAddVideo;
+              }
+            })();
+
+        final int? effectiveMax = (() {
+          switch (widget.mediaType) {
+            case DSMediaPickerType.photo:
+              return _maxImages;
+            case DSMediaPickerType.video:
+              return _maxVideos;
+            case DSMediaPickerType.both:
+              if (_maxImages == null || _maxVideos == null) {
+                return null;
+              }
+              return _maxImages! + _maxVideos!;
+          }
+        })();
+
+        if (effectiveMax == 1) {
           return _buildSingleItemLayout(medias, canBeDelete, canAdd);
         }
 

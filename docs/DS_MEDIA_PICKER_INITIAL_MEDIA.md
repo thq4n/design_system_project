@@ -20,7 +20,7 @@ final initialMedia = DSMediaPicked.fromUrl(
 // Sử dụng trong DSMediaPicker
 DSMediaPicker(
   controller: mediaController,
-  maxMedia: 1,
+  maxImageMedia: 1,
   initialMedia: initialMedia,
   onMediaPicked: (media) {
     print('Media picked: ${media.key}');
@@ -43,7 +43,7 @@ final initialMedia = DSMediaPicked.fromFile(
 // Sử dụng trong DSMediaPicker
 DSMediaPicker(
   controller: mediaController,
-  maxMedia: 5,
+  maxImageMedia: 5,
   initialMedia: initialMedia,
 )
 ```
@@ -66,26 +66,26 @@ mediaController.setInitialMedia(null);
 
 ## Các trường hợp sử dụng
 
-### 1. Single Selection (maxMedia = 1)
+### 1. Single Selection (maxImageMedia = 1)
 
-Khi `maxMedia = 1`, `initialMedia` sẽ thay thế hoàn toàn media hiện tại:
+Khi `maxImageMedia = 1`, `initialMedia` sẽ thay thế hoàn toàn media hiện tại:
 
 ```dart
 DSMediaPicker(
   controller: mediaController,
-  maxMedia: 1,
+  maxImageMedia: 1,
   initialMedia: existingMedia, // Sẽ thay thế media hiện tại
 )
 ```
 
-### 2. Multiple Selection (maxMedia > 1)
+### 2. Multiple Selection (maxImageMedia > 1)
 
-Khi `maxMedia > 1`, `initialMedia` sẽ được thêm vào danh sách hiện tại:
+Khi `maxImageMedia > 1`, `initialMedia` sẽ được thêm vào danh sách hiện tại:
 
 ```dart
 DSMediaPicker(
   controller: mediaController,
-  maxMedia: 5,
+  maxImageMedia: 5,
   initialMedia: existingMedia, // Sẽ được thêm vào danh sách
 )
 ```
@@ -113,7 +113,7 @@ class EditProfileScreen extends StatefulWidget {
     return Scaffold(
       body: DSMediaPicker(
         controller: avatarController,
-        maxMedia: 1,
+        maxImageMedia: 1,
         initialMedia: initialMedia,
         title: 'Chọn ảnh đại diện',
         onMediaPicked: (media) {
@@ -132,7 +132,7 @@ Sử dụng `initialMedia` để hiển thị media trong chế độ xem trư�
 ```dart
 DSMediaPicker(
   controller: previewController,
-  maxMedia: 1,
+  maxImageMedia: 1,
   initialMedia: previewMedia,
   onTap: (media) {
     // Mở full screen viewer
@@ -245,7 +245,7 @@ class _MediaPickerExampleState extends State<MediaPickerExample> {
           children: [
             DSMediaPicker(
               controller: _mediaController,
-              maxMedia: 1,
+              maxImageMedia: 1,
               initialMedia: _initialMedia,
               title: 'Chọn ảnh',
               onMediaPicked: (media) {

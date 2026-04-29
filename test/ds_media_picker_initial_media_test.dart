@@ -16,7 +16,7 @@ void main() {
       controller.dispose();
     });
 
-    testWidgets('should initialize with initialMedia when maxMedia = 1',
+    testWidgets('should initialize with initialMedia when maxImageMedia = 1',
         (tester) async {
       // Arrange
       final initialMedia = DSMediaPicked.fromUrl(
@@ -31,7 +31,7 @@ void main() {
           home: Scaffold(
             body: DSMediaPicker(
               controller: controller,
-              maxMedia: 1,
+              maxImageMedia: 1,
               initialMedia: initialMedia,
             ),
           ),
@@ -44,7 +44,7 @@ void main() {
       expect(controller.value.first.url, 'https://example.com/image.jpg');
     });
 
-    testWidgets('should initialize with initialMedia when maxMedia > 1',
+    testWidgets('should initialize with initialMedia when maxImageMedia > 1',
         (tester) async {
       // Arrange
       final initialMedia = DSMediaPicked.fromUrl(
@@ -59,7 +59,7 @@ void main() {
           home: Scaffold(
             body: DSMediaPicker(
               controller: controller,
-              maxMedia: 5,
+              maxImageMedia: 5,
               initialMedia: initialMedia,
             ),
           ),
@@ -89,7 +89,7 @@ void main() {
           home: Scaffold(
             body: DSMediaPicker(
               controller: controller,
-              maxMedia: 5,
+              maxImageMedia: 5,
               initialMedia: initialMedia,
             ),
           ),
@@ -118,7 +118,7 @@ void main() {
           home: Scaffold(
             body: DSMediaPicker(
               controller: controller,
-              maxMedia: 5,
+              maxImageMedia: 5,
               initialMedia: null,
             ),
           ),
@@ -150,7 +150,7 @@ void main() {
           home: Scaffold(
             body: DSMediaPicker(
               controller: controller,
-              maxMedia: 1,
+              maxImageMedia: 1,
               initialMedia: initialMedia1,
             ),
           ),
@@ -167,7 +167,7 @@ void main() {
           home: Scaffold(
             body: DSMediaPicker(
               controller: controller,
-              maxMedia: 1,
+              maxImageMedia: 1,
               initialMedia: initialMedia2,
             ),
           ),
@@ -199,7 +199,7 @@ void main() {
           home: Scaffold(
             body: DSMediaPicker(
               controller: controller,
-              maxMedia: 1,
+              maxImageMedia: 1,
               initialMedia: initialMedia,
               onMediaPicked: onMediaPicked,
             ),

@@ -67,7 +67,7 @@ class _MediaPickerTestState extends State<MediaPickerTest> {
               controller: _controller,
               mediaType: DSMediaPickerType.photo,
               mediaSource: DSMediaSource.camera,
-              maxMedia: 5,
+              maxImageMedia: 5,
               crossAxisCount: 3,
               onMediaPicked: (media) {
                 // print('Single media picked: ${media.key}');
@@ -86,7 +86,8 @@ class _MediaPickerTestState extends State<MediaPickerTest> {
               controller: DSMediaPickerController(),
               mediaType: DSMediaPickerType.both,
               mediaSource: DSMediaSource.both,
-              maxMedia: 3,
+              maxImageMedia: 3,
+              maxVideoMedia: 3,
               crossAxisCount: 4,
               autoUpload: false,
             ),
@@ -100,7 +101,7 @@ class _MediaPickerTestState extends State<MediaPickerTest> {
               controller: DSMediaPickerController(),
               mediaType: DSMediaPickerType.photo,
               mediaSource: DSMediaSource.gallery,
-              maxMedia: 2,
+              maxImageMedia: 2,
               crossAxisCount: 2,
             ),
           ],

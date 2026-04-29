@@ -68,7 +68,7 @@ class _MyWidgetState extends State<MyWidget> {
       controller: _controller,
       mediaType: DSMediaPickerType.photo,
       mediaSource: DSMediaSource.both,
-      maxMedia: 5,
+      maxImageMedia: 5,
       crossAxisCount: 3,
       saveLocalFolder: 'my_app_media',
       autoUpload: true,
@@ -124,7 +124,8 @@ final controller = DSMediaPickerController(
 - `variant`: Design system variant (default: `DSMediaPickerVariants.primary`)
 - `mediaType`: Type of media to pick (default: `DSMediaPickerType.photo`)
 - `mediaSource`: Source for media selection (default: `DSMediaSource.camera`)
-- `maxMedia`: Maximum number of media items (default: no limit)
+- `maxImageMedia`: Maximum number of photo items (default: no limit)
+- `maxVideoMedia`: Maximum number of video items (default: no limit)
 - `crossAxisCount`: Number of columns in grid (default: 4)
 - `autoUpload`: Auto upload picked media (default: true)
 - `uploadFolder`: Upload folder name (default: 'uploads')
@@ -245,7 +246,7 @@ DSMediaPicker(
   controller: controller,
   mediaType: DSMediaPickerType.photo,
   mediaSource: DSMediaSource.camera,
-  maxMedia: 5,
+  maxImageMedia: 5,
   crossAxisCount: 3,
   saveLocalFolder: 'photos',
 )
@@ -258,7 +259,7 @@ DSMediaPicker(
   controller: controller,
   mediaType: DSMediaPickerType.video,
   mediaSource: DSMediaSource.gallery,
-  maxMedia: 3,
+  maxVideoMedia: 3,
   crossAxisCount: 2,
   saveLocalFolder: 'videos',
 )
@@ -271,7 +272,8 @@ DSMediaPicker(
   controller: controller,
   mediaType: DSMediaPickerType.both,
   mediaSource: DSMediaSource.both,
-  maxMedia: 10,
+  maxImageMedia: 10,
+  maxVideoMedia: 10,
   crossAxisCount: 4,
   saveLocalFolder: 'mixed_media',
   autoUpload: false,
@@ -375,7 +377,7 @@ Error messages are displayed via SnackBar by default.
 1. **Permission Denied**: Ensure permissions are properly configured in manifest files
 2. **File Not Found**: Check if `saveLocalFolder` path is accessible
 3. **Upload Fails**: Verify upload service integration
-4. **Memory Issues**: Consider reducing `maxMedia` or implementing pagination
+4. **Memory Issues**: Consider reducing `maxImageMedia`/`maxVideoMedia` or implementing pagination
 
 ### Debug Mode
 

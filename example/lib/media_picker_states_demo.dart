@@ -124,7 +124,7 @@ class _MediaPickerStatesDemoState extends State<MediaPickerStatesDemo> {
               controller: _controller,
               mediaType: DSMediaPickerType.photo,
               mediaSource: DSMediaSource.both,
-              maxMedia: 8,
+              maxImageMedia: 8,
               crossAxisCount: 4,
               autoUpload: true,
               onMediaPicked: (media) {
@@ -156,7 +156,7 @@ class _MediaPickerStatesDemoState extends State<MediaPickerStatesDemo> {
               ),
               mediaType: DSMediaPickerType.photo,
               mediaSource: DSMediaSource.both,
-              maxMedia: 3,
+              maxImageMedia: 3,
               crossAxisCount: 3,
               autoUpload: false,
             ),
