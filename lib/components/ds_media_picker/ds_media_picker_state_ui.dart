@@ -294,8 +294,6 @@ extension _DSMediaPickerStateUi on _DSMediaPickerState {
     DSMediaPicked media,
     BoxConstraints constraints,
   ) {
-    final showControls =
-        media.isVideo && (widget.controller.onCancelUpload != null);
     return Container(
       width: _mediaPickSize,
       height: _mediaPickSize,
@@ -352,39 +350,6 @@ extension _DSMediaPickerStateUi on _DSMediaPickerState {
                 color: Colors.white.withValues(alpha: 0.85),
                 fontSize: 10,
               ),
-            ),
-          ],
-          if (showControls) ...[
-            const SizedBox(height: 10),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                if (!media.isPausedState &&
-                    widget.controller.onPauseUpload != null)
-                  IconButton(
-                    visualDensity: VisualDensity.compact,
-                    iconSize: 20,
-                    onPressed: () =>
-                        widget.controller.onPauseUpload?.call(media),
-                    icon: const Icon(Icons.pause, color: Colors.white),
-                  ),
-                if (media.isPausedState &&
-                    widget.controller.onResumeUpload != null)
-                  IconButton(
-                    visualDensity: VisualDensity.compact,
-                    iconSize: 20,
-                    onPressed: () =>
-                        widget.controller.onResumeUpload?.call(media),
-                    icon: const Icon(Icons.play_arrow, color: Colors.white),
-                  ),
-                IconButton(
-                  visualDensity: VisualDensity.compact,
-                  iconSize: 20,
-                  onPressed: () =>
-                      widget.controller.onCancelUpload?.call(media),
-                  icon: const Icon(Icons.close, color: Colors.white),
-                ),
-              ],
             ),
           ],
         ],
