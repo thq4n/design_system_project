@@ -246,7 +246,10 @@ class _DSInputState extends State<DSInput> {
               errorMaxLines: 2,
               suffixIcon: _getSuffixIcon()?.let(
                 (it) => it != null
-                    ? AvailabilityWidget(enable: widget.enable, child: it)
+                    ? AvailabilityWidget(
+                        enable: widget.enable,
+                        child: it,
+                      )
                     : null,
               ),
               suffixIconConstraints: _suffixIconConstraints(),
@@ -365,7 +368,7 @@ class _DSInputState extends State<DSInput> {
       result = ValueListenableBuilder<TextEditingValue>(
         valueListenable: _controller!.value.tdController,
         builder: (context, value, child) {
-          if (!widget.enable || widget.readOnly) {
+          if (widget.readOnly) {
             return const SizedBox();
           }
           final trailing = _customTrailingChild();
