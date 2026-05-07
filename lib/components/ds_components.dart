@@ -18,6 +18,7 @@ export 'ds_input/ds_input_recording.dart';
 export 'ds_loading/ds_loading.dart';
 export 'ds_media_picker/ds_media_picker.dart';
 export 'ds_radio/ds_radio.dart';
+export 'ds_scanner/ds_hardware_scanner_adapter.dart';
 export 'ds_scanner/ds_scanner.dart';
 export 'ds_tab_bar/ds_tab_bar.dart';
 export 'ds_tabs/ds_tabs.dart';

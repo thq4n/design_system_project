@@ -1,7 +1,5 @@
 import 'dart:async';
 
-import 'package:core/common/services/permission_service.dart';
-import 'package:core/data/services/datawedge_service.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:mobile_scanner/mobile_scanner.dart';
@@ -10,9 +8,11 @@ import '../../constants/constants.dart';
 import '../../design_system_core/ds_color_usage/ds_color_usage_core.dart';
 import '../../extensions/extensions.dart';
 import '../../gen/assets.gen.dart';
+import '../../services/permission/permission_service.dart';
 import '../ds_image_view/ds_image_view.dart';
 import '../ds_input/ds_input.dart';
 import 'ds_barcode_frame_overlay.dart';
+import 'ds_hardware_scanner_adapter.dart';
 import 'ds_scanner_hardware_barcode_icon.dart';
 
 enum DSScannerViewMode {
@@ -33,7 +33,7 @@ class DSScanner extends StatefulWidget {
     this.scannerHeightHardware = 100,
     this.barcodeFrameWidth = 256,
     this.barcodeFrameHeight = 187,
-    this.dataWedgeProfileName = 'TMSMobile',
+    this.hardwareScanner,
     this.manualInputTitle = 'Nhập mã vận đơn',
     this.manualInputHint = 'Nhập mã...',
     this.cameraPermissionDeniedMessage = 'Cần cấp quyền camera để quét',
@@ -51,7 +51,7 @@ class DSScanner extends StatefulWidget {
   final double scannerHeightHardware;
   final double barcodeFrameWidth;
   final double barcodeFrameHeight;
-  final String dataWedgeProfileName;
+  final DSHardwareScannerAdapter? hardwareScanner;
   final String manualInputTitle;
   final String manualInputHint;
   final String cameraPermissionDeniedMessage;
@@ -71,8 +71,8 @@ class _DSScannerState extends State<DSScanner> {
   final _useHardwareScannerNotifier = ValueNotifier<bool>(false);
   final _isHardwareScanningNotifier = ValueNotifier<bool>(false);
 
-  StreamSubscription<String>? _dataWedgeSubscription;
-  StreamSubscription<DataWedgeScannerStatus>? _scannerStatusSubscription;
+  StreamSubscription<String>? _hardwareScanSubscription;
+  StreamSubscription<DSHardwareScannerStatus>? _hardwareStatusSubscription;
   bool _hardwareScannerAvailable = false;
   void Function()? _hardwareModeListener;
 
@@ -88,8 +88,8 @@ class _DSScannerState extends State<DSScanner> {
     if (_hardwareModeListener != null) {
       _useHardwareScannerNotifier.removeListener(_hardwareModeListener!);
     }
-    _stopDataWedge();
-    _scannerStatusSubscription?.cancel();
+    _stopHardwareScanner();
+    unawaited(widget.hardwareScanner?.dispose());
     _barcodeController.dispose();
     _cameraPermissionNotifier.dispose();
     _useHardwareScannerNotifier.dispose();
@@ -99,7 +99,7 @@ class _DSScannerState extends State<DSScanner> {
 
   Future<void> _handleCameraPermission() async {
     try {
-      final permissionService = PermissionService();
+      final permissionService = PermissionService.instance;
       final hasPermission = await permissionService.checkPermission(
         Permission.camera,
         context,
@@ -109,10 +109,8 @@ class _DSScannerState extends State<DSScanner> {
       }
       _cameraPermissionNotifier.value = hasPermission;
       if (!hasPermission) {
-        final granted = await permissionService.requestPermission(
-          Permission.camera,
+        final granted = await permissionService.requestCameraPermission(
           context,
-          showWarningDialog: true,
         );
         _cameraPermissionNotifier.value = granted;
       }
@@ -124,39 +122,47 @@ class _DSScannerState extends State<DSScanner> {
   }
 
   void _checkHardwareScannerAndSync() {
-    DataWedgeService.isHardwareScannerAvailable().then((available) {
+    final adapter = widget.hardwareScanner;
+    if (adapter == null) {
+      _hardwareScannerAvailable = false;
+      _useHardwareScannerNotifier.value = false;
+      return;
+    }
+    adapter.isAvailable().then((available) {
       if (!mounted) {
         return;
       }
       setState(() => _hardwareScannerAvailable = available);
       if (available) {
         _useHardwareScannerNotifier.value = true;
-        _hardwareModeListener ??= _syncDataWedgeWithMode;
+        _hardwareModeListener ??= _syncHardwareScannerWithMode;
         _useHardwareScannerNotifier.addListener(_hardwareModeListener!);
       } else {
         _useHardwareScannerNotifier.value = false;
       }
-      _syncDataWedgeWithMode();
+      _syncHardwareScannerWithMode();
     });
   }
 
-  void _syncDataWedgeWithMode() {
+  void _syncHardwareScannerWithMode() {
     if (_hardwareScannerAvailable) {
-      unawaited(_startDataWedge());
+      unawaited(_startHardwareScanner());
     } else {
-      _stopDataWedge();
+      _stopHardwareScanner();
     }
   }
 
-  Future<void> _startDataWedge() async {
-    _stopDataWedge();
-    await DataWedgeService.createProfile(widget.dataWedgeProfileName);
+  Future<void> _startHardwareScanner() async {
+    final adapter = widget.hardwareScanner;
+    if (adapter == null) {
+      return;
+    }
+    _stopHardwareScanner();
+    await adapter.initialize();
     if (!mounted) {
       return;
     }
-    _dataWedgeSubscription = DataWedgeService.instance.scanStream.listen((
-      code,
-    ) {
+    _hardwareScanSubscription = adapter.scanStream.listen((code) {
       if (!mounted) {
         return;
       }
@@ -167,15 +173,13 @@ class _DSScannerState extends State<DSScanner> {
       widget.onCodeScanned(trimmed);
       HapticFeedback.mediumImpact();
     });
-    final previousStatusSub = _scannerStatusSubscription;
-    _scannerStatusSubscription =
-        DataWedgeService.instance.scannerStatusStream.listen((status) {
+    final previousStatusSub = _hardwareStatusSubscription;
+    _hardwareStatusSubscription = adapter.statusStream.listen((status) {
       if (!mounted) {
         return;
       }
-      final isScanning = status.isScanning;
-      if (_isHardwareScanningNotifier.value != isScanning) {
-        _isHardwareScanningNotifier.value = isScanning;
+      if (_isHardwareScanningNotifier.value != status.isScanning) {
+        _isHardwareScanningNotifier.value = status.isScanning;
       }
     });
     if (previousStatusSub != null) {
@@ -183,11 +187,11 @@ class _DSScannerState extends State<DSScanner> {
     }
   }
 
-  void _stopDataWedge() {
-    _dataWedgeSubscription?.cancel();
-    _dataWedgeSubscription = null;
-    _scannerStatusSubscription?.cancel();
-    _scannerStatusSubscription = null;
+  void _stopHardwareScanner() {
+    _hardwareScanSubscription?.cancel();
+    _hardwareScanSubscription = null;
+    _hardwareStatusSubscription?.cancel();
+    _hardwareStatusSubscription = null;
     _isHardwareScanningNotifier.value = false;
   }
 
