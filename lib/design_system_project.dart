@@ -4,6 +4,7 @@
 export 'package:geocoding/geocoding.dart';
 export 'package:go_router/go_router.dart';
 export 'package:pull_to_refresh_flutter3/pull_to_refresh_flutter3.dart';
+export 'package:grouped_list/grouped_list.dart';
 
 // Base
 export 'base/ds_base.dart';
