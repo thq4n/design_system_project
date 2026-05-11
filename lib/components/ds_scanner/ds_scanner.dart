@@ -55,7 +55,7 @@ class DSScanner extends StatefulWidget {
   final String manualInputTitle;
   final String manualInputHint;
   final String cameraPermissionDeniedMessage;
-  final String cameraScanHint;
+  final dynamic cameraScanHint;
   final String hardwareScannerHint;
 
   @override
@@ -300,12 +300,24 @@ class _DSScannerState extends State<DSScanner> {
                                     color: Colors.black.withValues(alpha: 0.5),
                                     borderRadius: BorderRadius.circular(130),
                                   ),
-                                  child: Text(
-                                    widget.cameraScanHint,
-                                    style: context.textTheme.xs?.copyWith(
-                                      color: Colors.white,
-                                      fontWeight: FontWeight.w500,
-                                    ),
+                                  child: Builder(
+                                    builder: (context) {
+                                      if (widget.cameraScanHint is String) {
+                                        return Text(
+                                          widget.cameraScanHint,
+                                          style: context.textTheme.xs?.copyWith(
+                                            color: Colors.white,
+                                            fontWeight: FontWeight.w500,
+                                          ),
+                                        );
+                                      }
+
+                                      if (widget.cameraScanHint is Widget) {
+                                        return widget.cameraScanHint;
+                                      }
+
+                                      return const SizedBox.shrink();
+                                    },
                                   ),
                                 ),
                               ),
