@@ -152,6 +152,22 @@ class _DSInputRecordingState extends State<DSInputRecording> {
 
   void _startRecord() => unawaited(_startRecordAsync());
 
+  String? get _devStagingMicrophoneTapFillText =>
+      DSInputRecordingConfig.instance.devStagingMicrophoneTapFillText;
+
+  bool get _usesDevStagingMicrophoneTapFill {
+    final t = _devStagingMicrophoneTapFillText;
+    return t != null && t.isNotEmpty;
+  }
+
+  void _onMicrophoneTap({required bool canRecord}) {
+    if (!canRecord) {
+      return;
+    }
+
+    _startRecord();
+  }
+
   Future<void> _startRecordAsync() async {
     if (!widget.enable || widget.readOnly) {
       return;
@@ -262,7 +278,19 @@ class _DSInputRecordingState extends State<DSInputRecording> {
           builder: (context, isRecording, _) {
             if (!isRecording) {
               return InkWell(
-                onTap: canRecord ? _startRecord : null,
+                onTap:
+                    canRecord ? () => _onMicrophoneTap(canRecord: true) : null,
+                onLongPress: canRecord
+                    ? () {
+                        if (_usesDevStagingMicrophoneTapFill) {
+                          final fill = _devStagingMicrophoneTapFillText!;
+                          _controller.text = fill;
+                          widget.onTextChanged
+                              ?.call(_controller.text, _controller);
+                          return;
+                        }
+                      }
+                    : null,
                 child: _suffixIconBox(
                   child: DSImageView(
                     source: DSAssets.vuesax.microphone2Linear,
