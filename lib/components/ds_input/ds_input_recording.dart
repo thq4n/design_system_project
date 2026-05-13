@@ -59,6 +59,7 @@ class DSInputRecording extends StatefulWidget {
 
   final String localeId;
   final Duration autoStopDuration;
+  final String? tripleTapMicrophoneFillText;
 
   const DSInputRecording({
     super.key,
@@ -104,6 +105,7 @@ class DSInputRecording extends StatefulWidget {
     this.measureUnit,
     this.localeId = _defaultLocaleId,
     this.autoStopDuration = _defaultAutoStopDuration,
+    this.tripleTapMicrophoneFillText,
   });
 
   static const String _defaultLocaleId = 'vi_VN';
@@ -114,6 +116,7 @@ class DSInputRecording extends StatefulWidget {
 }
 
 class _DSInputRecordingState extends State<DSInputRecording> {
+  static const Duration _microphoneMultiTapWindow = Duration(milliseconds: 450);
   static const double _androidLevelDivisor = 10;
   static const double _soundLevelStopAtClampedMax = 1;
   static const double _volumeStopAtClampedMin = 0;
@@ -122,6 +125,8 @@ class _DSInputRecordingState extends State<DSInputRecording> {
   late final Future<bool> _speechInitFuture;
 
   Timer? _autoStopTimer;
+  Timer? _microphoneIdleTapTimer;
+  int _microphoneIdleTapCount = 0;
   double? _initIOSVoiceLevel;
 
   final _volumeNotifier = ValueNotifier<double>(_volumeStopAtClampedMin);
@@ -142,6 +147,7 @@ class _DSInputRecordingState extends State<DSInputRecording> {
   void dispose() {
     _stopRecord(callOnTextChanged: false);
     _autoStopTimer?.cancel();
+    _microphoneIdleTapTimer?.cancel();
     _volumeNotifier.dispose();
     _isRecordingNotifier.dispose();
     if (_ownsController) {
@@ -151,6 +157,44 @@ class _DSInputRecordingState extends State<DSInputRecording> {
   }
 
   void _startRecord() => unawaited(_startRecordAsync());
+
+  bool get _usesTripleTapMicrophoneFill {
+    final t = widget.tripleTapMicrophoneFillText;
+    return t != null && t.isNotEmpty;
+  }
+
+  void _onMicrophoneIdleTap({required bool canRecord}) {
+    if (!canRecord) {
+      return;
+    }
+    if (!_usesTripleTapMicrophoneFill) {
+      _startRecord();
+      return;
+    }
+
+    _microphoneIdleTapTimer?.cancel();
+    _microphoneIdleTapCount++;
+
+    if (_microphoneIdleTapCount >= 3) {
+      _microphoneIdleTapTimer = null;
+      _microphoneIdleTapCount = 0;
+      final fill = widget.tripleTapMicrophoneFillText!;
+      _controller.text = fill;
+      widget.onTextChanged?.call(_controller.text, _controller);
+      return;
+    }
+
+    _microphoneIdleTapTimer = Timer(_microphoneMultiTapWindow, () {
+      if (!mounted) {
+        return;
+      }
+      if (_microphoneIdleTapCount == 1) {
+        _startRecord();
+      }
+      _microphoneIdleTapCount = 0;
+      _microphoneIdleTapTimer = null;
+    });
+  }
 
   Future<void> _startRecordAsync() async {
     if (!widget.enable || widget.readOnly) {
@@ -262,7 +306,9 @@ class _DSInputRecordingState extends State<DSInputRecording> {
           builder: (context, isRecording, _) {
             if (!isRecording) {
               return InkWell(
-                onTap: canRecord ? _startRecord : null,
+                onTap: canRecord
+                    ? () => _onMicrophoneIdleTap(canRecord: true)
+                    : null,
                 child: _suffixIconBox(
                   child: DSImageView(
                     source: DSAssets.vuesax.microphone2Linear,
