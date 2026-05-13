@@ -302,9 +302,10 @@ class _DSScannerState extends State<DSScanner> {
                                   ),
                                   child: Builder(
                                     builder: (context) {
-                                      if (widget.cameraScanHint is String) {
+                                      if (widget.cameraScanHint is String?) {
                                         return Text(
-                                          widget.cameraScanHint,
+                                          widget.cameraScanHint ??
+                                              'Đưa mã vào giữa khung để quét',
                                           style: context.textTheme.xs?.copyWith(
                                             color: Colors.white,
                                             fontWeight: FontWeight.w500,
