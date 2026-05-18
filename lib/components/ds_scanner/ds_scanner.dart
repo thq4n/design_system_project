@@ -39,6 +39,7 @@ class DSScanner extends StatefulWidget {
     this.cameraPermissionDeniedMessage = 'Cần cấp quyền camera để quét',
     this.cameraScanHint = 'Đưa mã vào giữa khung để quét',
     this.hardwareScannerHint = 'Dùng nút scan trên thiết bị',
+    this.barcodeController,
   });
 
   final ValueNotifier<DSScannerViewMode> viewMode;
@@ -57,6 +58,7 @@ class DSScanner extends StatefulWidget {
   final String cameraPermissionDeniedMessage;
   final dynamic cameraScanHint;
   final String hardwareScannerHint;
+  final MobileScannerController? barcodeController;
 
   @override
   State<DSScanner> createState() => _DSScannerState();
@@ -64,9 +66,10 @@ class DSScanner extends StatefulWidget {
 
 class _DSScannerState extends State<DSScanner> {
   late final MobileScannerController _barcodeController =
-      MobileScannerController(
-    cameraResolution: const Size(1280, 720),
-  );
+      widget.barcodeController ??
+          MobileScannerController(
+            cameraResolution: const Size(1280, 720),
+          );
   final _cameraPermissionNotifier = ValueNotifier<bool>(false);
   final _useHardwareScannerNotifier = ValueNotifier<bool>(false);
   final _isHardwareScanningNotifier = ValueNotifier<bool>(false);
