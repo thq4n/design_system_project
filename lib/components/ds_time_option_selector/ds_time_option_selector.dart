@@ -62,47 +62,62 @@ class DSTimeOptionSelector extends StatelessWidget {
           const SizedBox(height: 8),
         ],
         Column(
-          children:
-              List.generate((options.length / columns).ceil(), (rowIndex) {
-            final startIndex = rowIndex * columns;
-            final endIndex = (startIndex + columns).clamp(0, options.length);
-            final rowOptions = options.sublist(startIndex, endIndex);
+          children: [
+            ...List.generate((options.length / columns).ceil(), (rowIndex) {
+              final startIndex = rowIndex * columns;
+              final endIndex = (startIndex + columns).clamp(0, options.length);
+              final rowOptions = options.sublist(startIndex, endIndex);
 
-            return Padding(
-              padding: EdgeInsets.only(
-                bottom: rowIndex == (options.length / columns).ceil() - 1
-                    ? 0
-                    : componentTheme.mainAxisSpacing,
-              ),
-              child: Row(
-                children: List.generate(columns, (columnIndex) {
-                  final hasValue = columnIndex < rowOptions.length;
+              return Padding(
+                padding: EdgeInsets.only(
+                  bottom: rowIndex == (options.length / columns).ceil() - 1
+                      ? 0
+                      : componentTheme.mainAxisSpacing,
+                ),
+                child: Row(
+                  children: List.generate(columns, (columnIndex) {
+                    final hasValue = columnIndex < rowOptions.length;
 
-                  return Expanded(
-                    child: Padding(
-                      padding: EdgeInsets.only(
-                        right: columnIndex == columns - 1
-                            ? 0
-                            : componentTheme.crossAxisSpacing,
+                    return Expanded(
+                      child: Padding(
+                        padding: EdgeInsets.only(
+                          right: columnIndex == columns - 1
+                              ? 0
+                              : componentTheme.crossAxisSpacing,
+                        ),
+                        child: hasValue
+                            ? _DSTimeOptionTile(
+                                label: effectiveLabelBuilder(
+                                  rowOptions[columnIndex],
+                                ),
+                                iconSource: iconSource,
+                                isSelected:
+                                    selectedValue == rowOptions[columnIndex],
+                                theme: componentTheme,
+                                onTap: () => onChanged(rowOptions[columnIndex]),
+                              )
+                            : const SizedBox.shrink(),
                       ),
-                      child: hasValue
-                          ? _DSTimeOptionTile(
-                              label: effectiveLabelBuilder(
-                                rowOptions[columnIndex],
-                              ),
-                              iconSource: iconSource,
-                              isSelected:
-                                  selectedValue == rowOptions[columnIndex],
-                              theme: componentTheme,
-                              onTap: () => onChanged(rowOptions[columnIndex]),
-                            )
-                          : const SizedBox.shrink(),
-                    ),
-                  );
-                }),
-              ),
-            );
-          }),
+                    );
+                  }),
+                ),
+              );
+            }),
+            const SizedBox(height: 8),
+            DSInput(
+              title: 'Nhập số phút khác',
+              hint: 'Nhập số phút khác',
+              keyboardType: TextInputType.number,
+              inputFormatters: [IntegerTextInputFormatter()],
+              textInputAction: TextInputAction.next,
+              onTap: (controller) async {
+                onChanged(0);
+              },
+              onTextChanged: (text, controller) {
+                onChanged(text.intNumber ?? 0);
+              },
+            ),
+          ],
         ),
       ],
     );
