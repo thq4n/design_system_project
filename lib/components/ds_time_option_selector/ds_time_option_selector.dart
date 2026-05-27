@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../../design_system_project.dart';
 
-class DSTimeOptionSelector extends StatelessWidget {
+class DSTimeOptionSelector extends StatefulWidget {
   const DSTimeOptionSelector({
     super.key,
     required this.options,
@@ -25,8 +25,27 @@ class DSTimeOptionSelector extends StatelessWidget {
   final String? title;
 
   @override
+  State<DSTimeOptionSelector> createState() => _DSTimeOptionSelectorState();
+}
+
+class _DSTimeOptionSelectorState extends State<DSTimeOptionSelector> {
+  late final DSInputController _dsInputController;
+
+  @override
+  void initState() {
+    super.initState();
+    _dsInputController = DSInputController();
+  }
+
+  @override
+  void dispose() {
+    _dsInputController.dispose();
+    super.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
-    if (options.isEmpty) {
+    if (widget.options.isEmpty) {
       return const SizedBox.shrink();
     }
 
@@ -36,20 +55,21 @@ class DSTimeOptionSelector extends StatelessWidget {
         ? themeExtension.getDSTimeOptionSelectorTheme(context)
         : DSTimeOptionSelectorTheme.fromContext(context);
 
-    final effectiveLabelBuilder = labelBuilder ?? (value) => '$value phút';
+    final effectiveLabelBuilder =
+        widget.labelBuilder ?? (value) => '$value phút';
 
     return Column(
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
-        if (title != null) ...[
+        if (widget.title != null) ...[
           Text.rich(
             TextSpan(
-              text: title,
+              text: widget.title,
               style: componentTheme.textStyle?.copyWithColor(
                 componentTheme.titleColor,
               ),
               children: [
-                if (required)
+                if (widget.required)
                   TextSpan(
                     text: ' *',
                     style: componentTheme.textStyle?.copyWithColor(
@@ -63,38 +83,51 @@ class DSTimeOptionSelector extends StatelessWidget {
         ],
         Column(
           children: [
-            ...List.generate((options.length / columns).ceil(), (rowIndex) {
-              final startIndex = rowIndex * columns;
-              final endIndex = (startIndex + columns).clamp(0, options.length);
-              final rowOptions = options.sublist(startIndex, endIndex);
+            ...List.generate((widget.options.length / widget.columns).ceil(),
+                (rowIndex) {
+              final startIndex = rowIndex * widget.columns;
+              final endIndex =
+                  (startIndex + widget.columns).clamp(0, widget.options.length);
+              final rowOptions = widget.options.sublist(startIndex, endIndex);
 
               return Padding(
                 padding: EdgeInsets.only(
-                  bottom: rowIndex == (options.length / columns).ceil() - 1
+                  bottom: rowIndex ==
+                          (widget.options.length / widget.columns).ceil() - 1
                       ? 0
                       : componentTheme.mainAxisSpacing,
                 ),
                 child: Row(
-                  children: List.generate(columns, (columnIndex) {
+                  children: List.generate(widget.columns, (columnIndex) {
                     final hasValue = columnIndex < rowOptions.length;
 
                     return Expanded(
                       child: Padding(
                         padding: EdgeInsets.only(
-                          right: columnIndex == columns - 1
+                          right: columnIndex == widget.columns - 1
                               ? 0
                               : componentTheme.crossAxisSpacing,
                         ),
                         child: hasValue
-                            ? _DSTimeOptionTile(
-                                label: effectiveLabelBuilder(
-                                  rowOptions[columnIndex],
-                                ),
-                                iconSource: iconSource,
-                                isSelected:
-                                    selectedValue == rowOptions[columnIndex],
-                                theme: componentTheme,
-                                onTap: () => onChanged(rowOptions[columnIndex]),
+                            ? ValueListenableBuilder(
+                                valueListenable:
+                                    _dsInputController.value.tdController,
+                                builder: (context, value, child) {
+                                  return _DSTimeOptionTile(
+                                    label: effectiveLabelBuilder(
+                                      rowOptions[columnIndex],
+                                    ),
+                                    iconSource: widget.iconSource,
+                                    isSelected: widget.selectedValue ==
+                                            rowOptions[columnIndex] &&
+                                        _dsInputController.text.isEmpty,
+                                    theme: componentTheme,
+                                    onTap: () {
+                                      _dsInputController.clear();
+                                      widget.onChanged(rowOptions[columnIndex]);
+                                    },
+                                  );
+                                },
                               )
                             : const SizedBox.shrink(),
                       ),
@@ -105,16 +138,20 @@ class DSTimeOptionSelector extends StatelessWidget {
             }),
             const SizedBox(height: 8),
             DSInput(
+              key: const Key(
+                'ds_time_option_selector_input',
+              ),
+              controller: _dsInputController,
               title: 'Nhập số phút khác',
               hint: 'Nhập số phút khác',
               keyboardType: TextInputType.number,
               inputFormatters: [IntegerTextInputFormatter()],
               textInputAction: TextInputAction.next,
               onTap: (controller) async {
-                onChanged(0);
+                widget.onChanged(0);
               },
               onTextChanged: (text, controller) {
-                onChanged(text.intNumber ?? 0);
+                widget.onChanged(text.intNumber ?? 0);
               },
             ),
           ],
