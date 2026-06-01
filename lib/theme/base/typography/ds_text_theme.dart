@@ -90,7 +90,14 @@ class DSTextStyle extends TextStyle {
   }
 
   DSTextStyle copyWithVariant(DSTextStyleVariant variant) {
-    return DSTextStyle.fromTextStyle(copyWith(fontWeight: variant.fontWeight));
+    return DSTextStyle.fromTextStyle(
+      copyWith(
+        fontWeight: variant.fontWeight,
+        decoration: variant == DSTextStyleVariant.underline
+            ? TextDecoration.underline
+            : null,
+      ),
+    );
   }
 
   DSTextStyle copyWithSize(DSTextStyleSize size) {
