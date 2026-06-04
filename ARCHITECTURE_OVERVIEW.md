@@ -183,7 +183,7 @@ dependencies:
 dev_dependencies:
   flutter_test: sdk: flutter
   flutter_gen: ^5.10.0             # Asset code generation
-  build_runner: ^2.4.15            # Code generation
+  build_runner: ^2.15.0            # Code generation
   storybook_flutter: ^0.14.1       # Storybook integration
   flutter_lints: ^5.0.0            # Code quality
   component_creator: ^0.0.5        # Component scaffolding
@@ -366,7 +366,7 @@ flutter run -t lib/catalog/main.dart
 ### 3. **Code Generation**:
 ```bash
 # Generate assets
-flutter packages pub run build_runner build
+fvm dart run build_runner build
 
 # Generate fonts
 flutter packages pub run flutter_gen:generate

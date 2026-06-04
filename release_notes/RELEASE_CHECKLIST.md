@@ -35,7 +35,7 @@
 
 ### 2. Generate Assets
 ```bash
-flutter packages pub run build_runner build --delete-conflicting-outputs
+fvm dart run build_runner build
 ```
 
 ### 3. Test Everything

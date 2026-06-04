@@ -453,16 +453,19 @@ class _DSScannerState extends State<DSScanner> {
       valueListenable: widget.viewMode,
       builder: (context, mode, _) {
         final isScanMode = mode == DSScannerViewMode.scan;
-        return AnimatedSize(
-          duration: widget.modeTransitionDuration,
-          curve: Curves.easeInOut,
-          alignment: Alignment.topCenter,
-          child: isScanMode
-              ? _buildScannerStrip()
-              : Padding(
-                  padding: const EdgeInsets.fromLTRB(16, 16, 16, 0),
-                  child: _buildManualSection(),
-                ),
+        return Material(
+          color: DSColorUsages.background.primary,
+          child: AnimatedSize(
+            duration: widget.modeTransitionDuration,
+            curve: Curves.easeInOut,
+            alignment: Alignment.topCenter,
+            child: isScanMode
+                ? _buildScannerStrip()
+                : Padding(
+                    padding: const EdgeInsets.fromLTRB(16, 16, 16, 16),
+                    child: _buildManualSection(),
+                  ),
+          ),
         );
       },
     );

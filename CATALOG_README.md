@@ -201,11 +201,11 @@ Script `lib/scripts/generate_catalog.dart` tự động:
 ```yaml
 # pubspec.yaml
 dev_dependencies:
-  build_runner: ^2.4.15
+  build_runner: ^2.15.0
   catalog_generator: # Custom generator (tương lai)
 
 # Chạy build runner
-flutter packages pub run build_runner build
+fvm dart run build_runner build
 ```
 
 ## 🚀 Deploy lên Web

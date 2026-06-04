@@ -68,7 +68,7 @@ print_status "2. Running tests..."
 flutter test
 
 print_status "3. Generating assets..."
-flutter packages pub run build_runner build --delete-conflicting-outputs
+fvm dart run build_runner build
 
 print_status "4. Updating version in pubspec.yaml..."
 # Update version in pubspec.yaml
