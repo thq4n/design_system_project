@@ -7476,6 +7476,30 @@ class $AssetsVuesaxGen {
   String get dislikeTwotone =>
       'packages/design_system_project/assets/vuesax/dislike-twotone.svg';
 
+  /// File path: assets/vuesax/dispatch-bold.svg
+  String get dispatchBold =>
+      'packages/design_system_project/assets/vuesax/dispatch-bold.svg';
+
+  /// File path: assets/vuesax/dispatch-broken.svg
+  String get dispatchBroken =>
+      'packages/design_system_project/assets/vuesax/dispatch-broken.svg';
+
+  /// File path: assets/vuesax/dispatch-bulk.svg
+  String get dispatchBulk =>
+      'packages/design_system_project/assets/vuesax/dispatch-bulk.svg';
+
+  /// File path: assets/vuesax/dispatch-linear.svg
+  String get dispatchLinear =>
+      'packages/design_system_project/assets/vuesax/dispatch-linear.svg';
+
+  /// File path: assets/vuesax/dispatch-outline.svg
+  String get dispatchOutline =>
+      'packages/design_system_project/assets/vuesax/dispatch-outline.svg';
+
+  /// File path: assets/vuesax/dispatch-twotone.svg
+  String get dispatchTwotone =>
+      'packages/design_system_project/assets/vuesax/dispatch-twotone.svg';
+
   /// File path: assets/vuesax/document-1-bold.svg
   String get document1Bold =>
       'packages/design_system_project/assets/vuesax/document-1-bold.svg';
@@ -16183,6 +16207,30 @@ class $AssetsVuesaxGen {
   /// File path: assets/vuesax/ontology-twotone.svg
   String get ontologyTwotone =>
       'packages/design_system_project/assets/vuesax/ontology-twotone.svg';
+
+  /// File path: assets/vuesax/package-return-bold.svg
+  String get packageReturnBold =>
+      'packages/design_system_project/assets/vuesax/package-return-bold.svg';
+
+  /// File path: assets/vuesax/package-return-broken.svg
+  String get packageReturnBroken =>
+      'packages/design_system_project/assets/vuesax/package-return-broken.svg';
+
+  /// File path: assets/vuesax/package-return-bulk.svg
+  String get packageReturnBulk =>
+      'packages/design_system_project/assets/vuesax/package-return-bulk.svg';
+
+  /// File path: assets/vuesax/package-return-linear.svg
+  String get packageReturnLinear =>
+      'packages/design_system_project/assets/vuesax/package-return-linear.svg';
+
+  /// File path: assets/vuesax/package-return-outline.svg
+  String get packageReturnOutline =>
+      'packages/design_system_project/assets/vuesax/package-return-outline.svg';
+
+  /// File path: assets/vuesax/package-return-twotone.svg
+  String get packageReturnTwotone =>
+      'packages/design_system_project/assets/vuesax/package-return-twotone.svg';
 
   /// File path: assets/vuesax/paintbucket-bold.svg
   String get paintbucketBold =>
@@ -26194,6 +26242,12 @@ class $AssetsVuesaxGen {
     dislikeLinear,
     dislikeOutline,
     dislikeTwotone,
+    dispatchBold,
+    dispatchBroken,
+    dispatchBulk,
+    dispatchLinear,
+    dispatchOutline,
+    dispatchTwotone,
     document1Bold,
     document1Broken,
     document1Bulk,
@@ -28371,6 +28425,12 @@ class $AssetsVuesaxGen {
     ontologyLinear,
     ontologyOutline,
     ontologyTwotone,
+    packageReturnBold,
+    packageReturnBroken,
+    packageReturnBulk,
+    packageReturnLinear,
+    packageReturnOutline,
+    packageReturnTwotone,
     paintbucketBold,
     paintbucketBroken,
     paintbucketBulk,
