@@ -215,7 +215,7 @@ extension _DSMediaPickerStatePicking on _DSMediaPickerState {
         }
       }
       final List<XFile> pickedFiles;
-      if (_maxImages == 1) {
+      if (_maxImages == 1 || availableSlots == 1) {
         final XFile? pickedFile = await _imagePicker.pickImage(
           source: ImageSource.gallery,
           maxWidth:
