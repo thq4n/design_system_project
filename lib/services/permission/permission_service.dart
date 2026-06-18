@@ -52,6 +52,22 @@ class PermissionService extends BaseService {
   // TODO(gianthieuquan): Replace with actual E2E check
   bool get _isE2ETest => false;
 
+  bool _isMediaLibraryPermission(Permission permission) {
+    return permission == Permission.photos ||
+        permission == Permission.videos ||
+        permission == Permission.storage;
+  }
+
+  bool _isPermissionAllowed(Permission permission, PermissionStatus status) {
+    if (status.isGranted) {
+      return true;
+    }
+    if (status.isLimited && _isMediaLibraryPermission(permission)) {
+      return true;
+    }
+    return false;
+  }
+
   /// Get permission status using permission_handler
   Future<PermissionStatus> _getPermissionStatus(Permission permission) async {
     try {
@@ -90,6 +106,10 @@ class PermissionService extends BaseService {
 
     var status = await _getPermissionStatus(permission);
 
+    if (_isPermissionAllowed(permission, status)) {
+      return true;
+    }
+
     // Handle location permission special case for iOS
     if (permission == Permission.locationAlways && Platform.isIOS) {
       return _handleIOSLocationPermission(
@@ -115,7 +135,7 @@ class PermissionService extends BaseService {
       return false;
     }
 
-    return status.isGranted;
+    return _isPermissionAllowed(permission, status);
   }
 
   /// Handles iOS location permission special case
@@ -196,7 +216,7 @@ class PermissionService extends BaseService {
     }
 
     final status = await _getPermissionStatus(permission);
-    return status.isGranted;
+    return _isPermissionAllowed(permission, status);
   }
 
   /// Checks multiple permissions and returns their status
@@ -221,9 +241,7 @@ class PermissionService extends BaseService {
     bool awaitWarningDialog = false,
     bool showWarningDialog = true,
   }) async {
-    // First check if already granted
     var isGranted = await checkPermission(permission, context);
-
     if (!isGranted) {
       isGranted = await _requestPermission(
         permission,
