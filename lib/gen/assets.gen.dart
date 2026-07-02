@@ -22748,6 +22748,30 @@ class $AssetsVuesaxGen {
   String get unloadingGoodsBulk =>
       'packages/design_system_project/assets/vuesax/unloading-goods-bulk.svg';
 
+  /// File path: assets/vuesax/unloading-goods-history-bold.svg
+  String get unloadingGoodsHistoryBold =>
+      'packages/design_system_project/assets/vuesax/unloading-goods-history-bold.svg';
+
+  /// File path: assets/vuesax/unloading-goods-history-broken.svg
+  String get unloadingGoodsHistoryBroken =>
+      'packages/design_system_project/assets/vuesax/unloading-goods-history-broken.svg';
+
+  /// File path: assets/vuesax/unloading-goods-history-bulk.svg
+  String get unloadingGoodsHistoryBulk =>
+      'packages/design_system_project/assets/vuesax/unloading-goods-history-bulk.svg';
+
+  /// File path: assets/vuesax/unloading-goods-history-linear.svg
+  String get unloadingGoodsHistoryLinear =>
+      'packages/design_system_project/assets/vuesax/unloading-goods-history-linear.svg';
+
+  /// File path: assets/vuesax/unloading-goods-history-outline.svg
+  String get unloadingGoodsHistoryOutline =>
+      'packages/design_system_project/assets/vuesax/unloading-goods-history-outline.svg';
+
+  /// File path: assets/vuesax/unloading-goods-history-twotone.svg
+  String get unloadingGoodsHistoryTwotone =>
+      'packages/design_system_project/assets/vuesax/unloading-goods-history-twotone.svg';
+
   /// File path: assets/vuesax/unloading-goods-linear.svg
   String get unloadingGoodsLinear =>
       'packages/design_system_project/assets/vuesax/unloading-goods-linear.svg';
@@ -30084,6 +30108,12 @@ class $AssetsVuesaxGen {
     unloadingGoodsBold,
     unloadingGoodsBroken,
     unloadingGoodsBulk,
+    unloadingGoodsHistoryBold,
+    unloadingGoodsHistoryBroken,
+    unloadingGoodsHistoryBulk,
+    unloadingGoodsHistoryLinear,
+    unloadingGoodsHistoryOutline,
+    unloadingGoodsHistoryTwotone,
     unloadingGoodsLinear,
     unloadingGoodsOutline,
     unloadingGoodsTwotone,
