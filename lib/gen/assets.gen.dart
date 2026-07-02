@@ -12884,6 +12884,30 @@ class $AssetsVuesaxGen {
   String get loadingGoodsBulk =>
       'packages/design_system_project/assets/vuesax/loading-goods-bulk.svg';
 
+  /// File path: assets/vuesax/loading-goods-history-bold.svg
+  String get loadingGoodsHistoryBold =>
+      'packages/design_system_project/assets/vuesax/loading-goods-history-bold.svg';
+
+  /// File path: assets/vuesax/loading-goods-history-broken.svg
+  String get loadingGoodsHistoryBroken =>
+      'packages/design_system_project/assets/vuesax/loading-goods-history-broken.svg';
+
+  /// File path: assets/vuesax/loading-goods-history-bulk.svg
+  String get loadingGoodsHistoryBulk =>
+      'packages/design_system_project/assets/vuesax/loading-goods-history-bulk.svg';
+
+  /// File path: assets/vuesax/loading-goods-history-linear.svg
+  String get loadingGoodsHistoryLinear =>
+      'packages/design_system_project/assets/vuesax/loading-goods-history-linear.svg';
+
+  /// File path: assets/vuesax/loading-goods-history-outline.svg
+  String get loadingGoodsHistoryOutline =>
+      'packages/design_system_project/assets/vuesax/loading-goods-history-outline.svg';
+
+  /// File path: assets/vuesax/loading-goods-history-twotone.svg
+  String get loadingGoodsHistoryTwotone =>
+      'packages/design_system_project/assets/vuesax/loading-goods-history-twotone.svg';
+
   /// File path: assets/vuesax/loading-goods-linear.svg
   String get loadingGoodsLinear =>
       'packages/design_system_project/assets/vuesax/loading-goods-linear.svg';
@@ -27594,6 +27618,12 @@ class $AssetsVuesaxGen {
     loadingGoodsBold,
     loadingGoodsBroken,
     loadingGoodsBulk,
+    loadingGoodsHistoryBold,
+    loadingGoodsHistoryBroken,
+    loadingGoodsHistoryBulk,
+    loadingGoodsHistoryLinear,
+    loadingGoodsHistoryOutline,
+    loadingGoodsHistoryTwotone,
     loadingGoodsLinear,
     loadingGoodsOutline,
     loadingGoodsTwotone,
