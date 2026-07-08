@@ -71,11 +71,9 @@ class DSAutoSizeText extends StatelessWidget {
   final int? maxLines;
   final String? semanticsLabel;
 
-  double get _resolvedMinFontSize =>
-      minFontSize ?? DSFontSizes.xxs.fontSize;
+  double get _resolvedMinFontSize => minFontSize ?? DSFontSizes.xxs.fontSize;
 
-  double get _resolvedMaxFontSize =>
-      maxFontSize ?? DSFontSizes.xxxxxl.fontSize;
+  double get _resolvedMaxFontSize => maxFontSize ?? DSFontSizes.xxxxxl.fontSize;
 
   @override
   Widget build(BuildContext context) {
