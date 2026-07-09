@@ -1,0 +1,550 @@
+import 'package:flutter/foundation.dart';
+import 'package:flutter/material.dart';
+import 'package:pull_to_refresh_flutter3/pull_to_refresh_flutter3.dart';
+
+import '../../components/ds_components.dart';
+import '../../theme/ds_theme.dart';
+import '../ds_bottom_sheet_action.dart';
+import 'ds_modal_bottom_sheet_body_mode.dart';
+
+/// Contract dialog/modal dùng chung — chỉ khai báo, không triển khai.
+///
+/// App layer gán implementation qua [register]:
+/// `DSDialogExtension.register(CoreDialogExtension())`.
+abstract class DSDialogExtension {
+  static DSDialogExtension? _instance;
+
+  /// Instance đang dùng (core đăng ký khi khởi động app).
+  static DSDialogExtension get instance {
+    final registered = _instance;
+    if (registered == null) {
+      throw StateError(
+        'DSDialogExtension chưa được đăng ký. '
+        'Gọi DSDialogExtension.register(...) khi khởi động app.',
+      );
+    }
+    return registered;
+  }
+
+  static void register(DSDialogExtension implementation) {
+    _instance = implementation;
+  }
+
+  Future<void> showActionListBottomSheet({
+    required BuildContext context,
+    required List<DSBottomSheetAction> actions,
+    String? title,
+    bool useRootNavigator = true,
+    bool isDismissible = true,
+  });
+  Future<void> showAdaptiveActionDialog({
+    required BuildContext context,
+    required String title,
+    String? message,
+    required List<DSBottomSheetAction> actions,
+    String? cancelLabel,
+    bool barrierDismissible = true,
+    bool useRootNavigator = true,
+  });
+  Future<dynamic> showNoticeDialog({
+    required BuildContext context,
+    required String message,
+    String? title,
+    String? titleBtn,
+    bool barrierDismissible = true,
+    Function()? onClose,
+    bool useRootNavigator = true,
+    bool dismissWhenAction = true,
+    Widget? content,
+  });
+  Future<dynamic> showNoticeErrorDialog({
+    required BuildContext context,
+    required String message,
+    bool barrierDismissible = false,
+    void Function()? onClose,
+    bool useRootNavigator = true,
+    String? titleBtn,
+  });
+  Future<dynamic> showNoticeWarningDialog({
+    required BuildContext context,
+    required String message,
+    bool barrierDismissible = false,
+    void Function()? onClose,
+    bool useRootNavigator = true,
+    String? title,
+  });
+  Future<dynamic> showNoticeConfirmDialog({
+    required BuildContext context,
+    dynamic title,
+    dynamic description,
+    bool barrierDismissible = false,
+    String? secondaryButtonTitle,
+    DSButtonVariants? styleLeftBtn,
+    String? primaryButtonTitle,
+    DSButtonVariants? styleRightBtn,
+    void Function()? onPrimaryPressed,
+    void Function()? onSecondaryPressed,
+    bool useRootNavigator = true,
+    bool dismissWhenAction = true,
+    Widget? extension,
+    Axis buttonDirection = Axis.horizontal,
+    void Function()? onClosed,
+  });
+  Future<dynamic> showNoticeConfirmWithReasonDialog({
+    required BuildContext context,
+    required String message,
+    required String title,
+    String? hint,
+    bool barrierDismissible = true,
+    String? leftBtn,
+    String? rightBtn,
+    void Function(String reason)? onConfirmed,
+    void Function(String reason)? onCanceled,
+    bool useRootNavigator = true,
+    bool dismissWhenAction = true,
+    TextStyle? styleRightBtn,
+    TextStyle? styleLeftBtn,
+  });
+  Future<dynamic> showModal(
+    BuildContext context,
+    Widget body, {
+    bool useRootNavigator = true,
+    double bottomPadding = 16,
+    String? title,
+    bool isDismissible = true,
+    void Function()? onClose,
+    bool isRequired = false,
+    String? cancelText,
+    String? actionText,
+    void Function()? onCancel,
+    void Function()? onAction,
+    void Function()? onBackPressed,
+    bool dismissWhenAction = true,
+    DSModalBottomSheetBodyMode bodyMode = DSModalBottomSheetBodyMode.none,
+  });
+  Future<dynamic> showPaginatedModal<T>({
+    required BuildContext context,
+    required String title,
+    Widget? header,
+    List<T>? initialItems,
+    Future<List<T>> Function({required int page, required int pageSize})?
+        onFetchItems,
+    Widget Function(BuildContext context, T item)? itemBuilder,
+    String Function(T item)? getItemLabel,
+    RefreshController? refreshController,
+    Widget? emptyWidget,
+    bool useRootNavigator = true,
+    double bottomPadding = 16,
+    bool isDismissible = true,
+    void Function()? onClose,
+    bool isRequired = false,
+    String? cancelText,
+    String? actionText,
+    void Function()? onCancel,
+    void Function()? onAction,
+    void Function()? onBackPressed,
+    bool dismissWhenAction = true,
+  });
+  Future<dynamic> showPaginatedModalWithoutActions<T>({
+    required BuildContext context,
+    required String title,
+    Widget? header,
+    List<T>? initialItems,
+    Future<List<T>> Function({required int page, required int pageSize})?
+        onFetchItems,
+    Widget Function(BuildContext context, T item)? itemBuilder,
+    String Function(T item)? getItemLabel,
+    RefreshController? refreshController,
+    Widget? emptyWidget,
+    List<T> Function(List<T> items)? sortItems,
+    bool useRootNavigator = true,
+    double? bottomPadding,
+    bool isDismissible = true,
+    void Function()? onClose,
+    bool isRequired = false,
+    void Function()? onBackPressed,
+    bool enableDrag = false,
+  });
+  Future<dynamic> showModalWithoutActions(
+    BuildContext context,
+    Widget body, {
+    bool useRootNavigator = true,
+    double? bottomPadding,
+    String? title,
+    bool isDismissible = true,
+    void Function()? onClose,
+    bool isRequired = false,
+    void Function()? onBackPressed,
+    bool enableDrag = false,
+    DSModalBottomSheetBodyMode bodyMode = DSModalBottomSheetBodyMode.none,
+  });
+  Future<dynamic> showActionDialog(
+    BuildContext context, {
+    Map<String, void Function()> actions = const <String, void Function()>{},
+    String title = '',
+    String? subTitle = '',
+    bool useRootNavigator = true,
+    bool barrierDismissible = true,
+    bool dimissWhenSelect = true,
+    String? titleBottomBtn,
+  });
+  Future<dynamic> showNoticeConfirmWithValidateDialog({
+    required BuildContext context,
+    required String message,
+    required String title,
+    required String validateString,
+    String? hint,
+    bool barrierDismissible = true,
+    String? leftBtn,
+    String? rightBtn,
+    void Function()? onConfirmed,
+    void Function()? onCanceled,
+    bool useRootNavigator = true,
+    bool dismissWhenAction = true,
+    TextStyle? styleRightBtn,
+    TextStyle? styleLeftBtn,
+  });
+  Future<dynamic> showNoticeConfirmWithInputDialog({
+    required BuildContext context,
+    required String message,
+    required String title,
+    String? hint,
+    bool barrierDismissible = true,
+    String? leftBtn,
+    String? rightBtn,
+    void Function(String text)? onConfirmed,
+    void Function(String text)? onCanceled,
+    bool useRootNavigator = true,
+    bool dismissWhenAction = true,
+    TextStyle? styleRightBtn,
+    TextStyle? styleLeftBtn,
+    TextStyle? messageStyle,
+    TextStyle? titleStyle,
+    int? maxLines,
+    String? initialValue,
+    TextInputType? keyboardType,
+  });
+  Future<dynamic> showNoticeConfirmWithWidgetDialog({
+    required BuildContext context,
+    required String title,
+    String? hint,
+    bool barrierDismissible = true,
+    String? leftBtn,
+    String? rightBtn,
+    void Function()? onConfirmed,
+    void Function()? onCanceled,
+    bool useRootNavigator = true,
+    bool dismissWhenAction = true,
+    TextStyle? styleRightBtn,
+    TextStyle? styleLeftBtn,
+    TextStyle? titleStyle,
+    Widget? widget,
+  });
+  Future<void> showSelectionBottomSheet<T>({
+    required BuildContext context,
+    required String title,
+    EdgeInsetsGeometry? titlePadding,
+    Widget? extension,
+    String? hintSearch,
+    DSInputController? searchController,
+    Future<List<T>> Function({String? searchTerm, int? page, int? pageSize})?
+        onFetchItems,
+    required String Function(T item) getItemTitle,
+    String Function(T item)? getItemSubtitle,
+    List<T>? initialItems,
+    bool initialRefresh = true,
+    T? initialSelectedItem,
+    Widget Function(T item)? itemBuilder,
+    Function(T item, BuildContext context)? onConfirm,
+    Function()? onCancel,
+    String? confirmText,
+    String? cancelText,
+    RefreshController? refreshController,
+    bool canSearch = true,
+    bool needConfirmButton = true,
+    bool shrinkWrap = false,
+    bool hideRatio = false,
+    bool hideCopy = true,
+    bool isDismissible = false,
+    bool Function(T item)? isItemEnabled,
+  });
+  Future<void> showSelectionBottomSheetWithCopy<T>({
+    required BuildContext context,
+    required String title,
+    EdgeInsetsGeometry? titlePadding,
+    Widget? extension,
+    String? hintSearch,
+    DSInputController? searchController,
+    Future<List<T>> Function({String? searchTerm, int? page, int? pageSize})?
+        onFetchItems,
+    required String Function(T item) getItemTitle,
+    String Function(T item)? getItemSubtitle,
+    List<T>? initialItems,
+    bool initialRefresh = true,
+    T? initialSelectedItem,
+    Widget Function(T item)? itemBuilder,
+    Function(T item, BuildContext context)? onConfirm,
+    Function()? onCancel,
+    String? confirmText,
+    String? cancelText,
+    RefreshController? refreshController,
+    bool canSearch = true,
+    bool needConfirmButton = true,
+    bool shrinkWrap = false,
+    bool hideRatio = true,
+    bool hideCopy = false,
+    String Function(T item)? getCopyValue,
+    Function()? onCopySuccess,
+    bool isDismissible = false,
+    bool Function(T item)? isItemEnabled,
+  });
+  Future<void> showMultipleSelectionBottomSheet<T>({
+    required BuildContext context,
+    required String title,
+    EdgeInsetsGeometry? titlePadding,
+    Widget? extension,
+    required String hintSearch,
+    DSInputController? searchController,
+    required Future<List<T>> Function({
+      String? searchTerm,
+      int? page,
+      int? pageSize,
+    }) onFetchItems,
+    required String Function(T item) getItemLabel,
+    List<T>? initialItems,
+    RefreshController? refreshController,
+    List<T>? initialSelectedItems,
+    Widget Function(T item)? itemBuilder,
+    Function(List<T> items)? onConfirm,
+    Function()? onCancel,
+    String? confirmText,
+    String? cancelText,
+    String Function(List<T> selectedItems)? confirmTextBuilder,
+    bool clearSelectionOnCancel = false,
+    bool Function(List<T> selectedItems)? isConfirmEnabled,
+    bool shrinkWrap = false,
+  });
+  Future<void> showMultipleSelectionBottomSheetFromList<T>({
+    required BuildContext context,
+    required String title,
+    required List<T> items,
+    required String Function(T item) getItemLabel,
+    Widget Function(T item, bool isSelected)? itemBuilder,
+    List<T>? initialSelectedItems,
+    String? hintSearch,
+    EdgeInsetsGeometry? titlePadding,
+    Widget? extension,
+    Function(List<T> items)? onConfirm,
+    Function()? onCancel,
+    String? confirmText,
+    String? cancelText,
+    bool showSelectAll = true,
+    String? selectAllText,
+    List<T> Function({
+      required List<T> currentSelectedItems,
+      required List<T> filteredItems,
+      required List<T> allItems,
+      required bool isSelectAll,
+    })? onToggleSelectAll,
+    bool Function({
+      required List<T> currentSelectedItems,
+      required List<T> filteredItems,
+      required List<T> allItems,
+    })? isAllSelected,
+    ValueListenable<dynamic>? externalSelectionNotifier,
+    String Function(List<T> selectedItems)? confirmTextBuilder,
+    bool shrinkWrap = false,
+    bool Function(List<T> selectedItems)? isConfirmEnabled,
+    bool enableCopyTitle = false,
+    Function()? onCopySuccess,
+    Widget? emptyPlaceholder,
+  });
+  Future<void> showSelectionBottomSheetFromList<T>({
+    required BuildContext context,
+    required String title,
+    required List<T> items,
+    required String Function(T item) getItemLabel,
+    String Function(T item)? getItemSubtitle,
+    T? initialSelectedItem,
+    String? hintSearch,
+    EdgeInsetsGeometry? titlePadding,
+    Widget? extension,
+    Widget Function(T item, bool isSelected)? itemBuilder,
+    bool needConfirmButton = true,
+    void Function(T item)? onSelected,
+    Function()? onCancel,
+    String? confirmText,
+    String? cancelText,
+    bool shrinkWrap = false,
+    Widget? emptyPlaceholder,
+    bool hideRatio = false,
+  });
+  Future<dynamic> showSelectionWithoutActionsBottomSheet({
+    required BuildContext context,
+    required String title,
+    required List<Widget> children,
+    EdgeInsetsGeometry? titlePadding,
+    EdgeInsetsGeometry? padding,
+    Widget? extension,
+    VoidCallback? onCancel,
+    bool shrinkWrap = false,
+  });
+  Future<dynamic> showWarningConfirmDialog({
+    required BuildContext context,
+    dynamic title,
+    dynamic description,
+    bool barrierDismissible = false,
+    String? secondaryButtonTitle,
+    DSButtonVariants? styleLeftBtn,
+    String? primaryButtonTitle,
+    DSButtonVariants? styleRightBtn,
+    void Function()? onPrimaryPressed,
+    void Function()? onSecondaryPressed,
+    bool useRootNavigator = true,
+    bool dismissWhenAction = true,
+    Widget? extension,
+    Axis buttonDirection = Axis.horizontal,
+    void Function()? onClosed,
+  });
+  Future<void> showMultipleFilterSelectionModal<T>({
+    required BuildContext context,
+    required String title,
+    EdgeInsetsGeometry? titlePadding,
+    List<T>? initialItems,
+    String? hintSearch,
+    DSInputController? searchController,
+    Future<List<T>> Function({String? searchTerm})? onRefreshItems,
+    Future<List<T>> Function({String? searchTerm})? onLoadMoreItems,
+    bool Function()? canLoadMore,
+    required String Function(T item) getItemLabel,
+    RefreshController? refreshController,
+    List<T>? initialSelectedItems,
+    Widget Function(
+      T item,
+      bool isSelected,
+      ValueNotifier<List<T>>? selectedItemNotifier,
+    )? itemBuilder,
+    Function(List<T> items)? onConfirm,
+    Function()? onDismiss,
+    String? applyText,
+    String? cancelText,
+    bool dismissWhenAction = true,
+    bool Function(List<T> selectedItem)? onDisableAction,
+    bool isExpandedBody = false,
+  });
+  Future<void> showFilterSelectionModal<T>({
+    required BuildContext context,
+    required String title,
+    EdgeInsetsGeometry? titlePadding,
+    List<T>? initialItems,
+    String? hintSearch,
+    DSInputController? searchController,
+    Future<List<T>> Function({String? searchTerm})? onRefreshItems,
+    Future<List<T>> Function({String? searchTerm})? onLoadMoreItems,
+    bool Function()? canLoadMore,
+    required String Function(T item) getItemLabel,
+    RefreshController? refreshController,
+    T? initialSelectedItem,
+    Widget Function(
+      T item,
+      bool isSelected,
+      ValueNotifier<T?>? selectedItemNotifier,
+      Function(T item)? onSelect,
+    )? itemBuilder,
+    Function(T? item)? onConfirm,
+    bool isShowDismissButton = true,
+    Function()? onDismiss,
+    String? applyText,
+    String? cancelText,
+    bool dismissWhenAction = true,
+    bool Function(T? selectedItem)? onDisableAction,
+    ValueNotifier<T?>? selectedItemNotifier,
+  });
+  Future<void> showDSDataRangePicker({
+    required BuildContext context,
+    required Function(DateTimeRange) onSelected,
+    required String title,
+    EdgeInsetsGeometry? titlePadding,
+    String? applyText,
+    String? cancelText,
+    bool dismissWhenAction = true,
+    bool Function(DateTimeRange? selectedItem)? onDisableAction,
+    Function()? onDismiss,
+    DateTimeRange? initialData,
+  });
+  Future<void> showDSDatePicker({
+    required BuildContext context,
+    required Function(DateTime) onSelected,
+    required String title,
+    EdgeInsetsGeometry? titlePadding,
+    String? applyText,
+    String? cancelText,
+    bool dismissWhenAction = true,
+    bool Function(DateTime? selectedItem)? onDisableAction,
+    Function()? onDismiss,
+    DateTime? initialData,
+    DateTime? minDate,
+    DateTime? maxDate,
+    bool isShowDismissButton = true,
+  });
+  Future<DateTime?> showDSDateTimePickerSequence({
+    required BuildContext context,
+    String dateTitle = 'Chọn ngày',
+    String dateApplyText = 'Xong',
+    DateTime? initialDateTime,
+    DateTime? minDate,
+    DateTime? maxDate,
+    bool isShowDismissButton = true,
+    bool showSecondsColumn = false,
+  });
+  Future<T?> showSimpleModalBottomSheet<T>({
+    required BuildContext context,
+    required Widget child,
+    String? title,
+    EdgeInsetsGeometry? titlePadding,
+    bool isScrollControlled = true,
+    bool isDismissible = true,
+    bool enableDrag = true,
+    bool useRootNavigator = true,
+    bool useSafeArea = false,
+    Color? backgroundColor,
+    bool isShowDismissButton = false,
+    String? applyText,
+    String? cancelText,
+    Function(T? item)? onConfirm,
+    Function()? onDismiss,
+    bool dismissWhenAction = true,
+    bool Function(T? selectedItem)? onDisableAction,
+    bool Function(T? selectedItem)? isChanged,
+    T? initialData,
+  });
+  Future<void> showDateRangePickerFilterModal({
+    required BuildContext context,
+    required String title,
+    Object? initialSelectedItem,
+    required Function(Object?) onConfirm,
+    required bool Function(Object?) onDisableAction,
+    DateTimeRange? initialCustomDateRange,
+    bool Function(Object?, Object?)? onDisableActionForCustom,
+    bool includeToday = false,
+  });
+  Future<Object?> showLocationMismatchReasonDialog({
+    required BuildContext context,
+    String title = 'Thông báo',
+    String description =
+        'Có mã không thuộc điểm hiện tại. Vui lòng chọn lý do sai vị trí để tiếp tục.',
+    String reasonFieldTitle = 'Lý do sai vị trí',
+    String reasonFieldHint = 'Chọn lý do',
+    String selectionSheetTitle = 'Chọn lý do sai vị trí',
+    String selectionSheetHintSearch = 'Tìm theo tên lý do',
+    String validationError = 'Vui lòng chọn lý do',
+    String secondaryButtonTitle = 'Đóng',
+    String primaryButtonTitle = 'Xác nhận',
+    Object? initialReason,
+    bool useRootNavigator = true,
+  });
+}
+
+extension DSDialogBuildContextExtension on BuildContext {
+  DSDialogExtension get dsDialog => DSDialogExtension.instance;
+}

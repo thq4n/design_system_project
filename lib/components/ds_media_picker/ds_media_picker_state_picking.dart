@@ -66,137 +66,92 @@ extension _DSMediaPickerStatePicking on _DSMediaPickerState {
   }
 
   Future<void> _showCameraOrGalleryDialog({required bool isVideo}) async {
-    await showAdaptiveDialog<void>(
+    await context.dsDialog.showAdaptiveActionDialog(
       context: context,
-      builder: (dialogContext) => AlertDialog.adaptive(
-        title: Text(_dialogTitle),
-        content: Text(
-          widget.pickDialogMessage ?? 'Chọn nguồn để chọn media',
+      title: _dialogTitle,
+      message: widget.pickDialogMessage ?? 'Chọn nguồn để chọn media',
+      cancelLabel: 'Hủy',
+      actions: [
+        DSBottomSheetAction(
+          title: isVideo ? 'Quay video' : 'Chụp ảnh',
+          onTap: () {
+            if (isVideo) {
+              unawaited(_openCameraVideo());
+            } else {
+              unawaited(_openCameraPhoto());
+            }
+          },
         ),
-        actions: [
-          TextButton(
-            onPressed: () {
-              Navigator.of(dialogContext).pop();
-              if (isVideo) {
-                unawaited(_openCameraVideo());
-              } else {
-                unawaited(_openCameraPhoto());
-              }
-            },
-            child: Text(isVideo ? 'Quay video' : 'Chụp ảnh'),
-          ),
-          TextButton(
-            onPressed: () {
-              Navigator.of(dialogContext).pop();
-              if (isVideo) {
-                unawaited(_openGalleryVideo());
-              } else {
-                unawaited(_openGalleryPhoto());
-              }
-            },
-            child: const Text('Thư viện'),
-          ),
-          TextButton(
-            onPressed: () => Navigator.of(dialogContext).pop(),
-            child: const Text('Hủy'),
-          ),
-        ],
-      ),
+        DSBottomSheetAction(
+          title: 'Thư viện',
+          onTap: () {
+            if (isVideo) {
+              unawaited(_openGalleryVideo());
+            } else {
+              unawaited(_openGalleryPhoto());
+            }
+          },
+        ),
+      ],
     );
   }
 
   Future<void> _showPhotoOrVideoGalleryDialog() async {
-    await showModalBottomSheet<void>(
+    await context.dsDialog.showActionListBottomSheet(
       context: context,
-      builder: (ctx) => SafeArea(
-        child: Column(
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            ListTile(
-              title: const Text('Chọn ảnh từ thư viện'),
-              onTap: () {
-                Navigator.of(ctx).pop();
-                unawaited(_openGalleryPhoto());
-              },
-            ),
-            ListTile(
-              title: const Text('Chọn video từ thư viện'),
-              onTap: () {
-                Navigator.of(ctx).pop();
-                unawaited(_openGalleryVideo());
-              },
-            ),
-          ],
+      title: _dialogTitle,
+      actions: [
+        DSBottomSheetAction(
+          title: 'Chọn ảnh từ thư viện',
+          onTap: () => unawaited(_openGalleryPhoto()),
         ),
-      ),
+        DSBottomSheetAction(
+          title: 'Chọn video từ thư viện',
+          onTap: () => unawaited(_openGalleryVideo()),
+        ),
+      ],
     );
   }
 
   Future<void> _showPhotoOrVideoCameraDialog() async {
-    await showModalBottomSheet<void>(
+    await context.dsDialog.showActionListBottomSheet(
       context: context,
-      builder: (ctx) => SafeArea(
-        child: Column(
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            ListTile(
-              title: const Text('Chụp ảnh'),
-              onTap: () {
-                Navigator.of(ctx).pop();
-                unawaited(_openCameraPhoto());
-              },
-            ),
-            ListTile(
-              title: const Text('Quay video'),
-              onTap: () {
-                Navigator.of(ctx).pop();
-                unawaited(_openCameraVideo());
-              },
-            ),
-          ],
+      title: _dialogTitle,
+      actions: [
+        DSBottomSheetAction(
+          title: 'Chụp ảnh',
+          onTap: () => unawaited(_openCameraPhoto()),
         ),
-      ),
+        DSBottomSheetAction(
+          title: 'Quay video',
+          onTap: () => unawaited(_openCameraVideo()),
+        ),
+      ],
     );
   }
 
   Future<void> _showFourActionMediaDialog() async {
-    await showModalBottomSheet<void>(
+    await context.dsDialog.showActionListBottomSheet(
       context: context,
-      builder: (ctx) => SafeArea(
-        child: Column(
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            ListTile(
-              title: const Text('Chụp ảnh'),
-              onTap: () {
-                Navigator.of(ctx).pop();
-                unawaited(_openCameraPhoto());
-              },
-            ),
-            ListTile(
-              title: const Text('Quay video'),
-              onTap: () {
-                Navigator.of(ctx).pop();
-                unawaited(_openCameraVideo());
-              },
-            ),
-            ListTile(
-              title: const Text('Chọn ảnh từ thư viện'),
-              onTap: () {
-                Navigator.of(ctx).pop();
-                unawaited(_openGalleryPhoto());
-              },
-            ),
-            ListTile(
-              title: const Text('Chọn video từ thư viện'),
-              onTap: () {
-                Navigator.of(ctx).pop();
-                unawaited(_openGalleryVideo());
-              },
-            ),
-          ],
+      title: _dialogTitle,
+      actions: [
+        DSBottomSheetAction(
+          title: 'Chụp ảnh',
+          onTap: () => unawaited(_openCameraPhoto()),
         ),
-      ),
+        DSBottomSheetAction(
+          title: 'Quay video',
+          onTap: () => unawaited(_openCameraVideo()),
+        ),
+        DSBottomSheetAction(
+          title: 'Chọn ảnh từ thư viện',
+          onTap: () => unawaited(_openGalleryPhoto()),
+        ),
+        DSBottomSheetAction(
+          title: 'Chọn video từ thư viện',
+          onTap: () => unawaited(_openGalleryVideo()),
+        ),
+      ],
     );
   }
 

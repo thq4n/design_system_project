@@ -46,6 +46,7 @@ abstract class DSStateBase<T extends StatefulWidget> extends State<T> {
     bool barrierDismissible = true,
   }) async {
     await showDialog<void>(
+      useSafeArea: false,
       context: context,
       barrierDismissible: barrierDismissible,
       builder: (BuildContext context) => Dialog(
@@ -58,58 +59,61 @@ abstract class DSStateBase<T extends StatefulWidget> extends State<T> {
           child: Stack(
             children: [
               // PhotoView
-              PhotoView(
-                imageProvider: imageProvider,
-                minScale: minScale,
-                maxScale: maxScale,
-                initialScale: initialScale,
-                enableRotation: enableRotation,
-                heroAttributes: heroAttributes,
-                backgroundDecoration: BoxDecoration(
-                  color: backgroundColor,
-                ),
-                loadingBuilder: (context, event) => Center(
-                  child: Container(
-                    width: 50,
-                    height: 50,
-                    child: CircularProgressIndicator(
-                      value: event == null
-                          ? null
-                          : event.cumulativeBytesLoaded /
-                              event.expectedTotalBytes!,
-                      valueColor: AlwaysStoppedAnimation<Color>(
-                        colors.brand.white,
+              Padding(
+                padding: const EdgeInsets.all(16),
+                child: PhotoView(
+                  imageProvider: imageProvider,
+                  minScale: minScale,
+                  maxScale: maxScale,
+                  initialScale: initialScale,
+                  enableRotation: enableRotation,
+                  heroAttributes: heroAttributes,
+                  backgroundDecoration: BoxDecoration(
+                    color: backgroundColor,
+                  ),
+                  loadingBuilder: (context, event) => Center(
+                    child: Container(
+                      width: 50,
+                      height: 50,
+                      child: CircularProgressIndicator(
+                        value: event == null
+                            ? null
+                            : event.cumulativeBytesLoaded /
+                                event.expectedTotalBytes!,
+                        valueColor: AlwaysStoppedAnimation<Color>(
+                          colors.brand.white,
+                        ),
                       ),
                     ),
                   ),
-                ),
-                errorBuilder: (context, error, stackTrace) => Center(
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Icon(
-                        Icons.error_outline,
-                        color: colors.brand.white,
-                        size: 64,
-                      ),
-                      const SizedBox(height: 16),
-                      Text(
-                        'Không thể tải hình ảnh',
-                        style: TextStyle(
+                  errorBuilder: (context, error, stackTrace) => Center(
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Icon(
+                          Icons.error_outline,
                           color: colors.brand.white,
-                          fontSize: 16,
+                          size: 64,
                         ),
-                      ),
-                      const SizedBox(height: 8),
-                      Text(
-                        error.toString(),
-                        style: TextStyle(
-                          color: colors.brand.white.withOpacity(0.7),
-                          fontSize: 12,
+                        const SizedBox(height: 16),
+                        Text(
+                          'Không thể tải hình ảnh',
+                          style: TextStyle(
+                            color: colors.brand.white,
+                            fontSize: 16,
+                          ),
                         ),
-                        textAlign: TextAlign.center,
-                      ),
-                    ],
+                        const SizedBox(height: 8),
+                        Text(
+                          error.toString(),
+                          style: TextStyle(
+                            color: colors.brand.white.withOpacity(0.7),
+                            fontSize: 12,
+                          ),
+                          textAlign: TextAlign.center,
+                        ),
+                      ],
+                    ),
                   ),
                 ),
               ),
@@ -117,25 +121,26 @@ abstract class DSStateBase<T extends StatefulWidget> extends State<T> {
               Positioned(
                 top: MediaQuery.of(context).padding.top + 10,
                 left: 20,
-                child: Container(
-                  decoration: BoxDecoration(
-                    color: colors.brand.black.withOpacity(0.5),
-                    borderRadius: BorderRadius.circular(20),
-                    boxShadow: [
-                      BoxShadow(
-                        color: colors.brand.black.withOpacity(0.3),
-                        blurRadius: 8,
-                        offset: const Offset(0, 2),
-                      ),
-                    ],
-                  ),
-                  child: InkWell(
+                child: TransparentInkWell(
+                  onTap: context.pop,
+                  child: Container(
+                    padding: const EdgeInsets.all(8),
+                    decoration: BoxDecoration(
+                      color: colors.brand.black.withOpacity(0.5),
+                      borderRadius: BorderRadius.circular(20),
+                      boxShadow: [
+                        BoxShadow(
+                          color: colors.brand.black.withOpacity(0.3),
+                          blurRadius: 8,
+                          offset: const Offset(0, 2),
+                        ),
+                      ],
+                    ),
                     child: Icon(
                       Icons.close,
                       color: colors.brand.white,
                       size: 24,
                     ),
-                    onTap: () => Navigator.of(context).pop(),
                   ),
                 ),
               ),
