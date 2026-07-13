@@ -1,3 +1,5 @@
+// dart format width=80
+
 /// GENERATED CODE - DO NOT MODIFY BY HAND
 /// *****************************************************
 ///  FlutterGen
@@ -5,7 +7,7 @@
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
-// ignore_for_file: directives_ordering,unnecessary_import,implicit_dynamic_list_literal,deprecated_member_use
+// ignore_for_file: deprecated_member_use,directives_ordering,implicit_dynamic_list_literal,unnecessary_import
 
 class $AssetsAvatarGen {
   const $AssetsAvatarGen();
@@ -31,13 +33,8 @@ class $AssetsAvatarGen {
       'packages/design_system_project/assets/avatar/ic_male.png';
 
   /// List of all assets
-  List<String> get values => [
-        icDefault,
-        icFemale,
-        icLogoRed,
-        icLogoWhite,
-        icMale,
-      ];
+  List<String> get values =>
+      [icDefault, icFemale, icLogoRed, icLogoWhite, icMale];
 }
 
 class $AssetsBrandingGen {
@@ -60,12 +57,8 @@ class $AssetsBrandingGen {
       'packages/design_system_project/assets/branding/ic_logo_full_white.png';
 
   /// List of all assets
-  List<String> get values => [
-        icLogoAloneRed,
-        icLogoAloneWhite,
-        icLogoFullRed,
-        icLogoFullWhite,
-      ];
+  List<String> get values =>
+      [icLogoAloneRed, icLogoAloneWhite, icLogoFullRed, icLogoFullWhite];
 }
 
 class $AssetsEmptyStateGen {
@@ -92,7 +85,7 @@ class $AssetsEmptyStateGen {
         iconEmptyStateError,
         iconEmptyStateOk,
         iconEmptyStateQuestion,
-        iconEmptyStateSearch,
+        iconEmptyStateSearch
       ];
 }
 
@@ -365,7 +358,7 @@ class $AssetsSocialGen {
         icXTwitterOriginal,
         icYoutubeNegative,
         icYoutubeOriginal,
-        icZaloOriginal,
+        icZaloOriginal
       ];
 }
 
@@ -11551,6 +11544,30 @@ class $AssetsVuesaxGen {
   /// File path: assets/vuesax/hierarchy-twotone.svg
   String get hierarchyTwotone =>
       'packages/design_system_project/assets/vuesax/hierarchy-twotone.svg';
+
+  /// File path: assets/vuesax/history-bold.svg
+  String get historyBold =>
+      'packages/design_system_project/assets/vuesax/history-bold.svg';
+
+  /// File path: assets/vuesax/history-broken.svg
+  String get historyBroken =>
+      'packages/design_system_project/assets/vuesax/history-broken.svg';
+
+  /// File path: assets/vuesax/history-bulk.svg
+  String get historyBulk =>
+      'packages/design_system_project/assets/vuesax/history-bulk.svg';
+
+  /// File path: assets/vuesax/history-linear.svg
+  String get historyLinear =>
+      'packages/design_system_project/assets/vuesax/history-linear.svg';
+
+  /// File path: assets/vuesax/history-outline.svg
+  String get historyOutline =>
+      'packages/design_system_project/assets/vuesax/history-outline.svg';
+
+  /// File path: assets/vuesax/history-twotone.svg
+  String get historyTwotone =>
+      'packages/design_system_project/assets/vuesax/history-twotone.svg';
 
   /// File path: assets/vuesax/home-1-bold.svg
   String get home1Bold =>
@@ -27309,6 +27326,12 @@ class $AssetsVuesaxGen {
         hierarchySquareOutline,
         hierarchySquareTwotone,
         hierarchyTwotone,
+        historyBold,
+        historyBroken,
+        historyBulk,
+        historyLinear,
+        historyOutline,
+        historyTwotone,
         home1Bold,
         home1Broken,
         home1Bulk,
@@ -30548,7 +30571,7 @@ class $AssetsVuesaxGen {
         zoomBulk,
         zoomLinear,
         zoomOutline,
-        zoomTwotone,
+        zoomTwotone
       ];
 }
 
