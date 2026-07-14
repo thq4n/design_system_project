@@ -124,24 +124,24 @@ class _AppBottomNavigationBarState extends State<AppBottomNavigationBar> {
       );
     }
 
-    // Add floating button placeholder
-    items.add(
-      Expanded(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.end,
-          children: [
-            Text(
-              widget.floatingButtonIconTitle ?? '',
-              style:
-                  (widget.floatingButtonIconTitleStyle ?? textTheme.xs?.medium)
-                      ?.copyWith(
-                color: DSColorUsages.text.tertiary,
-              ),
-            ),
-          ],
-        ),
-      ),
-    );
+    // // Add floating button placeholder
+    // items.add(
+    //   Expanded(
+    //     child: Column(
+    //       mainAxisAlignment: MainAxisAlignment.end,
+    //       children: [
+    //         Text(
+    //           widget.floatingButtonIconTitle ?? '',
+    //           style:
+    //               (widget.floatingButtonIconTitleStyle ?? textTheme.xs?.medium)
+    //                   ?.copyWith(
+    //             color: DSColorUsages.text.tertiary,
+    //           ),
+    //         ),
+    //       ],
+    //     ),
+    //   ),
+    // );
 
     // Add items after the middle
     for (int i = middleIndex; i < widget.items.length; i++) {

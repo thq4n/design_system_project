@@ -27,7 +27,8 @@ abstract class DSDialogExtension {
   }
 
   static void register(DSDialogExtension implementation) {
-    _instance = implementation;
+    final value = implementation;
+    _instance = value;
   }
 
   Future<void> showActionListBottomSheet({
@@ -532,7 +533,7 @@ abstract class DSDialogExtension {
     required BuildContext context,
     String title = 'Thông báo',
     String description =
-        'Có mã không thuộc điểm hiện tại. Vui lòng chọn lý do sai vị trí để tiếp tục.',
+        '''Có mã không thuộc điểm hiện tại. Vui lòng chọn lý do sai vị trí để tiếp tục.''',
     String reasonFieldTitle = 'Lý do sai vị trí',
     String reasonFieldHint = 'Chọn lý do',
     String selectionSheetTitle = 'Chọn lý do sai vị trí',
