@@ -243,6 +243,7 @@ class _DSInputState extends State<DSInput> {
                     )
                   : null,
               hintText: widget.hint,
+              hintMaxLines: 1,
               errorMaxLines: 2,
               suffixIcon: _getSuffixIcon()?.let(
                 (it) => it != null

@@ -108,43 +108,9 @@ class _AppBottomNavigationBarState extends State<AppBottomNavigationBar> {
 
   List<Widget> _buildNavigationItems() {
     final items = <Widget>[];
-    final middleIndex = widget.items.length ~/ 2;
 
     // Add items before the middle (floating button position)
-    for (int i = 0; i < middleIndex; i++) {
-      items.add(
-        Expanded(
-          child: AppBottomNavigationBarItem(
-            itemData: widget.items[i],
-            itemIndex: i,
-            groupIndex: currentIndex.value,
-            onTap: _onTap,
-          ),
-        ),
-      );
-    }
-
-    // // Add floating button placeholder
-    // items.add(
-    //   Expanded(
-    //     child: Column(
-    //       mainAxisAlignment: MainAxisAlignment.end,
-    //       children: [
-    //         Text(
-    //           widget.floatingButtonIconTitle ?? '',
-    //           style:
-    //               (widget.floatingButtonIconTitleStyle ?? textTheme.xs?.medium)
-    //                   ?.copyWith(
-    //             color: DSColorUsages.text.tertiary,
-    //           ),
-    //         ),
-    //       ],
-    //     ),
-    //   ),
-    // );
-
-    // Add items after the middle
-    for (int i = middleIndex; i < widget.items.length; i++) {
+    for (int i = 0; i < widget.items.length; i++) {
       items.add(
         Expanded(
           child: AppBottomNavigationBarItem(
