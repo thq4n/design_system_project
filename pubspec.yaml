@@ -57,7 +57,7 @@ dependencies:
 
   geocoding: ^3.0.0
   
-  speech_to_text: ^7.0.0
+  speech_to_text: ">=7.0.0 <7.4.0"
   
 
   # Routing
