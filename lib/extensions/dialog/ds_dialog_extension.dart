@@ -324,6 +324,8 @@ abstract class DSDialogExtension {
     bool clearSelectionOnCancel = false,
     bool Function(List<T> selectedItems)? isConfirmEnabled,
     bool shrinkWrap = false,
+    Widget Function(List<T> selectedItems)? footer,
+    ValueNotifier<List<T>>? selectedItemsNotifier,
   });
   Future<void> showMultipleSelectionBottomSheetFromList<T>({
     required BuildContext context,
