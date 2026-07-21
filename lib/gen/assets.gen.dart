@@ -17305,6 +17305,30 @@ class $AssetsVuesaxGen {
   String get programmingArrowTwotone =>
       'packages/design_system_project/assets/vuesax/programming-arrow-twotone.svg';
 
+  /// File path: assets/vuesax/programming-arrow2-bold.svg
+  String get programmingArrow2Bold =>
+      'packages/design_system_project/assets/vuesax/programming-arrow2-bold.svg';
+
+  /// File path: assets/vuesax/programming-arrow2-broken.svg
+  String get programmingArrow2Broken =>
+      'packages/design_system_project/assets/vuesax/programming-arrow2-broken.svg';
+
+  /// File path: assets/vuesax/programming-arrow2-bulk.svg
+  String get programmingArrow2Bulk =>
+      'packages/design_system_project/assets/vuesax/programming-arrow2-bulk.svg';
+
+  /// File path: assets/vuesax/programming-arrow2-linear.svg
+  String get programmingArrow2Linear =>
+      'packages/design_system_project/assets/vuesax/programming-arrow2-linear.svg';
+
+  /// File path: assets/vuesax/programming-arrow2-outline.svg
+  String get programmingArrow2Outline =>
+      'packages/design_system_project/assets/vuesax/programming-arrow2-outline.svg';
+
+  /// File path: assets/vuesax/programming-arrow2-twotone.svg
+  String get programmingArrow2Twotone =>
+      'packages/design_system_project/assets/vuesax/programming-arrow2-twotone.svg';
+
   /// File path: assets/vuesax/programming-arrows-bold.svg
   String get programmingArrowsBold =>
       'packages/design_system_project/assets/vuesax/programming-arrows-bold.svg';
@@ -28766,6 +28790,12 @@ class $AssetsVuesaxGen {
         programmingArrowLinear,
         programmingArrowOutline,
         programmingArrowTwotone,
+        programmingArrow2Bold,
+        programmingArrow2Broken,
+        programmingArrow2Bulk,
+        programmingArrow2Linear,
+        programmingArrow2Outline,
+        programmingArrow2Twotone,
         programmingArrowsBold,
         programmingArrowsBroken,
         programmingArrowsBulk,
