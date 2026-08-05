@@ -174,19 +174,19 @@ class PermissionService extends BaseService {
     final result = await showDialog<bool>(
       context: context,
       builder: (context) => AlertDialog(
-        title: const Text('Permission Required'),
+        title: const Text('Cần cấp quyền'),
         content: const Text(
-          'This app needs permission to function properly. '
-          'Please enable it in settings.',
+          'Ứng dụng cần quyền để hoạt động. '
+          'Vui lòng bật trong Cài đặt.',
         ),
         actions: [
           TextButton(
             onPressed: () => Navigator.of(context).pop(false),
-            child: const Text('Cancel'),
+            child: const Text('Hủy'),
           ),
           TextButton(
             onPressed: () => Navigator.of(context).pop(true),
-            child: const Text('Open Settings'),
+            child: const Text('Mở Cài đặt'),
           ),
         ],
       ),
