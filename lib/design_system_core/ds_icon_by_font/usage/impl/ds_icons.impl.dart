@@ -2,13442 +2,18818 @@ part of '../../ds_icon_core.dart';
 
 class DSIcons extends _DSIcons {
   /// ![](assets/icon-preview/bold/dcube.png)
-  static const DSIcon dcubeBold = _DSIconBold(
+  static const DSFontIcon dcubeBold = IconData(
     0xe900,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/d_cube_scan.png)
-  static const DSIcon dCubeScanBold = _DSIconBold(
+  static const DSFontIcon dCubeScanBold = IconData(
     0xe901,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/d_rotate.png)
-  static const DSIcon dRotateBold = _DSIconBold(
+  static const DSFontIcon dRotateBold = IconData(
     0xe902,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/d_square.png)
-  static const DSIcon dSquareBold = _DSIconBold(
+  static const DSFontIcon dSquareBold = IconData(
     0xe903,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/square.png)
-  static const DSIcon squareBold = _DSIconBold(
+  static const DSFontIcon squareBold = IconData(
     0xe904,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/support.png)
-  static const DSIcon supportBold = _DSIconBold(
+  static const DSFontIcon supportBold = IconData(
     0xe905,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/activity.png)
-  static const DSIcon activityBold = _DSIconBold(
+  static const DSFontIcon activityBold = IconData(
     0xe906,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/add.png)
-  static const DSIcon addBold = _DSIconBold(
+  static const DSFontIcon addBold = IconData(
     0xe907,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/add_circle.png)
-  static const DSIcon addCircleBold = _DSIconBold(
+  static const DSFontIcon addCircleBold = IconData(
     0xe908,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/additem.png)
-  static const DSIcon additemBold = _DSIconBold(
+  static const DSFontIcon additemBold = IconData(
     0xe909,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/add_square.png)
-  static const DSIcon addSquareBold = _DSIconBold(
+  static const DSFontIcon addSquareBold = IconData(
     0xe90a,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/airdrop.png)
-  static const DSIcon airdropBold = _DSIconBold(
+  static const DSFontIcon airdropBold = IconData(
     0xe90b,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/airplane.png)
-  static const DSIcon airplaneBold = _DSIconBold(
+  static const DSFontIcon airplaneBold = IconData(
     0xe90c,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/airplane_square.png)
-  static const DSIcon airplaneSquareBold = _DSIconBold(
+  static const DSFontIcon airplaneSquareBold = IconData(
     0xe90d,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/airpod.png)
-  static const DSIcon airpodBold = _DSIconBold(
+  static const DSFontIcon airpodBold = IconData(
     0xe90e,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/airpods.png)
-  static const DSIcon airpodsBold = _DSIconBold(
+  static const DSFontIcon airpodsBold = IconData(
     0xe90f,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/alarm.png)
-  static const DSIcon alarmBold = _DSIconBold(
+  static const DSFontIcon alarmBold = IconData(
     0xe910,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/align_bottom.png)
-  static const DSIcon alignBottomBold = _DSIconBold(
+  static const DSFontIcon alignBottomBold = IconData(
     0xe911,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/align_horizontally.png)
-  static const DSIcon alignHorizontallyBold = _DSIconBold(
+  static const DSFontIcon alignHorizontallyBold = IconData(
     0xe912,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/align_left.png)
-  static const DSIcon alignLeftBold = _DSIconBold(
+  static const DSFontIcon alignLeftBold = IconData(
     0xe913,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/align_right.png)
-  static const DSIcon alignRightBold = _DSIconBold(
+  static const DSFontIcon alignRightBold = IconData(
     0xe914,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/align_top.png)
-  static const DSIcon alignTopBold = _DSIconBold(
+  static const DSFontIcon alignTopBold = IconData(
     0xe915,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/align_vertically.png)
-  static const DSIcon alignVerticallyBold = _DSIconBold(
+  static const DSFontIcon alignVerticallyBold = IconData(
     0xe916,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/aquarius.png)
-  static const DSIcon aquariusBold = _DSIconBold(
+  static const DSFontIcon aquariusBold = IconData(
     0xe917,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/archive.png)
-  static const DSIcon archiveBold = _DSIconBold(
+  static const DSFontIcon archiveBold = IconData(
     0xe918,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/archive_1.png)
-  static const DSIcon archive1Bold = _DSIconBold(
+  static const DSFontIcon archive1Bold = IconData(
     0xe919,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/archive_2.png)
-  static const DSIcon archive2Bold = _DSIconBold(
+  static const DSFontIcon archive2Bold = IconData(
     0xe91a,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/archive_add.png)
-  static const DSIcon archiveAddBold = _DSIconBold(
+  static const DSFontIcon archiveAddBold = IconData(
     0xe91b,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/archive_book.png)
-  static const DSIcon archiveBookBold = _DSIconBold(
+  static const DSFontIcon archiveBookBold = IconData(
     0xe91c,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/archive_minus.png)
-  static const DSIcon archiveMinusBold = _DSIconBold(
+  static const DSFontIcon archiveMinusBold = IconData(
     0xe91d,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/archive_slash.png)
-  static const DSIcon archiveSlashBold = _DSIconBold(
+  static const DSFontIcon archiveSlashBold = IconData(
     0xe91e,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/archive_tick.png)
-  static const DSIcon archiveTickBold = _DSIconBold(
+  static const DSFontIcon archiveTickBold = IconData(
     0xe91f,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/arrange_circle.png)
-  static const DSIcon arrangeCircleBold = _DSIconBold(
+  static const DSFontIcon arrangeCircleBold = IconData(
     0xe920,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/arrange_circle_2.png)
-  static const DSIcon arrangeCircle2Bold = _DSIconBold(
+  static const DSFontIcon arrangeCircle2Bold = IconData(
     0xe921,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/arrange_square.png)
-  static const DSIcon arrangeSquareBold = _DSIconBold(
+  static const DSFontIcon arrangeSquareBold = IconData(
     0xe922,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/arrange_square_2.png)
-  static const DSIcon arrangeSquare2Bold = _DSIconBold(
+  static const DSFontIcon arrangeSquare2Bold = IconData(
     0xe923,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/arrow.png)
-  static const DSIcon arrowBold = _DSIconBold(
+  static const DSFontIcon arrowBold = IconData(
     0xe924,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/arrow_2.png)
-  static const DSIcon arrow2Bold = _DSIconBold(
+  static const DSFontIcon arrow2Bold = IconData(
     0xe925,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/arrow_3.png)
-  static const DSIcon arrow3Bold = _DSIconBold(
+  static const DSFontIcon arrow3Bold = IconData(
     0xe926,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/arrow_bottom.png)
-  static const DSIcon arrowBottomBold = _DSIconBold(
+  static const DSFontIcon arrowBottomBold = IconData(
     0xe927,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/arrow_circle_down.png)
-  static const DSIcon arrowCircleDownBold = _DSIconBold(
+  static const DSFontIcon arrowCircleDownBold = IconData(
     0xe928,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/arrow_circle_left.png)
-  static const DSIcon arrowCircleLeftBold = _DSIconBold(
+  static const DSFontIcon arrowCircleLeftBold = IconData(
     0xe929,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/arrow_circle_right.png)
-  static const DSIcon arrowCircleRightBold = _DSIconBold(
+  static const DSFontIcon arrowCircleRightBold = IconData(
     0xe92a,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/arrow_circle_up.png)
-  static const DSIcon arrowCircleUpBold = _DSIconBold(
+  static const DSFontIcon arrowCircleUpBold = IconData(
     0xe92b,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/arrow_down.png)
-  static const DSIcon arrowDownBold = _DSIconBold(
+  static const DSFontIcon arrowDownBold = IconData(
     0xe92c,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/arrow_down_1.png)
-  static const DSIcon arrowDown1Bold = _DSIconBold(
+  static const DSFontIcon arrowDown1Bold = IconData(
     0xe92d,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/arrow_down_2.png)
-  static const DSIcon arrowDown2Bold = _DSIconBold(
+  static const DSFontIcon arrowDown2Bold = IconData(
     0xe92e,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/arrow_left.png)
-  static const DSIcon arrowLeftBold = _DSIconBold(
+  static const DSFontIcon arrowLeftBold = IconData(
     0xe92f,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/arrow_left_1.png)
-  static const DSIcon arrowLeft1Bold = _DSIconBold(
+  static const DSFontIcon arrowLeft1Bold = IconData(
     0xe930,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/arrow_left_2.png)
-  static const DSIcon arrowLeft2Bold = _DSIconBold(
+  static const DSFontIcon arrowLeft2Bold = IconData(
     0xe931,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/arrow_left_3.png)
-  static const DSIcon arrowLeft3Bold = _DSIconBold(
+  static const DSFontIcon arrowLeft3Bold = IconData(
     0xe932,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/arrow_right.png)
-  static const DSIcon arrowRightBold = _DSIconBold(
+  static const DSFontIcon arrowRightBold = IconData(
     0xe933,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/arrow_right_1.png)
-  static const DSIcon arrowRight1Bold = _DSIconBold(
+  static const DSFontIcon arrowRight1Bold = IconData(
     0xe934,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/arrow_right_2.png)
-  static const DSIcon arrowRight2Bold = _DSIconBold(
+  static const DSFontIcon arrowRight2Bold = IconData(
     0xe935,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/arrow_right_3.png)
-  static const DSIcon arrowRight3Bold = _DSIconBold(
+  static const DSFontIcon arrowRight3Bold = IconData(
     0xe936,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/arrow_square.png)
-  static const DSIcon arrowSquareBold = _DSIconBold(
+  static const DSFontIcon arrowSquareBold = IconData(
     0xe937,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/arrow_square_down.png)
-  static const DSIcon arrowSquareDownBold = _DSIconBold(
+  static const DSFontIcon arrowSquareDownBold = IconData(
     0xe938,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/arrow_square_left.png)
-  static const DSIcon arrowSquareLeftBold = _DSIconBold(
+  static const DSFontIcon arrowSquareLeftBold = IconData(
     0xe939,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/arrow_square_right.png)
-  static const DSIcon arrowSquareRightBold = _DSIconBold(
+  static const DSFontIcon arrowSquareRightBold = IconData(
     0xe93a,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/arrow_square_up.png)
-  static const DSIcon arrowSquareUpBold = _DSIconBold(
+  static const DSFontIcon arrowSquareUpBold = IconData(
     0xe93b,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/arrow_swap.png)
-  static const DSIcon arrowSwapBold = _DSIconBold(
+  static const DSFontIcon arrowSwapBold = IconData(
     0xe93c,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/arrow_swap_horizontal.png)
-  static const DSIcon arrowSwapHorizontalBold = _DSIconBold(
+  static const DSFontIcon arrowSwapHorizontalBold = IconData(
     0xe93d,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/arrow_up.png)
-  static const DSIcon arrowUpBold = _DSIconBold(
+  static const DSFontIcon arrowUpBold = IconData(
     0xe93e,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/arrow_up_1.png)
-  static const DSIcon arrowUp1Bold = _DSIconBold(
+  static const DSFontIcon arrowUp1Bold = IconData(
     0xe93f,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/arrow_up_2.png)
-  static const DSIcon arrowUp2Bold = _DSIconBold(
+  static const DSFontIcon arrowUp2Bold = IconData(
     0xe940,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/arrow_up_3.png)
-  static const DSIcon arrowUp3Bold = _DSIconBold(
+  static const DSFontIcon arrowUp3Bold = IconData(
     0xe941,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/attach_circle.png)
-  static const DSIcon attachCircleBold = _DSIconBold(
+  static const DSFontIcon attachCircleBold = IconData(
     0xe942,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/attach_square.png)
-  static const DSIcon attachSquareBold = _DSIconBold(
+  static const DSFontIcon attachSquareBold = IconData(
     0xe943,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/audio_square.png)
-  static const DSIcon audioSquareBold = _DSIconBold(
+  static const DSFontIcon audioSquareBold = IconData(
     0xe944,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/autobrightness.png)
-  static const DSIcon autobrightnessBold = _DSIconBold(
+  static const DSFontIcon autobrightnessBold = IconData(
     0xe945,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/award.png)
-  static const DSIcon awardBold = _DSIconBold(
+  static const DSFontIcon awardBold = IconData(
     0xe946,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/back_square.png)
-  static const DSIcon backSquareBold = _DSIconBold(
+  static const DSFontIcon backSquareBold = IconData(
     0xe947,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/backward.png)
-  static const DSIcon backwardBold = _DSIconBold(
+  static const DSFontIcon backwardBold = IconData(
     0xe948,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/backward_5_seconds.png)
-  static const DSIcon backward5SecondsBold = _DSIconBold(
+  static const DSFontIcon backward5SecondsBold = IconData(
     0xe949,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/backward_10_seconds.png)
-  static const DSIcon backward10SecondsBold = _DSIconBold(
+  static const DSFontIcon backward10SecondsBold = IconData(
     0xe94a,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/backward_15_seconds.png)
-  static const DSIcon backward15SecondsBold = _DSIconBold(
+  static const DSFontIcon backward15SecondsBold = IconData(
     0xe94b,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/backward_item.png)
-  static const DSIcon backwardItemBold = _DSIconBold(
+  static const DSFontIcon backwardItemBold = IconData(
     0xe94c,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/bag.png)
-  static const DSIcon bagBold = _DSIconBold(
+  static const DSFontIcon bagBold = IconData(
     0xe94d,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/bag_2.png)
-  static const DSIcon bag2Bold = _DSIconBold(
+  static const DSFontIcon bag2Bold = IconData(
     0xe94e,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/bag_cross.png)
-  static const DSIcon bagCrossBold = _DSIconBold(
+  static const DSFontIcon bagCrossBold = IconData(
     0xe94f,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/bag_cross_1.png)
-  static const DSIcon bagCross1Bold = _DSIconBold(
+  static const DSFontIcon bagCross1Bold = IconData(
     0xe950,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/bag_happy.png)
-  static const DSIcon bagHappyBold = _DSIconBold(
+  static const DSFontIcon bagHappyBold = IconData(
     0xe951,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/bag_tick.png)
-  static const DSIcon bagTickBold = _DSIconBold(
+  static const DSFontIcon bagTickBold = IconData(
     0xe952,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/bag_tick_2.png)
-  static const DSIcon bagTick2Bold = _DSIconBold(
+  static const DSFontIcon bagTick2Bold = IconData(
     0xe953,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/bag_timer.png)
-  static const DSIcon bagTimerBold = _DSIconBold(
+  static const DSFontIcon bagTimerBold = IconData(
     0xe954,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/bank.png)
-  static const DSIcon bankBold = _DSIconBold(
+  static const DSFontIcon bankBold = IconData(
     0xe955,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/barcode.png)
-  static const DSIcon barcodeBold = _DSIconBold(
+  static const DSFontIcon barcodeBold = IconData(
     0xe956,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/battery_3full.png)
-  static const DSIcon battery3fullBold = _DSIconBold(
+  static const DSFontIcon battery3fullBold = IconData(
     0xe957,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/battery_charging.png)
-  static const DSIcon batteryChargingBold = _DSIconBold(
+  static const DSFontIcon batteryChargingBold = IconData(
     0xe958,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/battery_disable.png)
-  static const DSIcon batteryDisableBold = _DSIconBold(
+  static const DSFontIcon batteryDisableBold = IconData(
     0xe959,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/battery_empty.png)
-  static const DSIcon batteryEmptyBold = _DSIconBold(
+  static const DSFontIcon batteryEmptyBold = IconData(
     0xe95a,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/battery_empty_1.png)
-  static const DSIcon batteryEmpty1Bold = _DSIconBold(
+  static const DSFontIcon batteryEmpty1Bold = IconData(
     0xe95b,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/battery_full.png)
-  static const DSIcon batteryFullBold = _DSIconBold(
+  static const DSFontIcon batteryFullBold = IconData(
     0xe95c,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/bezier.png)
-  static const DSIcon bezierBold = _DSIconBold(
+  static const DSFontIcon bezierBold = IconData(
     0xe95d,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/bill.png)
-  static const DSIcon billBold = _DSIconBold(
+  static const DSFontIcon billBold = IconData(
     0xe95e,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/bitcoin_card.png)
-  static const DSIcon bitcoinCardBold = _DSIconBold(
+  static const DSFontIcon bitcoinCardBold = IconData(
     0xe95f,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/bitcoin_convert.png)
-  static const DSIcon bitcoinConvertBold = _DSIconBold(
+  static const DSFontIcon bitcoinConvertBold = IconData(
     0xe960,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/bitcoin_refresh.png)
-  static const DSIcon bitcoinRefreshBold = _DSIconBold(
+  static const DSFontIcon bitcoinRefreshBold = IconData(
     0xe961,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/blend.png)
-  static const DSIcon blendBold = _DSIconBold(
+  static const DSFontIcon blendBold = IconData(
     0xe962,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/blend_2.png)
-  static const DSIcon blend2Bold = _DSIconBold(
+  static const DSFontIcon blend2Bold = IconData(
     0xe963,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/bluetooth.png)
-  static const DSIcon bluetoothBold = _DSIconBold(
+  static const DSFontIcon bluetoothBold = IconData(
     0xe964,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/bluetooth_2.png)
-  static const DSIcon bluetooth2Bold = _DSIconBold(
+  static const DSFontIcon bluetooth2Bold = IconData(
     0xe965,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/bluetooth_circle.png)
-  static const DSIcon bluetoothCircleBold = _DSIconBold(
+  static const DSFontIcon bluetoothCircleBold = IconData(
     0xe966,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/bluetooth_rectangle.png)
-  static const DSIcon bluetoothRectangleBold = _DSIconBold(
+  static const DSFontIcon bluetoothRectangleBold = IconData(
     0xe967,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/blur.png)
-  static const DSIcon blurBold = _DSIconBold(
+  static const DSFontIcon blurBold = IconData(
     0xe968,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/book.png)
-  static const DSIcon bookBold = _DSIconBold(
+  static const DSFontIcon bookBold = IconData(
     0xe969,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/book_1.png)
-  static const DSIcon book1Bold = _DSIconBold(
+  static const DSFontIcon book1Bold = IconData(
     0xe96a,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/bookmark.png)
-  static const DSIcon bookmarkBold = _DSIconBold(
+  static const DSFontIcon bookmarkBold = IconData(
     0xe96b,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/bookmark_2.png)
-  static const DSIcon bookmark2Bold = _DSIconBold(
+  static const DSFontIcon bookmark2Bold = IconData(
     0xe96c,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/book_saved.png)
-  static const DSIcon bookSavedBold = _DSIconBold(
+  static const DSFontIcon bookSavedBold = IconData(
     0xe96d,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/book_square.png)
-  static const DSIcon bookSquareBold = _DSIconBold(
+  static const DSFontIcon bookSquareBold = IconData(
     0xe96e,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/box.png)
-  static const DSIcon boxBold = _DSIconBold(
+  static const DSFontIcon boxBold = IconData(
     0xe96f,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/box_1.png)
-  static const DSIcon box1Bold = _DSIconBold(
+  static const DSFontIcon box1Bold = IconData(
     0xe970,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/box_2.png)
-  static const DSIcon box2Bold = _DSIconBold(
+  static const DSFontIcon box2Bold = IconData(
     0xe971,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/box_add.png)
-  static const DSIcon boxAddBold = _DSIconBold(
+  static const DSFontIcon boxAddBold = IconData(
     0xe972,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/box_remove.png)
-  static const DSIcon boxRemoveBold = _DSIconBold(
+  static const DSFontIcon boxRemoveBold = IconData(
     0xe973,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/box_search.png)
-  static const DSIcon boxSearchBold = _DSIconBold(
+  static const DSFontIcon boxSearchBold = IconData(
     0xe974,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/box_tick.png)
-  static const DSIcon boxTickBold = _DSIconBold(
+  static const DSFontIcon boxTickBold = IconData(
     0xe975,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/box_time.png)
-  static const DSIcon boxTimeBold = _DSIconBold(
+  static const DSFontIcon boxTimeBold = IconData(
     0xe976,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/briefcase.png)
-  static const DSIcon briefcaseBold = _DSIconBold(
+  static const DSFontIcon briefcaseBold = IconData(
     0xe977,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/brifecase_cross.png)
-  static const DSIcon brifecaseCrossBold = _DSIconBold(
+  static const DSFontIcon brifecaseCrossBold = IconData(
     0xe978,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/brifecase_tick.png)
-  static const DSIcon brifecaseTickBold = _DSIconBold(
+  static const DSFontIcon brifecaseTickBold = IconData(
     0xe979,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/brifecase_timer.png)
-  static const DSIcon brifecaseTimerBold = _DSIconBold(
+  static const DSFontIcon brifecaseTimerBold = IconData(
     0xe97a,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/broom.png)
-  static const DSIcon broomBold = _DSIconBold(
+  static const DSFontIcon broomBold = IconData(
     0xe97b,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/brush.png)
-  static const DSIcon brushBold = _DSIconBold(
+  static const DSFontIcon brushBold = IconData(
     0xe97c,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/brush_1.png)
-  static const DSIcon brush1Bold = _DSIconBold(
+  static const DSFontIcon brush1Bold = IconData(
     0xe97d,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/brush_2.png)
-  static const DSIcon brush2Bold = _DSIconBold(
+  static const DSFontIcon brush2Bold = IconData(
     0xe97e,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/brush_3.png)
-  static const DSIcon brush3Bold = _DSIconBold(
+  static const DSFontIcon brush3Bold = IconData(
     0xe97f,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/brush_4.png)
-  static const DSIcon brush4Bold = _DSIconBold(
+  static const DSFontIcon brush4Bold = IconData(
     0xe980,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/bubble.png)
-  static const DSIcon bubbleBold = _DSIconBold(
+  static const DSFontIcon bubbleBold = IconData(
     0xe981,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/bucket.png)
-  static const DSIcon bucketBold = _DSIconBold(
+  static const DSFontIcon bucketBold = IconData(
     0xe982,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/bucket_circle.png)
-  static const DSIcon bucketCircleBold = _DSIconBold(
+  static const DSFontIcon bucketCircleBold = IconData(
     0xe983,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/bucket_square.png)
-  static const DSIcon bucketSquareBold = _DSIconBold(
+  static const DSFontIcon bucketSquareBold = IconData(
     0xe984,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/building.png)
-  static const DSIcon buildingBold = _DSIconBold(
+  static const DSFontIcon buildingBold = IconData(
     0xe985,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/building_3.png)
-  static const DSIcon building3Bold = _DSIconBold(
+  static const DSFontIcon building3Bold = IconData(
     0xe986,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/building_4.png)
-  static const DSIcon building4Bold = _DSIconBold(
+  static const DSFontIcon building4Bold = IconData(
     0xe987,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/buildings.png)
-  static const DSIcon buildingsBold = _DSIconBold(
+  static const DSFontIcon buildingsBold = IconData(
     0xe988,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/buildings_2.png)
-  static const DSIcon buildings2Bold = _DSIconBold(
+  static const DSFontIcon buildings2Bold = IconData(
     0xe989,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/buliding.png)
-  static const DSIcon bulidingBold = _DSIconBold(
+  static const DSFontIcon bulidingBold = IconData(
     0xe98a,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/bus.png)
-  static const DSIcon busBold = _DSIconBold(
+  static const DSFontIcon busBold = IconData(
     0xe98b,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/buy_crypto.png)
-  static const DSIcon buyCryptoBold = _DSIconBold(
+  static const DSFontIcon buyCryptoBold = IconData(
     0xe98c,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/cake.png)
-  static const DSIcon cakeBold = _DSIconBold(
+  static const DSFontIcon cakeBold = IconData(
     0xe98d,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/calculator.png)
-  static const DSIcon calculatorBold = _DSIconBold(
+  static const DSFontIcon calculatorBold = IconData(
     0xe98e,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/calendar.png)
-  static const DSIcon calendarBold = _DSIconBold(
+  static const DSFontIcon calendarBold = IconData(
     0xe98f,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/calendar_1.png)
-  static const DSIcon calendar1Bold = _DSIconBold(
+  static const DSFontIcon calendar1Bold = IconData(
     0xe990,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/calendar_2.png)
-  static const DSIcon calendar2Bold = _DSIconBold(
+  static const DSFontIcon calendar2Bold = IconData(
     0xe991,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/calendar_add.png)
-  static const DSIcon calendarAddBold = _DSIconBold(
+  static const DSFontIcon calendarAddBold = IconData(
     0xe992,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/calendar_circle.png)
-  static const DSIcon calendarCircleBold = _DSIconBold(
+  static const DSFontIcon calendarCircleBold = IconData(
     0xe993,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/calendar_edit.png)
-  static const DSIcon calendarEditBold = _DSIconBold(
+  static const DSFontIcon calendarEditBold = IconData(
     0xe994,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/calendar_remove.png)
-  static const DSIcon calendarRemoveBold = _DSIconBold(
+  static const DSFontIcon calendarRemoveBold = IconData(
     0xe995,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/calendar_search.png)
-  static const DSIcon calendarSearchBold = _DSIconBold(
+  static const DSFontIcon calendarSearchBold = IconData(
     0xe996,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/calendar_tick.png)
-  static const DSIcon calendarTickBold = _DSIconBold(
+  static const DSFontIcon calendarTickBold = IconData(
     0xe997,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/call.png)
-  static const DSIcon callBold = _DSIconBold(
+  static const DSFontIcon callBold = IconData(
     0xe998,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/call_add.png)
-  static const DSIcon callAddBold = _DSIconBold(
+  static const DSFontIcon callAddBold = IconData(
     0xe999,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/call_calling.png)
-  static const DSIcon callCallingBold = _DSIconBold(
+  static const DSFontIcon callCallingBold = IconData(
     0xe99a,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/call_incoming.png)
-  static const DSIcon callIncomingBold = _DSIconBold(
+  static const DSFontIcon callIncomingBold = IconData(
     0xe99b,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/call_minus.png)
-  static const DSIcon callMinusBold = _DSIconBold(
+  static const DSFontIcon callMinusBold = IconData(
     0xe99c,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/call_outgoing.png)
-  static const DSIcon callOutgoingBold = _DSIconBold(
+  static const DSFontIcon callOutgoingBold = IconData(
     0xe99d,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/call_received.png)
-  static const DSIcon callReceivedBold = _DSIconBold(
+  static const DSFontIcon callReceivedBold = IconData(
     0xe99e,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/call_remove.png)
-  static const DSIcon callRemoveBold = _DSIconBold(
+  static const DSFontIcon callRemoveBold = IconData(
     0xe99f,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/call_slash.png)
-  static const DSIcon callSlashBold = _DSIconBold(
+  static const DSFontIcon callSlashBold = IconData(
     0xe9a0,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/camera.png)
-  static const DSIcon cameraBold = _DSIconBold(
+  static const DSFontIcon cameraBold = IconData(
     0xe9a1,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/camera_slash.png)
-  static const DSIcon cameraSlashBold = _DSIconBold(
+  static const DSFontIcon cameraSlashBold = IconData(
     0xe9a2,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/candle.png)
-  static const DSIcon candleBold = _DSIconBold(
+  static const DSFontIcon candleBold = IconData(
     0xe9a3,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/candle_2.png)
-  static const DSIcon candle2Bold = _DSIconBold(
+  static const DSFontIcon candle2Bold = IconData(
     0xe9a4,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/car.png)
-  static const DSIcon carBold = _DSIconBold(
+  static const DSFontIcon carBold = IconData(
     0xe9a5,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/card.png)
-  static const DSIcon cardBold = _DSIconBold(
+  static const DSFontIcon cardBold = IconData(
     0xe9a6,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/card_add.png)
-  static const DSIcon cardAddBold = _DSIconBold(
+  static const DSFontIcon cardAddBold = IconData(
     0xe9a7,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/card_coin.png)
-  static const DSIcon cardCoinBold = _DSIconBold(
+  static const DSFontIcon cardCoinBold = IconData(
     0xe9a8,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/card_edit.png)
-  static const DSIcon cardEditBold = _DSIconBold(
+  static const DSFontIcon cardEditBold = IconData(
     0xe9a9,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/card_pos.png)
-  static const DSIcon cardPosBold = _DSIconBold(
+  static const DSFontIcon cardPosBold = IconData(
     0xe9aa,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/card_receive.png)
-  static const DSIcon cardReceiveBold = _DSIconBold(
+  static const DSFontIcon cardReceiveBold = IconData(
     0xe9ab,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/card_remove.png)
-  static const DSIcon cardRemoveBold = _DSIconBold(
+  static const DSFontIcon cardRemoveBold = IconData(
     0xe9ac,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/card_remove_1.png)
-  static const DSIcon cardRemove1Bold = _DSIconBold(
+  static const DSFontIcon cardRemove1Bold = IconData(
     0xe9ad,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/cards.png)
-  static const DSIcon cardsBold = _DSIconBold(
+  static const DSFontIcon cardsBold = IconData(
     0xe9ae,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/card_send.png)
-  static const DSIcon cardSendBold = _DSIconBold(
+  static const DSFontIcon cardSendBold = IconData(
     0xe9af,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/card_slash.png)
-  static const DSIcon cardSlashBold = _DSIconBold(
+  static const DSFontIcon cardSlashBold = IconData(
     0xe9b0,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/card_tick.png)
-  static const DSIcon cardTickBold = _DSIconBold(
+  static const DSFontIcon cardTickBold = IconData(
     0xe9b1,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/card_tick_1.png)
-  static const DSIcon cardTick1Bold = _DSIconBold(
+  static const DSFontIcon cardTick1Bold = IconData(
     0xe9b2,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/category.png)
-  static const DSIcon categoryBold = _DSIconBold(
+  static const DSFontIcon categoryBold = IconData(
     0xe9b3,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/category_2.png)
-  static const DSIcon category2Bold = _DSIconBold(
+  static const DSFontIcon category2Bold = IconData(
     0xe9b4,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/cd.png)
-  static const DSIcon cdBold = _DSIconBold(
+  static const DSFontIcon cdBold = IconData(
     0xe9b5,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/chart.png)
-  static const DSIcon chartBold = _DSIconBold(
+  static const DSFontIcon chartBold = IconData(
     0xe9b6,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/chart_1.png)
-  static const DSIcon chart1Bold = _DSIconBold(
+  static const DSFontIcon chart1Bold = IconData(
     0xe9b7,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/chart_2.png)
-  static const DSIcon chart2Bold = _DSIconBold(
+  static const DSFontIcon chart2Bold = IconData(
     0xe9b8,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/chart_3.png)
-  static const DSIcon chart3Bold = _DSIconBold(
+  static const DSFontIcon chart3Bold = IconData(
     0xe9b9,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/chart_21.png)
-  static const DSIcon chart21Bold = _DSIconBold(
+  static const DSFontIcon chart21Bold = IconData(
     0xe9ba,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/chart_fail.png)
-  static const DSIcon chartFailBold = _DSIconBold(
+  static const DSFontIcon chartFailBold = IconData(
     0xe9bb,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/chart_square.png)
-  static const DSIcon chartSquareBold = _DSIconBold(
+  static const DSFontIcon chartSquareBold = IconData(
     0xe9bc,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/chart_success.png)
-  static const DSIcon chartSuccessBold = _DSIconBold(
+  static const DSFontIcon chartSuccessBold = IconData(
     0xe9bd,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/check.png)
-  static const DSIcon checkBold = _DSIconBold(
+  static const DSFontIcon checkBold = IconData(
     0xe9be,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/chrome.png)
-  static const DSIcon chromeBold = _DSIconBold(
+  static const DSFontIcon chromeBold = IconData(
     0xe9bf,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/clipboard.png)
-  static const DSIcon clipboardBold = _DSIconBold(
+  static const DSFontIcon clipboardBold = IconData(
     0xe9c0,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/clipboard_close.png)
-  static const DSIcon clipboardCloseBold = _DSIconBold(
+  static const DSFontIcon clipboardCloseBold = IconData(
     0xe9c1,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/clipboard_export.png)
-  static const DSIcon clipboardExportBold = _DSIconBold(
+  static const DSFontIcon clipboardExportBold = IconData(
     0xe9c2,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/clipboard_import.png)
-  static const DSIcon clipboardImportBold = _DSIconBold(
+  static const DSFontIcon clipboardImportBold = IconData(
     0xe9c3,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/clipboard_text.png)
-  static const DSIcon clipboardTextBold = _DSIconBold(
+  static const DSFontIcon clipboardTextBold = IconData(
     0xe9c4,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/clipboard_tick.png)
-  static const DSIcon clipboardTickBold = _DSIconBold(
+  static const DSFontIcon clipboardTickBold = IconData(
     0xe9c5,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/clock.png)
-  static const DSIcon clockBold = _DSIconBold(
+  static const DSFontIcon clockBold = IconData(
     0xe9c6,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/clock_1.png)
-  static const DSIcon clock1Bold = _DSIconBold(
+  static const DSFontIcon clock1Bold = IconData(
     0xe9c7,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/close_circle.png)
-  static const DSIcon closeCircleBold = _DSIconBold(
+  static const DSFontIcon closeCircleBold = IconData(
     0xe9c8,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/close_square.png)
-  static const DSIcon closeSquareBold = _DSIconBold(
+  static const DSFontIcon closeSquareBold = IconData(
     0xe9c9,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/cloud.png)
-  static const DSIcon cloudBold = _DSIconBold(
+  static const DSFontIcon cloudBold = IconData(
     0xe9ca,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/cloud_add.png)
-  static const DSIcon cloudAddBold = _DSIconBold(
+  static const DSFontIcon cloudAddBold = IconData(
     0xe9cb,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/cloud_change.png)
-  static const DSIcon cloudChangeBold = _DSIconBold(
+  static const DSFontIcon cloudChangeBold = IconData(
     0xe9cc,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/cloud_connection.png)
-  static const DSIcon cloudConnectionBold = _DSIconBold(
+  static const DSFontIcon cloudConnectionBold = IconData(
     0xe9cd,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/cloud_cross.png)
-  static const DSIcon cloudCrossBold = _DSIconBold(
+  static const DSFontIcon cloudCrossBold = IconData(
     0xe9ce,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/cloud_drizzle.png)
-  static const DSIcon cloudDrizzleBold = _DSIconBold(
+  static const DSFontIcon cloudDrizzleBold = IconData(
     0xe9cf,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/cloud_fog.png)
-  static const DSIcon cloudFogBold = _DSIconBold(
+  static const DSFontIcon cloudFogBold = IconData(
     0xe9d0,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/cloud_lightning.png)
-  static const DSIcon cloudLightningBold = _DSIconBold(
+  static const DSFontIcon cloudLightningBold = IconData(
     0xe9d1,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/cloud_minus.png)
-  static const DSIcon cloudMinusBold = _DSIconBold(
+  static const DSFontIcon cloudMinusBold = IconData(
     0xe9d2,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/cloud_notif.png)
-  static const DSIcon cloudNotifBold = _DSIconBold(
+  static const DSFontIcon cloudNotifBold = IconData(
     0xe9d3,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/cloud_plus.png)
-  static const DSIcon cloudPlusBold = _DSIconBold(
+  static const DSFontIcon cloudPlusBold = IconData(
     0xe9d4,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/cloud_remove.png)
-  static const DSIcon cloudRemoveBold = _DSIconBold(
+  static const DSFontIcon cloudRemoveBold = IconData(
     0xe9d5,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/cloud_snow.png)
-  static const DSIcon cloudSnowBold = _DSIconBold(
+  static const DSFontIcon cloudSnowBold = IconData(
     0xe9d6,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/cloud_sunny.png)
-  static const DSIcon cloudSunnyBold = _DSIconBold(
+  static const DSFontIcon cloudSunnyBold = IconData(
     0xe9d7,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/code.png)
-  static const DSIcon codeBold = _DSIconBold(
+  static const DSFontIcon codeBold = IconData(
     0xe9d8,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/code_1.png)
-  static const DSIcon code1Bold = _DSIconBold(
+  static const DSFontIcon code1Bold = IconData(
     0xe9d9,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/code_circle.png)
-  static const DSIcon codeCircleBold = _DSIconBold(
+  static const DSFontIcon codeCircleBold = IconData(
     0xe9da,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/coffee.png)
-  static const DSIcon coffeeBold = _DSIconBold(
+  static const DSFontIcon coffeeBold = IconData(
     0xe9db,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/coin.png)
-  static const DSIcon coinBold = _DSIconBold(
+  static const DSFontIcon coinBold = IconData(
     0xe9dc,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/coin_1.png)
-  static const DSIcon coin1Bold = _DSIconBold(
+  static const DSFontIcon coin1Bold = IconData(
     0xe9dd,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/colorfilter.png)
-  static const DSIcon colorfilterBold = _DSIconBold(
+  static const DSFontIcon colorfilterBold = IconData(
     0xe9de,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/colors_square.png)
-  static const DSIcon colorsSquareBold = _DSIconBold(
+  static const DSFontIcon colorsSquareBold = IconData(
     0xe9df,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/color_swatch.png)
-  static const DSIcon colorSwatchBold = _DSIconBold(
+  static const DSFontIcon colorSwatchBold = IconData(
     0xe9e0,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/command.png)
-  static const DSIcon commandBold = _DSIconBold(
+  static const DSFontIcon commandBold = IconData(
     0xe9e1,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/command_square.png)
-  static const DSIcon commandSquareBold = _DSIconBold(
+  static const DSFontIcon commandSquareBold = IconData(
     0xe9e2,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/component.png)
-  static const DSIcon componentBold = _DSIconBold(
+  static const DSFontIcon componentBold = IconData(
     0xe9e3,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/computing.png)
-  static const DSIcon computingBold = _DSIconBold(
+  static const DSFontIcon computingBold = IconData(
     0xe9e4,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/convert.png)
-  static const DSIcon convertBold = _DSIconBold(
+  static const DSFontIcon convertBold = IconData(
     0xe9e5,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/convert_3d_cube.png)
-  static const DSIcon convert3dCubeBold = _DSIconBold(
+  static const DSFontIcon convert3dCubeBold = IconData(
     0xe9e6,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/convert_card.png)
-  static const DSIcon convertCardBold = _DSIconBold(
+  static const DSFontIcon convertCardBold = IconData(
     0xe9e7,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/convertshape.png)
-  static const DSIcon convertshapeBold = _DSIconBold(
+  static const DSFontIcon convertshapeBold = IconData(
     0xe9e8,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/convertshape_2.png)
-  static const DSIcon convertshape2Bold = _DSIconBold(
+  static const DSFontIcon convertshape2Bold = IconData(
     0xe9e9,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/copy.png)
-  static const DSIcon copyBold = _DSIconBold(
+  static const DSFontIcon copyBold = IconData(
     0xe9ea,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/copyright.png)
-  static const DSIcon copyrightBold = _DSIconBold(
+  static const DSFontIcon copyrightBold = IconData(
     0xe9eb,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/copy_success.png)
-  static const DSIcon copySuccessBold = _DSIconBold(
+  static const DSFontIcon copySuccessBold = IconData(
     0xe9ec,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/courthouse.png)
-  static const DSIcon courthouseBold = _DSIconBold(
+  static const DSFontIcon courthouseBold = IconData(
     0xe9ed,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/cpu.png)
-  static const DSIcon cpuBold = _DSIconBold(
+  static const DSFontIcon cpuBold = IconData(
     0xe9ee,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/cpu_charge.png)
-  static const DSIcon cpuChargeBold = _DSIconBold(
+  static const DSFontIcon cpuChargeBold = IconData(
     0xe9ef,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/cpu_setting.png)
-  static const DSIcon cpuSettingBold = _DSIconBold(
+  static const DSFontIcon cpuSettingBold = IconData(
     0xe9f0,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/creative_commons.png)
-  static const DSIcon creativeCommonsBold = _DSIconBold(
+  static const DSFontIcon creativeCommonsBold = IconData(
     0xe9f1,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/crop.png)
-  static const DSIcon cropBold = _DSIconBold(
+  static const DSFontIcon cropBold = IconData(
     0xe9f2,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/crown.png)
-  static const DSIcon crownBold = _DSIconBold(
+  static const DSFontIcon crownBold = IconData(
     0xe9f3,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/crown_1.png)
-  static const DSIcon crown1Bold = _DSIconBold(
+  static const DSFontIcon crown1Bold = IconData(
     0xe9f4,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/cup.png)
-  static const DSIcon cupBold = _DSIconBold(
+  static const DSFontIcon cupBold = IconData(
     0xe9f5,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/danger.png)
-  static const DSIcon dangerBold = _DSIconBold(
+  static const DSFontIcon dangerBold = IconData(
     0xe9f6,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/data.png)
-  static const DSIcon dataBold = _DSIconBold(
+  static const DSFontIcon dataBold = IconData(
     0xe9f7,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/data_2.png)
-  static const DSIcon data2Bold = _DSIconBold(
+  static const DSFontIcon data2Bold = IconData(
     0xe9f8,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/designtools.png)
-  static const DSIcon designtoolsBold = _DSIconBold(
+  static const DSFontIcon designtoolsBold = IconData(
     0xe9fd,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/device_message.png)
-  static const DSIcon deviceMessageBold = _DSIconBold(
+  static const DSFontIcon deviceMessageBold = IconData(
     0xe9fe,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/devices.png)
-  static const DSIcon devicesBold = _DSIconBold(
+  static const DSFontIcon devicesBold = IconData(
     0xe9ff,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/devices_1.png)
-  static const DSIcon devices1Bold = _DSIconBold(
+  static const DSFontIcon devices1Bold = IconData(
     0xea00,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/diagram.png)
-  static const DSIcon diagramBold = _DSIconBold(
+  static const DSFontIcon diagramBold = IconData(
     0xea01,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/diamonds.png)
-  static const DSIcon diamondsBold = _DSIconBold(
+  static const DSFontIcon diamondsBold = IconData(
     0xea02,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/direct.png)
-  static const DSIcon directBold = _DSIconBold(
+  static const DSFontIcon directBold = IconData(
     0xea03,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/directbox_default.png)
-  static const DSIcon directboxDefaultBold = _DSIconBold(
+  static const DSFontIcon directboxDefaultBold = IconData(
     0xea04,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/directbox_notif.png)
-  static const DSIcon directboxNotifBold = _DSIconBold(
+  static const DSFontIcon directboxNotifBold = IconData(
     0xea05,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/directbox_receive.png)
-  static const DSIcon directboxReceiveBold = _DSIconBold(
+  static const DSFontIcon directboxReceiveBold = IconData(
     0xea06,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/directbox_send.png)
-  static const DSIcon directboxSendBold = _DSIconBold(
+  static const DSFontIcon directboxSendBold = IconData(
     0xea07,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/direct_down.png)
-  static const DSIcon directDownBold = _DSIconBold(
+  static const DSFontIcon directDownBold = IconData(
     0xea08,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/direct_inbox.png)
-  static const DSIcon directInboxBold = _DSIconBold(
+  static const DSFontIcon directInboxBold = IconData(
     0xea09,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/direct_left.png)
-  static const DSIcon directLeftBold = _DSIconBold(
+  static const DSFontIcon directLeftBold = IconData(
     0xea0a,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/direct_normal.png)
-  static const DSIcon directNormalBold = _DSIconBold(
+  static const DSFontIcon directNormalBold = IconData(
     0xea0b,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/direct_notification.png)
-  static const DSIcon directNotificationBold = _DSIconBold(
+  static const DSFontIcon directNotificationBold = IconData(
     0xea0c,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/direct_right.png)
-  static const DSIcon directRightBold = _DSIconBold(
+  static const DSFontIcon directRightBold = IconData(
     0xea0d,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/direct_send.png)
-  static const DSIcon directSendBold = _DSIconBold(
+  static const DSFontIcon directSendBold = IconData(
     0xea0e,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/direct_up.png)
-  static const DSIcon directUpBold = _DSIconBold(
+  static const DSFontIcon directUpBold = IconData(
     0xea0f,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/discount_circle.png)
-  static const DSIcon discountCircleBold = _DSIconBold(
+  static const DSFontIcon discountCircleBold = IconData(
     0xea10,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/discount_shape.png)
-  static const DSIcon discountShapeBold = _DSIconBold(
+  static const DSFontIcon discountShapeBold = IconData(
     0xea11,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/discover.png)
-  static const DSIcon discoverBold = _DSIconBold(
+  static const DSFontIcon discoverBold = IconData(
     0xea12,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/discover_1.png)
-  static const DSIcon discover1Bold = _DSIconBold(
+  static const DSFontIcon discover1Bold = IconData(
     0xea13,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/dislike.png)
-  static const DSIcon dislikeBold = _DSIconBold(
+  static const DSFontIcon dislikeBold = IconData(
     0xea14,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/document.png)
-  static const DSIcon documentBold = _DSIconBold(
+  static const DSFontIcon documentBold = IconData(
     0xea15,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/document_1.png)
-  static const DSIcon document1Bold = _DSIconBold(
+  static const DSFontIcon document1Bold = IconData(
     0xea16,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/document_cloud.png)
-  static const DSIcon documentCloudBold = _DSIconBold(
+  static const DSFontIcon documentCloudBold = IconData(
     0xea17,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/document_code.png)
-  static const DSIcon documentCodeBold = _DSIconBold(
+  static const DSFontIcon documentCodeBold = IconData(
     0xea18,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/document_code_2.png)
-  static const DSIcon documentCode2Bold = _DSIconBold(
+  static const DSFontIcon documentCode2Bold = IconData(
     0xea19,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/document_copy.png)
-  static const DSIcon documentCopyBold = _DSIconBold(
+  static const DSFontIcon documentCopyBold = IconData(
     0xea1a,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/document_download.png)
-  static const DSIcon documentDownloadBold = _DSIconBold(
+  static const DSFontIcon documentDownloadBold = IconData(
     0xea1b,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/document_favorite.png)
-  static const DSIcon documentFavoriteBold = _DSIconBold(
+  static const DSFontIcon documentFavoriteBold = IconData(
     0xea1c,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/document_filter.png)
-  static const DSIcon documentFilterBold = _DSIconBold(
+  static const DSFontIcon documentFilterBold = IconData(
     0xea1d,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/document_forward.png)
-  static const DSIcon documentForwardBold = _DSIconBold(
+  static const DSFontIcon documentForwardBold = IconData(
     0xea1e,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/document_like.png)
-  static const DSIcon documentLikeBold = _DSIconBold(
+  static const DSFontIcon documentLikeBold = IconData(
     0xea1f,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/document_normal.png)
-  static const DSIcon documentNormalBold = _DSIconBold(
+  static const DSFontIcon documentNormalBold = IconData(
     0xea20,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/document_previous.png)
-  static const DSIcon documentPreviousBold = _DSIconBold(
+  static const DSFontIcon documentPreviousBold = IconData(
     0xea21,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/document_sketch.png)
-  static const DSIcon documentSketchBold = _DSIconBold(
+  static const DSFontIcon documentSketchBold = IconData(
     0xea22,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/document_text.png)
-  static const DSIcon documentTextBold = _DSIconBold(
+  static const DSFontIcon documentTextBold = IconData(
     0xea23,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/document_text_1.png)
-  static const DSIcon documentText1Bold = _DSIconBold(
+  static const DSFontIcon documentText1Bold = IconData(
     0xea24,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/document_upload.png)
-  static const DSIcon documentUploadBold = _DSIconBold(
+  static const DSFontIcon documentUploadBold = IconData(
     0xea25,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/dollar_circle.png)
-  static const DSIcon dollarCircleBold = _DSIconBold(
+  static const DSFontIcon dollarCircleBold = IconData(
     0xea26,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/dollar_square.png)
-  static const DSIcon dollarSquareBold = _DSIconBold(
+  static const DSFontIcon dollarSquareBold = IconData(
     0xea27,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/driver.png)
-  static const DSIcon driverBold = _DSIconBold(
+  static const DSFontIcon driverBold = IconData(
     0xea28,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/driver_2.png)
-  static const DSIcon driver2Bold = _DSIconBold(
+  static const DSFontIcon driver2Bold = IconData(
     0xea29,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/driver_refresh.png)
-  static const DSIcon driverRefreshBold = _DSIconBold(
+  static const DSFontIcon driverRefreshBold = IconData(
     0xea2a,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/driving.png)
-  static const DSIcon drivingBold = _DSIconBold(
+  static const DSFontIcon drivingBold = IconData(
     0xea2b,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/drop.png)
-  static const DSIcon dropBold = _DSIconBold(
+  static const DSFontIcon dropBold = IconData(
     0xea2c,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/edit.png)
-  static const DSIcon editBold = _DSIconBold(
+  static const DSFontIcon editBold = IconData(
     0xea2d,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/edit_2.png)
-  static const DSIcon edit2Bold = _DSIconBold(
+  static const DSFontIcon edit2Bold = IconData(
     0xea2e,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/electricity.png)
-  static const DSIcon electricityBold = _DSIconBold(
+  static const DSFontIcon electricityBold = IconData(
     0xea2f,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/element.png)
-  static const DSIcon elementBold = _DSIconBold(
+  static const DSFontIcon elementBold = IconData(
     0xea30,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/element_1.png)
-  static const DSIcon element1Bold = _DSIconBold(
+  static const DSFontIcon element1Bold = IconData(
     0xea31,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/element_2.png)
-  static const DSIcon element2Bold = _DSIconBold(
+  static const DSFontIcon element2Bold = IconData(
     0xea32,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/element_3.png)
-  static const DSIcon element3Bold = _DSIconBold(
+  static const DSFontIcon element3Bold = IconData(
     0xea33,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/element_equal.png)
-  static const DSIcon elementEqualBold = _DSIconBold(
+  static const DSFontIcon elementEqualBold = IconData(
     0xea34,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/element_plus.png)
-  static const DSIcon elementPlusBold = _DSIconBold(
+  static const DSFontIcon elementPlusBold = IconData(
     0xea35,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/emoji_happy.png)
-  static const DSIcon emojiHappyBold = _DSIconBold(
+  static const DSFontIcon emojiHappyBold = IconData(
     0xea36,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/emoji_normal.png)
-  static const DSIcon emojiNormalBold = _DSIconBold(
+  static const DSFontIcon emojiNormalBold = IconData(
     0xea37,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/emoji_sad.png)
-  static const DSIcon emojiSadBold = _DSIconBold(
+  static const DSFontIcon emojiSadBold = IconData(
     0xea38,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/empty_wallet.png)
-  static const DSIcon emptyWalletBold = _DSIconBold(
+  static const DSFontIcon emptyWalletBold = IconData(
     0xea39,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/empty_wallet_add.png)
-  static const DSIcon emptyWalletAddBold = _DSIconBold(
+  static const DSFontIcon emptyWalletAddBold = IconData(
     0xea3a,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/empty_wallet_change.png)
-  static const DSIcon emptyWalletChangeBold = _DSIconBold(
+  static const DSFontIcon emptyWalletChangeBold = IconData(
     0xea3b,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/empty_wallet_remove.png)
-  static const DSIcon emptyWalletRemoveBold = _DSIconBold(
+  static const DSFontIcon emptyWalletRemoveBold = IconData(
     0xea3c,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/empty_wallet_tick.png)
-  static const DSIcon emptyWalletTickBold = _DSIconBold(
+  static const DSFontIcon emptyWalletTickBold = IconData(
     0xea3d,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/empty_wallet_time.png)
-  static const DSIcon emptyWalletTimeBold = _DSIconBold(
+  static const DSFontIcon emptyWalletTimeBold = IconData(
     0xea3e,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/eraser.png)
-  static const DSIcon eraserBold = _DSIconBold(
+  static const DSFontIcon eraserBold = IconData(
     0xea3f,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/eraser_1.png)
-  static const DSIcon eraser1Bold = _DSIconBold(
+  static const DSFontIcon eraser1Bold = IconData(
     0xea40,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/export.png)
-  static const DSIcon exportBold = _DSIconBold(
+  static const DSFontIcon exportBold = IconData(
     0xea41,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/export_1.png)
-  static const DSIcon export1Bold = _DSIconBold(
+  static const DSFontIcon export1Bold = IconData(
     0xea42,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/export_2.png)
-  static const DSIcon export2Bold = _DSIconBold(
+  static const DSFontIcon export2Bold = IconData(
     0xea43,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/export_3.png)
-  static const DSIcon export3Bold = _DSIconBold(
+  static const DSFontIcon export3Bold = IconData(
     0xea44,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/external_drive.png)
-  static const DSIcon externalDriveBold = _DSIconBold(
+  static const DSFontIcon externalDriveBold = IconData(
     0xea45,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/eye.png)
-  static const DSIcon eyeBold = _DSIconBold(
+  static const DSFontIcon eyeBold = IconData(
     0xea46,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/eye_slash.png)
-  static const DSIcon eyeSlashBold = _DSIconBold(
+  static const DSFontIcon eyeSlashBold = IconData(
     0xea47,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/fatrows.png)
-  static const DSIcon fatrowsBold = _DSIconBold(
+  static const DSFontIcon fatrowsBold = IconData(
     0xea48,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/favorite_chart.png)
-  static const DSIcon favoriteChartBold = _DSIconBold(
+  static const DSFontIcon favoriteChartBold = IconData(
     0xea49,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/filter.png)
-  static const DSIcon filterBold = _DSIconBold(
+  static const DSFontIcon filterBold = IconData(
     0xea4a,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/filter_add.png)
-  static const DSIcon filterAddBold = _DSIconBold(
+  static const DSFontIcon filterAddBold = IconData(
     0xea4b,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/filter_edit.png)
-  static const DSIcon filterEditBold = _DSIconBold(
+  static const DSFontIcon filterEditBold = IconData(
     0xea4c,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/filter_remove.png)
-  static const DSIcon filterRemoveBold = _DSIconBold(
+  static const DSFontIcon filterRemoveBold = IconData(
     0xea4d,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/filter_search.png)
-  static const DSIcon filterSearchBold = _DSIconBold(
+  static const DSFontIcon filterSearchBold = IconData(
     0xea4e,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/filter_square.png)
-  static const DSIcon filterSquareBold = _DSIconBold(
+  static const DSFontIcon filterSquareBold = IconData(
     0xea4f,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/filter_tick.png)
-  static const DSIcon filterTickBold = _DSIconBold(
+  static const DSFontIcon filterTickBold = IconData(
     0xea50,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/finger_cricle.png)
-  static const DSIcon fingerCricleBold = _DSIconBold(
+  static const DSFontIcon fingerCricleBold = IconData(
     0xea51,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/finger_scan.png)
-  static const DSIcon fingerScanBold = _DSIconBold(
+  static const DSFontIcon fingerScanBold = IconData(
     0xea52,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/firstline.png)
-  static const DSIcon firstlineBold = _DSIconBold(
+  static const DSFontIcon firstlineBold = IconData(
     0xea53,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/flag.png)
-  static const DSIcon flagBold = _DSIconBold(
+  static const DSFontIcon flagBold = IconData(
     0xea54,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/flag_2.png)
-  static const DSIcon flag2Bold = _DSIconBold(
+  static const DSFontIcon flag2Bold = IconData(
     0xea55,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/flash.png)
-  static const DSIcon flashBold = _DSIconBold(
+  static const DSFontIcon flashBold = IconData(
     0xea56,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/flash_1.png)
-  static const DSIcon flash1Bold = _DSIconBold(
+  static const DSFontIcon flash1Bold = IconData(
     0xea57,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/flash_circle.png)
-  static const DSIcon flashCircleBold = _DSIconBold(
+  static const DSFontIcon flashCircleBold = IconData(
     0xea58,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/flash_circle_1.png)
-  static const DSIcon flashCircle1Bold = _DSIconBold(
+  static const DSFontIcon flashCircle1Bold = IconData(
     0xea59,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/flash_slash.png)
-  static const DSIcon flashSlashBold = _DSIconBold(
+  static const DSFontIcon flashSlashBold = IconData(
     0xea5a,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/folder.png)
-  static const DSIcon folderBold = _DSIconBold(
+  static const DSFontIcon folderBold = IconData(
     0xea5b,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/folder_2.png)
-  static const DSIcon folder2Bold = _DSIconBold(
+  static const DSFontIcon folder2Bold = IconData(
     0xea5c,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/folder_add.png)
-  static const DSIcon folderAddBold = _DSIconBold(
+  static const DSFontIcon folderAddBold = IconData(
     0xea5d,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/folder_cloud.png)
-  static const DSIcon folderCloudBold = _DSIconBold(
+  static const DSFontIcon folderCloudBold = IconData(
     0xea5e,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/folder_connection.png)
-  static const DSIcon folderConnectionBold = _DSIconBold(
+  static const DSFontIcon folderConnectionBold = IconData(
     0xea5f,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/folder_cross.png)
-  static const DSIcon folderCrossBold = _DSIconBold(
+  static const DSFontIcon folderCrossBold = IconData(
     0xea60,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/folder_favorite.png)
-  static const DSIcon folderFavoriteBold = _DSIconBold(
+  static const DSFontIcon folderFavoriteBold = IconData(
     0xea61,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/folder_minus.png)
-  static const DSIcon folderMinusBold = _DSIconBold(
+  static const DSFontIcon folderMinusBold = IconData(
     0xea62,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/folder_open.png)
-  static const DSIcon folderOpenBold = _DSIconBold(
+  static const DSFontIcon folderOpenBold = IconData(
     0xea63,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/forbidden.png)
-  static const DSIcon forbiddenBold = _DSIconBold(
+  static const DSFontIcon forbiddenBold = IconData(
     0xea64,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/forbidden_2.png)
-  static const DSIcon forbidden2Bold = _DSIconBold(
+  static const DSFontIcon forbidden2Bold = IconData(
     0xea65,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/format_circle.png)
-  static const DSIcon formatCircleBold = _DSIconBold(
+  static const DSFontIcon formatCircleBold = IconData(
     0xea66,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/format_square.png)
-  static const DSIcon formatSquareBold = _DSIconBold(
+  static const DSFontIcon formatSquareBold = IconData(
     0xea67,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/forward.png)
-  static const DSIcon forwardBold = _DSIconBold(
+  static const DSFontIcon forwardBold = IconData(
     0xea68,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/forward_5_seconds.png)
-  static const DSIcon forward5SecondsBold = _DSIconBold(
+  static const DSFontIcon forward5SecondsBold = IconData(
     0xea69,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/forward_10_seconds.png)
-  static const DSIcon forward10SecondsBold = _DSIconBold(
+  static const DSFontIcon forward10SecondsBold = IconData(
     0xea6a,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/forward_15_seconds.png)
-  static const DSIcon forward15SecondsBold = _DSIconBold(
+  static const DSFontIcon forward15SecondsBold = IconData(
     0xea6b,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/forward_item.png)
-  static const DSIcon forwardItemBold = _DSIconBold(
+  static const DSFontIcon forwardItemBold = IconData(
     0xea6c,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/forward_square.png)
-  static const DSIcon forwardSquareBold = _DSIconBold(
+  static const DSFontIcon forwardSquareBold = IconData(
     0xea6d,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/gallery.png)
-  static const DSIcon galleryBold = _DSIconBold(
+  static const DSFontIcon galleryBold = IconData(
     0xea6e,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/gallery_add.png)
-  static const DSIcon galleryAddBold = _DSIconBold(
+  static const DSFontIcon galleryAddBold = IconData(
     0xea6f,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/gallery_edit.png)
-  static const DSIcon galleryEditBold = _DSIconBold(
+  static const DSFontIcon galleryEditBold = IconData(
     0xea70,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/gallery_export.png)
-  static const DSIcon galleryExportBold = _DSIconBold(
+  static const DSFontIcon galleryExportBold = IconData(
     0xea71,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/gallery_favorite.png)
-  static const DSIcon galleryFavoriteBold = _DSIconBold(
+  static const DSFontIcon galleryFavoriteBold = IconData(
     0xea72,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/gallery_import.png)
-  static const DSIcon galleryImportBold = _DSIconBold(
+  static const DSFontIcon galleryImportBold = IconData(
     0xea73,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/gallery_remove.png)
-  static const DSIcon galleryRemoveBold = _DSIconBold(
+  static const DSFontIcon galleryRemoveBold = IconData(
     0xea74,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/gallery_slash.png)
-  static const DSIcon gallerySlashBold = _DSIconBold(
+  static const DSFontIcon gallerySlashBold = IconData(
     0xea75,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/gallery_tick.png)
-  static const DSIcon galleryTickBold = _DSIconBold(
+  static const DSFontIcon galleryTickBold = IconData(
     0xea76,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/game.png)
-  static const DSIcon gameBold = _DSIconBold(
+  static const DSFontIcon gameBold = IconData(
     0xea77,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/gameboy.png)
-  static const DSIcon gameboyBold = _DSIconBold(
+  static const DSFontIcon gameboyBold = IconData(
     0xea78,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/gas_station.png)
-  static const DSIcon gasStationBold = _DSIconBold(
+  static const DSFontIcon gasStationBold = IconData(
     0xea79,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/gemini.png)
-  static const DSIcon geminiBold = _DSIconBold(
+  static const DSFontIcon geminiBold = IconData(
     0xea7a,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/gemini_2.png)
-  static const DSIcon gemini2Bold = _DSIconBold(
+  static const DSFontIcon gemini2Bold = IconData(
     0xea7b,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/ghost.png)
-  static const DSIcon ghostBold = _DSIconBold(
+  static const DSFontIcon ghostBold = IconData(
     0xea7c,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/gift.png)
-  static const DSIcon giftBold = _DSIconBold(
+  static const DSFontIcon giftBold = IconData(
     0xea7d,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/glass.png)
-  static const DSIcon glassBold = _DSIconBold(
+  static const DSFontIcon glassBold = IconData(
     0xea7e,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/glass_1.png)
-  static const DSIcon glass1Bold = _DSIconBold(
+  static const DSFontIcon glass1Bold = IconData(
     0xea7f,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/global.png)
-  static const DSIcon globalBold = _DSIconBold(
+  static const DSFontIcon globalBold = IconData(
     0xea80,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/global_edit.png)
-  static const DSIcon globalEditBold = _DSIconBold(
+  static const DSFontIcon globalEditBold = IconData(
     0xea81,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/global_refresh.png)
-  static const DSIcon globalRefreshBold = _DSIconBold(
+  static const DSFontIcon globalRefreshBold = IconData(
     0xea82,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/global_search.png)
-  static const DSIcon globalSearchBold = _DSIconBold(
+  static const DSFontIcon globalSearchBold = IconData(
     0xea83,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/gps.png)
-  static const DSIcon gpsBold = _DSIconBold(
+  static const DSFontIcon gpsBold = IconData(
     0xea84,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/gps_slash.png)
-  static const DSIcon gpsSlashBold = _DSIconBold(
+  static const DSFontIcon gpsSlashBold = IconData(
     0xea85,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/grammerly.png)
-  static const DSIcon grammerlyBold = _DSIconBold(
+  static const DSFontIcon grammerlyBold = IconData(
     0xea86,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/graph.png)
-  static const DSIcon graphBold = _DSIconBold(
+  static const DSFontIcon graphBold = IconData(
     0xea87,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/grid_1.png)
-  static const DSIcon grid1Bold = _DSIconBold(
+  static const DSFontIcon grid1Bold = IconData(
     0xea88,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/grid_2.png)
-  static const DSIcon grid2Bold = _DSIconBold(
+  static const DSFontIcon grid2Bold = IconData(
     0xea89,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/grid_3.png)
-  static const DSIcon grid3Bold = _DSIconBold(
+  static const DSFontIcon grid3Bold = IconData(
     0xea8a,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/grid_4.png)
-  static const DSIcon grid4Bold = _DSIconBold(
+  static const DSFontIcon grid4Bold = IconData(
     0xea8b,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/grid_5.png)
-  static const DSIcon grid5Bold = _DSIconBold(
+  static const DSFontIcon grid5Bold = IconData(
     0xea8c,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/grid_6.png)
-  static const DSIcon grid6Bold = _DSIconBold(
+  static const DSFontIcon grid6Bold = IconData(
     0xea8d,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/grid_7.png)
-  static const DSIcon grid7Bold = _DSIconBold(
+  static const DSFontIcon grid7Bold = IconData(
     0xea8e,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/grid_8.png)
-  static const DSIcon grid8Bold = _DSIconBold(
+  static const DSFontIcon grid8Bold = IconData(
     0xea8f,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/grid_9.png)
-  static const DSIcon grid9Bold = _DSIconBold(
+  static const DSFontIcon grid9Bold = IconData(
     0xea90,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/grid_edit.png)
-  static const DSIcon gridEditBold = _DSIconBold(
+  static const DSFontIcon gridEditBold = IconData(
     0xea91,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/grid_eraser.png)
-  static const DSIcon gridEraserBold = _DSIconBold(
+  static const DSFontIcon gridEraserBold = IconData(
     0xea92,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/grid_lock.png)
-  static const DSIcon gridLockBold = _DSIconBold(
+  static const DSFontIcon gridLockBold = IconData(
     0xea93,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/happyemoji.png)
-  static const DSIcon happyemojiBold = _DSIconBold(
+  static const DSFontIcon happyemojiBold = IconData(
     0xea94,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/hashtag.png)
-  static const DSIcon hashtagBold = _DSIconBold(
+  static const DSFontIcon hashtagBold = IconData(
     0xea95,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/hashtag_1.png)
-  static const DSIcon hashtag1Bold = _DSIconBold(
+  static const DSFontIcon hashtag1Bold = IconData(
     0xea96,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/hashtag_down.png)
-  static const DSIcon hashtagDownBold = _DSIconBold(
+  static const DSFontIcon hashtagDownBold = IconData(
     0xea97,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/hashtag_up.png)
-  static const DSIcon hashtagUpBold = _DSIconBold(
+  static const DSFontIcon hashtagUpBold = IconData(
     0xea98,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/headphone.png)
-  static const DSIcon headphoneBold = _DSIconBold(
+  static const DSFontIcon headphoneBold = IconData(
     0xea99,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/headphones.png)
-  static const DSIcon headphonesBold = _DSIconBold(
+  static const DSFontIcon headphonesBold = IconData(
     0xea9a,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/health.png)
-  static const DSIcon healthBold = _DSIconBold(
+  static const DSFontIcon healthBold = IconData(
     0xea9b,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/heart.png)
-  static const DSIcon heartBold = _DSIconBold(
+  static const DSFontIcon heartBold = IconData(
     0xea9c,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/heart_add.png)
-  static const DSIcon heartAddBold = _DSIconBold(
+  static const DSFontIcon heartAddBold = IconData(
     0xea9d,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/heart_circle.png)
-  static const DSIcon heartCircleBold = _DSIconBold(
+  static const DSFontIcon heartCircleBold = IconData(
     0xea9e,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/heart_edit.png)
-  static const DSIcon heartEditBold = _DSIconBold(
+  static const DSFontIcon heartEditBold = IconData(
     0xea9f,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/heart_remove.png)
-  static const DSIcon heartRemoveBold = _DSIconBold(
+  static const DSFontIcon heartRemoveBold = IconData(
     0xeaa0,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/heart_search.png)
-  static const DSIcon heartSearchBold = _DSIconBold(
+  static const DSFontIcon heartSearchBold = IconData(
     0xeaa1,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/heart_slash.png)
-  static const DSIcon heartSlashBold = _DSIconBold(
+  static const DSFontIcon heartSlashBold = IconData(
     0xeaa2,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/heart_tick.png)
-  static const DSIcon heartTickBold = _DSIconBold(
+  static const DSFontIcon heartTickBold = IconData(
     0xeaa3,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/hierarchy.png)
-  static const DSIcon hierarchyBold = _DSIconBold(
+  static const DSFontIcon hierarchyBold = IconData(
     0xeaa4,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/hierarchy_2.png)
-  static const DSIcon hierarchy2Bold = _DSIconBold(
+  static const DSFontIcon hierarchy2Bold = IconData(
     0xeaa5,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/hierarchy_3.png)
-  static const DSIcon hierarchy3Bold = _DSIconBold(
+  static const DSFontIcon hierarchy3Bold = IconData(
     0xeaa6,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/hierarchy_square.png)
-  static const DSIcon hierarchySquareBold = _DSIconBold(
+  static const DSFontIcon hierarchySquareBold = IconData(
     0xeaa7,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/hierarchy_square_2.png)
-  static const DSIcon hierarchySquare2Bold = _DSIconBold(
+  static const DSFontIcon hierarchySquare2Bold = IconData(
     0xeaa8,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/hierarchy_square_3.png)
-  static const DSIcon hierarchySquare3Bold = _DSIconBold(
+  static const DSFontIcon hierarchySquare3Bold = IconData(
     0xeaa9,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/home.png)
-  static const DSIcon homeBold = _DSIconBold(
+  static const DSFontIcon homeBold = IconData(
     0xeaaa,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/home_1.png)
-  static const DSIcon home1Bold = _DSIconBold(
+  static const DSFontIcon home1Bold = IconData(
     0xeaab,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/home_2.png)
-  static const DSIcon home2Bold = _DSIconBold(
+  static const DSFontIcon home2Bold = IconData(
     0xeaac,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/home_hashtag.png)
-  static const DSIcon homeHashtagBold = _DSIconBold(
+  static const DSFontIcon homeHashtagBold = IconData(
     0xeaad,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/home_trend_down.png)
-  static const DSIcon homeTrendDownBold = _DSIconBold(
+  static const DSFontIcon homeTrendDownBold = IconData(
     0xeaae,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/home_trend_up.png)
-  static const DSIcon homeTrendUpBold = _DSIconBold(
+  static const DSFontIcon homeTrendUpBold = IconData(
     0xeaaf,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/home_wifi.png)
-  static const DSIcon homeWifiBold = _DSIconBold(
+  static const DSFontIcon homeWifiBold = IconData(
     0xeab0,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/hospital.png)
-  static const DSIcon hospitalBold = _DSIconBold(
+  static const DSFontIcon hospitalBold = IconData(
     0xeab1,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/house.png)
-  static const DSIcon houseBold = _DSIconBold(
+  static const DSFontIcon houseBold = IconData(
     0xeab2,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/house_2.png)
-  static const DSIcon house2Bold = _DSIconBold(
+  static const DSFontIcon house2Bold = IconData(
     0xeab3,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/image.png)
-  static const DSIcon imageBold = _DSIconBold(
+  static const DSFontIcon imageBold = IconData(
     0xeab4,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/import.png)
-  static const DSIcon importBold = _DSIconBold(
+  static const DSFontIcon importBold = IconData(
     0xeab5,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/import_1.png)
-  static const DSIcon import1Bold = _DSIconBold(
+  static const DSFontIcon import1Bold = IconData(
     0xeab6,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/import_2.png)
-  static const DSIcon import2Bold = _DSIconBold(
+  static const DSFontIcon import2Bold = IconData(
     0xeab7,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/import_3.png)
-  static const DSIcon import3Bold = _DSIconBold(
+  static const DSFontIcon import3Bold = IconData(
     0xeab8,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/info_circle.png)
-  static const DSIcon infoCircleBold = _DSIconBold(
+  static const DSFontIcon infoCircleBold = IconData(
     0xeab9,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/information.png)
-  static const DSIcon informationBold = _DSIconBold(
+  static const DSFontIcon informationBold = IconData(
     0xeaba,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/instagram.png)
-  static const DSIcon instagramBold = _DSIconBold(
+  static const DSFontIcon instagramBold = IconData(
     0xeabb,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/judge.png)
-  static const DSIcon judgeBold = _DSIconBold(
+  static const DSFontIcon judgeBold = IconData(
     0xeabc,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/kanban.png)
-  static const DSIcon kanbanBold = _DSIconBold(
+  static const DSFontIcon kanbanBold = IconData(
     0xeabd,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/key.png)
-  static const DSIcon keyBold = _DSIconBold(
+  static const DSFontIcon keyBold = IconData(
     0xeabe,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/keyboard.png)
-  static const DSIcon keyboardBold = _DSIconBold(
+  static const DSFontIcon keyboardBold = IconData(
     0xeabf,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/keyboard_open.png)
-  static const DSIcon keyboardOpenBold = _DSIconBold(
+  static const DSFontIcon keyboardOpenBold = IconData(
     0xeac0,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/key_square.png)
-  static const DSIcon keySquareBold = _DSIconBold(
+  static const DSFontIcon keySquareBold = IconData(
     0xeac1,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/lamp.png)
-  static const DSIcon lampBold = _DSIconBold(
+  static const DSFontIcon lampBold = IconData(
     0xeac2,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/lamp_1.png)
-  static const DSIcon lamp1Bold = _DSIconBold(
+  static const DSFontIcon lamp1Bold = IconData(
     0xeac3,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/lamp_charge.png)
-  static const DSIcon lampChargeBold = _DSIconBold(
+  static const DSFontIcon lampChargeBold = IconData(
     0xeac4,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/lamp_on.png)
-  static const DSIcon lampOnBold = _DSIconBold(
+  static const DSFontIcon lampOnBold = IconData(
     0xeac5,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/lamp_slash.png)
-  static const DSIcon lampSlashBold = _DSIconBold(
+  static const DSFontIcon lampSlashBold = IconData(
     0xeac6,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/language_circle.png)
-  static const DSIcon languageCircleBold = _DSIconBold(
+  static const DSFontIcon languageCircleBold = IconData(
     0xeac7,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/language_square.png)
-  static const DSIcon languageSquareBold = _DSIconBold(
+  static const DSFontIcon languageSquareBold = IconData(
     0xeac8,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/layer.png)
-  static const DSIcon layerBold = _DSIconBold(
+  static const DSFontIcon layerBold = IconData(
     0xeac9,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/level.png)
-  static const DSIcon levelBold = _DSIconBold(
+  static const DSFontIcon levelBold = IconData(
     0xeaca,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/lifebuoy.png)
-  static const DSIcon lifebuoyBold = _DSIconBold(
+  static const DSFontIcon lifebuoyBold = IconData(
     0xeacb,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/like.png)
-  static const DSIcon likeBold = _DSIconBold(
+  static const DSFontIcon likeBold = IconData(
     0xeacc,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/like_1.png)
-  static const DSIcon like1Bold = _DSIconBold(
+  static const DSFontIcon like1Bold = IconData(
     0xeacd,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/like_dislike.png)
-  static const DSIcon likeDislikeBold = _DSIconBold(
+  static const DSFontIcon likeDislikeBold = IconData(
     0xeace,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/like_shapes.png)
-  static const DSIcon likeShapesBold = _DSIconBold(
+  static const DSFontIcon likeShapesBold = IconData(
     0xeacf,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/like_tag.png)
-  static const DSIcon likeTagBold = _DSIconBold(
+  static const DSFontIcon likeTagBold = IconData(
     0xead0,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/link.png)
-  static const DSIcon linkBold = _DSIconBold(
+  static const DSFontIcon linkBold = IconData(
     0xead1,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/link_1.png)
-  static const DSIcon link1Bold = _DSIconBold(
+  static const DSFontIcon link1Bold = IconData(
     0xead2,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/link_2.png)
-  static const DSIcon link2Bold = _DSIconBold(
+  static const DSFontIcon link2Bold = IconData(
     0xead3,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/link_21.png)
-  static const DSIcon link21Bold = _DSIconBold(
+  static const DSFontIcon link21Bold = IconData(
     0xead4,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/link_circle.png)
-  static const DSIcon linkCircleBold = _DSIconBold(
+  static const DSFontIcon linkCircleBold = IconData(
     0xead5,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/link_square.png)
-  static const DSIcon linkSquareBold = _DSIconBold(
+  static const DSFontIcon linkSquareBold = IconData(
     0xead6,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/location.png)
-  static const DSIcon locationBold = _DSIconBold(
+  static const DSFontIcon locationBold = IconData(
     0xead7,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/location_add.png)
-  static const DSIcon locationAddBold = _DSIconBold(
+  static const DSFontIcon locationAddBold = IconData(
     0xead8,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/location_cross.png)
-  static const DSIcon locationCrossBold = _DSIconBold(
+  static const DSFontIcon locationCrossBold = IconData(
     0xead9,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/location_minus.png)
-  static const DSIcon locationMinusBold = _DSIconBold(
+  static const DSFontIcon locationMinusBold = IconData(
     0xeada,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/location_slash.png)
-  static const DSIcon locationSlashBold = _DSIconBold(
+  static const DSFontIcon locationSlashBold = IconData(
     0xeadb,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/location_tick.png)
-  static const DSIcon locationTickBold = _DSIconBold(
+  static const DSFontIcon locationTickBold = IconData(
     0xeadc,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/lock.png)
-  static const DSIcon lockBold = _DSIconBold(
+  static const DSFontIcon lockBold = IconData(
     0xeadd,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/lock_1.png)
-  static const DSIcon lock1Bold = _DSIconBold(
+  static const DSFontIcon lock1Bold = IconData(
     0xeade,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/lock_circle.png)
-  static const DSIcon lockCircleBold = _DSIconBold(
+  static const DSFontIcon lockCircleBold = IconData(
     0xeadf,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/lock_slash.png)
-  static const DSIcon lockSlashBold = _DSIconBold(
+  static const DSFontIcon lockSlashBold = IconData(
     0xeae0,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/login.png)
-  static const DSIcon loginBold = _DSIconBold(
+  static const DSFontIcon loginBold = IconData(
     0xeae1,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/login_1.png)
-  static const DSIcon login1Bold = _DSIconBold(
+  static const DSFontIcon login1Bold = IconData(
     0xeae2,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/logout.png)
-  static const DSIcon logoutBold = _DSIconBold(
+  static const DSFontIcon logoutBold = IconData(
     0xeae3,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/logout_1.png)
-  static const DSIcon logout1Bold = _DSIconBold(
+  static const DSFontIcon logout1Bold = IconData(
     0xeae4,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/lovely.png)
-  static const DSIcon lovelyBold = _DSIconBold(
+  static const DSFontIcon lovelyBold = IconData(
     0xeae5,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/magicpen.png)
-  static const DSIcon magicpenBold = _DSIconBold(
+  static const DSFontIcon magicpenBold = IconData(
     0xeae6,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/magic_star.png)
-  static const DSIcon magicStarBold = _DSIconBold(
+  static const DSFontIcon magicStarBold = IconData(
     0xeae7,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/main_component.png)
-  static const DSIcon mainComponentBold = _DSIconBold(
+  static const DSFontIcon mainComponentBold = IconData(
     0xeae8,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/man.png)
-  static const DSIcon manBold = _DSIconBold(
+  static const DSFontIcon manBold = IconData(
     0xeae9,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/map.png)
-  static const DSIcon mapBold = _DSIconBold(
+  static const DSFontIcon mapBold = IconData(
     0xeaea,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/map_1.png)
-  static const DSIcon map1Bold = _DSIconBold(
+  static const DSFontIcon map1Bold = IconData(
     0xeaeb,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/mask.png)
-  static const DSIcon maskBold = _DSIconBold(
+  static const DSFontIcon maskBold = IconData(
     0xeaec,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/mask_1.png)
-  static const DSIcon mask1Bold = _DSIconBold(
+  static const DSFontIcon mask1Bold = IconData(
     0xeaed,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/mask_2.png)
-  static const DSIcon mask2Bold = _DSIconBold(
+  static const DSFontIcon mask2Bold = IconData(
     0xeaee,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/math.png)
-  static const DSIcon mathBold = _DSIconBold(
+  static const DSFontIcon mathBold = IconData(
     0xeaef,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/maximize.png)
-  static const DSIcon maximizeBold = _DSIconBold(
+  static const DSFontIcon maximizeBold = IconData(
     0xeaf0,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/maximize_1.png)
-  static const DSIcon maximize1Bold = _DSIconBold(
+  static const DSFontIcon maximize1Bold = IconData(
     0xeaf1,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/maximize_2.png)
-  static const DSIcon maximize2Bold = _DSIconBold(
+  static const DSFontIcon maximize2Bold = IconData(
     0xeaf2,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/maximize_3.png)
-  static const DSIcon maximize3Bold = _DSIconBold(
+  static const DSFontIcon maximize3Bold = IconData(
     0xeaf3,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/maximize_4.png)
-  static const DSIcon maximize4Bold = _DSIconBold(
+  static const DSFontIcon maximize4Bold = IconData(
     0xeaf4,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/maximize_21.png)
-  static const DSIcon maximize21Bold = _DSIconBold(
+  static const DSFontIcon maximize21Bold = IconData(
     0xeaf5,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/maximize_circle.png)
-  static const DSIcon maximizeCircleBold = _DSIconBold(
+  static const DSFontIcon maximizeCircleBold = IconData(
     0xeaf6,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/medal.png)
-  static const DSIcon medalBold = _DSIconBold(
+  static const DSFontIcon medalBold = IconData(
     0xeaf7,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/medal_star.png)
-  static const DSIcon medalStarBold = _DSIconBold(
+  static const DSFontIcon medalStarBold = IconData(
     0xeaf8,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/menu.png)
-  static const DSIcon menuBold = _DSIconBold(
+  static const DSFontIcon menuBold = IconData(
     0xeaf9,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/menu_1.png)
-  static const DSIcon menu1Bold = _DSIconBold(
+  static const DSFontIcon menu1Bold = IconData(
     0xeafa,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/menu_board.png)
-  static const DSIcon menuBoardBold = _DSIconBold(
+  static const DSFontIcon menuBoardBold = IconData(
     0xeafb,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/message.png)
-  static const DSIcon messageBold = _DSIconBold(
+  static const DSFontIcon messageBold = IconData(
     0xeafc,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/message_2.png)
-  static const DSIcon message2Bold = _DSIconBold(
+  static const DSFontIcon message2Bold = IconData(
     0xeafd,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/message_add.png)
-  static const DSIcon messageAddBold = _DSIconBold(
+  static const DSFontIcon messageAddBold = IconData(
     0xeafe,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/message_add_1.png)
-  static const DSIcon messageAdd1Bold = _DSIconBold(
+  static const DSFontIcon messageAdd1Bold = IconData(
     0xeaff,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/message_circle.png)
-  static const DSIcon messageCircleBold = _DSIconBold(
+  static const DSFontIcon messageCircleBold = IconData(
     0xeb00,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/message_edit.png)
-  static const DSIcon messageEditBold = _DSIconBold(
+  static const DSFontIcon messageEditBold = IconData(
     0xeb01,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/message_favorite.png)
-  static const DSIcon messageFavoriteBold = _DSIconBold(
+  static const DSFontIcon messageFavoriteBold = IconData(
     0xeb02,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/message_minus.png)
-  static const DSIcon messageMinusBold = _DSIconBold(
+  static const DSFontIcon messageMinusBold = IconData(
     0xeb03,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/message_notif.png)
-  static const DSIcon messageNotifBold = _DSIconBold(
+  static const DSFontIcon messageNotifBold = IconData(
     0xeb04,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/message_programming.png)
-  static const DSIcon messageProgrammingBold = _DSIconBold(
+  static const DSFontIcon messageProgrammingBold = IconData(
     0xeb05,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/message_question.png)
-  static const DSIcon messageQuestionBold = _DSIconBold(
+  static const DSFontIcon messageQuestionBold = IconData(
     0xeb06,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/message_remove.png)
-  static const DSIcon messageRemoveBold = _DSIconBold(
+  static const DSFontIcon messageRemoveBold = IconData(
     0xeb07,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/messages.png)
-  static const DSIcon messagesBold = _DSIconBold(
+  static const DSFontIcon messagesBold = IconData(
     0xeb08,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/messages_1.png)
-  static const DSIcon messages1Bold = _DSIconBold(
+  static const DSFontIcon messages1Bold = IconData(
     0xeb09,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/messages_2.png)
-  static const DSIcon messages2Bold = _DSIconBold(
+  static const DSFontIcon messages2Bold = IconData(
     0xeb0a,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/messages_3.png)
-  static const DSIcon messages3Bold = _DSIconBold(
+  static const DSFontIcon messages3Bold = IconData(
     0xeb0b,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/message_search.png)
-  static const DSIcon messageSearchBold = _DSIconBold(
+  static const DSFontIcon messageSearchBold = IconData(
     0xeb0c,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/message_square.png)
-  static const DSIcon messageSquareBold = _DSIconBold(
+  static const DSFontIcon messageSquareBold = IconData(
     0xeb0d,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/message_text.png)
-  static const DSIcon messageTextBold = _DSIconBold(
+  static const DSFontIcon messageTextBold = IconData(
     0xeb0e,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/message_text_1.png)
-  static const DSIcon messageText1Bold = _DSIconBold(
+  static const DSFontIcon messageText1Bold = IconData(
     0xeb0f,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/message_tick.png)
-  static const DSIcon messageTickBold = _DSIconBold(
+  static const DSFontIcon messageTickBold = IconData(
     0xeb10,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/message_time.png)
-  static const DSIcon messageTimeBold = _DSIconBold(
+  static const DSFontIcon messageTimeBold = IconData(
     0xeb11,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/microphone.png)
-  static const DSIcon microphoneBold = _DSIconBold(
+  static const DSFontIcon microphoneBold = IconData(
     0xeb12,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/microphone_2.png)
-  static const DSIcon microphone2Bold = _DSIconBold(
+  static const DSFontIcon microphone2Bold = IconData(
     0xeb13,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/microphone_slash.png)
-  static const DSIcon microphoneSlashBold = _DSIconBold(
+  static const DSFontIcon microphoneSlashBold = IconData(
     0xeb14,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/microphone_slash_1.png)
-  static const DSIcon microphoneSlash1Bold = _DSIconBold(
+  static const DSFontIcon microphoneSlash1Bold = IconData(
     0xeb15,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/microscope.png)
-  static const DSIcon microscopeBold = _DSIconBold(
+  static const DSFontIcon microscopeBold = IconData(
     0xeb16,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/milk.png)
-  static const DSIcon milkBold = _DSIconBold(
+  static const DSFontIcon milkBold = IconData(
     0xeb17,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/mini_music_sqaure.png)
-  static const DSIcon miniMusicSqaureBold = _DSIconBold(
+  static const DSFontIcon miniMusicSqaureBold = IconData(
     0xeb18,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/minus.png)
-  static const DSIcon minusBold = _DSIconBold(
+  static const DSFontIcon minusBold = IconData(
     0xeb1b,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/minus_cirlce.png)
-  static const DSIcon minusCirlceBold = _DSIconBold(
+  static const DSFontIcon minusCirlceBold = IconData(
     0xeb1c,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/minus_square.png)
-  static const DSIcon minusSquareBold = _DSIconBold(
+  static const DSFontIcon minusSquareBold = IconData(
     0xeb1d,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/mirror.png)
-  static const DSIcon mirrorBold = _DSIconBold(
+  static const DSFontIcon mirrorBold = IconData(
     0xeb1e,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/mirroring_screen.png)
-  static const DSIcon mirroringScreenBold = _DSIconBold(
+  static const DSFontIcon mirroringScreenBold = IconData(
     0xeb1f,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/mobile.png)
-  static const DSIcon mobileBold = _DSIconBold(
+  static const DSFontIcon mobileBold = IconData(
     0xeb20,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/mobile_programming.png)
-  static const DSIcon mobileProgrammingBold = _DSIconBold(
+  static const DSFontIcon mobileProgrammingBold = IconData(
     0xeb21,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/money.png)
-  static const DSIcon moneyBold = _DSIconBold(
+  static const DSFontIcon moneyBold = IconData(
     0xeb22,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/money_2.png)
-  static const DSIcon money2Bold = _DSIconBold(
+  static const DSFontIcon money2Bold = IconData(
     0xeb23,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/money_3.png)
-  static const DSIcon money3Bold = _DSIconBold(
+  static const DSFontIcon money3Bold = IconData(
     0xeb24,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/money_4.png)
-  static const DSIcon money4Bold = _DSIconBold(
+  static const DSFontIcon money4Bold = IconData(
     0xeb25,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/money_add.png)
-  static const DSIcon moneyAddBold = _DSIconBold(
+  static const DSFontIcon moneyAddBold = IconData(
     0xeb26,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/money_change.png)
-  static const DSIcon moneyChangeBold = _DSIconBold(
+  static const DSFontIcon moneyChangeBold = IconData(
     0xeb27,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/money_forbidden.png)
-  static const DSIcon moneyForbiddenBold = _DSIconBold(
+  static const DSFontIcon moneyForbiddenBold = IconData(
     0xeb28,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/money_recive.png)
-  static const DSIcon moneyReciveBold = _DSIconBold(
+  static const DSFontIcon moneyReciveBold = IconData(
     0xeb29,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/money_remove.png)
-  static const DSIcon moneyRemoveBold = _DSIconBold(
+  static const DSFontIcon moneyRemoveBold = IconData(
     0xeb2a,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/moneys.png)
-  static const DSIcon moneysBold = _DSIconBold(
+  static const DSFontIcon moneysBold = IconData(
     0xeb2b,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/money_send.png)
-  static const DSIcon moneySendBold = _DSIconBold(
+  static const DSFontIcon moneySendBold = IconData(
     0xeb2c,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/money_tick.png)
-  static const DSIcon moneyTickBold = _DSIconBold(
+  static const DSFontIcon moneyTickBold = IconData(
     0xeb2d,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/money_time.png)
-  static const DSIcon moneyTimeBold = _DSIconBold(
+  static const DSFontIcon moneyTimeBold = IconData(
     0xeb2e,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/monitor.png)
-  static const DSIcon monitorBold = _DSIconBold(
+  static const DSFontIcon monitorBold = IconData(
     0xeb2f,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/monitor_mobbile.png)
-  static const DSIcon monitorMobbileBold = _DSIconBold(
+  static const DSFontIcon monitorMobbileBold = IconData(
     0xeb30,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/monitor_recorder.png)
-  static const DSIcon monitorRecorderBold = _DSIconBold(
+  static const DSFontIcon monitorRecorderBold = IconData(
     0xeb31,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/moon.png)
-  static const DSIcon moonBold = _DSIconBold(
+  static const DSFontIcon moonBold = IconData(
     0xeb32,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/more.png)
-  static const DSIcon moreBold = _DSIconBold(
+  static const DSFontIcon moreBold = IconData(
     0xeb33,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/more_2.png)
-  static const DSIcon more2Bold = _DSIconBold(
+  static const DSFontIcon more2Bold = IconData(
     0xeb34,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/more_circle.png)
-  static const DSIcon moreCircleBold = _DSIconBold(
+  static const DSFontIcon moreCircleBold = IconData(
     0xeb35,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/more_square.png)
-  static const DSIcon moreSquareBold = _DSIconBold(
+  static const DSFontIcon moreSquareBold = IconData(
     0xeb36,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/mouse.png)
-  static const DSIcon mouseBold = _DSIconBold(
+  static const DSFontIcon mouseBold = IconData(
     0xeb37,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/mouse_1.png)
-  static const DSIcon mouse1Bold = _DSIconBold(
+  static const DSFontIcon mouse1Bold = IconData(
     0xeb38,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/mouse_circle.png)
-  static const DSIcon mouseCircleBold = _DSIconBold(
+  static const DSFontIcon mouseCircleBold = IconData(
     0xeb39,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/mouse_square.png)
-  static const DSIcon mouseSquareBold = _DSIconBold(
+  static const DSFontIcon mouseSquareBold = IconData(
     0xeb3a,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/music.png)
-  static const DSIcon musicBold = _DSIconBold(
+  static const DSFontIcon musicBold = IconData(
     0xeb3b,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/music_circle.png)
-  static const DSIcon musicCircleBold = _DSIconBold(
+  static const DSFontIcon musicCircleBold = IconData(
     0xeb3c,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/music_dashboard.png)
-  static const DSIcon musicDashboardBold = _DSIconBold(
+  static const DSFontIcon musicDashboardBold = IconData(
     0xeb3d,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/music_filter.png)
-  static const DSIcon musicFilterBold = _DSIconBold(
+  static const DSFontIcon musicFilterBold = IconData(
     0xeb3e,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/music_library_2.png)
-  static const DSIcon musicLibrary2Bold = _DSIconBold(
+  static const DSFontIcon musicLibrary2Bold = IconData(
     0xeb3f,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/musicnote.png)
-  static const DSIcon musicnoteBold = _DSIconBold(
+  static const DSFontIcon musicnoteBold = IconData(
     0xeb40,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/music_play.png)
-  static const DSIcon musicPlayBold = _DSIconBold(
+  static const DSFontIcon musicPlayBold = IconData(
     0xeb41,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/music_playlist.png)
-  static const DSIcon musicPlaylistBold = _DSIconBold(
+  static const DSFontIcon musicPlaylistBold = IconData(
     0xeb42,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/music_square.png)
-  static const DSIcon musicSquareBold = _DSIconBold(
+  static const DSFontIcon musicSquareBold = IconData(
     0xeb43,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/music_square_add.png)
-  static const DSIcon musicSquareAddBold = _DSIconBold(
+  static const DSFontIcon musicSquareAddBold = IconData(
     0xeb44,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/music_square_remove.png)
-  static const DSIcon musicSquareRemoveBold = _DSIconBold(
+  static const DSFontIcon musicSquareRemoveBold = IconData(
     0xeb45,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/music_square_search.png)
-  static const DSIcon musicSquareSearchBold = _DSIconBold(
+  static const DSFontIcon musicSquareSearchBold = IconData(
     0xeb46,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/next.png)
-  static const DSIcon nextBold = _DSIconBold(
+  static const DSFontIcon nextBold = IconData(
     0xeb47,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/note.png)
-  static const DSIcon noteBold = _DSIconBold(
+  static const DSFontIcon noteBold = IconData(
     0xeb48,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/note_1.png)
-  static const DSIcon note1Bold = _DSIconBold(
+  static const DSFontIcon note1Bold = IconData(
     0xeb49,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/note_2.png)
-  static const DSIcon note2Bold = _DSIconBold(
+  static const DSFontIcon note2Bold = IconData(
     0xeb4a,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/note_21.png)
-  static const DSIcon note21Bold = _DSIconBold(
+  static const DSFontIcon note21Bold = IconData(
     0xeb4b,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/note_add.png)
-  static const DSIcon noteAddBold = _DSIconBold(
+  static const DSFontIcon noteAddBold = IconData(
     0xeb4c,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/note_favorite.png)
-  static const DSIcon noteFavoriteBold = _DSIconBold(
+  static const DSFontIcon noteFavoriteBold = IconData(
     0xeb4d,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/note_remove.png)
-  static const DSIcon noteRemoveBold = _DSIconBold(
+  static const DSFontIcon noteRemoveBold = IconData(
     0xeb4e,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/note_square.png)
-  static const DSIcon noteSquareBold = _DSIconBold(
+  static const DSFontIcon noteSquareBold = IconData(
     0xeb4f,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/note_text.png)
-  static const DSIcon noteTextBold = _DSIconBold(
+  static const DSFontIcon noteTextBold = IconData(
     0xeb50,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/notification.png)
-  static const DSIcon notificationBold = _DSIconBold(
+  static const DSFontIcon notificationBold = IconData(
     0xeb51,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/notification_1.png)
-  static const DSIcon notification1Bold = _DSIconBold(
+  static const DSFontIcon notification1Bold = IconData(
     0xeb52,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/notification_bing.png)
-  static const DSIcon notificationBingBold = _DSIconBold(
+  static const DSFontIcon notificationBingBold = IconData(
     0xeb53,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/notification_circle.png)
-  static const DSIcon notificationCircleBold = _DSIconBold(
+  static const DSFontIcon notificationCircleBold = IconData(
     0xeb54,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/notification_favorite.png)
-  static const DSIcon notificationFavoriteBold = _DSIconBold(
+  static const DSFontIcon notificationFavoriteBold = IconData(
     0xeb55,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/notification_status.png)
-  static const DSIcon notificationStatusBold = _DSIconBold(
+  static const DSFontIcon notificationStatusBold = IconData(
     0xeb56,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/omega_circle.png)
-  static const DSIcon omegaCircleBold = _DSIconBold(
+  static const DSFontIcon omegaCircleBold = IconData(
     0xeb57,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/omega_square.png)
-  static const DSIcon omegaSquareBold = _DSIconBold(
+  static const DSFontIcon omegaSquareBold = IconData(
     0xeb58,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/paintbucket.png)
-  static const DSIcon paintbucketBold = _DSIconBold(
+  static const DSFontIcon paintbucketBold = IconData(
     0xeb59,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/paperclip.png)
-  static const DSIcon paperclipBold = _DSIconBold(
+  static const DSFontIcon paperclipBold = IconData(
     0xeb5a,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/paperclip_2.png)
-  static const DSIcon paperclip2Bold = _DSIconBold(
+  static const DSFontIcon paperclip2Bold = IconData(
     0xeb5b,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/password_check.png)
-  static const DSIcon passwordCheckBold = _DSIconBold(
+  static const DSFontIcon passwordCheckBold = IconData(
     0xeb5c,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/path.png)
-  static const DSIcon pathBold = _DSIconBold(
+  static const DSFontIcon pathBold = IconData(
     0xeb5d,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/path_2.png)
-  static const DSIcon path2Bold = _DSIconBold(
+  static const DSFontIcon path2Bold = IconData(
     0xeb5e,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/path_square.png)
-  static const DSIcon pathSquareBold = _DSIconBold(
+  static const DSFontIcon pathSquareBold = IconData(
     0xeb5f,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/pause.png)
-  static const DSIcon pauseBold = _DSIconBold(
+  static const DSFontIcon pauseBold = IconData(
     0xeb60,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/pause_circle.png)
-  static const DSIcon pauseCircleBold = _DSIconBold(
+  static const DSFontIcon pauseCircleBold = IconData(
     0xeb61,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/pen_add.png)
-  static const DSIcon penAddBold = _DSIconBold(
+  static const DSFontIcon penAddBold = IconData(
     0xeb62,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/pen_close.png)
-  static const DSIcon penCloseBold = _DSIconBold(
+  static const DSFontIcon penCloseBold = IconData(
     0xeb63,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/pen_remove.png)
-  static const DSIcon penRemoveBold = _DSIconBold(
+  static const DSFontIcon penRemoveBold = IconData(
     0xeb64,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/pen_tool.png)
-  static const DSIcon penToolBold = _DSIconBold(
+  static const DSFontIcon penToolBold = IconData(
     0xeb65,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/pen_tool_2.png)
-  static const DSIcon penTool2Bold = _DSIconBold(
+  static const DSFontIcon penTool2Bold = IconData(
     0xeb66,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/people.png)
-  static const DSIcon peopleBold = _DSIconBold(
+  static const DSFontIcon peopleBold = IconData(
     0xeb67,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/percentage_circle.png)
-  static const DSIcon percentageCircleBold = _DSIconBold(
+  static const DSFontIcon percentageCircleBold = IconData(
     0xeb68,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/percentage_square.png)
-  static const DSIcon percentageSquareBold = _DSIconBold(
+  static const DSFontIcon percentageSquareBold = IconData(
     0xeb69,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/personalcard.png)
-  static const DSIcon personalcardBold = _DSIconBold(
+  static const DSFontIcon personalcardBold = IconData(
     0xeb6a,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/pet.png)
-  static const DSIcon petBold = _DSIconBold(
+  static const DSFontIcon petBold = IconData(
     0xeb6b,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/pharagraphspacing.png)
-  static const DSIcon pharagraphspacingBold = _DSIconBold(
+  static const DSFontIcon pharagraphspacingBold = IconData(
     0xeb6c,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/picture_frame.png)
-  static const DSIcon pictureFrameBold = _DSIconBold(
+  static const DSFontIcon pictureFrameBold = IconData(
     0xeb6d,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/play.png)
-  static const DSIcon playBold = _DSIconBold(
+  static const DSFontIcon playBold = IconData(
     0xeb6e,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/play_add.png)
-  static const DSIcon playAddBold = _DSIconBold(
+  static const DSFontIcon playAddBold = IconData(
     0xeb6f,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/play_circle.png)
-  static const DSIcon playCircleBold = _DSIconBold(
+  static const DSFontIcon playCircleBold = IconData(
     0xeb70,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/play_cricle.png)
-  static const DSIcon playCricleBold = _DSIconBold(
+  static const DSFontIcon playCricleBold = IconData(
     0xeb71,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/play_remove.png)
-  static const DSIcon playRemoveBold = _DSIconBold(
+  static const DSFontIcon playRemoveBold = IconData(
     0xeb72,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/presention_chart.png)
-  static const DSIcon presentionChartBold = _DSIconBold(
+  static const DSFontIcon presentionChartBold = IconData(
     0xeb73,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/previous.png)
-  static const DSIcon previousBold = _DSIconBold(
+  static const DSFontIcon previousBold = IconData(
     0xeb74,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/printer.png)
-  static const DSIcon printerBold = _DSIconBold(
+  static const DSFontIcon printerBold = IconData(
     0xeb75,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/printer_slash.png)
-  static const DSIcon printerSlashBold = _DSIconBold(
+  static const DSFontIcon printerSlashBold = IconData(
     0xeb76,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/profile.png)
-  static const DSIcon profileBold = _DSIconBold(
+  static const DSFontIcon profileBold = IconData(
     0xeb77,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/profile_2user.png)
-  static const DSIcon profile2userBold = _DSIconBold(
+  static const DSFontIcon profile2userBold = IconData(
     0xeb78,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/profile_add.png)
-  static const DSIcon profileAddBold = _DSIconBold(
+  static const DSFontIcon profileAddBold = IconData(
     0xeb79,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/profile_circle.png)
-  static const DSIcon profileCircleBold = _DSIconBold(
+  static const DSFontIcon profileCircleBold = IconData(
     0xeb7a,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/profile_delete.png)
-  static const DSIcon profileDeleteBold = _DSIconBold(
+  static const DSFontIcon profileDeleteBold = IconData(
     0xeb7b,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/profile_remove.png)
-  static const DSIcon profileRemoveBold = _DSIconBold(
+  static const DSFontIcon profileRemoveBold = IconData(
     0xeb7c,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/profile_tick.png)
-  static const DSIcon profileTickBold = _DSIconBold(
+  static const DSFontIcon profileTickBold = IconData(
     0xeb7d,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/programming_arrow.png)
-  static const DSIcon programmingArrowBold = _DSIconBold(
+  static const DSFontIcon programmingArrowBold = IconData(
     0xeb7e,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/programming_arrows.png)
-  static const DSIcon programmingArrowsBold = _DSIconBold(
+  static const DSFontIcon programmingArrowsBold = IconData(
     0xeb7f,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/quote_down.png)
-  static const DSIcon quoteDownBold = _DSIconBold(
+  static const DSFontIcon quoteDownBold = IconData(
     0xeb80,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/quote_down_circle.png)
-  static const DSIcon quoteDownCircleBold = _DSIconBold(
+  static const DSFontIcon quoteDownCircleBold = IconData(
     0xeb81,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/quote_down_square.png)
-  static const DSIcon quoteDownSquareBold = _DSIconBold(
+  static const DSFontIcon quoteDownSquareBold = IconData(
     0xeb82,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/quote_up.png)
-  static const DSIcon quoteUpBold = _DSIconBold(
+  static const DSFontIcon quoteUpBold = IconData(
     0xeb83,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/quote_up_circle.png)
-  static const DSIcon quoteUpCircleBold = _DSIconBold(
+  static const DSFontIcon quoteUpCircleBold = IconData(
     0xeb84,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/quote_up_square.png)
-  static const DSIcon quoteUpSquareBold = _DSIconBold(
+  static const DSFontIcon quoteUpSquareBold = IconData(
     0xeb85,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/radar.png)
-  static const DSIcon radarBold = _DSIconBold(
+  static const DSFontIcon radarBold = IconData(
     0xeb86,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/radar_1.png)
-  static const DSIcon radar1Bold = _DSIconBold(
+  static const DSFontIcon radar1Bold = IconData(
     0xeb87,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/radar_2.png)
-  static const DSIcon radar2Bold = _DSIconBold(
+  static const DSFontIcon radar2Bold = IconData(
     0xeb88,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/radio.png)
-  static const DSIcon radioBold = _DSIconBold(
+  static const DSFontIcon radioBold = IconData(
     0xeb89,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/ram.png)
-  static const DSIcon ramBold = _DSIconBold(
+  static const DSFontIcon ramBold = IconData(
     0xeb8a,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/ram_2.png)
-  static const DSIcon ram2Bold = _DSIconBold(
+  static const DSFontIcon ram2Bold = IconData(
     0xeb8b,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/ranking.png)
-  static const DSIcon rankingBold = _DSIconBold(
+  static const DSFontIcon rankingBold = IconData(
     0xeb8c,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/ranking_1.png)
-  static const DSIcon ranking1Bold = _DSIconBold(
+  static const DSFontIcon ranking1Bold = IconData(
     0xeb8d,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/receipt.png)
-  static const DSIcon receiptBold = _DSIconBold(
+  static const DSFontIcon receiptBold = IconData(
     0xeb8e,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/receipt_1.png)
-  static const DSIcon receipt1Bold = _DSIconBold(
+  static const DSFontIcon receipt1Bold = IconData(
     0xeb8f,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/receipt_2.png)
-  static const DSIcon receipt2Bold = _DSIconBold(
+  static const DSFontIcon receipt2Bold = IconData(
     0xeb90,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/receipt_2_1.png)
-  static const DSIcon receipt21Bold = _DSIconBold(
+  static const DSFontIcon receipt21Bold = IconData(
     0xeb91,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/receipt_add.png)
-  static const DSIcon receiptAddBold = _DSIconBold(
+  static const DSFontIcon receiptAddBold = IconData(
     0xeb92,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/receipt_discount.png)
-  static const DSIcon receiptDiscountBold = _DSIconBold(
+  static const DSFontIcon receiptDiscountBold = IconData(
     0xeb93,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/receipt_disscount.png)
-  static const DSIcon receiptDisscountBold = _DSIconBold(
+  static const DSFontIcon receiptDisscountBold = IconData(
     0xeb94,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/receipt_edit.png)
-  static const DSIcon receiptEditBold = _DSIconBold(
+  static const DSFontIcon receiptEditBold = IconData(
     0xeb95,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/receipt_item.png)
-  static const DSIcon receiptItemBold = _DSIconBold(
+  static const DSFontIcon receiptItemBold = IconData(
     0xeb96,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/receipt_minus.png)
-  static const DSIcon receiptMinusBold = _DSIconBold(
+  static const DSFontIcon receiptMinusBold = IconData(
     0xeb97,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/receipt_search.png)
-  static const DSIcon receiptSearchBold = _DSIconBold(
+  static const DSFontIcon receiptSearchBold = IconData(
     0xeb98,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/receipt_square.png)
-  static const DSIcon receiptSquareBold = _DSIconBold(
+  static const DSFontIcon receiptSquareBold = IconData(
     0xeb99,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/receipt_text.png)
-  static const DSIcon receiptTextBold = _DSIconBold(
+  static const DSFontIcon receiptTextBold = IconData(
     0xeb9a,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/received.png)
-  static const DSIcon receivedBold = _DSIconBold(
+  static const DSFontIcon receivedBold = IconData(
     0xeb9b,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/receive_square.png)
-  static const DSIcon receiveSquareBold = _DSIconBold(
+  static const DSFontIcon receiveSquareBold = IconData(
     0xeb9c,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/receive_square_2.png)
-  static const DSIcon receiveSquare2Bold = _DSIconBold(
+  static const DSFontIcon receiveSquare2Bold = IconData(
     0xeb9d,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/record.png)
-  static const DSIcon recordBold = _DSIconBold(
+  static const DSFontIcon recordBold = IconData(
     0xeb9e,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/record_circle.png)
-  static const DSIcon recordCircleBold = _DSIconBold(
+  static const DSFontIcon recordCircleBold = IconData(
     0xeb9f,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/recovery_convert.png)
-  static const DSIcon recoveryConvertBold = _DSIconBold(
+  static const DSFontIcon recoveryConvertBold = IconData(
     0xeba0,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/redo.png)
-  static const DSIcon redoBold = _DSIconBold(
+  static const DSFontIcon redoBold = IconData(
     0xeba1,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/refresh.png)
-  static const DSIcon refreshBold = _DSIconBold(
+  static const DSFontIcon refreshBold = IconData(
     0xeba2,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/refresh_2.png)
-  static const DSIcon refresh2Bold = _DSIconBold(
+  static const DSFontIcon refresh2Bold = IconData(
     0xeba3,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/refresh_circle.png)
-  static const DSIcon refreshCircleBold = _DSIconBold(
+  static const DSFontIcon refreshCircleBold = IconData(
     0xeba4,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/refresh_left_square.png)
-  static const DSIcon refreshLeftSquareBold = _DSIconBold(
+  static const DSFontIcon refreshLeftSquareBold = IconData(
     0xeba5,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/refresh_right_square.png)
-  static const DSIcon refreshRightSquareBold = _DSIconBold(
+  static const DSFontIcon refreshRightSquareBold = IconData(
     0xeba6,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/refresh_square_2.png)
-  static const DSIcon refreshSquare2Bold = _DSIconBold(
+  static const DSFontIcon refreshSquare2Bold = IconData(
     0xeba7,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/repeat.png)
-  static const DSIcon repeatBold = _DSIconBold(
+  static const DSFontIcon repeatBold = IconData(
     0xeba8,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/repeat_circle.png)
-  static const DSIcon repeatCircleBold = _DSIconBold(
+  static const DSFontIcon repeatCircleBold = IconData(
     0xeba9,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/repeate_music.png)
-  static const DSIcon repeateMusicBold = _DSIconBold(
+  static const DSFontIcon repeateMusicBold = IconData(
     0xebaa,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/repeate_one.png)
-  static const DSIcon repeateOneBold = _DSIconBold(
+  static const DSFontIcon repeateOneBold = IconData(
     0xebab,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/reserve.png)
-  static const DSIcon reserveBold = _DSIconBold(
+  static const DSFontIcon reserveBold = IconData(
     0xebac,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/rotate_left.png)
-  static const DSIcon rotateLeftBold = _DSIconBold(
+  static const DSFontIcon rotateLeftBold = IconData(
     0xebad,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/rotate_left_1.png)
-  static const DSIcon rotateLeft1Bold = _DSIconBold(
+  static const DSFontIcon rotateLeft1Bold = IconData(
     0xebae,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/rotate_right.png)
-  static const DSIcon rotateRightBold = _DSIconBold(
+  static const DSFontIcon rotateRightBold = IconData(
     0xebaf,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/rotate_right_1.png)
-  static const DSIcon rotateRight1Bold = _DSIconBold(
+  static const DSFontIcon rotateRight1Bold = IconData(
     0xebb0,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/route_square.png)
-  static const DSIcon routeSquareBold = _DSIconBold(
+  static const DSFontIcon routeSquareBold = IconData(
     0xebb1,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/routing.png)
-  static const DSIcon routingBold = _DSIconBold(
+  static const DSFontIcon routingBold = IconData(
     0xebb2,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/routing_2.png)
-  static const DSIcon routing2Bold = _DSIconBold(
+  static const DSFontIcon routing2Bold = IconData(
     0xebb3,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/row_horizontal.png)
-  static const DSIcon rowHorizontalBold = _DSIconBold(
+  static const DSFontIcon rowHorizontalBold = IconData(
     0xebb4,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/row_vertical.png)
-  static const DSIcon rowVerticalBold = _DSIconBold(
+  static const DSFontIcon rowVerticalBold = IconData(
     0xebb5,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/rulerpen.png)
-  static const DSIcon rulerpenBold = _DSIconBold(
+  static const DSFontIcon rulerpenBold = IconData(
     0xebb6,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/ruler.png)
-  static const DSIcon rulerBold = _DSIconBold(
+  static const DSFontIcon rulerBold = IconData(
     0xebb7,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/safe_home.png)
-  static const DSIcon safeHomeBold = _DSIconBold(
+  static const DSFontIcon safeHomeBold = IconData(
     0xebb8,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/sagittarius.png)
-  static const DSIcon sagittariusBold = _DSIconBold(
+  static const DSFontIcon sagittariusBold = IconData(
     0xebb9,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/save_2.png)
-  static const DSIcon save2Bold = _DSIconBold(
+  static const DSFontIcon save2Bold = IconData(
     0xebba,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/save_add.png)
-  static const DSIcon saveAddBold = _DSIconBold(
+  static const DSFontIcon saveAddBold = IconData(
     0xebbb,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/save_minus.png)
-  static const DSIcon saveMinusBold = _DSIconBold(
+  static const DSFontIcon saveMinusBold = IconData(
     0xebbc,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/save_remove.png)
-  static const DSIcon saveRemoveBold = _DSIconBold(
+  static const DSFontIcon saveRemoveBold = IconData(
     0xebbd,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/scan.png)
-  static const DSIcon scanBold = _DSIconBold(
+  static const DSFontIcon scanBold = IconData(
     0xebbe,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/scan_barcode.png)
-  static const DSIcon scanBarcodeBold = _DSIconBold(
+  static const DSFontIcon scanBarcodeBold = IconData(
     0xebbf,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/scanner.png)
-  static const DSIcon scannerBold = _DSIconBold(
+  static const DSFontIcon scannerBold = IconData(
     0xebc0,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/scanning.png)
-  static const DSIcon scanningBold = _DSIconBold(
+  static const DSFontIcon scanningBold = IconData(
     0xebc1,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/scissor.png)
-  static const DSIcon scissorBold = _DSIconBold(
+  static const DSFontIcon scissorBold = IconData(
     0xebc2,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/scissor_1.png)
-  static const DSIcon scissor1Bold = _DSIconBold(
+  static const DSFontIcon scissor1Bold = IconData(
     0xebc3,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/screenmirroring.png)
-  static const DSIcon screenmirroringBold = _DSIconBold(
+  static const DSFontIcon screenmirroringBold = IconData(
     0xebc4,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/scroll.png)
-  static const DSIcon scrollBold = _DSIconBold(
+  static const DSFontIcon scrollBold = IconData(
     0xebc5,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/search_favorite.png)
-  static const DSIcon searchFavoriteBold = _DSIconBold(
+  static const DSFontIcon searchFavoriteBold = IconData(
     0xebc6,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/search_favorite_1.png)
-  static const DSIcon searchFavorite1Bold = _DSIconBold(
+  static const DSFontIcon searchFavorite1Bold = IconData(
     0xebc7,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/search_normal.png)
-  static const DSIcon searchNormalBold = _DSIconBold(
+  static const DSFontIcon searchNormalBold = IconData(
     0xebc8,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/search_normal_1.png)
-  static const DSIcon searchNormal1Bold = _DSIconBold(
+  static const DSFontIcon searchNormal1Bold = IconData(
     0xebc9,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/search_status.png)
-  static const DSIcon searchStatusBold = _DSIconBold(
+  static const DSFontIcon searchStatusBold = IconData(
     0xebca,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/search_status_1.png)
-  static const DSIcon searchStatus1Bold = _DSIconBold(
+  static const DSFontIcon searchStatus1Bold = IconData(
     0xebcb,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/search_zoom_in.png)
-  static const DSIcon searchZoomInBold = _DSIconBold(
+  static const DSFontIcon searchZoomInBold = IconData(
     0xebcc,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/search_zoom_in_1.png)
-  static const DSIcon searchZoomIn1Bold = _DSIconBold(
+  static const DSFontIcon searchZoomIn1Bold = IconData(
     0xebcd,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/search_zoom_out.png)
-  static const DSIcon searchZoomOutBold = _DSIconBold(
+  static const DSFontIcon searchZoomOutBold = IconData(
     0xebce,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/search_zoom_out_1.png)
-  static const DSIcon searchZoomOut1Bold = _DSIconBold(
+  static const DSFontIcon searchZoomOut1Bold = IconData(
     0xebcf,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/security.png)
-  static const DSIcon securityBold = _DSIconBold(
+  static const DSFontIcon securityBold = IconData(
     0xebd0,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/security_card.png)
-  static const DSIcon securityCardBold = _DSIconBold(
+  static const DSFontIcon securityCardBold = IconData(
     0xebd1,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/security_safe.png)
-  static const DSIcon securitySafeBold = _DSIconBold(
+  static const DSFontIcon securitySafeBold = IconData(
     0xebd2,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/security_time.png)
-  static const DSIcon securityTimeBold = _DSIconBold(
+  static const DSFontIcon securityTimeBold = IconData(
     0xebd3,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/security_user.png)
-  static const DSIcon securityUserBold = _DSIconBold(
+  static const DSFontIcon securityUserBold = IconData(
     0xebd4,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/send.png)
-  static const DSIcon sendBold = _DSIconBold(
+  static const DSFontIcon sendBold = IconData(
     0xebd5,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/send_1.png)
-  static const DSIcon send1Bold = _DSIconBold(
+  static const DSFontIcon send1Bold = IconData(
     0xebd6,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/send_2.png)
-  static const DSIcon send2Bold = _DSIconBold(
+  static const DSFontIcon send2Bold = IconData(
     0xebd7,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/send_sqaure_2.png)
-  static const DSIcon sendSqaure2Bold = _DSIconBold(
+  static const DSFontIcon sendSqaure2Bold = IconData(
     0xebd8,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/send_square.png)
-  static const DSIcon sendSquareBold = _DSIconBold(
+  static const DSFontIcon sendSquareBold = IconData(
     0xebd9,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/setting.png)
-  static const DSIcon settingBold = _DSIconBold(
+  static const DSFontIcon settingBold = IconData(
     0xebda,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/setting_2.png)
-  static const DSIcon setting2Bold = _DSIconBold(
+  static const DSFontIcon setting2Bold = IconData(
     0xebdb,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/setting_3.png)
-  static const DSIcon setting3Bold = _DSIconBold(
+  static const DSFontIcon setting3Bold = IconData(
     0xebdc,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/setting_4.png)
-  static const DSIcon setting4Bold = _DSIconBold(
+  static const DSFontIcon setting4Bold = IconData(
     0xebdd,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/setting_5.png)
-  static const DSIcon setting5Bold = _DSIconBold(
+  static const DSFontIcon setting5Bold = IconData(
     0xebde,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/settings.png)
-  static const DSIcon settingsBold = _DSIconBold(
+  static const DSFontIcon settingsBold = IconData(
     0xebdf,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/shapes.png)
-  static const DSIcon shapesBold = _DSIconBold(
+  static const DSFontIcon shapesBold = IconData(
     0xebe0,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/shapes_1.png)
-  static const DSIcon shapes1Bold = _DSIconBold(
+  static const DSFontIcon shapes1Bold = IconData(
     0xebe1,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/share.png)
-  static const DSIcon shareBold = _DSIconBold(
+  static const DSFontIcon shareBold = IconData(
     0xebe2,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/shield.png)
-  static const DSIcon shieldBold = _DSIconBold(
+  static const DSFontIcon shieldBold = IconData(
     0xebe3,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/shield_cross.png)
-  static const DSIcon shieldCrossBold = _DSIconBold(
+  static const DSFontIcon shieldCrossBold = IconData(
     0xebe4,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/shield_search.png)
-  static const DSIcon shieldSearchBold = _DSIconBold(
+  static const DSFontIcon shieldSearchBold = IconData(
     0xebe5,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/shield_security.png)
-  static const DSIcon shieldSecurityBold = _DSIconBold(
+  static const DSFontIcon shieldSecurityBold = IconData(
     0xebe6,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/shield_slash.png)
-  static const DSIcon shieldSlashBold = _DSIconBold(
+  static const DSFontIcon shieldSlashBold = IconData(
     0xebe7,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/shield_tick.png)
-  static const DSIcon shieldTickBold = _DSIconBold(
+  static const DSFontIcon shieldTickBold = IconData(
     0xebe8,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/ship.png)
-  static const DSIcon shipBold = _DSIconBold(
+  static const DSFontIcon shipBold = IconData(
     0xebe9,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/shop.png)
-  static const DSIcon shopBold = _DSIconBold(
+  static const DSFontIcon shopBold = IconData(
     0xebea,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/shop_add.png)
-  static const DSIcon shopAddBold = _DSIconBold(
+  static const DSFontIcon shopAddBold = IconData(
     0xebeb,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/shopping_bag.png)
-  static const DSIcon shoppingBagBold = _DSIconBold(
+  static const DSFontIcon shoppingBagBold = IconData(
     0xebec,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/shopping_cart.png)
-  static const DSIcon shoppingCartBold = _DSIconBold(
+  static const DSFontIcon shoppingCartBold = IconData(
     0xebed,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/shop_remove.png)
-  static const DSIcon shopRemoveBold = _DSIconBold(
+  static const DSFontIcon shopRemoveBold = IconData(
     0xebee,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/shuffle.png)
-  static const DSIcon shuffleBold = _DSIconBold(
+  static const DSFontIcon shuffleBold = IconData(
     0xebef,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/sidebar_bottom.png)
-  static const DSIcon sidebarBottomBold = _DSIconBold(
+  static const DSFontIcon sidebarBottomBold = IconData(
     0xebf0,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/sidebar_left.png)
-  static const DSIcon sidebarLeftBold = _DSIconBold(
+  static const DSFontIcon sidebarLeftBold = IconData(
     0xebf1,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/sidebar_right.png)
-  static const DSIcon sidebarRightBold = _DSIconBold(
+  static const DSFontIcon sidebarRightBold = IconData(
     0xebf2,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/sidebar_top.png)
-  static const DSIcon sidebarTopBold = _DSIconBold(
+  static const DSFontIcon sidebarTopBold = IconData(
     0xebf3,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/signpost.png)
-  static const DSIcon signpostBold = _DSIconBold(
+  static const DSFontIcon signpostBold = IconData(
     0xebf4,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/simcard.png)
-  static const DSIcon simcardBold = _DSIconBold(
+  static const DSFontIcon simcardBold = IconData(
     0xebf5,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/simcard_1.png)
-  static const DSIcon simcard1Bold = _DSIconBold(
+  static const DSFontIcon simcard1Bold = IconData(
     0xebf6,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/simcard_2.png)
-  static const DSIcon simcard2Bold = _DSIconBold(
+  static const DSFontIcon simcard2Bold = IconData(
     0xebf7,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/size.png)
-  static const DSIcon sizeBold = _DSIconBold(
+  static const DSFontIcon sizeBold = IconData(
     0xebf8,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/slash.png)
-  static const DSIcon slashBold = _DSIconBold(
+  static const DSFontIcon slashBold = IconData(
     0xebf9,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/slider.png)
-  static const DSIcon sliderBold = _DSIconBold(
+  static const DSFontIcon sliderBold = IconData(
     0xebfa,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/slider_horizontal.png)
-  static const DSIcon sliderHorizontalBold = _DSIconBold(
+  static const DSFontIcon sliderHorizontalBold = IconData(
     0xebfb,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/slider_horizontal_1.png)
-  static const DSIcon sliderHorizontal1Bold = _DSIconBold(
+  static const DSFontIcon sliderHorizontal1Bold = IconData(
     0xebfc,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/slider_vertical.png)
-  static const DSIcon sliderVerticalBold = _DSIconBold(
+  static const DSFontIcon sliderVerticalBold = IconData(
     0xebfd,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/slider_vertical_1.png)
-  static const DSIcon sliderVertical1Bold = _DSIconBold(
+  static const DSFontIcon sliderVertical1Bold = IconData(
     0xebfe,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/smallcaps.png)
-  static const DSIcon smallcapsBold = _DSIconBold(
+  static const DSFontIcon smallcapsBold = IconData(
     0xebff,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/smart_car.png)
-  static const DSIcon smartCarBold = _DSIconBold(
+  static const DSFontIcon smartCarBold = IconData(
     0xec00,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/smart_home.png)
-  static const DSIcon smartHomeBold = _DSIconBold(
+  static const DSFontIcon smartHomeBold = IconData(
     0xec01,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/smileys.png)
-  static const DSIcon smileysBold = _DSIconBold(
+  static const DSFontIcon smileysBold = IconData(
     0xec02,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/sms.png)
-  static const DSIcon smsBold = _DSIconBold(
+  static const DSFontIcon smsBold = IconData(
     0xec03,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/sms_edit.png)
-  static const DSIcon smsEditBold = _DSIconBold(
+  static const DSFontIcon smsEditBold = IconData(
     0xec04,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/sms_notification.png)
-  static const DSIcon smsNotificationBold = _DSIconBold(
+  static const DSFontIcon smsNotificationBold = IconData(
     0xec05,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/sms_search.png)
-  static const DSIcon smsSearchBold = _DSIconBold(
+  static const DSFontIcon smsSearchBold = IconData(
     0xec06,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/sms_star.png)
-  static const DSIcon smsStarBold = _DSIconBold(
+  static const DSFontIcon smsStarBold = IconData(
     0xec07,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/sms_tracking.png)
-  static const DSIcon smsTrackingBold = _DSIconBold(
+  static const DSFontIcon smsTrackingBold = IconData(
     0xec08,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/sort.png)
-  static const DSIcon sortBold = _DSIconBold(
+  static const DSFontIcon sortBold = IconData(
     0xec09,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/sound.png)
-  static const DSIcon soundBold = _DSIconBold(
+  static const DSFontIcon soundBold = IconData(
     0xec0a,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/speaker.png)
-  static const DSIcon speakerBold = _DSIconBold(
+  static const DSFontIcon speakerBold = IconData(
     0xec0b,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/speedometer.png)
-  static const DSIcon speedometerBold = _DSIconBold(
+  static const DSFontIcon speedometerBold = IconData(
     0xec0c,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/star.png)
-  static const DSIcon starBold = _DSIconBold(
+  static const DSFontIcon starBold = IconData(
     0xec0d,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/star_1.png)
-  static const DSIcon star1Bold = _DSIconBold(
+  static const DSFontIcon star1Bold = IconData(
     0xec0e,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/star_slash.png)
-  static const DSIcon starSlashBold = _DSIconBold(
+  static const DSFontIcon starSlashBold = IconData(
     0xec0f,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/status.png)
-  static const DSIcon statusBold = _DSIconBold(
+  static const DSFontIcon statusBold = IconData(
     0xec10,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/status_up.png)
-  static const DSIcon statusUpBold = _DSIconBold(
+  static const DSFontIcon statusUpBold = IconData(
     0xec11,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/sticker.png)
-  static const DSIcon stickerBold = _DSIconBold(
+  static const DSFontIcon stickerBold = IconData(
     0xec12,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/stickynote.png)
-  static const DSIcon stickynoteBold = _DSIconBold(
+  static const DSFontIcon stickynoteBold = IconData(
     0xec13,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/stop.png)
-  static const DSIcon stopBold = _DSIconBold(
+  static const DSFontIcon stopBold = IconData(
     0xec14,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/stop_circle.png)
-  static const DSIcon stopCircleBold = _DSIconBold(
+  static const DSFontIcon stopCircleBold = IconData(
     0xec15,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/story.png)
-  static const DSIcon storyBold = _DSIconBold(
+  static const DSFontIcon storyBold = IconData(
     0xec16,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/strongbox.png)
-  static const DSIcon strongboxBold = _DSIconBold(
+  static const DSFontIcon strongboxBold = IconData(
     0xec17,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/strongbox_2.png)
-  static const DSIcon strongbox2Bold = _DSIconBold(
+  static const DSFontIcon strongbox2Bold = IconData(
     0xec18,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/subtitle.png)
-  static const DSIcon subtitleBold = _DSIconBold(
+  static const DSFontIcon subtitleBold = IconData(
     0xec19,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/sun.png)
-  static const DSIcon sunBold = _DSIconBold(
+  static const DSFontIcon sunBold = IconData(
     0xec1a,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/sun_1.png)
-  static const DSIcon sun1Bold = _DSIconBold(
+  static const DSFontIcon sun1Bold = IconData(
     0xec1b,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/sun_fog.png)
-  static const DSIcon sunFogBold = _DSIconBold(
+  static const DSFontIcon sunFogBold = IconData(
     0xec1c,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/tag.png)
-  static const DSIcon tagBold = _DSIconBold(
+  static const DSFontIcon tagBold = IconData(
     0xec1d,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/tag_2.png)
-  static const DSIcon tag2Bold = _DSIconBold(
+  static const DSFontIcon tag2Bold = IconData(
     0xec1e,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/tag_cross.png)
-  static const DSIcon tagCrossBold = _DSIconBold(
+  static const DSFontIcon tagCrossBold = IconData(
     0xec1f,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/tag_right.png)
-  static const DSIcon tagRightBold = _DSIconBold(
+  static const DSFontIcon tagRightBold = IconData(
     0xec20,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/tag_user.png)
-  static const DSIcon tagUserBold = _DSIconBold(
+  static const DSFontIcon tagUserBold = IconData(
     0xec21,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/task.png)
-  static const DSIcon taskBold = _DSIconBold(
+  static const DSFontIcon taskBold = IconData(
     0xec22,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/task_square.png)
-  static const DSIcon taskSquareBold = _DSIconBold(
+  static const DSFontIcon taskSquareBold = IconData(
     0xec23,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/teacher.png)
-  static const DSIcon teacherBold = _DSIconBold(
+  static const DSFontIcon teacherBold = IconData(
     0xec24,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/text.png)
-  static const DSIcon textBold = _DSIconBold(
+  static const DSFontIcon textBold = IconData(
     0xec25,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/textalign_center.png)
-  static const DSIcon textalignCenterBold = _DSIconBold(
+  static const DSFontIcon textalignCenterBold = IconData(
     0xec26,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/textalign_justifycenter.png)
-  static const DSIcon textalignJustifycenterBold = _DSIconBold(
+  static const DSFontIcon textalignJustifycenterBold = IconData(
     0xec27,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/textalign_justifyleft.png)
-  static const DSIcon textalignJustifyleftBold = _DSIconBold(
+  static const DSFontIcon textalignJustifyleftBold = IconData(
     0xec28,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/textalign_justifyright.png)
-  static const DSIcon textalignJustifyrightBold = _DSIconBold(
+  static const DSFontIcon textalignJustifyrightBold = IconData(
     0xec29,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/textalign_left.png)
-  static const DSIcon textalignLeftBold = _DSIconBold(
+  static const DSFontIcon textalignLeftBold = IconData(
     0xec2a,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/textalign_right.png)
-  static const DSIcon textalignRightBold = _DSIconBold(
+  static const DSFontIcon textalignRightBold = IconData(
     0xec2b,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/text_block.png)
-  static const DSIcon textBlockBold = _DSIconBold(
+  static const DSFontIcon textBlockBold = IconData(
     0xec2c,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/text_bold.png)
-  static const DSIcon textBoldBold = _DSIconBold(
+  static const DSFontIcon textBoldBold = IconData(
     0xec2d,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/text_italic.png)
-  static const DSIcon textItalicBold = _DSIconBold(
+  static const DSFontIcon textItalicBold = IconData(
     0xec2e,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/text_underline.png)
-  static const DSIcon textUnderlineBold = _DSIconBold(
+  static const DSFontIcon textUnderlineBold = IconData(
     0xec2f,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/tick_circle.png)
-  static const DSIcon tickCircleBold = _DSIconBold(
+  static const DSFontIcon tickCircleBold = IconData(
     0xec30,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/ticket.png)
-  static const DSIcon ticketBold = _DSIconBold(
+  static const DSFontIcon ticketBold = IconData(
     0xec31,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/ticket_2.png)
-  static const DSIcon ticket2Bold = _DSIconBold(
+  static const DSFontIcon ticket2Bold = IconData(
     0xec32,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/ticket_discount.png)
-  static const DSIcon ticketDiscountBold = _DSIconBold(
+  static const DSFontIcon ticketDiscountBold = IconData(
     0xec33,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/ticket_expired.png)
-  static const DSIcon ticketExpiredBold = _DSIconBold(
+  static const DSFontIcon ticketExpiredBold = IconData(
     0xec34,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/ticket_star.png)
-  static const DSIcon ticketStarBold = _DSIconBold(
+  static const DSFontIcon ticketStarBold = IconData(
     0xec35,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/tick_square.png)
-  static const DSIcon tickSquareBold = _DSIconBold(
+  static const DSFontIcon tickSquareBold = IconData(
     0xec36,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/timer.png)
-  static const DSIcon timerBold = _DSIconBold(
+  static const DSFontIcon timerBold = IconData(
     0xec37,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/timer_1.png)
-  static const DSIcon timer1Bold = _DSIconBold(
+  static const DSFontIcon timer1Bold = IconData(
     0xec38,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/timer_pause.png)
-  static const DSIcon timerPauseBold = _DSIconBold(
+  static const DSFontIcon timerPauseBold = IconData(
     0xec39,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/timer_start.png)
-  static const DSIcon timerStartBold = _DSIconBold(
+  static const DSFontIcon timerStartBold = IconData(
     0xec3a,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/toggle_off.png)
-  static const DSIcon toggleOffBold = _DSIconBold(
+  static const DSFontIcon toggleOffBold = IconData(
     0xec3b,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/toggle_off_circle.png)
-  static const DSIcon toggleOffCircleBold = _DSIconBold(
+  static const DSFontIcon toggleOffCircleBold = IconData(
     0xec3c,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/toggle_on.png)
-  static const DSIcon toggleOnBold = _DSIconBold(
+  static const DSFontIcon toggleOnBold = IconData(
     0xec3d,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/toggle_on_circle.png)
-  static const DSIcon toggleOnCircleBold = _DSIconBold(
+  static const DSFontIcon toggleOnCircleBold = IconData(
     0xec3e,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/trade.png)
-  static const DSIcon tradeBold = _DSIconBold(
+  static const DSFontIcon tradeBold = IconData(
     0xec3f,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/transaction_minus.png)
-  static const DSIcon transactionMinusBold = _DSIconBold(
+  static const DSFontIcon transactionMinusBold = IconData(
     0xec40,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/translate.png)
-  static const DSIcon translateBold = _DSIconBold(
+  static const DSFontIcon translateBold = IconData(
     0xec41,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/trash.png)
-  static const DSIcon trashBold = _DSIconBold(
+  static const DSFontIcon trashBold = IconData(
     0xec42,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/trash_square.png)
-  static const DSIcon trashSquareBold = _DSIconBold(
+  static const DSFontIcon trashSquareBold = IconData(
     0xec43,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/tree.png)
-  static const DSIcon treeBold = _DSIconBold(
+  static const DSFontIcon treeBold = IconData(
     0xec44,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/trend_down.png)
-  static const DSIcon trendDownBold = _DSIconBold(
+  static const DSFontIcon trendDownBold = IconData(
     0xec45,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/trend_up.png)
-  static const DSIcon trendUpBold = _DSIconBold(
+  static const DSFontIcon trendUpBold = IconData(
     0xec46,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/triangle.png)
-  static const DSIcon triangleBold = _DSIconBold(
+  static const DSFontIcon triangleBold = IconData(
     0xec47,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/truck.png)
-  static const DSIcon truckBold = _DSIconBold(
+  static const DSFontIcon truckBold = IconData(
     0xec48,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/truck_fast.png)
-  static const DSIcon truckFastBold = _DSIconBold(
+  static const DSFontIcon truckFastBold = IconData(
     0xec49,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/truck_remove.png)
-  static const DSIcon truckRemoveBold = _DSIconBold(
+  static const DSFontIcon truckRemoveBold = IconData(
     0xec4a,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/truck_tick.png)
-  static const DSIcon truckTickBold = _DSIconBold(
+  static const DSFontIcon truckTickBold = IconData(
     0xec4b,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/truck_time.png)
-  static const DSIcon truckTimeBold = _DSIconBold(
+  static const DSFontIcon truckTimeBold = IconData(
     0xec4c,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/undo.png)
-  static const DSIcon undoBold = _DSIconBold(
+  static const DSFontIcon undoBold = IconData(
     0xec4d,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/unlimited.png)
-  static const DSIcon unlimitedBold = _DSIconBold(
+  static const DSFontIcon unlimitedBold = IconData(
     0xec4e,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/unlock.png)
-  static const DSIcon unlockBold = _DSIconBold(
+  static const DSFontIcon unlockBold = IconData(
     0xec4f,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/user.png)
-  static const DSIcon userBold = _DSIconBold(
+  static const DSFontIcon userBold = IconData(
     0xec50,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/user_add.png)
-  static const DSIcon userAddBold = _DSIconBold(
+  static const DSFontIcon userAddBold = IconData(
     0xec51,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/user_cirlce_add.png)
-  static const DSIcon userCirlceAddBold = _DSIconBold(
+  static const DSFontIcon userCirlceAddBold = IconData(
     0xec52,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/user_edit.png)
-  static const DSIcon userEditBold = _DSIconBold(
+  static const DSFontIcon userEditBold = IconData(
     0xec53,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/user_minus.png)
-  static const DSIcon userMinusBold = _DSIconBold(
+  static const DSFontIcon userMinusBold = IconData(
     0xec54,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/user_octagon.png)
-  static const DSIcon userOctagonBold = _DSIconBold(
+  static const DSFontIcon userOctagonBold = IconData(
     0xec55,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/user_remove.png)
-  static const DSIcon userRemoveBold = _DSIconBold(
+  static const DSFontIcon userRemoveBold = IconData(
     0xec56,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/user_search.png)
-  static const DSIcon userSearchBold = _DSIconBold(
+  static const DSFontIcon userSearchBold = IconData(
     0xec57,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/user_square.png)
-  static const DSIcon userSquareBold = _DSIconBold(
+  static const DSFontIcon userSquareBold = IconData(
     0xec58,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/user_tag.png)
-  static const DSIcon userTagBold = _DSIconBold(
+  static const DSFontIcon userTagBold = IconData(
     0xec59,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/user_tick.png)
-  static const DSIcon userTickBold = _DSIconBold(
+  static const DSFontIcon userTickBold = IconData(
     0xec5a,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/verify.png)
-  static const DSIcon verifyBold = _DSIconBold(
+  static const DSFontIcon verifyBold = IconData(
     0xec5b,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/video.png)
-  static const DSIcon videoBold = _DSIconBold(
+  static const DSFontIcon videoBold = IconData(
     0xec5c,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/video_add.png)
-  static const DSIcon videoAddBold = _DSIconBold(
+  static const DSFontIcon videoAddBold = IconData(
     0xec5d,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/video_circle.png)
-  static const DSIcon videoCircleBold = _DSIconBold(
+  static const DSFontIcon videoCircleBold = IconData(
     0xec5e,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/video_horizontal.png)
-  static const DSIcon videoHorizontalBold = _DSIconBold(
+  static const DSFontIcon videoHorizontalBold = IconData(
     0xec5f,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/video_octagon.png)
-  static const DSIcon videoOctagonBold = _DSIconBold(
+  static const DSFontIcon videoOctagonBold = IconData(
     0xec60,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/video_play.png)
-  static const DSIcon videoPlayBold = _DSIconBold(
+  static const DSFontIcon videoPlayBold = IconData(
     0xec61,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/video_remove.png)
-  static const DSIcon videoRemoveBold = _DSIconBold(
+  static const DSFontIcon videoRemoveBold = IconData(
     0xec62,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/video_slash.png)
-  static const DSIcon videoSlashBold = _DSIconBold(
+  static const DSFontIcon videoSlashBold = IconData(
     0xec63,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/video_square.png)
-  static const DSIcon videoSquareBold = _DSIconBold(
+  static const DSFontIcon videoSquareBold = IconData(
     0xec67,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/video_tick.png)
-  static const DSIcon videoTickBold = _DSIconBold(
+  static const DSFontIcon videoTickBold = IconData(
     0xec68,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/video_time.png)
-  static const DSIcon videoTimeBold = _DSIconBold(
+  static const DSFontIcon videoTimeBold = IconData(
     0xec69,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/video_vertical.png)
-  static const DSIcon videoVerticalBold = _DSIconBold(
+  static const DSFontIcon videoVerticalBold = IconData(
     0xec6a,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/voice_cricle.png)
-  static const DSIcon voiceCricleBold = _DSIconBold(
+  static const DSFontIcon voiceCricleBold = IconData(
     0xec6b,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/voice_square.png)
-  static const DSIcon voiceSquareBold = _DSIconBold(
+  static const DSFontIcon voiceSquareBold = IconData(
     0xec6c,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/volume_cross.png)
-  static const DSIcon volumeCrossBold = _DSIconBold(
+  static const DSFontIcon volumeCrossBold = IconData(
     0xec6d,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/volume_high.png)
-  static const DSIcon volumeHighBold = _DSIconBold(
+  static const DSFontIcon volumeHighBold = IconData(
     0xec6e,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/volume_low.png)
-  static const DSIcon volumeLowBold = _DSIconBold(
+  static const DSFontIcon volumeLowBold = IconData(
     0xec6f,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/volume_low_1.png)
-  static const DSIcon volumeLow1Bold = _DSIconBold(
+  static const DSFontIcon volumeLow1Bold = IconData(
     0xec70,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/volume_mute.png)
-  static const DSIcon volumeMuteBold = _DSIconBold(
+  static const DSFontIcon volumeMuteBold = IconData(
     0xec71,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/volume_slash.png)
-  static const DSIcon volumeSlashBold = _DSIconBold(
+  static const DSFontIcon volumeSlashBold = IconData(
     0xec72,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/volume_up.png)
-  static const DSIcon volumeUpBold = _DSIconBold(
+  static const DSFontIcon volumeUpBold = IconData(
     0xec73,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/wallet.png)
-  static const DSIcon walletBold = _DSIconBold(
+  static const DSFontIcon walletBold = IconData(
     0xec74,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/wallet_1.png)
-  static const DSIcon wallet1Bold = _DSIconBold(
+  static const DSFontIcon wallet1Bold = IconData(
     0xec75,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/wallet_2.png)
-  static const DSIcon wallet2Bold = _DSIconBold(
+  static const DSFontIcon wallet2Bold = IconData(
     0xec76,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/wallet_3.png)
-  static const DSIcon wallet3Bold = _DSIconBold(
+  static const DSFontIcon wallet3Bold = IconData(
     0xec77,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/wallet_add.png)
-  static const DSIcon walletAddBold = _DSIconBold(
+  static const DSFontIcon walletAddBold = IconData(
     0xec78,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/wallet_add_1.png)
-  static const DSIcon walletAdd1Bold = _DSIconBold(
+  static const DSFontIcon walletAdd1Bold = IconData(
     0xec79,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/wallet_check.png)
-  static const DSIcon walletCheckBold = _DSIconBold(
+  static const DSFontIcon walletCheckBold = IconData(
     0xec7a,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/wallet_minus.png)
-  static const DSIcon walletMinusBold = _DSIconBold(
+  static const DSFontIcon walletMinusBold = IconData(
     0xec7b,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/wallet_money.png)
-  static const DSIcon walletMoneyBold = _DSIconBold(
+  static const DSFontIcon walletMoneyBold = IconData(
     0xec7c,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/wallet_remove.png)
-  static const DSIcon walletRemoveBold = _DSIconBold(
+  static const DSFontIcon walletRemoveBold = IconData(
     0xec7d,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/wallet_search.png)
-  static const DSIcon walletSearchBold = _DSIconBold(
+  static const DSFontIcon walletSearchBold = IconData(
     0xec7e,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/warning_2.png)
-  static const DSIcon warning2Bold = _DSIconBold(
+  static const DSFontIcon warning2Bold = IconData(
     0xec7f,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/watch.png)
-  static const DSIcon watchBold = _DSIconBold(
+  static const DSFontIcon watchBold = IconData(
     0xec80,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/watch_status.png)
-  static const DSIcon watchStatusBold = _DSIconBold(
+  static const DSFontIcon watchStatusBold = IconData(
     0xec81,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/weight.png)
-  static const DSIcon weightBold = _DSIconBold(
+  static const DSFontIcon weightBold = IconData(
     0xec82,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/weight_1.png)
-  static const DSIcon weight1Bold = _DSIconBold(
+  static const DSFontIcon weight1Bold = IconData(
     0xec83,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/wifi.png)
-  static const DSIcon wifiBold = _DSIconBold(
+  static const DSFontIcon wifiBold = IconData(
     0xec84,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/wifi_square.png)
-  static const DSIcon wifiSquareBold = _DSIconBold(
+  static const DSFontIcon wifiSquareBold = IconData(
     0xec85,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/wind.png)
-  static const DSIcon windBold = _DSIconBold(
+  static const DSFontIcon windBold = IconData(
     0xec86,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/wind_2.png)
-  static const DSIcon wind2Bold = _DSIconBold(
+  static const DSFontIcon wind2Bold = IconData(
     0xec87,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/bold/woman.png)
-  static const DSIcon womanBold = _DSIconBold(
+  static const DSFontIcon womanBold = IconData(
     0xec88,
+    fontFamily: Fonts.iconsaxPlusBold,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/dcube.png)
-  static const DSIcon dcubeBroken = _DSIconBroken(
+  static const DSFontIcon dcubeBroken = IconData(
     0xe900,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/d_cube_scan.png)
-  static const DSIcon dCubeScanBroken = _DSIconBroken(
+  static const DSFontIcon dCubeScanBroken = IconData(
     0xe901,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/d_rotate.png)
-  static const DSIcon dRotateBroken = _DSIconBroken(
+  static const DSFontIcon dRotateBroken = IconData(
     0xe902,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/d_square.png)
-  static const DSIcon dSquareBroken = _DSIconBroken(
+  static const DSFontIcon dSquareBroken = IconData(
     0xe903,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/square.png)
-  static const DSIcon squareBroken = _DSIconBroken(
+  static const DSFontIcon squareBroken = IconData(
     0xe904,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/support.png)
-  static const DSIcon supportBroken = _DSIconBroken(
+  static const DSFontIcon supportBroken = IconData(
     0xe905,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/activity.png)
-  static const DSIcon activityBroken = _DSIconBroken(
+  static const DSFontIcon activityBroken = IconData(
     0xe906,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/add.png)
-  static const DSIcon addBroken = _DSIconBroken(
+  static const DSFontIcon addBroken = IconData(
     0xe907,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/add_circle.png)
-  static const DSIcon addCircleBroken = _DSIconBroken(
+  static const DSFontIcon addCircleBroken = IconData(
     0xe908,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/additem.png)
-  static const DSIcon additemBroken = _DSIconBroken(
+  static const DSFontIcon additemBroken = IconData(
     0xe909,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/add_square.png)
-  static const DSIcon addSquareBroken = _DSIconBroken(
+  static const DSFontIcon addSquareBroken = IconData(
     0xe90a,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/airdrop.png)
-  static const DSIcon airdropBroken = _DSIconBroken(
+  static const DSFontIcon airdropBroken = IconData(
     0xe90b,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/airplane.png)
-  static const DSIcon airplaneBroken = _DSIconBroken(
+  static const DSFontIcon airplaneBroken = IconData(
     0xe90c,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/airplane_square.png)
-  static const DSIcon airplaneSquareBroken = _DSIconBroken(
+  static const DSFontIcon airplaneSquareBroken = IconData(
     0xe90d,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/airpod.png)
-  static const DSIcon airpodBroken = _DSIconBroken(
+  static const DSFontIcon airpodBroken = IconData(
     0xe90e,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/airpods.png)
-  static const DSIcon airpodsBroken = _DSIconBroken(
+  static const DSFontIcon airpodsBroken = IconData(
     0xe90f,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/alarm.png)
-  static const DSIcon alarmBroken = _DSIconBroken(
+  static const DSFontIcon alarmBroken = IconData(
     0xe910,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/align_bottom.png)
-  static const DSIcon alignBottomBroken = _DSIconBroken(
+  static const DSFontIcon alignBottomBroken = IconData(
     0xe911,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/align_horizontally.png)
-  static const DSIcon alignHorizontallyBroken = _DSIconBroken(
+  static const DSFontIcon alignHorizontallyBroken = IconData(
     0xe912,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/align_left.png)
-  static const DSIcon alignLeftBroken = _DSIconBroken(
+  static const DSFontIcon alignLeftBroken = IconData(
     0xe913,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/align_right.png)
-  static const DSIcon alignRightBroken = _DSIconBroken(
+  static const DSFontIcon alignRightBroken = IconData(
     0xe914,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/align_top.png)
-  static const DSIcon alignTopBroken = _DSIconBroken(
+  static const DSFontIcon alignTopBroken = IconData(
     0xe915,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/align_vertically.png)
-  static const DSIcon alignVerticallyBroken = _DSIconBroken(
+  static const DSFontIcon alignVerticallyBroken = IconData(
     0xe916,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/aquarius.png)
-  static const DSIcon aquariusBroken = _DSIconBroken(
+  static const DSFontIcon aquariusBroken = IconData(
     0xe917,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/archive.png)
-  static const DSIcon archiveBroken = _DSIconBroken(
+  static const DSFontIcon archiveBroken = IconData(
     0xe918,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/archive_1.png)
-  static const DSIcon archive1Broken = _DSIconBroken(
+  static const DSFontIcon archive1Broken = IconData(
     0xe919,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/archive_2.png)
-  static const DSIcon archive2Broken = _DSIconBroken(
+  static const DSFontIcon archive2Broken = IconData(
     0xe91a,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/archive_add.png)
-  static const DSIcon archiveAddBroken = _DSIconBroken(
+  static const DSFontIcon archiveAddBroken = IconData(
     0xe91b,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/archive_book.png)
-  static const DSIcon archiveBookBroken = _DSIconBroken(
+  static const DSFontIcon archiveBookBroken = IconData(
     0xe91c,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/archive_minus.png)
-  static const DSIcon archiveMinusBroken = _DSIconBroken(
+  static const DSFontIcon archiveMinusBroken = IconData(
     0xe91d,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/archive_slash.png)
-  static const DSIcon archiveSlashBroken = _DSIconBroken(
+  static const DSFontIcon archiveSlashBroken = IconData(
     0xe91e,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/archive_tick.png)
-  static const DSIcon archiveTickBroken = _DSIconBroken(
+  static const DSFontIcon archiveTickBroken = IconData(
     0xe91f,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/arrange_circle.png)
-  static const DSIcon arrangeCircleBroken = _DSIconBroken(
+  static const DSFontIcon arrangeCircleBroken = IconData(
     0xe920,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/arrange_circle_2.png)
-  static const DSIcon arrangeCircle2Broken = _DSIconBroken(
+  static const DSFontIcon arrangeCircle2Broken = IconData(
     0xe921,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/arrange_square.png)
-  static const DSIcon arrangeSquareBroken = _DSIconBroken(
+  static const DSFontIcon arrangeSquareBroken = IconData(
     0xe922,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/arrange_square_2.png)
-  static const DSIcon arrangeSquare2Broken = _DSIconBroken(
+  static const DSFontIcon arrangeSquare2Broken = IconData(
     0xe923,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/arrow.png)
-  static const DSIcon arrowBroken = _DSIconBroken(
+  static const DSFontIcon arrowBroken = IconData(
     0xe924,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/arrow_2.png)
-  static const DSIcon arrow2Broken = _DSIconBroken(
+  static const DSFontIcon arrow2Broken = IconData(
     0xe925,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/arrow_3.png)
-  static const DSIcon arrow3Broken = _DSIconBroken(
+  static const DSFontIcon arrow3Broken = IconData(
     0xe926,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/arrow_bottom.png)
-  static const DSIcon arrowBottomBroken = _DSIconBroken(
+  static const DSFontIcon arrowBottomBroken = IconData(
     0xe927,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/arrow_circle_down.png)
-  static const DSIcon arrowCircleDownBroken = _DSIconBroken(
+  static const DSFontIcon arrowCircleDownBroken = IconData(
     0xe928,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/arrow_circle_left.png)
-  static const DSIcon arrowCircleLeftBroken = _DSIconBroken(
+  static const DSFontIcon arrowCircleLeftBroken = IconData(
     0xe929,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/arrow_circle_right.png)
-  static const DSIcon arrowCircleRightBroken = _DSIconBroken(
+  static const DSFontIcon arrowCircleRightBroken = IconData(
     0xe92a,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/arrow_circle_up.png)
-  static const DSIcon arrowCircleUpBroken = _DSIconBroken(
+  static const DSFontIcon arrowCircleUpBroken = IconData(
     0xe92b,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/arrow_down.png)
-  static const DSIcon arrowDownBroken = _DSIconBroken(
+  static const DSFontIcon arrowDownBroken = IconData(
     0xe92c,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/arrow_down_1.png)
-  static const DSIcon arrowDown1Broken = _DSIconBroken(
+  static const DSFontIcon arrowDown1Broken = IconData(
     0xe92d,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/arrow_down_2.png)
-  static const DSIcon arrowDown2Broken = _DSIconBroken(
+  static const DSFontIcon arrowDown2Broken = IconData(
     0xe92e,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/arrow_left.png)
-  static const DSIcon arrowLeftBroken = _DSIconBroken(
+  static const DSFontIcon arrowLeftBroken = IconData(
     0xe92f,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/arrow_left_1.png)
-  static const DSIcon arrowLeft1Broken = _DSIconBroken(
+  static const DSFontIcon arrowLeft1Broken = IconData(
     0xe930,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/arrow_left_2.png)
-  static const DSIcon arrowLeft2Broken = _DSIconBroken(
+  static const DSFontIcon arrowLeft2Broken = IconData(
     0xe931,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/arrow_left_3.png)
-  static const DSIcon arrowLeft3Broken = _DSIconBroken(
+  static const DSFontIcon arrowLeft3Broken = IconData(
     0xe932,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/arrow_right.png)
-  static const DSIcon arrowRightBroken = _DSIconBroken(
+  static const DSFontIcon arrowRightBroken = IconData(
     0xe933,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/arrow_right_1.png)
-  static const DSIcon arrowRight1Broken = _DSIconBroken(
+  static const DSFontIcon arrowRight1Broken = IconData(
     0xe934,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/arrow_right_2.png)
-  static const DSIcon arrowRight2Broken = _DSIconBroken(
+  static const DSFontIcon arrowRight2Broken = IconData(
     0xe935,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/arrow_right_3.png)
-  static const DSIcon arrowRight3Broken = _DSIconBroken(
+  static const DSFontIcon arrowRight3Broken = IconData(
     0xe936,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/arrow_square.png)
-  static const DSIcon arrowSquareBroken = _DSIconBroken(
+  static const DSFontIcon arrowSquareBroken = IconData(
     0xe937,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/arrow_square_down.png)
-  static const DSIcon arrowSquareDownBroken = _DSIconBroken(
+  static const DSFontIcon arrowSquareDownBroken = IconData(
     0xe938,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/arrow_square_left.png)
-  static const DSIcon arrowSquareLeftBroken = _DSIconBroken(
+  static const DSFontIcon arrowSquareLeftBroken = IconData(
     0xe939,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/arrow_square_right.png)
-  static const DSIcon arrowSquareRightBroken = _DSIconBroken(
+  static const DSFontIcon arrowSquareRightBroken = IconData(
     0xe93a,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/arrow_square_up.png)
-  static const DSIcon arrowSquareUpBroken = _DSIconBroken(
+  static const DSFontIcon arrowSquareUpBroken = IconData(
     0xe93b,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/arrow_swap.png)
-  static const DSIcon arrowSwapBroken = _DSIconBroken(
+  static const DSFontIcon arrowSwapBroken = IconData(
     0xe93c,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/arrow_swap_horizontal.png)
-  static const DSIcon arrowSwapHorizontalBroken = _DSIconBroken(
+  static const DSFontIcon arrowSwapHorizontalBroken = IconData(
     0xe93d,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/arrow_up.png)
-  static const DSIcon arrowUpBroken = _DSIconBroken(
+  static const DSFontIcon arrowUpBroken = IconData(
     0xe93e,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/arrow_up_1.png)
-  static const DSIcon arrowUp1Broken = _DSIconBroken(
+  static const DSFontIcon arrowUp1Broken = IconData(
     0xe93f,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/arrow_up_2.png)
-  static const DSIcon arrowUp2Broken = _DSIconBroken(
+  static const DSFontIcon arrowUp2Broken = IconData(
     0xe940,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/arrow_up_3.png)
-  static const DSIcon arrowUp3Broken = _DSIconBroken(
+  static const DSFontIcon arrowUp3Broken = IconData(
     0xe941,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/attach_circle.png)
-  static const DSIcon attachCircleBroken = _DSIconBroken(
+  static const DSFontIcon attachCircleBroken = IconData(
     0xe942,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/attach_square.png)
-  static const DSIcon attachSquareBroken = _DSIconBroken(
+  static const DSFontIcon attachSquareBroken = IconData(
     0xe943,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/audio_square.png)
-  static const DSIcon audioSquareBroken = _DSIconBroken(
+  static const DSFontIcon audioSquareBroken = IconData(
     0xe944,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/autobrightness.png)
-  static const DSIcon autobrightnessBroken = _DSIconBroken(
+  static const DSFontIcon autobrightnessBroken = IconData(
     0xe945,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/award.png)
-  static const DSIcon awardBroken = _DSIconBroken(
+  static const DSFontIcon awardBroken = IconData(
     0xe946,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/back_square.png)
-  static const DSIcon backSquareBroken = _DSIconBroken(
+  static const DSFontIcon backSquareBroken = IconData(
     0xe947,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/backward.png)
-  static const DSIcon backwardBroken = _DSIconBroken(
+  static const DSFontIcon backwardBroken = IconData(
     0xe948,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/backward_5_seconds.png)
-  static const DSIcon backward5SecondsBroken = _DSIconBroken(
+  static const DSFontIcon backward5SecondsBroken = IconData(
     0xe949,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/backward_10_seconds.png)
-  static const DSIcon backward10SecondsBroken = _DSIconBroken(
+  static const DSFontIcon backward10SecondsBroken = IconData(
     0xe94a,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/backward_15_seconds.png)
-  static const DSIcon backward15SecondsBroken = _DSIconBroken(
+  static const DSFontIcon backward15SecondsBroken = IconData(
     0xe94b,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/backward_item.png)
-  static const DSIcon backwardItemBroken = _DSIconBroken(
+  static const DSFontIcon backwardItemBroken = IconData(
     0xe94c,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/bag.png)
-  static const DSIcon bagBroken = _DSIconBroken(
+  static const DSFontIcon bagBroken = IconData(
     0xe94d,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/bag_2.png)
-  static const DSIcon bag2Broken = _DSIconBroken(
+  static const DSFontIcon bag2Broken = IconData(
     0xe94e,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/bag_cross.png)
-  static const DSIcon bagCrossBroken = _DSIconBroken(
+  static const DSFontIcon bagCrossBroken = IconData(
     0xe94f,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/bag_cross_1.png)
-  static const DSIcon bagCross1Broken = _DSIconBroken(
+  static const DSFontIcon bagCross1Broken = IconData(
     0xe950,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/bag_happy.png)
-  static const DSIcon bagHappyBroken = _DSIconBroken(
+  static const DSFontIcon bagHappyBroken = IconData(
     0xe951,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/bag_tick.png)
-  static const DSIcon bagTickBroken = _DSIconBroken(
+  static const DSFontIcon bagTickBroken = IconData(
     0xe952,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/bag_tick_2.png)
-  static const DSIcon bagTick2Broken = _DSIconBroken(
+  static const DSFontIcon bagTick2Broken = IconData(
     0xe953,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/bag_timer.png)
-  static const DSIcon bagTimerBroken = _DSIconBroken(
+  static const DSFontIcon bagTimerBroken = IconData(
     0xe954,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/bank.png)
-  static const DSIcon bankBroken = _DSIconBroken(
+  static const DSFontIcon bankBroken = IconData(
     0xe955,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/barcode.png)
-  static const DSIcon barcodeBroken = _DSIconBroken(
+  static const DSFontIcon barcodeBroken = IconData(
     0xe956,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/battery_3full.png)
-  static const DSIcon battery3fullBroken = _DSIconBroken(
+  static const DSFontIcon battery3fullBroken = IconData(
     0xe957,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/battery_charging.png)
-  static const DSIcon batteryChargingBroken = _DSIconBroken(
+  static const DSFontIcon batteryChargingBroken = IconData(
     0xe958,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/battery_disable.png)
-  static const DSIcon batteryDisableBroken = _DSIconBroken(
+  static const DSFontIcon batteryDisableBroken = IconData(
     0xe959,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/battery_empty.png)
-  static const DSIcon batteryEmptyBroken = _DSIconBroken(
+  static const DSFontIcon batteryEmptyBroken = IconData(
     0xe95a,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/battery_empty_1.png)
-  static const DSIcon batteryEmpty1Broken = _DSIconBroken(
+  static const DSFontIcon batteryEmpty1Broken = IconData(
     0xe95b,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/battery_full.png)
-  static const DSIcon batteryFullBroken = _DSIconBroken(
+  static const DSFontIcon batteryFullBroken = IconData(
     0xe95c,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/bezier.png)
-  static const DSIcon bezierBroken = _DSIconBroken(
+  static const DSFontIcon bezierBroken = IconData(
     0xe95d,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/bill.png)
-  static const DSIcon billBroken = _DSIconBroken(
+  static const DSFontIcon billBroken = IconData(
     0xe95e,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/bitcoin_card.png)
-  static const DSIcon bitcoinCardBroken = _DSIconBroken(
+  static const DSFontIcon bitcoinCardBroken = IconData(
     0xe95f,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/bitcoin_convert.png)
-  static const DSIcon bitcoinConvertBroken = _DSIconBroken(
+  static const DSFontIcon bitcoinConvertBroken = IconData(
     0xe960,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/bitcoin_refresh.png)
-  static const DSIcon bitcoinRefreshBroken = _DSIconBroken(
+  static const DSFontIcon bitcoinRefreshBroken = IconData(
     0xe961,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/blend.png)
-  static const DSIcon blendBroken = _DSIconBroken(
+  static const DSFontIcon blendBroken = IconData(
     0xe962,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/blend_2.png)
-  static const DSIcon blend2Broken = _DSIconBroken(
+  static const DSFontIcon blend2Broken = IconData(
     0xe963,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/bluetooth.png)
-  static const DSIcon bluetoothBroken = _DSIconBroken(
+  static const DSFontIcon bluetoothBroken = IconData(
     0xe964,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/bluetooth_2.png)
-  static const DSIcon bluetooth2Broken = _DSIconBroken(
+  static const DSFontIcon bluetooth2Broken = IconData(
     0xe965,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/bluetooth_circle.png)
-  static const DSIcon bluetoothCircleBroken = _DSIconBroken(
+  static const DSFontIcon bluetoothCircleBroken = IconData(
     0xe966,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/bluetooth_rectangle.png)
-  static const DSIcon bluetoothRectangleBroken = _DSIconBroken(
+  static const DSFontIcon bluetoothRectangleBroken = IconData(
     0xe967,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/blur.png)
-  static const DSIcon blurBroken = _DSIconBroken(
+  static const DSFontIcon blurBroken = IconData(
     0xe968,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/book.png)
-  static const DSIcon bookBroken = _DSIconBroken(
+  static const DSFontIcon bookBroken = IconData(
     0xe969,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/book_1.png)
-  static const DSIcon book1Broken = _DSIconBroken(
+  static const DSFontIcon book1Broken = IconData(
     0xe96a,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/bookmark.png)
-  static const DSIcon bookmarkBroken = _DSIconBroken(
+  static const DSFontIcon bookmarkBroken = IconData(
     0xe96b,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/bookmark_2.png)
-  static const DSIcon bookmark2Broken = _DSIconBroken(
+  static const DSFontIcon bookmark2Broken = IconData(
     0xe96c,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/book_saved.png)
-  static const DSIcon bookSavedBroken = _DSIconBroken(
+  static const DSFontIcon bookSavedBroken = IconData(
     0xe96d,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/book_square.png)
-  static const DSIcon bookSquareBroken = _DSIconBroken(
+  static const DSFontIcon bookSquareBroken = IconData(
     0xe96e,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/box.png)
-  static const DSIcon boxBroken = _DSIconBroken(
+  static const DSFontIcon boxBroken = IconData(
     0xe96f,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/box_1.png)
-  static const DSIcon box1Broken = _DSIconBroken(
+  static const DSFontIcon box1Broken = IconData(
     0xe970,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/box_2.png)
-  static const DSIcon box2Broken = _DSIconBroken(
+  static const DSFontIcon box2Broken = IconData(
     0xe971,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/box_add.png)
-  static const DSIcon boxAddBroken = _DSIconBroken(
+  static const DSFontIcon boxAddBroken = IconData(
     0xe972,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/box_remove.png)
-  static const DSIcon boxRemoveBroken = _DSIconBroken(
+  static const DSFontIcon boxRemoveBroken = IconData(
     0xe973,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/box_search.png)
-  static const DSIcon boxSearchBroken = _DSIconBroken(
+  static const DSFontIcon boxSearchBroken = IconData(
     0xe974,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/box_tick.png)
-  static const DSIcon boxTickBroken = _DSIconBroken(
+  static const DSFontIcon boxTickBroken = IconData(
     0xe975,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/box_time.png)
-  static const DSIcon boxTimeBroken = _DSIconBroken(
+  static const DSFontIcon boxTimeBroken = IconData(
     0xe976,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/briefcase.png)
-  static const DSIcon briefcaseBroken = _DSIconBroken(
+  static const DSFontIcon briefcaseBroken = IconData(
     0xe977,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/brifecase_cross.png)
-  static const DSIcon brifecaseCrossBroken = _DSIconBroken(
+  static const DSFontIcon brifecaseCrossBroken = IconData(
     0xe978,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/brifecase_tick.png)
-  static const DSIcon brifecaseTickBroken = _DSIconBroken(
+  static const DSFontIcon brifecaseTickBroken = IconData(
     0xe979,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/brifecase_timer.png)
-  static const DSIcon brifecaseTimerBroken = _DSIconBroken(
+  static const DSFontIcon brifecaseTimerBroken = IconData(
     0xe97a,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/broom.png)
-  static const DSIcon broomBroken = _DSIconBroken(
+  static const DSFontIcon broomBroken = IconData(
     0xe97b,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/brush.png)
-  static const DSIcon brushBroken = _DSIconBroken(
+  static const DSFontIcon brushBroken = IconData(
     0xe97c,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/brush_1.png)
-  static const DSIcon brush1Broken = _DSIconBroken(
+  static const DSFontIcon brush1Broken = IconData(
     0xe97d,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/brush_2.png)
-  static const DSIcon brush2Broken = _DSIconBroken(
+  static const DSFontIcon brush2Broken = IconData(
     0xe97e,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/brush_3.png)
-  static const DSIcon brush3Broken = _DSIconBroken(
+  static const DSFontIcon brush3Broken = IconData(
     0xe97f,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/brush_4.png)
-  static const DSIcon brush4Broken = _DSIconBroken(
+  static const DSFontIcon brush4Broken = IconData(
     0xe980,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/bubble.png)
-  static const DSIcon bubbleBroken = _DSIconBroken(
+  static const DSFontIcon bubbleBroken = IconData(
     0xe981,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/bucket.png)
-  static const DSIcon bucketBroken = _DSIconBroken(
+  static const DSFontIcon bucketBroken = IconData(
     0xe982,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/bucket_circle.png)
-  static const DSIcon bucketCircleBroken = _DSIconBroken(
+  static const DSFontIcon bucketCircleBroken = IconData(
     0xe983,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/bucket_square.png)
-  static const DSIcon bucketSquareBroken = _DSIconBroken(
+  static const DSFontIcon bucketSquareBroken = IconData(
     0xe984,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/building.png)
-  static const DSIcon buildingBroken = _DSIconBroken(
+  static const DSFontIcon buildingBroken = IconData(
     0xe985,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/building_3.png)
-  static const DSIcon building3Broken = _DSIconBroken(
+  static const DSFontIcon building3Broken = IconData(
     0xe986,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/building_4.png)
-  static const DSIcon building4Broken = _DSIconBroken(
+  static const DSFontIcon building4Broken = IconData(
     0xe987,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/buildings.png)
-  static const DSIcon buildingsBroken = _DSIconBroken(
+  static const DSFontIcon buildingsBroken = IconData(
     0xe988,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/buildings_2.png)
-  static const DSIcon buildings2Broken = _DSIconBroken(
+  static const DSFontIcon buildings2Broken = IconData(
     0xe989,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/buliding.png)
-  static const DSIcon bulidingBroken = _DSIconBroken(
+  static const DSFontIcon bulidingBroken = IconData(
     0xe98a,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/bus.png)
-  static const DSIcon busBroken = _DSIconBroken(
+  static const DSFontIcon busBroken = IconData(
     0xe98b,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/buy_crypto.png)
-  static const DSIcon buyCryptoBroken = _DSIconBroken(
+  static const DSFontIcon buyCryptoBroken = IconData(
     0xe98c,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/cake.png)
-  static const DSIcon cakeBroken = _DSIconBroken(
+  static const DSFontIcon cakeBroken = IconData(
     0xe98d,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/calculator.png)
-  static const DSIcon calculatorBroken = _DSIconBroken(
+  static const DSFontIcon calculatorBroken = IconData(
     0xe98e,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/calendar.png)
-  static const DSIcon calendarBroken = _DSIconBroken(
+  static const DSFontIcon calendarBroken = IconData(
     0xe98f,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/calendar_1.png)
-  static const DSIcon calendar1Broken = _DSIconBroken(
+  static const DSFontIcon calendar1Broken = IconData(
     0xe990,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/calendar_2.png)
-  static const DSIcon calendar2Broken = _DSIconBroken(
+  static const DSFontIcon calendar2Broken = IconData(
     0xe991,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/calendar_add.png)
-  static const DSIcon calendarAddBroken = _DSIconBroken(
+  static const DSFontIcon calendarAddBroken = IconData(
     0xe992,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/calendar_circle.png)
-  static const DSIcon calendarCircleBroken = _DSIconBroken(
+  static const DSFontIcon calendarCircleBroken = IconData(
     0xe993,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/calendar_edit.png)
-  static const DSIcon calendarEditBroken = _DSIconBroken(
+  static const DSFontIcon calendarEditBroken = IconData(
     0xe994,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/calendar_remove.png)
-  static const DSIcon calendarRemoveBroken = _DSIconBroken(
+  static const DSFontIcon calendarRemoveBroken = IconData(
     0xe995,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/calendar_search.png)
-  static const DSIcon calendarSearchBroken = _DSIconBroken(
+  static const DSFontIcon calendarSearchBroken = IconData(
     0xe996,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/calendar_tick.png)
-  static const DSIcon calendarTickBroken = _DSIconBroken(
+  static const DSFontIcon calendarTickBroken = IconData(
     0xe997,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/call.png)
-  static const DSIcon callBroken = _DSIconBroken(
+  static const DSFontIcon callBroken = IconData(
     0xe998,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/call_add.png)
-  static const DSIcon callAddBroken = _DSIconBroken(
+  static const DSFontIcon callAddBroken = IconData(
     0xe999,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/call_calling.png)
-  static const DSIcon callCallingBroken = _DSIconBroken(
+  static const DSFontIcon callCallingBroken = IconData(
     0xe99a,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/call_incoming.png)
-  static const DSIcon callIncomingBroken = _DSIconBroken(
+  static const DSFontIcon callIncomingBroken = IconData(
     0xe99b,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/call_minus.png)
-  static const DSIcon callMinusBroken = _DSIconBroken(
+  static const DSFontIcon callMinusBroken = IconData(
     0xe99c,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/call_outgoing.png)
-  static const DSIcon callOutgoingBroken = _DSIconBroken(
+  static const DSFontIcon callOutgoingBroken = IconData(
     0xe99d,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/call_received.png)
-  static const DSIcon callReceivedBroken = _DSIconBroken(
+  static const DSFontIcon callReceivedBroken = IconData(
     0xe99e,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/call_remove.png)
-  static const DSIcon callRemoveBroken = _DSIconBroken(
+  static const DSFontIcon callRemoveBroken = IconData(
     0xe99f,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/call_slash.png)
-  static const DSIcon callSlashBroken = _DSIconBroken(
+  static const DSFontIcon callSlashBroken = IconData(
     0xe9a0,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/camera.png)
-  static const DSIcon cameraBroken = _DSIconBroken(
+  static const DSFontIcon cameraBroken = IconData(
     0xe9a1,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/camera_slash.png)
-  static const DSIcon cameraSlashBroken = _DSIconBroken(
+  static const DSFontIcon cameraSlashBroken = IconData(
     0xe9a2,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/candle.png)
-  static const DSIcon candleBroken = _DSIconBroken(
+  static const DSFontIcon candleBroken = IconData(
     0xe9a3,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/candle_2.png)
-  static const DSIcon candle2Broken = _DSIconBroken(
+  static const DSFontIcon candle2Broken = IconData(
     0xe9a4,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/car.png)
-  static const DSIcon carBroken = _DSIconBroken(
+  static const DSFontIcon carBroken = IconData(
     0xe9a5,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/card.png)
-  static const DSIcon cardBroken = _DSIconBroken(
+  static const DSFontIcon cardBroken = IconData(
     0xe9a6,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/card_add.png)
-  static const DSIcon cardAddBroken = _DSIconBroken(
+  static const DSFontIcon cardAddBroken = IconData(
     0xe9a7,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/card_coin.png)
-  static const DSIcon cardCoinBroken = _DSIconBroken(
+  static const DSFontIcon cardCoinBroken = IconData(
     0xe9a8,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/card_edit.png)
-  static const DSIcon cardEditBroken = _DSIconBroken(
+  static const DSFontIcon cardEditBroken = IconData(
     0xe9a9,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/card_pos.png)
-  static const DSIcon cardPosBroken = _DSIconBroken(
+  static const DSFontIcon cardPosBroken = IconData(
     0xe9aa,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/card_receive.png)
-  static const DSIcon cardReceiveBroken = _DSIconBroken(
+  static const DSFontIcon cardReceiveBroken = IconData(
     0xe9ab,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/card_remove.png)
-  static const DSIcon cardRemoveBroken = _DSIconBroken(
+  static const DSFontIcon cardRemoveBroken = IconData(
     0xe9ac,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/card_remove_1.png)
-  static const DSIcon cardRemove1Broken = _DSIconBroken(
+  static const DSFontIcon cardRemove1Broken = IconData(
     0xe9ad,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/cards.png)
-  static const DSIcon cardsBroken = _DSIconBroken(
+  static const DSFontIcon cardsBroken = IconData(
     0xe9ae,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/card_send.png)
-  static const DSIcon cardSendBroken = _DSIconBroken(
+  static const DSFontIcon cardSendBroken = IconData(
     0xe9af,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/card_slash.png)
-  static const DSIcon cardSlashBroken = _DSIconBroken(
+  static const DSFontIcon cardSlashBroken = IconData(
     0xe9b0,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/card_tick.png)
-  static const DSIcon cardTickBroken = _DSIconBroken(
+  static const DSFontIcon cardTickBroken = IconData(
     0xe9b1,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/card_tick_1.png)
-  static const DSIcon cardTick1Broken = _DSIconBroken(
+  static const DSFontIcon cardTick1Broken = IconData(
     0xe9b2,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/category.png)
-  static const DSIcon categoryBroken = _DSIconBroken(
+  static const DSFontIcon categoryBroken = IconData(
     0xe9b3,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/category_2.png)
-  static const DSIcon category2Broken = _DSIconBroken(
+  static const DSFontIcon category2Broken = IconData(
     0xe9b4,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/cd.png)
-  static const DSIcon cdBroken = _DSIconBroken(
+  static const DSFontIcon cdBroken = IconData(
     0xe9b5,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/chart.png)
-  static const DSIcon chartBroken = _DSIconBroken(
+  static const DSFontIcon chartBroken = IconData(
     0xe9b6,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/chart_1.png)
-  static const DSIcon chart1Broken = _DSIconBroken(
+  static const DSFontIcon chart1Broken = IconData(
     0xe9b7,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/chart_2.png)
-  static const DSIcon chart2Broken = _DSIconBroken(
+  static const DSFontIcon chart2Broken = IconData(
     0xe9b8,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/chart_3.png)
-  static const DSIcon chart3Broken = _DSIconBroken(
+  static const DSFontIcon chart3Broken = IconData(
     0xe9b9,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/chart_21.png)
-  static const DSIcon chart21Broken = _DSIconBroken(
+  static const DSFontIcon chart21Broken = IconData(
     0xe9ba,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/chart_fail.png)
-  static const DSIcon chartFailBroken = _DSIconBroken(
+  static const DSFontIcon chartFailBroken = IconData(
     0xe9bb,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/chart_square.png)
-  static const DSIcon chartSquareBroken = _DSIconBroken(
+  static const DSFontIcon chartSquareBroken = IconData(
     0xe9bc,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/chart_success.png)
-  static const DSIcon chartSuccessBroken = _DSIconBroken(
+  static const DSFontIcon chartSuccessBroken = IconData(
     0xe9bd,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/check.png)
-  static const DSIcon checkBroken = _DSIconBroken(
+  static const DSFontIcon checkBroken = IconData(
     0xe9be,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/chrome.png)
-  static const DSIcon chromeBroken = _DSIconBroken(
+  static const DSFontIcon chromeBroken = IconData(
     0xe9bf,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/clipboard.png)
-  static const DSIcon clipboardBroken = _DSIconBroken(
+  static const DSFontIcon clipboardBroken = IconData(
     0xe9c0,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/clipboard_close.png)
-  static const DSIcon clipboardCloseBroken = _DSIconBroken(
+  static const DSFontIcon clipboardCloseBroken = IconData(
     0xe9c1,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/clipboard_export.png)
-  static const DSIcon clipboardExportBroken = _DSIconBroken(
+  static const DSFontIcon clipboardExportBroken = IconData(
     0xe9c2,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/clipboard_import.png)
-  static const DSIcon clipboardImportBroken = _DSIconBroken(
+  static const DSFontIcon clipboardImportBroken = IconData(
     0xe9c3,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/clipboard_text.png)
-  static const DSIcon clipboardTextBroken = _DSIconBroken(
+  static const DSFontIcon clipboardTextBroken = IconData(
     0xe9c4,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/clipboard_tick.png)
-  static const DSIcon clipboardTickBroken = _DSIconBroken(
+  static const DSFontIcon clipboardTickBroken = IconData(
     0xe9c5,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/clock.png)
-  static const DSIcon clockBroken = _DSIconBroken(
+  static const DSFontIcon clockBroken = IconData(
     0xe9c6,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/clock_1.png)
-  static const DSIcon clock1Broken = _DSIconBroken(
+  static const DSFontIcon clock1Broken = IconData(
     0xe9c7,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/close_circle.png)
-  static const DSIcon closeCircleBroken = _DSIconBroken(
+  static const DSFontIcon closeCircleBroken = IconData(
     0xe9c8,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/close_square.png)
-  static const DSIcon closeSquareBroken = _DSIconBroken(
+  static const DSFontIcon closeSquareBroken = IconData(
     0xe9c9,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/cloud.png)
-  static const DSIcon cloudBroken = _DSIconBroken(
+  static const DSFontIcon cloudBroken = IconData(
     0xe9ca,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/cloud_add.png)
-  static const DSIcon cloudAddBroken = _DSIconBroken(
+  static const DSFontIcon cloudAddBroken = IconData(
     0xe9cb,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/cloud_change.png)
-  static const DSIcon cloudChangeBroken = _DSIconBroken(
+  static const DSFontIcon cloudChangeBroken = IconData(
     0xe9cc,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/cloud_connection.png)
-  static const DSIcon cloudConnectionBroken = _DSIconBroken(
+  static const DSFontIcon cloudConnectionBroken = IconData(
     0xe9cd,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/cloud_cross.png)
-  static const DSIcon cloudCrossBroken = _DSIconBroken(
+  static const DSFontIcon cloudCrossBroken = IconData(
     0xe9ce,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/cloud_drizzle.png)
-  static const DSIcon cloudDrizzleBroken = _DSIconBroken(
+  static const DSFontIcon cloudDrizzleBroken = IconData(
     0xe9cf,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/cloud_fog.png)
-  static const DSIcon cloudFogBroken = _DSIconBroken(
+  static const DSFontIcon cloudFogBroken = IconData(
     0xe9d0,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/cloud_lightning.png)
-  static const DSIcon cloudLightningBroken = _DSIconBroken(
+  static const DSFontIcon cloudLightningBroken = IconData(
     0xe9d1,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/cloud_minus.png)
-  static const DSIcon cloudMinusBroken = _DSIconBroken(
+  static const DSFontIcon cloudMinusBroken = IconData(
     0xe9d2,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/cloud_notif.png)
-  static const DSIcon cloudNotifBroken = _DSIconBroken(
+  static const DSFontIcon cloudNotifBroken = IconData(
     0xe9d3,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/cloud_plus.png)
-  static const DSIcon cloudPlusBroken = _DSIconBroken(
+  static const DSFontIcon cloudPlusBroken = IconData(
     0xe9d4,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/cloud_remove.png)
-  static const DSIcon cloudRemoveBroken = _DSIconBroken(
+  static const DSFontIcon cloudRemoveBroken = IconData(
     0xe9d5,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/cloud_snow.png)
-  static const DSIcon cloudSnowBroken = _DSIconBroken(
+  static const DSFontIcon cloudSnowBroken = IconData(
     0xe9d6,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/cloud_sunny.png)
-  static const DSIcon cloudSunnyBroken = _DSIconBroken(
+  static const DSFontIcon cloudSunnyBroken = IconData(
     0xe9d7,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/code.png)
-  static const DSIcon codeBroken = _DSIconBroken(
+  static const DSFontIcon codeBroken = IconData(
     0xe9d8,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/code_1.png)
-  static const DSIcon code1Broken = _DSIconBroken(
+  static const DSFontIcon code1Broken = IconData(
     0xe9d9,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/code_circle.png)
-  static const DSIcon codeCircleBroken = _DSIconBroken(
+  static const DSFontIcon codeCircleBroken = IconData(
     0xe9da,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/coffee.png)
-  static const DSIcon coffeeBroken = _DSIconBroken(
+  static const DSFontIcon coffeeBroken = IconData(
     0xe9db,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/coin.png)
-  static const DSIcon coinBroken = _DSIconBroken(
+  static const DSFontIcon coinBroken = IconData(
     0xe9dc,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/coin_1.png)
-  static const DSIcon coin1Broken = _DSIconBroken(
+  static const DSFontIcon coin1Broken = IconData(
     0xe9dd,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/colorfilter.png)
-  static const DSIcon colorfilterBroken = _DSIconBroken(
+  static const DSFontIcon colorfilterBroken = IconData(
     0xe9de,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/colors_square.png)
-  static const DSIcon colorsSquareBroken = _DSIconBroken(
+  static const DSFontIcon colorsSquareBroken = IconData(
     0xe9df,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/color_swatch.png)
-  static const DSIcon colorSwatchBroken = _DSIconBroken(
+  static const DSFontIcon colorSwatchBroken = IconData(
     0xe9e0,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/command.png)
-  static const DSIcon commandBroken = _DSIconBroken(
+  static const DSFontIcon commandBroken = IconData(
     0xe9e1,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/command_square.png)
-  static const DSIcon commandSquareBroken = _DSIconBroken(
+  static const DSFontIcon commandSquareBroken = IconData(
     0xe9e2,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/component.png)
-  static const DSIcon componentBroken = _DSIconBroken(
+  static const DSFontIcon componentBroken = IconData(
     0xe9e3,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/computing.png)
-  static const DSIcon computingBroken = _DSIconBroken(
+  static const DSFontIcon computingBroken = IconData(
     0xe9e4,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/convert.png)
-  static const DSIcon convertBroken = _DSIconBroken(
+  static const DSFontIcon convertBroken = IconData(
     0xe9e5,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/convert_3d_cube.png)
-  static const DSIcon convert3dCubeBroken = _DSIconBroken(
+  static const DSFontIcon convert3dCubeBroken = IconData(
     0xe9e6,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/convert_card.png)
-  static const DSIcon convertCardBroken = _DSIconBroken(
+  static const DSFontIcon convertCardBroken = IconData(
     0xe9e7,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/convertshape.png)
-  static const DSIcon convertshapeBroken = _DSIconBroken(
+  static const DSFontIcon convertshapeBroken = IconData(
     0xe9e8,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/convertshape_2.png)
-  static const DSIcon convertshape2Broken = _DSIconBroken(
+  static const DSFontIcon convertshape2Broken = IconData(
     0xe9e9,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/copy.png)
-  static const DSIcon copyBroken = _DSIconBroken(
+  static const DSFontIcon copyBroken = IconData(
     0xe9ea,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/copyright.png)
-  static const DSIcon copyrightBroken = _DSIconBroken(
+  static const DSFontIcon copyrightBroken = IconData(
     0xe9eb,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/copy_success.png)
-  static const DSIcon copySuccessBroken = _DSIconBroken(
+  static const DSFontIcon copySuccessBroken = IconData(
     0xe9ec,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/courthouse.png)
-  static const DSIcon courthouseBroken = _DSIconBroken(
+  static const DSFontIcon courthouseBroken = IconData(
     0xe9ed,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/cpu.png)
-  static const DSIcon cpuBroken = _DSIconBroken(
+  static const DSFontIcon cpuBroken = IconData(
     0xe9ee,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/cpu_charge.png)
-  static const DSIcon cpuChargeBroken = _DSIconBroken(
+  static const DSFontIcon cpuChargeBroken = IconData(
     0xe9ef,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/cpu_setting.png)
-  static const DSIcon cpuSettingBroken = _DSIconBroken(
+  static const DSFontIcon cpuSettingBroken = IconData(
     0xe9f0,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/creative_commons.png)
-  static const DSIcon creativeCommonsBroken = _DSIconBroken(
+  static const DSFontIcon creativeCommonsBroken = IconData(
     0xe9f1,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/crop.png)
-  static const DSIcon cropBroken = _DSIconBroken(
+  static const DSFontIcon cropBroken = IconData(
     0xe9f2,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/crown.png)
-  static const DSIcon crownBroken = _DSIconBroken(
+  static const DSFontIcon crownBroken = IconData(
     0xe9f3,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/crown_1.png)
-  static const DSIcon crown1Broken = _DSIconBroken(
+  static const DSFontIcon crown1Broken = IconData(
     0xe9f4,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/cup.png)
-  static const DSIcon cupBroken = _DSIconBroken(
+  static const DSFontIcon cupBroken = IconData(
     0xe9f5,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/danger.png)
-  static const DSIcon dangerBroken = _DSIconBroken(
+  static const DSFontIcon dangerBroken = IconData(
     0xe9f6,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/data.png)
-  static const DSIcon dataBroken = _DSIconBroken(
+  static const DSFontIcon dataBroken = IconData(
     0xe9f7,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/data_2.png)
-  static const DSIcon data2Broken = _DSIconBroken(
+  static const DSFontIcon data2Broken = IconData(
     0xe9f8,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/designtools.png)
-  static const DSIcon designtoolsBroken = _DSIconBroken(
+  static const DSFontIcon designtoolsBroken = IconData(
     0xe9fd,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/device_message.png)
-  static const DSIcon deviceMessageBroken = _DSIconBroken(
+  static const DSFontIcon deviceMessageBroken = IconData(
     0xe9fe,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/devices.png)
-  static const DSIcon devicesBroken = _DSIconBroken(
+  static const DSFontIcon devicesBroken = IconData(
     0xe9ff,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/devices_1.png)
-  static const DSIcon devices1Broken = _DSIconBroken(
+  static const DSFontIcon devices1Broken = IconData(
     0xea00,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/diagram.png)
-  static const DSIcon diagramBroken = _DSIconBroken(
+  static const DSFontIcon diagramBroken = IconData(
     0xea01,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/diamonds.png)
-  static const DSIcon diamondsBroken = _DSIconBroken(
+  static const DSFontIcon diamondsBroken = IconData(
     0xea02,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/direct.png)
-  static const DSIcon directBroken = _DSIconBroken(
+  static const DSFontIcon directBroken = IconData(
     0xea03,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/directbox_default.png)
-  static const DSIcon directboxDefaultBroken = _DSIconBroken(
+  static const DSFontIcon directboxDefaultBroken = IconData(
     0xea04,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/directbox_notif.png)
-  static const DSIcon directboxNotifBroken = _DSIconBroken(
+  static const DSFontIcon directboxNotifBroken = IconData(
     0xea05,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/directbox_receive.png)
-  static const DSIcon directboxReceiveBroken = _DSIconBroken(
+  static const DSFontIcon directboxReceiveBroken = IconData(
     0xea06,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/directbox_send.png)
-  static const DSIcon directboxSendBroken = _DSIconBroken(
+  static const DSFontIcon directboxSendBroken = IconData(
     0xea07,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/direct_down.png)
-  static const DSIcon directDownBroken = _DSIconBroken(
+  static const DSFontIcon directDownBroken = IconData(
     0xea08,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/direct_inbox.png)
-  static const DSIcon directInboxBroken = _DSIconBroken(
+  static const DSFontIcon directInboxBroken = IconData(
     0xea09,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/direct_left.png)
-  static const DSIcon directLeftBroken = _DSIconBroken(
+  static const DSFontIcon directLeftBroken = IconData(
     0xea0a,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/direct_normal.png)
-  static const DSIcon directNormalBroken = _DSIconBroken(
+  static const DSFontIcon directNormalBroken = IconData(
     0xea0b,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/direct_notification.png)
-  static const DSIcon directNotificationBroken = _DSIconBroken(
+  static const DSFontIcon directNotificationBroken = IconData(
     0xea0c,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/direct_right.png)
-  static const DSIcon directRightBroken = _DSIconBroken(
+  static const DSFontIcon directRightBroken = IconData(
     0xea0d,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/direct_send.png)
-  static const DSIcon directSendBroken = _DSIconBroken(
+  static const DSFontIcon directSendBroken = IconData(
     0xea0e,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/direct_up.png)
-  static const DSIcon directUpBroken = _DSIconBroken(
+  static const DSFontIcon directUpBroken = IconData(
     0xea0f,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/discount_circle.png)
-  static const DSIcon discountCircleBroken = _DSIconBroken(
+  static const DSFontIcon discountCircleBroken = IconData(
     0xea10,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/discount_shape.png)
-  static const DSIcon discountShapeBroken = _DSIconBroken(
+  static const DSFontIcon discountShapeBroken = IconData(
     0xea11,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/discover.png)
-  static const DSIcon discoverBroken = _DSIconBroken(
+  static const DSFontIcon discoverBroken = IconData(
     0xea12,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/discover_1.png)
-  static const DSIcon discover1Broken = _DSIconBroken(
+  static const DSFontIcon discover1Broken = IconData(
     0xea13,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/dislike.png)
-  static const DSIcon dislikeBroken = _DSIconBroken(
+  static const DSFontIcon dislikeBroken = IconData(
     0xea14,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/document.png)
-  static const DSIcon documentBroken = _DSIconBroken(
+  static const DSFontIcon documentBroken = IconData(
     0xea15,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/document_1.png)
-  static const DSIcon document1Broken = _DSIconBroken(
+  static const DSFontIcon document1Broken = IconData(
     0xea16,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/document_cloud.png)
-  static const DSIcon documentCloudBroken = _DSIconBroken(
+  static const DSFontIcon documentCloudBroken = IconData(
     0xea17,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/document_code.png)
-  static const DSIcon documentCodeBroken = _DSIconBroken(
+  static const DSFontIcon documentCodeBroken = IconData(
     0xea18,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/document_code_2.png)
-  static const DSIcon documentCode2Broken = _DSIconBroken(
+  static const DSFontIcon documentCode2Broken = IconData(
     0xea19,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/document_copy.png)
-  static const DSIcon documentCopyBroken = _DSIconBroken(
+  static const DSFontIcon documentCopyBroken = IconData(
     0xea1a,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/document_download.png)
-  static const DSIcon documentDownloadBroken = _DSIconBroken(
+  static const DSFontIcon documentDownloadBroken = IconData(
     0xea1b,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/document_favorite.png)
-  static const DSIcon documentFavoriteBroken = _DSIconBroken(
+  static const DSFontIcon documentFavoriteBroken = IconData(
     0xea1c,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/document_filter.png)
-  static const DSIcon documentFilterBroken = _DSIconBroken(
+  static const DSFontIcon documentFilterBroken = IconData(
     0xea1d,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/document_forward.png)
-  static const DSIcon documentForwardBroken = _DSIconBroken(
+  static const DSFontIcon documentForwardBroken = IconData(
     0xea1e,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/document_like.png)
-  static const DSIcon documentLikeBroken = _DSIconBroken(
+  static const DSFontIcon documentLikeBroken = IconData(
     0xea1f,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/document_normal.png)
-  static const DSIcon documentNormalBroken = _DSIconBroken(
+  static const DSFontIcon documentNormalBroken = IconData(
     0xea20,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/document_previous.png)
-  static const DSIcon documentPreviousBroken = _DSIconBroken(
+  static const DSFontIcon documentPreviousBroken = IconData(
     0xea21,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/document_sketch.png)
-  static const DSIcon documentSketchBroken = _DSIconBroken(
+  static const DSFontIcon documentSketchBroken = IconData(
     0xea22,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/document_text.png)
-  static const DSIcon documentTextBroken = _DSIconBroken(
+  static const DSFontIcon documentTextBroken = IconData(
     0xea23,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/document_text_1.png)
-  static const DSIcon documentText1Broken = _DSIconBroken(
+  static const DSFontIcon documentText1Broken = IconData(
     0xea24,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/document_upload.png)
-  static const DSIcon documentUploadBroken = _DSIconBroken(
+  static const DSFontIcon documentUploadBroken = IconData(
     0xea25,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/dollar_circle.png)
-  static const DSIcon dollarCircleBroken = _DSIconBroken(
+  static const DSFontIcon dollarCircleBroken = IconData(
     0xea26,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/dollar_square.png)
-  static const DSIcon dollarSquareBroken = _DSIconBroken(
+  static const DSFontIcon dollarSquareBroken = IconData(
     0xea27,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/driver.png)
-  static const DSIcon driverBroken = _DSIconBroken(
+  static const DSFontIcon driverBroken = IconData(
     0xea28,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/driver_2.png)
-  static const DSIcon driver2Broken = _DSIconBroken(
+  static const DSFontIcon driver2Broken = IconData(
     0xea29,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/driver_refresh.png)
-  static const DSIcon driverRefreshBroken = _DSIconBroken(
+  static const DSFontIcon driverRefreshBroken = IconData(
     0xea2a,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/driving.png)
-  static const DSIcon drivingBroken = _DSIconBroken(
+  static const DSFontIcon drivingBroken = IconData(
     0xea2b,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/drop.png)
-  static const DSIcon dropBroken = _DSIconBroken(
+  static const DSFontIcon dropBroken = IconData(
     0xea2c,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/edit.png)
-  static const DSIcon editBroken = _DSIconBroken(
+  static const DSFontIcon editBroken = IconData(
     0xea2d,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/edit_2.png)
-  static const DSIcon edit2Broken = _DSIconBroken(
+  static const DSFontIcon edit2Broken = IconData(
     0xea2e,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/electricity.png)
-  static const DSIcon electricityBroken = _DSIconBroken(
+  static const DSFontIcon electricityBroken = IconData(
     0xea2f,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/element.png)
-  static const DSIcon elementBroken = _DSIconBroken(
+  static const DSFontIcon elementBroken = IconData(
     0xea30,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/element_1.png)
-  static const DSIcon element1Broken = _DSIconBroken(
+  static const DSFontIcon element1Broken = IconData(
     0xea31,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/element_2.png)
-  static const DSIcon element2Broken = _DSIconBroken(
+  static const DSFontIcon element2Broken = IconData(
     0xea32,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/element_3.png)
-  static const DSIcon element3Broken = _DSIconBroken(
+  static const DSFontIcon element3Broken = IconData(
     0xea33,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/element_equal.png)
-  static const DSIcon elementEqualBroken = _DSIconBroken(
+  static const DSFontIcon elementEqualBroken = IconData(
     0xea34,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/element_plus.png)
-  static const DSIcon elementPlusBroken = _DSIconBroken(
+  static const DSFontIcon elementPlusBroken = IconData(
     0xea35,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/emoji_happy.png)
-  static const DSIcon emojiHappyBroken = _DSIconBroken(
+  static const DSFontIcon emojiHappyBroken = IconData(
     0xea36,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/emoji_normal.png)
-  static const DSIcon emojiNormalBroken = _DSIconBroken(
+  static const DSFontIcon emojiNormalBroken = IconData(
     0xea37,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/emoji_sad.png)
-  static const DSIcon emojiSadBroken = _DSIconBroken(
+  static const DSFontIcon emojiSadBroken = IconData(
     0xea38,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/empty_wallet.png)
-  static const DSIcon emptyWalletBroken = _DSIconBroken(
+  static const DSFontIcon emptyWalletBroken = IconData(
     0xea39,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/empty_wallet_add.png)
-  static const DSIcon emptyWalletAddBroken = _DSIconBroken(
+  static const DSFontIcon emptyWalletAddBroken = IconData(
     0xea3a,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/empty_wallet_change.png)
-  static const DSIcon emptyWalletChangeBroken = _DSIconBroken(
+  static const DSFontIcon emptyWalletChangeBroken = IconData(
     0xea3b,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/empty_wallet_remove.png)
-  static const DSIcon emptyWalletRemoveBroken = _DSIconBroken(
+  static const DSFontIcon emptyWalletRemoveBroken = IconData(
     0xea3c,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/empty_wallet_tick.png)
-  static const DSIcon emptyWalletTickBroken = _DSIconBroken(
+  static const DSFontIcon emptyWalletTickBroken = IconData(
     0xea3d,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/empty_wallet_time.png)
-  static const DSIcon emptyWalletTimeBroken = _DSIconBroken(
+  static const DSFontIcon emptyWalletTimeBroken = IconData(
     0xea3e,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/eraser.png)
-  static const DSIcon eraserBroken = _DSIconBroken(
+  static const DSFontIcon eraserBroken = IconData(
     0xea3f,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/eraser_1.png)
-  static const DSIcon eraser1Broken = _DSIconBroken(
+  static const DSFontIcon eraser1Broken = IconData(
     0xea40,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/export.png)
-  static const DSIcon exportBroken = _DSIconBroken(
+  static const DSFontIcon exportBroken = IconData(
     0xea41,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/export_1.png)
-  static const DSIcon export1Broken = _DSIconBroken(
+  static const DSFontIcon export1Broken = IconData(
     0xea42,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/export_2.png)
-  static const DSIcon export2Broken = _DSIconBroken(
+  static const DSFontIcon export2Broken = IconData(
     0xea43,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/export_3.png)
-  static const DSIcon export3Broken = _DSIconBroken(
+  static const DSFontIcon export3Broken = IconData(
     0xea44,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/external_drive.png)
-  static const DSIcon externalDriveBroken = _DSIconBroken(
+  static const DSFontIcon externalDriveBroken = IconData(
     0xea45,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/eye.png)
-  static const DSIcon eyeBroken = _DSIconBroken(
+  static const DSFontIcon eyeBroken = IconData(
     0xea46,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/eye_slash.png)
-  static const DSIcon eyeSlashBroken = _DSIconBroken(
+  static const DSFontIcon eyeSlashBroken = IconData(
     0xea47,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/fatrows.png)
-  static const DSIcon fatrowsBroken = _DSIconBroken(
+  static const DSFontIcon fatrowsBroken = IconData(
     0xea48,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/favorite_chart.png)
-  static const DSIcon favoriteChartBroken = _DSIconBroken(
+  static const DSFontIcon favoriteChartBroken = IconData(
     0xea49,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/filter.png)
-  static const DSIcon filterBroken = _DSIconBroken(
+  static const DSFontIcon filterBroken = IconData(
     0xea4a,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/filter_add.png)
-  static const DSIcon filterAddBroken = _DSIconBroken(
+  static const DSFontIcon filterAddBroken = IconData(
     0xea4b,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/filter_edit.png)
-  static const DSIcon filterEditBroken = _DSIconBroken(
+  static const DSFontIcon filterEditBroken = IconData(
     0xea4c,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/filter_remove.png)
-  static const DSIcon filterRemoveBroken = _DSIconBroken(
+  static const DSFontIcon filterRemoveBroken = IconData(
     0xea4d,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/filter_search.png)
-  static const DSIcon filterSearchBroken = _DSIconBroken(
+  static const DSFontIcon filterSearchBroken = IconData(
     0xea4e,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/filter_square.png)
-  static const DSIcon filterSquareBroken = _DSIconBroken(
+  static const DSFontIcon filterSquareBroken = IconData(
     0xea4f,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/filter_tick.png)
-  static const DSIcon filterTickBroken = _DSIconBroken(
+  static const DSFontIcon filterTickBroken = IconData(
     0xea50,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/finger_cricle.png)
-  static const DSIcon fingerCricleBroken = _DSIconBroken(
+  static const DSFontIcon fingerCricleBroken = IconData(
     0xea51,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/finger_scan.png)
-  static const DSIcon fingerScanBroken = _DSIconBroken(
+  static const DSFontIcon fingerScanBroken = IconData(
     0xea52,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/firstline.png)
-  static const DSIcon firstlineBroken = _DSIconBroken(
+  static const DSFontIcon firstlineBroken = IconData(
     0xea53,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/flag.png)
-  static const DSIcon flagBroken = _DSIconBroken(
+  static const DSFontIcon flagBroken = IconData(
     0xea54,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/flag_2.png)
-  static const DSIcon flag2Broken = _DSIconBroken(
+  static const DSFontIcon flag2Broken = IconData(
     0xea55,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/flash.png)
-  static const DSIcon flashBroken = _DSIconBroken(
+  static const DSFontIcon flashBroken = IconData(
     0xea56,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/flash_1.png)
-  static const DSIcon flash1Broken = _DSIconBroken(
+  static const DSFontIcon flash1Broken = IconData(
     0xea57,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/flash_circle.png)
-  static const DSIcon flashCircleBroken = _DSIconBroken(
+  static const DSFontIcon flashCircleBroken = IconData(
     0xea58,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/flash_circle_1.png)
-  static const DSIcon flashCircle1Broken = _DSIconBroken(
+  static const DSFontIcon flashCircle1Broken = IconData(
     0xea59,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/flash_slash.png)
-  static const DSIcon flashSlashBroken = _DSIconBroken(
+  static const DSFontIcon flashSlashBroken = IconData(
     0xea5a,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/folder.png)
-  static const DSIcon folderBroken = _DSIconBroken(
+  static const DSFontIcon folderBroken = IconData(
     0xea5b,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/folder_2.png)
-  static const DSIcon folder2Broken = _DSIconBroken(
+  static const DSFontIcon folder2Broken = IconData(
     0xea5c,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/folder_add.png)
-  static const DSIcon folderAddBroken = _DSIconBroken(
+  static const DSFontIcon folderAddBroken = IconData(
     0xea5d,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/folder_cloud.png)
-  static const DSIcon folderCloudBroken = _DSIconBroken(
+  static const DSFontIcon folderCloudBroken = IconData(
     0xea5e,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/folder_connection.png)
-  static const DSIcon folderConnectionBroken = _DSIconBroken(
+  static const DSFontIcon folderConnectionBroken = IconData(
     0xea5f,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/folder_cross.png)
-  static const DSIcon folderCrossBroken = _DSIconBroken(
+  static const DSFontIcon folderCrossBroken = IconData(
     0xea60,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/folder_favorite.png)
-  static const DSIcon folderFavoriteBroken = _DSIconBroken(
+  static const DSFontIcon folderFavoriteBroken = IconData(
     0xea61,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/folder_minus.png)
-  static const DSIcon folderMinusBroken = _DSIconBroken(
+  static const DSFontIcon folderMinusBroken = IconData(
     0xea62,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/folder_open.png)
-  static const DSIcon folderOpenBroken = _DSIconBroken(
+  static const DSFontIcon folderOpenBroken = IconData(
     0xea63,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/forbidden.png)
-  static const DSIcon forbiddenBroken = _DSIconBroken(
+  static const DSFontIcon forbiddenBroken = IconData(
     0xea64,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/forbidden_2.png)
-  static const DSIcon forbidden2Broken = _DSIconBroken(
+  static const DSFontIcon forbidden2Broken = IconData(
     0xea65,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/format_circle.png)
-  static const DSIcon formatCircleBroken = _DSIconBroken(
+  static const DSFontIcon formatCircleBroken = IconData(
     0xea66,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/format_square.png)
-  static const DSIcon formatSquareBroken = _DSIconBroken(
+  static const DSFontIcon formatSquareBroken = IconData(
     0xea67,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/forward.png)
-  static const DSIcon forwardBroken = _DSIconBroken(
+  static const DSFontIcon forwardBroken = IconData(
     0xea68,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/forward_5_seconds.png)
-  static const DSIcon forward5SecondsBroken = _DSIconBroken(
+  static const DSFontIcon forward5SecondsBroken = IconData(
     0xea69,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/forward_10_seconds.png)
-  static const DSIcon forward10SecondsBroken = _DSIconBroken(
+  static const DSFontIcon forward10SecondsBroken = IconData(
     0xea6a,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/forward_15_seconds.png)
-  static const DSIcon forward15SecondsBroken = _DSIconBroken(
+  static const DSFontIcon forward15SecondsBroken = IconData(
     0xea6b,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/forward_item.png)
-  static const DSIcon forwardItemBroken = _DSIconBroken(
+  static const DSFontIcon forwardItemBroken = IconData(
     0xea6c,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/forward_square.png)
-  static const DSIcon forwardSquareBroken = _DSIconBroken(
+  static const DSFontIcon forwardSquareBroken = IconData(
     0xea6d,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/gallery.png)
-  static const DSIcon galleryBroken = _DSIconBroken(
+  static const DSFontIcon galleryBroken = IconData(
     0xea6e,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/gallery_add.png)
-  static const DSIcon galleryAddBroken = _DSIconBroken(
+  static const DSFontIcon galleryAddBroken = IconData(
     0xea6f,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/gallery_edit.png)
-  static const DSIcon galleryEditBroken = _DSIconBroken(
+  static const DSFontIcon galleryEditBroken = IconData(
     0xea70,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/gallery_export.png)
-  static const DSIcon galleryExportBroken = _DSIconBroken(
+  static const DSFontIcon galleryExportBroken = IconData(
     0xea71,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/gallery_favorite.png)
-  static const DSIcon galleryFavoriteBroken = _DSIconBroken(
+  static const DSFontIcon galleryFavoriteBroken = IconData(
     0xea72,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/gallery_import.png)
-  static const DSIcon galleryImportBroken = _DSIconBroken(
+  static const DSFontIcon galleryImportBroken = IconData(
     0xea73,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/gallery_remove.png)
-  static const DSIcon galleryRemoveBroken = _DSIconBroken(
+  static const DSFontIcon galleryRemoveBroken = IconData(
     0xea74,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/gallery_slash.png)
-  static const DSIcon gallerySlashBroken = _DSIconBroken(
+  static const DSFontIcon gallerySlashBroken = IconData(
     0xea75,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/gallery_tick.png)
-  static const DSIcon galleryTickBroken = _DSIconBroken(
+  static const DSFontIcon galleryTickBroken = IconData(
     0xea76,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/game.png)
-  static const DSIcon gameBroken = _DSIconBroken(
+  static const DSFontIcon gameBroken = IconData(
     0xea77,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/gameboy.png)
-  static const DSIcon gameboyBroken = _DSIconBroken(
+  static const DSFontIcon gameboyBroken = IconData(
     0xea78,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/gas_station.png)
-  static const DSIcon gasStationBroken = _DSIconBroken(
+  static const DSFontIcon gasStationBroken = IconData(
     0xea79,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/gemini.png)
-  static const DSIcon geminiBroken = _DSIconBroken(
+  static const DSFontIcon geminiBroken = IconData(
     0xea7a,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/gemini_2.png)
-  static const DSIcon gemini2Broken = _DSIconBroken(
+  static const DSFontIcon gemini2Broken = IconData(
     0xea7b,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/ghost.png)
-  static const DSIcon ghostBroken = _DSIconBroken(
+  static const DSFontIcon ghostBroken = IconData(
     0xea7c,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/gift.png)
-  static const DSIcon giftBroken = _DSIconBroken(
+  static const DSFontIcon giftBroken = IconData(
     0xea7d,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/glass.png)
-  static const DSIcon glassBroken = _DSIconBroken(
+  static const DSFontIcon glassBroken = IconData(
     0xea7e,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/glass_1.png)
-  static const DSIcon glass1Broken = _DSIconBroken(
+  static const DSFontIcon glass1Broken = IconData(
     0xea7f,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/global.png)
-  static const DSIcon globalBroken = _DSIconBroken(
+  static const DSFontIcon globalBroken = IconData(
     0xea80,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/global_edit.png)
-  static const DSIcon globalEditBroken = _DSIconBroken(
+  static const DSFontIcon globalEditBroken = IconData(
     0xea81,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/global_refresh.png)
-  static const DSIcon globalRefreshBroken = _DSIconBroken(
+  static const DSFontIcon globalRefreshBroken = IconData(
     0xea82,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/global_search.png)
-  static const DSIcon globalSearchBroken = _DSIconBroken(
+  static const DSFontIcon globalSearchBroken = IconData(
     0xea83,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/gps.png)
-  static const DSIcon gpsBroken = _DSIconBroken(
+  static const DSFontIcon gpsBroken = IconData(
     0xea84,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/gps_slash.png)
-  static const DSIcon gpsSlashBroken = _DSIconBroken(
+  static const DSFontIcon gpsSlashBroken = IconData(
     0xea85,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/grammerly.png)
-  static const DSIcon grammerlyBroken = _DSIconBroken(
+  static const DSFontIcon grammerlyBroken = IconData(
     0xea86,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/graph.png)
-  static const DSIcon graphBroken = _DSIconBroken(
+  static const DSFontIcon graphBroken = IconData(
     0xea87,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/grid_1.png)
-  static const DSIcon grid1Broken = _DSIconBroken(
+  static const DSFontIcon grid1Broken = IconData(
     0xea88,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/grid_2.png)
-  static const DSIcon grid2Broken = _DSIconBroken(
+  static const DSFontIcon grid2Broken = IconData(
     0xea89,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/grid_3.png)
-  static const DSIcon grid3Broken = _DSIconBroken(
+  static const DSFontIcon grid3Broken = IconData(
     0xea8a,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/grid_4.png)
-  static const DSIcon grid4Broken = _DSIconBroken(
+  static const DSFontIcon grid4Broken = IconData(
     0xea8b,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/grid_5.png)
-  static const DSIcon grid5Broken = _DSIconBroken(
+  static const DSFontIcon grid5Broken = IconData(
     0xea8c,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/grid_6.png)
-  static const DSIcon grid6Broken = _DSIconBroken(
+  static const DSFontIcon grid6Broken = IconData(
     0xea8d,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/grid_7.png)
-  static const DSIcon grid7Broken = _DSIconBroken(
+  static const DSFontIcon grid7Broken = IconData(
     0xea8e,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/grid_8.png)
-  static const DSIcon grid8Broken = _DSIconBroken(
+  static const DSFontIcon grid8Broken = IconData(
     0xea8f,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/grid_9.png)
-  static const DSIcon grid9Broken = _DSIconBroken(
+  static const DSFontIcon grid9Broken = IconData(
     0xea90,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/grid_edit.png)
-  static const DSIcon gridEditBroken = _DSIconBroken(
+  static const DSFontIcon gridEditBroken = IconData(
     0xea91,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/grid_eraser.png)
-  static const DSIcon gridEraserBroken = _DSIconBroken(
+  static const DSFontIcon gridEraserBroken = IconData(
     0xea92,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/grid_lock.png)
-  static const DSIcon gridLockBroken = _DSIconBroken(
+  static const DSFontIcon gridLockBroken = IconData(
     0xea93,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/happyemoji.png)
-  static const DSIcon happyemojiBroken = _DSIconBroken(
+  static const DSFontIcon happyemojiBroken = IconData(
     0xea94,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/hashtag.png)
-  static const DSIcon hashtagBroken = _DSIconBroken(
+  static const DSFontIcon hashtagBroken = IconData(
     0xea95,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/hashtag_1.png)
-  static const DSIcon hashtag1Broken = _DSIconBroken(
+  static const DSFontIcon hashtag1Broken = IconData(
     0xea96,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/hashtag_down.png)
-  static const DSIcon hashtagDownBroken = _DSIconBroken(
+  static const DSFontIcon hashtagDownBroken = IconData(
     0xea97,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/hashtag_up.png)
-  static const DSIcon hashtagUpBroken = _DSIconBroken(
+  static const DSFontIcon hashtagUpBroken = IconData(
     0xea98,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/headphone.png)
-  static const DSIcon headphoneBroken = _DSIconBroken(
+  static const DSFontIcon headphoneBroken = IconData(
     0xea99,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/headphones.png)
-  static const DSIcon headphonesBroken = _DSIconBroken(
+  static const DSFontIcon headphonesBroken = IconData(
     0xea9a,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/health.png)
-  static const DSIcon healthBroken = _DSIconBroken(
+  static const DSFontIcon healthBroken = IconData(
     0xea9b,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/heart.png)
-  static const DSIcon heartBroken = _DSIconBroken(
+  static const DSFontIcon heartBroken = IconData(
     0xea9c,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/heart_add.png)
-  static const DSIcon heartAddBroken = _DSIconBroken(
+  static const DSFontIcon heartAddBroken = IconData(
     0xea9d,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/heart_circle.png)
-  static const DSIcon heartCircleBroken = _DSIconBroken(
+  static const DSFontIcon heartCircleBroken = IconData(
     0xea9e,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/heart_edit.png)
-  static const DSIcon heartEditBroken = _DSIconBroken(
+  static const DSFontIcon heartEditBroken = IconData(
     0xea9f,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/heart_remove.png)
-  static const DSIcon heartRemoveBroken = _DSIconBroken(
+  static const DSFontIcon heartRemoveBroken = IconData(
     0xeaa0,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/heart_search.png)
-  static const DSIcon heartSearchBroken = _DSIconBroken(
+  static const DSFontIcon heartSearchBroken = IconData(
     0xeaa1,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/heart_slash.png)
-  static const DSIcon heartSlashBroken = _DSIconBroken(
+  static const DSFontIcon heartSlashBroken = IconData(
     0xeaa2,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/heart_tick.png)
-  static const DSIcon heartTickBroken = _DSIconBroken(
+  static const DSFontIcon heartTickBroken = IconData(
     0xeaa3,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/hierarchy.png)
-  static const DSIcon hierarchyBroken = _DSIconBroken(
+  static const DSFontIcon hierarchyBroken = IconData(
     0xeaa4,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/hierarchy_2.png)
-  static const DSIcon hierarchy2Broken = _DSIconBroken(
+  static const DSFontIcon hierarchy2Broken = IconData(
     0xeaa5,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/hierarchy_3.png)
-  static const DSIcon hierarchy3Broken = _DSIconBroken(
+  static const DSFontIcon hierarchy3Broken = IconData(
     0xeaa6,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/hierarchy_square.png)
-  static const DSIcon hierarchySquareBroken = _DSIconBroken(
+  static const DSFontIcon hierarchySquareBroken = IconData(
     0xeaa7,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/hierarchy_square_2.png)
-  static const DSIcon hierarchySquare2Broken = _DSIconBroken(
+  static const DSFontIcon hierarchySquare2Broken = IconData(
     0xeaa8,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/hierarchy_square_3.png)
-  static const DSIcon hierarchySquare3Broken = _DSIconBroken(
+  static const DSFontIcon hierarchySquare3Broken = IconData(
     0xeaa9,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/home.png)
-  static const DSIcon homeBroken = _DSIconBroken(
+  static const DSFontIcon homeBroken = IconData(
     0xeaaa,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/home_1.png)
-  static const DSIcon home1Broken = _DSIconBroken(
+  static const DSFontIcon home1Broken = IconData(
     0xeaab,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/home_2.png)
-  static const DSIcon home2Broken = _DSIconBroken(
+  static const DSFontIcon home2Broken = IconData(
     0xeaac,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/home_hashtag.png)
-  static const DSIcon homeHashtagBroken = _DSIconBroken(
+  static const DSFontIcon homeHashtagBroken = IconData(
     0xeaad,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/home_trend_down.png)
-  static const DSIcon homeTrendDownBroken = _DSIconBroken(
+  static const DSFontIcon homeTrendDownBroken = IconData(
     0xeaae,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/home_trend_up.png)
-  static const DSIcon homeTrendUpBroken = _DSIconBroken(
+  static const DSFontIcon homeTrendUpBroken = IconData(
     0xeaaf,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/home_wifi.png)
-  static const DSIcon homeWifiBroken = _DSIconBroken(
+  static const DSFontIcon homeWifiBroken = IconData(
     0xeab0,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/hospital.png)
-  static const DSIcon hospitalBroken = _DSIconBroken(
+  static const DSFontIcon hospitalBroken = IconData(
     0xeab1,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/house.png)
-  static const DSIcon houseBroken = _DSIconBroken(
+  static const DSFontIcon houseBroken = IconData(
     0xeab2,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/house_2.png)
-  static const DSIcon house2Broken = _DSIconBroken(
+  static const DSFontIcon house2Broken = IconData(
     0xeab3,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/image.png)
-  static const DSIcon imageBroken = _DSIconBroken(
+  static const DSFontIcon imageBroken = IconData(
     0xeab4,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/import.png)
-  static const DSIcon importBroken = _DSIconBroken(
+  static const DSFontIcon importBroken = IconData(
     0xeab5,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/import_1.png)
-  static const DSIcon import1Broken = _DSIconBroken(
+  static const DSFontIcon import1Broken = IconData(
     0xeab6,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/import_2.png)
-  static const DSIcon import2Broken = _DSIconBroken(
+  static const DSFontIcon import2Broken = IconData(
     0xeab7,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/import_3.png)
-  static const DSIcon import3Broken = _DSIconBroken(
+  static const DSFontIcon import3Broken = IconData(
     0xeab8,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/info_circle.png)
-  static const DSIcon infoCircleBroken = _DSIconBroken(
+  static const DSFontIcon infoCircleBroken = IconData(
     0xeab9,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/information.png)
-  static const DSIcon informationBroken = _DSIconBroken(
+  static const DSFontIcon informationBroken = IconData(
     0xeaba,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/instagram.png)
-  static const DSIcon instagramBroken = _DSIconBroken(
+  static const DSFontIcon instagramBroken = IconData(
     0xeabb,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/judge.png)
-  static const DSIcon judgeBroken = _DSIconBroken(
+  static const DSFontIcon judgeBroken = IconData(
     0xeabc,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/kanban.png)
-  static const DSIcon kanbanBroken = _DSIconBroken(
+  static const DSFontIcon kanbanBroken = IconData(
     0xeabd,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/key.png)
-  static const DSIcon keyBroken = _DSIconBroken(
+  static const DSFontIcon keyBroken = IconData(
     0xeabe,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/keyboard.png)
-  static const DSIcon keyboardBroken = _DSIconBroken(
+  static const DSFontIcon keyboardBroken = IconData(
     0xeabf,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/keyboard_open.png)
-  static const DSIcon keyboardOpenBroken = _DSIconBroken(
+  static const DSFontIcon keyboardOpenBroken = IconData(
     0xeac0,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/key_square.png)
-  static const DSIcon keySquareBroken = _DSIconBroken(
+  static const DSFontIcon keySquareBroken = IconData(
     0xeac1,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/lamp.png)
-  static const DSIcon lampBroken = _DSIconBroken(
+  static const DSFontIcon lampBroken = IconData(
     0xeac2,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/lamp_1.png)
-  static const DSIcon lamp1Broken = _DSIconBroken(
+  static const DSFontIcon lamp1Broken = IconData(
     0xeac3,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/lamp_charge.png)
-  static const DSIcon lampChargeBroken = _DSIconBroken(
+  static const DSFontIcon lampChargeBroken = IconData(
     0xeac4,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/lamp_on.png)
-  static const DSIcon lampOnBroken = _DSIconBroken(
+  static const DSFontIcon lampOnBroken = IconData(
     0xeac5,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/lamp_slash.png)
-  static const DSIcon lampSlashBroken = _DSIconBroken(
+  static const DSFontIcon lampSlashBroken = IconData(
     0xeac6,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/language_circle.png)
-  static const DSIcon languageCircleBroken = _DSIconBroken(
+  static const DSFontIcon languageCircleBroken = IconData(
     0xeac7,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/language_square.png)
-  static const DSIcon languageSquareBroken = _DSIconBroken(
+  static const DSFontIcon languageSquareBroken = IconData(
     0xeac8,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/layer.png)
-  static const DSIcon layerBroken = _DSIconBroken(
+  static const DSFontIcon layerBroken = IconData(
     0xeac9,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/level.png)
-  static const DSIcon levelBroken = _DSIconBroken(
+  static const DSFontIcon levelBroken = IconData(
     0xeaca,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/lifebuoy.png)
-  static const DSIcon lifebuoyBroken = _DSIconBroken(
+  static const DSFontIcon lifebuoyBroken = IconData(
     0xeacb,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/like.png)
-  static const DSIcon likeBroken = _DSIconBroken(
+  static const DSFontIcon likeBroken = IconData(
     0xeacc,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/like_1.png)
-  static const DSIcon like1Broken = _DSIconBroken(
+  static const DSFontIcon like1Broken = IconData(
     0xeacd,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/like_dislike.png)
-  static const DSIcon likeDislikeBroken = _DSIconBroken(
+  static const DSFontIcon likeDislikeBroken = IconData(
     0xeace,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/like_shapes.png)
-  static const DSIcon likeShapesBroken = _DSIconBroken(
+  static const DSFontIcon likeShapesBroken = IconData(
     0xeacf,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/like_tag.png)
-  static const DSIcon likeTagBroken = _DSIconBroken(
+  static const DSFontIcon likeTagBroken = IconData(
     0xead0,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/link.png)
-  static const DSIcon linkBroken = _DSIconBroken(
+  static const DSFontIcon linkBroken = IconData(
     0xead1,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/link_1.png)
-  static const DSIcon link1Broken = _DSIconBroken(
+  static const DSFontIcon link1Broken = IconData(
     0xead2,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/link_2.png)
-  static const DSIcon link2Broken = _DSIconBroken(
+  static const DSFontIcon link2Broken = IconData(
     0xead3,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/link_21.png)
-  static const DSIcon link21Broken = _DSIconBroken(
+  static const DSFontIcon link21Broken = IconData(
     0xead4,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/link_circle.png)
-  static const DSIcon linkCircleBroken = _DSIconBroken(
+  static const DSFontIcon linkCircleBroken = IconData(
     0xead5,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/link_square.png)
-  static const DSIcon linkSquareBroken = _DSIconBroken(
+  static const DSFontIcon linkSquareBroken = IconData(
     0xead6,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/location.png)
-  static const DSIcon locationBroken = _DSIconBroken(
+  static const DSFontIcon locationBroken = IconData(
     0xead7,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/location_add.png)
-  static const DSIcon locationAddBroken = _DSIconBroken(
+  static const DSFontIcon locationAddBroken = IconData(
     0xead8,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/location_cross.png)
-  static const DSIcon locationCrossBroken = _DSIconBroken(
+  static const DSFontIcon locationCrossBroken = IconData(
     0xead9,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/location_minus.png)
-  static const DSIcon locationMinusBroken = _DSIconBroken(
+  static const DSFontIcon locationMinusBroken = IconData(
     0xeada,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/location_slash.png)
-  static const DSIcon locationSlashBroken = _DSIconBroken(
+  static const DSFontIcon locationSlashBroken = IconData(
     0xeadb,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/location_tick.png)
-  static const DSIcon locationTickBroken = _DSIconBroken(
+  static const DSFontIcon locationTickBroken = IconData(
     0xeadc,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/lock.png)
-  static const DSIcon lockBroken = _DSIconBroken(
+  static const DSFontIcon lockBroken = IconData(
     0xeadd,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/lock_1.png)
-  static const DSIcon lock1Broken = _DSIconBroken(
+  static const DSFontIcon lock1Broken = IconData(
     0xeade,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/lock_circle.png)
-  static const DSIcon lockCircleBroken = _DSIconBroken(
+  static const DSFontIcon lockCircleBroken = IconData(
     0xeadf,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/lock_slash.png)
-  static const DSIcon lockSlashBroken = _DSIconBroken(
+  static const DSFontIcon lockSlashBroken = IconData(
     0xeae0,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/login.png)
-  static const DSIcon loginBroken = _DSIconBroken(
+  static const DSFontIcon loginBroken = IconData(
     0xeae1,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/login_1.png)
-  static const DSIcon login1Broken = _DSIconBroken(
+  static const DSFontIcon login1Broken = IconData(
     0xeae2,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/logout.png)
-  static const DSIcon logoutBroken = _DSIconBroken(
+  static const DSFontIcon logoutBroken = IconData(
     0xeae3,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/logout_1.png)
-  static const DSIcon logout1Broken = _DSIconBroken(
+  static const DSFontIcon logout1Broken = IconData(
     0xeae4,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/lovely.png)
-  static const DSIcon lovelyBroken = _DSIconBroken(
+  static const DSFontIcon lovelyBroken = IconData(
     0xeae5,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/magicpen.png)
-  static const DSIcon magicpenBroken = _DSIconBroken(
+  static const DSFontIcon magicpenBroken = IconData(
     0xeae6,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/magic_star.png)
-  static const DSIcon magicStarBroken = _DSIconBroken(
+  static const DSFontIcon magicStarBroken = IconData(
     0xeae7,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/main_component.png)
-  static const DSIcon mainComponentBroken = _DSIconBroken(
+  static const DSFontIcon mainComponentBroken = IconData(
     0xeae8,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/man.png)
-  static const DSIcon manBroken = _DSIconBroken(
+  static const DSFontIcon manBroken = IconData(
     0xeae9,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/map.png)
-  static const DSIcon mapBroken = _DSIconBroken(
+  static const DSFontIcon mapBroken = IconData(
     0xeaea,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/map_1.png)
-  static const DSIcon map1Broken = _DSIconBroken(
+  static const DSFontIcon map1Broken = IconData(
     0xeaeb,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/mask.png)
-  static const DSIcon maskBroken = _DSIconBroken(
+  static const DSFontIcon maskBroken = IconData(
     0xeaec,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/mask_1.png)
-  static const DSIcon mask1Broken = _DSIconBroken(
+  static const DSFontIcon mask1Broken = IconData(
     0xeaed,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/mask_2.png)
-  static const DSIcon mask2Broken = _DSIconBroken(
+  static const DSFontIcon mask2Broken = IconData(
     0xeaee,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/math.png)
-  static const DSIcon mathBroken = _DSIconBroken(
+  static const DSFontIcon mathBroken = IconData(
     0xeaef,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/maximize.png)
-  static const DSIcon maximizeBroken = _DSIconBroken(
+  static const DSFontIcon maximizeBroken = IconData(
     0xeaf0,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/maximize_1.png)
-  static const DSIcon maximize1Broken = _DSIconBroken(
+  static const DSFontIcon maximize1Broken = IconData(
     0xeaf1,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/maximize_2.png)
-  static const DSIcon maximize2Broken = _DSIconBroken(
+  static const DSFontIcon maximize2Broken = IconData(
     0xeaf2,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/maximize_3.png)
-  static const DSIcon maximize3Broken = _DSIconBroken(
+  static const DSFontIcon maximize3Broken = IconData(
     0xeaf3,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/maximize_4.png)
-  static const DSIcon maximize4Broken = _DSIconBroken(
+  static const DSFontIcon maximize4Broken = IconData(
     0xeaf4,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/maximize_21.png)
-  static const DSIcon maximize21Broken = _DSIconBroken(
+  static const DSFontIcon maximize21Broken = IconData(
     0xeaf5,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/maximize_circle.png)
-  static const DSIcon maximizeCircleBroken = _DSIconBroken(
+  static const DSFontIcon maximizeCircleBroken = IconData(
     0xeaf6,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/medal.png)
-  static const DSIcon medalBroken = _DSIconBroken(
+  static const DSFontIcon medalBroken = IconData(
     0xeaf7,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/medal_star.png)
-  static const DSIcon medalStarBroken = _DSIconBroken(
+  static const DSFontIcon medalStarBroken = IconData(
     0xeaf8,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/menu.png)
-  static const DSIcon menuBroken = _DSIconBroken(
+  static const DSFontIcon menuBroken = IconData(
     0xeaf9,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/menu_1.png)
-  static const DSIcon menu1Broken = _DSIconBroken(
+  static const DSFontIcon menu1Broken = IconData(
     0xeafa,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/menu_board.png)
-  static const DSIcon menuBoardBroken = _DSIconBroken(
+  static const DSFontIcon menuBoardBroken = IconData(
     0xeafb,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/message.png)
-  static const DSIcon messageBroken = _DSIconBroken(
+  static const DSFontIcon messageBroken = IconData(
     0xeafc,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/message_2.png)
-  static const DSIcon message2Broken = _DSIconBroken(
+  static const DSFontIcon message2Broken = IconData(
     0xeafd,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/message_add.png)
-  static const DSIcon messageAddBroken = _DSIconBroken(
+  static const DSFontIcon messageAddBroken = IconData(
     0xeafe,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/message_add_1.png)
-  static const DSIcon messageAdd1Broken = _DSIconBroken(
+  static const DSFontIcon messageAdd1Broken = IconData(
     0xeaff,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/message_circle.png)
-  static const DSIcon messageCircleBroken = _DSIconBroken(
+  static const DSFontIcon messageCircleBroken = IconData(
     0xeb00,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/message_edit.png)
-  static const DSIcon messageEditBroken = _DSIconBroken(
+  static const DSFontIcon messageEditBroken = IconData(
     0xeb01,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/message_favorite.png)
-  static const DSIcon messageFavoriteBroken = _DSIconBroken(
+  static const DSFontIcon messageFavoriteBroken = IconData(
     0xeb02,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/message_minus.png)
-  static const DSIcon messageMinusBroken = _DSIconBroken(
+  static const DSFontIcon messageMinusBroken = IconData(
     0xeb03,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/message_notif.png)
-  static const DSIcon messageNotifBroken = _DSIconBroken(
+  static const DSFontIcon messageNotifBroken = IconData(
     0xeb04,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/message_programming.png)
-  static const DSIcon messageProgrammingBroken = _DSIconBroken(
+  static const DSFontIcon messageProgrammingBroken = IconData(
     0xeb05,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/message_question.png)
-  static const DSIcon messageQuestionBroken = _DSIconBroken(
+  static const DSFontIcon messageQuestionBroken = IconData(
     0xeb06,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/message_remove.png)
-  static const DSIcon messageRemoveBroken = _DSIconBroken(
+  static const DSFontIcon messageRemoveBroken = IconData(
     0xeb07,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/messages.png)
-  static const DSIcon messagesBroken = _DSIconBroken(
+  static const DSFontIcon messagesBroken = IconData(
     0xeb08,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/messages_1.png)
-  static const DSIcon messages1Broken = _DSIconBroken(
+  static const DSFontIcon messages1Broken = IconData(
     0xeb09,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/messages_2.png)
-  static const DSIcon messages2Broken = _DSIconBroken(
+  static const DSFontIcon messages2Broken = IconData(
     0xeb0a,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/messages_3.png)
-  static const DSIcon messages3Broken = _DSIconBroken(
+  static const DSFontIcon messages3Broken = IconData(
     0xeb0b,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/message_search.png)
-  static const DSIcon messageSearchBroken = _DSIconBroken(
+  static const DSFontIcon messageSearchBroken = IconData(
     0xeb0c,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/message_square.png)
-  static const DSIcon messageSquareBroken = _DSIconBroken(
+  static const DSFontIcon messageSquareBroken = IconData(
     0xeb0d,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/message_text.png)
-  static const DSIcon messageTextBroken = _DSIconBroken(
+  static const DSFontIcon messageTextBroken = IconData(
     0xeb0e,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/message_text_1.png)
-  static const DSIcon messageText1Broken = _DSIconBroken(
+  static const DSFontIcon messageText1Broken = IconData(
     0xeb0f,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/message_tick.png)
-  static const DSIcon messageTickBroken = _DSIconBroken(
+  static const DSFontIcon messageTickBroken = IconData(
     0xeb10,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/message_time.png)
-  static const DSIcon messageTimeBroken = _DSIconBroken(
+  static const DSFontIcon messageTimeBroken = IconData(
     0xeb11,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/microphone.png)
-  static const DSIcon microphoneBroken = _DSIconBroken(
+  static const DSFontIcon microphoneBroken = IconData(
     0xeb12,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/microphone_2.png)
-  static const DSIcon microphone2Broken = _DSIconBroken(
+  static const DSFontIcon microphone2Broken = IconData(
     0xeb13,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/microphone_slash.png)
-  static const DSIcon microphoneSlashBroken = _DSIconBroken(
+  static const DSFontIcon microphoneSlashBroken = IconData(
     0xeb14,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/microphone_slash_1.png)
-  static const DSIcon microphoneSlash1Broken = _DSIconBroken(
+  static const DSFontIcon microphoneSlash1Broken = IconData(
     0xeb15,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/microscope.png)
-  static const DSIcon microscopeBroken = _DSIconBroken(
+  static const DSFontIcon microscopeBroken = IconData(
     0xeb16,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/milk.png)
-  static const DSIcon milkBroken = _DSIconBroken(
+  static const DSFontIcon milkBroken = IconData(
     0xeb17,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/mini_music_sqaure.png)
-  static const DSIcon miniMusicSqaureBroken = _DSIconBroken(
+  static const DSFontIcon miniMusicSqaureBroken = IconData(
     0xeb18,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/minus.png)
-  static const DSIcon minusBroken = _DSIconBroken(
+  static const DSFontIcon minusBroken = IconData(
     0xeb1b,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/minus_cirlce.png)
-  static const DSIcon minusCirlceBroken = _DSIconBroken(
+  static const DSFontIcon minusCirlceBroken = IconData(
     0xeb1c,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/minus_square.png)
-  static const DSIcon minusSquareBroken = _DSIconBroken(
+  static const DSFontIcon minusSquareBroken = IconData(
     0xeb1d,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/mirror.png)
-  static const DSIcon mirrorBroken = _DSIconBroken(
+  static const DSFontIcon mirrorBroken = IconData(
     0xeb1e,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/mirroring_screen.png)
-  static const DSIcon mirroringScreenBroken = _DSIconBroken(
+  static const DSFontIcon mirroringScreenBroken = IconData(
     0xeb1f,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/mobile.png)
-  static const DSIcon mobileBroken = _DSIconBroken(
+  static const DSFontIcon mobileBroken = IconData(
     0xeb20,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/mobile_programming.png)
-  static const DSIcon mobileProgrammingBroken = _DSIconBroken(
+  static const DSFontIcon mobileProgrammingBroken = IconData(
     0xeb21,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/money.png)
-  static const DSIcon moneyBroken = _DSIconBroken(
+  static const DSFontIcon moneyBroken = IconData(
     0xeb22,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/money_2.png)
-  static const DSIcon money2Broken = _DSIconBroken(
+  static const DSFontIcon money2Broken = IconData(
     0xeb23,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/money_3.png)
-  static const DSIcon money3Broken = _DSIconBroken(
+  static const DSFontIcon money3Broken = IconData(
     0xeb24,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/money_4.png)
-  static const DSIcon money4Broken = _DSIconBroken(
+  static const DSFontIcon money4Broken = IconData(
     0xeb25,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/money_add.png)
-  static const DSIcon moneyAddBroken = _DSIconBroken(
+  static const DSFontIcon moneyAddBroken = IconData(
     0xeb26,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/money_change.png)
-  static const DSIcon moneyChangeBroken = _DSIconBroken(
+  static const DSFontIcon moneyChangeBroken = IconData(
     0xeb27,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/money_forbidden.png)
-  static const DSIcon moneyForbiddenBroken = _DSIconBroken(
+  static const DSFontIcon moneyForbiddenBroken = IconData(
     0xeb28,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/money_recive.png)
-  static const DSIcon moneyReciveBroken = _DSIconBroken(
+  static const DSFontIcon moneyReciveBroken = IconData(
     0xeb29,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/money_remove.png)
-  static const DSIcon moneyRemoveBroken = _DSIconBroken(
+  static const DSFontIcon moneyRemoveBroken = IconData(
     0xeb2a,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/moneys.png)
-  static const DSIcon moneysBroken = _DSIconBroken(
+  static const DSFontIcon moneysBroken = IconData(
     0xeb2b,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/money_send.png)
-  static const DSIcon moneySendBroken = _DSIconBroken(
+  static const DSFontIcon moneySendBroken = IconData(
     0xeb2c,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/money_tick.png)
-  static const DSIcon moneyTickBroken = _DSIconBroken(
+  static const DSFontIcon moneyTickBroken = IconData(
     0xeb2d,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/money_time.png)
-  static const DSIcon moneyTimeBroken = _DSIconBroken(
+  static const DSFontIcon moneyTimeBroken = IconData(
     0xeb2e,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/monitor.png)
-  static const DSIcon monitorBroken = _DSIconBroken(
+  static const DSFontIcon monitorBroken = IconData(
     0xeb2f,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/monitor_mobbile.png)
-  static const DSIcon monitorMobbileBroken = _DSIconBroken(
+  static const DSFontIcon monitorMobbileBroken = IconData(
     0xeb30,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/monitor_recorder.png)
-  static const DSIcon monitorRecorderBroken = _DSIconBroken(
+  static const DSFontIcon monitorRecorderBroken = IconData(
     0xeb31,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/moon.png)
-  static const DSIcon moonBroken = _DSIconBroken(
+  static const DSFontIcon moonBroken = IconData(
     0xeb32,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/more.png)
-  static const DSIcon moreBroken = _DSIconBroken(
+  static const DSFontIcon moreBroken = IconData(
     0xeb33,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/more_2.png)
-  static const DSIcon more2Broken = _DSIconBroken(
+  static const DSFontIcon more2Broken = IconData(
     0xeb34,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/more_circle.png)
-  static const DSIcon moreCircleBroken = _DSIconBroken(
+  static const DSFontIcon moreCircleBroken = IconData(
     0xeb35,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/more_square.png)
-  static const DSIcon moreSquareBroken = _DSIconBroken(
+  static const DSFontIcon moreSquareBroken = IconData(
     0xeb36,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/mouse.png)
-  static const DSIcon mouseBroken = _DSIconBroken(
+  static const DSFontIcon mouseBroken = IconData(
     0xeb37,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/mouse_1.png)
-  static const DSIcon mouse1Broken = _DSIconBroken(
+  static const DSFontIcon mouse1Broken = IconData(
     0xeb38,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/mouse_circle.png)
-  static const DSIcon mouseCircleBroken = _DSIconBroken(
+  static const DSFontIcon mouseCircleBroken = IconData(
     0xeb39,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/mouse_square.png)
-  static const DSIcon mouseSquareBroken = _DSIconBroken(
+  static const DSFontIcon mouseSquareBroken = IconData(
     0xeb3a,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/music.png)
-  static const DSIcon musicBroken = _DSIconBroken(
+  static const DSFontIcon musicBroken = IconData(
     0xeb3b,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/music_circle.png)
-  static const DSIcon musicCircleBroken = _DSIconBroken(
+  static const DSFontIcon musicCircleBroken = IconData(
     0xeb3c,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/music_dashboard.png)
-  static const DSIcon musicDashboardBroken = _DSIconBroken(
+  static const DSFontIcon musicDashboardBroken = IconData(
     0xeb3d,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/music_filter.png)
-  static const DSIcon musicFilterBroken = _DSIconBroken(
+  static const DSFontIcon musicFilterBroken = IconData(
     0xeb3e,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/music_library_2.png)
-  static const DSIcon musicLibrary2Broken = _DSIconBroken(
+  static const DSFontIcon musicLibrary2Broken = IconData(
     0xeb3f,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/musicnote.png)
-  static const DSIcon musicnoteBroken = _DSIconBroken(
+  static const DSFontIcon musicnoteBroken = IconData(
     0xeb40,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/music_play.png)
-  static const DSIcon musicPlayBroken = _DSIconBroken(
+  static const DSFontIcon musicPlayBroken = IconData(
     0xeb41,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/music_playlist.png)
-  static const DSIcon musicPlaylistBroken = _DSIconBroken(
+  static const DSFontIcon musicPlaylistBroken = IconData(
     0xeb42,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/music_square.png)
-  static const DSIcon musicSquareBroken = _DSIconBroken(
+  static const DSFontIcon musicSquareBroken = IconData(
     0xeb43,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/music_square_add.png)
-  static const DSIcon musicSquareAddBroken = _DSIconBroken(
+  static const DSFontIcon musicSquareAddBroken = IconData(
     0xeb44,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/music_square_remove.png)
-  static const DSIcon musicSquareRemoveBroken = _DSIconBroken(
+  static const DSFontIcon musicSquareRemoveBroken = IconData(
     0xeb45,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/music_square_search.png)
-  static const DSIcon musicSquareSearchBroken = _DSIconBroken(
+  static const DSFontIcon musicSquareSearchBroken = IconData(
     0xeb46,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/next.png)
-  static const DSIcon nextBroken = _DSIconBroken(
+  static const DSFontIcon nextBroken = IconData(
     0xeb47,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/note.png)
-  static const DSIcon noteBroken = _DSIconBroken(
+  static const DSFontIcon noteBroken = IconData(
     0xeb48,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/note_1.png)
-  static const DSIcon note1Broken = _DSIconBroken(
+  static const DSFontIcon note1Broken = IconData(
     0xeb49,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/note_2.png)
-  static const DSIcon note2Broken = _DSIconBroken(
+  static const DSFontIcon note2Broken = IconData(
     0xeb4a,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/note_21.png)
-  static const DSIcon note21Broken = _DSIconBroken(
+  static const DSFontIcon note21Broken = IconData(
     0xeb4b,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/note_add.png)
-  static const DSIcon noteAddBroken = _DSIconBroken(
+  static const DSFontIcon noteAddBroken = IconData(
     0xeb4c,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/note_favorite.png)
-  static const DSIcon noteFavoriteBroken = _DSIconBroken(
+  static const DSFontIcon noteFavoriteBroken = IconData(
     0xeb4d,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/note_remove.png)
-  static const DSIcon noteRemoveBroken = _DSIconBroken(
+  static const DSFontIcon noteRemoveBroken = IconData(
     0xeb4e,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/note_square.png)
-  static const DSIcon noteSquareBroken = _DSIconBroken(
+  static const DSFontIcon noteSquareBroken = IconData(
     0xeb4f,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/note_text.png)
-  static const DSIcon noteTextBroken = _DSIconBroken(
+  static const DSFontIcon noteTextBroken = IconData(
     0xeb50,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/notification.png)
-  static const DSIcon notificationBroken = _DSIconBroken(
+  static const DSFontIcon notificationBroken = IconData(
     0xeb51,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/notification_1.png)
-  static const DSIcon notification1Broken = _DSIconBroken(
+  static const DSFontIcon notification1Broken = IconData(
     0xeb52,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/notification_bing.png)
-  static const DSIcon notificationBingBroken = _DSIconBroken(
+  static const DSFontIcon notificationBingBroken = IconData(
     0xeb53,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/notification_circle.png)
-  static const DSIcon notificationCircleBroken = _DSIconBroken(
+  static const DSFontIcon notificationCircleBroken = IconData(
     0xeb54,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/notification_favorite.png)
-  static const DSIcon notificationFavoriteBroken = _DSIconBroken(
+  static const DSFontIcon notificationFavoriteBroken = IconData(
     0xeb55,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/notification_status.png)
-  static const DSIcon notificationStatusBroken = _DSIconBroken(
+  static const DSFontIcon notificationStatusBroken = IconData(
     0xeb56,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/omega_circle.png)
-  static const DSIcon omegaCircleBroken = _DSIconBroken(
+  static const DSFontIcon omegaCircleBroken = IconData(
     0xeb57,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/omega_square.png)
-  static const DSIcon omegaSquareBroken = _DSIconBroken(
+  static const DSFontIcon omegaSquareBroken = IconData(
     0xeb58,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/paintbucket.png)
-  static const DSIcon paintbucketBroken = _DSIconBroken(
+  static const DSFontIcon paintbucketBroken = IconData(
     0xeb59,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/paperclip.png)
-  static const DSIcon paperclipBroken = _DSIconBroken(
+  static const DSFontIcon paperclipBroken = IconData(
     0xeb5a,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/paperclip_2.png)
-  static const DSIcon paperclip2Broken = _DSIconBroken(
+  static const DSFontIcon paperclip2Broken = IconData(
     0xeb5b,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/password_check.png)
-  static const DSIcon passwordCheckBroken = _DSIconBroken(
+  static const DSFontIcon passwordCheckBroken = IconData(
     0xeb5c,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/path.png)
-  static const DSIcon pathBroken = _DSIconBroken(
+  static const DSFontIcon pathBroken = IconData(
     0xeb5d,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/path_2.png)
-  static const DSIcon path2Broken = _DSIconBroken(
+  static const DSFontIcon path2Broken = IconData(
     0xeb5e,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/path_square.png)
-  static const DSIcon pathSquareBroken = _DSIconBroken(
+  static const DSFontIcon pathSquareBroken = IconData(
     0xeb5f,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/pause.png)
-  static const DSIcon pauseBroken = _DSIconBroken(
+  static const DSFontIcon pauseBroken = IconData(
     0xeb60,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/pause_circle.png)
-  static const DSIcon pauseCircleBroken = _DSIconBroken(
+  static const DSFontIcon pauseCircleBroken = IconData(
     0xeb61,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/pen_add.png)
-  static const DSIcon penAddBroken = _DSIconBroken(
+  static const DSFontIcon penAddBroken = IconData(
     0xeb62,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/pen_close.png)
-  static const DSIcon penCloseBroken = _DSIconBroken(
+  static const DSFontIcon penCloseBroken = IconData(
     0xeb63,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/pen_remove.png)
-  static const DSIcon penRemoveBroken = _DSIconBroken(
+  static const DSFontIcon penRemoveBroken = IconData(
     0xeb64,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/pen_tool.png)
-  static const DSIcon penToolBroken = _DSIconBroken(
+  static const DSFontIcon penToolBroken = IconData(
     0xeb65,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/pen_tool_2.png)
-  static const DSIcon penTool2Broken = _DSIconBroken(
+  static const DSFontIcon penTool2Broken = IconData(
     0xeb66,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/people.png)
-  static const DSIcon peopleBroken = _DSIconBroken(
+  static const DSFontIcon peopleBroken = IconData(
     0xeb67,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/percentage_circle.png)
-  static const DSIcon percentageCircleBroken = _DSIconBroken(
+  static const DSFontIcon percentageCircleBroken = IconData(
     0xeb68,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/percentage_square.png)
-  static const DSIcon percentageSquareBroken = _DSIconBroken(
+  static const DSFontIcon percentageSquareBroken = IconData(
     0xeb69,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/personalcard.png)
-  static const DSIcon personalcardBroken = _DSIconBroken(
+  static const DSFontIcon personalcardBroken = IconData(
     0xeb6a,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/pet.png)
-  static const DSIcon petBroken = _DSIconBroken(
+  static const DSFontIcon petBroken = IconData(
     0xeb6b,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/pharagraphspacing.png)
-  static const DSIcon pharagraphspacingBroken = _DSIconBroken(
+  static const DSFontIcon pharagraphspacingBroken = IconData(
     0xeb6c,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/picture_frame.png)
-  static const DSIcon pictureFrameBroken = _DSIconBroken(
+  static const DSFontIcon pictureFrameBroken = IconData(
     0xeb6d,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/play.png)
-  static const DSIcon playBroken = _DSIconBroken(
+  static const DSFontIcon playBroken = IconData(
     0xeb6e,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/play_add.png)
-  static const DSIcon playAddBroken = _DSIconBroken(
+  static const DSFontIcon playAddBroken = IconData(
     0xeb6f,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/play_circle.png)
-  static const DSIcon playCircleBroken = _DSIconBroken(
+  static const DSFontIcon playCircleBroken = IconData(
     0xeb70,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/play_cricle.png)
-  static const DSIcon playCricleBroken = _DSIconBroken(
+  static const DSFontIcon playCricleBroken = IconData(
     0xeb71,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/play_remove.png)
-  static const DSIcon playRemoveBroken = _DSIconBroken(
+  static const DSFontIcon playRemoveBroken = IconData(
     0xeb72,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/presention_chart.png)
-  static const DSIcon presentionChartBroken = _DSIconBroken(
+  static const DSFontIcon presentionChartBroken = IconData(
     0xeb73,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/previous.png)
-  static const DSIcon previousBroken = _DSIconBroken(
+  static const DSFontIcon previousBroken = IconData(
     0xeb74,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/printer.png)
-  static const DSIcon printerBroken = _DSIconBroken(
+  static const DSFontIcon printerBroken = IconData(
     0xeb75,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/printer_slash.png)
-  static const DSIcon printerSlashBroken = _DSIconBroken(
+  static const DSFontIcon printerSlashBroken = IconData(
     0xeb76,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/profile.png)
-  static const DSIcon profileBroken = _DSIconBroken(
+  static const DSFontIcon profileBroken = IconData(
     0xeb77,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/profile_2user.png)
-  static const DSIcon profile2userBroken = _DSIconBroken(
+  static const DSFontIcon profile2userBroken = IconData(
     0xeb78,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/profile_add.png)
-  static const DSIcon profileAddBroken = _DSIconBroken(
+  static const DSFontIcon profileAddBroken = IconData(
     0xeb79,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/profile_circle.png)
-  static const DSIcon profileCircleBroken = _DSIconBroken(
+  static const DSFontIcon profileCircleBroken = IconData(
     0xeb7a,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/profile_delete.png)
-  static const DSIcon profileDeleteBroken = _DSIconBroken(
+  static const DSFontIcon profileDeleteBroken = IconData(
     0xeb7b,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/profile_remove.png)
-  static const DSIcon profileRemoveBroken = _DSIconBroken(
+  static const DSFontIcon profileRemoveBroken = IconData(
     0xeb7c,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/profile_tick.png)
-  static const DSIcon profileTickBroken = _DSIconBroken(
+  static const DSFontIcon profileTickBroken = IconData(
     0xeb7d,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/programming_arrow.png)
-  static const DSIcon programmingArrowBroken = _DSIconBroken(
+  static const DSFontIcon programmingArrowBroken = IconData(
     0xeb7e,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/programming_arrows.png)
-  static const DSIcon programmingArrowsBroken = _DSIconBroken(
+  static const DSFontIcon programmingArrowsBroken = IconData(
     0xeb7f,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/quote_down.png)
-  static const DSIcon quoteDownBroken = _DSIconBroken(
+  static const DSFontIcon quoteDownBroken = IconData(
     0xeb80,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/quote_down_circle.png)
-  static const DSIcon quoteDownCircleBroken = _DSIconBroken(
+  static const DSFontIcon quoteDownCircleBroken = IconData(
     0xeb81,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/quote_down_square.png)
-  static const DSIcon quoteDownSquareBroken = _DSIconBroken(
+  static const DSFontIcon quoteDownSquareBroken = IconData(
     0xeb82,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/quote_up.png)
-  static const DSIcon quoteUpBroken = _DSIconBroken(
+  static const DSFontIcon quoteUpBroken = IconData(
     0xeb83,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/quote_up_circle.png)
-  static const DSIcon quoteUpCircleBroken = _DSIconBroken(
+  static const DSFontIcon quoteUpCircleBroken = IconData(
     0xeb84,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/quote_up_square.png)
-  static const DSIcon quoteUpSquareBroken = _DSIconBroken(
+  static const DSFontIcon quoteUpSquareBroken = IconData(
     0xeb85,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/radar.png)
-  static const DSIcon radarBroken = _DSIconBroken(
+  static const DSFontIcon radarBroken = IconData(
     0xeb86,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/radar_1.png)
-  static const DSIcon radar1Broken = _DSIconBroken(
+  static const DSFontIcon radar1Broken = IconData(
     0xeb87,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/radar_2.png)
-  static const DSIcon radar2Broken = _DSIconBroken(
+  static const DSFontIcon radar2Broken = IconData(
     0xeb88,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/radio.png)
-  static const DSIcon radioBroken = _DSIconBroken(
+  static const DSFontIcon radioBroken = IconData(
     0xeb89,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/ram.png)
-  static const DSIcon ramBroken = _DSIconBroken(
+  static const DSFontIcon ramBroken = IconData(
     0xeb8a,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/ram_2.png)
-  static const DSIcon ram2Broken = _DSIconBroken(
+  static const DSFontIcon ram2Broken = IconData(
     0xeb8b,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/ranking.png)
-  static const DSIcon rankingBroken = _DSIconBroken(
+  static const DSFontIcon rankingBroken = IconData(
     0xeb8c,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/ranking_1.png)
-  static const DSIcon ranking1Broken = _DSIconBroken(
+  static const DSFontIcon ranking1Broken = IconData(
     0xeb8d,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/receipt.png)
-  static const DSIcon receiptBroken = _DSIconBroken(
+  static const DSFontIcon receiptBroken = IconData(
     0xeb8e,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/receipt_1.png)
-  static const DSIcon receipt1Broken = _DSIconBroken(
+  static const DSFontIcon receipt1Broken = IconData(
     0xeb8f,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/receipt_2.png)
-  static const DSIcon receipt2Broken = _DSIconBroken(
+  static const DSFontIcon receipt2Broken = IconData(
     0xeb90,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/receipt_2_1.png)
-  static const DSIcon receipt21Broken = _DSIconBroken(
+  static const DSFontIcon receipt21Broken = IconData(
     0xeb91,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/receipt_add.png)
-  static const DSIcon receiptAddBroken = _DSIconBroken(
+  static const DSFontIcon receiptAddBroken = IconData(
     0xeb92,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/receipt_discount.png)
-  static const DSIcon receiptDiscountBroken = _DSIconBroken(
+  static const DSFontIcon receiptDiscountBroken = IconData(
     0xeb93,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/receipt_disscount.png)
-  static const DSIcon receiptDisscountBroken = _DSIconBroken(
+  static const DSFontIcon receiptDisscountBroken = IconData(
     0xeb94,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/receipt_edit.png)
-  static const DSIcon receiptEditBroken = _DSIconBroken(
+  static const DSFontIcon receiptEditBroken = IconData(
     0xeb95,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/receipt_item.png)
-  static const DSIcon receiptItemBroken = _DSIconBroken(
+  static const DSFontIcon receiptItemBroken = IconData(
     0xeb96,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/receipt_minus.png)
-  static const DSIcon receiptMinusBroken = _DSIconBroken(
+  static const DSFontIcon receiptMinusBroken = IconData(
     0xeb97,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/receipt_search.png)
-  static const DSIcon receiptSearchBroken = _DSIconBroken(
+  static const DSFontIcon receiptSearchBroken = IconData(
     0xeb98,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/receipt_square.png)
-  static const DSIcon receiptSquareBroken = _DSIconBroken(
+  static const DSFontIcon receiptSquareBroken = IconData(
     0xeb99,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/receipt_text.png)
-  static const DSIcon receiptTextBroken = _DSIconBroken(
+  static const DSFontIcon receiptTextBroken = IconData(
     0xeb9a,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/received.png)
-  static const DSIcon receivedBroken = _DSIconBroken(
+  static const DSFontIcon receivedBroken = IconData(
     0xeb9b,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/receive_square.png)
-  static const DSIcon receiveSquareBroken = _DSIconBroken(
+  static const DSFontIcon receiveSquareBroken = IconData(
     0xeb9c,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/receive_square_2.png)
-  static const DSIcon receiveSquare2Broken = _DSIconBroken(
+  static const DSFontIcon receiveSquare2Broken = IconData(
     0xeb9d,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/record.png)
-  static const DSIcon recordBroken = _DSIconBroken(
+  static const DSFontIcon recordBroken = IconData(
     0xeb9e,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/record_circle.png)
-  static const DSIcon recordCircleBroken = _DSIconBroken(
+  static const DSFontIcon recordCircleBroken = IconData(
     0xeb9f,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/recovery_convert.png)
-  static const DSIcon recoveryConvertBroken = _DSIconBroken(
+  static const DSFontIcon recoveryConvertBroken = IconData(
     0xeba0,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/redo.png)
-  static const DSIcon redoBroken = _DSIconBroken(
+  static const DSFontIcon redoBroken = IconData(
     0xeba1,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/refresh.png)
-  static const DSIcon refreshBroken = _DSIconBroken(
+  static const DSFontIcon refreshBroken = IconData(
     0xeba2,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/refresh_2.png)
-  static const DSIcon refresh2Broken = _DSIconBroken(
+  static const DSFontIcon refresh2Broken = IconData(
     0xeba3,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/refresh_circle.png)
-  static const DSIcon refreshCircleBroken = _DSIconBroken(
+  static const DSFontIcon refreshCircleBroken = IconData(
     0xeba4,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/refresh_left_square.png)
-  static const DSIcon refreshLeftSquareBroken = _DSIconBroken(
+  static const DSFontIcon refreshLeftSquareBroken = IconData(
     0xeba5,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/refresh_right_square.png)
-  static const DSIcon refreshRightSquareBroken = _DSIconBroken(
+  static const DSFontIcon refreshRightSquareBroken = IconData(
     0xeba6,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/refresh_square_2.png)
-  static const DSIcon refreshSquare2Broken = _DSIconBroken(
+  static const DSFontIcon refreshSquare2Broken = IconData(
     0xeba7,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/repeat.png)
-  static const DSIcon repeatBroken = _DSIconBroken(
+  static const DSFontIcon repeatBroken = IconData(
     0xeba8,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/repeat_circle.png)
-  static const DSIcon repeatCircleBroken = _DSIconBroken(
+  static const DSFontIcon repeatCircleBroken = IconData(
     0xeba9,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/repeate_music.png)
-  static const DSIcon repeateMusicBroken = _DSIconBroken(
+  static const DSFontIcon repeateMusicBroken = IconData(
     0xebaa,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/repeate_one.png)
-  static const DSIcon repeateOneBroken = _DSIconBroken(
+  static const DSFontIcon repeateOneBroken = IconData(
     0xebab,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/reserve.png)
-  static const DSIcon reserveBroken = _DSIconBroken(
+  static const DSFontIcon reserveBroken = IconData(
     0xebac,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/rotate_left.png)
-  static const DSIcon rotateLeftBroken = _DSIconBroken(
+  static const DSFontIcon rotateLeftBroken = IconData(
     0xebad,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/rotate_left_1.png)
-  static const DSIcon rotateLeft1Broken = _DSIconBroken(
+  static const DSFontIcon rotateLeft1Broken = IconData(
     0xebae,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/rotate_right.png)
-  static const DSIcon rotateRightBroken = _DSIconBroken(
+  static const DSFontIcon rotateRightBroken = IconData(
     0xebaf,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/rotate_right_1.png)
-  static const DSIcon rotateRight1Broken = _DSIconBroken(
+  static const DSFontIcon rotateRight1Broken = IconData(
     0xebb0,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/route_square.png)
-  static const DSIcon routeSquareBroken = _DSIconBroken(
+  static const DSFontIcon routeSquareBroken = IconData(
     0xebb1,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/routing.png)
-  static const DSIcon routingBroken = _DSIconBroken(
+  static const DSFontIcon routingBroken = IconData(
     0xebb2,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/routing_2.png)
-  static const DSIcon routing2Broken = _DSIconBroken(
+  static const DSFontIcon routing2Broken = IconData(
     0xebb3,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/row_horizontal.png)
-  static const DSIcon rowHorizontalBroken = _DSIconBroken(
+  static const DSFontIcon rowHorizontalBroken = IconData(
     0xebb4,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/row_vertical.png)
-  static const DSIcon rowVerticalBroken = _DSIconBroken(
+  static const DSFontIcon rowVerticalBroken = IconData(
     0xebb5,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/rulerpen.png)
-  static const DSIcon rulerpenBroken = _DSIconBroken(
+  static const DSFontIcon rulerpenBroken = IconData(
     0xebb6,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/ruler.png)
-  static const DSIcon rulerBroken = _DSIconBroken(
+  static const DSFontIcon rulerBroken = IconData(
     0xebb7,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/safe_home.png)
-  static const DSIcon safeHomeBroken = _DSIconBroken(
+  static const DSFontIcon safeHomeBroken = IconData(
     0xebb8,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/sagittarius.png)
-  static const DSIcon sagittariusBroken = _DSIconBroken(
+  static const DSFontIcon sagittariusBroken = IconData(
     0xebb9,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/save_2.png)
-  static const DSIcon save2Broken = _DSIconBroken(
+  static const DSFontIcon save2Broken = IconData(
     0xebba,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/save_add.png)
-  static const DSIcon saveAddBroken = _DSIconBroken(
+  static const DSFontIcon saveAddBroken = IconData(
     0xebbb,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/save_minus.png)
-  static const DSIcon saveMinusBroken = _DSIconBroken(
+  static const DSFontIcon saveMinusBroken = IconData(
     0xebbc,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/save_remove.png)
-  static const DSIcon saveRemoveBroken = _DSIconBroken(
+  static const DSFontIcon saveRemoveBroken = IconData(
     0xebbd,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/scan.png)
-  static const DSIcon scanBroken = _DSIconBroken(
+  static const DSFontIcon scanBroken = IconData(
     0xebbe,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/scan_barcode.png)
-  static const DSIcon scanBarcodeBroken = _DSIconBroken(
+  static const DSFontIcon scanBarcodeBroken = IconData(
     0xebbf,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/scanner.png)
-  static const DSIcon scannerBroken = _DSIconBroken(
+  static const DSFontIcon scannerBroken = IconData(
     0xebc0,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/scanning.png)
-  static const DSIcon scanningBroken = _DSIconBroken(
+  static const DSFontIcon scanningBroken = IconData(
     0xebc1,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/scissor.png)
-  static const DSIcon scissorBroken = _DSIconBroken(
+  static const DSFontIcon scissorBroken = IconData(
     0xebc2,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/scissor_1.png)
-  static const DSIcon scissor1Broken = _DSIconBroken(
+  static const DSFontIcon scissor1Broken = IconData(
     0xebc3,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/screenmirroring.png)
-  static const DSIcon screenmirroringBroken = _DSIconBroken(
+  static const DSFontIcon screenmirroringBroken = IconData(
     0xebc4,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/scroll.png)
-  static const DSIcon scrollBroken = _DSIconBroken(
+  static const DSFontIcon scrollBroken = IconData(
     0xebc5,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/search_favorite.png)
-  static const DSIcon searchFavoriteBroken = _DSIconBroken(
+  static const DSFontIcon searchFavoriteBroken = IconData(
     0xebc6,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/search_favorite_1.png)
-  static const DSIcon searchFavorite1Broken = _DSIconBroken(
+  static const DSFontIcon searchFavorite1Broken = IconData(
     0xebc7,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/search_normal.png)
-  static const DSIcon searchNormalBroken = _DSIconBroken(
+  static const DSFontIcon searchNormalBroken = IconData(
     0xebc8,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/search_normal_1.png)
-  static const DSIcon searchNormal1Broken = _DSIconBroken(
+  static const DSFontIcon searchNormal1Broken = IconData(
     0xebc9,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/search_status.png)
-  static const DSIcon searchStatusBroken = _DSIconBroken(
+  static const DSFontIcon searchStatusBroken = IconData(
     0xebca,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/search_status_1.png)
-  static const DSIcon searchStatus1Broken = _DSIconBroken(
+  static const DSFontIcon searchStatus1Broken = IconData(
     0xebcb,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/search_zoom_in.png)
-  static const DSIcon searchZoomInBroken = _DSIconBroken(
+  static const DSFontIcon searchZoomInBroken = IconData(
     0xebcc,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/search_zoom_in_1.png)
-  static const DSIcon searchZoomIn1Broken = _DSIconBroken(
+  static const DSFontIcon searchZoomIn1Broken = IconData(
     0xebcd,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/search_zoom_out.png)
-  static const DSIcon searchZoomOutBroken = _DSIconBroken(
+  static const DSFontIcon searchZoomOutBroken = IconData(
     0xebce,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/search_zoom_out_1.png)
-  static const DSIcon searchZoomOut1Broken = _DSIconBroken(
+  static const DSFontIcon searchZoomOut1Broken = IconData(
     0xebcf,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/security.png)
-  static const DSIcon securityBroken = _DSIconBroken(
+  static const DSFontIcon securityBroken = IconData(
     0xebd0,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/security_card.png)
-  static const DSIcon securityCardBroken = _DSIconBroken(
+  static const DSFontIcon securityCardBroken = IconData(
     0xebd1,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/security_safe.png)
-  static const DSIcon securitySafeBroken = _DSIconBroken(
+  static const DSFontIcon securitySafeBroken = IconData(
     0xebd2,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/security_time.png)
-  static const DSIcon securityTimeBroken = _DSIconBroken(
+  static const DSFontIcon securityTimeBroken = IconData(
     0xebd3,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/security_user.png)
-  static const DSIcon securityUserBroken = _DSIconBroken(
+  static const DSFontIcon securityUserBroken = IconData(
     0xebd4,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/send.png)
-  static const DSIcon sendBroken = _DSIconBroken(
+  static const DSFontIcon sendBroken = IconData(
     0xebd5,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/send_1.png)
-  static const DSIcon send1Broken = _DSIconBroken(
+  static const DSFontIcon send1Broken = IconData(
     0xebd6,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/send_2.png)
-  static const DSIcon send2Broken = _DSIconBroken(
+  static const DSFontIcon send2Broken = IconData(
     0xebd7,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/send_sqaure_2.png)
-  static const DSIcon sendSqaure2Broken = _DSIconBroken(
+  static const DSFontIcon sendSqaure2Broken = IconData(
     0xebd8,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/send_square.png)
-  static const DSIcon sendSquareBroken = _DSIconBroken(
+  static const DSFontIcon sendSquareBroken = IconData(
     0xebd9,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/setting.png)
-  static const DSIcon settingBroken = _DSIconBroken(
+  static const DSFontIcon settingBroken = IconData(
     0xebda,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/setting_2.png)
-  static const DSIcon setting2Broken = _DSIconBroken(
+  static const DSFontIcon setting2Broken = IconData(
     0xebdb,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/setting_3.png)
-  static const DSIcon setting3Broken = _DSIconBroken(
+  static const DSFontIcon setting3Broken = IconData(
     0xebdc,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/setting_4.png)
-  static const DSIcon setting4Broken = _DSIconBroken(
+  static const DSFontIcon setting4Broken = IconData(
     0xebdd,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/setting_5.png)
-  static const DSIcon setting5Broken = _DSIconBroken(
+  static const DSFontIcon setting5Broken = IconData(
     0xebde,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/settings.png)
-  static const DSIcon settingsBroken = _DSIconBroken(
+  static const DSFontIcon settingsBroken = IconData(
     0xebdf,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/shapes.png)
-  static const DSIcon shapesBroken = _DSIconBroken(
+  static const DSFontIcon shapesBroken = IconData(
     0xebe0,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/shapes_1.png)
-  static const DSIcon shapes1Broken = _DSIconBroken(
+  static const DSFontIcon shapes1Broken = IconData(
     0xebe1,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/share.png)
-  static const DSIcon shareBroken = _DSIconBroken(
+  static const DSFontIcon shareBroken = IconData(
     0xebe2,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/shield.png)
-  static const DSIcon shieldBroken = _DSIconBroken(
+  static const DSFontIcon shieldBroken = IconData(
     0xebe3,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/shield_cross.png)
-  static const DSIcon shieldCrossBroken = _DSIconBroken(
+  static const DSFontIcon shieldCrossBroken = IconData(
     0xebe4,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/shield_search.png)
-  static const DSIcon shieldSearchBroken = _DSIconBroken(
+  static const DSFontIcon shieldSearchBroken = IconData(
     0xebe5,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/shield_security.png)
-  static const DSIcon shieldSecurityBroken = _DSIconBroken(
+  static const DSFontIcon shieldSecurityBroken = IconData(
     0xebe6,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/shield_slash.png)
-  static const DSIcon shieldSlashBroken = _DSIconBroken(
+  static const DSFontIcon shieldSlashBroken = IconData(
     0xebe7,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/shield_tick.png)
-  static const DSIcon shieldTickBroken = _DSIconBroken(
+  static const DSFontIcon shieldTickBroken = IconData(
     0xebe8,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/ship.png)
-  static const DSIcon shipBroken = _DSIconBroken(
+  static const DSFontIcon shipBroken = IconData(
     0xebe9,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/shop.png)
-  static const DSIcon shopBroken = _DSIconBroken(
+  static const DSFontIcon shopBroken = IconData(
     0xebea,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/shop_add.png)
-  static const DSIcon shopAddBroken = _DSIconBroken(
+  static const DSFontIcon shopAddBroken = IconData(
     0xebeb,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/shopping_bag.png)
-  static const DSIcon shoppingBagBroken = _DSIconBroken(
+  static const DSFontIcon shoppingBagBroken = IconData(
     0xebec,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/shopping_cart.png)
-  static const DSIcon shoppingCartBroken = _DSIconBroken(
+  static const DSFontIcon shoppingCartBroken = IconData(
     0xebed,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/shop_remove.png)
-  static const DSIcon shopRemoveBroken = _DSIconBroken(
+  static const DSFontIcon shopRemoveBroken = IconData(
     0xebee,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/shuffle.png)
-  static const DSIcon shuffleBroken = _DSIconBroken(
+  static const DSFontIcon shuffleBroken = IconData(
     0xebef,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/sidebar_bottom.png)
-  static const DSIcon sidebarBottomBroken = _DSIconBroken(
+  static const DSFontIcon sidebarBottomBroken = IconData(
     0xebf0,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/sidebar_left.png)
-  static const DSIcon sidebarLeftBroken = _DSIconBroken(
+  static const DSFontIcon sidebarLeftBroken = IconData(
     0xebf1,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/sidebar_right.png)
-  static const DSIcon sidebarRightBroken = _DSIconBroken(
+  static const DSFontIcon sidebarRightBroken = IconData(
     0xebf2,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/sidebar_top.png)
-  static const DSIcon sidebarTopBroken = _DSIconBroken(
+  static const DSFontIcon sidebarTopBroken = IconData(
     0xebf3,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/signpost.png)
-  static const DSIcon signpostBroken = _DSIconBroken(
+  static const DSFontIcon signpostBroken = IconData(
     0xebf4,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/simcard.png)
-  static const DSIcon simcardBroken = _DSIconBroken(
+  static const DSFontIcon simcardBroken = IconData(
     0xebf5,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/simcard_1.png)
-  static const DSIcon simcard1Broken = _DSIconBroken(
+  static const DSFontIcon simcard1Broken = IconData(
     0xebf6,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/simcard_2.png)
-  static const DSIcon simcard2Broken = _DSIconBroken(
+  static const DSFontIcon simcard2Broken = IconData(
     0xebf7,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/size.png)
-  static const DSIcon sizeBroken = _DSIconBroken(
+  static const DSFontIcon sizeBroken = IconData(
     0xebf8,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/slash.png)
-  static const DSIcon slashBroken = _DSIconBroken(
+  static const DSFontIcon slashBroken = IconData(
     0xebf9,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/slider.png)
-  static const DSIcon sliderBroken = _DSIconBroken(
+  static const DSFontIcon sliderBroken = IconData(
     0xebfa,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/slider_horizontal.png)
-  static const DSIcon sliderHorizontalBroken = _DSIconBroken(
+  static const DSFontIcon sliderHorizontalBroken = IconData(
     0xebfb,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/slider_horizontal_1.png)
-  static const DSIcon sliderHorizontal1Broken = _DSIconBroken(
+  static const DSFontIcon sliderHorizontal1Broken = IconData(
     0xebfc,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/slider_vertical.png)
-  static const DSIcon sliderVerticalBroken = _DSIconBroken(
+  static const DSFontIcon sliderVerticalBroken = IconData(
     0xebfd,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/slider_vertical_1.png)
-  static const DSIcon sliderVertical1Broken = _DSIconBroken(
+  static const DSFontIcon sliderVertical1Broken = IconData(
     0xebfe,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/smallcaps.png)
-  static const DSIcon smallcapsBroken = _DSIconBroken(
+  static const DSFontIcon smallcapsBroken = IconData(
     0xebff,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/smart_car.png)
-  static const DSIcon smartCarBroken = _DSIconBroken(
+  static const DSFontIcon smartCarBroken = IconData(
     0xec00,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/smart_home.png)
-  static const DSIcon smartHomeBroken = _DSIconBroken(
+  static const DSFontIcon smartHomeBroken = IconData(
     0xec01,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/smileys.png)
-  static const DSIcon smileysBroken = _DSIconBroken(
+  static const DSFontIcon smileysBroken = IconData(
     0xec02,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/sms.png)
-  static const DSIcon smsBroken = _DSIconBroken(
+  static const DSFontIcon smsBroken = IconData(
     0xec03,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/sms_edit.png)
-  static const DSIcon smsEditBroken = _DSIconBroken(
+  static const DSFontIcon smsEditBroken = IconData(
     0xec04,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/sms_notification.png)
-  static const DSIcon smsNotificationBroken = _DSIconBroken(
+  static const DSFontIcon smsNotificationBroken = IconData(
     0xec05,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/sms_search.png)
-  static const DSIcon smsSearchBroken = _DSIconBroken(
+  static const DSFontIcon smsSearchBroken = IconData(
     0xec06,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/sms_star.png)
-  static const DSIcon smsStarBroken = _DSIconBroken(
+  static const DSFontIcon smsStarBroken = IconData(
     0xec07,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/sms_tracking.png)
-  static const DSIcon smsTrackingBroken = _DSIconBroken(
+  static const DSFontIcon smsTrackingBroken = IconData(
     0xec08,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/sort.png)
-  static const DSIcon sortBroken = _DSIconBroken(
+  static const DSFontIcon sortBroken = IconData(
     0xec09,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/sound.png)
-  static const DSIcon soundBroken = _DSIconBroken(
+  static const DSFontIcon soundBroken = IconData(
     0xec0a,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/speaker.png)
-  static const DSIcon speakerBroken = _DSIconBroken(
+  static const DSFontIcon speakerBroken = IconData(
     0xec0b,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/speedometer.png)
-  static const DSIcon speedometerBroken = _DSIconBroken(
+  static const DSFontIcon speedometerBroken = IconData(
     0xec0c,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/star.png)
-  static const DSIcon starBroken = _DSIconBroken(
+  static const DSFontIcon starBroken = IconData(
     0xec0d,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/star_1.png)
-  static const DSIcon star1Broken = _DSIconBroken(
+  static const DSFontIcon star1Broken = IconData(
     0xec0e,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/star_slash.png)
-  static const DSIcon starSlashBroken = _DSIconBroken(
+  static const DSFontIcon starSlashBroken = IconData(
     0xec0f,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/status.png)
-  static const DSIcon statusBroken = _DSIconBroken(
+  static const DSFontIcon statusBroken = IconData(
     0xec10,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/status_up.png)
-  static const DSIcon statusUpBroken = _DSIconBroken(
+  static const DSFontIcon statusUpBroken = IconData(
     0xec11,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/sticker.png)
-  static const DSIcon stickerBroken = _DSIconBroken(
+  static const DSFontIcon stickerBroken = IconData(
     0xec12,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/stickynote.png)
-  static const DSIcon stickynoteBroken = _DSIconBroken(
+  static const DSFontIcon stickynoteBroken = IconData(
     0xec13,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/stop.png)
-  static const DSIcon stopBroken = _DSIconBroken(
+  static const DSFontIcon stopBroken = IconData(
     0xec14,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/stop_circle.png)
-  static const DSIcon stopCircleBroken = _DSIconBroken(
+  static const DSFontIcon stopCircleBroken = IconData(
     0xec15,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/story.png)
-  static const DSIcon storyBroken = _DSIconBroken(
+  static const DSFontIcon storyBroken = IconData(
     0xec16,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/strongbox.png)
-  static const DSIcon strongboxBroken = _DSIconBroken(
+  static const DSFontIcon strongboxBroken = IconData(
     0xec17,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/strongbox_2.png)
-  static const DSIcon strongbox2Broken = _DSIconBroken(
+  static const DSFontIcon strongbox2Broken = IconData(
     0xec18,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/subtitle.png)
-  static const DSIcon subtitleBroken = _DSIconBroken(
+  static const DSFontIcon subtitleBroken = IconData(
     0xec19,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/sun.png)
-  static const DSIcon sunBroken = _DSIconBroken(
+  static const DSFontIcon sunBroken = IconData(
     0xec1a,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/sun_1.png)
-  static const DSIcon sun1Broken = _DSIconBroken(
+  static const DSFontIcon sun1Broken = IconData(
     0xec1b,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/sun_fog.png)
-  static const DSIcon sunFogBroken = _DSIconBroken(
+  static const DSFontIcon sunFogBroken = IconData(
     0xec1c,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/tag.png)
-  static const DSIcon tagBroken = _DSIconBroken(
+  static const DSFontIcon tagBroken = IconData(
     0xec1d,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/tag_2.png)
-  static const DSIcon tag2Broken = _DSIconBroken(
+  static const DSFontIcon tag2Broken = IconData(
     0xec1e,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/tag_cross.png)
-  static const DSIcon tagCrossBroken = _DSIconBroken(
+  static const DSFontIcon tagCrossBroken = IconData(
     0xec1f,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/tag_right.png)
-  static const DSIcon tagRightBroken = _DSIconBroken(
+  static const DSFontIcon tagRightBroken = IconData(
     0xec20,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/tag_user.png)
-  static const DSIcon tagUserBroken = _DSIconBroken(
+  static const DSFontIcon tagUserBroken = IconData(
     0xec21,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/task.png)
-  static const DSIcon taskBroken = _DSIconBroken(
+  static const DSFontIcon taskBroken = IconData(
     0xec22,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/task_square.png)
-  static const DSIcon taskSquareBroken = _DSIconBroken(
+  static const DSFontIcon taskSquareBroken = IconData(
     0xec23,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/teacher.png)
-  static const DSIcon teacherBroken = _DSIconBroken(
+  static const DSFontIcon teacherBroken = IconData(
     0xec24,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/text.png)
-  static const DSIcon textBroken = _DSIconBroken(
+  static const DSFontIcon textBroken = IconData(
     0xec25,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/textalign_center.png)
-  static const DSIcon textalignCenterBroken = _DSIconBroken(
+  static const DSFontIcon textalignCenterBroken = IconData(
     0xec26,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/textalign_justifycenter.png)
-  static const DSIcon textalignJustifycenterBroken = _DSIconBroken(
+  static const DSFontIcon textalignJustifycenterBroken = IconData(
     0xec27,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/textalign_justifyleft.png)
-  static const DSIcon textalignJustifyleftBroken = _DSIconBroken(
+  static const DSFontIcon textalignJustifyleftBroken = IconData(
     0xec28,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/textalign_justifyright.png)
-  static const DSIcon textalignJustifyrightBroken = _DSIconBroken(
+  static const DSFontIcon textalignJustifyrightBroken = IconData(
     0xec29,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/textalign_left.png)
-  static const DSIcon textalignLeftBroken = _DSIconBroken(
+  static const DSFontIcon textalignLeftBroken = IconData(
     0xec2a,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/textalign_right.png)
-  static const DSIcon textalignRightBroken = _DSIconBroken(
+  static const DSFontIcon textalignRightBroken = IconData(
     0xec2b,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/text_block.png)
-  static const DSIcon textBlockBroken = _DSIconBroken(
+  static const DSFontIcon textBlockBroken = IconData(
     0xec2c,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/text_bold.png)
-  static const DSIcon textBoldBroken = _DSIconBroken(
+  static const DSFontIcon textBoldBroken = IconData(
     0xec2d,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/text_italic.png)
-  static const DSIcon textItalicBroken = _DSIconBroken(
+  static const DSFontIcon textItalicBroken = IconData(
     0xec2e,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/text_underline.png)
-  static const DSIcon textUnderlineBroken = _DSIconBroken(
+  static const DSFontIcon textUnderlineBroken = IconData(
     0xec2f,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/tick_circle.png)
-  static const DSIcon tickCircleBroken = _DSIconBroken(
+  static const DSFontIcon tickCircleBroken = IconData(
     0xec30,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/ticket.png)
-  static const DSIcon ticketBroken = _DSIconBroken(
+  static const DSFontIcon ticketBroken = IconData(
     0xec31,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/ticket_2.png)
-  static const DSIcon ticket2Broken = _DSIconBroken(
+  static const DSFontIcon ticket2Broken = IconData(
     0xec32,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/ticket_discount.png)
-  static const DSIcon ticketDiscountBroken = _DSIconBroken(
+  static const DSFontIcon ticketDiscountBroken = IconData(
     0xec33,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/ticket_expired.png)
-  static const DSIcon ticketExpiredBroken = _DSIconBroken(
+  static const DSFontIcon ticketExpiredBroken = IconData(
     0xec34,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/ticket_star.png)
-  static const DSIcon ticketStarBroken = _DSIconBroken(
+  static const DSFontIcon ticketStarBroken = IconData(
     0xec35,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/tick_square.png)
-  static const DSIcon tickSquareBroken = _DSIconBroken(
+  static const DSFontIcon tickSquareBroken = IconData(
     0xec36,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/timer.png)
-  static const DSIcon timerBroken = _DSIconBroken(
+  static const DSFontIcon timerBroken = IconData(
     0xec37,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/timer_1.png)
-  static const DSIcon timer1Broken = _DSIconBroken(
+  static const DSFontIcon timer1Broken = IconData(
     0xec38,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/timer_pause.png)
-  static const DSIcon timerPauseBroken = _DSIconBroken(
+  static const DSFontIcon timerPauseBroken = IconData(
     0xec39,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/timer_start.png)
-  static const DSIcon timerStartBroken = _DSIconBroken(
+  static const DSFontIcon timerStartBroken = IconData(
     0xec3a,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/toggle_off.png)
-  static const DSIcon toggleOffBroken = _DSIconBroken(
+  static const DSFontIcon toggleOffBroken = IconData(
     0xec3b,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/toggle_off_circle.png)
-  static const DSIcon toggleOffCircleBroken = _DSIconBroken(
+  static const DSFontIcon toggleOffCircleBroken = IconData(
     0xec3c,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/toggle_on.png)
-  static const DSIcon toggleOnBroken = _DSIconBroken(
+  static const DSFontIcon toggleOnBroken = IconData(
     0xec3d,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/toggle_on_circle.png)
-  static const DSIcon toggleOnCircleBroken = _DSIconBroken(
+  static const DSFontIcon toggleOnCircleBroken = IconData(
     0xec3e,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/trade.png)
-  static const DSIcon tradeBroken = _DSIconBroken(
+  static const DSFontIcon tradeBroken = IconData(
     0xec3f,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/transaction_minus.png)
-  static const DSIcon transactionMinusBroken = _DSIconBroken(
+  static const DSFontIcon transactionMinusBroken = IconData(
     0xec40,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/translate.png)
-  static const DSIcon translateBroken = _DSIconBroken(
+  static const DSFontIcon translateBroken = IconData(
     0xec41,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/trash.png)
-  static const DSIcon trashBroken = _DSIconBroken(
+  static const DSFontIcon trashBroken = IconData(
     0xec42,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/trash_square.png)
-  static const DSIcon trashSquareBroken = _DSIconBroken(
+  static const DSFontIcon trashSquareBroken = IconData(
     0xec43,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/tree.png)
-  static const DSIcon treeBroken = _DSIconBroken(
+  static const DSFontIcon treeBroken = IconData(
     0xec44,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/trend_down.png)
-  static const DSIcon trendDownBroken = _DSIconBroken(
+  static const DSFontIcon trendDownBroken = IconData(
     0xec45,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/trend_up.png)
-  static const DSIcon trendUpBroken = _DSIconBroken(
+  static const DSFontIcon trendUpBroken = IconData(
     0xec46,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/triangle.png)
-  static const DSIcon triangleBroken = _DSIconBroken(
+  static const DSFontIcon triangleBroken = IconData(
     0xec47,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/truck.png)
-  static const DSIcon truckBroken = _DSIconBroken(
+  static const DSFontIcon truckBroken = IconData(
     0xec48,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/truck_fast.png)
-  static const DSIcon truckFastBroken = _DSIconBroken(
+  static const DSFontIcon truckFastBroken = IconData(
     0xec49,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/truck_remove.png)
-  static const DSIcon truckRemoveBroken = _DSIconBroken(
+  static const DSFontIcon truckRemoveBroken = IconData(
     0xec4a,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/truck_tick.png)
-  static const DSIcon truckTickBroken = _DSIconBroken(
+  static const DSFontIcon truckTickBroken = IconData(
     0xec4b,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/truck_time.png)
-  static const DSIcon truckTimeBroken = _DSIconBroken(
+  static const DSFontIcon truckTimeBroken = IconData(
     0xec4c,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/undo.png)
-  static const DSIcon undoBroken = _DSIconBroken(
+  static const DSFontIcon undoBroken = IconData(
     0xec4d,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/unlimited.png)
-  static const DSIcon unlimitedBroken = _DSIconBroken(
+  static const DSFontIcon unlimitedBroken = IconData(
     0xec4e,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/unlock.png)
-  static const DSIcon unlockBroken = _DSIconBroken(
+  static const DSFontIcon unlockBroken = IconData(
     0xec4f,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/user.png)
-  static const DSIcon userBroken = _DSIconBroken(
+  static const DSFontIcon userBroken = IconData(
     0xec50,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/user_add.png)
-  static const DSIcon userAddBroken = _DSIconBroken(
+  static const DSFontIcon userAddBroken = IconData(
     0xec51,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/user_cirlce_add.png)
-  static const DSIcon userCirlceAddBroken = _DSIconBroken(
+  static const DSFontIcon userCirlceAddBroken = IconData(
     0xec52,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/user_edit.png)
-  static const DSIcon userEditBroken = _DSIconBroken(
+  static const DSFontIcon userEditBroken = IconData(
     0xec53,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/user_minus.png)
-  static const DSIcon userMinusBroken = _DSIconBroken(
+  static const DSFontIcon userMinusBroken = IconData(
     0xec54,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/user_octagon.png)
-  static const DSIcon userOctagonBroken = _DSIconBroken(
+  static const DSFontIcon userOctagonBroken = IconData(
     0xec55,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/user_remove.png)
-  static const DSIcon userRemoveBroken = _DSIconBroken(
+  static const DSFontIcon userRemoveBroken = IconData(
     0xec56,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/user_search.png)
-  static const DSIcon userSearchBroken = _DSIconBroken(
+  static const DSFontIcon userSearchBroken = IconData(
     0xec57,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/user_square.png)
-  static const DSIcon userSquareBroken = _DSIconBroken(
+  static const DSFontIcon userSquareBroken = IconData(
     0xec58,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/user_tag.png)
-  static const DSIcon userTagBroken = _DSIconBroken(
+  static const DSFontIcon userTagBroken = IconData(
     0xec59,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/user_tick.png)
-  static const DSIcon userTickBroken = _DSIconBroken(
+  static const DSFontIcon userTickBroken = IconData(
     0xec5a,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/verify.png)
-  static const DSIcon verifyBroken = _DSIconBroken(
+  static const DSFontIcon verifyBroken = IconData(
     0xec5b,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/video.png)
-  static const DSIcon videoBroken = _DSIconBroken(
+  static const DSFontIcon videoBroken = IconData(
     0xec5c,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/video_add.png)
-  static const DSIcon videoAddBroken = _DSIconBroken(
+  static const DSFontIcon videoAddBroken = IconData(
     0xec5d,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/video_circle.png)
-  static const DSIcon videoCircleBroken = _DSIconBroken(
+  static const DSFontIcon videoCircleBroken = IconData(
     0xec5e,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/video_horizontal.png)
-  static const DSIcon videoHorizontalBroken = _DSIconBroken(
+  static const DSFontIcon videoHorizontalBroken = IconData(
     0xec5f,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/video_octagon.png)
-  static const DSIcon videoOctagonBroken = _DSIconBroken(
+  static const DSFontIcon videoOctagonBroken = IconData(
     0xec60,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/video_play.png)
-  static const DSIcon videoPlayBroken = _DSIconBroken(
+  static const DSFontIcon videoPlayBroken = IconData(
     0xec61,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/video_remove.png)
-  static const DSIcon videoRemoveBroken = _DSIconBroken(
+  static const DSFontIcon videoRemoveBroken = IconData(
     0xec62,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/video_slash.png)
-  static const DSIcon videoSlashBroken = _DSIconBroken(
+  static const DSFontIcon videoSlashBroken = IconData(
     0xec63,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/video_square.png)
-  static const DSIcon videoSquareBroken = _DSIconBroken(
+  static const DSFontIcon videoSquareBroken = IconData(
     0xec67,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/video_tick.png)
-  static const DSIcon videoTickBroken = _DSIconBroken(
+  static const DSFontIcon videoTickBroken = IconData(
     0xec68,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/video_time.png)
-  static const DSIcon videoTimeBroken = _DSIconBroken(
+  static const DSFontIcon videoTimeBroken = IconData(
     0xec69,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/video_vertical.png)
-  static const DSIcon videoVerticalBroken = _DSIconBroken(
+  static const DSFontIcon videoVerticalBroken = IconData(
     0xec6a,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/voice_cricle.png)
-  static const DSIcon voiceCricleBroken = _DSIconBroken(
+  static const DSFontIcon voiceCricleBroken = IconData(
     0xec6b,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/voice_square.png)
-  static const DSIcon voiceSquareBroken = _DSIconBroken(
+  static const DSFontIcon voiceSquareBroken = IconData(
     0xec6c,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/volume_cross.png)
-  static const DSIcon volumeCrossBroken = _DSIconBroken(
+  static const DSFontIcon volumeCrossBroken = IconData(
     0xec6d,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/volume_high.png)
-  static const DSIcon volumeHighBroken = _DSIconBroken(
+  static const DSFontIcon volumeHighBroken = IconData(
     0xec6e,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/volume_low.png)
-  static const DSIcon volumeLowBroken = _DSIconBroken(
+  static const DSFontIcon volumeLowBroken = IconData(
     0xec6f,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/volume_low_1.png)
-  static const DSIcon volumeLow1Broken = _DSIconBroken(
+  static const DSFontIcon volumeLow1Broken = IconData(
     0xec70,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/volume_mute.png)
-  static const DSIcon volumeMuteBroken = _DSIconBroken(
+  static const DSFontIcon volumeMuteBroken = IconData(
     0xec71,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/volume_slash.png)
-  static const DSIcon volumeSlashBroken = _DSIconBroken(
+  static const DSFontIcon volumeSlashBroken = IconData(
     0xec72,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/volume_up.png)
-  static const DSIcon volumeUpBroken = _DSIconBroken(
+  static const DSFontIcon volumeUpBroken = IconData(
     0xec73,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/wallet.png)
-  static const DSIcon walletBroken = _DSIconBroken(
+  static const DSFontIcon walletBroken = IconData(
     0xec74,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/wallet_1.png)
-  static const DSIcon wallet1Broken = _DSIconBroken(
+  static const DSFontIcon wallet1Broken = IconData(
     0xec75,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/wallet_2.png)
-  static const DSIcon wallet2Broken = _DSIconBroken(
+  static const DSFontIcon wallet2Broken = IconData(
     0xec76,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/wallet_3.png)
-  static const DSIcon wallet3Broken = _DSIconBroken(
+  static const DSFontIcon wallet3Broken = IconData(
     0xec77,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/wallet_add.png)
-  static const DSIcon walletAddBroken = _DSIconBroken(
+  static const DSFontIcon walletAddBroken = IconData(
     0xec78,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/wallet_add_1.png)
-  static const DSIcon walletAdd1Broken = _DSIconBroken(
+  static const DSFontIcon walletAdd1Broken = IconData(
     0xec79,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/wallet_check.png)
-  static const DSIcon walletCheckBroken = _DSIconBroken(
+  static const DSFontIcon walletCheckBroken = IconData(
     0xec7a,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/wallet_minus.png)
-  static const DSIcon walletMinusBroken = _DSIconBroken(
+  static const DSFontIcon walletMinusBroken = IconData(
     0xec7b,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/wallet_money.png)
-  static const DSIcon walletMoneyBroken = _DSIconBroken(
+  static const DSFontIcon walletMoneyBroken = IconData(
     0xec7c,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/wallet_remove.png)
-  static const DSIcon walletRemoveBroken = _DSIconBroken(
+  static const DSFontIcon walletRemoveBroken = IconData(
     0xec7d,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/wallet_search.png)
-  static const DSIcon walletSearchBroken = _DSIconBroken(
+  static const DSFontIcon walletSearchBroken = IconData(
     0xec7e,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/warning_2.png)
-  static const DSIcon warning2Broken = _DSIconBroken(
+  static const DSFontIcon warning2Broken = IconData(
     0xec7f,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/watch.png)
-  static const DSIcon watchBroken = _DSIconBroken(
+  static const DSFontIcon watchBroken = IconData(
     0xec80,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/watch_status.png)
-  static const DSIcon watchStatusBroken = _DSIconBroken(
+  static const DSFontIcon watchStatusBroken = IconData(
     0xec81,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/weight.png)
-  static const DSIcon weightBroken = _DSIconBroken(
+  static const DSFontIcon weightBroken = IconData(
     0xec82,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/weight_1.png)
-  static const DSIcon weight1Broken = _DSIconBroken(
+  static const DSFontIcon weight1Broken = IconData(
     0xec83,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/wifi.png)
-  static const DSIcon wifiBroken = _DSIconBroken(
+  static const DSFontIcon wifiBroken = IconData(
     0xec84,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/wifi_square.png)
-  static const DSIcon wifiSquareBroken = _DSIconBroken(
+  static const DSFontIcon wifiSquareBroken = IconData(
     0xec85,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/wind.png)
-  static const DSIcon windBroken = _DSIconBroken(
+  static const DSFontIcon windBroken = IconData(
     0xec86,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/wind_2.png)
-  static const DSIcon wind2Broken = _DSIconBroken(
+  static const DSFontIcon wind2Broken = IconData(
     0xec87,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/broken/woman.png)
-  static const DSIcon womanBroken = _DSIconBroken(
+  static const DSFontIcon womanBroken = IconData(
     0xec88,
+    fontFamily: Fonts.iconsaxPlusBroken,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/dcube.png)
-  static const DSIcon dcubeLinear = _DSIconLinear(
+  static const DSFontIcon dcubeLinear = IconData(
     0xe900,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/d_cube_scan.png)
-  static const DSIcon dCubeScanLinear = _DSIconLinear(
+  static const DSFontIcon dCubeScanLinear = IconData(
     0xe901,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/d_rotate.png)
-  static const DSIcon dRotateLinear = _DSIconLinear(
+  static const DSFontIcon dRotateLinear = IconData(
     0xe902,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/d_square.png)
-  static const DSIcon dSquareLinear = _DSIconLinear(
+  static const DSFontIcon dSquareLinear = IconData(
     0xe903,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/square.png)
-  static const DSIcon squareLinear = _DSIconLinear(
+  static const DSFontIcon squareLinear = IconData(
     0xe904,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/support.png)
-  static const DSIcon supportLinear = _DSIconLinear(
+  static const DSFontIcon supportLinear = IconData(
     0xe905,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/activity.png)
-  static const DSIcon activityLinear = _DSIconLinear(
+  static const DSFontIcon activityLinear = IconData(
     0xe906,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/add.png)
-  static const DSIcon addLinear = _DSIconLinear(
+  static const DSFontIcon addLinear = IconData(
     0xe907,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/add_circle.png)
-  static const DSIcon addCircleLinear = _DSIconLinear(
+  static const DSFontIcon addCircleLinear = IconData(
     0xe908,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/additem.png)
-  static const DSIcon additemLinear = _DSIconLinear(
+  static const DSFontIcon additemLinear = IconData(
     0xe909,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/add_square.png)
-  static const DSIcon addSquareLinear = _DSIconLinear(
+  static const DSFontIcon addSquareLinear = IconData(
     0xe90a,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/airdrop.png)
-  static const DSIcon airdropLinear = _DSIconLinear(
+  static const DSFontIcon airdropLinear = IconData(
     0xe90b,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/airplane.png)
-  static const DSIcon airplaneLinear = _DSIconLinear(
+  static const DSFontIcon airplaneLinear = IconData(
     0xe90c,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/airplane_square.png)
-  static const DSIcon airplaneSquareLinear = _DSIconLinear(
+  static const DSFontIcon airplaneSquareLinear = IconData(
     0xe90d,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/airpod.png)
-  static const DSIcon airpodLinear = _DSIconLinear(
+  static const DSFontIcon airpodLinear = IconData(
     0xe90e,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/airpods.png)
-  static const DSIcon airpodsLinear = _DSIconLinear(
+  static const DSFontIcon airpodsLinear = IconData(
     0xe90f,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/alarm.png)
-  static const DSIcon alarmLinear = _DSIconLinear(
+  static const DSFontIcon alarmLinear = IconData(
     0xe910,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/align_bottom.png)
-  static const DSIcon alignBottomLinear = _DSIconLinear(
+  static const DSFontIcon alignBottomLinear = IconData(
     0xe911,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/align_horizontally.png)
-  static const DSIcon alignHorizontallyLinear = _DSIconLinear(
+  static const DSFontIcon alignHorizontallyLinear = IconData(
     0xe912,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/align_left.png)
-  static const DSIcon alignLeftLinear = _DSIconLinear(
+  static const DSFontIcon alignLeftLinear = IconData(
     0xe913,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/align_right.png)
-  static const DSIcon alignRightLinear = _DSIconLinear(
+  static const DSFontIcon alignRightLinear = IconData(
     0xe914,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/align_top.png)
-  static const DSIcon alignTopLinear = _DSIconLinear(
+  static const DSFontIcon alignTopLinear = IconData(
     0xe915,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/align_vertically.png)
-  static const DSIcon alignVerticallyLinear = _DSIconLinear(
+  static const DSFontIcon alignVerticallyLinear = IconData(
     0xe916,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/aquarius.png)
-  static const DSIcon aquariusLinear = _DSIconLinear(
+  static const DSFontIcon aquariusLinear = IconData(
     0xe917,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/archive.png)
-  static const DSIcon archiveLinear = _DSIconLinear(
+  static const DSFontIcon archiveLinear = IconData(
     0xe918,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/archive_1.png)
-  static const DSIcon archive1Linear = _DSIconLinear(
+  static const DSFontIcon archive1Linear = IconData(
     0xe919,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/archive_2.png)
-  static const DSIcon archive2Linear = _DSIconLinear(
+  static const DSFontIcon archive2Linear = IconData(
     0xe91a,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/archive_add.png)
-  static const DSIcon archiveAddLinear = _DSIconLinear(
+  static const DSFontIcon archiveAddLinear = IconData(
     0xe91b,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/archive_book.png)
-  static const DSIcon archiveBookLinear = _DSIconLinear(
+  static const DSFontIcon archiveBookLinear = IconData(
     0xe91c,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/archive_minus.png)
-  static const DSIcon archiveMinusLinear = _DSIconLinear(
+  static const DSFontIcon archiveMinusLinear = IconData(
     0xe91d,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/archive_slash.png)
-  static const DSIcon archiveSlashLinear = _DSIconLinear(
+  static const DSFontIcon archiveSlashLinear = IconData(
     0xe91e,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/archive_tick.png)
-  static const DSIcon archiveTickLinear = _DSIconLinear(
+  static const DSFontIcon archiveTickLinear = IconData(
     0xe91f,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/arrange_circle.png)
-  static const DSIcon arrangeCircleLinear = _DSIconLinear(
+  static const DSFontIcon arrangeCircleLinear = IconData(
     0xe920,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/arrange_circle_2.png)
-  static const DSIcon arrangeCircle2Linear = _DSIconLinear(
+  static const DSFontIcon arrangeCircle2Linear = IconData(
     0xe921,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/arrange_square.png)
-  static const DSIcon arrangeSquareLinear = _DSIconLinear(
+  static const DSFontIcon arrangeSquareLinear = IconData(
     0xe922,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/arrange_square_2.png)
-  static const DSIcon arrangeSquare2Linear = _DSIconLinear(
+  static const DSFontIcon arrangeSquare2Linear = IconData(
     0xe923,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/arrow.png)
-  static const DSIcon arrowLinear = _DSIconLinear(
+  static const DSFontIcon arrowLinear = IconData(
     0xe924,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/arrow_2.png)
-  static const DSIcon arrow2Linear = _DSIconLinear(
+  static const DSFontIcon arrow2Linear = IconData(
     0xe925,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/arrow_3.png)
-  static const DSIcon arrow3Linear = _DSIconLinear(
+  static const DSFontIcon arrow3Linear = IconData(
     0xe926,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/arrow_bottom.png)
-  static const DSIcon arrowBottomLinear = _DSIconLinear(
+  static const DSFontIcon arrowBottomLinear = IconData(
     0xe927,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/arrow_circle_down.png)
-  static const DSIcon arrowCircleDownLinear = _DSIconLinear(
+  static const DSFontIcon arrowCircleDownLinear = IconData(
     0xe928,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/arrow_circle_left.png)
-  static const DSIcon arrowCircleLeftLinear = _DSIconLinear(
+  static const DSFontIcon arrowCircleLeftLinear = IconData(
     0xe929,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/arrow_circle_right.png)
-  static const DSIcon arrowCircleRightLinear = _DSIconLinear(
+  static const DSFontIcon arrowCircleRightLinear = IconData(
     0xe92a,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/arrow_circle_up.png)
-  static const DSIcon arrowCircleUpLinear = _DSIconLinear(
+  static const DSFontIcon arrowCircleUpLinear = IconData(
     0xe92b,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/arrow_down.png)
-  static const DSIcon arrowDownLinear = _DSIconLinear(
+  static const DSFontIcon arrowDownLinear = IconData(
     0xe92c,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/arrow_down_1.png)
-  static const DSIcon arrowDown1Linear = _DSIconLinear(
+  static const DSFontIcon arrowDown1Linear = IconData(
     0xe92d,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/arrow_down_2.png)
-  static const DSIcon arrowDown2Linear = _DSIconLinear(
+  static const DSFontIcon arrowDown2Linear = IconData(
     0xe92e,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/arrow_left.png)
-  static const DSIcon arrowLeftLinear = _DSIconLinear(
+  static const DSFontIcon arrowLeftLinear = IconData(
     0xe92f,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/arrow_left_1.png)
-  static const DSIcon arrowLeft1Linear = _DSIconLinear(
+  static const DSFontIcon arrowLeft1Linear = IconData(
     0xe930,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/arrow_left_2.png)
-  static const DSIcon arrowLeft2Linear = _DSIconLinear(
+  static const DSFontIcon arrowLeft2Linear = IconData(
     0xe931,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/arrow_left_3.png)
-  static const DSIcon arrowLeft3Linear = _DSIconLinear(
+  static const DSFontIcon arrowLeft3Linear = IconData(
     0xe932,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/arrow_right.png)
-  static const DSIcon arrowRightLinear = _DSIconLinear(
+  static const DSFontIcon arrowRightLinear = IconData(
     0xe933,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/arrow_right_1.png)
-  static const DSIcon arrowRight1Linear = _DSIconLinear(
+  static const DSFontIcon arrowRight1Linear = IconData(
     0xe934,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/arrow_right_2.png)
-  static const DSIcon arrowRight2Linear = _DSIconLinear(
+  static const DSFontIcon arrowRight2Linear = IconData(
     0xe935,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/arrow_right_3.png)
-  static const DSIcon arrowRight3Linear = _DSIconLinear(
+  static const DSFontIcon arrowRight3Linear = IconData(
     0xe936,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/arrow_square.png)
-  static const DSIcon arrowSquareLinear = _DSIconLinear(
+  static const DSFontIcon arrowSquareLinear = IconData(
     0xe937,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/arrow_square_down.png)
-  static const DSIcon arrowSquareDownLinear = _DSIconLinear(
+  static const DSFontIcon arrowSquareDownLinear = IconData(
     0xe938,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/arrow_square_left.png)
-  static const DSIcon arrowSquareLeftLinear = _DSIconLinear(
+  static const DSFontIcon arrowSquareLeftLinear = IconData(
     0xe939,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/arrow_square_right.png)
-  static const DSIcon arrowSquareRightLinear = _DSIconLinear(
+  static const DSFontIcon arrowSquareRightLinear = IconData(
     0xe93a,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/arrow_square_up.png)
-  static const DSIcon arrowSquareUpLinear = _DSIconLinear(
+  static const DSFontIcon arrowSquareUpLinear = IconData(
     0xe93b,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/arrow_swap.png)
-  static const DSIcon arrowSwapLinear = _DSIconLinear(
+  static const DSFontIcon arrowSwapLinear = IconData(
     0xe93c,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/arrow_swap_horizontal.png)
-  static const DSIcon arrowSwapHorizontalLinear = _DSIconLinear(
+  static const DSFontIcon arrowSwapHorizontalLinear = IconData(
     0xe93d,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/arrow_up.png)
-  static const DSIcon arrowUpLinear = _DSIconLinear(
+  static const DSFontIcon arrowUpLinear = IconData(
     0xe93e,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/arrow_up_1.png)
-  static const DSIcon arrowUp1Linear = _DSIconLinear(
+  static const DSFontIcon arrowUp1Linear = IconData(
     0xe93f,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/arrow_up_2.png)
-  static const DSIcon arrowUp2Linear = _DSIconLinear(
+  static const DSFontIcon arrowUp2Linear = IconData(
     0xe940,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/arrow_up_3.png)
-  static const DSIcon arrowUp3Linear = _DSIconLinear(
+  static const DSFontIcon arrowUp3Linear = IconData(
     0xe941,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/attach_circle.png)
-  static const DSIcon attachCircleLinear = _DSIconLinear(
+  static const DSFontIcon attachCircleLinear = IconData(
     0xe942,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/attach_square.png)
-  static const DSIcon attachSquareLinear = _DSIconLinear(
+  static const DSFontIcon attachSquareLinear = IconData(
     0xe943,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/audio_square.png)
-  static const DSIcon audioSquareLinear = _DSIconLinear(
+  static const DSFontIcon audioSquareLinear = IconData(
     0xe944,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/autobrightness.png)
-  static const DSIcon autobrightnessLinear = _DSIconLinear(
+  static const DSFontIcon autobrightnessLinear = IconData(
     0xe945,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/award.png)
-  static const DSIcon awardLinear = _DSIconLinear(
+  static const DSFontIcon awardLinear = IconData(
     0xe946,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/back_square.png)
-  static const DSIcon backSquareLinear = _DSIconLinear(
+  static const DSFontIcon backSquareLinear = IconData(
     0xe947,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/backward.png)
-  static const DSIcon backwardLinear = _DSIconLinear(
+  static const DSFontIcon backwardLinear = IconData(
     0xe948,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/backward_5_seconds.png)
-  static const DSIcon backward5SecondsLinear = _DSIconLinear(
+  static const DSFontIcon backward5SecondsLinear = IconData(
     0xe949,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/backward_10_seconds.png)
-  static const DSIcon backward10SecondsLinear = _DSIconLinear(
+  static const DSFontIcon backward10SecondsLinear = IconData(
     0xe94a,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/backward_15_seconds.png)
-  static const DSIcon backward15SecondsLinear = _DSIconLinear(
+  static const DSFontIcon backward15SecondsLinear = IconData(
     0xe94b,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/backward_item.png)
-  static const DSIcon backwardItemLinear = _DSIconLinear(
+  static const DSFontIcon backwardItemLinear = IconData(
     0xe94c,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/bag.png)
-  static const DSIcon bagLinear = _DSIconLinear(
+  static const DSFontIcon bagLinear = IconData(
     0xe94d,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/bag_2.png)
-  static const DSIcon bag2Linear = _DSIconLinear(
+  static const DSFontIcon bag2Linear = IconData(
     0xe94e,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/bag_cross.png)
-  static const DSIcon bagCrossLinear = _DSIconLinear(
+  static const DSFontIcon bagCrossLinear = IconData(
     0xe94f,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/bag_cross_1.png)
-  static const DSIcon bagCross1Linear = _DSIconLinear(
+  static const DSFontIcon bagCross1Linear = IconData(
     0xe950,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/bag_happy.png)
-  static const DSIcon bagHappyLinear = _DSIconLinear(
+  static const DSFontIcon bagHappyLinear = IconData(
     0xe951,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/bag_tick.png)
-  static const DSIcon bagTickLinear = _DSIconLinear(
+  static const DSFontIcon bagTickLinear = IconData(
     0xe952,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/bag_tick_2.png)
-  static const DSIcon bagTick2Linear = _DSIconLinear(
+  static const DSFontIcon bagTick2Linear = IconData(
     0xe953,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/bag_timer.png)
-  static const DSIcon bagTimerLinear = _DSIconLinear(
+  static const DSFontIcon bagTimerLinear = IconData(
     0xe954,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/bank.png)
-  static const DSIcon bankLinear = _DSIconLinear(
+  static const DSFontIcon bankLinear = IconData(
     0xe955,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/barcode.png)
-  static const DSIcon barcodeLinear = _DSIconLinear(
+  static const DSFontIcon barcodeLinear = IconData(
     0xe956,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/battery_3full.png)
-  static const DSIcon battery3fullLinear = _DSIconLinear(
+  static const DSFontIcon battery3fullLinear = IconData(
     0xe957,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/battery_charging.png)
-  static const DSIcon batteryChargingLinear = _DSIconLinear(
+  static const DSFontIcon batteryChargingLinear = IconData(
     0xe958,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/battery_disable.png)
-  static const DSIcon batteryDisableLinear = _DSIconLinear(
+  static const DSFontIcon batteryDisableLinear = IconData(
     0xe959,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/battery_empty.png)
-  static const DSIcon batteryEmptyLinear = _DSIconLinear(
+  static const DSFontIcon batteryEmptyLinear = IconData(
     0xe95a,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/battery_empty_1.png)
-  static const DSIcon batteryEmpty1Linear = _DSIconLinear(
+  static const DSFontIcon batteryEmpty1Linear = IconData(
     0xe95b,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/battery_full.png)
-  static const DSIcon batteryFullLinear = _DSIconLinear(
+  static const DSFontIcon batteryFullLinear = IconData(
     0xe95c,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/bezier.png)
-  static const DSIcon bezierLinear = _DSIconLinear(
+  static const DSFontIcon bezierLinear = IconData(
     0xe95d,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/bill.png)
-  static const DSIcon billLinear = _DSIconLinear(
+  static const DSFontIcon billLinear = IconData(
     0xe95e,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/bitcoin_card.png)
-  static const DSIcon bitcoinCardLinear = _DSIconLinear(
+  static const DSFontIcon bitcoinCardLinear = IconData(
     0xe95f,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/bitcoin_convert.png)
-  static const DSIcon bitcoinConvertLinear = _DSIconLinear(
+  static const DSFontIcon bitcoinConvertLinear = IconData(
     0xe960,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/bitcoin_refresh.png)
-  static const DSIcon bitcoinRefreshLinear = _DSIconLinear(
+  static const DSFontIcon bitcoinRefreshLinear = IconData(
     0xe961,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/blend.png)
-  static const DSIcon blendLinear = _DSIconLinear(
+  static const DSFontIcon blendLinear = IconData(
     0xe962,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/blend_2.png)
-  static const DSIcon blend2Linear = _DSIconLinear(
+  static const DSFontIcon blend2Linear = IconData(
     0xe963,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/bluetooth.png)
-  static const DSIcon bluetoothLinear = _DSIconLinear(
+  static const DSFontIcon bluetoothLinear = IconData(
     0xe964,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/bluetooth_2.png)
-  static const DSIcon bluetooth2Linear = _DSIconLinear(
+  static const DSFontIcon bluetooth2Linear = IconData(
     0xe965,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/bluetooth_circle.png)
-  static const DSIcon bluetoothCircleLinear = _DSIconLinear(
+  static const DSFontIcon bluetoothCircleLinear = IconData(
     0xe966,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/bluetooth_rectangle.png)
-  static const DSIcon bluetoothRectangleLinear = _DSIconLinear(
+  static const DSFontIcon bluetoothRectangleLinear = IconData(
     0xe967,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/blur.png)
-  static const DSIcon blurLinear = _DSIconLinear(
+  static const DSFontIcon blurLinear = IconData(
     0xe968,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/book.png)
-  static const DSIcon bookLinear = _DSIconLinear(
+  static const DSFontIcon bookLinear = IconData(
     0xe969,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/book_1.png)
-  static const DSIcon book1Linear = _DSIconLinear(
+  static const DSFontIcon book1Linear = IconData(
     0xe96a,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/bookmark.png)
-  static const DSIcon bookmarkLinear = _DSIconLinear(
+  static const DSFontIcon bookmarkLinear = IconData(
     0xe96b,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/bookmark_2.png)
-  static const DSIcon bookmark2Linear = _DSIconLinear(
+  static const DSFontIcon bookmark2Linear = IconData(
     0xe96c,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/book_saved.png)
-  static const DSIcon bookSavedLinear = _DSIconLinear(
+  static const DSFontIcon bookSavedLinear = IconData(
     0xe96d,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/book_square.png)
-  static const DSIcon bookSquareLinear = _DSIconLinear(
+  static const DSFontIcon bookSquareLinear = IconData(
     0xe96e,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/box.png)
-  static const DSIcon boxLinear = _DSIconLinear(
+  static const DSFontIcon boxLinear = IconData(
     0xe96f,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/box_1.png)
-  static const DSIcon box1Linear = _DSIconLinear(
+  static const DSFontIcon box1Linear = IconData(
     0xe970,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/box_2.png)
-  static const DSIcon box2Linear = _DSIconLinear(
+  static const DSFontIcon box2Linear = IconData(
     0xe971,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/box_add.png)
-  static const DSIcon boxAddLinear = _DSIconLinear(
+  static const DSFontIcon boxAddLinear = IconData(
     0xe972,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/box_remove.png)
-  static const DSIcon boxRemoveLinear = _DSIconLinear(
+  static const DSFontIcon boxRemoveLinear = IconData(
     0xe973,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/box_search.png)
-  static const DSIcon boxSearchLinear = _DSIconLinear(
+  static const DSFontIcon boxSearchLinear = IconData(
     0xe974,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/box_tick.png)
-  static const DSIcon boxTickLinear = _DSIconLinear(
+  static const DSFontIcon boxTickLinear = IconData(
     0xe975,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/box_time.png)
-  static const DSIcon boxTimeLinear = _DSIconLinear(
+  static const DSFontIcon boxTimeLinear = IconData(
     0xe976,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/briefcase.png)
-  static const DSIcon briefcaseLinear = _DSIconLinear(
+  static const DSFontIcon briefcaseLinear = IconData(
     0xe977,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/brifecase_cross.png)
-  static const DSIcon brifecaseCrossLinear = _DSIconLinear(
+  static const DSFontIcon brifecaseCrossLinear = IconData(
     0xe978,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/brifecase_tick.png)
-  static const DSIcon brifecaseTickLinear = _DSIconLinear(
+  static const DSFontIcon brifecaseTickLinear = IconData(
     0xe979,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/brifecase_timer.png)
-  static const DSIcon brifecaseTimerLinear = _DSIconLinear(
+  static const DSFontIcon brifecaseTimerLinear = IconData(
     0xe97a,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/broom.png)
-  static const DSIcon broomLinear = _DSIconLinear(
+  static const DSFontIcon broomLinear = IconData(
     0xe97b,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/brush.png)
-  static const DSIcon brushLinear = _DSIconLinear(
+  static const DSFontIcon brushLinear = IconData(
     0xe97c,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/brush_1.png)
-  static const DSIcon brush1Linear = _DSIconLinear(
+  static const DSFontIcon brush1Linear = IconData(
     0xe97d,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/brush_2.png)
-  static const DSIcon brush2Linear = _DSIconLinear(
+  static const DSFontIcon brush2Linear = IconData(
     0xe97e,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/brush_3.png)
-  static const DSIcon brush3Linear = _DSIconLinear(
+  static const DSFontIcon brush3Linear = IconData(
     0xe97f,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/brush_4.png)
-  static const DSIcon brush4Linear = _DSIconLinear(
+  static const DSFontIcon brush4Linear = IconData(
     0xe980,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/bubble.png)
-  static const DSIcon bubbleLinear = _DSIconLinear(
+  static const DSFontIcon bubbleLinear = IconData(
     0xe981,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/bucket.png)
-  static const DSIcon bucketLinear = _DSIconLinear(
+  static const DSFontIcon bucketLinear = IconData(
     0xe982,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/bucket_circle.png)
-  static const DSIcon bucketCircleLinear = _DSIconLinear(
+  static const DSFontIcon bucketCircleLinear = IconData(
     0xe983,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/bucket_square.png)
-  static const DSIcon bucketSquareLinear = _DSIconLinear(
+  static const DSFontIcon bucketSquareLinear = IconData(
     0xe984,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/building.png)
-  static const DSIcon buildingLinear = _DSIconLinear(
+  static const DSFontIcon buildingLinear = IconData(
     0xe985,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/building_3.png)
-  static const DSIcon building3Linear = _DSIconLinear(
+  static const DSFontIcon building3Linear = IconData(
     0xe986,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/building_4.png)
-  static const DSIcon building4Linear = _DSIconLinear(
+  static const DSFontIcon building4Linear = IconData(
     0xe987,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/buildings.png)
-  static const DSIcon buildingsLinear = _DSIconLinear(
+  static const DSFontIcon buildingsLinear = IconData(
     0xe988,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/buildings_2.png)
-  static const DSIcon buildings2Linear = _DSIconLinear(
+  static const DSFontIcon buildings2Linear = IconData(
     0xe989,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/buliding.png)
-  static const DSIcon bulidingLinear = _DSIconLinear(
+  static const DSFontIcon bulidingLinear = IconData(
     0xe98a,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/bus.png)
-  static const DSIcon busLinear = _DSIconLinear(
+  static const DSFontIcon busLinear = IconData(
     0xe98b,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/buy_crypto.png)
-  static const DSIcon buyCryptoLinear = _DSIconLinear(
+  static const DSFontIcon buyCryptoLinear = IconData(
     0xe98c,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/cake.png)
-  static const DSIcon cakeLinear = _DSIconLinear(
+  static const DSFontIcon cakeLinear = IconData(
     0xe98d,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/calculator.png)
-  static const DSIcon calculatorLinear = _DSIconLinear(
+  static const DSFontIcon calculatorLinear = IconData(
     0xe98e,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/calendar.png)
-  static const DSIcon calendarLinear = _DSIconLinear(
+  static const DSFontIcon calendarLinear = IconData(
     0xe98f,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/calendar_1.png)
-  static const DSIcon calendar1Linear = _DSIconLinear(
+  static const DSFontIcon calendar1Linear = IconData(
     0xe990,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/calendar_2.png)
-  static const DSIcon calendar2Linear = _DSIconLinear(
+  static const DSFontIcon calendar2Linear = IconData(
     0xe991,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/calendar_add.png)
-  static const DSIcon calendarAddLinear = _DSIconLinear(
+  static const DSFontIcon calendarAddLinear = IconData(
     0xe992,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/calendar_circle.png)
-  static const DSIcon calendarCircleLinear = _DSIconLinear(
+  static const DSFontIcon calendarCircleLinear = IconData(
     0xe993,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/calendar_edit.png)
-  static const DSIcon calendarEditLinear = _DSIconLinear(
+  static const DSFontIcon calendarEditLinear = IconData(
     0xe994,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/calendar_remove.png)
-  static const DSIcon calendarRemoveLinear = _DSIconLinear(
+  static const DSFontIcon calendarRemoveLinear = IconData(
     0xe995,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/calendar_search.png)
-  static const DSIcon calendarSearchLinear = _DSIconLinear(
+  static const DSFontIcon calendarSearchLinear = IconData(
     0xe996,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/calendar_tick.png)
-  static const DSIcon calendarTickLinear = _DSIconLinear(
+  static const DSFontIcon calendarTickLinear = IconData(
     0xe997,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/call.png)
-  static const DSIcon callLinear = _DSIconLinear(
+  static const DSFontIcon callLinear = IconData(
     0xe998,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/call_add.png)
-  static const DSIcon callAddLinear = _DSIconLinear(
+  static const DSFontIcon callAddLinear = IconData(
     0xe999,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/call_calling.png)
-  static const DSIcon callCallingLinear = _DSIconLinear(
+  static const DSFontIcon callCallingLinear = IconData(
     0xe99a,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/call_incoming.png)
-  static const DSIcon callIncomingLinear = _DSIconLinear(
+  static const DSFontIcon callIncomingLinear = IconData(
     0xe99b,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/call_minus.png)
-  static const DSIcon callMinusLinear = _DSIconLinear(
+  static const DSFontIcon callMinusLinear = IconData(
     0xe99c,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/call_outgoing.png)
-  static const DSIcon callOutgoingLinear = _DSIconLinear(
+  static const DSFontIcon callOutgoingLinear = IconData(
     0xe99d,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/call_received.png)
-  static const DSIcon callReceivedLinear = _DSIconLinear(
+  static const DSFontIcon callReceivedLinear = IconData(
     0xe99e,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/call_remove.png)
-  static const DSIcon callRemoveLinear = _DSIconLinear(
+  static const DSFontIcon callRemoveLinear = IconData(
     0xe99f,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/call_slash.png)
-  static const DSIcon callSlashLinear = _DSIconLinear(
+  static const DSFontIcon callSlashLinear = IconData(
     0xe9a0,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/camera.png)
-  static const DSIcon cameraLinear = _DSIconLinear(
+  static const DSFontIcon cameraLinear = IconData(
     0xe9a1,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/camera_slash.png)
-  static const DSIcon cameraSlashLinear = _DSIconLinear(
+  static const DSFontIcon cameraSlashLinear = IconData(
     0xe9a2,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/candle.png)
-  static const DSIcon candleLinear = _DSIconLinear(
+  static const DSFontIcon candleLinear = IconData(
     0xe9a3,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/candle_2.png)
-  static const DSIcon candle2Linear = _DSIconLinear(
+  static const DSFontIcon candle2Linear = IconData(
     0xe9a4,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/car.png)
-  static const DSIcon carLinear = _DSIconLinear(
+  static const DSFontIcon carLinear = IconData(
     0xe9a5,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/card.png)
-  static const DSIcon cardLinear = _DSIconLinear(
+  static const DSFontIcon cardLinear = IconData(
     0xe9a6,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/card_add.png)
-  static const DSIcon cardAddLinear = _DSIconLinear(
+  static const DSFontIcon cardAddLinear = IconData(
     0xe9a7,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/card_coin.png)
-  static const DSIcon cardCoinLinear = _DSIconLinear(
+  static const DSFontIcon cardCoinLinear = IconData(
     0xe9a8,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/card_edit.png)
-  static const DSIcon cardEditLinear = _DSIconLinear(
+  static const DSFontIcon cardEditLinear = IconData(
     0xe9a9,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/card_pos.png)
-  static const DSIcon cardPosLinear = _DSIconLinear(
+  static const DSFontIcon cardPosLinear = IconData(
     0xe9aa,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/card_receive.png)
-  static const DSIcon cardReceiveLinear = _DSIconLinear(
+  static const DSFontIcon cardReceiveLinear = IconData(
     0xe9ab,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/card_remove.png)
-  static const DSIcon cardRemoveLinear = _DSIconLinear(
+  static const DSFontIcon cardRemoveLinear = IconData(
     0xe9ac,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/card_remove_1.png)
-  static const DSIcon cardRemove1Linear = _DSIconLinear(
+  static const DSFontIcon cardRemove1Linear = IconData(
     0xe9ad,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/cards.png)
-  static const DSIcon cardsLinear = _DSIconLinear(
+  static const DSFontIcon cardsLinear = IconData(
     0xe9ae,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/card_send.png)
-  static const DSIcon cardSendLinear = _DSIconLinear(
+  static const DSFontIcon cardSendLinear = IconData(
     0xe9af,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/card_slash.png)
-  static const DSIcon cardSlashLinear = _DSIconLinear(
+  static const DSFontIcon cardSlashLinear = IconData(
     0xe9b0,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/card_tick.png)
-  static const DSIcon cardTickLinear = _DSIconLinear(
+  static const DSFontIcon cardTickLinear = IconData(
     0xe9b1,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/card_tick_1.png)
-  static const DSIcon cardTick1Linear = _DSIconLinear(
+  static const DSFontIcon cardTick1Linear = IconData(
     0xe9b2,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/category.png)
-  static const DSIcon categoryLinear = _DSIconLinear(
+  static const DSFontIcon categoryLinear = IconData(
     0xe9b3,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/category_2.png)
-  static const DSIcon category2Linear = _DSIconLinear(
+  static const DSFontIcon category2Linear = IconData(
     0xe9b4,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/cd.png)
-  static const DSIcon cdLinear = _DSIconLinear(
+  static const DSFontIcon cdLinear = IconData(
     0xe9b5,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/chart.png)
-  static const DSIcon chartLinear = _DSIconLinear(
+  static const DSFontIcon chartLinear = IconData(
     0xe9b6,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/chart_1.png)
-  static const DSIcon chart1Linear = _DSIconLinear(
+  static const DSFontIcon chart1Linear = IconData(
     0xe9b7,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/chart_2.png)
-  static const DSIcon chart2Linear = _DSIconLinear(
+  static const DSFontIcon chart2Linear = IconData(
     0xe9b8,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/chart_3.png)
-  static const DSIcon chart3Linear = _DSIconLinear(
+  static const DSFontIcon chart3Linear = IconData(
     0xe9b9,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/chart_21.png)
-  static const DSIcon chart21Linear = _DSIconLinear(
+  static const DSFontIcon chart21Linear = IconData(
     0xe9ba,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/chart_fail.png)
-  static const DSIcon chartFailLinear = _DSIconLinear(
+  static const DSFontIcon chartFailLinear = IconData(
     0xe9bb,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/chart_square.png)
-  static const DSIcon chartSquareLinear = _DSIconLinear(
+  static const DSFontIcon chartSquareLinear = IconData(
     0xe9bc,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/chart_success.png)
-  static const DSIcon chartSuccessLinear = _DSIconLinear(
+  static const DSFontIcon chartSuccessLinear = IconData(
     0xe9bd,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/check.png)
-  static const DSIcon checkLinear = _DSIconLinear(
+  static const DSFontIcon checkLinear = IconData(
     0xe9be,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/chrome.png)
-  static const DSIcon chromeLinear = _DSIconLinear(
+  static const DSFontIcon chromeLinear = IconData(
     0xe9bf,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/clipboard.png)
-  static const DSIcon clipboardLinear = _DSIconLinear(
+  static const DSFontIcon clipboardLinear = IconData(
     0xe9c0,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/clipboard_close.png)
-  static const DSIcon clipboardCloseLinear = _DSIconLinear(
+  static const DSFontIcon clipboardCloseLinear = IconData(
     0xe9c1,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/clipboard_export.png)
-  static const DSIcon clipboardExportLinear = _DSIconLinear(
+  static const DSFontIcon clipboardExportLinear = IconData(
     0xe9c2,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/clipboard_import.png)
-  static const DSIcon clipboardImportLinear = _DSIconLinear(
+  static const DSFontIcon clipboardImportLinear = IconData(
     0xe9c3,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/clipboard_text.png)
-  static const DSIcon clipboardTextLinear = _DSIconLinear(
+  static const DSFontIcon clipboardTextLinear = IconData(
     0xe9c4,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/clipboard_tick.png)
-  static const DSIcon clipboardTickLinear = _DSIconLinear(
+  static const DSFontIcon clipboardTickLinear = IconData(
     0xe9c5,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/clock.png)
-  static const DSIcon clockLinear = _DSIconLinear(
+  static const DSFontIcon clockLinear = IconData(
     0xe9c6,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/clock_1.png)
-  static const DSIcon clock1Linear = _DSIconLinear(
+  static const DSFontIcon clock1Linear = IconData(
     0xe9c7,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/close_circle.png)
-  static const DSIcon closeCircleLinear = _DSIconLinear(
+  static const DSFontIcon closeCircleLinear = IconData(
     0xe9c8,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/close_square.png)
-  static const DSIcon closeSquareLinear = _DSIconLinear(
+  static const DSFontIcon closeSquareLinear = IconData(
     0xe9c9,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/cloud.png)
-  static const DSIcon cloudLinear = _DSIconLinear(
+  static const DSFontIcon cloudLinear = IconData(
     0xe9ca,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/cloud_add.png)
-  static const DSIcon cloudAddLinear = _DSIconLinear(
+  static const DSFontIcon cloudAddLinear = IconData(
     0xe9cb,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/cloud_change.png)
-  static const DSIcon cloudChangeLinear = _DSIconLinear(
+  static const DSFontIcon cloudChangeLinear = IconData(
     0xe9cc,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/cloud_connection.png)
-  static const DSIcon cloudConnectionLinear = _DSIconLinear(
+  static const DSFontIcon cloudConnectionLinear = IconData(
     0xe9cd,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/cloud_cross.png)
-  static const DSIcon cloudCrossLinear = _DSIconLinear(
+  static const DSFontIcon cloudCrossLinear = IconData(
     0xe9ce,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/cloud_drizzle.png)
-  static const DSIcon cloudDrizzleLinear = _DSIconLinear(
+  static const DSFontIcon cloudDrizzleLinear = IconData(
     0xe9cf,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/cloud_fog.png)
-  static const DSIcon cloudFogLinear = _DSIconLinear(
+  static const DSFontIcon cloudFogLinear = IconData(
     0xe9d0,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/cloud_lightning.png)
-  static const DSIcon cloudLightningLinear = _DSIconLinear(
+  static const DSFontIcon cloudLightningLinear = IconData(
     0xe9d1,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/cloud_minus.png)
-  static const DSIcon cloudMinusLinear = _DSIconLinear(
+  static const DSFontIcon cloudMinusLinear = IconData(
     0xe9d2,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/cloud_notif.png)
-  static const DSIcon cloudNotifLinear = _DSIconLinear(
+  static const DSFontIcon cloudNotifLinear = IconData(
     0xe9d3,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/cloud_plus.png)
-  static const DSIcon cloudPlusLinear = _DSIconLinear(
+  static const DSFontIcon cloudPlusLinear = IconData(
     0xe9d4,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/cloud_remove.png)
-  static const DSIcon cloudRemoveLinear = _DSIconLinear(
+  static const DSFontIcon cloudRemoveLinear = IconData(
     0xe9d5,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/cloud_snow.png)
-  static const DSIcon cloudSnowLinear = _DSIconLinear(
+  static const DSFontIcon cloudSnowLinear = IconData(
     0xe9d6,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/cloud_sunny.png)
-  static const DSIcon cloudSunnyLinear = _DSIconLinear(
+  static const DSFontIcon cloudSunnyLinear = IconData(
     0xe9d7,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/code.png)
-  static const DSIcon codeLinear = _DSIconLinear(
+  static const DSFontIcon codeLinear = IconData(
     0xe9d8,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/code_1.png)
-  static const DSIcon code1Linear = _DSIconLinear(
+  static const DSFontIcon code1Linear = IconData(
     0xe9d9,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/code_circle.png)
-  static const DSIcon codeCircleLinear = _DSIconLinear(
+  static const DSFontIcon codeCircleLinear = IconData(
     0xe9da,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/coffee.png)
-  static const DSIcon coffeeLinear = _DSIconLinear(
+  static const DSFontIcon coffeeLinear = IconData(
     0xe9db,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/coin.png)
-  static const DSIcon coinLinear = _DSIconLinear(
+  static const DSFontIcon coinLinear = IconData(
     0xe9dc,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/coin_1.png)
-  static const DSIcon coin1Linear = _DSIconLinear(
+  static const DSFontIcon coin1Linear = IconData(
     0xe9dd,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/colorfilter.png)
-  static const DSIcon colorfilterLinear = _DSIconLinear(
+  static const DSFontIcon colorfilterLinear = IconData(
     0xe9de,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/colors_square.png)
-  static const DSIcon colorsSquareLinear = _DSIconLinear(
+  static const DSFontIcon colorsSquareLinear = IconData(
     0xe9df,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/color_swatch.png)
-  static const DSIcon colorSwatchLinear = _DSIconLinear(
+  static const DSFontIcon colorSwatchLinear = IconData(
     0xe9e0,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/command.png)
-  static const DSIcon commandLinear = _DSIconLinear(
+  static const DSFontIcon commandLinear = IconData(
     0xe9e1,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/command_square.png)
-  static const DSIcon commandSquareLinear = _DSIconLinear(
+  static const DSFontIcon commandSquareLinear = IconData(
     0xe9e2,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/component.png)
-  static const DSIcon componentLinear = _DSIconLinear(
+  static const DSFontIcon componentLinear = IconData(
     0xe9e3,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/computing.png)
-  static const DSIcon computingLinear = _DSIconLinear(
+  static const DSFontIcon computingLinear = IconData(
     0xe9e4,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/convert.png)
-  static const DSIcon convertLinear = _DSIconLinear(
+  static const DSFontIcon convertLinear = IconData(
     0xe9e5,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/convert_3d_cube.png)
-  static const DSIcon convert3dCubeLinear = _DSIconLinear(
+  static const DSFontIcon convert3dCubeLinear = IconData(
     0xe9e6,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/convert_card.png)
-  static const DSIcon convertCardLinear = _DSIconLinear(
+  static const DSFontIcon convertCardLinear = IconData(
     0xe9e7,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/convertshape.png)
-  static const DSIcon convertshapeLinear = _DSIconLinear(
+  static const DSFontIcon convertshapeLinear = IconData(
     0xe9e8,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/convertshape_2.png)
-  static const DSIcon convertshape2Linear = _DSIconLinear(
+  static const DSFontIcon convertshape2Linear = IconData(
     0xe9e9,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/copy.png)
-  static const DSIcon copyLinear = _DSIconLinear(
+  static const DSFontIcon copyLinear = IconData(
     0xe9ea,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/copyright.png)
-  static const DSIcon copyrightLinear = _DSIconLinear(
+  static const DSFontIcon copyrightLinear = IconData(
     0xe9eb,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/copy_success.png)
-  static const DSIcon copySuccessLinear = _DSIconLinear(
+  static const DSFontIcon copySuccessLinear = IconData(
     0xe9ec,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/courthouse.png)
-  static const DSIcon courthouseLinear = _DSIconLinear(
+  static const DSFontIcon courthouseLinear = IconData(
     0xe9ed,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/cpu.png)
-  static const DSIcon cpuLinear = _DSIconLinear(
+  static const DSFontIcon cpuLinear = IconData(
     0xe9ee,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/cpu_charge.png)
-  static const DSIcon cpuChargeLinear = _DSIconLinear(
+  static const DSFontIcon cpuChargeLinear = IconData(
     0xe9ef,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/cpu_setting.png)
-  static const DSIcon cpuSettingLinear = _DSIconLinear(
+  static const DSFontIcon cpuSettingLinear = IconData(
     0xe9f0,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/creative_commons.png)
-  static const DSIcon creativeCommonsLinear = _DSIconLinear(
+  static const DSFontIcon creativeCommonsLinear = IconData(
     0xe9f1,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/crop.png)
-  static const DSIcon cropLinear = _DSIconLinear(
+  static const DSFontIcon cropLinear = IconData(
     0xe9f2,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/crown.png)
-  static const DSIcon crownLinear = _DSIconLinear(
+  static const DSFontIcon crownLinear = IconData(
     0xe9f3,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/crown_1.png)
-  static const DSIcon crown1Linear = _DSIconLinear(
+  static const DSFontIcon crown1Linear = IconData(
     0xe9f4,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/cup.png)
-  static const DSIcon cupLinear = _DSIconLinear(
+  static const DSFontIcon cupLinear = IconData(
     0xe9f5,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/danger.png)
-  static const DSIcon dangerLinear = _DSIconLinear(
+  static const DSFontIcon dangerLinear = IconData(
     0xe9f6,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/data.png)
-  static const DSIcon dataLinear = _DSIconLinear(
+  static const DSFontIcon dataLinear = IconData(
     0xe9f7,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/data_2.png)
-  static const DSIcon data2Linear = _DSIconLinear(
+  static const DSFontIcon data2Linear = IconData(
     0xe9f8,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/designtools.png)
-  static const DSIcon designtoolsLinear = _DSIconLinear(
+  static const DSFontIcon designtoolsLinear = IconData(
     0xe9fd,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/device_message.png)
-  static const DSIcon deviceMessageLinear = _DSIconLinear(
+  static const DSFontIcon deviceMessageLinear = IconData(
     0xe9fe,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/devices.png)
-  static const DSIcon devicesLinear = _DSIconLinear(
+  static const DSFontIcon devicesLinear = IconData(
     0xe9ff,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/devices_1.png)
-  static const DSIcon devices1Linear = _DSIconLinear(
+  static const DSFontIcon devices1Linear = IconData(
     0xea00,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/diagram.png)
-  static const DSIcon diagramLinear = _DSIconLinear(
+  static const DSFontIcon diagramLinear = IconData(
     0xea01,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/diamonds.png)
-  static const DSIcon diamondsLinear = _DSIconLinear(
+  static const DSFontIcon diamondsLinear = IconData(
     0xea02,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/direct.png)
-  static const DSIcon directLinear = _DSIconLinear(
+  static const DSFontIcon directLinear = IconData(
     0xea03,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/directbox_default.png)
-  static const DSIcon directboxDefaultLinear = _DSIconLinear(
+  static const DSFontIcon directboxDefaultLinear = IconData(
     0xea04,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/directbox_notif.png)
-  static const DSIcon directboxNotifLinear = _DSIconLinear(
+  static const DSFontIcon directboxNotifLinear = IconData(
     0xea05,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/directbox_receive.png)
-  static const DSIcon directboxReceiveLinear = _DSIconLinear(
+  static const DSFontIcon directboxReceiveLinear = IconData(
     0xea06,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/directbox_send.png)
-  static const DSIcon directboxSendLinear = _DSIconLinear(
+  static const DSFontIcon directboxSendLinear = IconData(
     0xea07,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/direct_down.png)
-  static const DSIcon directDownLinear = _DSIconLinear(
+  static const DSFontIcon directDownLinear = IconData(
     0xea08,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/direct_inbox.png)
-  static const DSIcon directInboxLinear = _DSIconLinear(
+  static const DSFontIcon directInboxLinear = IconData(
     0xea09,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/direct_left.png)
-  static const DSIcon directLeftLinear = _DSIconLinear(
+  static const DSFontIcon directLeftLinear = IconData(
     0xea0a,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/direct_normal.png)
-  static const DSIcon directNormalLinear = _DSIconLinear(
+  static const DSFontIcon directNormalLinear = IconData(
     0xea0b,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/direct_notification.png)
-  static const DSIcon directNotificationLinear = _DSIconLinear(
+  static const DSFontIcon directNotificationLinear = IconData(
     0xea0c,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/direct_right.png)
-  static const DSIcon directRightLinear = _DSIconLinear(
+  static const DSFontIcon directRightLinear = IconData(
     0xea0d,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/direct_send.png)
-  static const DSIcon directSendLinear = _DSIconLinear(
+  static const DSFontIcon directSendLinear = IconData(
     0xea0e,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/direct_up.png)
-  static const DSIcon directUpLinear = _DSIconLinear(
+  static const DSFontIcon directUpLinear = IconData(
     0xea0f,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/discount_circle.png)
-  static const DSIcon discountCircleLinear = _DSIconLinear(
+  static const DSFontIcon discountCircleLinear = IconData(
     0xea10,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/discount_shape.png)
-  static const DSIcon discountShapeLinear = _DSIconLinear(
+  static const DSFontIcon discountShapeLinear = IconData(
     0xea11,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/discover.png)
-  static const DSIcon discoverLinear = _DSIconLinear(
+  static const DSFontIcon discoverLinear = IconData(
     0xea12,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/discover_1.png)
-  static const DSIcon discover1Linear = _DSIconLinear(
+  static const DSFontIcon discover1Linear = IconData(
     0xea13,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/dislike.png)
-  static const DSIcon dislikeLinear = _DSIconLinear(
+  static const DSFontIcon dislikeLinear = IconData(
     0xea14,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/document.png)
-  static const DSIcon documentLinear = _DSIconLinear(
+  static const DSFontIcon documentLinear = IconData(
     0xea15,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/document_1.png)
-  static const DSIcon document1Linear = _DSIconLinear(
+  static const DSFontIcon document1Linear = IconData(
     0xea16,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/document_cloud.png)
-  static const DSIcon documentCloudLinear = _DSIconLinear(
+  static const DSFontIcon documentCloudLinear = IconData(
     0xea17,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/document_code.png)
-  static const DSIcon documentCodeLinear = _DSIconLinear(
+  static const DSFontIcon documentCodeLinear = IconData(
     0xea18,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/document_code_2.png)
-  static const DSIcon documentCode2Linear = _DSIconLinear(
+  static const DSFontIcon documentCode2Linear = IconData(
     0xea19,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/document_copy.png)
-  static const DSIcon documentCopyLinear = _DSIconLinear(
+  static const DSFontIcon documentCopyLinear = IconData(
     0xea1a,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/document_download.png)
-  static const DSIcon documentDownloadLinear = _DSIconLinear(
+  static const DSFontIcon documentDownloadLinear = IconData(
     0xea1b,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/document_favorite.png)
-  static const DSIcon documentFavoriteLinear = _DSIconLinear(
+  static const DSFontIcon documentFavoriteLinear = IconData(
     0xea1c,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/document_filter.png)
-  static const DSIcon documentFilterLinear = _DSIconLinear(
+  static const DSFontIcon documentFilterLinear = IconData(
     0xea1d,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/document_forward.png)
-  static const DSIcon documentForwardLinear = _DSIconLinear(
+  static const DSFontIcon documentForwardLinear = IconData(
     0xea1e,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/document_like.png)
-  static const DSIcon documentLikeLinear = _DSIconLinear(
+  static const DSFontIcon documentLikeLinear = IconData(
     0xea1f,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/document_normal.png)
-  static const DSIcon documentNormalLinear = _DSIconLinear(
+  static const DSFontIcon documentNormalLinear = IconData(
     0xea20,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/document_previous.png)
-  static const DSIcon documentPreviousLinear = _DSIconLinear(
+  static const DSFontIcon documentPreviousLinear = IconData(
     0xea21,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/document_sketch.png)
-  static const DSIcon documentSketchLinear = _DSIconLinear(
+  static const DSFontIcon documentSketchLinear = IconData(
     0xea22,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/document_text.png)
-  static const DSIcon documentTextLinear = _DSIconLinear(
+  static const DSFontIcon documentTextLinear = IconData(
     0xea23,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/document_text_1.png)
-  static const DSIcon documentText1Linear = _DSIconLinear(
+  static const DSFontIcon documentText1Linear = IconData(
     0xea24,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/document_upload.png)
-  static const DSIcon documentUploadLinear = _DSIconLinear(
+  static const DSFontIcon documentUploadLinear = IconData(
     0xea25,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/dollar_circle.png)
-  static const DSIcon dollarCircleLinear = _DSIconLinear(
+  static const DSFontIcon dollarCircleLinear = IconData(
     0xea26,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/dollar_square.png)
-  static const DSIcon dollarSquareLinear = _DSIconLinear(
+  static const DSFontIcon dollarSquareLinear = IconData(
     0xea27,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/driver.png)
-  static const DSIcon driverLinear = _DSIconLinear(
+  static const DSFontIcon driverLinear = IconData(
     0xea28,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/driver_2.png)
-  static const DSIcon driver2Linear = _DSIconLinear(
+  static const DSFontIcon driver2Linear = IconData(
     0xea29,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/driver_refresh.png)
-  static const DSIcon driverRefreshLinear = _DSIconLinear(
+  static const DSFontIcon driverRefreshLinear = IconData(
     0xea2a,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/driving.png)
-  static const DSIcon drivingLinear = _DSIconLinear(
+  static const DSFontIcon drivingLinear = IconData(
     0xea2b,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/drop.png)
-  static const DSIcon dropLinear = _DSIconLinear(
+  static const DSFontIcon dropLinear = IconData(
     0xea2c,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/edit.png)
-  static const DSIcon editLinear = _DSIconLinear(
+  static const DSFontIcon editLinear = IconData(
     0xea2d,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/edit_2.png)
-  static const DSIcon edit2Linear = _DSIconLinear(
+  static const DSFontIcon edit2Linear = IconData(
     0xea2e,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/electricity.png)
-  static const DSIcon electricityLinear = _DSIconLinear(
+  static const DSFontIcon electricityLinear = IconData(
     0xea2f,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/element.png)
-  static const DSIcon elementLinear = _DSIconLinear(
+  static const DSFontIcon elementLinear = IconData(
     0xea30,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/element_1.png)
-  static const DSIcon element1Linear = _DSIconLinear(
+  static const DSFontIcon element1Linear = IconData(
     0xea31,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/element_2.png)
-  static const DSIcon element2Linear = _DSIconLinear(
+  static const DSFontIcon element2Linear = IconData(
     0xea32,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/element_3.png)
-  static const DSIcon element3Linear = _DSIconLinear(
+  static const DSFontIcon element3Linear = IconData(
     0xea33,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/element_equal.png)
-  static const DSIcon elementEqualLinear = _DSIconLinear(
+  static const DSFontIcon elementEqualLinear = IconData(
     0xea34,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/element_plus.png)
-  static const DSIcon elementPlusLinear = _DSIconLinear(
+  static const DSFontIcon elementPlusLinear = IconData(
     0xea35,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/emoji_happy.png)
-  static const DSIcon emojiHappyLinear = _DSIconLinear(
+  static const DSFontIcon emojiHappyLinear = IconData(
     0xea36,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/emoji_normal.png)
-  static const DSIcon emojiNormalLinear = _DSIconLinear(
+  static const DSFontIcon emojiNormalLinear = IconData(
     0xea37,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/emoji_sad.png)
-  static const DSIcon emojiSadLinear = _DSIconLinear(
+  static const DSFontIcon emojiSadLinear = IconData(
     0xea38,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/empty_wallet.png)
-  static const DSIcon emptyWalletLinear = _DSIconLinear(
+  static const DSFontIcon emptyWalletLinear = IconData(
     0xea39,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/empty_wallet_add.png)
-  static const DSIcon emptyWalletAddLinear = _DSIconLinear(
+  static const DSFontIcon emptyWalletAddLinear = IconData(
     0xea3a,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/empty_wallet_change.png)
-  static const DSIcon emptyWalletChangeLinear = _DSIconLinear(
+  static const DSFontIcon emptyWalletChangeLinear = IconData(
     0xea3b,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/empty_wallet_remove.png)
-  static const DSIcon emptyWalletRemoveLinear = _DSIconLinear(
+  static const DSFontIcon emptyWalletRemoveLinear = IconData(
     0xea3c,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/empty_wallet_tick.png)
-  static const DSIcon emptyWalletTickLinear = _DSIconLinear(
+  static const DSFontIcon emptyWalletTickLinear = IconData(
     0xea3d,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/empty_wallet_time.png)
-  static const DSIcon emptyWalletTimeLinear = _DSIconLinear(
+  static const DSFontIcon emptyWalletTimeLinear = IconData(
     0xea3e,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/eraser.png)
-  static const DSIcon eraserLinear = _DSIconLinear(
+  static const DSFontIcon eraserLinear = IconData(
     0xea3f,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/eraser_1.png)
-  static const DSIcon eraser1Linear = _DSIconLinear(
+  static const DSFontIcon eraser1Linear = IconData(
     0xea40,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/export.png)
-  static const DSIcon exportLinear = _DSIconLinear(
+  static const DSFontIcon exportLinear = IconData(
     0xea41,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/export_1.png)
-  static const DSIcon export1Linear = _DSIconLinear(
+  static const DSFontIcon export1Linear = IconData(
     0xea42,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/export_2.png)
-  static const DSIcon export2Linear = _DSIconLinear(
+  static const DSFontIcon export2Linear = IconData(
     0xea43,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/export_3.png)
-  static const DSIcon export3Linear = _DSIconLinear(
+  static const DSFontIcon export3Linear = IconData(
     0xea44,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/external_drive.png)
-  static const DSIcon externalDriveLinear = _DSIconLinear(
+  static const DSFontIcon externalDriveLinear = IconData(
     0xea45,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/eye.png)
-  static const DSIcon eyeLinear = _DSIconLinear(
+  static const DSFontIcon eyeLinear = IconData(
     0xea46,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/eye_slash.png)
-  static const DSIcon eyeSlashLinear = _DSIconLinear(
+  static const DSFontIcon eyeSlashLinear = IconData(
     0xea47,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/fatrows.png)
-  static const DSIcon fatrowsLinear = _DSIconLinear(
+  static const DSFontIcon fatrowsLinear = IconData(
     0xea48,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/favorite_chart.png)
-  static const DSIcon favoriteChartLinear = _DSIconLinear(
+  static const DSFontIcon favoriteChartLinear = IconData(
     0xea49,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/filter.png)
-  static const DSIcon filterLinear = _DSIconLinear(
+  static const DSFontIcon filterLinear = IconData(
     0xea4a,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/filter_add.png)
-  static const DSIcon filterAddLinear = _DSIconLinear(
+  static const DSFontIcon filterAddLinear = IconData(
     0xea4b,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/filter_edit.png)
-  static const DSIcon filterEditLinear = _DSIconLinear(
+  static const DSFontIcon filterEditLinear = IconData(
     0xea4c,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/filter_remove.png)
-  static const DSIcon filterRemoveLinear = _DSIconLinear(
+  static const DSFontIcon filterRemoveLinear = IconData(
     0xea4d,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/filter_search.png)
-  static const DSIcon filterSearchLinear = _DSIconLinear(
+  static const DSFontIcon filterSearchLinear = IconData(
     0xea4e,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/filter_square.png)
-  static const DSIcon filterSquareLinear = _DSIconLinear(
+  static const DSFontIcon filterSquareLinear = IconData(
     0xea4f,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/filter_tick.png)
-  static const DSIcon filterTickLinear = _DSIconLinear(
+  static const DSFontIcon filterTickLinear = IconData(
     0xea50,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/finger_cricle.png)
-  static const DSIcon fingerCricleLinear = _DSIconLinear(
+  static const DSFontIcon fingerCricleLinear = IconData(
     0xea51,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/finger_scan.png)
-  static const DSIcon fingerScanLinear = _DSIconLinear(
+  static const DSFontIcon fingerScanLinear = IconData(
     0xea52,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/firstline.png)
-  static const DSIcon firstlineLinear = _DSIconLinear(
+  static const DSFontIcon firstlineLinear = IconData(
     0xea53,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/flag.png)
-  static const DSIcon flagLinear = _DSIconLinear(
+  static const DSFontIcon flagLinear = IconData(
     0xea54,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/flag_2.png)
-  static const DSIcon flag2Linear = _DSIconLinear(
+  static const DSFontIcon flag2Linear = IconData(
     0xea55,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/flash.png)
-  static const DSIcon flashLinear = _DSIconLinear(
+  static const DSFontIcon flashLinear = IconData(
     0xea56,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/flash_1.png)
-  static const DSIcon flash1Linear = _DSIconLinear(
+  static const DSFontIcon flash1Linear = IconData(
     0xea57,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/flash_circle.png)
-  static const DSIcon flashCircleLinear = _DSIconLinear(
+  static const DSFontIcon flashCircleLinear = IconData(
     0xea58,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/flash_circle_1.png)
-  static const DSIcon flashCircle1Linear = _DSIconLinear(
+  static const DSFontIcon flashCircle1Linear = IconData(
     0xea59,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/flash_slash.png)
-  static const DSIcon flashSlashLinear = _DSIconLinear(
+  static const DSFontIcon flashSlashLinear = IconData(
     0xea5a,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/folder.png)
-  static const DSIcon folderLinear = _DSIconLinear(
+  static const DSFontIcon folderLinear = IconData(
     0xea5b,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/folder_2.png)
-  static const DSIcon folder2Linear = _DSIconLinear(
+  static const DSFontIcon folder2Linear = IconData(
     0xea5c,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/folder_add.png)
-  static const DSIcon folderAddLinear = _DSIconLinear(
+  static const DSFontIcon folderAddLinear = IconData(
     0xea5d,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/folder_cloud.png)
-  static const DSIcon folderCloudLinear = _DSIconLinear(
+  static const DSFontIcon folderCloudLinear = IconData(
     0xea5e,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/folder_connection.png)
-  static const DSIcon folderConnectionLinear = _DSIconLinear(
+  static const DSFontIcon folderConnectionLinear = IconData(
     0xea5f,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/folder_cross.png)
-  static const DSIcon folderCrossLinear = _DSIconLinear(
+  static const DSFontIcon folderCrossLinear = IconData(
     0xea60,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/folder_favorite.png)
-  static const DSIcon folderFavoriteLinear = _DSIconLinear(
+  static const DSFontIcon folderFavoriteLinear = IconData(
     0xea61,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/folder_minus.png)
-  static const DSIcon folderMinusLinear = _DSIconLinear(
+  static const DSFontIcon folderMinusLinear = IconData(
     0xea62,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/folder_open.png)
-  static const DSIcon folderOpenLinear = _DSIconLinear(
+  static const DSFontIcon folderOpenLinear = IconData(
     0xea63,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/forbidden.png)
-  static const DSIcon forbiddenLinear = _DSIconLinear(
+  static const DSFontIcon forbiddenLinear = IconData(
     0xea64,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/forbidden_2.png)
-  static const DSIcon forbidden2Linear = _DSIconLinear(
+  static const DSFontIcon forbidden2Linear = IconData(
     0xea65,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/format_circle.png)
-  static const DSIcon formatCircleLinear = _DSIconLinear(
+  static const DSFontIcon formatCircleLinear = IconData(
     0xea66,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/format_square.png)
-  static const DSIcon formatSquareLinear = _DSIconLinear(
+  static const DSFontIcon formatSquareLinear = IconData(
     0xea67,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/forward.png)
-  static const DSIcon forwardLinear = _DSIconLinear(
+  static const DSFontIcon forwardLinear = IconData(
     0xea68,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/forward_5_seconds.png)
-  static const DSIcon forward5SecondsLinear = _DSIconLinear(
+  static const DSFontIcon forward5SecondsLinear = IconData(
     0xea69,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/forward_10_seconds.png)
-  static const DSIcon forward10SecondsLinear = _DSIconLinear(
+  static const DSFontIcon forward10SecondsLinear = IconData(
     0xea6a,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/forward_15_seconds.png)
-  static const DSIcon forward15SecondsLinear = _DSIconLinear(
+  static const DSFontIcon forward15SecondsLinear = IconData(
     0xea6b,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/forward_item.png)
-  static const DSIcon forwardItemLinear = _DSIconLinear(
+  static const DSFontIcon forwardItemLinear = IconData(
     0xea6c,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/forward_square.png)
-  static const DSIcon forwardSquareLinear = _DSIconLinear(
+  static const DSFontIcon forwardSquareLinear = IconData(
     0xea6d,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/gallery.png)
-  static const DSIcon galleryLinear = _DSIconLinear(
+  static const DSFontIcon galleryLinear = IconData(
     0xea6e,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/gallery_add.png)
-  static const DSIcon galleryAddLinear = _DSIconLinear(
+  static const DSFontIcon galleryAddLinear = IconData(
     0xea6f,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/gallery_edit.png)
-  static const DSIcon galleryEditLinear = _DSIconLinear(
+  static const DSFontIcon galleryEditLinear = IconData(
     0xea70,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/gallery_export.png)
-  static const DSIcon galleryExportLinear = _DSIconLinear(
+  static const DSFontIcon galleryExportLinear = IconData(
     0xea71,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/gallery_favorite.png)
-  static const DSIcon galleryFavoriteLinear = _DSIconLinear(
+  static const DSFontIcon galleryFavoriteLinear = IconData(
     0xea72,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/gallery_import.png)
-  static const DSIcon galleryImportLinear = _DSIconLinear(
+  static const DSFontIcon galleryImportLinear = IconData(
     0xea73,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/gallery_remove.png)
-  static const DSIcon galleryRemoveLinear = _DSIconLinear(
+  static const DSFontIcon galleryRemoveLinear = IconData(
     0xea74,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/gallery_slash.png)
-  static const DSIcon gallerySlashLinear = _DSIconLinear(
+  static const DSFontIcon gallerySlashLinear = IconData(
     0xea75,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/gallery_tick.png)
-  static const DSIcon galleryTickLinear = _DSIconLinear(
+  static const DSFontIcon galleryTickLinear = IconData(
     0xea76,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/game.png)
-  static const DSIcon gameLinear = _DSIconLinear(
+  static const DSFontIcon gameLinear = IconData(
     0xea77,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/gameboy.png)
-  static const DSIcon gameboyLinear = _DSIconLinear(
+  static const DSFontIcon gameboyLinear = IconData(
     0xea78,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/gas_station.png)
-  static const DSIcon gasStationLinear = _DSIconLinear(
+  static const DSFontIcon gasStationLinear = IconData(
     0xea79,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/gemini.png)
-  static const DSIcon geminiLinear = _DSIconLinear(
+  static const DSFontIcon geminiLinear = IconData(
     0xea7a,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/gemini_2.png)
-  static const DSIcon gemini2Linear = _DSIconLinear(
+  static const DSFontIcon gemini2Linear = IconData(
     0xea7b,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/ghost.png)
-  static const DSIcon ghostLinear = _DSIconLinear(
+  static const DSFontIcon ghostLinear = IconData(
     0xea7c,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/gift.png)
-  static const DSIcon giftLinear = _DSIconLinear(
+  static const DSFontIcon giftLinear = IconData(
     0xea7d,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/glass.png)
-  static const DSIcon glassLinear = _DSIconLinear(
+  static const DSFontIcon glassLinear = IconData(
     0xea7e,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/glass_1.png)
-  static const DSIcon glass1Linear = _DSIconLinear(
+  static const DSFontIcon glass1Linear = IconData(
     0xea7f,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/global.png)
-  static const DSIcon globalLinear = _DSIconLinear(
+  static const DSFontIcon globalLinear = IconData(
     0xea80,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/global_edit.png)
-  static const DSIcon globalEditLinear = _DSIconLinear(
+  static const DSFontIcon globalEditLinear = IconData(
     0xea81,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/global_refresh.png)
-  static const DSIcon globalRefreshLinear = _DSIconLinear(
+  static const DSFontIcon globalRefreshLinear = IconData(
     0xea82,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/global_search.png)
-  static const DSIcon globalSearchLinear = _DSIconLinear(
+  static const DSFontIcon globalSearchLinear = IconData(
     0xea83,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/gps.png)
-  static const DSIcon gpsLinear = _DSIconLinear(
+  static const DSFontIcon gpsLinear = IconData(
     0xea84,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/gps_slash.png)
-  static const DSIcon gpsSlashLinear = _DSIconLinear(
+  static const DSFontIcon gpsSlashLinear = IconData(
     0xea85,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/grammerly.png)
-  static const DSIcon grammerlyLinear = _DSIconLinear(
+  static const DSFontIcon grammerlyLinear = IconData(
     0xea86,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/graph.png)
-  static const DSIcon graphLinear = _DSIconLinear(
+  static const DSFontIcon graphLinear = IconData(
     0xea87,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/grid_1.png)
-  static const DSIcon grid1Linear = _DSIconLinear(
+  static const DSFontIcon grid1Linear = IconData(
     0xea88,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/grid_2.png)
-  static const DSIcon grid2Linear = _DSIconLinear(
+  static const DSFontIcon grid2Linear = IconData(
     0xea89,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/grid_3.png)
-  static const DSIcon grid3Linear = _DSIconLinear(
+  static const DSFontIcon grid3Linear = IconData(
     0xea8a,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/grid_4.png)
-  static const DSIcon grid4Linear = _DSIconLinear(
+  static const DSFontIcon grid4Linear = IconData(
     0xea8b,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/grid_5.png)
-  static const DSIcon grid5Linear = _DSIconLinear(
+  static const DSFontIcon grid5Linear = IconData(
     0xea8c,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/grid_6.png)
-  static const DSIcon grid6Linear = _DSIconLinear(
+  static const DSFontIcon grid6Linear = IconData(
     0xea8d,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/grid_7.png)
-  static const DSIcon grid7Linear = _DSIconLinear(
+  static const DSFontIcon grid7Linear = IconData(
     0xea8e,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/grid_8.png)
-  static const DSIcon grid8Linear = _DSIconLinear(
+  static const DSFontIcon grid8Linear = IconData(
     0xea8f,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/grid_9.png)
-  static const DSIcon grid9Linear = _DSIconLinear(
+  static const DSFontIcon grid9Linear = IconData(
     0xea90,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/grid_edit.png)
-  static const DSIcon gridEditLinear = _DSIconLinear(
+  static const DSFontIcon gridEditLinear = IconData(
     0xea91,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/grid_eraser.png)
-  static const DSIcon gridEraserLinear = _DSIconLinear(
+  static const DSFontIcon gridEraserLinear = IconData(
     0xea92,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/grid_lock.png)
-  static const DSIcon gridLockLinear = _DSIconLinear(
+  static const DSFontIcon gridLockLinear = IconData(
     0xea93,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/happyemoji.png)
-  static const DSIcon happyemojiLinear = _DSIconLinear(
+  static const DSFontIcon happyemojiLinear = IconData(
     0xea94,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/hashtag.png)
-  static const DSIcon hashtagLinear = _DSIconLinear(
+  static const DSFontIcon hashtagLinear = IconData(
     0xea95,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/hashtag_1.png)
-  static const DSIcon hashtag1Linear = _DSIconLinear(
+  static const DSFontIcon hashtag1Linear = IconData(
     0xea96,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/hashtag_down.png)
-  static const DSIcon hashtagDownLinear = _DSIconLinear(
+  static const DSFontIcon hashtagDownLinear = IconData(
     0xea97,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/hashtag_up.png)
-  static const DSIcon hashtagUpLinear = _DSIconLinear(
+  static const DSFontIcon hashtagUpLinear = IconData(
     0xea98,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/headphone.png)
-  static const DSIcon headphoneLinear = _DSIconLinear(
+  static const DSFontIcon headphoneLinear = IconData(
     0xea99,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/headphones.png)
-  static const DSIcon headphonesLinear = _DSIconLinear(
+  static const DSFontIcon headphonesLinear = IconData(
     0xea9a,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/health.png)
-  static const DSIcon healthLinear = _DSIconLinear(
+  static const DSFontIcon healthLinear = IconData(
     0xea9b,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/heart.png)
-  static const DSIcon heartLinear = _DSIconLinear(
+  static const DSFontIcon heartLinear = IconData(
     0xea9c,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/heart_add.png)
-  static const DSIcon heartAddLinear = _DSIconLinear(
+  static const DSFontIcon heartAddLinear = IconData(
     0xea9d,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/heart_circle.png)
-  static const DSIcon heartCircleLinear = _DSIconLinear(
+  static const DSFontIcon heartCircleLinear = IconData(
     0xea9e,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/heart_edit.png)
-  static const DSIcon heartEditLinear = _DSIconLinear(
+  static const DSFontIcon heartEditLinear = IconData(
     0xea9f,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/heart_remove.png)
-  static const DSIcon heartRemoveLinear = _DSIconLinear(
+  static const DSFontIcon heartRemoveLinear = IconData(
     0xeaa0,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/heart_search.png)
-  static const DSIcon heartSearchLinear = _DSIconLinear(
+  static const DSFontIcon heartSearchLinear = IconData(
     0xeaa1,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/heart_slash.png)
-  static const DSIcon heartSlashLinear = _DSIconLinear(
+  static const DSFontIcon heartSlashLinear = IconData(
     0xeaa2,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/heart_tick.png)
-  static const DSIcon heartTickLinear = _DSIconLinear(
+  static const DSFontIcon heartTickLinear = IconData(
     0xeaa3,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/hierarchy.png)
-  static const DSIcon hierarchyLinear = _DSIconLinear(
+  static const DSFontIcon hierarchyLinear = IconData(
     0xeaa4,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/hierarchy_2.png)
-  static const DSIcon hierarchy2Linear = _DSIconLinear(
+  static const DSFontIcon hierarchy2Linear = IconData(
     0xeaa5,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/hierarchy_3.png)
-  static const DSIcon hierarchy3Linear = _DSIconLinear(
+  static const DSFontIcon hierarchy3Linear = IconData(
     0xeaa6,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/hierarchy_square.png)
-  static const DSIcon hierarchySquareLinear = _DSIconLinear(
+  static const DSFontIcon hierarchySquareLinear = IconData(
     0xeaa7,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/hierarchy_square_2.png)
-  static const DSIcon hierarchySquare2Linear = _DSIconLinear(
+  static const DSFontIcon hierarchySquare2Linear = IconData(
     0xeaa8,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/hierarchy_square_3.png)
-  static const DSIcon hierarchySquare3Linear = _DSIconLinear(
+  static const DSFontIcon hierarchySquare3Linear = IconData(
     0xeaa9,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/home.png)
-  static const DSIcon homeLinear = _DSIconLinear(
+  static const DSFontIcon homeLinear = IconData(
     0xeaaa,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/home_1.png)
-  static const DSIcon home1Linear = _DSIconLinear(
+  static const DSFontIcon home1Linear = IconData(
     0xeaab,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/home_2.png)
-  static const DSIcon home2Linear = _DSIconLinear(
+  static const DSFontIcon home2Linear = IconData(
     0xeaac,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/home_hashtag.png)
-  static const DSIcon homeHashtagLinear = _DSIconLinear(
+  static const DSFontIcon homeHashtagLinear = IconData(
     0xeaad,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/home_trend_down.png)
-  static const DSIcon homeTrendDownLinear = _DSIconLinear(
+  static const DSFontIcon homeTrendDownLinear = IconData(
     0xeaae,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/home_trend_up.png)
-  static const DSIcon homeTrendUpLinear = _DSIconLinear(
+  static const DSFontIcon homeTrendUpLinear = IconData(
     0xeaaf,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/home_wifi.png)
-  static const DSIcon homeWifiLinear = _DSIconLinear(
+  static const DSFontIcon homeWifiLinear = IconData(
     0xeab0,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/hospital.png)
-  static const DSIcon hospitalLinear = _DSIconLinear(
+  static const DSFontIcon hospitalLinear = IconData(
     0xeab1,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/house.png)
-  static const DSIcon houseLinear = _DSIconLinear(
+  static const DSFontIcon houseLinear = IconData(
     0xeab2,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/house_2.png)
-  static const DSIcon house2Linear = _DSIconLinear(
+  static const DSFontIcon house2Linear = IconData(
     0xeab3,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/image.png)
-  static const DSIcon imageLinear = _DSIconLinear(
+  static const DSFontIcon imageLinear = IconData(
     0xeab4,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/import.png)
-  static const DSIcon importLinear = _DSIconLinear(
+  static const DSFontIcon importLinear = IconData(
     0xeab5,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/import_1.png)
-  static const DSIcon import1Linear = _DSIconLinear(
+  static const DSFontIcon import1Linear = IconData(
     0xeab6,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/import_2.png)
-  static const DSIcon import2Linear = _DSIconLinear(
+  static const DSFontIcon import2Linear = IconData(
     0xeab7,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/import_3.png)
-  static const DSIcon import3Linear = _DSIconLinear(
+  static const DSFontIcon import3Linear = IconData(
     0xeab8,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/info_circle.png)
-  static const DSIcon infoCircleLinear = _DSIconLinear(
+  static const DSFontIcon infoCircleLinear = IconData(
     0xeab9,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/information.png)
-  static const DSIcon informationLinear = _DSIconLinear(
+  static const DSFontIcon informationLinear = IconData(
     0xeaba,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/instagram.png)
-  static const DSIcon instagramLinear = _DSIconLinear(
+  static const DSFontIcon instagramLinear = IconData(
     0xeabb,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/judge.png)
-  static const DSIcon judgeLinear = _DSIconLinear(
+  static const DSFontIcon judgeLinear = IconData(
     0xeabc,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/kanban.png)
-  static const DSIcon kanbanLinear = _DSIconLinear(
+  static const DSFontIcon kanbanLinear = IconData(
     0xeabd,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/key.png)
-  static const DSIcon keyLinear = _DSIconLinear(
+  static const DSFontIcon keyLinear = IconData(
     0xeabe,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/keyboard.png)
-  static const DSIcon keyboardLinear = _DSIconLinear(
+  static const DSFontIcon keyboardLinear = IconData(
     0xeabf,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/keyboard_open.png)
-  static const DSIcon keyboardOpenLinear = _DSIconLinear(
+  static const DSFontIcon keyboardOpenLinear = IconData(
     0xeac0,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/key_square.png)
-  static const DSIcon keySquareLinear = _DSIconLinear(
+  static const DSFontIcon keySquareLinear = IconData(
     0xeac1,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/lamp.png)
-  static const DSIcon lampLinear = _DSIconLinear(
+  static const DSFontIcon lampLinear = IconData(
     0xeac2,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/lamp_1.png)
-  static const DSIcon lamp1Linear = _DSIconLinear(
+  static const DSFontIcon lamp1Linear = IconData(
     0xeac3,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/lamp_charge.png)
-  static const DSIcon lampChargeLinear = _DSIconLinear(
+  static const DSFontIcon lampChargeLinear = IconData(
     0xeac4,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/lamp_on.png)
-  static const DSIcon lampOnLinear = _DSIconLinear(
+  static const DSFontIcon lampOnLinear = IconData(
     0xeac5,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/lamp_slash.png)
-  static const DSIcon lampSlashLinear = _DSIconLinear(
+  static const DSFontIcon lampSlashLinear = IconData(
     0xeac6,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/language_circle.png)
-  static const DSIcon languageCircleLinear = _DSIconLinear(
+  static const DSFontIcon languageCircleLinear = IconData(
     0xeac7,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/language_square.png)
-  static const DSIcon languageSquareLinear = _DSIconLinear(
+  static const DSFontIcon languageSquareLinear = IconData(
     0xeac8,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/layer.png)
-  static const DSIcon layerLinear = _DSIconLinear(
+  static const DSFontIcon layerLinear = IconData(
     0xeac9,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/level.png)
-  static const DSIcon levelLinear = _DSIconLinear(
+  static const DSFontIcon levelLinear = IconData(
     0xeaca,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/lifebuoy.png)
-  static const DSIcon lifebuoyLinear = _DSIconLinear(
+  static const DSFontIcon lifebuoyLinear = IconData(
     0xeacb,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/like.png)
-  static const DSIcon likeLinear = _DSIconLinear(
+  static const DSFontIcon likeLinear = IconData(
     0xeacc,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/like_1.png)
-  static const DSIcon like1Linear = _DSIconLinear(
+  static const DSFontIcon like1Linear = IconData(
     0xeacd,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/like_dislike.png)
-  static const DSIcon likeDislikeLinear = _DSIconLinear(
+  static const DSFontIcon likeDislikeLinear = IconData(
     0xeace,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/like_shapes.png)
-  static const DSIcon likeShapesLinear = _DSIconLinear(
+  static const DSFontIcon likeShapesLinear = IconData(
     0xeacf,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/like_tag.png)
-  static const DSIcon likeTagLinear = _DSIconLinear(
+  static const DSFontIcon likeTagLinear = IconData(
     0xead0,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/link.png)
-  static const DSIcon linkLinear = _DSIconLinear(
+  static const DSFontIcon linkLinear = IconData(
     0xead1,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/link_1.png)
-  static const DSIcon link1Linear = _DSIconLinear(
+  static const DSFontIcon link1Linear = IconData(
     0xead2,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/link_2.png)
-  static const DSIcon link2Linear = _DSIconLinear(
+  static const DSFontIcon link2Linear = IconData(
     0xead3,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/link_21.png)
-  static const DSIcon link21Linear = _DSIconLinear(
+  static const DSFontIcon link21Linear = IconData(
     0xead4,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/link_circle.png)
-  static const DSIcon linkCircleLinear = _DSIconLinear(
+  static const DSFontIcon linkCircleLinear = IconData(
     0xead5,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/link_square.png)
-  static const DSIcon linkSquareLinear = _DSIconLinear(
+  static const DSFontIcon linkSquareLinear = IconData(
     0xead6,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/location.png)
-  static const DSIcon locationLinear = _DSIconLinear(
+  static const DSFontIcon locationLinear = IconData(
     0xead7,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/location_add.png)
-  static const DSIcon locationAddLinear = _DSIconLinear(
+  static const DSFontIcon locationAddLinear = IconData(
     0xead8,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/location_cross.png)
-  static const DSIcon locationCrossLinear = _DSIconLinear(
+  static const DSFontIcon locationCrossLinear = IconData(
     0xead9,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/location_minus.png)
-  static const DSIcon locationMinusLinear = _DSIconLinear(
+  static const DSFontIcon locationMinusLinear = IconData(
     0xeada,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/location_slash.png)
-  static const DSIcon locationSlashLinear = _DSIconLinear(
+  static const DSFontIcon locationSlashLinear = IconData(
     0xeadb,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/location_tick.png)
-  static const DSIcon locationTickLinear = _DSIconLinear(
+  static const DSFontIcon locationTickLinear = IconData(
     0xeadc,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/lock.png)
-  static const DSIcon lockLinear = _DSIconLinear(
+  static const DSFontIcon lockLinear = IconData(
     0xeadd,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/lock_1.png)
-  static const DSIcon lock1Linear = _DSIconLinear(
+  static const DSFontIcon lock1Linear = IconData(
     0xeade,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/lock_circle.png)
-  static const DSIcon lockCircleLinear = _DSIconLinear(
+  static const DSFontIcon lockCircleLinear = IconData(
     0xeadf,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/lock_slash.png)
-  static const DSIcon lockSlashLinear = _DSIconLinear(
+  static const DSFontIcon lockSlashLinear = IconData(
     0xeae0,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/login.png)
-  static const DSIcon loginLinear = _DSIconLinear(
+  static const DSFontIcon loginLinear = IconData(
     0xeae1,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/login_1.png)
-  static const DSIcon login1Linear = _DSIconLinear(
+  static const DSFontIcon login1Linear = IconData(
     0xeae2,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/logout.png)
-  static const DSIcon logoutLinear = _DSIconLinear(
+  static const DSFontIcon logoutLinear = IconData(
     0xeae3,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/logout_1.png)
-  static const DSIcon logout1Linear = _DSIconLinear(
+  static const DSFontIcon logout1Linear = IconData(
     0xeae4,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/lovely.png)
-  static const DSIcon lovelyLinear = _DSIconLinear(
+  static const DSFontIcon lovelyLinear = IconData(
     0xeae5,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/magicpen.png)
-  static const DSIcon magicpenLinear = _DSIconLinear(
+  static const DSFontIcon magicpenLinear = IconData(
     0xeae6,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/magic_star.png)
-  static const DSIcon magicStarLinear = _DSIconLinear(
+  static const DSFontIcon magicStarLinear = IconData(
     0xeae7,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/main_component.png)
-  static const DSIcon mainComponentLinear = _DSIconLinear(
+  static const DSFontIcon mainComponentLinear = IconData(
     0xeae8,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/man.png)
-  static const DSIcon manLinear = _DSIconLinear(
+  static const DSFontIcon manLinear = IconData(
     0xeae9,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/map.png)
-  static const DSIcon mapLinear = _DSIconLinear(
+  static const DSFontIcon mapLinear = IconData(
     0xeaea,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/map_1.png)
-  static const DSIcon map1Linear = _DSIconLinear(
+  static const DSFontIcon map1Linear = IconData(
     0xeaeb,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/mask.png)
-  static const DSIcon maskLinear = _DSIconLinear(
+  static const DSFontIcon maskLinear = IconData(
     0xeaec,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/mask_1.png)
-  static const DSIcon mask1Linear = _DSIconLinear(
+  static const DSFontIcon mask1Linear = IconData(
     0xeaed,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/mask_2.png)
-  static const DSIcon mask2Linear = _DSIconLinear(
+  static const DSFontIcon mask2Linear = IconData(
     0xeaee,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/math.png)
-  static const DSIcon mathLinear = _DSIconLinear(
+  static const DSFontIcon mathLinear = IconData(
     0xeaef,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/maximize.png)
-  static const DSIcon maximizeLinear = _DSIconLinear(
+  static const DSFontIcon maximizeLinear = IconData(
     0xeaf0,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/maximize_1.png)
-  static const DSIcon maximize1Linear = _DSIconLinear(
+  static const DSFontIcon maximize1Linear = IconData(
     0xeaf1,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/maximize_2.png)
-  static const DSIcon maximize2Linear = _DSIconLinear(
+  static const DSFontIcon maximize2Linear = IconData(
     0xeaf2,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/maximize_3.png)
-  static const DSIcon maximize3Linear = _DSIconLinear(
+  static const DSFontIcon maximize3Linear = IconData(
     0xeaf3,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/maximize_4.png)
-  static const DSIcon maximize4Linear = _DSIconLinear(
+  static const DSFontIcon maximize4Linear = IconData(
     0xeaf4,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/maximize_21.png)
-  static const DSIcon maximize21Linear = _DSIconLinear(
+  static const DSFontIcon maximize21Linear = IconData(
     0xeaf5,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/maximize_circle.png)
-  static const DSIcon maximizeCircleLinear = _DSIconLinear(
+  static const DSFontIcon maximizeCircleLinear = IconData(
     0xeaf6,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/medal.png)
-  static const DSIcon medalLinear = _DSIconLinear(
+  static const DSFontIcon medalLinear = IconData(
     0xeaf7,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/medal_star.png)
-  static const DSIcon medalStarLinear = _DSIconLinear(
+  static const DSFontIcon medalStarLinear = IconData(
     0xeaf8,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/menu.png)
-  static const DSIcon menuLinear = _DSIconLinear(
+  static const DSFontIcon menuLinear = IconData(
     0xeaf9,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/menu_1.png)
-  static const DSIcon menu1Linear = _DSIconLinear(
+  static const DSFontIcon menu1Linear = IconData(
     0xeafa,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/menu_board.png)
-  static const DSIcon menuBoardLinear = _DSIconLinear(
+  static const DSFontIcon menuBoardLinear = IconData(
     0xeafb,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/message.png)
-  static const DSIcon messageLinear = _DSIconLinear(
+  static const DSFontIcon messageLinear = IconData(
     0xeafc,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/message_2.png)
-  static const DSIcon message2Linear = _DSIconLinear(
+  static const DSFontIcon message2Linear = IconData(
     0xeafd,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/message_add.png)
-  static const DSIcon messageAddLinear = _DSIconLinear(
+  static const DSFontIcon messageAddLinear = IconData(
     0xeafe,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/message_add_1.png)
-  static const DSIcon messageAdd1Linear = _DSIconLinear(
+  static const DSFontIcon messageAdd1Linear = IconData(
     0xeaff,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/message_circle.png)
-  static const DSIcon messageCircleLinear = _DSIconLinear(
+  static const DSFontIcon messageCircleLinear = IconData(
     0xeb00,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/message_edit.png)
-  static const DSIcon messageEditLinear = _DSIconLinear(
+  static const DSFontIcon messageEditLinear = IconData(
     0xeb01,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/message_favorite.png)
-  static const DSIcon messageFavoriteLinear = _DSIconLinear(
+  static const DSFontIcon messageFavoriteLinear = IconData(
     0xeb02,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/message_minus.png)
-  static const DSIcon messageMinusLinear = _DSIconLinear(
+  static const DSFontIcon messageMinusLinear = IconData(
     0xeb03,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/message_notif.png)
-  static const DSIcon messageNotifLinear = _DSIconLinear(
+  static const DSFontIcon messageNotifLinear = IconData(
     0xeb04,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/message_programming.png)
-  static const DSIcon messageProgrammingLinear = _DSIconLinear(
+  static const DSFontIcon messageProgrammingLinear = IconData(
     0xeb05,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/message_question.png)
-  static const DSIcon messageQuestionLinear = _DSIconLinear(
+  static const DSFontIcon messageQuestionLinear = IconData(
     0xeb06,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/message_remove.png)
-  static const DSIcon messageRemoveLinear = _DSIconLinear(
+  static const DSFontIcon messageRemoveLinear = IconData(
     0xeb07,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/messages.png)
-  static const DSIcon messagesLinear = _DSIconLinear(
+  static const DSFontIcon messagesLinear = IconData(
     0xeb08,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/messages_1.png)
-  static const DSIcon messages1Linear = _DSIconLinear(
+  static const DSFontIcon messages1Linear = IconData(
     0xeb09,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/messages_2.png)
-  static const DSIcon messages2Linear = _DSIconLinear(
+  static const DSFontIcon messages2Linear = IconData(
     0xeb0a,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/messages_3.png)
-  static const DSIcon messages3Linear = _DSIconLinear(
+  static const DSFontIcon messages3Linear = IconData(
     0xeb0b,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/message_search.png)
-  static const DSIcon messageSearchLinear = _DSIconLinear(
+  static const DSFontIcon messageSearchLinear = IconData(
     0xeb0c,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/message_square.png)
-  static const DSIcon messageSquareLinear = _DSIconLinear(
+  static const DSFontIcon messageSquareLinear = IconData(
     0xeb0d,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/message_text.png)
-  static const DSIcon messageTextLinear = _DSIconLinear(
+  static const DSFontIcon messageTextLinear = IconData(
     0xeb0e,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/message_text_1.png)
-  static const DSIcon messageText1Linear = _DSIconLinear(
+  static const DSFontIcon messageText1Linear = IconData(
     0xeb0f,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/message_tick.png)
-  static const DSIcon messageTickLinear = _DSIconLinear(
+  static const DSFontIcon messageTickLinear = IconData(
     0xeb10,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/message_time.png)
-  static const DSIcon messageTimeLinear = _DSIconLinear(
+  static const DSFontIcon messageTimeLinear = IconData(
     0xeb11,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/microphone.png)
-  static const DSIcon microphoneLinear = _DSIconLinear(
+  static const DSFontIcon microphoneLinear = IconData(
     0xeb12,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/microphone_2.png)
-  static const DSIcon microphone2Linear = _DSIconLinear(
+  static const DSFontIcon microphone2Linear = IconData(
     0xeb13,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/microphone_slash.png)
-  static const DSIcon microphoneSlashLinear = _DSIconLinear(
+  static const DSFontIcon microphoneSlashLinear = IconData(
     0xeb14,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/microphone_slash_1.png)
-  static const DSIcon microphoneSlash1Linear = _DSIconLinear(
+  static const DSFontIcon microphoneSlash1Linear = IconData(
     0xeb15,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/microscope.png)
-  static const DSIcon microscopeLinear = _DSIconLinear(
+  static const DSFontIcon microscopeLinear = IconData(
     0xeb16,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/milk.png)
-  static const DSIcon milkLinear = _DSIconLinear(
+  static const DSFontIcon milkLinear = IconData(
     0xeb17,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/mini_music_sqaure.png)
-  static const DSIcon miniMusicSqaureLinear = _DSIconLinear(
+  static const DSFontIcon miniMusicSqaureLinear = IconData(
     0xeb18,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/minus.png)
-  static const DSIcon minusLinear = _DSIconLinear(
+  static const DSFontIcon minusLinear = IconData(
     0xeb1b,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/minus_cirlce.png)
-  static const DSIcon minusCirlceLinear = _DSIconLinear(
+  static const DSFontIcon minusCirlceLinear = IconData(
     0xeb1c,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/minus_square.png)
-  static const DSIcon minusSquareLinear = _DSIconLinear(
+  static const DSFontIcon minusSquareLinear = IconData(
     0xeb1d,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/mirror.png)
-  static const DSIcon mirrorLinear = _DSIconLinear(
+  static const DSFontIcon mirrorLinear = IconData(
     0xeb1e,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/mirroring_screen.png)
-  static const DSIcon mirroringScreenLinear = _DSIconLinear(
+  static const DSFontIcon mirroringScreenLinear = IconData(
     0xeb1f,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/mobile.png)
-  static const DSIcon mobileLinear = _DSIconLinear(
+  static const DSFontIcon mobileLinear = IconData(
     0xeb20,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/mobile_programming.png)
-  static const DSIcon mobileProgrammingLinear = _DSIconLinear(
+  static const DSFontIcon mobileProgrammingLinear = IconData(
     0xeb21,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/money.png)
-  static const DSIcon moneyLinear = _DSIconLinear(
+  static const DSFontIcon moneyLinear = IconData(
     0xeb22,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/money_2.png)
-  static const DSIcon money2Linear = _DSIconLinear(
+  static const DSFontIcon money2Linear = IconData(
     0xeb23,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/money_3.png)
-  static const DSIcon money3Linear = _DSIconLinear(
+  static const DSFontIcon money3Linear = IconData(
     0xeb24,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/money_4.png)
-  static const DSIcon money4Linear = _DSIconLinear(
+  static const DSFontIcon money4Linear = IconData(
     0xeb25,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/money_add.png)
-  static const DSIcon moneyAddLinear = _DSIconLinear(
+  static const DSFontIcon moneyAddLinear = IconData(
     0xeb26,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/money_change.png)
-  static const DSIcon moneyChangeLinear = _DSIconLinear(
+  static const DSFontIcon moneyChangeLinear = IconData(
     0xeb27,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/money_forbidden.png)
-  static const DSIcon moneyForbiddenLinear = _DSIconLinear(
+  static const DSFontIcon moneyForbiddenLinear = IconData(
     0xeb28,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/money_recive.png)
-  static const DSIcon moneyReciveLinear = _DSIconLinear(
+  static const DSFontIcon moneyReciveLinear = IconData(
     0xeb29,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/money_remove.png)
-  static const DSIcon moneyRemoveLinear = _DSIconLinear(
+  static const DSFontIcon moneyRemoveLinear = IconData(
     0xeb2a,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/moneys.png)
-  static const DSIcon moneysLinear = _DSIconLinear(
+  static const DSFontIcon moneysLinear = IconData(
     0xeb2b,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/money_send.png)
-  static const DSIcon moneySendLinear = _DSIconLinear(
+  static const DSFontIcon moneySendLinear = IconData(
     0xeb2c,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/money_tick.png)
-  static const DSIcon moneyTickLinear = _DSIconLinear(
+  static const DSFontIcon moneyTickLinear = IconData(
     0xeb2d,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/money_time.png)
-  static const DSIcon moneyTimeLinear = _DSIconLinear(
+  static const DSFontIcon moneyTimeLinear = IconData(
     0xeb2e,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/monitor.png)
-  static const DSIcon monitorLinear = _DSIconLinear(
+  static const DSFontIcon monitorLinear = IconData(
     0xeb2f,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/monitor_mobbile.png)
-  static const DSIcon monitorMobbileLinear = _DSIconLinear(
+  static const DSFontIcon monitorMobbileLinear = IconData(
     0xeb30,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/monitor_recorder.png)
-  static const DSIcon monitorRecorderLinear = _DSIconLinear(
+  static const DSFontIcon monitorRecorderLinear = IconData(
     0xeb31,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/moon.png)
-  static const DSIcon moonLinear = _DSIconLinear(
+  static const DSFontIcon moonLinear = IconData(
     0xeb32,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/more.png)
-  static const DSIcon moreLinear = _DSIconLinear(
+  static const DSFontIcon moreLinear = IconData(
     0xeb33,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/more_2.png)
-  static const DSIcon more2Linear = _DSIconLinear(
+  static const DSFontIcon more2Linear = IconData(
     0xeb34,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/more_circle.png)
-  static const DSIcon moreCircleLinear = _DSIconLinear(
+  static const DSFontIcon moreCircleLinear = IconData(
     0xeb35,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/more_square.png)
-  static const DSIcon moreSquareLinear = _DSIconLinear(
+  static const DSFontIcon moreSquareLinear = IconData(
     0xeb36,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/mouse.png)
-  static const DSIcon mouseLinear = _DSIconLinear(
+  static const DSFontIcon mouseLinear = IconData(
     0xeb37,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/mouse_1.png)
-  static const DSIcon mouse1Linear = _DSIconLinear(
+  static const DSFontIcon mouse1Linear = IconData(
     0xeb38,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/mouse_circle.png)
-  static const DSIcon mouseCircleLinear = _DSIconLinear(
+  static const DSFontIcon mouseCircleLinear = IconData(
     0xeb39,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/mouse_square.png)
-  static const DSIcon mouseSquareLinear = _DSIconLinear(
+  static const DSFontIcon mouseSquareLinear = IconData(
     0xeb3a,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/music.png)
-  static const DSIcon musicLinear = _DSIconLinear(
+  static const DSFontIcon musicLinear = IconData(
     0xeb3b,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/music_circle.png)
-  static const DSIcon musicCircleLinear = _DSIconLinear(
+  static const DSFontIcon musicCircleLinear = IconData(
     0xeb3c,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/music_dashboard.png)
-  static const DSIcon musicDashboardLinear = _DSIconLinear(
+  static const DSFontIcon musicDashboardLinear = IconData(
     0xeb3d,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/music_filter.png)
-  static const DSIcon musicFilterLinear = _DSIconLinear(
+  static const DSFontIcon musicFilterLinear = IconData(
     0xeb3e,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/music_library_2.png)
-  static const DSIcon musicLibrary2Linear = _DSIconLinear(
+  static const DSFontIcon musicLibrary2Linear = IconData(
     0xeb3f,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/musicnote.png)
-  static const DSIcon musicnoteLinear = _DSIconLinear(
+  static const DSFontIcon musicnoteLinear = IconData(
     0xeb40,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/music_play.png)
-  static const DSIcon musicPlayLinear = _DSIconLinear(
+  static const DSFontIcon musicPlayLinear = IconData(
     0xeb41,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/music_playlist.png)
-  static const DSIcon musicPlaylistLinear = _DSIconLinear(
+  static const DSFontIcon musicPlaylistLinear = IconData(
     0xeb42,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/music_square.png)
-  static const DSIcon musicSquareLinear = _DSIconLinear(
+  static const DSFontIcon musicSquareLinear = IconData(
     0xeb43,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/music_square_add.png)
-  static const DSIcon musicSquareAddLinear = _DSIconLinear(
+  static const DSFontIcon musicSquareAddLinear = IconData(
     0xeb44,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/music_square_remove.png)
-  static const DSIcon musicSquareRemoveLinear = _DSIconLinear(
+  static const DSFontIcon musicSquareRemoveLinear = IconData(
     0xeb45,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/music_square_search.png)
-  static const DSIcon musicSquareSearchLinear = _DSIconLinear(
+  static const DSFontIcon musicSquareSearchLinear = IconData(
     0xeb46,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/next.png)
-  static const DSIcon nextLinear = _DSIconLinear(
+  static const DSFontIcon nextLinear = IconData(
     0xeb47,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/note.png)
-  static const DSIcon noteLinear = _DSIconLinear(
+  static const DSFontIcon noteLinear = IconData(
     0xeb48,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/note_1.png)
-  static const DSIcon note1Linear = _DSIconLinear(
+  static const DSFontIcon note1Linear = IconData(
     0xeb49,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/note_2.png)
-  static const DSIcon note2Linear = _DSIconLinear(
+  static const DSFontIcon note2Linear = IconData(
     0xeb4a,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/note_21.png)
-  static const DSIcon note21Linear = _DSIconLinear(
+  static const DSFontIcon note21Linear = IconData(
     0xeb4b,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/note_add.png)
-  static const DSIcon noteAddLinear = _DSIconLinear(
+  static const DSFontIcon noteAddLinear = IconData(
     0xeb4c,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/note_favorite.png)
-  static const DSIcon noteFavoriteLinear = _DSIconLinear(
+  static const DSFontIcon noteFavoriteLinear = IconData(
     0xeb4d,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/note_remove.png)
-  static const DSIcon noteRemoveLinear = _DSIconLinear(
+  static const DSFontIcon noteRemoveLinear = IconData(
     0xeb4e,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/note_square.png)
-  static const DSIcon noteSquareLinear = _DSIconLinear(
+  static const DSFontIcon noteSquareLinear = IconData(
     0xeb4f,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/note_text.png)
-  static const DSIcon noteTextLinear = _DSIconLinear(
+  static const DSFontIcon noteTextLinear = IconData(
     0xeb50,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/notification.png)
-  static const DSIcon notificationLinear = _DSIconLinear(
+  static const DSFontIcon notificationLinear = IconData(
     0xeb51,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/notification_1.png)
-  static const DSIcon notification1Linear = _DSIconLinear(
+  static const DSFontIcon notification1Linear = IconData(
     0xeb52,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/notification_bing.png)
-  static const DSIcon notificationBingLinear = _DSIconLinear(
+  static const DSFontIcon notificationBingLinear = IconData(
     0xeb53,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/notification_circle.png)
-  static const DSIcon notificationCircleLinear = _DSIconLinear(
+  static const DSFontIcon notificationCircleLinear = IconData(
     0xeb54,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/notification_favorite.png)
-  static const DSIcon notificationFavoriteLinear = _DSIconLinear(
+  static const DSFontIcon notificationFavoriteLinear = IconData(
     0xeb55,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/notification_status.png)
-  static const DSIcon notificationStatusLinear = _DSIconLinear(
+  static const DSFontIcon notificationStatusLinear = IconData(
     0xeb56,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/omega_circle.png)
-  static const DSIcon omegaCircleLinear = _DSIconLinear(
+  static const DSFontIcon omegaCircleLinear = IconData(
     0xeb57,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/omega_square.png)
-  static const DSIcon omegaSquareLinear = _DSIconLinear(
+  static const DSFontIcon omegaSquareLinear = IconData(
     0xeb58,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/paintbucket.png)
-  static const DSIcon paintbucketLinear = _DSIconLinear(
+  static const DSFontIcon paintbucketLinear = IconData(
     0xeb59,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/paperclip.png)
-  static const DSIcon paperclipLinear = _DSIconLinear(
+  static const DSFontIcon paperclipLinear = IconData(
     0xeb5a,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/paperclip_2.png)
-  static const DSIcon paperclip2Linear = _DSIconLinear(
+  static const DSFontIcon paperclip2Linear = IconData(
     0xeb5b,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/password_check.png)
-  static const DSIcon passwordCheckLinear = _DSIconLinear(
+  static const DSFontIcon passwordCheckLinear = IconData(
     0xeb5c,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/path.png)
-  static const DSIcon pathLinear = _DSIconLinear(
+  static const DSFontIcon pathLinear = IconData(
     0xeb5d,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/path_2.png)
-  static const DSIcon path2Linear = _DSIconLinear(
+  static const DSFontIcon path2Linear = IconData(
     0xeb5e,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/path_square.png)
-  static const DSIcon pathSquareLinear = _DSIconLinear(
+  static const DSFontIcon pathSquareLinear = IconData(
     0xeb5f,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/pause.png)
-  static const DSIcon pauseLinear = _DSIconLinear(
+  static const DSFontIcon pauseLinear = IconData(
     0xeb60,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/pause_circle.png)
-  static const DSIcon pauseCircleLinear = _DSIconLinear(
+  static const DSFontIcon pauseCircleLinear = IconData(
     0xeb61,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/pen_add.png)
-  static const DSIcon penAddLinear = _DSIconLinear(
+  static const DSFontIcon penAddLinear = IconData(
     0xeb62,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/pen_close.png)
-  static const DSIcon penCloseLinear = _DSIconLinear(
+  static const DSFontIcon penCloseLinear = IconData(
     0xeb63,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/pen_remove.png)
-  static const DSIcon penRemoveLinear = _DSIconLinear(
+  static const DSFontIcon penRemoveLinear = IconData(
     0xeb64,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/pen_tool.png)
-  static const DSIcon penToolLinear = _DSIconLinear(
+  static const DSFontIcon penToolLinear = IconData(
     0xeb65,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/pen_tool_2.png)
-  static const DSIcon penTool2Linear = _DSIconLinear(
+  static const DSFontIcon penTool2Linear = IconData(
     0xeb66,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/people.png)
-  static const DSIcon peopleLinear = _DSIconLinear(
+  static const DSFontIcon peopleLinear = IconData(
     0xeb67,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/percentage_circle.png)
-  static const DSIcon percentageCircleLinear = _DSIconLinear(
+  static const DSFontIcon percentageCircleLinear = IconData(
     0xeb68,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/percentage_square.png)
-  static const DSIcon percentageSquareLinear = _DSIconLinear(
+  static const DSFontIcon percentageSquareLinear = IconData(
     0xeb69,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/personalcard.png)
-  static const DSIcon personalcardLinear = _DSIconLinear(
+  static const DSFontIcon personalcardLinear = IconData(
     0xeb6a,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/pet.png)
-  static const DSIcon petLinear = _DSIconLinear(
+  static const DSFontIcon petLinear = IconData(
     0xeb6b,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/pharagraphspacing.png)
-  static const DSIcon pharagraphspacingLinear = _DSIconLinear(
+  static const DSFontIcon pharagraphspacingLinear = IconData(
     0xeb6c,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/picture_frame.png)
-  static const DSIcon pictureFrameLinear = _DSIconLinear(
+  static const DSFontIcon pictureFrameLinear = IconData(
     0xeb6d,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/play.png)
-  static const DSIcon playLinear = _DSIconLinear(
+  static const DSFontIcon playLinear = IconData(
     0xeb6e,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/play_add.png)
-  static const DSIcon playAddLinear = _DSIconLinear(
+  static const DSFontIcon playAddLinear = IconData(
     0xeb6f,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/play_circle.png)
-  static const DSIcon playCircleLinear = _DSIconLinear(
+  static const DSFontIcon playCircleLinear = IconData(
     0xeb70,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/play_cricle.png)
-  static const DSIcon playCricleLinear = _DSIconLinear(
+  static const DSFontIcon playCricleLinear = IconData(
     0xeb71,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/play_remove.png)
-  static const DSIcon playRemoveLinear = _DSIconLinear(
+  static const DSFontIcon playRemoveLinear = IconData(
     0xeb72,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/presention_chart.png)
-  static const DSIcon presentionChartLinear = _DSIconLinear(
+  static const DSFontIcon presentionChartLinear = IconData(
     0xeb73,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/previous.png)
-  static const DSIcon previousLinear = _DSIconLinear(
+  static const DSFontIcon previousLinear = IconData(
     0xeb74,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/printer.png)
-  static const DSIcon printerLinear = _DSIconLinear(
+  static const DSFontIcon printerLinear = IconData(
     0xeb75,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/printer_slash.png)
-  static const DSIcon printerSlashLinear = _DSIconLinear(
+  static const DSFontIcon printerSlashLinear = IconData(
     0xeb76,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/profile.png)
-  static const DSIcon profileLinear = _DSIconLinear(
+  static const DSFontIcon profileLinear = IconData(
     0xeb77,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/profile_2user.png)
-  static const DSIcon profile2userLinear = _DSIconLinear(
+  static const DSFontIcon profile2userLinear = IconData(
     0xeb78,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/profile_add.png)
-  static const DSIcon profileAddLinear = _DSIconLinear(
+  static const DSFontIcon profileAddLinear = IconData(
     0xeb79,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/profile_circle.png)
-  static const DSIcon profileCircleLinear = _DSIconLinear(
+  static const DSFontIcon profileCircleLinear = IconData(
     0xeb7a,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/profile_delete.png)
-  static const DSIcon profileDeleteLinear = _DSIconLinear(
+  static const DSFontIcon profileDeleteLinear = IconData(
     0xeb7b,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/profile_remove.png)
-  static const DSIcon profileRemoveLinear = _DSIconLinear(
+  static const DSFontIcon profileRemoveLinear = IconData(
     0xeb7c,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/profile_tick.png)
-  static const DSIcon profileTickLinear = _DSIconLinear(
+  static const DSFontIcon profileTickLinear = IconData(
     0xeb7d,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/programming_arrow.png)
-  static const DSIcon programmingArrowLinear = _DSIconLinear(
+  static const DSFontIcon programmingArrowLinear = IconData(
     0xeb7e,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/programming_arrows.png)
-  static const DSIcon programmingArrowsLinear = _DSIconLinear(
+  static const DSFontIcon programmingArrowsLinear = IconData(
     0xeb7f,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/quote_down.png)
-  static const DSIcon quoteDownLinear = _DSIconLinear(
+  static const DSFontIcon quoteDownLinear = IconData(
     0xeb80,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/quote_down_circle.png)
-  static const DSIcon quoteDownCircleLinear = _DSIconLinear(
+  static const DSFontIcon quoteDownCircleLinear = IconData(
     0xeb81,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/quote_down_square.png)
-  static const DSIcon quoteDownSquareLinear = _DSIconLinear(
+  static const DSFontIcon quoteDownSquareLinear = IconData(
     0xeb82,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/quote_up.png)
-  static const DSIcon quoteUpLinear = _DSIconLinear(
+  static const DSFontIcon quoteUpLinear = IconData(
     0xeb83,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/quote_up_circle.png)
-  static const DSIcon quoteUpCircleLinear = _DSIconLinear(
+  static const DSFontIcon quoteUpCircleLinear = IconData(
     0xeb84,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/quote_up_square.png)
-  static const DSIcon quoteUpSquareLinear = _DSIconLinear(
+  static const DSFontIcon quoteUpSquareLinear = IconData(
     0xeb85,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/radar.png)
-  static const DSIcon radarLinear = _DSIconLinear(
+  static const DSFontIcon radarLinear = IconData(
     0xeb86,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/radar_1.png)
-  static const DSIcon radar1Linear = _DSIconLinear(
+  static const DSFontIcon radar1Linear = IconData(
     0xeb87,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/radar_2.png)
-  static const DSIcon radar2Linear = _DSIconLinear(
+  static const DSFontIcon radar2Linear = IconData(
     0xeb88,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/radio.png)
-  static const DSIcon radioLinear = _DSIconLinear(
+  static const DSFontIcon radioLinear = IconData(
     0xeb89,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/ram.png)
-  static const DSIcon ramLinear = _DSIconLinear(
+  static const DSFontIcon ramLinear = IconData(
     0xeb8a,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/ram_2.png)
-  static const DSIcon ram2Linear = _DSIconLinear(
+  static const DSFontIcon ram2Linear = IconData(
     0xeb8b,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/ranking.png)
-  static const DSIcon rankingLinear = _DSIconLinear(
+  static const DSFontIcon rankingLinear = IconData(
     0xeb8c,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/ranking_1.png)
-  static const DSIcon ranking1Linear = _DSIconLinear(
+  static const DSFontIcon ranking1Linear = IconData(
     0xeb8d,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/receipt.png)
-  static const DSIcon receiptLinear = _DSIconLinear(
+  static const DSFontIcon receiptLinear = IconData(
     0xeb8e,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/receipt_1.png)
-  static const DSIcon receipt1Linear = _DSIconLinear(
+  static const DSFontIcon receipt1Linear = IconData(
     0xeb8f,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/receipt_2.png)
-  static const DSIcon receipt2Linear = _DSIconLinear(
+  static const DSFontIcon receipt2Linear = IconData(
     0xeb90,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/receipt_2_1.png)
-  static const DSIcon receipt21Linear = _DSIconLinear(
+  static const DSFontIcon receipt21Linear = IconData(
     0xeb91,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/receipt_add.png)
-  static const DSIcon receiptAddLinear = _DSIconLinear(
+  static const DSFontIcon receiptAddLinear = IconData(
     0xeb92,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/receipt_discount.png)
-  static const DSIcon receiptDiscountLinear = _DSIconLinear(
+  static const DSFontIcon receiptDiscountLinear = IconData(
     0xeb93,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/receipt_disscount.png)
-  static const DSIcon receiptDisscountLinear = _DSIconLinear(
+  static const DSFontIcon receiptDisscountLinear = IconData(
     0xeb94,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/receipt_edit.png)
-  static const DSIcon receiptEditLinear = _DSIconLinear(
+  static const DSFontIcon receiptEditLinear = IconData(
     0xeb95,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/receipt_item.png)
-  static const DSIcon receiptItemLinear = _DSIconLinear(
+  static const DSFontIcon receiptItemLinear = IconData(
     0xeb96,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/receipt_minus.png)
-  static const DSIcon receiptMinusLinear = _DSIconLinear(
+  static const DSFontIcon receiptMinusLinear = IconData(
     0xeb97,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/receipt_search.png)
-  static const DSIcon receiptSearchLinear = _DSIconLinear(
+  static const DSFontIcon receiptSearchLinear = IconData(
     0xeb98,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/receipt_square.png)
-  static const DSIcon receiptSquareLinear = _DSIconLinear(
+  static const DSFontIcon receiptSquareLinear = IconData(
     0xeb99,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/receipt_text.png)
-  static const DSIcon receiptTextLinear = _DSIconLinear(
+  static const DSFontIcon receiptTextLinear = IconData(
     0xeb9a,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/received.png)
-  static const DSIcon receivedLinear = _DSIconLinear(
+  static const DSFontIcon receivedLinear = IconData(
     0xeb9b,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/receive_square.png)
-  static const DSIcon receiveSquareLinear = _DSIconLinear(
+  static const DSFontIcon receiveSquareLinear = IconData(
     0xeb9c,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/receive_square_2.png)
-  static const DSIcon receiveSquare2Linear = _DSIconLinear(
+  static const DSFontIcon receiveSquare2Linear = IconData(
     0xeb9d,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/record.png)
-  static const DSIcon recordLinear = _DSIconLinear(
+  static const DSFontIcon recordLinear = IconData(
     0xeb9e,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/record_circle.png)
-  static const DSIcon recordCircleLinear = _DSIconLinear(
+  static const DSFontIcon recordCircleLinear = IconData(
     0xeb9f,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/recovery_convert.png)
-  static const DSIcon recoveryConvertLinear = _DSIconLinear(
+  static const DSFontIcon recoveryConvertLinear = IconData(
     0xeba0,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/redo.png)
-  static const DSIcon redoLinear = _DSIconLinear(
+  static const DSFontIcon redoLinear = IconData(
     0xeba1,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/refresh.png)
-  static const DSIcon refreshLinear = _DSIconLinear(
+  static const DSFontIcon refreshLinear = IconData(
     0xeba2,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/refresh_2.png)
-  static const DSIcon refresh2Linear = _DSIconLinear(
+  static const DSFontIcon refresh2Linear = IconData(
     0xeba3,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/refresh_circle.png)
-  static const DSIcon refreshCircleLinear = _DSIconLinear(
+  static const DSFontIcon refreshCircleLinear = IconData(
     0xeba4,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/refresh_left_square.png)
-  static const DSIcon refreshLeftSquareLinear = _DSIconLinear(
+  static const DSFontIcon refreshLeftSquareLinear = IconData(
     0xeba5,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/refresh_right_square.png)
-  static const DSIcon refreshRightSquareLinear = _DSIconLinear(
+  static const DSFontIcon refreshRightSquareLinear = IconData(
     0xeba6,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/refresh_square_2.png)
-  static const DSIcon refreshSquare2Linear = _DSIconLinear(
+  static const DSFontIcon refreshSquare2Linear = IconData(
     0xeba7,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/repeat.png)
-  static const DSIcon repeatLinear = _DSIconLinear(
+  static const DSFontIcon repeatLinear = IconData(
     0xeba8,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/repeat_circle.png)
-  static const DSIcon repeatCircleLinear = _DSIconLinear(
+  static const DSFontIcon repeatCircleLinear = IconData(
     0xeba9,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/repeate_music.png)
-  static const DSIcon repeateMusicLinear = _DSIconLinear(
+  static const DSFontIcon repeateMusicLinear = IconData(
     0xebaa,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/repeate_one.png)
-  static const DSIcon repeateOneLinear = _DSIconLinear(
+  static const DSFontIcon repeateOneLinear = IconData(
     0xebab,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/reserve.png)
-  static const DSIcon reserveLinear = _DSIconLinear(
+  static const DSFontIcon reserveLinear = IconData(
     0xebac,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/rotate_left.png)
-  static const DSIcon rotateLeftLinear = _DSIconLinear(
+  static const DSFontIcon rotateLeftLinear = IconData(
     0xebad,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/rotate_left_1.png)
-  static const DSIcon rotateLeft1Linear = _DSIconLinear(
+  static const DSFontIcon rotateLeft1Linear = IconData(
     0xebae,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/rotate_right.png)
-  static const DSIcon rotateRightLinear = _DSIconLinear(
+  static const DSFontIcon rotateRightLinear = IconData(
     0xebaf,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/rotate_right_1.png)
-  static const DSIcon rotateRight1Linear = _DSIconLinear(
+  static const DSFontIcon rotateRight1Linear = IconData(
     0xebb0,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/route_square.png)
-  static const DSIcon routeSquareLinear = _DSIconLinear(
+  static const DSFontIcon routeSquareLinear = IconData(
     0xebb1,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/routing.png)
-  static const DSIcon routingLinear = _DSIconLinear(
+  static const DSFontIcon routingLinear = IconData(
     0xebb2,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/routing_2.png)
-  static const DSIcon routing2Linear = _DSIconLinear(
+  static const DSFontIcon routing2Linear = IconData(
     0xebb3,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/row_horizontal.png)
-  static const DSIcon rowHorizontalLinear = _DSIconLinear(
+  static const DSFontIcon rowHorizontalLinear = IconData(
     0xebb4,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/row_vertical.png)
-  static const DSIcon rowVerticalLinear = _DSIconLinear(
+  static const DSFontIcon rowVerticalLinear = IconData(
     0xebb5,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/rulerpen.png)
-  static const DSIcon rulerpenLinear = _DSIconLinear(
+  static const DSFontIcon rulerpenLinear = IconData(
     0xebb6,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/ruler.png)
-  static const DSIcon rulerLinear = _DSIconLinear(
+  static const DSFontIcon rulerLinear = IconData(
     0xebb7,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/safe_home.png)
-  static const DSIcon safeHomeLinear = _DSIconLinear(
+  static const DSFontIcon safeHomeLinear = IconData(
     0xebb8,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/sagittarius.png)
-  static const DSIcon sagittariusLinear = _DSIconLinear(
+  static const DSFontIcon sagittariusLinear = IconData(
     0xebb9,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/save_2.png)
-  static const DSIcon save2Linear = _DSIconLinear(
+  static const DSFontIcon save2Linear = IconData(
     0xebba,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/save_add.png)
-  static const DSIcon saveAddLinear = _DSIconLinear(
+  static const DSFontIcon saveAddLinear = IconData(
     0xebbb,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/save_minus.png)
-  static const DSIcon saveMinusLinear = _DSIconLinear(
+  static const DSFontIcon saveMinusLinear = IconData(
     0xebbc,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/save_remove.png)
-  static const DSIcon saveRemoveLinear = _DSIconLinear(
+  static const DSFontIcon saveRemoveLinear = IconData(
     0xebbd,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/scan.png)
-  static const DSIcon scanLinear = _DSIconLinear(
+  static const DSFontIcon scanLinear = IconData(
     0xebbe,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/scan_barcode.png)
-  static const DSIcon scanBarcodeLinear = _DSIconLinear(
+  static const DSFontIcon scanBarcodeLinear = IconData(
     0xebbf,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/scanner.png)
-  static const DSIcon scannerLinear = _DSIconLinear(
+  static const DSFontIcon scannerLinear = IconData(
     0xebc0,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/scanning.png)
-  static const DSIcon scanningLinear = _DSIconLinear(
+  static const DSFontIcon scanningLinear = IconData(
     0xebc1,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/scissor.png)
-  static const DSIcon scissorLinear = _DSIconLinear(
+  static const DSFontIcon scissorLinear = IconData(
     0xebc2,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/scissor_1.png)
-  static const DSIcon scissor1Linear = _DSIconLinear(
+  static const DSFontIcon scissor1Linear = IconData(
     0xebc3,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/screenmirroring.png)
-  static const DSIcon screenmirroringLinear = _DSIconLinear(
+  static const DSFontIcon screenmirroringLinear = IconData(
     0xebc4,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/scroll.png)
-  static const DSIcon scrollLinear = _DSIconLinear(
+  static const DSFontIcon scrollLinear = IconData(
     0xebc5,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/search_favorite.png)
-  static const DSIcon searchFavoriteLinear = _DSIconLinear(
+  static const DSFontIcon searchFavoriteLinear = IconData(
     0xebc6,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/search_favorite_1.png)
-  static const DSIcon searchFavorite1Linear = _DSIconLinear(
+  static const DSFontIcon searchFavorite1Linear = IconData(
     0xebc7,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/search_normal.png)
-  static const DSIcon searchNormalLinear = _DSIconLinear(
+  static const DSFontIcon searchNormalLinear = IconData(
     0xebc8,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/search_normal_1.png)
-  static const DSIcon searchNormal1Linear = _DSIconLinear(
+  static const DSFontIcon searchNormal1Linear = IconData(
     0xebc9,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/search_status.png)
-  static const DSIcon searchStatusLinear = _DSIconLinear(
+  static const DSFontIcon searchStatusLinear = IconData(
     0xebca,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/search_status_1.png)
-  static const DSIcon searchStatus1Linear = _DSIconLinear(
+  static const DSFontIcon searchStatus1Linear = IconData(
     0xebcb,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/search_zoom_in.png)
-  static const DSIcon searchZoomInLinear = _DSIconLinear(
+  static const DSFontIcon searchZoomInLinear = IconData(
     0xebcc,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/search_zoom_in_1.png)
-  static const DSIcon searchZoomIn1Linear = _DSIconLinear(
+  static const DSFontIcon searchZoomIn1Linear = IconData(
     0xebcd,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/search_zoom_out.png)
-  static const DSIcon searchZoomOutLinear = _DSIconLinear(
+  static const DSFontIcon searchZoomOutLinear = IconData(
     0xebce,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/search_zoom_out_1.png)
-  static const DSIcon searchZoomOut1Linear = _DSIconLinear(
+  static const DSFontIcon searchZoomOut1Linear = IconData(
     0xebcf,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/security.png)
-  static const DSIcon securityLinear = _DSIconLinear(
+  static const DSFontIcon securityLinear = IconData(
     0xebd0,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/security_card.png)
-  static const DSIcon securityCardLinear = _DSIconLinear(
+  static const DSFontIcon securityCardLinear = IconData(
     0xebd1,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/security_safe.png)
-  static const DSIcon securitySafeLinear = _DSIconLinear(
+  static const DSFontIcon securitySafeLinear = IconData(
     0xebd2,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/security_time.png)
-  static const DSIcon securityTimeLinear = _DSIconLinear(
+  static const DSFontIcon securityTimeLinear = IconData(
     0xebd3,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/security_user.png)
-  static const DSIcon securityUserLinear = _DSIconLinear(
+  static const DSFontIcon securityUserLinear = IconData(
     0xebd4,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/send.png)
-  static const DSIcon sendLinear = _DSIconLinear(
+  static const DSFontIcon sendLinear = IconData(
     0xebd5,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/send_1.png)
-  static const DSIcon send1Linear = _DSIconLinear(
+  static const DSFontIcon send1Linear = IconData(
     0xebd6,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/send_2.png)
-  static const DSIcon send2Linear = _DSIconLinear(
+  static const DSFontIcon send2Linear = IconData(
     0xebd7,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/send_sqaure_2.png)
-  static const DSIcon sendSqaure2Linear = _DSIconLinear(
+  static const DSFontIcon sendSqaure2Linear = IconData(
     0xebd8,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/send_square.png)
-  static const DSIcon sendSquareLinear = _DSIconLinear(
+  static const DSFontIcon sendSquareLinear = IconData(
     0xebd9,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/setting.png)
-  static const DSIcon settingLinear = _DSIconLinear(
+  static const DSFontIcon settingLinear = IconData(
     0xebda,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/setting_2.png)
-  static const DSIcon setting2Linear = _DSIconLinear(
+  static const DSFontIcon setting2Linear = IconData(
     0xebdb,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/setting_3.png)
-  static const DSIcon setting3Linear = _DSIconLinear(
+  static const DSFontIcon setting3Linear = IconData(
     0xebdc,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/setting_4.png)
-  static const DSIcon setting4Linear = _DSIconLinear(
+  static const DSFontIcon setting4Linear = IconData(
     0xebdd,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/setting_5.png)
-  static const DSIcon setting5Linear = _DSIconLinear(
+  static const DSFontIcon setting5Linear = IconData(
     0xebde,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/settings.png)
-  static const DSIcon settingsLinear = _DSIconLinear(
+  static const DSFontIcon settingsLinear = IconData(
     0xebdf,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/shapes.png)
-  static const DSIcon shapesLinear = _DSIconLinear(
+  static const DSFontIcon shapesLinear = IconData(
     0xebe0,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/shapes_1.png)
-  static const DSIcon shapes1Linear = _DSIconLinear(
+  static const DSFontIcon shapes1Linear = IconData(
     0xebe1,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/share.png)
-  static const DSIcon shareLinear = _DSIconLinear(
+  static const DSFontIcon shareLinear = IconData(
     0xebe2,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/shield.png)
-  static const DSIcon shieldLinear = _DSIconLinear(
+  static const DSFontIcon shieldLinear = IconData(
     0xebe3,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/shield_cross.png)
-  static const DSIcon shieldCrossLinear = _DSIconLinear(
+  static const DSFontIcon shieldCrossLinear = IconData(
     0xebe4,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/shield_search.png)
-  static const DSIcon shieldSearchLinear = _DSIconLinear(
+  static const DSFontIcon shieldSearchLinear = IconData(
     0xebe5,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/shield_security.png)
-  static const DSIcon shieldSecurityLinear = _DSIconLinear(
+  static const DSFontIcon shieldSecurityLinear = IconData(
     0xebe6,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/shield_slash.png)
-  static const DSIcon shieldSlashLinear = _DSIconLinear(
+  static const DSFontIcon shieldSlashLinear = IconData(
     0xebe7,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/shield_tick.png)
-  static const DSIcon shieldTickLinear = _DSIconLinear(
+  static const DSFontIcon shieldTickLinear = IconData(
     0xebe8,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/ship.png)
-  static const DSIcon shipLinear = _DSIconLinear(
+  static const DSFontIcon shipLinear = IconData(
     0xebe9,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/shop.png)
-  static const DSIcon shopLinear = _DSIconLinear(
+  static const DSFontIcon shopLinear = IconData(
     0xebea,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/shop_add.png)
-  static const DSIcon shopAddLinear = _DSIconLinear(
+  static const DSFontIcon shopAddLinear = IconData(
     0xebeb,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/shopping_bag.png)
-  static const DSIcon shoppingBagLinear = _DSIconLinear(
+  static const DSFontIcon shoppingBagLinear = IconData(
     0xebec,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/shopping_cart.png)
-  static const DSIcon shoppingCartLinear = _DSIconLinear(
+  static const DSFontIcon shoppingCartLinear = IconData(
     0xebed,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/shop_remove.png)
-  static const DSIcon shopRemoveLinear = _DSIconLinear(
+  static const DSFontIcon shopRemoveLinear = IconData(
     0xebee,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/shuffle.png)
-  static const DSIcon shuffleLinear = _DSIconLinear(
+  static const DSFontIcon shuffleLinear = IconData(
     0xebef,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/sidebar_bottom.png)
-  static const DSIcon sidebarBottomLinear = _DSIconLinear(
+  static const DSFontIcon sidebarBottomLinear = IconData(
     0xebf0,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/sidebar_left.png)
-  static const DSIcon sidebarLeftLinear = _DSIconLinear(
+  static const DSFontIcon sidebarLeftLinear = IconData(
     0xebf1,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/sidebar_right.png)
-  static const DSIcon sidebarRightLinear = _DSIconLinear(
+  static const DSFontIcon sidebarRightLinear = IconData(
     0xebf2,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/sidebar_top.png)
-  static const DSIcon sidebarTopLinear = _DSIconLinear(
+  static const DSFontIcon sidebarTopLinear = IconData(
     0xebf3,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/signpost.png)
-  static const DSIcon signpostLinear = _DSIconLinear(
+  static const DSFontIcon signpostLinear = IconData(
     0xebf4,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/simcard.png)
-  static const DSIcon simcardLinear = _DSIconLinear(
+  static const DSFontIcon simcardLinear = IconData(
     0xebf5,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/simcard_1.png)
-  static const DSIcon simcard1Linear = _DSIconLinear(
+  static const DSFontIcon simcard1Linear = IconData(
     0xebf6,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/simcard_2.png)
-  static const DSIcon simcard2Linear = _DSIconLinear(
+  static const DSFontIcon simcard2Linear = IconData(
     0xebf7,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/size.png)
-  static const DSIcon sizeLinear = _DSIconLinear(
+  static const DSFontIcon sizeLinear = IconData(
     0xebf8,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/slash.png)
-  static const DSIcon slashLinear = _DSIconLinear(
+  static const DSFontIcon slashLinear = IconData(
     0xebf9,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/slider.png)
-  static const DSIcon sliderLinear = _DSIconLinear(
+  static const DSFontIcon sliderLinear = IconData(
     0xebfa,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/slider_horizontal.png)
-  static const DSIcon sliderHorizontalLinear = _DSIconLinear(
+  static const DSFontIcon sliderHorizontalLinear = IconData(
     0xebfb,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/slider_horizontal_1.png)
-  static const DSIcon sliderHorizontal1Linear = _DSIconLinear(
+  static const DSFontIcon sliderHorizontal1Linear = IconData(
     0xebfc,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/slider_vertical.png)
-  static const DSIcon sliderVerticalLinear = _DSIconLinear(
+  static const DSFontIcon sliderVerticalLinear = IconData(
     0xebfd,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/slider_vertical_1.png)
-  static const DSIcon sliderVertical1Linear = _DSIconLinear(
+  static const DSFontIcon sliderVertical1Linear = IconData(
     0xebfe,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/smallcaps.png)
-  static const DSIcon smallcapsLinear = _DSIconLinear(
+  static const DSFontIcon smallcapsLinear = IconData(
     0xebff,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/smart_car.png)
-  static const DSIcon smartCarLinear = _DSIconLinear(
+  static const DSFontIcon smartCarLinear = IconData(
     0xec00,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/smart_home.png)
-  static const DSIcon smartHomeLinear = _DSIconLinear(
+  static const DSFontIcon smartHomeLinear = IconData(
     0xec01,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/smileys.png)
-  static const DSIcon smileysLinear = _DSIconLinear(
+  static const DSFontIcon smileysLinear = IconData(
     0xec02,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/sms.png)
-  static const DSIcon smsLinear = _DSIconLinear(
+  static const DSFontIcon smsLinear = IconData(
     0xec03,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/sms_edit.png)
-  static const DSIcon smsEditLinear = _DSIconLinear(
+  static const DSFontIcon smsEditLinear = IconData(
     0xec04,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/sms_notification.png)
-  static const DSIcon smsNotificationLinear = _DSIconLinear(
+  static const DSFontIcon smsNotificationLinear = IconData(
     0xec05,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/sms_search.png)
-  static const DSIcon smsSearchLinear = _DSIconLinear(
+  static const DSFontIcon smsSearchLinear = IconData(
     0xec06,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/sms_star.png)
-  static const DSIcon smsStarLinear = _DSIconLinear(
+  static const DSFontIcon smsStarLinear = IconData(
     0xec07,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/sms_tracking.png)
-  static const DSIcon smsTrackingLinear = _DSIconLinear(
+  static const DSFontIcon smsTrackingLinear = IconData(
     0xec08,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/sort.png)
-  static const DSIcon sortLinear = _DSIconLinear(
+  static const DSFontIcon sortLinear = IconData(
     0xec09,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/sound.png)
-  static const DSIcon soundLinear = _DSIconLinear(
+  static const DSFontIcon soundLinear = IconData(
     0xec0a,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/speaker.png)
-  static const DSIcon speakerLinear = _DSIconLinear(
+  static const DSFontIcon speakerLinear = IconData(
     0xec0b,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/speedometer.png)
-  static const DSIcon speedometerLinear = _DSIconLinear(
+  static const DSFontIcon speedometerLinear = IconData(
     0xec0c,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/star.png)
-  static const DSIcon starLinear = _DSIconLinear(
+  static const DSFontIcon starLinear = IconData(
     0xec0d,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/star_1.png)
-  static const DSIcon star1Linear = _DSIconLinear(
+  static const DSFontIcon star1Linear = IconData(
     0xec0e,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/star_slash.png)
-  static const DSIcon starSlashLinear = _DSIconLinear(
+  static const DSFontIcon starSlashLinear = IconData(
     0xec0f,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/status.png)
-  static const DSIcon statusLinear = _DSIconLinear(
+  static const DSFontIcon statusLinear = IconData(
     0xec10,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/status_up.png)
-  static const DSIcon statusUpLinear = _DSIconLinear(
+  static const DSFontIcon statusUpLinear = IconData(
     0xec11,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/sticker.png)
-  static const DSIcon stickerLinear = _DSIconLinear(
+  static const DSFontIcon stickerLinear = IconData(
     0xec12,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/stickynote.png)
-  static const DSIcon stickynoteLinear = _DSIconLinear(
+  static const DSFontIcon stickynoteLinear = IconData(
     0xec13,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/stop.png)
-  static const DSIcon stopLinear = _DSIconLinear(
+  static const DSFontIcon stopLinear = IconData(
     0xec14,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/stop_circle.png)
-  static const DSIcon stopCircleLinear = _DSIconLinear(
+  static const DSFontIcon stopCircleLinear = IconData(
     0xec15,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/story.png)
-  static const DSIcon storyLinear = _DSIconLinear(
+  static const DSFontIcon storyLinear = IconData(
     0xec16,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/strongbox.png)
-  static const DSIcon strongboxLinear = _DSIconLinear(
+  static const DSFontIcon strongboxLinear = IconData(
     0xec17,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/strongbox_2.png)
-  static const DSIcon strongbox2Linear = _DSIconLinear(
+  static const DSFontIcon strongbox2Linear = IconData(
     0xec18,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/subtitle.png)
-  static const DSIcon subtitleLinear = _DSIconLinear(
+  static const DSFontIcon subtitleLinear = IconData(
     0xec19,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/sun.png)
-  static const DSIcon sunLinear = _DSIconLinear(
+  static const DSFontIcon sunLinear = IconData(
     0xec1a,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/sun_1.png)
-  static const DSIcon sun1Linear = _DSIconLinear(
+  static const DSFontIcon sun1Linear = IconData(
     0xec1b,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/sun_fog.png)
-  static const DSIcon sunFogLinear = _DSIconLinear(
+  static const DSFontIcon sunFogLinear = IconData(
     0xec1c,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/tag.png)
-  static const DSIcon tagLinear = _DSIconLinear(
+  static const DSFontIcon tagLinear = IconData(
     0xec1d,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/tag_2.png)
-  static const DSIcon tag2Linear = _DSIconLinear(
+  static const DSFontIcon tag2Linear = IconData(
     0xec1e,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/tag_cross.png)
-  static const DSIcon tagCrossLinear = _DSIconLinear(
+  static const DSFontIcon tagCrossLinear = IconData(
     0xec1f,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/tag_right.png)
-  static const DSIcon tagRightLinear = _DSIconLinear(
+  static const DSFontIcon tagRightLinear = IconData(
     0xec20,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/tag_user.png)
-  static const DSIcon tagUserLinear = _DSIconLinear(
+  static const DSFontIcon tagUserLinear = IconData(
     0xec21,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/task.png)
-  static const DSIcon taskLinear = _DSIconLinear(
+  static const DSFontIcon taskLinear = IconData(
     0xec22,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/task_square.png)
-  static const DSIcon taskSquareLinear = _DSIconLinear(
+  static const DSFontIcon taskSquareLinear = IconData(
     0xec23,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/teacher.png)
-  static const DSIcon teacherLinear = _DSIconLinear(
+  static const DSFontIcon teacherLinear = IconData(
     0xec24,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/text.png)
-  static const DSIcon textLinear = _DSIconLinear(
+  static const DSFontIcon textLinear = IconData(
     0xec25,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/textalign_center.png)
-  static const DSIcon textalignCenterLinear = _DSIconLinear(
+  static const DSFontIcon textalignCenterLinear = IconData(
     0xec26,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/textalign_justifycenter.png)
-  static const DSIcon textalignJustifycenterLinear = _DSIconLinear(
+  static const DSFontIcon textalignJustifycenterLinear = IconData(
     0xec27,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/textalign_justifyleft.png)
-  static const DSIcon textalignJustifyleftLinear = _DSIconLinear(
+  static const DSFontIcon textalignJustifyleftLinear = IconData(
     0xec28,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/textalign_justifyright.png)
-  static const DSIcon textalignJustifyrightLinear = _DSIconLinear(
+  static const DSFontIcon textalignJustifyrightLinear = IconData(
     0xec29,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/textalign_left.png)
-  static const DSIcon textalignLeftLinear = _DSIconLinear(
+  static const DSFontIcon textalignLeftLinear = IconData(
     0xec2a,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/textalign_right.png)
-  static const DSIcon textalignRightLinear = _DSIconLinear(
+  static const DSFontIcon textalignRightLinear = IconData(
     0xec2b,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/text_block.png)
-  static const DSIcon textBlockLinear = _DSIconLinear(
+  static const DSFontIcon textBlockLinear = IconData(
     0xec2c,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/text_bold.png)
-  static const DSIcon textBoldLinear = _DSIconLinear(
+  static const DSFontIcon textBoldLinear = IconData(
     0xec2d,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/text_italic.png)
-  static const DSIcon textItalicLinear = _DSIconLinear(
+  static const DSFontIcon textItalicLinear = IconData(
     0xec2e,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/text_underline.png)
-  static const DSIcon textUnderlineLinear = _DSIconLinear(
+  static const DSFontIcon textUnderlineLinear = IconData(
     0xec2f,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/tick_circle.png)
-  static const DSIcon tickCircleLinear = _DSIconLinear(
+  static const DSFontIcon tickCircleLinear = IconData(
     0xec30,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/ticket.png)
-  static const DSIcon ticketLinear = _DSIconLinear(
+  static const DSFontIcon ticketLinear = IconData(
     0xec31,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/ticket_2.png)
-  static const DSIcon ticket2Linear = _DSIconLinear(
+  static const DSFontIcon ticket2Linear = IconData(
     0xec32,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/ticket_discount.png)
-  static const DSIcon ticketDiscountLinear = _DSIconLinear(
+  static const DSFontIcon ticketDiscountLinear = IconData(
     0xec33,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/ticket_expired.png)
-  static const DSIcon ticketExpiredLinear = _DSIconLinear(
+  static const DSFontIcon ticketExpiredLinear = IconData(
     0xec34,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/ticket_star.png)
-  static const DSIcon ticketStarLinear = _DSIconLinear(
+  static const DSFontIcon ticketStarLinear = IconData(
     0xec35,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/tick_square.png)
-  static const DSIcon tickSquareLinear = _DSIconLinear(
+  static const DSFontIcon tickSquareLinear = IconData(
     0xec36,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/timer.png)
-  static const DSIcon timerLinear = _DSIconLinear(
+  static const DSFontIcon timerLinear = IconData(
     0xec37,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/timer_1.png)
-  static const DSIcon timer1Linear = _DSIconLinear(
+  static const DSFontIcon timer1Linear = IconData(
     0xec38,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/timer_pause.png)
-  static const DSIcon timerPauseLinear = _DSIconLinear(
+  static const DSFontIcon timerPauseLinear = IconData(
     0xec39,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/timer_start.png)
-  static const DSIcon timerStartLinear = _DSIconLinear(
+  static const DSFontIcon timerStartLinear = IconData(
     0xec3a,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/toggle_off.png)
-  static const DSIcon toggleOffLinear = _DSIconLinear(
+  static const DSFontIcon toggleOffLinear = IconData(
     0xec3b,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/toggle_off_circle.png)
-  static const DSIcon toggleOffCircleLinear = _DSIconLinear(
+  static const DSFontIcon toggleOffCircleLinear = IconData(
     0xec3c,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/toggle_on.png)
-  static const DSIcon toggleOnLinear = _DSIconLinear(
+  static const DSFontIcon toggleOnLinear = IconData(
     0xec3d,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/toggle_on_circle.png)
-  static const DSIcon toggleOnCircleLinear = _DSIconLinear(
+  static const DSFontIcon toggleOnCircleLinear = IconData(
     0xec3e,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/trade.png)
-  static const DSIcon tradeLinear = _DSIconLinear(
+  static const DSFontIcon tradeLinear = IconData(
     0xec3f,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/transaction_minus.png)
-  static const DSIcon transactionMinusLinear = _DSIconLinear(
+  static const DSFontIcon transactionMinusLinear = IconData(
     0xec40,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/translate.png)
-  static const DSIcon translateLinear = _DSIconLinear(
+  static const DSFontIcon translateLinear = IconData(
     0xec41,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/trash.png)
-  static const DSIcon trashLinear = _DSIconLinear(
+  static const DSFontIcon trashLinear = IconData(
     0xec42,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/trash_square.png)
-  static const DSIcon trashSquareLinear = _DSIconLinear(
+  static const DSFontIcon trashSquareLinear = IconData(
     0xec43,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/tree.png)
-  static const DSIcon treeLinear = _DSIconLinear(
+  static const DSFontIcon treeLinear = IconData(
     0xec44,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/trend_down.png)
-  static const DSIcon trendDownLinear = _DSIconLinear(
+  static const DSFontIcon trendDownLinear = IconData(
     0xec45,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/trend_up.png)
-  static const DSIcon trendUpLinear = _DSIconLinear(
+  static const DSFontIcon trendUpLinear = IconData(
     0xec46,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/triangle.png)
-  static const DSIcon triangleLinear = _DSIconLinear(
+  static const DSFontIcon triangleLinear = IconData(
     0xec47,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/truck.png)
-  static const DSIcon truckLinear = _DSIconLinear(
+  static const DSFontIcon truckLinear = IconData(
     0xec48,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/truck_fast.png)
-  static const DSIcon truckFastLinear = _DSIconLinear(
+  static const DSFontIcon truckFastLinear = IconData(
     0xec49,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/truck_remove.png)
-  static const DSIcon truckRemoveLinear = _DSIconLinear(
+  static const DSFontIcon truckRemoveLinear = IconData(
     0xec4a,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/truck_tick.png)
-  static const DSIcon truckTickLinear = _DSIconLinear(
+  static const DSFontIcon truckTickLinear = IconData(
     0xec4b,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/truck_time.png)
-  static const DSIcon truckTimeLinear = _DSIconLinear(
+  static const DSFontIcon truckTimeLinear = IconData(
     0xec4c,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/undo.png)
-  static const DSIcon undoLinear = _DSIconLinear(
+  static const DSFontIcon undoLinear = IconData(
     0xec4d,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/unlimited.png)
-  static const DSIcon unlimitedLinear = _DSIconLinear(
+  static const DSFontIcon unlimitedLinear = IconData(
     0xec4e,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/unlock.png)
-  static const DSIcon unlockLinear = _DSIconLinear(
+  static const DSFontIcon unlockLinear = IconData(
     0xec4f,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/user.png)
-  static const DSIcon userLinear = _DSIconLinear(
+  static const DSFontIcon userLinear = IconData(
     0xec50,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/user_add.png)
-  static const DSIcon userAddLinear = _DSIconLinear(
+  static const DSFontIcon userAddLinear = IconData(
     0xec51,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/user_cirlce_add.png)
-  static const DSIcon userCirlceAddLinear = _DSIconLinear(
+  static const DSFontIcon userCirlceAddLinear = IconData(
     0xec52,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/user_edit.png)
-  static const DSIcon userEditLinear = _DSIconLinear(
+  static const DSFontIcon userEditLinear = IconData(
     0xec53,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/user_minus.png)
-  static const DSIcon userMinusLinear = _DSIconLinear(
+  static const DSFontIcon userMinusLinear = IconData(
     0xec54,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/user_octagon.png)
-  static const DSIcon userOctagonLinear = _DSIconLinear(
+  static const DSFontIcon userOctagonLinear = IconData(
     0xec55,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/user_remove.png)
-  static const DSIcon userRemoveLinear = _DSIconLinear(
+  static const DSFontIcon userRemoveLinear = IconData(
     0xec56,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/user_search.png)
-  static const DSIcon userSearchLinear = _DSIconLinear(
+  static const DSFontIcon userSearchLinear = IconData(
     0xec57,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/user_square.png)
-  static const DSIcon userSquareLinear = _DSIconLinear(
+  static const DSFontIcon userSquareLinear = IconData(
     0xec58,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/user_tag.png)
-  static const DSIcon userTagLinear = _DSIconLinear(
+  static const DSFontIcon userTagLinear = IconData(
     0xec59,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/user_tick.png)
-  static const DSIcon userTickLinear = _DSIconLinear(
+  static const DSFontIcon userTickLinear = IconData(
     0xec5a,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/verify.png)
-  static const DSIcon verifyLinear = _DSIconLinear(
+  static const DSFontIcon verifyLinear = IconData(
     0xec5b,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/video.png)
-  static const DSIcon videoLinear = _DSIconLinear(
+  static const DSFontIcon videoLinear = IconData(
     0xec5c,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/video_add.png)
-  static const DSIcon videoAddLinear = _DSIconLinear(
+  static const DSFontIcon videoAddLinear = IconData(
     0xec5d,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/video_circle.png)
-  static const DSIcon videoCircleLinear = _DSIconLinear(
+  static const DSFontIcon videoCircleLinear = IconData(
     0xec5e,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/video_horizontal.png)
-  static const DSIcon videoHorizontalLinear = _DSIconLinear(
+  static const DSFontIcon videoHorizontalLinear = IconData(
     0xec5f,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/video_octagon.png)
-  static const DSIcon videoOctagonLinear = _DSIconLinear(
+  static const DSFontIcon videoOctagonLinear = IconData(
     0xec60,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/video_play.png)
-  static const DSIcon videoPlayLinear = _DSIconLinear(
+  static const DSFontIcon videoPlayLinear = IconData(
     0xec61,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/video_remove.png)
-  static const DSIcon videoRemoveLinear = _DSIconLinear(
+  static const DSFontIcon videoRemoveLinear = IconData(
     0xec62,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/video_slash.png)
-  static const DSIcon videoSlashLinear = _DSIconLinear(
+  static const DSFontIcon videoSlashLinear = IconData(
     0xec63,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/video_square.png)
-  static const DSIcon videoSquareLinear = _DSIconLinear(
+  static const DSFontIcon videoSquareLinear = IconData(
     0xec67,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/video_tick.png)
-  static const DSIcon videoTickLinear = _DSIconLinear(
+  static const DSFontIcon videoTickLinear = IconData(
     0xec68,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/video_time.png)
-  static const DSIcon videoTimeLinear = _DSIconLinear(
+  static const DSFontIcon videoTimeLinear = IconData(
     0xec69,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/video_vertical.png)
-  static const DSIcon videoVerticalLinear = _DSIconLinear(
+  static const DSFontIcon videoVerticalLinear = IconData(
     0xec6a,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/voice_cricle.png)
-  static const DSIcon voiceCricleLinear = _DSIconLinear(
+  static const DSFontIcon voiceCricleLinear = IconData(
     0xec6b,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/voice_square.png)
-  static const DSIcon voiceSquareLinear = _DSIconLinear(
+  static const DSFontIcon voiceSquareLinear = IconData(
     0xec6c,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/volume_cross.png)
-  static const DSIcon volumeCrossLinear = _DSIconLinear(
+  static const DSFontIcon volumeCrossLinear = IconData(
     0xec6d,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/volume_high.png)
-  static const DSIcon volumeHighLinear = _DSIconLinear(
+  static const DSFontIcon volumeHighLinear = IconData(
     0xec6e,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/volume_low.png)
-  static const DSIcon volumeLowLinear = _DSIconLinear(
+  static const DSFontIcon volumeLowLinear = IconData(
     0xec6f,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/volume_low_1.png)
-  static const DSIcon volumeLow1Linear = _DSIconLinear(
+  static const DSFontIcon volumeLow1Linear = IconData(
     0xec70,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/volume_mute.png)
-  static const DSIcon volumeMuteLinear = _DSIconLinear(
+  static const DSFontIcon volumeMuteLinear = IconData(
     0xec71,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/volume_slash.png)
-  static const DSIcon volumeSlashLinear = _DSIconLinear(
+  static const DSFontIcon volumeSlashLinear = IconData(
     0xec72,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/volume_up.png)
-  static const DSIcon volumeUpLinear = _DSIconLinear(
+  static const DSFontIcon volumeUpLinear = IconData(
     0xec73,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/wallet.png)
-  static const DSIcon walletLinear = _DSIconLinear(
+  static const DSFontIcon walletLinear = IconData(
     0xec74,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/wallet_1.png)
-  static const DSIcon wallet1Linear = _DSIconLinear(
+  static const DSFontIcon wallet1Linear = IconData(
     0xec75,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/wallet_2.png)
-  static const DSIcon wallet2Linear = _DSIconLinear(
+  static const DSFontIcon wallet2Linear = IconData(
     0xec76,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/wallet_3.png)
-  static const DSIcon wallet3Linear = _DSIconLinear(
+  static const DSFontIcon wallet3Linear = IconData(
     0xec77,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/wallet_add.png)
-  static const DSIcon walletAddLinear = _DSIconLinear(
+  static const DSFontIcon walletAddLinear = IconData(
     0xec78,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/wallet_add_1.png)
-  static const DSIcon walletAdd1Linear = _DSIconLinear(
+  static const DSFontIcon walletAdd1Linear = IconData(
     0xec79,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/wallet_check.png)
-  static const DSIcon walletCheckLinear = _DSIconLinear(
+  static const DSFontIcon walletCheckLinear = IconData(
     0xec7a,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/wallet_minus.png)
-  static const DSIcon walletMinusLinear = _DSIconLinear(
+  static const DSFontIcon walletMinusLinear = IconData(
     0xec7b,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/wallet_money.png)
-  static const DSIcon walletMoneyLinear = _DSIconLinear(
+  static const DSFontIcon walletMoneyLinear = IconData(
     0xec7c,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/wallet_remove.png)
-  static const DSIcon walletRemoveLinear = _DSIconLinear(
+  static const DSFontIcon walletRemoveLinear = IconData(
     0xec7d,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/wallet_search.png)
-  static const DSIcon walletSearchLinear = _DSIconLinear(
+  static const DSFontIcon walletSearchLinear = IconData(
     0xec7e,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/warning_2.png)
-  static const DSIcon warning2Linear = _DSIconLinear(
+  static const DSFontIcon warning2Linear = IconData(
     0xec7f,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/watch.png)
-  static const DSIcon watchLinear = _DSIconLinear(
+  static const DSFontIcon watchLinear = IconData(
     0xec80,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/watch_status.png)
-  static const DSIcon watchStatusLinear = _DSIconLinear(
+  static const DSFontIcon watchStatusLinear = IconData(
     0xec81,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/weight.png)
-  static const DSIcon weightLinear = _DSIconLinear(
+  static const DSFontIcon weightLinear = IconData(
     0xec82,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/weight_1.png)
-  static const DSIcon weight1Linear = _DSIconLinear(
+  static const DSFontIcon weight1Linear = IconData(
     0xec83,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/wifi.png)
-  static const DSIcon wifiLinear = _DSIconLinear(
+  static const DSFontIcon wifiLinear = IconData(
     0xec84,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/wifi_square.png)
-  static const DSIcon wifiSquareLinear = _DSIconLinear(
+  static const DSFontIcon wifiSquareLinear = IconData(
     0xec85,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/wind.png)
-  static const DSIcon windLinear = _DSIconLinear(
+  static const DSFontIcon windLinear = IconData(
     0xec86,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/wind_2.png)
-  static const DSIcon wind2Linear = _DSIconLinear(
+  static const DSFontIcon wind2Linear = IconData(
     0xec87,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 
   /// ![](assets/icon-preview/linear/woman.png)
-  static const DSIcon womanLinear = _DSIconLinear(
+  static const DSFontIcon womanLinear = IconData(
     0xec88,
+    fontFamily: Fonts.iconsaxPlusLinear,
+    fontPackage: dsFontIconPackage,
   );
 }
