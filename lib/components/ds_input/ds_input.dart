@@ -103,7 +103,8 @@ class DSInput extends StatefulWidget {
 class _DSInputState extends State<DSInput> {
   bool showPrefixIcon = true;
   DSInputController? _controller;
-  ValueNotifier<bool> isFocused = ValueNotifier(false);
+  bool _didApplyInitialValue = false;
+  bool _ownsController = false;
 
   late final theme = Theme.of(context);
   late final componentTheme =
@@ -111,34 +112,67 @@ class _DSInputState extends State<DSInput> {
 
   @override
   void initState() {
-    _setupController();
     super.initState();
+    _bindController(seedInitialValue: true);
   }
 
   @override
   void didUpdateWidget(covariant DSInput oldWidget) {
-    _setupController();
     super.didUpdateWidget(oldWidget);
-  }
 
-  void _setupController() {
-    _controller ??= widget.controller ?? DSInputController();
-
-    // Set initial value nếu có
-    if (widget.initialValue != null &&
-        (_controller?.text.isEmpty == true || widget.controller == null)) {
-      _controller?.text = widget.initialValue ?? '';
+    if (oldWidget.controller != widget.controller) {
+      if (_ownsController) {
+        _controller?.dispose();
+      }
+      _didApplyInitialValue = false;
+      _bindController(seedInitialValue: true);
+      return;
     }
 
-    _controller?.value.focusNode.addListener(() {
-      isFocused.value = _controller?.value.focusNode.hasFocus ?? false;
-    });
+    if (_ownsController &&
+        oldWidget.initialValue != widget.initialValue &&
+        widget.initialValue != null) {
+      _controller?.text = widget.initialValue;
+    }
+  }
+
+  void _bindController({required bool seedInitialValue}) {
+    if (widget.controller != null) {
+      _controller = widget.controller;
+      _ownsController = false;
+    } else {
+      _controller ??= DSInputController();
+      _ownsController = true;
+    }
+
+    if (seedInitialValue) {
+      _applyInitialValueIfNeeded();
+    }
+  }
+
+  void _applyInitialValueIfNeeded() {
+    if (_didApplyInitialValue || widget.initialValue == null) {
+      _didApplyInitialValue = true;
+      return;
+    }
+
+    final controller = _controller;
+    if (controller == null) {
+      return;
+    }
+
+    if (!_ownsController && controller.text.isNotEmpty) {
+      _didApplyInitialValue = true;
+      return;
+    }
+
+    controller.text = widget.initialValue;
+    _didApplyInitialValue = true;
   }
 
   @override
   void dispose() {
-    // Chỉ dispose controller nếu nó được khởi tạo bên trong widget
-    if (widget.controller == null) {
+    if (_ownsController) {
       _controller?.dispose();
     }
     _controller = null;
@@ -157,7 +191,6 @@ class _DSInputState extends State<DSInput> {
         valueListenable: _controller!,
         builder: (ctx, value, w) {
           final textField = TextField(
-            key: widget.key,
             textAlign: widget.textAlign,
             focusNode: value.focusNode,
             readOnly: widget.readOnly || !widget.enable,

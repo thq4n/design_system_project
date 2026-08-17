@@ -36,14 +36,26 @@ class DSInputController extends ValueNotifier<InputContainerProperties> {
   String get trimmedText => value.tdController.text.trim();
 
   set text(String? v) {
-    value.tdController.let((ctrl) {
-      ctrl?.value = ctrl.value.copyWith(
-        text: v,
-        selection: TextSelection.collapsed(offset: v?.length ?? 0),
-        composing: TextRange.empty,
-      );
-    });
+    final nextText = v ?? '';
+    final editingController = value.tdController;
+    if (editingController.text == nextText) {
+      if (value.validation != null) {
+        resetValidation();
+      }
+      return;
+    }
+    editingController.value = TextEditingValue(
+      text: nextText,
+      selection: TextSelection.collapsed(offset: nextText.length),
+    );
     resetValidation();
+  }
+
+  @override
+  void dispose() {
+    value.tdController.dispose();
+    value.focusNode.dispose();
+    super.dispose();
   }
 
   set textValue(TextEditingValue value) {

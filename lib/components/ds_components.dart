@@ -17,6 +17,7 @@ export 'ds_input/ds_input.dart';
 export 'ds_input/ds_input_dimensions.dart';
 export 'ds_input/ds_input_recording.dart';
 export 'ds_input/ds_input_recording_config.dart';
+export 'ds_input/ds_input_value.dart';
 export 'ds_loading/ds_loading.dart';
 export 'ds_media_picker/ds_media_picker.dart';
 export 'ds_radio/ds_radio.dart';
