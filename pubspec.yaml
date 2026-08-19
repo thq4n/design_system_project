@@ -64,6 +64,7 @@ dependencies:
   go_router: ^14.6.1
   table_calendar: ^3.2.0
   collection: ^1.19.1
+  super_tooltip: ^2.1.1
 
 dev_dependencies:
   flutter_test:
