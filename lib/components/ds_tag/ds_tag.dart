@@ -58,7 +58,12 @@ class _DSTagState extends DSStateBase<DSTag> {
   }
 
   DSColor? get _labelColor {
-    return _mainColor?.shade600;
+    switch (widget.style) {
+      case DSTagStyles.custom:
+        return _mainColor;
+      default:
+        return _mainColor?.shade600;
+    }
   }
 
   @override

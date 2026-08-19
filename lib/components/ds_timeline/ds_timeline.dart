@@ -72,12 +72,18 @@ class DSTimeline<T> extends StatefulWidget {
     int currentIndex,
   )? separatorBuilder;
 
+  /// Builder for the node indicator (dot) of each item.
+  /// When null, the default circular dot from [DSTimelineTheme] is used.
+  final Widget? Function(BuildContext context, T item, int index, Size size)?
+      dotBuilder;
+
   const DSTimeline({
     super.key,
     required this.items,
     required this.itemBuilder,
     this.loadingItemBuilder,
     this.separatorBuilder,
+    this.dotBuilder,
     this.isLoading = false,
     this.padding,
   });
@@ -107,6 +113,8 @@ class DSTimeline<T> extends StatefulWidget {
         itemBuilder,
     Widget? loadingItemBuilder,
     Widget? Function(BuildContext context, K key)? customSeparatorBuilder,
+    Widget? Function(BuildContext context, T item, int index, Size size)?
+        dotBuilder,
     bool isLoading = false,
     EdgeInsetsGeometry? padding,
   }) {
@@ -116,6 +124,7 @@ class DSTimeline<T> extends StatefulWidget {
       items: items,
       itemBuilder: itemBuilder,
       loadingItemBuilder: loadingItemBuilder,
+      dotBuilder: dotBuilder,
       isLoading: isLoading,
       separatorBuilder: (context, currentItem, currentIndex) {
         // Show separator before first item of each group
@@ -422,11 +431,7 @@ class _DSTimelineState<T> extends DSStateBase<DSTimeline<T>>
       );
     }
 
-    final dotColor = _componentTheme.dotColor;
-    final dotMargin = _componentTheme.dotMargin;
     final dotSize = _componentTheme.dotSize;
-    final dotBorderColor = _componentTheme.dotBorderColor;
-    final dotBorderThickness = _componentTheme.dotBorderThickness;
     final connectorColor = _componentTheme.connectorColor;
     final connectorThickness = _componentTheme.connectorThickness;
     final itemSpacing = _componentTheme.itemSpacing;
@@ -446,18 +451,11 @@ class _DSTimelineState<T> extends DSStateBase<DSTimeline<T>>
                   builder: (context, child) {
                     return Opacity(
                       opacity: _fadeAnimations[index].value,
-                      child: Container(
-                        margin: dotMargin,
-                        width: dotSize - dotMargin.vertical,
-                        height: dotSize - dotMargin.vertical,
-                        decoration: BoxDecoration(
-                          shape: BoxShape.circle,
-                          color: dotColor,
-                          border: Border.all(
-                            color: dotBorderColor,
-                            width: dotBorderThickness,
-                          ),
-                        ),
+                      child: _buildDot(
+                        context: context,
+                        item: item,
+                        index: index,
+                        theme: _componentTheme,
                       ),
                     );
                   },
@@ -550,11 +548,7 @@ class _DSTimelineState<T> extends DSStateBase<DSTimeline<T>>
       );
     }
 
-    final dotColor = theme.dotColor;
-    final dotMargin = theme.dotMargin;
     final dotSize = theme.dotSize;
-    final dotBorderColor = theme.dotBorderColor;
-    final dotBorderThickness = theme.dotBorderThickness;
     final connectorColor = theme.connectorColor;
     final connectorThickness = theme.connectorThickness;
     final itemSpacing = theme.itemSpacing;
@@ -568,19 +562,11 @@ class _DSTimelineState<T> extends DSStateBase<DSTimeline<T>>
             width: dotSize,
             child: Column(
               children: [
-                // Dot indicator (non-animated)
-                Container(
-                  margin: dotMargin,
-                  width: dotSize - dotMargin.vertical,
-                  height: dotSize - dotMargin.vertical,
-                  decoration: BoxDecoration(
-                    shape: BoxShape.circle,
-                    color: dotColor,
-                    border: Border.all(
-                      color: dotBorderColor,
-                      width: dotBorderThickness,
-                    ),
-                  ),
+                _buildDot(
+                  context: context,
+                  item: item,
+                  index: index,
+                  theme: theme,
                 ),
                 // Connector line
                 if (!isLast)
@@ -630,6 +616,41 @@ class _DSTimelineState<T> extends DSStateBase<DSTimeline<T>>
             ),
           ),
         ],
+      ),
+    );
+  }
+
+  Widget _buildDot({
+    required BuildContext context,
+    required T item,
+    required int index,
+    required DSTimelineTheme theme,
+  }) {
+    if (widget.dotBuilder != null) {
+      final dotWidget = widget.dotBuilder!(
+        context,
+        item,
+        index,
+        Size(theme.dotSize, theme.dotSize),
+      );
+      if (dotWidget != null) {
+        return dotWidget;
+      }
+    }
+
+    final dotMargin = theme.dotMargin;
+    final innerSize = theme.dotSize - dotMargin.vertical;
+    return Container(
+      margin: dotMargin,
+      width: innerSize,
+      height: innerSize,
+      decoration: BoxDecoration(
+        shape: BoxShape.circle,
+        color: theme.dotColor,
+        border: Border.all(
+          color: theme.dotBorderColor,
+          width: theme.dotBorderThickness,
+        ),
       ),
     );
   }
