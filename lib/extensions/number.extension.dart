@@ -46,23 +46,12 @@ extension CurrencyExt on num? {
   }
 
   /// Formats this number for display using app locale (decimal: comma,
-  /// thousands: dot). Uses [DecimalTextInputFormatter] so output is identical
-  /// to what the formatter produces in text fields.
+  /// thousands: dot). Trailing zero fraction digits are omitted.
   String toAppFormattedDecimalNumberString({int? maxDecimalDigits}) {
-    final n = this?.toDouble();
-    if (n == null) {
-      return '';
-    }
-    final raw = maxDecimalDigits != null && maxDecimalDigits >= 0
-        ? n.toStringAsFixed(maxDecimalDigits)
-        : n.toString();
-    final withAppDecimal = raw.replaceFirst('.', UtilsConstants.decimalSymbol);
-    return DecimalTextInputFormatter(maxDecimalDigits: maxDecimalDigits)
-        .formatEditUpdate(
-          TextEditingValue.empty,
-          TextEditingValue(text: withAppDecimal),
-        )
-        .text;
+    return NumberFormatUtils.formatDecimalForDisplay(
+      this,
+      maxDecimalDigits: maxDecimalDigits,
+    );
   }
 
   String toAppFormattedNumberString() {

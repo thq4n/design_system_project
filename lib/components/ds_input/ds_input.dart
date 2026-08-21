@@ -323,7 +323,7 @@ class _DSInputState extends State<DSInput> {
             textInputAction: widget.textInputAction,
             onTapOutside: (event) {
               if (widget.isAutoUnfocus) {
-                _controller?.unfocus();
+                FocusManager.instance.primaryFocus?.unfocus();
               }
               widget.onTapOutSide?.call(_controller);
             },

@@ -351,10 +351,7 @@ class _DSBasicScreenFormState extends DSStateBase<DSBasicScreenForm> {
       );
     }
 
-    return GestureDetector(
-      onTap: hideKeyBoard,
-      child: bodyWidget,
-    );
+    return bodyWidget;
   }
 
   /// Check if the child is a scrollable widget

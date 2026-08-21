@@ -274,7 +274,7 @@ class _DSInputDimensionsState extends State<DSInputDimensions> {
                   },
                   onTapOutside: (_) {
                     if (widget.isAutoUnfocus) {
-                      _controller?.unfocus();
+                      FocusManager.instance.primaryFocus?.unfocus();
                     }
                     widget.onTapOutside?.call(_controller);
                   },

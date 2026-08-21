@@ -17,8 +17,8 @@ import '../ds_components.dart';
 /// A basic screen form component that provides a consistent layout for form screens.
 ///
 /// This component includes an app bar with title, description, back button, and actions,
-/// plus a body area for form content. It automatically handles status bar styling
-/// and keyboard dismissal.
+/// plus a body area for form content. It automatically handles status bar styling.
+/// Keyboard dismiss relies on TextField [onTapOutside] (not a parent GestureDetector).
 class DSBasicBrandScreenForm extends StatefulWidget {
   /// The title displayed in the app bar.
   ///
@@ -185,7 +185,7 @@ class DSBasicBrandScreenForm extends StatefulWidget {
   /// Creates a basic screen form widget.
   ///
   /// All parameters are optional and have sensible defaults based on the design system.
-  /// The component automatically handles status bar styling and keyboard dismissal.
+  /// Automatically handles status bar styling.
   const DSBasicBrandScreenForm({
     super.key,
     this.title,
@@ -387,24 +387,21 @@ class _DSBasicBrandScreenFormState extends DSStateBase<DSBasicBrandScreenForm> {
       floatingActionButtonLocation: widget.floatingActionButtonLocation,
       floatingActionButtonAnimator: widget.floatingActionButtonAnimator,
       bottomNavigationBar: widget.bottomNavigationBar,
-      body: GestureDetector(
-        onTap: hideKeyBoard,
-        child: Column(
-          children: [
-            _buildAppBar(),
-            Expanded(
-              child: Material(
-                color: screenTheme.backgroundColor ??
-                    DSColorUsages.background.secondary,
-                child: Container(
-                  width: double.infinity,
-                  height: double.infinity,
-                  child: widget.child ?? const SizedBox(),
-                ),
+      body: Column(
+        children: [
+          _buildAppBar(),
+          Expanded(
+            child: Material(
+              color: screenTheme.backgroundColor ??
+                  DSColorUsages.background.secondary,
+              child: SizedBox(
+                width: double.infinity,
+                height: double.infinity,
+                child: widget.child ?? const SizedBox(),
               ),
             ),
-          ],
-        ),
+          ),
+        ],
       ),
     );
   }

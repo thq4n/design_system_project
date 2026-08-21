@@ -9,7 +9,7 @@ extension DSStateBaseExt on DSStateBase {
   DSColors get colorTheme => theme.extension<DsColorThemeExtension>()!.colors;
 
   void hideKeyBoard() {
-    return focusNode.requestFocus(FocusNode());
+    FocusManager.instance.primaryFocus?.unfocus();
   }
 
   void triggerSelectionHaptic() {
