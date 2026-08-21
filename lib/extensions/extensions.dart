@@ -5,7 +5,6 @@ import 'package:timeago/timeago.dart' as tag_format;
 
 import '../design_system_project.dart';
 import '../utils/app_numeric_format_helpers.dart';
-import '../utils/number_format_utils.dart';
 
 export 'dialog_extension.dart';
 export 'ds_bottom_sheet_action.dart';
