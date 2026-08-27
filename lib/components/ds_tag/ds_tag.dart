@@ -11,6 +11,7 @@ class DSTag extends StatefulWidget {
   final String? prefixIcon;
   final String? suffixIcon;
   final DSTagStyles style;
+  final DSTagColorIntensity colorIntensity;
   final DSColor? mainColor;
   final DSColor? backgroundColor;
   final Function()? onTapPrefixIcon;
@@ -31,6 +32,7 @@ class DSTag extends StatefulWidget {
     this.onTapSuffixIcon,
     this.direction = Axis.horizontal,
     this.crossAxisSize,
+    this.colorIntensity = DSTagColorIntensity.medium,
   });
 
   @override
@@ -42,6 +44,7 @@ class _DSTagState extends DSStateBase<DSTag> {
       Theme.of(context).extension<DSTagThemeExtension>()!.getDStagThem(
             widget.style,
             widget.size,
+            widget.colorIntensity,
           );
 
   DSColor? get _mainColor {
