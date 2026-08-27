@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import '../../base/ds_base.dart';
 import '../../constants/constants.dart';
 import '../../design_system_core/ds_color_usage/ds_color_usage_core.dart';
+import '../../extensions/extensions.dart';
 import '../../gen/assets.gen.dart';
 import '../../theme/ds_theme.dart';
 import '../ds_components.dart';
