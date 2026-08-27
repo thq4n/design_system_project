@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
+import '../ds_gradient/ds_gradients_core.dart';
+
 // Colors
 part 'usage/ds_colors.dart';
 part 'usage/impl/ds_colors.impl.dart';

@@ -15,6 +15,7 @@ export 'design_system_core/ds_color/ds_colors_core.dart';
 export 'design_system_core/ds_color_usage/ds_color_usage_core.dart';
 export 'design_system_core/ds_font_size/ds_font_size_core.dart';
 export 'design_system_core/ds_font_weight/ds_font_weight_core.dart';
+export 'design_system_core/ds_gradient/ds_gradients_core.dart';
 export 'design_system_core/ds_icon/ds_icon_core.dart';
 export 'design_system_core/ds_icon_by_font/ds_icon_core.dart';
 export 'design_system_core/ds_letter_spacing/ds_letter_spacing_core.dart';
