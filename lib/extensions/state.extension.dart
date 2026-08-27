@@ -1,10 +1,10 @@
 part of 'extensions.dart';
 
-extension StateExtension on State {
+extension StateExtension<T extends StatefulWidget> on State<T> {
   DSTextTheme get textTheme => context.textTheme;
   DSColors get colors => context.colors;
 
-   Widget buildEmptyState({
+  Widget buildEmptyState({
     String? message = 'Không có dữ liệu',
     String? subMessage,
     EdgeInsetsGeometry padding = const EdgeInsets.all(40),
