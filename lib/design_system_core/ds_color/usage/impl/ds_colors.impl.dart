@@ -9,6 +9,7 @@ class DSColors extends _DSColors {
   DSColor get orange => const _DSOrangeColor();
   DSColor get green => const _DSGreenColor();
   DSColor get purple => const _DSPurpleColor();
+  DSColor get yellow => const _DSYellowColor();
   DSColor get transparent => const _DSTransparentColor();
   DSColor get other => const _DSOtherColor();
 

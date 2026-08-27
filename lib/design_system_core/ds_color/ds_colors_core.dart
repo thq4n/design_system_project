@@ -13,5 +13,6 @@ part 'base/impl/gray.impl.dart';
 part 'base/impl/green.impl.dart';
 part 'base/impl/orange.impl.dart';
 part 'base/impl/purple.impl.dart';
+part 'base/impl/yellow.impl.dart';
 part 'base/impl/transparent.impl.dart';
 part 'base/impl/other.impl.dart';
