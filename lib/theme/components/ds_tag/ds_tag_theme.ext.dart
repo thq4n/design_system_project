@@ -25,7 +25,9 @@ class DSTagThemeExtension extends ThemeExtension<DSTagThemeExtension> {
   }
 
   DSTextStyle? _getTextStyleBySize(
-      DSTagSizes size, DSTagColorIntensity colorIntensity) {
+    DSTagSizes size,
+    DSTagColorIntensity colorIntensity,
+  ) {
     final textStyle = switch (size) {
       DSTagSizes.sm => textTheme.xxs?.medium,
       DSTagSizes.md => textTheme.sm?.medium,
@@ -35,7 +37,10 @@ class DSTagThemeExtension extends ThemeExtension<DSTagThemeExtension> {
   }
 
   DSTagTheme getDStagThem(
-      DSTagStyles style, DSTagSizes size, DSTagColorIntensity colorIntensity) {
+    DSTagStyles style,
+    DSTagSizes size,
+    DSTagColorIntensity colorIntensity,
+  ) {
     final mainColor = switch (style) {
       DSTagStyles.custom => null,
       DSTagStyles.error => dsColors.orange,
