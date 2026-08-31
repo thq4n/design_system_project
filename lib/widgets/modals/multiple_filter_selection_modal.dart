@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
 import '../../design_system_project.dart';
+import '../filter_modal_list_frame.dart';
 
 class MultipleFilterSelectionModal<T> extends StatefulWidget {
   final String title;
@@ -355,7 +356,7 @@ class _MultipleFilterSelectionModalState<T>
             const SizedBox(height: 8),
           ],
           if (isHasFetchItems)
-            BottomSheetListFrame(
+            FilterModalListFrame(
               refreshController: _refreshController,
               onRefresh: _onRefresh,
               onLoadMore: widget.onLoadMoreItems != null ? _onLoadMore : null,

@@ -2,9 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../design_system_project.dart';
 
-/// Khung list scroll + pull refresh/load more cho bottom sheet / modal.
-/// Cùng pattern với [SelectionBottomSheet] / [MultipleSelectionBottomSheet] trong core.
-class BottomSheetListFrame extends StatefulWidget {
+class FilterModalListFrame extends StatefulWidget {
   final Widget? child;
   final List<Widget>? children;
   final int? itemCount;
@@ -17,7 +15,7 @@ class BottomSheetListFrame extends StatefulWidget {
   final bool enablePullDown;
   final bool shrinkWrap;
 
-  const BottomSheetListFrame({
+  const FilterModalListFrame({
     super.key,
     this.child,
     this.children,
@@ -41,10 +39,10 @@ class BottomSheetListFrame extends StatefulWidget {
        );
 
   @override
-  State<BottomSheetListFrame> createState() => _BottomSheetListFrameState();
+  State<FilterModalListFrame> createState() => _FilterModalListFrameState();
 }
 
-class _BottomSheetListFrameState extends State<BottomSheetListFrame> {
+class _FilterModalListFrameState extends State<FilterModalListFrame> {
   RefreshController? _ownedRefreshController;
 
   bool get _usesRefresh =>

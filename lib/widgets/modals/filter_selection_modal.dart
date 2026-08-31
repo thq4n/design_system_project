@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import '../../design_system_project.dart';
+import '../filter_modal_list_frame.dart';
 
 class FilterSelectionModal<T> extends StatefulWidget {
   final String title;
@@ -261,7 +262,7 @@ class _FilterSelectionModalState<T> extends State<FilterSelectionModal<T>> {
           ],
           if (isExpandedBody)
             Expanded(
-              child: BottomSheetListFrame(
+              child: FilterModalListFrame(
                 shrinkWrap: true,
                 refreshController: _refreshController,
                 onRefresh: _onRefresh,
