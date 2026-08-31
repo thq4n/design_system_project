@@ -29,11 +29,10 @@ abstract class DSColor extends Color {
     Alignment begin = Alignment.centerLeft,
     Alignment end = Alignment.centerRight,
   }) {
-    return LinearGradient(
+    return DSGradient.create(
       colors: colors,
       stops: stops,
-      // transform:
-      //     GradientRotation(angle * 3.14159 / 180), // Convert degrees to radians
+      angle: angle,
       begin: begin,
       end: end,
     );

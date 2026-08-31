@@ -1,10 +1,16 @@
 part of '../../ds_theme.dart';
 
-enum DSTagStyles { error, success, custom, default_, brand, info }
+enum DSTagStyles { error, success, custom, default_, brand, info, warning }
 
 enum DSTagSizes {
   sm,
   md,
+}
+
+enum DSTagColorIntensity {
+  low,
+  medium,
+  high;
 }
 
 class DSTagTheme {

@@ -300,7 +300,7 @@ class _DSCalendarState extends DSStateBase<DSCalendar> {
     return Center(
       child: Text(
         label,
-        style: textTheme.base?.medium
+        style: context.textTheme.base?.medium
                 .copyWith(color: DSColorUsages.text.tertiary) ??
             const TextStyle(),
       ),

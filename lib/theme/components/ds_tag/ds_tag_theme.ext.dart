@@ -6,71 +6,6 @@ class DSTagThemeExtension extends ThemeExtension<DSTagThemeExtension> {
 
   DSTagThemeExtension({required this.textTheme});
 
-  DSTagTheme _dSCustomTagTheme(DSTagSizes size) {
-    return DSTagTheme(
-      borderRadius: _getBorderRadiusBySize(size),
-      padding: _getPaddingBySize(size),
-      textStyle: _getTextStyleBySize(size),
-      iconSize: DSIconSizes.size16,
-      elementSpacing: 4,
-    );
-  }
-
-  DSTagTheme _dSErrorTagTheme(DSTagSizes size) {
-    return DSTagTheme(
-      mainColor: dsColors.orange,
-      borderRadius: _getBorderRadiusBySize(size),
-      padding: _getPaddingBySize(size),
-      textStyle: _getTextStyleBySize(size),
-      iconSize: DSIconSizes.size16,
-      elementSpacing: 4,
-    );
-  }
-
-  DSTagTheme _dSInfoTagTheme(DSTagSizes size) {
-    return DSTagTheme(
-      mainColor: dsColors.blue,
-      borderRadius: _getBorderRadiusBySize(size),
-      padding: _getPaddingBySize(size),
-      textStyle: _getTextStyleBySize(size),
-      iconSize: DSIconSizes.size16,
-      elementSpacing: 4,
-    );
-  }
-
-  DSTagTheme _dSSuccessTagTheme(DSTagSizes size) {
-    return DSTagTheme(
-      mainColor: dsColors.green,
-      borderRadius: _getBorderRadiusBySize(size),
-      padding: _getPaddingBySize(size),
-      textStyle: _getTextStyleBySize(size),
-      iconSize: DSIconSizes.size16,
-      elementSpacing: 4,
-    );
-  }
-
-  DSTagTheme _dSDefaultTagTheme(DSTagSizes size) {
-    return DSTagTheme(
-      mainColor: DSColorUsages.text.primary,
-      borderRadius: _getBorderRadiusBySize(size),
-      padding: _getPaddingBySize(size),
-      textStyle: _getTextStyleBySize(size),
-      iconSize: DSIconSizes.size16,
-      elementSpacing: 4,
-    );
-  }
-
-  DSTagTheme _dSBrandTagTheme(DSTagSizes size) {
-    return DSTagTheme(
-      mainColor: dsColors.brand,
-      borderRadius: _getBorderRadiusBySize(size),
-      padding: _getPaddingBySize(size),
-      textStyle: _getTextStyleBySize(size),
-      iconSize: DSIconSizes.size16,
-      elementSpacing: 4,
-    );
-  }
-
   DSRadius _getBorderRadiusBySize(DSTagSizes size) {
     switch (size) {
       case DSTagSizes.sm:
@@ -89,24 +24,48 @@ class DSTagThemeExtension extends ThemeExtension<DSTagThemeExtension> {
     }
   }
 
-  DSTextStyle? _getTextStyleBySize(DSTagSizes size) {
-    switch (size) {
-      case DSTagSizes.sm:
-        return textTheme.xxs?.medium;
-      case DSTagSizes.md:
-        return textTheme.sm?.medium;
-    }
+  DSTextStyle? _getTextStyleBySize(
+    DSTagSizes size,
+    DSTagColorIntensity colorIntensity,
+  ) {
+    final textStyle = switch (size) {
+      DSTagSizes.sm => textTheme.xxs?.medium,
+      DSTagSizes.md => textTheme.sm?.medium,
+    };
+
+    return textStyle;
   }
 
-  DSTagTheme getDStagThem(DSTagStyles style, DSTagSizes size) {
-    return switch (style) {
-      DSTagStyles.custom => _dSCustomTagTheme(size),
-      DSTagStyles.error => _dSErrorTagTheme(size),
-      DSTagStyles.success => _dSSuccessTagTheme(size),
-      DSTagStyles.default_ => _dSDefaultTagTheme(size),
-      DSTagStyles.brand => _dSBrandTagTheme(size),
-      DSTagStyles.info => _dSInfoTagTheme(size),
+  DSTagTheme getDStagThem(
+    DSTagStyles style,
+    DSTagSizes size,
+    DSTagColorIntensity colorIntensity,
+  ) {
+    final mainColor = switch (style) {
+      DSTagStyles.custom => null,
+      DSTagStyles.error => dsColors.orange,
+      DSTagStyles.success => dsColors.green,
+      DSTagStyles.default_ => DSColorUsages.text.primary,
+      DSTagStyles.brand => dsColors.brand,
+      DSTagStyles.info => dsColors.blue,
+      DSTagStyles.warning => dsColors.yellow,
     };
+
+    final textColor = switch (colorIntensity) {
+      DSTagColorIntensity.low => mainColor?.shade500,
+      DSTagColorIntensity.medium => mainColor?.shade600,
+      DSTagColorIntensity.high => mainColor?.shade700,
+    };
+
+    return DSTagTheme(
+      mainColor: mainColor,
+      borderRadius: _getBorderRadiusBySize(size),
+      padding: _getPaddingBySize(size),
+      textStyle:
+          _getTextStyleBySize(size, colorIntensity)?.copyWithColor(textColor),
+      iconSize: DSIconSizes.size16,
+      elementSpacing: 4,
+    );
   }
 
   @override
