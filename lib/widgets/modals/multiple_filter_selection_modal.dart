@@ -66,23 +66,23 @@ class MultipleFilterSelectionModal<T> extends StatefulWidget {
 class _MultipleFilterSelectionModalState<T>
     extends State<MultipleFilterSelectionModal<T>> {
   late final ValueNotifier<List<T>> _selectedItemsNotifier;
-  late final ValueNotifier<List<T>> _itemsNotifier;
+  List<T> _items = [];
   String? _searchTerm;
   late Debouncer _debouncer;
-  late final _refreshController =
-      widget.refreshController ?? RefreshController(initialRefresh: true);
+  late final _refreshController = widget.refreshController ??
+      RefreshController(
+        initialRefresh: widget.initialItems?.isEmpty ?? true,
+      );
 
   bool get isHasFetchItems =>
       widget.onRefreshItems != null || widget.onLoadMoreItems != null;
-
-  bool get isExpandedBody => isHasFetchItems;
 
   @override
   void initState() {
     super.initState();
     _selectedItemsNotifier =
         ValueNotifier(widget.initialSelectedItems?.toList() ?? []);
-    _itemsNotifier = ValueNotifier(widget.initialItems ?? []);
+    _items = widget.initialItems?.toList() ?? [];
     _debouncer = Debouncer<String>(const Duration(milliseconds: 500), (text) {
       _searchTerm = text;
       _onRefresh();
@@ -96,54 +96,41 @@ class _MultipleFilterSelectionModalState<T>
     }
     _debouncer.cancel();
     _selectedItemsNotifier.dispose();
-    _itemsNotifier.dispose();
     super.dispose();
   }
 
-  void _onRefresh() {
-    widget.onRefreshItems
-        ?.call(
-          searchTerm: _searchTerm,
-        )
-        .then(
-          (items) => {
-            _itemsNotifier.value = [],
-            if (items.isNotEmpty == true) _itemsNotifier.value = [...items],
-            _refreshController
-              ..refreshCompleted()
-              ..loadComplete(),
-          },
-        )
-        .catchError((error) {
+  Future<void> _onRefresh() async {
+    try {
+      final items =
+          await widget.onRefreshItems?.call(searchTerm: _searchTerm) ?? [];
+      setState(() {
+        _items = items.isNotEmpty ? [...items] : [];
+      });
+      _refreshController
+        ..refreshCompleted()
+        ..loadComplete();
+    } catch (_) {
       _refreshController
         ..refreshFailed()
         ..loadFailed();
-
-      return <Object>{};
-    });
+    }
   }
 
-  void _onLoadMore() {
-    widget.onLoadMoreItems
-        ?.call(
-          searchTerm: _searchTerm,
-        )
-        .then(
-          (items) => {
-            if (items.isNotEmpty == true)
-              _itemsNotifier.value = [..._itemsNotifier.value, ...items],
-            _refreshController
-              ..refreshCompleted()
-              ..loadComplete(),
-          },
-        )
-        .catchError((error) {
+  Future<void> _onLoadMore() async {
+    try {
+      final items =
+          await widget.onLoadMoreItems?.call(searchTerm: _searchTerm) ?? [];
+      if (items.isNotEmpty) {
+        setState(() => _items.addAll(items));
+      }
+      _refreshController
+        ..refreshCompleted()
+        ..loadComplete();
+    } catch (_) {
       _refreshController
         ..refreshFailed()
         ..loadFailed();
-
-      return <Object>{};
-    });
+    }
   }
 
   void _onConfirm() {
@@ -184,6 +171,87 @@ class _MultipleFilterSelectionModalState<T>
     );
   }
 
+  Widget _buildListItem(T item) {
+    return ValueListenableBuilder<List<T>>(
+      valueListenable: _selectedItemsNotifier,
+      builder: (context, selectedItems, child) {
+        final isSelected = selectedItems.contains(item);
+
+        if (widget.itemBuilder == null && widget.getItemLabel(item).isEmpty) {
+          return const SizedBox();
+        }
+
+        return Container(
+          margin: const EdgeInsets.symmetric(horizontal: 16),
+          child: TransparentInkWell(
+            onTap: () => _onToggleItem(item),
+            child: Builder(
+              builder: (context) {
+                if (widget.itemBuilder != null) {
+                  return widget.itemBuilder!(
+                    item,
+                    isSelected,
+                    _selectedItemsNotifier,
+                  );
+                }
+                return Container(
+                  decoration: BoxDecoration(
+                    color:
+                        isSelected ? colors.brand.shade50 : colors.gray.white,
+                  ),
+                  padding: const EdgeInsets.symmetric(
+                    horizontal: 8,
+                    vertical: 14,
+                  ),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Expanded(
+                        child: Text(
+                          maxLines: 2,
+                          overflow: TextOverflow.ellipsis,
+                          widget.getItemLabel(item),
+                          style: DSTextStyle().medium,
+                        ),
+                      ),
+                      const SizedBox(width: 8),
+                      Container(
+                        padding: const EdgeInsets.all(3),
+                        margin: const EdgeInsets.only(left: 8),
+                        height: 24,
+                        width: 24,
+                        child: Checkbox(
+                          side: WidgetStateBorderSide.resolveWith(
+                            (states) => BorderSide(
+                              color: isSelected
+                                  ? colors.brand.primary
+                                  : colors.gray.shade200,
+                              width: 1,
+                            ),
+                          ),
+                          visualDensity: VisualDensity.compact,
+                          activeColor: colors.brand.primary,
+                          checkColor: colors.gray.white,
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(4),
+                          ),
+                          value: isSelected,
+                          onChanged: (value) {
+                            _onToggleItem(item);
+                          },
+                        ),
+                      ),
+                    ],
+                  ),
+                );
+              },
+            ),
+          ),
+        );
+      },
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -195,9 +263,8 @@ class _MultipleFilterSelectionModalState<T>
         ),
       ),
       child: Column(
-        mainAxisSize: MainAxisSize.min,
+        mainAxisSize: MainAxisSize.max,
         children: [
-          // Header
           Container(
             margin: const EdgeInsets.only(top: 6),
             width: 32,
@@ -229,9 +296,7 @@ class _MultipleFilterSelectionModalState<T>
                                 Clipboard.setData(
                                   ClipboardData(text: widget.title),
                                 );
-                                if (widget.onCopySuccess != null) {
-                                  widget.onCopySuccess!();
-                                }
+                                widget.onCopySuccess?.call();
                               },
                               child: DSImageView(
                                 source: DSAssets.vuesax.documentCopyLinear,
@@ -250,12 +315,7 @@ class _MultipleFilterSelectionModalState<T>
                 onTap: _onDismiss,
                 child: Container(
                   padding: const EdgeInsets.all(4),
-                  margin: const EdgeInsets.fromLTRB(
-                    12,
-                    2,
-                    12,
-                    12,
-                  ),
+                  margin: const EdgeInsets.fromLTRB(12, 2, 12, 12),
                   decoration: BoxDecoration(
                     color: DSColorUsages.background.secondary,
                     shape: BoxShape.circle,
@@ -274,8 +334,6 @@ class _MultipleFilterSelectionModalState<T>
               ),
             ],
           ),
-
-          // Search bar
           if (isHasFetchItems) ...[
             Container(
               margin: const EdgeInsets.symmetric(horizontal: 16),
@@ -296,40 +354,19 @@ class _MultipleFilterSelectionModalState<T>
             ),
             const SizedBox(height: 8),
           ],
-
-          // Items list
-          isExpandedBody
-              ? Expanded(
-                  child: Scrollbar(
-                    child: SmartRefresherWrapper(
-                      controller: _refreshController,
-                      onLoading: _onLoadMore,
-                      onRefresh: _onRefresh,
-                      enablePullUp: widget.canLoadMore?.call() ?? false,
-                      enablePullDown: true,
-                      child: ValueListenableBuilder<List<T>>(
-                        valueListenable: _itemsNotifier,
-                        builder: (context, items, child) {
-                          return items.isEmpty
-                              ? const Center(
-                                  child: Text(
-                                    'Không có dữ liệu',
-                                  ),
-                                )
-                              : _buildListMutipleSelectionItems(items);
-                        },
-                      ),
-                    ),
-                  ),
-                )
-              : ValueListenableBuilder<List<T>>(
-                  valueListenable: _itemsNotifier,
-                  builder: (context, items, child) {
-                    return _buildListMutipleSelectionItemsColumn(items);
-                  },
-                ),
-
-          // Bottom button
+          if (isHasFetchItems)
+            BottomSheetListFrame(
+              refreshController: _refreshController,
+              onRefresh: _onRefresh,
+              onLoadMore: widget.onLoadMoreItems != null ? _onLoadMore : null,
+              enablePullUp: widget.canLoadMore?.call() ?? false,
+              enablePullDown: true,
+              itemCount: _items.length,
+              itemBuilder: (context, index) => _buildListItem(_items[index]),
+              emptyWidget: const Center(child: Text('Không có dữ liệu')),
+            )
+          else
+            ..._items.map(_buildListItem),
           FooterWidget(
             padding: const EdgeInsets.fromLTRB(16, 8, 16, 16),
             child: ValueListenableBuilder<List<T>>(
@@ -362,186 +399,6 @@ class _MultipleFilterSelectionModalState<T>
           ),
         ],
       ),
-    );
-  }
-
-  ListView _buildListMutipleSelectionItems(List<T> items) {
-    return ListView.builder(
-      padding: EdgeInsets.zero,
-      itemCount: items.length,
-      itemBuilder: (context, index) {
-        final item = items[index];
-
-        return ValueListenableBuilder<List<T>>(
-          valueListenable: _selectedItemsNotifier,
-          builder: (context, selectedItems, child) {
-            final isSelected = selectedItems.contains(item);
-
-            if (widget.itemBuilder == null &&
-                widget.getItemLabel(item).isEmpty) {
-              return const SizedBox();
-            }
-
-            return Container(
-              margin: const EdgeInsets.symmetric(horizontal: 16),
-              child: TransparentInkWell(
-                onTap: () => _onToggleItem(item),
-                child: Builder(
-                  builder: (context) {
-                    if (widget.itemBuilder != null) {
-                      return widget.itemBuilder!(
-                        item,
-                        isSelected,
-                        _selectedItemsNotifier,
-                      );
-                    }
-                    return Container(
-                      decoration: BoxDecoration(
-                        color: isSelected
-                            ? colors.brand.shade50
-                            : colors.gray.white,
-                      ),
-                      padding: const EdgeInsets.symmetric(
-                        horizontal: 8,
-                        vertical: 14,
-                      ),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Expanded(
-                            child: Text(
-                              maxLines: 2,
-                              overflow: TextOverflow.ellipsis,
-                              widget.getItemLabel(item),
-                              style: DSTextStyle().medium,
-                            ),
-                          ),
-                          const SizedBox(width: 8),
-                          Container(
-                            padding: const EdgeInsets.all(3),
-                            margin: const EdgeInsets.only(left: 8),
-                            height: 24,
-                            width: 24,
-                            child: Checkbox(
-                              side: WidgetStateBorderSide.resolveWith(
-                                (states) => BorderSide(
-                                  color: isSelected
-                                      ? colors.brand.primary
-                                      : colors.gray.shade200,
-                                  width: 1,
-                                ),
-                              ),
-                              visualDensity: VisualDensity.compact,
-                              activeColor: colors.brand.primary,
-                              checkColor: colors.gray.white,
-                              shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(4),
-                              ),
-                              value: isSelected,
-                              onChanged: (value) {
-                                _onToggleItem(item);
-                              },
-                            ),
-                          ),
-                        ],
-                      ),
-                    );
-                  },
-                ),
-              ),
-            );
-          },
-        );
-      },
-    );
-  }
-
-  Widget _buildListMutipleSelectionItemsColumn(List<T> items) {
-    return Column(
-      mainAxisSize: MainAxisSize.min,
-      crossAxisAlignment: CrossAxisAlignment.stretch,
-      children: items.map((item) {
-        return ValueListenableBuilder<List<T>>(
-          valueListenable: _selectedItemsNotifier,
-          builder: (context, selectedItems, child) {
-            final isSelected = selectedItems.contains(item);
-
-            if (widget.itemBuilder == null &&
-                widget.getItemLabel(item).isEmpty) {
-              return const SizedBox();
-            }
-
-            return Container(
-              margin: const EdgeInsets.symmetric(horizontal: 16),
-              child: TransparentInkWell(
-                onTap: () => _onToggleItem(item),
-                child: Builder(
-                  builder: (context) {
-                    if (widget.itemBuilder != null) {
-                      return widget.itemBuilder!(
-                        item,
-                        isSelected,
-                        _selectedItemsNotifier,
-                      );
-                    }
-                    return Container(
-                      decoration: BoxDecoration(
-                        color: isSelected
-                            ? colors.brand.shade50
-                            : colors.gray.white,
-                      ),
-                      padding: const EdgeInsets.symmetric(
-                        horizontal: 8,
-                        vertical: 14,
-                      ),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Expanded(
-                            child: Text(
-                              maxLines: 2,
-                              overflow: TextOverflow.ellipsis,
-                              widget.getItemLabel(item),
-                              style: DSTextStyle().medium,
-                            ),
-                          ),
-                          const SizedBox(width: 8),
-                          Container(
-                            padding: const EdgeInsets.all(3),
-                            margin: const EdgeInsets.only(left: 8),
-                            height: 24,
-                            width: 24,
-                            child: Checkbox(
-                              side: WidgetStateBorderSide.resolveWith(
-                                (states) => BorderSide(
-                                  color: isSelected
-                                      ? colors.brand.primary
-                                      : colors.gray.shade200,
-                                  width: 1,
-                                ),
-                              ),
-                              visualDensity: VisualDensity.compact,
-                              activeColor: colors.brand.primary,
-                              checkColor: colors.gray.white,
-                              shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(4),
-                              ),
-                              value: isSelected,
-                              onChanged: (value) {
-                                _onToggleItem(item);
-                              },
-                            ),
-                          ),
-                        ],
-                      ),
-                    );
-                  },
-                ),
-              ),
-            );
-          },
-        );
-      }).toList(),
     );
   }
 }

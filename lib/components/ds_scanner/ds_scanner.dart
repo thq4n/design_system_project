@@ -40,6 +40,8 @@ class DSScanner extends StatefulWidget {
     this.cameraScanHint = 'Đưa mã vào giữa khung để quét',
     this.hardwareScannerHint = 'Dùng nút scan trên thiết bị',
     this.barcodeController,
+    this.shouldDispatchScannedCode,
+    this.cameraSameCodeDedupeDuration = Duration.zero,
   });
 
   final ValueNotifier<DSScannerViewMode> viewMode;
@@ -60,6 +62,12 @@ class DSScanner extends StatefulWidget {
   final String hardwareScannerHint;
   final MobileScannerController? barcodeController;
 
+  /// Khi set: chỉ gọi [onCodeScanned] và rung khi trả về `true` (camera + scanner thiết bị).
+  final bool Function(String code)? shouldDispatchScannedCode;
+
+  /// Bỏ qua cùng một mã từ camera trong khoảng thời gian này (nhập tay không áp dụng).
+  final Duration cameraSameCodeDedupeDuration;
+
   @override
   State<DSScanner> createState() => _DSScannerState();
 }
@@ -78,6 +86,8 @@ class _DSScannerState extends State<DSScanner> {
   StreamSubscription<DSHardwareScannerStatus>? _hardwareStatusSubscription;
   bool _hardwareScannerAvailable = false;
   void Function()? _hardwareModeListener;
+  String? _lastCameraScannedCode;
+  DateTime? _lastCameraScannedAt;
 
   @override
   void initState() {
@@ -169,12 +179,7 @@ class _DSScannerState extends State<DSScanner> {
       if (!mounted) {
         return;
       }
-      final trimmed = code.trim();
-      if (trimmed.isEmpty) {
-        return;
-      }
-      widget.onCodeScanned(trimmed);
-      HapticFeedback.mediumImpact();
+      _dispatchScannedCode(code, fromCamera: true);
     });
     final previousStatusSub = _hardwareStatusSubscription;
     _hardwareStatusSubscription = adapter.statusStream.listen((status) {
@@ -202,11 +207,37 @@ class _DSScannerState extends State<DSScanner> {
     if (barcode?.rawValue == null) {
       return;
     }
-    final value = barcode!.rawValue!.trim();
-    if (value.isEmpty) {
+    _dispatchScannedCode(barcode!.rawValue!, fromCamera: true);
+  }
+
+  void _dispatchScannedCode(String rawValue, {required bool fromCamera}) {
+    final trimmed = rawValue.trim();
+    if (trimmed.isEmpty) {
       return;
     }
-    widget.onCodeScanned(value);
+
+    if (fromCamera && widget.cameraSameCodeDedupeDuration > Duration.zero) {
+      final scannedAt = DateTime.now();
+      if (_lastCameraScannedCode == trimmed &&
+          _lastCameraScannedAt != null &&
+          scannedAt.difference(_lastCameraScannedAt!) <
+              widget.cameraSameCodeDedupeDuration) {
+        return;
+      }
+    }
+
+    final shouldDispatch =
+        widget.shouldDispatchScannedCode?.call(trimmed) ?? true;
+    if (!shouldDispatch) {
+      return;
+    }
+
+    if (fromCamera && widget.cameraSameCodeDedupeDuration > Duration.zero) {
+      _lastCameraScannedCode = trimmed;
+      _lastCameraScannedAt = DateTime.now();
+    }
+
+    widget.onCodeScanned(trimmed);
     HapticFeedback.mediumImpact();
   }
 

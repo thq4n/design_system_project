@@ -65,11 +65,14 @@ class _FilterSelectionModalState<T> extends State<FilterSelectionModal<T>> {
   late final ValueNotifier<T?> _selectedItemNotifier =
       (widget.selectedItemNotifier ?? ValueNotifier(null))
         ..value = widget.initialSelectedItem;
-  late final ValueNotifier<List<T>> _itemsNotifier;
+  List<T> _items = [];
   String? _searchTerm;
   late Debouncer _debouncer;
   late final _refreshController =
-      widget.refreshController ?? RefreshController(initialRefresh: true);
+      widget.refreshController ??
+      RefreshController(
+        initialRefresh: widget.initialItems?.isEmpty ?? true,
+      );
 
   set selectedItem(T? item) {
     _selectedItemNotifier.value = item;
@@ -83,9 +86,7 @@ class _FilterSelectionModalState<T> extends State<FilterSelectionModal<T>> {
   @override
   void initState() {
     super.initState();
-
-    _itemsNotifier = ValueNotifier(widget.initialItems ?? []);
-
+    _items = widget.initialItems?.toList() ?? [];
     _debouncer = Debouncer<String>(const Duration(milliseconds: 500), (text) {
       _searchTerm = text;
       _onRefresh();
@@ -94,62 +95,45 @@ class _FilterSelectionModalState<T> extends State<FilterSelectionModal<T>> {
 
   @override
   void dispose() {
-    // We dont need to dispose the selectedItemNotifier
-    // because it is managed by the AppBottomModal
     if (widget.refreshController == null) {
       _refreshController.dispose();
     }
     _debouncer.cancel();
-    _itemsNotifier.dispose();
-
     super.dispose();
   }
 
-  void _onRefresh() {
-    widget.onRefreshItems
-        ?.call(
-      searchTerm: _searchTerm,
-    )
-        .then(
-      (items) {
-        return {
-          _itemsNotifier.value = [],
-          if (items.isNotEmpty == true) _itemsNotifier.value = [...items],
-          _refreshController
-            ..refreshCompleted()
-            ..loadComplete(),
-        };
-      },
-    ).catchError((error) {
+  Future<void> _onRefresh() async {
+    try {
+      final items =
+          await widget.onRefreshItems?.call(searchTerm: _searchTerm) ?? [];
+      setState(() {
+        _items = items.isNotEmpty ? [...items] : [];
+      });
+      _refreshController
+        ..refreshCompleted()
+        ..loadComplete();
+    } catch (_) {
       _refreshController
         ..refreshFailed()
         ..loadFailed();
-
-      return <Object>{};
-    });
+    }
   }
 
-  void _onLoadMore() {
-    widget.onLoadMoreItems
-        ?.call(
-          searchTerm: _searchTerm,
-        )
-        .then(
-          (items) => {
-            if (items.isNotEmpty == true)
-              _itemsNotifier.value = [..._itemsNotifier.value, ...items],
-            _refreshController
-              ..refreshCompleted()
-              ..loadComplete(),
-          },
-        )
-        .catchError((error) {
+  Future<void> _onLoadMore() async {
+    try {
+      final items =
+          await widget.onLoadMoreItems?.call(searchTerm: _searchTerm) ?? [];
+      if (items.isNotEmpty) {
+        setState(() => _items.addAll(items));
+      }
+      _refreshController
+        ..refreshCompleted()
+        ..loadComplete();
+    } catch (_) {
       _refreshController
         ..refreshFailed()
         ..loadFailed();
-
-      return <Object>{};
-    });
+    }
   }
 
   bool _isNotChanged(T? selectedItem) {
@@ -157,6 +141,71 @@ class _FilterSelectionModalState<T> extends State<FilterSelectionModal<T>> {
       return widget.onDisableAction!(_selectedItemNotifier.value);
     }
     return selectedItem == widget.initialSelectedItem;
+  }
+
+  Widget _buildListItem(T item) {
+    return ValueListenableBuilder<T?>(
+      valueListenable: _selectedItemNotifier,
+      builder: (context, value, child) {
+        final isSelected = value == item;
+
+        if (widget.itemBuilder == null && widget.getItemLabel(item).isEmpty) {
+          return const SizedBox();
+        }
+
+        return Container(
+          margin: const EdgeInsets.symmetric(horizontal: 16),
+          child: TransparentInkWell(
+            onTap: () => _onSelect(item),
+            child: Builder(
+              builder: (context) {
+                if (widget.itemBuilder != null) {
+                  return widget.itemBuilder!(
+                    item,
+                    isSelected,
+                    _selectedItemNotifier,
+                    _onSelect,
+                  );
+                }
+                return Container(
+                  decoration: BoxDecoration(
+                    color: isSelected
+                        ? colors.brand.shade50
+                        : colors.gray.white,
+                  ),
+                  padding: const EdgeInsets.symmetric(
+                    horizontal: 8,
+                    vertical: 14,
+                  ),
+                  child: Row(
+                    children: [
+                      Expanded(
+                        child: Text(
+                          maxLines: 2,
+                          overflow: TextOverflow.ellipsis,
+                          widget.getItemLabel(item),
+                          style: DSTextStyle().medium,
+                        ),
+                      ),
+                      const SizedBox(width: 8),
+                      DSRadio(
+                        value: item,
+                        groupValue: value,
+                        onChanged: (newValue) {
+                          if (newValue != null) {
+                            selectedItem = newValue;
+                          }
+                        },
+                      ),
+                    ],
+                  ),
+                );
+              },
+            ),
+          ),
+        );
+      },
+    );
   }
 
   @override
@@ -188,9 +237,8 @@ class _FilterSelectionModalState<T> extends State<FilterSelectionModal<T>> {
       },
       onConfirm: widget.onConfirm,
       child: Column(
-        mainAxisSize: MainAxisSize.min,
+        mainAxisSize: MainAxisSize.max,
         children: [
-          // Search bar
           if (isHasFetchItems) ...[
             Container(
               margin: const EdgeInsets.symmetric(horizontal: 16),
@@ -211,194 +259,29 @@ class _FilterSelectionModalState<T> extends State<FilterSelectionModal<T>> {
             ),
             const SizedBox(height: 8),
           ],
-
-          // Items list
-          isExpandedBody
-              ? Expanded(
-                  child: SmartRefresherWrapper(
-                    controller: _refreshController,
-                    onLoading: _onLoadMore,
-                    onRefresh: _onRefresh,
-                    enablePullUp: widget.canLoadMore?.call() ?? false,
-                    enablePullDown: true,
-                    child: ValueListenableBuilder<List<T>>(
-                      valueListenable: _itemsNotifier,
-                      builder: (context, items, child) {
-                        return items.isEmpty
-                            ? const Center(
-                                child: Text(
-                                  'Không có dữ liệu',
-                                ),
-                              )
-                            : _buildListSelectionItems(items);
-                      },
-                    ),
-                  ),
-                )
-              : ValueListenableBuilder<List<T>>(
-                  valueListenable: _itemsNotifier,
-                  builder: (context, items, child) {
-                    return _buildListSelectionItemsColumn(items);
-                  },
-                ),
+          if (isExpandedBody)
+            Expanded(
+              child: BottomSheetListFrame(
+                shrinkWrap: true,
+                refreshController: _refreshController,
+                onRefresh: _onRefresh,
+                onLoadMore:
+                    widget.onLoadMoreItems != null ? _onLoadMore : null,
+                enablePullUp: widget.canLoadMore?.call() ?? false,
+                enablePullDown: true,
+                itemCount: _items.length,
+                itemBuilder: (context, index) => _buildListItem(_items[index]),
+                emptyWidget: const Center(child: Text('Không có dữ liệu')),
+              ),
+            )
+          else
+            ..._items.map(_buildListItem),
         ],
       ),
     );
   }
 
-  ListView _buildListSelectionItems(List<T> items) {
-    return ListView.builder(
-      physics: const NeverScrollableScrollPhysics(),
-      padding: EdgeInsets.zero,
-      itemCount: items.length,
-      itemBuilder: (context, index) {
-        final item = items[index];
-
-        return ValueListenableBuilder<T?>(
-          valueListenable: _selectedItemNotifier,
-          builder: (context, value, child) {
-            final isSelected = value == item;
-
-            if (widget.itemBuilder == null &&
-                widget.getItemLabel(item).isEmpty) {
-              return const SizedBox();
-            }
-
-            return Container(
-              margin: const EdgeInsets.symmetric(horizontal: 16),
-              child: TransparentInkWell(
-                onTap: () {
-                  _onSelect(item);
-                },
-                child: Builder(
-                  builder: (context) {
-                    if (widget.itemBuilder != null) {
-                      return widget.itemBuilder!(
-                        item,
-                        isSelected,
-                        _selectedItemNotifier,
-                        _onSelect,
-                      );
-                    }
-                    return Container(
-                      decoration: BoxDecoration(
-                        color: isSelected
-                            ? colors.brand.shade50
-                            : colors.gray.white,
-                      ),
-                      padding: const EdgeInsets.symmetric(
-                        horizontal: 8,
-                        vertical: 14,
-                      ),
-                      child: Row(
-                        children: [
-                          Expanded(
-                            child: Text(
-                              maxLines: 2,
-                              overflow: TextOverflow.ellipsis,
-                              widget.getItemLabel(item),
-                              style: DSTextStyle().medium,
-                            ),
-                          ),
-                          const SizedBox(width: 8),
-                          DSRadio(
-                            value: item,
-                            groupValue: value,
-                            onChanged: (newvalue) {
-                              if (newvalue != null) {
-                                selectedItem = newvalue;
-                              }
-                            },
-                          ),
-                        ],
-                      ),
-                    );
-                  },
-                ),
-              ),
-            );
-          },
-        );
-      },
-    );
-  }
-
-  Widget _buildListSelectionItemsColumn(List<T> items) {
-    return Column(
-      mainAxisSize: MainAxisSize.min,
-      crossAxisAlignment: CrossAxisAlignment.stretch,
-      children: items.map((item) {
-        return ValueListenableBuilder<T?>(
-          valueListenable: _selectedItemNotifier,
-          builder: (context, value, child) {
-            final isSelected = value == item;
-
-            if (widget.itemBuilder == null &&
-                widget.getItemLabel(item).isEmpty) {
-              return const SizedBox();
-            }
-
-            return Container(
-              margin: const EdgeInsets.symmetric(horizontal: 16),
-              child: TransparentInkWell(
-                onTap: () {
-                  _onSelect(item);
-                },
-                child: Builder(
-                  builder: (context) {
-                    if (widget.itemBuilder != null) {
-                      return widget.itemBuilder!(
-                        item,
-                        isSelected,
-                        _selectedItemNotifier,
-                        _onSelect,
-                      );
-                    }
-                    return Container(
-                      decoration: BoxDecoration(
-                        color: isSelected
-                            ? colors.brand.shade50
-                            : colors.gray.white,
-                      ),
-                      padding: const EdgeInsets.symmetric(
-                        horizontal: 8,
-                        vertical: 14,
-                      ),
-                      child: Row(
-                        children: [
-                          Expanded(
-                            child: Text(
-                              maxLines: 2,
-                              overflow: TextOverflow.ellipsis,
-                              widget.getItemLabel(item),
-                              style: DSTextStyle().medium,
-                            ),
-                          ),
-                          const SizedBox(width: 8),
-                          DSRadio(
-                            value: item,
-                            groupValue: value,
-                            onChanged: (newvalue) {
-                              if (newvalue != null) {
-                                selectedItem = newvalue;
-                              }
-                            },
-                          ),
-                        ],
-                      ),
-                    );
-                  },
-                ),
-              ),
-            );
-          },
-        );
-      }).toList(),
-    );
-  }
-
   void _onSelect(T item) {
-    final newItem = item;
-    selectedItem = newItem;
+    selectedItem = item;
   }
 }

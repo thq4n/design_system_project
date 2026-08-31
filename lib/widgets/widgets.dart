@@ -2,6 +2,7 @@ export 'app_bottom_modal_sheet.dart';
 export 'app_toast_widget.dart';
 export 'availability_widget.dart';
 export 'box_color.dart';
+export 'bottom_sheet_list_frame.dart';
 export 'custom_scroll_indicator.dart';
 export 'footer_widget.dart';
 export 'hero_widget.dart';
