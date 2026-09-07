@@ -69,8 +69,7 @@ class _FilterSelectionModalState<T> extends State<FilterSelectionModal<T>> {
   List<T> _items = [];
   String? _searchTerm;
   late Debouncer _debouncer;
-  late final _refreshController =
-      widget.refreshController ??
+  late final _refreshController = widget.refreshController ??
       RefreshController(
         initialRefresh: widget.initialItems?.isEmpty ?? true,
       );
@@ -170,9 +169,8 @@ class _FilterSelectionModalState<T> extends State<FilterSelectionModal<T>> {
                 }
                 return Container(
                   decoration: BoxDecoration(
-                    color: isSelected
-                        ? colors.brand.shade50
-                        : colors.gray.white,
+                    color:
+                        isSelected ? colors.brand.shade50 : colors.gray.white,
                   ),
                   padding: const EdgeInsets.symmetric(
                     horizontal: 8,
@@ -266,8 +264,7 @@ class _FilterSelectionModalState<T> extends State<FilterSelectionModal<T>> {
                 shrinkWrap: true,
                 refreshController: _refreshController,
                 onRefresh: _onRefresh,
-                onLoadMore:
-                    widget.onLoadMoreItems != null ? _onLoadMore : null,
+                onLoadMore: widget.onLoadMoreItems != null ? _onLoadMore : null,
                 enablePullUp: widget.canLoadMore?.call() ?? false,
                 enablePullDown: true,
                 itemCount: _items.length,

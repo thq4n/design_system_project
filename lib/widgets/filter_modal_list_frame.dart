@@ -29,14 +29,14 @@ class FilterModalListFrame extends StatefulWidget {
     this.enablePullDown = true,
     this.shrinkWrap = false,
   }) : assert(
-         (child != null && children == null && itemCount == null) ||
-             (child == null && children != null && itemCount == null) ||
-             (child == null &&
-                 children == null &&
-                 itemCount != null &&
-                 itemBuilder != null),
-         'Chỉ dùng một trong: child, children, hoặc itemCount+itemBuilder',
-       );
+          (child != null && children == null && itemCount == null) ||
+              (child == null && children != null && itemCount == null) ||
+              (child == null &&
+                  children == null &&
+                  itemCount != null &&
+                  itemBuilder != null),
+          'Chỉ dùng một trong: child, children, hoặc itemCount+itemBuilder',
+        );
 
   @override
   State<FilterModalListFrame> createState() => _FilterModalListFrameState();
@@ -109,8 +109,8 @@ class _FilterModalListFrameState extends State<FilterModalListFrame> {
   }
 
   Widget _buildScrollableEmpty(BuildContext context) {
-    final empty = widget.emptyWidget ??
-        const Center(child: Text('Không có dữ liệu'));
+    final empty =
+        widget.emptyWidget ?? const Center(child: Text('Không có dữ liệu'));
     return LayoutBuilder(
       builder: (context, constraints) {
         return ListView(
