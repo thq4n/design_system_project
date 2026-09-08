@@ -85,7 +85,7 @@ class DSUserInfo extends StatelessWidget {
 
     final content = Row(
       children: [
-        if (avatarUrl != null || avatarUrl!.isNotEmpty) ...[
+        if (avatarUrl?.isNotEmpty ?? false) ...[
           _buildAvatar(colors),
           SizedBox(width: spacing),
         ],
