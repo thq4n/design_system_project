@@ -85,8 +85,10 @@ class DSUserInfo extends StatelessWidget {
 
     final content = Row(
       children: [
-        _buildAvatar(colors),
-        SizedBox(width: spacing),
+        if (avatarUrl != null || avatarUrl!.isNotEmpty) ...[
+          _buildAvatar(colors),
+          SizedBox(width: spacing),
+        ],
         Expanded(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
