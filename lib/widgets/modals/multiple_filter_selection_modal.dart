@@ -264,7 +264,7 @@ class _MultipleFilterSelectionModalState<T>
         ),
       ),
       child: Column(
-        mainAxisSize: MainAxisSize.max,
+        mainAxisSize: MainAxisSize.min,
         children: [
           Container(
             margin: const EdgeInsets.only(top: 6),
