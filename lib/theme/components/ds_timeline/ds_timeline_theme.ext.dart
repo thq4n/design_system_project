@@ -14,7 +14,7 @@ class DSTimelineThemeExtension
       dotSize: 16,
       dotBorderThickness: 4,
       connectorColor: dsColors.blue.shade500,
-      connectorThickness: 2.0,
+      connectorThickness: 1.0,
       itemSpacing: 16.0,
       animationDuration: const Duration(milliseconds: 600),
       animationDelay: const Duration(milliseconds: 150),

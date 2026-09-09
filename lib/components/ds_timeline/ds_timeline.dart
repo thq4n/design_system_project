@@ -74,8 +74,22 @@ class DSTimeline<T> extends StatefulWidget {
 
   /// Builder for the node indicator (dot) of each item.
   /// When null, the default circular dot from [DSTimelineTheme] is used.
+  /// The [Size] passed to the builder matches [dotSize] (or theme default).
   final Widget? Function(BuildContext context, T item, int index, Size size)?
       dotBuilder;
+
+  /// Override for the connector line color between nodes.
+  /// Falls back to [DSTimelineTheme.connectorColor] when null.
+  final Color? connectorColor;
+
+  /// Override for the connector line thickness between nodes.
+  /// Falls back to [DSTimelineTheme.connectorThickness] when null.
+  final double? connectorThickness;
+
+  /// Override for the node/icon size applied to every dot (default, custom
+  /// [dotBuilder], and loading indicator).
+  /// Falls back to [DSTimelineTheme.dotSize] when null.
+  final double? dotSize;
 
   const DSTimeline({
     super.key,
@@ -84,6 +98,9 @@ class DSTimeline<T> extends StatefulWidget {
     this.loadingItemBuilder,
     this.separatorBuilder,
     this.dotBuilder,
+    this.connectorColor,
+    this.connectorThickness,
+    this.dotSize,
     this.isLoading = false,
     this.padding,
   });
@@ -115,6 +132,9 @@ class DSTimeline<T> extends StatefulWidget {
     Widget? Function(BuildContext context, K key)? customSeparatorBuilder,
     Widget? Function(BuildContext context, T item, int index, Size size)?
         dotBuilder,
+    Color? connectorColor,
+    double? connectorThickness,
+    double? dotSize,
     bool isLoading = false,
     EdgeInsetsGeometry? padding,
   }) {
@@ -125,6 +145,9 @@ class DSTimeline<T> extends StatefulWidget {
       itemBuilder: itemBuilder,
       loadingItemBuilder: loadingItemBuilder,
       dotBuilder: dotBuilder,
+      connectorColor: connectorColor,
+      connectorThickness: connectorThickness,
+      dotSize: dotSize,
       isLoading: isLoading,
       separatorBuilder: (context, currentItem, currentIndex) {
         // Show separator before first item of each group
@@ -214,6 +237,15 @@ class _DSTimelineState<T> extends DSStateBase<DSTimeline<T>>
   AnimationController? _loadingConnectorController;
   Animation<double>? _loadingConnectorAnimation;
   bool _animationsInitialized = false;
+
+  double get _resolvedDotSize =>
+      widget.dotSize ?? _componentTheme.dotSize;
+
+  Color get _resolvedConnectorColor =>
+      widget.connectorColor ?? _componentTheme.connectorColor;
+
+  double get _resolvedConnectorThickness =>
+      widget.connectorThickness ?? _componentTheme.connectorThickness;
 
   @override
   void initState() {
@@ -431,9 +463,9 @@ class _DSTimelineState<T> extends DSStateBase<DSTimeline<T>>
       );
     }
 
-    final dotSize = _componentTheme.dotSize;
-    final connectorColor = _componentTheme.connectorColor;
-    final connectorThickness = _componentTheme.connectorThickness;
+    final dotSize = _resolvedDotSize;
+    final connectorColor = _resolvedConnectorColor;
+    final connectorThickness = _resolvedConnectorThickness;
     final itemSpacing = _componentTheme.itemSpacing;
     final horizontalSpacing = _componentTheme.horizontalSpacing;
     return IntrinsicHeight(
@@ -456,6 +488,7 @@ class _DSTimelineState<T> extends DSStateBase<DSTimeline<T>>
                         item: item,
                         index: index,
                         theme: _componentTheme,
+                        dotSize: dotSize,
                       ),
                     );
                   },
@@ -548,9 +581,10 @@ class _DSTimelineState<T> extends DSStateBase<DSTimeline<T>>
       );
     }
 
-    final dotSize = theme.dotSize;
-    final connectorColor = theme.connectorColor;
-    final connectorThickness = theme.connectorThickness;
+    final dotSize = widget.dotSize ?? theme.dotSize;
+    final connectorColor = widget.connectorColor ?? theme.connectorColor;
+    final connectorThickness =
+        widget.connectorThickness ?? theme.connectorThickness;
     final itemSpacing = theme.itemSpacing;
     final horizontalSpacing = theme.horizontalSpacing;
     return IntrinsicHeight(
@@ -567,6 +601,7 @@ class _DSTimelineState<T> extends DSStateBase<DSTimeline<T>>
                   item: item,
                   index: index,
                   theme: theme,
+                  dotSize: dotSize,
                 ),
                 // Connector line
                 if (!isLast)
@@ -625,21 +660,26 @@ class _DSTimelineState<T> extends DSStateBase<DSTimeline<T>>
     required T item,
     required int index,
     required DSTimelineTheme theme,
+    required double dotSize,
   }) {
     if (widget.dotBuilder != null) {
       final dotWidget = widget.dotBuilder!(
         context,
         item,
         index,
-        Size(theme.dotSize, theme.dotSize),
+        Size(dotSize, dotSize),
       );
       if (dotWidget != null) {
-        return dotWidget;
+        return SizedBox(
+          width: dotSize,
+          height: dotSize,
+          child: Center(child: dotWidget),
+        );
       }
     }
 
     final dotMargin = theme.dotMargin;
-    final innerSize = theme.dotSize - dotMargin.vertical;
+    final innerSize = dotSize - dotMargin.vertical;
     return Container(
       margin: dotMargin,
       width: innerSize,
@@ -656,7 +696,7 @@ class _DSTimelineState<T> extends DSStateBase<DSTimeline<T>>
   }
 
   Widget _buildLoadingNode() {
-    final dotSize = _componentTheme.dotSize;
+    final dotSize = _resolvedDotSize;
     final horizontalSpacing = _componentTheme.horizontalSpacing;
     const colors = DSColors();
 
@@ -749,7 +789,7 @@ class _DSTimelineState<T> extends DSStateBase<DSTimeline<T>>
 
 /// Custom painter for the connector line with animation
 class _ConnectorPainter extends CustomPainter {
-  final DSColor color;
+  final Color color;
   final double thickness;
   final double progress;
 
@@ -790,7 +830,7 @@ class _ConnectorPainter extends CustomPainter {
 
 /// Custom painter for the dashed connector line with animation
 class _DashedConnectorPainter extends CustomPainter {
-  final DSColor color;
+  final Color color;
   final double thickness;
   final double progress;
 
@@ -842,7 +882,7 @@ class _DashedConnectorPainter extends CustomPainter {
 /// connector line with animated dash effect
 /// Dashes appear one by one from top to bottom in a repeating animation
 class _LoadingDashedConnectorPainter extends CustomPainter {
-  final DSColor color;
+  final Color color;
   final double thickness;
   final double progress;
   final double loadingProgress;
