@@ -13813,9 +13813,57 @@ class $AssetsVuesaxGen {
   String get menuBoardBulk =>
       'packages/design_system_project/assets/vuesax/menu-board-bulk.svg';
 
+  /// File path: assets/vuesax/menu-board-left-move-bold.svg
+  String get menuBoardLeftMoveBold =>
+      'packages/design_system_project/assets/vuesax/menu-board-left-move-bold.svg';
+
+  /// File path: assets/vuesax/menu-board-left-move-broken.svg
+  String get menuBoardLeftMoveBroken =>
+      'packages/design_system_project/assets/vuesax/menu-board-left-move-broken.svg';
+
+  /// File path: assets/vuesax/menu-board-left-move-bulk.svg
+  String get menuBoardLeftMoveBulk =>
+      'packages/design_system_project/assets/vuesax/menu-board-left-move-bulk.svg';
+
+  /// File path: assets/vuesax/menu-board-left-move-linear.svg
+  String get menuBoardLeftMoveLinear =>
+      'packages/design_system_project/assets/vuesax/menu-board-left-move-linear.svg';
+
+  /// File path: assets/vuesax/menu-board-left-move-outline.svg
+  String get menuBoardLeftMoveOutline =>
+      'packages/design_system_project/assets/vuesax/menu-board-left-move-outline.svg';
+
+  /// File path: assets/vuesax/menu-board-left-move-twotone.svg
+  String get menuBoardLeftMoveTwotone =>
+      'packages/design_system_project/assets/vuesax/menu-board-left-move-twotone.svg';
+
   /// File path: assets/vuesax/menu-board-linear.svg
   String get menuBoardLinear =>
       'packages/design_system_project/assets/vuesax/menu-board-linear.svg';
+
+  /// File path: assets/vuesax/menu-board-move-bold.svg
+  String get menuBoardMoveBold =>
+      'packages/design_system_project/assets/vuesax/menu-board-move-bold.svg';
+
+  /// File path: assets/vuesax/menu-board-move-broken.svg
+  String get menuBoardMoveBroken =>
+      'packages/design_system_project/assets/vuesax/menu-board-move-broken.svg';
+
+  /// File path: assets/vuesax/menu-board-move-bulk.svg
+  String get menuBoardMoveBulk =>
+      'packages/design_system_project/assets/vuesax/menu-board-move-bulk.svg';
+
+  /// File path: assets/vuesax/menu-board-move-linear.svg
+  String get menuBoardMoveLinear =>
+      'packages/design_system_project/assets/vuesax/menu-board-move-linear.svg';
+
+  /// File path: assets/vuesax/menu-board-move-outline.svg
+  String get menuBoardMoveOutline =>
+      'packages/design_system_project/assets/vuesax/menu-board-move-outline.svg';
+
+  /// File path: assets/vuesax/menu-board-move-twotone.svg
+  String get menuBoardMoveTwotone =>
+      'packages/design_system_project/assets/vuesax/menu-board-move-twotone.svg';
 
   /// File path: assets/vuesax/menu-board-outline.svg
   String get menuBoardOutline =>
@@ -27917,7 +27965,19 @@ class $AssetsVuesaxGen {
         menuBoardBold,
         menuBoardBroken,
         menuBoardBulk,
+        menuBoardLeftMoveBold,
+        menuBoardLeftMoveBroken,
+        menuBoardLeftMoveBulk,
+        menuBoardLeftMoveLinear,
+        menuBoardLeftMoveOutline,
+        menuBoardLeftMoveTwotone,
         menuBoardLinear,
+        menuBoardMoveBold,
+        menuBoardMoveBroken,
+        menuBoardMoveBulk,
+        menuBoardMoveLinear,
+        menuBoardMoveOutline,
+        menuBoardMoveTwotone,
         menuBoardOutline,
         menuBoardTwotone,
         menuBold,
