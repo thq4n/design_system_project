@@ -7,6 +7,7 @@ export 'ds_bottom_navigation_bar/ds_bottom_navigation_bar.dart';
 export 'ds_button/ds_button.dart';
 export 'ds_calendar/ds_calendar.dart';
 export 'ds_checkbox/ds_checkbox.dart';
+export 'ds_checkbox/ds_checkbox_tile.dart';
 export 'ds_chip/ds_chip.dart';
 export 'ds_expandable/ds_expandable.dart';
 export 'ds_full_screen_video_body/ds_full_screen_video_body.dart';
