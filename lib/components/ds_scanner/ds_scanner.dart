@@ -28,6 +28,7 @@ class DSScanner extends StatefulWidget {
     required this.manualInputController,
     required this.onManualSubmitted,
     required this.heroTagModeSwitch,
+    this.paddingManualInput,
     this.modeTransitionDuration = const Duration(milliseconds: 300),
     this.scannerHeight = 240,
     this.scannerHeightHardware = 100,
@@ -57,6 +58,7 @@ class DSScanner extends StatefulWidget {
   final DSHardwareScannerAdapter? hardwareScanner;
   final String manualInputTitle;
   final String manualInputHint;
+  final EdgeInsets? paddingManualInput;
   final String cameraPermissionDeniedMessage;
   final dynamic cameraScanHint;
   final String hardwareScannerHint;
@@ -493,7 +495,8 @@ class _DSScannerState extends State<DSScanner> {
             child: isScanMode
                 ? _buildScannerStrip()
                 : Padding(
-                    padding: const EdgeInsets.fromLTRB(16, 16, 16, 16),
+                    padding: widget.paddingManualInput ??
+                        const EdgeInsets.fromLTRB(16, 16, 16, 16),
                     child: _buildManualSection(),
                   ),
           ),
