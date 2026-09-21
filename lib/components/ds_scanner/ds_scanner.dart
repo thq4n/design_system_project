@@ -62,10 +62,12 @@ class DSScanner extends StatefulWidget {
   final String hardwareScannerHint;
   final MobileScannerController? barcodeController;
 
-  /// Khi set: chỉ gọi [onCodeScanned] và rung khi trả về `true` (camera + scanner thiết bị).
+  /// Khi set: chỉ gọi [onCodeScanned] và rung khi trả về `true`
+  /// (camera + scanner thiết bị).
   final bool Function(String code)? shouldDispatchScannedCode;
 
-  /// Bỏ qua cùng một mã từ camera trong khoảng thời gian này (nhập tay không áp dụng).
+  /// Bỏ qua cùng một mã từ camera trong khoảng thời gian này
+  /// (nhập tay không áp dụng).
   final Duration cameraSameCodeDedupeDuration;
 
   @override
@@ -103,10 +105,13 @@ class _DSScannerState extends State<DSScanner> {
     }
     _stopHardwareScanner();
     unawaited(widget.hardwareScanner?.dispose());
-    _barcodeController.dispose();
-    _cameraPermissionNotifier.dispose();
-    _useHardwareScannerNotifier.dispose();
-    _isHardwareScanningNotifier.dispose();
+    _barcodeController.stop().then((value) {
+      _barcodeController.dispose();
+      _cameraPermissionNotifier.dispose();
+      _useHardwareScannerNotifier.dispose();
+      _isHardwareScanningNotifier.dispose();
+    });
+
     super.dispose();
   }
 

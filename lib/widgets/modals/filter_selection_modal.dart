@@ -280,6 +280,7 @@ class _FilterSelectionModalState<T> extends State<FilterSelectionModal<T>> {
   }
 
   void _onSelect(T item) {
-    selectedItem = item;
+    final selectedItem = item;
+    this.selectedItem = selectedItem;
   }
 }
