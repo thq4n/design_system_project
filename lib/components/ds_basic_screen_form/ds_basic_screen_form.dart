@@ -468,6 +468,7 @@ class _DSBasicScreenFormState extends DSStateBase<DSBasicScreenForm> {
   PreferredSizeWidget _buildAppBar() {
     return AppBar(
       backgroundColor: Colors.transparent,
+      systemOverlayStyle: SystemUiOverlayStyle.dark,
       elevation: 1,
       actionsPadding: const EdgeInsets.only(right: 4),
       surfaceTintColor: Colors.transparent,
