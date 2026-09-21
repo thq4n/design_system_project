@@ -2,7 +2,7 @@
 //Packages
 export 'package:auto_size_text/auto_size_text.dart';
 export 'package:geocoding/geocoding.dart';
-export 'package:go_router/go_router.dart';
+export 'package:go_router/go_router.dart' hide GoRouterHelper;
 export 'package:grouped_list/grouped_list.dart';
 export 'package:pull_to_refresh_flutter3/pull_to_refresh_flutter3.dart';
 
@@ -25,6 +25,7 @@ export 'design_system_core/ds_shadow/ds_shadow_core.dart';
 export 'design_system_core/ds_spacing/ds_spacing_core.dart';
 // Extensions
 export 'extensions/extensions.dart';
+export 'extensions/go_router_helper.extension.dart';
 // Generated Files
 export 'gen/assets.gen.dart';
 export 'gen/fonts.gen.dart';

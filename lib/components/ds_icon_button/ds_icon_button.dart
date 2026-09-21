@@ -1,8 +1,11 @@
+import 'dart:async';
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import '../../base/ds_base.dart';
 import '../../theme/ds_theme.dart';
+import '../../utils/ds_tap_lock.dart';
 import '../ds_image_view/ds_image_view.dart';
 
 class DSIconButton extends StatefulWidget {
@@ -15,8 +18,9 @@ class DSIconButton extends StatefulWidget {
   /// Icon displayed. Can be a String (asset path) or Widget
   final dynamic icon;
 
-  /// Callback function triggered when button is pressed
-  final VoidCallback? onPressed;
+  /// Callback when pressed. A `Future` is awaited so a second tap is ignored
+  /// until it completes (and for a short cooldown if the handler is sync).
+  final FutureOr<void> Function()? onPressed;
 
   /// Whether the button is in disabled state
   final bool isDisabled;
@@ -42,6 +46,8 @@ class DSIconButton extends StatefulWidget {
 }
 
 class _DSIconButtonState extends DSStateBase<DSIconButton> {
+  final DsTapLock _tapLock = DsTapLock();
+
   @override
   Widget build(BuildContext context) {
     final DSIconButtonTheme componentTheme = theme
@@ -54,7 +60,11 @@ class _DSIconButtonState extends DSStateBase<DSIconButton> {
 
     final isLoading = widget.isLoading;
 
-    final onPressed = isDisabled || isLoading ? null : widget.onPressed;
+    final onPressed = isDisabled || isLoading || widget.onPressed == null
+        ? null
+        : () {
+            unawaited(_tapLock.run(widget.onPressed));
+          };
 
     final backgroundColor = isDisabled
         ? componentTheme.disableState.backgroundColor
