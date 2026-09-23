@@ -229,6 +229,20 @@ extension _DSMediaPickerStateUi on _DSMediaPickerState {
             fit: BoxFit.cover,
             width: constraints.maxWidth,
             height: constraints.maxHeight,
+            errorBuilder: (context, error, stackTrace) {
+              debugPrint('Error loading media thumbnail: $error');
+              return Container(
+                width: constraints.maxWidth,
+                height: constraints.maxHeight,
+                color: Colors.grey[300],
+                alignment: Alignment.center,
+                child: Icon(
+                  Icons.broken_image_outlined,
+                  color: _iconColor,
+                  size: 32,
+                ),
+              );
+            },
           )
         : FutureBuilder<Map<String, String>?>(
             future: widget.controller.getHeadersCallback?.call(),
@@ -502,6 +516,16 @@ extension _DSMediaPickerStateUi on _DSMediaPickerState {
       return;
     }
 
+    if (image.mediaFile != null) {
+      final fileLength = await image.mediaFile!.length();
+      if (fileLength <= 0) {
+        _showPlaceholderMessage('Ảnh không hợp lệ. Vui lòng chọn lại.');
+        return;
+      }
+    }
+    if (!context.mounted) {
+      return;
+    }
     await viewImage(
       imageProvider: image.mediaFile != null
           ? FileImage(image.mediaFile!)
