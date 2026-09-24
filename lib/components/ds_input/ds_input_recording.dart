@@ -177,13 +177,13 @@ class _DSInputRecordingState extends State<DSInputRecording> {
     }
 
     final speechInited = await _speechInitFuture;
-    if (!speechInited) {
+    if (!mounted || !speechInited) {
       return;
     }
 
     final granted =
         await PermissionService.instance.requestMicrophonePermission(context);
-    if (!granted) {
+    if (!mounted || !granted) {
       return;
     }
 
@@ -191,9 +191,16 @@ class _DSInputRecordingState extends State<DSInputRecording> {
     _volumeNotifier.value = _volumeStopAtClampedMin;
     _isRecordingNotifier.value = true;
 
+    if (!mounted) {
+      return;
+    }
+
     unawaited(
       _speechToText.listen(
         onResult: (result) {
+          if (!mounted) {
+            return;
+          }
           _autoStopTimer?.cancel();
           _autoStopTimer = Timer(widget.autoStopDuration, _onAutoStopRecord);
 
@@ -201,6 +208,9 @@ class _DSInputRecordingState extends State<DSInputRecording> {
           widget.onTextChanged?.call(_controller.text, _controller);
         },
         onSoundLevelChange: (level) {
+          if (!mounted) {
+            return;
+          }
           if (Platform.isAndroid) {
             _volumeNotifier.value =
                 max(_volumeStopAtClampedMin, level / _androidLevelDivisor);
@@ -222,6 +232,9 @@ class _DSInputRecordingState extends State<DSInputRecording> {
   }
 
   void _onAutoStopRecord() {
+    if (!mounted) {
+      return;
+    }
     _stopRecord();
   }
 
@@ -229,13 +242,15 @@ class _DSInputRecordingState extends State<DSInputRecording> {
     _autoStopTimer?.cancel();
     _autoStopTimer = null;
 
-    _isRecordingNotifier.value = false;
-    _volumeNotifier.value = _volumeStopAtClampedMin;
+    if (mounted) {
+      _isRecordingNotifier.value = false;
+      _volumeNotifier.value = _volumeStopAtClampedMin;
+    }
     _initIOSVoiceLevel = null;
 
     _speechToText.cancel();
 
-    if (!callOnTextChanged) {
+    if (!callOnTextChanged || !mounted) {
       return;
     }
     widget.onTextChanged?.call(_controller.text, _controller);
@@ -285,6 +300,9 @@ class _DSInputRecordingState extends State<DSInputRecording> {
                         if (_usesDevStagingMicrophoneTapFill) {
                           final fill = _devStagingMicrophoneTapFillText!;
                           _controller.text = fill;
+                          if (!mounted) {
+                            return;
+                          }
                           widget.onTextChanged
                               ?.call(_controller.text, _controller);
                           return;
