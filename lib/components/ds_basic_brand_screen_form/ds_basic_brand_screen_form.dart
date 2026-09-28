@@ -3,6 +3,7 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:go_router/go_router.dart';
 
 import '../../base/ds_base.dart';
@@ -344,16 +345,9 @@ class _DSBasicBrandScreenFormState extends DSStateBase<DSBasicBrandScreenForm> {
     _updateStatusBar();
   }
 
-  /// Updates the status bar style based on header image setting.
-  ///
-  /// Sets dark status bar when [showHeaderImage] is true,
-  /// light status bar otherwise.
+  /// White status bar icons, matching the brand header.
   void _updateStatusBar() {
-    if (screenTheme.showHeaderImage) {
-      setDarkStatusBar();
-    } else {
-      setLightStatusBar();
-    }
+    setDarkStatusBar();
   }
 
   /// Determines whether the title should be centered.
@@ -381,28 +375,31 @@ class _DSBasicBrandScreenFormState extends DSStateBase<DSBasicBrandScreenForm> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: widget.bgColor,
-      resizeToAvoidBottomInset: widget.resizeToAvoidBottomInset,
-      floatingActionButton: widget.floatingActionButton,
-      floatingActionButtonLocation: widget.floatingActionButtonLocation,
-      floatingActionButtonAnimator: widget.floatingActionButtonAnimator,
-      bottomNavigationBar: widget.bottomNavigationBar,
-      body: Column(
-        children: [
-          _buildAppBar(),
-          Expanded(
-            child: Material(
-              color: screenTheme.backgroundColor ??
-                  DSColorUsages.background.secondary,
-              child: SizedBox(
-                width: double.infinity,
-                height: double.infinity,
-                child: widget.child ?? const SizedBox(),
+    return AnnotatedRegion<SystemUiOverlayStyle>(
+      value: darkStatusBarStyle,
+      child: Scaffold(
+        backgroundColor: widget.bgColor,
+        resizeToAvoidBottomInset: widget.resizeToAvoidBottomInset,
+        floatingActionButton: widget.floatingActionButton,
+        floatingActionButtonLocation: widget.floatingActionButtonLocation,
+        floatingActionButtonAnimator: widget.floatingActionButtonAnimator,
+        bottomNavigationBar: widget.bottomNavigationBar,
+        body: Column(
+          children: [
+            _buildAppBar(),
+            Expanded(
+              child: Material(
+                color: screenTheme.backgroundColor ??
+                    DSColorUsages.background.secondary,
+                child: SizedBox(
+                  width: double.infinity,
+                  height: double.infinity,
+                  child: widget.child ?? const SizedBox(),
+                ),
               ),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }
