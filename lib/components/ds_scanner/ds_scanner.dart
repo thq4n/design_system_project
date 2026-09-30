@@ -302,6 +302,7 @@ class _DSScannerState extends State<DSScanner> {
                             if (hasPermission)
                               MobileScanner(
                                 controller: _barcodeController,
+                                useAppLifecycleState: false,
                                 onDetect: (result) {
                                   final list = result.barcodes;
                                   final first =
