@@ -164,7 +164,8 @@ extension _DSMediaPickerStatePicking on _DSMediaPickerState {
   int get _pickImageQuality => widget.imageQuality;
 
   /// Waits briefly if `image_picker` returns a path before bytes are flushed.
-  /// Returns null when the file stays empty so the UI can ask the user to retry.
+  /// Returns null when the file stays empty so the UI can ask the user to
+  /// retry.
   Future<File?> _materializePickedImage(XFile pickedFile) async {
     const maxAttempts = 5;
     for (var attempt = 0; attempt < maxAttempts; attempt++) {
