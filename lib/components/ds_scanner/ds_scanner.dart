@@ -43,6 +43,7 @@ class DSScanner extends StatefulWidget {
     this.barcodeController,
     this.shouldDispatchScannedCode,
     this.cameraSameCodeDedupeDuration = Duration.zero,
+    this.dispatchAllDetectedBarcodes = false,
   });
 
   final ValueNotifier<DSScannerViewMode> viewMode;
@@ -71,6 +72,9 @@ class DSScanner extends StatefulWidget {
   /// Bỏ qua cùng một mã từ camera trong khoảng thời gian này
   /// (nhập tay không áp dụng).
   final Duration cameraSameCodeDedupeDuration;
+
+  /// Camera: gửi mọi mã trong một khung hình. Mặc định chỉ gửi mã đầu tiên.
+  final bool dispatchAllDetectedBarcodes;
 
   @override
   State<DSScanner> createState() => _DSScannerState();
@@ -305,9 +309,22 @@ class _DSScannerState extends State<DSScanner> {
                                 useAppLifecycleState: false,
                                 onDetect: (result) {
                                   final list = result.barcodes;
-                                  final first =
-                                      list.isEmpty ? null : list.first;
-                                  _onBarcodeFromCamera(first);
+                                  if (!widget.dispatchAllDetectedBarcodes) {
+                                    final first =
+                                        list.isEmpty ? null : list.first;
+                                    _onBarcodeFromCamera(first);
+                                    return;
+                                  }
+                                  final dispatchedInFrame = <String>{};
+                                  for (final barcode in list) {
+                                    final rawValue = barcode.rawValue?.trim();
+                                    if (rawValue == null ||
+                                        rawValue.isEmpty ||
+                                        !dispatchedInFrame.add(rawValue)) {
+                                      continue;
+                                    }
+                                    _onBarcodeFromCamera(barcode);
+                                  }
                                 },
                               )
                             else
