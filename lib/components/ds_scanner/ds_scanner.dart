@@ -77,6 +77,7 @@ class DSScanner extends StatefulWidget {
 }
 
 class _DSScannerState extends State<DSScanner> {
+  late final bool _ownsBarcodeController = widget.barcodeController == null;
   late final MobileScannerController _barcodeController =
       widget.barcodeController ??
           MobileScannerController(
@@ -107,14 +108,28 @@ class _DSScannerState extends State<DSScanner> {
     }
     _stopHardwareScanner();
     unawaited(widget.hardwareScanner?.dispose());
-    _barcodeController.stop().then((value) {
-      _barcodeController.dispose();
-      _cameraPermissionNotifier.dispose();
-      _useHardwareScannerNotifier.dispose();
-      _isHardwareScanningNotifier.dispose();
-    });
-
+    _cameraPermissionNotifier.dispose();
+    _useHardwareScannerNotifier.dispose();
+    _isHardwareScanningNotifier.dispose();
+    if (_ownsBarcodeController) {
+      unawaited(_releaseOwnedBarcodeController());
+    } else {
+      unawaited(_stopBarcodeController());
+    }
     super.dispose();
+  }
+
+  Future<void> _stopBarcodeController() async {
+    try {
+      await _barcodeController.stop();
+    } catch (_) {}
+  }
+
+  Future<void> _releaseOwnedBarcodeController() async {
+    await _stopBarcodeController();
+    try {
+      await _barcodeController.dispose();
+    } catch (_) {}
   }
 
   Future<void> _handleCameraPermission() async {
