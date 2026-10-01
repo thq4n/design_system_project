@@ -155,6 +155,51 @@ extension _DSMediaPickerStatePicking on _DSMediaPickerState {
     );
   }
 
+  double? get _pickMaxWidth =>
+      widget.enableImageResize ? widget.maxImageWidth.toDouble() : null;
+
+  double? get _pickMaxHeight =>
+      widget.enableImageResize ? widget.maxImageHeight.toDouble() : null;
+
+  int get _pickImageQuality => widget.imageQuality;
+
+  /// Waits briefly if `image_picker` returns a path before bytes are flushed.
+  /// Returns null when the file stays empty so the UI can ask the user to
+  /// retry.
+  Future<File?> _materializePickedImage(XFile pickedFile) async {
+    const maxAttempts = 5;
+    for (var attempt = 0; attempt < maxAttempts; attempt++) {
+      try {
+        final length = await pickedFile.length();
+        if (length > 0) {
+          final bytes = await pickedFile.readAsBytes();
+          if (bytes.isNotEmpty) {
+            return File(pickedFile.path);
+          }
+        }
+      } catch (error) {
+        debugPrint('Error reading picked image (attempt $attempt): $error');
+      }
+      if (attempt < maxAttempts - 1) {
+        await Future<void>.delayed(
+          Duration(milliseconds: 100 * (attempt + 1)),
+        );
+      }
+    }
+    return null;
+  }
+
+  Future<List<File>> _materializePickedImages(List<XFile> pickedFiles) async {
+    final files = <File>[];
+    for (final pickedFile in pickedFiles) {
+      final file = await _materializePickedImage(pickedFile);
+      if (file != null) {
+        files.add(file);
+      }
+    }
+    return files;
+  }
+
   Future<void> _openGalleryPhoto() async {
     try {
       final availableSlots = _availableImageSlots;
@@ -173,27 +218,27 @@ extension _DSMediaPickerStatePicking on _DSMediaPickerState {
       if (_maxImages == 1 || availableSlots == 1) {
         final XFile? pickedFile = await _imagePicker.pickImage(
           source: ImageSource.gallery,
-          maxWidth:
-              widget.enableImageResize ? widget.maxImageWidth.toDouble() : null,
-          maxHeight: widget.enableImageResize
-              ? widget.maxImageHeight.toDouble()
-              : null,
-          imageQuality: widget.imageQuality,
+          maxWidth: _pickMaxWidth,
+          maxHeight: _pickMaxHeight,
+          imageQuality: _pickImageQuality,
         );
         pickedFiles = pickedFile != null ? [pickedFile] : [];
       } else {
         pickedFiles = await _imagePicker.pickMultiImage(
-          maxWidth:
-              widget.enableImageResize ? widget.maxImageWidth.toDouble() : null,
-          maxHeight: widget.enableImageResize
-              ? widget.maxImageHeight.toDouble()
-              : null,
-          imageQuality: widget.imageQuality,
+          maxWidth: _pickMaxWidth,
+          maxHeight: _pickMaxHeight,
+          imageQuality: _pickImageQuality,
           limit: availableSlots,
         );
       }
       if (pickedFiles.isNotEmpty) {
-        final files = pickedFiles.map((e) => File(e.path)).toList();
+        final files = await _materializePickedImages(pickedFiles);
+        if (files.isEmpty) {
+          _showPlaceholderMessage(
+            'Không đọc được ảnh. Vui lòng chọn lại.',
+          );
+          return;
+        }
         await _onMediaPicked(files, treatAsVideo: false);
       }
     } catch (error) {
@@ -246,14 +291,19 @@ extension _DSMediaPickerStatePicking on _DSMediaPickerState {
       }
       final XFile? pickedFile = await _imagePicker.pickImage(
         source: ImageSource.camera,
-        maxWidth:
-            widget.enableImageResize ? widget.maxImageWidth.toDouble() : null,
-        maxHeight:
-            widget.enableImageResize ? widget.maxImageHeight.toDouble() : null,
-        imageQuality: widget.imageQuality,
+        maxWidth: _pickMaxWidth,
+        maxHeight: _pickMaxHeight,
+        imageQuality: _pickImageQuality,
       );
       if (pickedFile != null) {
-        await _onMediaPicked([File(pickedFile.path)], treatAsVideo: false);
+        final file = await _materializePickedImage(pickedFile);
+        if (file == null) {
+          _showPlaceholderMessage(
+            'Không đọc được ảnh. Vui lòng chụp lại.',
+          );
+          return;
+        }
+        await _onMediaPicked([file], treatAsVideo: false);
       }
     } catch (error) {
       debugPrint('Error picking from camera: $error');
@@ -327,6 +377,14 @@ extension _DSMediaPickerStatePicking on _DSMediaPickerState {
         if (size > maxBytes) {
           _showPlaceholderMessage(
             'Video vượt quá ${widget.maxVideoSizeMB} MB',
+          );
+          continue;
+        }
+      } else {
+        final int size = await file.length();
+        if (size <= 0) {
+          _showPlaceholderMessage(
+            'Ảnh không hợp lệ. Vui lòng chọn lại.',
           );
           continue;
         }

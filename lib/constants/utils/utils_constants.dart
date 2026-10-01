@@ -1,8 +1,8 @@
 part of '../constants.dart';
 
 class UtilsConstants {
-  static String thousandSeparatorSymbol = '.';
-  static String decimalSymbol = ',';
+  static String thousandSeparatorSymbol = ',';
+  static String decimalSymbol = '.';
   static String languageDecimalSymbol = '.';
 }
 

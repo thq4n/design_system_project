@@ -3,6 +3,7 @@ export 'app_toast_widget.dart';
 export 'availability_widget.dart';
 export 'box_color.dart';
 export 'custom_scroll_indicator.dart';
+export 'ds_toast.dart';
 export 'footer_widget.dart';
 export 'hero_widget.dart';
 export 'image_gallery_widget.dart';
