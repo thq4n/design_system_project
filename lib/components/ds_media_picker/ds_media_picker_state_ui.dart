@@ -180,7 +180,27 @@ extension _DSMediaPickerStateUi on _DSMediaPickerState {
     );
   }
 
+  (int? cacheWidth, int? cacheHeight) _thumbnailCacheSize(
+    BoxConstraints constraints,
+  ) {
+    final maxWidth = constraints.maxWidth;
+    final maxHeight = constraints.maxHeight;
+    if (!maxWidth.isFinite ||
+        !maxHeight.isFinite ||
+        maxWidth <= 0 ||
+        maxHeight <= 0) {
+      return (null, null);
+    }
+    final devicePixelRatio = MediaQuery.devicePixelRatioOf(context);
+    return (
+      (maxWidth * devicePixelRatio).round().clamp(1, 4096),
+      (maxHeight * devicePixelRatio).round().clamp(1, 4096),
+    );
+  }
+
   Widget _buildMediaContent(DSMediaPicked media, BoxConstraints constraints) {
+    final (cacheWidth, cacheHeight) = _thumbnailCacheSize(constraints);
+
     if (media.isVideo) {
       return FutureBuilder<Uint8List?>(
         future: media.loadVideoThumbnail(),
@@ -197,6 +217,9 @@ extension _DSMediaPickerStateUi on _DSMediaPickerState {
                   fit: BoxFit.cover,
                   width: constraints.maxWidth,
                   height: constraints.maxHeight,
+                  cacheWidth: cacheWidth,
+                  cacheHeight: cacheHeight,
+                  gaplessPlayback: true,
                 )
               else
                 _buildVideoPlaceholder(
@@ -229,13 +252,16 @@ extension _DSMediaPickerStateUi on _DSMediaPickerState {
             fit: BoxFit.cover,
             width: constraints.maxWidth,
             height: constraints.maxHeight,
+            cacheWidth: cacheWidth,
+            cacheHeight: cacheHeight,
+            gaplessPlayback: true,
           )
         : FutureBuilder<Map<String, String>?>(
             future: widget.controller.getHeadersCallback?.call(),
             builder: (context, snapshot) {
               return snapshot.hasData
                   ? DSImageView(
-                      key: UniqueKey(),
+                      key: ValueKey(media.key),
                       source: media.url ?? '',
                       fit: BoxFit.cover,
                       width: constraints.maxWidth,
