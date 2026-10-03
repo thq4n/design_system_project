@@ -85,11 +85,44 @@ class DSMediaPickerController extends ValueNotifier<List<DSMediaPicked>> {
   }) : super(medias);
 
   var _uploadUnstagedMediaRequest = 0;
+  final Map<String, double> _lastNotifiedUploadProgress = {};
 
   bool get isUploading => _uploadUnstagedMediaRequest != 0;
   bool get isProcessing => value.any((e) => e.isProcessing);
 
   bool get canSelectMultiple => allowMultiple;
+
+  bool _shouldNotifyUploadProgress(String mediaKey, double progress) {
+    if (progress >= 1.0 || progress <= 0.0) {
+      return true;
+    }
+    final last = _lastNotifiedUploadProgress[mediaKey];
+    if (last == null) {
+      return true;
+    }
+    return (progress - last).abs() >= 0.2;
+  }
+
+  void _updateMedia(DSMediaPicked media, {bool notify = true}) {
+    for (var i = 0; i < value.length; i++) {
+      if (value[i].key == media.key) {
+        value[i] = media;
+        if (notify) {
+          notifyListeners();
+        }
+        break;
+      }
+    }
+  }
+
+  void _updateUploadProgress(DSMediaPicked media, double progress) {
+    final clamped = progress.clamp(0.0, 1.0);
+    if (!_shouldNotifyUploadProgress(media.key, clamped)) {
+      return;
+    }
+    _lastNotifiedUploadProgress[media.key] = clamped;
+    _updateMedia(media.copyWith(uploadProgress: clamped));
+  }
 
   void addAll(List<DSMediaPicked> medias) {
     value = [
@@ -103,6 +136,7 @@ class DSMediaPickerController extends ValueNotifier<List<DSMediaPicked>> {
 
   void remove(DSMediaPicked media, {bool deleteOnDevice = false}) {
     value = [...value..removeWhere((e) => e.key == media.key)];
+    _lastNotifiedUploadProgress.remove(media.key);
     if (deleteOnDevice && media.mediaFile?.path.isNotEmpty == true) {
       File(media.mediaFile!.path).deleteSync();
     }
@@ -117,6 +151,7 @@ class DSMediaPickerController extends ValueNotifier<List<DSMediaPicked>> {
         }
       }
     }
+    _lastNotifiedUploadProgress.clear();
     value = [];
   }
 
@@ -215,9 +250,10 @@ class DSMediaPickerController extends ValueNotifier<List<DSMediaPicked>> {
             return;
           }
           final double p = (sent / total).clamp(0.0, 1.0);
-          _updateMedia(media.copyWith(uploadProgress: p));
+          _updateUploadProgress(media, p);
         });
         if (uploadKey != null && uploadKey.isNotEmpty) {
+          _lastNotifiedUploadProgress.remove(media.key);
           _updateMedia(
             media.copyWith(
               url: uploadKey,
@@ -227,6 +263,7 @@ class DSMediaPickerController extends ValueNotifier<List<DSMediaPicked>> {
             ),
           );
         } else {
+          _lastNotifiedUploadProgress.remove(media.key);
           _updateMedia(
             media.copyWith(
               isInUploadProgress: false,
@@ -237,6 +274,7 @@ class DSMediaPickerController extends ValueNotifier<List<DSMediaPicked>> {
         }
       } catch (e) {
         debugPrint('Upload error: $e');
+        _lastNotifiedUploadProgress.remove(media.key);
         _updateMedia(
           media.copyWith(
             isInUploadProgress: false,
@@ -250,14 +288,11 @@ class DSMediaPickerController extends ValueNotifier<List<DSMediaPicked>> {
     try {
       for (int i = 0; i <= 10; i++) {
         await Future.delayed(const Duration(milliseconds: 100));
-        _updateMedia(
-          media.copyWith(
-            uploadProgress: i / 10.0,
-          ),
-        );
+        _updateUploadProgress(media, i / 10.0);
       }
       final String? url = await _uploadImageToServer!(file);
       if (url != null && url.isNotEmpty) {
+        _lastNotifiedUploadProgress.remove(media.key);
         _updateMedia(
           media.copyWith(
             url: url,
@@ -267,6 +302,7 @@ class DSMediaPickerController extends ValueNotifier<List<DSMediaPicked>> {
           ),
         );
       } else {
+        _lastNotifiedUploadProgress.remove(media.key);
         _updateMedia(
           media.copyWith(
             isInUploadProgress: false,
@@ -277,6 +313,7 @@ class DSMediaPickerController extends ValueNotifier<List<DSMediaPicked>> {
       }
     } catch (e) {
       debugPrint('Upload error: $e');
+      _lastNotifiedUploadProgress.remove(media.key);
       _updateMedia(
         media.copyWith(
           isInUploadProgress: false,
@@ -290,16 +327,13 @@ class DSMediaPickerController extends ValueNotifier<List<DSMediaPicked>> {
   Future<void> _simulateUpload(DSMediaPicked media) async {
     for (int i = 0; i <= 10; i++) {
       await Future.delayed(const Duration(milliseconds: 100));
-      _updateMedia(
-        media.copyWith(
-          uploadProgress: i / 10.0,
-        ),
-      );
+      _updateUploadProgress(media, i / 10.0);
     }
 
     final url =
         'https://example.com/uploaded/${genFileName != null ? genFileName!(media) : _generateFileName()}';
 
+    _lastNotifiedUploadProgress.remove(media.key);
     _updateMedia(
       media.copyWith(
         url: url,
@@ -308,16 +342,6 @@ class DSMediaPickerController extends ValueNotifier<List<DSMediaPicked>> {
         uploadProgress: 1.0,
       ),
     );
-  }
-
-  void _updateMedia(DSMediaPicked media) {
-    for (var i = 0; i < value.length; i++) {
-      if (value[i].key == media.key) {
-        value[i] = media;
-        notifyListeners();
-        break;
-      }
-    }
   }
 
   void _notifyUploadUnstagedDone() {

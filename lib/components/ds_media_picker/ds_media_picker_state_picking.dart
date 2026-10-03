@@ -163,22 +163,25 @@ extension _DSMediaPickerStatePicking on _DSMediaPickerState {
 
   int get _pickImageQuality => widget.imageQuality;
 
-  /// Waits briefly if `image_picker` returns a path before bytes are flushed.
-  /// Returns null when the file stays empty so the UI can ask the user to
-  /// retry.
-  Future<File?> _materializePickedImage(XFile pickedFile) async {
+  void _releaseImageMemory() {
+    PaintingBinding.instance.imageCache
+      ..clear()
+      ..clearLiveImages();
+  }
+
+  Future<File?> _waitForPickedImageFile(XFile pickedFile) async {
+    final file = File(pickedFile.path);
     const maxAttempts = 5;
     for (var attempt = 0; attempt < maxAttempts; attempt++) {
       try {
-        final length = await pickedFile.length();
-        if (length > 0) {
-          final bytes = await pickedFile.readAsBytes();
-          if (bytes.isNotEmpty) {
-            return File(pickedFile.path);
+        if (await file.exists()) {
+          final length = await file.length();
+          if (length > 0) {
+            return file;
           }
         }
       } catch (error) {
-        debugPrint('Error reading picked image (attempt $attempt): $error');
+        debugPrint('Error waiting picked image (attempt $attempt): $error');
       }
       if (attempt < maxAttempts - 1) {
         await Future<void>.delayed(
@@ -189,15 +192,60 @@ extension _DSMediaPickerStatePicking on _DSMediaPickerState {
     return null;
   }
 
-  Future<List<File>> _materializePickedImages(List<XFile> pickedFiles) async {
+  Future<List<File>> _waitForPickedImageFiles(List<XFile> pickedFiles) async {
     final files = <File>[];
     for (final pickedFile in pickedFiles) {
-      final file = await _materializePickedImage(pickedFile);
+      final file = await _waitForPickedImageFile(pickedFile);
       if (file != null) {
         files.add(file);
       }
     }
     return files;
+  }
+
+  Future<({File file, Uint8List? previewBytes})> _prepareImageForUpload(
+    File source,
+  ) async {
+    final tempDir = await getTemporaryDirectory();
+    final stamp = DateTime.now().microsecondsSinceEpoch;
+    final compressedPath = '${tempDir.path}/ds_img_$stamp.jpg';
+
+    var output = source;
+    try {
+      if (widget.enableImageResize) {
+        final compressed = await FlutterImageCompress.compressAndGetFile(
+          source.path,
+          compressedPath,
+          quality: widget.imageQuality,
+          minWidth: widget.maxImageWidth,
+          minHeight: widget.maxImageHeight,
+        );
+        if (compressed != null) {
+          output = File(compressed.path);
+          if (source.path != output.path) {
+            try {
+              await source.delete();
+            } catch (_) {}
+          }
+        }
+      }
+    } catch (error) {
+      debugPrint('Error compressing picked image: $error');
+    }
+
+    Uint8List? previewBytes;
+    try {
+      previewBytes = await FlutterImageCompress.compressWithFile(
+        output.path,
+        quality: 55,
+        minWidth: 240,
+        minHeight: 240,
+      );
+    } catch (error) {
+      debugPrint('Error creating image preview: $error');
+    }
+
+    return (file: output, previewBytes: previewBytes);
   }
 
   Future<void> _openGalleryPhoto() async {
@@ -221,6 +269,7 @@ extension _DSMediaPickerStatePicking on _DSMediaPickerState {
           maxWidth: _pickMaxWidth,
           maxHeight: _pickMaxHeight,
           imageQuality: _pickImageQuality,
+          requestFullMetadata: false,
         );
         pickedFiles = pickedFile != null ? [pickedFile] : [];
       } else {
@@ -228,11 +277,12 @@ extension _DSMediaPickerStatePicking on _DSMediaPickerState {
           maxWidth: _pickMaxWidth,
           maxHeight: _pickMaxHeight,
           imageQuality: _pickImageQuality,
+          requestFullMetadata: false,
           limit: availableSlots,
         );
       }
       if (pickedFiles.isNotEmpty) {
-        final files = await _materializePickedImages(pickedFiles);
+        final files = await _waitForPickedImageFiles(pickedFiles);
         if (files.isEmpty) {
           _showPlaceholderMessage(
             'Không đọc được ảnh. Vui lòng chọn lại.',
@@ -289,14 +339,18 @@ extension _DSMediaPickerStatePicking on _DSMediaPickerState {
           return;
         }
       }
+      _releaseImageMemory();
       final XFile? pickedFile = await _imagePicker.pickImage(
         source: ImageSource.camera,
         maxWidth: _pickMaxWidth,
         maxHeight: _pickMaxHeight,
         imageQuality: _pickImageQuality,
+        requestFullMetadata: false,
+        preferredCameraDevice: CameraDevice.rear,
       );
       if (pickedFile != null) {
-        final file = await _materializePickedImage(pickedFile);
+        await Future<void>.delayed(const Duration(milliseconds: 350));
+        final file = await _waitForPickedImageFile(pickedFile);
         if (file == null) {
           _showPlaceholderMessage(
             'Không đọc được ảnh. Vui lòng chụp lại.',
@@ -361,7 +415,7 @@ extension _DSMediaPickerStatePicking on _DSMediaPickerState {
     List<File> files, {
     required bool treatAsVideo,
   }) async {
-    final validFiles = <File>[];
+    final preparedFiles = <({File file, Uint8List? previewBytes})>[];
     for (final file in files) {
       if (file.path.isEmpty) {
         continue;
@@ -380,6 +434,7 @@ extension _DSMediaPickerStatePicking on _DSMediaPickerState {
           );
           continue;
         }
+        preparedFiles.add((file: file, previewBytes: null));
       } else {
         final int size = await file.length();
         if (size <= 0) {
@@ -388,12 +443,14 @@ extension _DSMediaPickerStatePicking on _DSMediaPickerState {
           );
           continue;
         }
+        preparedFiles.add(await _prepareImageForUpload(file));
       }
-      validFiles.add(file);
     }
-    if (validFiles.isEmpty) {
+    if (preparedFiles.isEmpty) {
       return;
     }
+    _releaseImageMemory();
+
     final existedFiles = widget.controller.value;
     final currentIndex = existedFiles.isNotEmpty
         ? (existedFiles.reduce((value, element) {
@@ -407,7 +464,8 @@ extension _DSMediaPickerStatePicking on _DSMediaPickerState {
 
     final newMedias = <DSMediaPicked>[];
     var keyOffset = 0;
-    for (final file in validFiles) {
+    for (final prepared in preparedFiles) {
+      final file = prepared.file;
       final int fileSize = await file.length();
       final bool isVideo = treatAsVideo || _isVideoPath(file.path);
       newMedias.add(
@@ -416,12 +474,13 @@ extension _DSMediaPickerStatePicking on _DSMediaPickerState {
           mediaFile: file,
           mimetype: isVideo
               ? _getMimeTypeForVideoPath(file.path)
-              : _getMimeType(file.path),
+              : 'image/jpeg',
           index: currentIndex + keyOffset,
           state: widget.autoUpload
               ? DSMediaState.inProgress
               : DSMediaState.complete,
           fileSize: fileSize,
+          previewBytes: prepared.previewBytes,
           uploadImageToServer: widget.uploadImageToServer,
         ),
       );
@@ -447,6 +506,7 @@ extension _DSMediaPickerStatePicking on _DSMediaPickerState {
       }
     }
     if (widget.autoUpload) {
+      await Future<void>.delayed(const Duration(milliseconds: 250));
       await widget.controller.uploadUnstagedMedias(
         uploadFolder: widget.uploadFolder,
       );

@@ -7,6 +7,7 @@ class DSMediaPicked {
   final String? mimetype;
   final bool isInUploadProgress;
   Uint8List? videoThumbnail;
+  final Uint8List? previewBytes;
   final int? index;
   final DSMediaState state;
   final double? uploadProgress;
@@ -21,6 +22,7 @@ class DSMediaPicked {
     this.mimetype,
     this.isInUploadProgress = false,
     this.videoThumbnail,
+    this.previewBytes,
     this.index,
     this.state = DSMediaState.base,
     this.uploadProgress,
@@ -107,6 +109,7 @@ class DSMediaPicked {
     String? mimetype,
     bool? isInUploadProgress,
     Uint8List? videoThumbnail,
+    Uint8List? previewBytes,
     int? index,
     DSMediaState? state,
     double? uploadProgress,
@@ -121,6 +124,7 @@ class DSMediaPicked {
       mimetype: mimetype ?? this.mimetype,
       isInUploadProgress: isInUploadProgress ?? this.isInUploadProgress,
       videoThumbnail: videoThumbnail ?? this.videoThumbnail,
+      previewBytes: previewBytes ?? this.previewBytes,
       index: index ?? this.index,
       state: state ?? this.state,
       uploadProgress: uploadProgress ?? this.uploadProgress,

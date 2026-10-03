@@ -246,9 +246,23 @@ extension _DSMediaPickerStateUi on _DSMediaPickerState {
       );
     }
 
+    if (media.previewBytes != null && media.previewBytes!.isNotEmpty) {
+      return Image.memory(
+        media.previewBytes!,
+        key: ValueKey('preview_${media.key}'),
+        fit: BoxFit.cover,
+        width: constraints.maxWidth,
+        height: constraints.maxHeight,
+        cacheWidth: cacheWidth,
+        cacheHeight: cacheHeight,
+        gaplessPlayback: true,
+      );
+    }
+
     return media.mediaFile != null
         ? Image.file(
             media.mediaFile!,
+            key: ValueKey('file_${media.key}'),
             fit: BoxFit.cover,
             width: constraints.maxWidth,
             height: constraints.maxHeight,
