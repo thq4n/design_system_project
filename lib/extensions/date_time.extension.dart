@@ -144,6 +144,16 @@ extension DateUtilsExtention on DateTime {
     );
   }
 
+  /// **[dd, '/', mm]**
+  ///
+  /// **05/10**
+  String toLocalddmm() {
+    return formatDate(
+      toLocal(),
+      DateTimeFormat().ddmm,
+    );
+  }
+
   /// **[HH, ':', nn, ' - ', dd, '/', mm, '/', yyyy]**
   ///
   /// **10:59 - 01/01/2000**

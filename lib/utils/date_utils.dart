@@ -41,6 +41,11 @@ class DateTimeFormat {
   /// **01/01/2000**
   final ddmmyyyy = [dd, '/', mm, '/', yyyy];
 
+  /// **[dd, '/', mm]**
+  ///
+  /// **05/10**
+  final ddmm = [dd, '/', mm];
+
   /// **[yyyy, '-', mm, '-', dd, ' ', HH, ':', nn, ':', ss]**
   ///
   /// **2000-01-01 10:59:59**
