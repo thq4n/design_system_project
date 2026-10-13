@@ -37,7 +37,7 @@ extension DateTimeConverter on int? {
   }
 }
 
-extension CurrencyExt on num? {
+extension CurrencyExt on num {
   String toAppCurrencyString({bool isWithSymbol = true, String? locale}) {
     return AppNumericFormatHelpers.formatIntegerThousands(
       this,
@@ -69,10 +69,7 @@ extension CurrencyExt on num? {
     bool isWithSymbol = true,
     String? locale,
   }) {
-    if (this == null) {
-      return '';
-    }
-    final value = this!;
+    final value = this;
     final sign = inititalSign ?? (value >= 0 ? '+' : '');
     final formatted = value.abs().toStringAsFixed(0).replaceAllMapped(
           RegExp(r'(\d{1,3})(?=(\d{3})+(?!\d))'),
