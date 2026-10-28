@@ -33,7 +33,7 @@ và dự án này tuân thủ [Semantic Versioning](https://semver.org/spec/v2.0
 ## [Unreleased]
 
 ### Added
-- TBD
+- **DSEmptyState** widget with `DSEmptyStateType` placeholders (`question`, `empty`, `search`, `error`, `ok`, `comingSoon`, `offline`, `noAccess`, `location`, `wait`)
 
 ### Changed
 - TBD

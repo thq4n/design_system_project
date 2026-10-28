@@ -9,39 +9,14 @@ extension StateExtension<T extends StatefulWidget> on State<T> {
     String? subMessage,
     EdgeInsetsGeometry padding = const EdgeInsets.all(40),
     double imageSize = 200.0,
+    DSEmptyStateType type = DSEmptyStateType.question,
   }) {
-    return Padding(
+    return DSEmptyState(
+      type: type,
+      message: message,
+      subMessage: subMessage,
       padding: padding,
-      child: ListView(
-        padding: EdgeInsets.zero,
-        shrinkWrap: true,
-        physics: const NeverScrollableScrollPhysics(),
-        children: [
-          DSImageView(
-            source: DSAssets.emptyState.iconEmptyStateQuestion,
-            width: imageSize,
-            height: imageSize,
-          ),
-          if (message != null) ...[
-            const SizedBox(height: 16),
-            Text(
-              message,
-              style: textTheme.lg?.semibold,
-              textAlign: TextAlign.center,
-            ),
-          ],
-          if (subMessage != null)
-            ...[
-              Text(
-                subMessage,
-                style: textTheme.base?.regular.copyWithColor(
-                  DSColorUsages.text.tertiary,
-                ),
-                textAlign: TextAlign.center,
-              ),
-            ].withSeparators(separator: const SizedBox(height: 8)),
-        ],
-      ),
+      imageSize: imageSize,
     );
   }
 }

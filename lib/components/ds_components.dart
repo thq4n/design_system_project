@@ -9,6 +9,7 @@ export 'ds_calendar/ds_calendar.dart';
 export 'ds_checkbox/ds_checkbox.dart';
 export 'ds_checkbox/ds_checkbox_tile.dart';
 export 'ds_chip/ds_chip.dart';
+export 'ds_empty_state/ds_empty_state.dart';
 export 'ds_expandable/ds_expandable.dart';
 export 'ds_full_screen_video_body/ds_full_screen_video_body.dart';
 export 'ds_icon_button/ds_icon_button.dart';

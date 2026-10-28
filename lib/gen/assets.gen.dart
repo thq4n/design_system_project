@@ -64,9 +64,29 @@ class $AssetsBrandingGen {
 class $AssetsEmptyStateGen {
   const $AssetsEmptyStateGen();
 
+  /// File path: assets/empty_state/icon_empty_state_coming_soon.png
+  String get iconEmptyStateComingSoon =>
+      'packages/design_system_project/assets/empty_state/icon_empty_state_coming_soon.png';
+
+  /// File path: assets/empty_state/icon_empty_state_empty.png
+  String get iconEmptyStateEmpty =>
+      'packages/design_system_project/assets/empty_state/icon_empty_state_empty.png';
+
   /// File path: assets/empty_state/icon_empty_state_error.png
   String get iconEmptyStateError =>
       'packages/design_system_project/assets/empty_state/icon_empty_state_error.png';
+
+  /// File path: assets/empty_state/icon_empty_state_location.png
+  String get iconEmptyStateLocation =>
+      'packages/design_system_project/assets/empty_state/icon_empty_state_location.png';
+
+  /// File path: assets/empty_state/icon_empty_state_no_access.png
+  String get iconEmptyStateNoAccess =>
+      'packages/design_system_project/assets/empty_state/icon_empty_state_no_access.png';
+
+  /// File path: assets/empty_state/icon_empty_state_offline.png
+  String get iconEmptyStateOffline =>
+      'packages/design_system_project/assets/empty_state/icon_empty_state_offline.png';
 
   /// File path: assets/empty_state/icon_empty_state_ok.png
   String get iconEmptyStateOk =>
@@ -80,12 +100,22 @@ class $AssetsEmptyStateGen {
   String get iconEmptyStateSearch =>
       'packages/design_system_project/assets/empty_state/icon_empty_state_search.png';
 
+  /// File path: assets/empty_state/icon_empty_state_wait.png
+  String get iconEmptyStateWait =>
+      'packages/design_system_project/assets/empty_state/icon_empty_state_wait.png';
+
   /// List of all assets
   List<String> get values => [
+        iconEmptyStateComingSoon,
+        iconEmptyStateEmpty,
         iconEmptyStateError,
+        iconEmptyStateLocation,
+        iconEmptyStateNoAccess,
+        iconEmptyStateOffline,
         iconEmptyStateOk,
         iconEmptyStateQuestion,
-        iconEmptyStateSearch
+        iconEmptyStateSearch,
+        iconEmptyStateWait
       ];
 }
 
