@@ -268,6 +268,7 @@ abstract class DSDialogExtension {
     bool hideCopy = true,
     bool isDismissible = false,
     bool Function(T item)? isItemEnabled,
+    WidgetBuilder? emptyStateBuilder,
   });
   Future<void> showSelectionBottomSheetWithCopy<T>({
     required BuildContext context,
