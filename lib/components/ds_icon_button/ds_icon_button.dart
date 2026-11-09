@@ -18,8 +18,8 @@ class DSIconButton extends StatefulWidget {
   /// Icon displayed. Can be a String (asset path) or Widget
   final dynamic icon;
 
-  /// Callback when pressed. A `Future` is awaited so a second tap is ignored
-  /// until it completes (and for a short cooldown if the handler is sync).
+  /// Callback when pressed. Prefer returning a [Future] (`() async { ... }`)
+  /// so [DsTapLock] ignores a second tap until the work finishes (plus cooldown).
   final FutureOr<void> Function()? onPressed;
 
   /// Whether the button is in disabled state

@@ -81,7 +81,7 @@ class _DSBasicBrandScreenFormDemoState
               variant: DSButtonVariants.primary,
               size: DSButtonSize.lg,
               label: 'Submit Form',
-              onPressed: () {
+              onPressed: () async {
                 // Handle form submission
                 ScaffoldMessenger.of(context).showSnackBar(
                   const SnackBar(
@@ -95,7 +95,7 @@ class _DSBasicBrandScreenFormDemoState
               variant: DSButtonVariants.tertiary,
               size: DSButtonSize.lg,
               label: 'Clear Form',
-              onPressed: () {
+              onPressed: () async {
                 _nameController.clear();
                 _emailController.clear();
                 _phoneController.clear();

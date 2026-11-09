@@ -238,8 +238,7 @@ class _DSTimelineState<T> extends DSStateBase<DSTimeline<T>>
   Animation<double>? _loadingConnectorAnimation;
   bool _animationsInitialized = false;
 
-  double get _resolvedDotSize =>
-      widget.dotSize ?? _componentTheme.dotSize;
+  double get _resolvedDotSize => widget.dotSize ?? _componentTheme.dotSize;
 
   Color get _resolvedConnectorColor =>
       widget.connectorColor ?? _componentTheme.connectorColor;

@@ -53,16 +53,12 @@ class _DSCheckboxTileState extends DSStateBase<DSCheckboxTile> {
 
   @override
   Widget build(BuildContext context) {
-    final titleStyle =
-        widget.titleStyle ??
+    final titleStyle = widget.titleStyle ??
         textTheme.base?.regular.copyWithColor(
-          _isEnabled
-              ? DSColorUsages.text.primary
-              : DSColorUsages.text.disable,
+          _isEnabled ? DSColorUsages.text.primary : DSColorUsages.text.disable,
         );
 
-    final descriptionStyle =
-        widget.descriptionStyle ??
+    final descriptionStyle = widget.descriptionStyle ??
         textTheme.sm?.regular.copyWithColor(
           _isEnabled
               ? DSColorUsages.text.secondary

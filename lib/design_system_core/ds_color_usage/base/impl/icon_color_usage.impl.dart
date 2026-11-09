@@ -15,4 +15,5 @@ class _DSIconColorUsage extends DSColorUsage {
   DSColor get white => colors.gray.shade50;
   DSColor get solid => colors.gray.shade950;
   DSColor get error => colors.orange.shade600;
+  DSColor get blue => colors.blue.shade500;
 }

@@ -74,12 +74,13 @@ extension GoRouterHelper on BuildContext {
     Map<String, String> pathParameters = const <String, String>{},
     Map<String, dynamic> queryParameters = const <String, dynamic>{},
     String? fragment,
-  }) => GoRouter.of(this).namedLocation(
-    name,
-    pathParameters: pathParameters,
-    queryParameters: queryParameters,
-    fragment: fragment,
-  );
+  }) =>
+      GoRouter.of(this).namedLocation(
+        name,
+        pathParameters: pathParameters,
+        queryParameters: queryParameters,
+        fragment: fragment,
+      );
 
   void go(String location, {Object? extra}) =>
       GoRouter.of(this).go(location, extra: extra);
@@ -90,13 +91,14 @@ extension GoRouterHelper on BuildContext {
     Map<String, dynamic> queryParameters = const <String, dynamic>{},
     Object? extra,
     String? fragment,
-  }) => GoRouter.of(this).goNamed(
-    name,
-    pathParameters: pathParameters,
-    queryParameters: queryParameters,
-    extra: extra,
-    fragment: fragment,
-  );
+  }) =>
+      GoRouter.of(this).goNamed(
+        name,
+        pathParameters: pathParameters,
+        queryParameters: queryParameters,
+        extra: extra,
+        fragment: fragment,
+      );
 
   Future<T?> push<T extends Object?>(String location, {Object? extra}) =>
       _guardedPush<T>(this, location, extra: extra);
@@ -106,13 +108,14 @@ extension GoRouterHelper on BuildContext {
     Map<String, String> pathParameters = const <String, String>{},
     Map<String, dynamic> queryParameters = const <String, dynamic>{},
     Object? extra,
-  }) => _guardedPushNamed<T>(
-    this,
-    name,
-    pathParameters: pathParameters,
-    queryParameters: queryParameters,
-    extra: extra,
-  );
+  }) =>
+      _guardedPushNamed<T>(
+        this,
+        name,
+        pathParameters: pathParameters,
+        queryParameters: queryParameters,
+        extra: extra,
+      );
 
   bool canPop() => GoRouter.of(this).canPop();
 
@@ -126,12 +129,13 @@ extension GoRouterHelper on BuildContext {
     Map<String, String> pathParameters = const <String, String>{},
     Map<String, dynamic> queryParameters = const <String, dynamic>{},
     Object? extra,
-  }) => GoRouter.of(this).pushReplacementNamed(
-    name,
-    pathParameters: pathParameters,
-    queryParameters: queryParameters,
-    extra: extra,
-  );
+  }) =>
+      GoRouter.of(this).pushReplacementNamed(
+        name,
+        pathParameters: pathParameters,
+        queryParameters: queryParameters,
+        extra: extra,
+      );
 
   void replace(String location, {Object? extra}) =>
       GoRouter.of(this).replace<Object?>(location, extra: extra);
@@ -141,10 +145,11 @@ extension GoRouterHelper on BuildContext {
     Map<String, String> pathParameters = const <String, String>{},
     Map<String, dynamic> queryParameters = const <String, dynamic>{},
     Object? extra,
-  }) => GoRouter.of(this).replaceNamed<Object?>(
-    name,
-    pathParameters: pathParameters,
-    queryParameters: queryParameters,
-    extra: extra,
-  );
+  }) =>
+      GoRouter.of(this).replaceNamed<Object?>(
+        name,
+        pathParameters: pathParameters,
+        queryParameters: queryParameters,
+        extra: extra,
+      );
 }

@@ -472,9 +472,8 @@ extension _DSMediaPickerStatePicking on _DSMediaPickerState {
         DSMediaPicked(
           key: '${DateTime.now().microsecondsSinceEpoch}_$keyOffset',
           mediaFile: file,
-          mimetype: isVideo
-              ? _getMimeTypeForVideoPath(file.path)
-              : 'image/jpeg',
+          mimetype:
+              isVideo ? _getMimeTypeForVideoPath(file.path) : 'image/jpeg',
           index: currentIndex + keyOffset,
           state: widget.autoUpload
               ? DSMediaState.inProgress

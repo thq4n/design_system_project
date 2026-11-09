@@ -45,19 +45,19 @@ class DSButtonDemo extends StatelessWidget {
             [
               DSButton(
                 label: 'Primary Button',
-                onPressed: () {},
+                onPressed: () async {},
               ),
               const SizedBox(height: 12),
               DSButton(
                 label: 'Secondary Button',
                 variant: DSButtonVariants.secondary,
-                onPressed: () {},
+                onPressed: () async {},
               ),
               const SizedBox(height: 12),
               DSButton(
                 label: 'Ghost Button',
                 variant: DSButtonVariants.ghostBrand,
-                onPressed: () {},
+                onPressed: () async {},
               ),
             ],
           ),
@@ -70,19 +70,19 @@ class DSButtonDemo extends StatelessWidget {
               DSButton(
                 label: 'Small Button',
                 size: DSButtonSize.sm,
-                onPressed: () {},
+                onPressed: () async {},
               ),
               const SizedBox(height: 12),
               DSButton(
                 label: 'Medium Button',
                 size: DSButtonSize.md,
-                onPressed: () {},
+                onPressed: () async {},
               ),
               const SizedBox(height: 12),
               DSButton(
                 label: 'Large Button',
                 size: DSButtonSize.lg,
-                onPressed: () {},
+                onPressed: () async {},
               ),
             ],
           ),
@@ -94,25 +94,25 @@ class DSButtonDemo extends StatelessWidget {
             [
               DSButton(
                 label: 'Normal Button',
-                onPressed: () {},
+                onPressed: () async {},
               ),
               const SizedBox(height: 12),
               DSButton(
                 label: 'Disabled Button',
                 isDisabled: true,
-                onPressed: () {},
+                onPressed: () async {},
               ),
               const SizedBox(height: 12),
               DSButton(
                 label: 'Loading Button',
                 isLoading: true,
-                onPressed: () {},
+                onPressed: () async {},
               ),
               const SizedBox(height: 12),
               DSButton(
                 label: 'Activated Button',
                 isActivated: true,
-                onPressed: () {},
+                onPressed: () async {},
               ),
             ],
           ),
@@ -125,19 +125,19 @@ class DSButtonDemo extends StatelessWidget {
               DSButton(
                 label: 'Button with Icon',
                 prefixIcon: Icons.add,
-                onPressed: () {},
+                onPressed: () async {},
               ),
               const SizedBox(height: 12),
               DSButton(
                 label: 'Button with Suffix',
                 suffixIcon: Icons.arrow_forward,
-                onPressed: () {},
+                onPressed: () async {},
               ),
               const SizedBox(height: 12),
               DSButton(
                 label: 'Icon Only',
                 prefixIcon: Icons.favorite,
-                onPressed: () {},
+                onPressed: () async {},
               ),
             ],
           ),
@@ -198,7 +198,7 @@ class DSButtonDemo extends StatelessWidget {
           'Basic Button',
           '''DSButton(
   label: 'Click Me',
-  onPressed: () {
+  onPressed: () async {
     // Handle button press
   },
 )''',
@@ -210,7 +210,7 @@ class DSButtonDemo extends StatelessWidget {
           '''DSButton(
   label: 'Secondary Button',
   variant: DSButtonVariants.secondary,
-  onPressed: () {},
+  onPressed: () async {},
 )''',
         ),
 
@@ -220,7 +220,7 @@ class DSButtonDemo extends StatelessWidget {
           '''DSButton(
   label: 'Add Item',
   prefixIcon: Icons.add,
-  onPressed: () {},
+  onPressed: () async {},
 )''',
         ),
 
@@ -230,7 +230,7 @@ class DSButtonDemo extends StatelessWidget {
           '''DSButton(
   label: 'Processing...',
   isLoading: true,
-  onPressed: () {},
+  onPressed: () async {},
 )''',
         ),
       ],

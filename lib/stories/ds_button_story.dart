@@ -87,7 +87,7 @@ class DSButtonStoryWidget extends StatelessWidget {
                         showSuffixIcon ? const Icon(Icons.arrow_forward) : null,
                     onPressed: isDisabled || isLoading
                         ? null
-                        : () {
+                        : () async {
                             ScaffoldMessenger.of(context).showSnackBar(
                               SnackBar(
                                 content: Text('Button pressed: $label'),
@@ -107,25 +107,25 @@ class DSButtonStoryWidget extends StatelessWidget {
               [
                 DSButton(
                   label: 'Primary Button',
-                  onPressed: () {},
+                  onPressed: () async {},
                 ),
                 const SizedBox(height: 12),
                 DSButton(
                   label: 'Secondary Button',
                   variant: DSButtonVariants.secondary,
-                  onPressed: () {},
+                  onPressed: () async {},
                 ),
                 const SizedBox(height: 12),
                 DSButton(
                   label: 'Outline Button',
                   variant: DSButtonVariants.tertiary,
-                  onPressed: () {},
+                  onPressed: () async {},
                 ),
                 const SizedBox(height: 12),
                 DSButton(
                   label: 'Ghost Button',
                   variant: DSButtonVariants.ghostBrand,
-                  onPressed: () {},
+                  onPressed: () async {},
                 ),
               ],
             ),
@@ -138,25 +138,25 @@ class DSButtonStoryWidget extends StatelessWidget {
                 DSButton(
                   label: 'Extra Small',
                   size: DSButtonSize.xs,
-                  onPressed: () {},
+                  onPressed: () async {},
                 ),
                 const SizedBox(height: 12),
                 DSButton(
                   label: 'Small',
                   size: DSButtonSize.sm,
-                  onPressed: () {},
+                  onPressed: () async {},
                 ),
                 const SizedBox(height: 12),
                 DSButton(
                   label: 'Medium',
                   size: DSButtonSize.md,
-                  onPressed: () {},
+                  onPressed: () async {},
                 ),
                 const SizedBox(height: 12),
                 DSButton(
                   label: 'Large',
                   size: DSButtonSize.lg,
-                  onPressed: () {},
+                  onPressed: () async {},
                 ),
               ],
             ),
@@ -168,25 +168,25 @@ class DSButtonStoryWidget extends StatelessWidget {
               [
                 DSButton(
                   label: 'Normal Button',
-                  onPressed: () {},
+                  onPressed: () async {},
                 ),
                 const SizedBox(height: 12),
                 DSButton(
                   label: 'Disabled Button',
                   isDisabled: true,
-                  onPressed: () {},
+                  onPressed: () async {},
                 ),
                 const SizedBox(height: 12),
                 DSButton(
                   label: 'Loading Button',
                   isLoading: true,
-                  onPressed: () {},
+                  onPressed: () async {},
                 ),
                 const SizedBox(height: 12),
                 DSButton(
                   label: 'Activated Button',
                   isActivated: true,
-                  onPressed: () {},
+                  onPressed: () async {},
                 ),
               ],
             ),
@@ -199,20 +199,20 @@ class DSButtonStoryWidget extends StatelessWidget {
                 DSButton(
                   label: 'Add Item',
                   prefixIcon: const Icon(Icons.add),
-                  onPressed: () {},
+                  onPressed: () async {},
                 ),
                 const SizedBox(height: 12),
                 DSButton(
                   label: 'Continue',
                   suffixIcon: const Icon(Icons.arrow_forward),
-                  onPressed: () {},
+                  onPressed: () async {},
                 ),
                 const SizedBox(height: 12),
                 DSButton(
                   label: 'Favorite',
                   prefixIcon: const Icon(Icons.favorite),
                   suffixIcon: const Icon(Icons.star),
-                  onPressed: () {},
+                  onPressed: () async {},
                 ),
               ],
             ),
