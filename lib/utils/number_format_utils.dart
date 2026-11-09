@@ -71,7 +71,8 @@ class NumberFormatUtils {
       } else {
         final parts = s.split('.');
         intPartStr = parts[0];
-        fracPartStr = parts.length > 1 ? parts[1] : '';
+        fracPartStr =
+            (parts.length > 1 ? parts[1] : '').replaceAll(RegExp(r'0+$'), '');
       }
     }
 
