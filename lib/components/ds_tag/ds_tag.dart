@@ -5,8 +5,14 @@ import '../../design_system_core/ds_color/ds_colors_core.dart';
 import '../../theme/ds_theme.dart';
 import '../ds_image_view/ds_image_view.dart';
 
+typedef DSTagLabelBuilder = Widget Function(
+  DSTextStyle? labelTheme,
+  String text,
+);
+
 class DSTag extends StatefulWidget {
   final String? label;
+  final DSTagLabelBuilder? labelBuilder;
   final DSTagSizes size;
   final String? prefixIcon;
   final String? suffixIcon;
@@ -22,6 +28,7 @@ class DSTag extends StatefulWidget {
   const DSTag({
     super.key,
     this.label,
+    this.labelBuilder,
     required this.size,
     this.prefixIcon,
     this.suffixIcon,
@@ -69,10 +76,15 @@ class _DSTagState extends DSStateBase<DSTag> {
     }
   }
 
+  DSTextStyle? get _labelTheme {
+    return _componentTheme.textStyle?.copyWithColor(_labelColor);
+  }
+
   @override
   Widget build(BuildContext context) {
     final hasPrefixIcon = widget.prefixIcon != null;
-    final hasLabel = widget.label != null && widget.label!.isNotEmpty;
+    final hasLabel = widget.labelBuilder != null ||
+        (widget.label != null && widget.label!.isNotEmpty);
     final hasSuffixIcon = widget.suffixIcon != null;
 
     final children = <Widget>[];
@@ -96,12 +108,14 @@ class _DSTagState extends DSStateBase<DSTag> {
     }
 
     if (hasLabel) {
+      final labelText = widget.label ?? '';
       children.add(
-        Text(
-          widget.label ?? '',
-          style: _componentTheme.textStyle?.copyWithColor(_labelColor),
-          textAlign: TextAlign.center,
-        ),
+        widget.labelBuilder?.call(_labelTheme, labelText) ??
+            Text(
+              labelText,
+              style: _labelTheme,
+              textAlign: TextAlign.center,
+            ),
       );
       // Chỉ thêm spacing nếu có suffixIcon
       if (hasSuffixIcon) {
