@@ -15439,6 +15439,30 @@ class $AssetsVuesaxGen {
   String get mouseTwotone =>
       'packages/design_system_project/assets/vuesax/mouse-twotone.svg';
 
+  /// File path: assets/vuesax/move-bold.svg
+  String get moveBold =>
+      'packages/design_system_project/assets/vuesax/move-bold.svg';
+
+  /// File path: assets/vuesax/move-broken.svg
+  String get moveBroken =>
+      'packages/design_system_project/assets/vuesax/move-broken.svg';
+
+  /// File path: assets/vuesax/move-bulk.svg
+  String get moveBulk =>
+      'packages/design_system_project/assets/vuesax/move-bulk.svg';
+
+  /// File path: assets/vuesax/move-linear.svg
+  String get moveLinear =>
+      'packages/design_system_project/assets/vuesax/move-linear.svg';
+
+  /// File path: assets/vuesax/move-outline.svg
+  String get moveOutline =>
+      'packages/design_system_project/assets/vuesax/move-outline.svg';
+
+  /// File path: assets/vuesax/move-twotone.svg
+  String get moveTwotone =>
+      'packages/design_system_project/assets/vuesax/move-twotone.svg';
+
   /// File path: assets/vuesax/music-bold.svg
   String get musicBold =>
       'packages/design_system_project/assets/vuesax/music-bold.svg';
@@ -28394,6 +28418,12 @@ class $AssetsVuesaxGen {
         mouseSquareOutline,
         mouseSquareTwotone,
         mouseTwotone,
+        moveBold,
+        moveBroken,
+        moveBulk,
+        moveLinear,
+        moveOutline,
+        moveTwotone,
         musicBold,
         musicBroken,
         musicBulk,
