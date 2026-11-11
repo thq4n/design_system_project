@@ -17,4 +17,5 @@ class _DSTextColorUsage extends DSColorUsage {
   DSColor get linkBlue => colors.blue.shade500;
   DSColor get error => colors.orange.shade500;
   DSColor get success => colors.green.shade500;
+  DSColor get warning => colors.yellow.shade600;
 }
