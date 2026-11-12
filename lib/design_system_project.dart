@@ -27,8 +27,10 @@ export 'design_system_core/ds_spacing/ds_spacing_core.dart';
 export 'extensions/extensions.dart';
 export 'extensions/go_router_helper.extension.dart';
 // Generated Files
-export 'gen/assets.gen.dart';
+// assets.gen.dart is intentionally NOT exported here (~30k LOC).
+// Import package:design_system_project/ds_assets.dart (or package:core/ds_assets.dart).
 export 'gen/fonts.gen.dart';
+
 // Services
 export 'services/services.dart';
 // Theme

@@ -7,6 +7,7 @@ import 'package:flutter/services.dart';
 import 'package:speech_to_text/speech_to_text.dart';
 
 import '../../design_system_project.dart';
+import '../../ds_assets.dart';
 import '../../services/permission/permission_service.dart';
 
 class DSInputRecording extends StatefulWidget {

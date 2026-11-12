@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 import '../../design_system_project.dart';
+import '../../ds_assets.dart';
+
 export 'ds_expandable_controller.dart';
 
 /// A customizable expandable/collapsible widget with header and body.

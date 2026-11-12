@@ -7,6 +7,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:flutter_svg_provider/flutter_svg_provider.dart' as svg_provider;
 
 import '../../design_system_project.dart';
+import '../../ds_assets.dart';
 
 /// Helper class for creating authentication headers
 class AuthHeadersHelper {

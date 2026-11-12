@@ -26,7 +26,8 @@ class DSButton extends StatefulWidget {
   final dynamic suffixIcon;
 
   /// Callback when pressed. Prefer returning a [Future] (`() async { ... }`)
-  /// so [DsTapLock] ignores a second tap until the work finishes (plus cooldown).
+  /// so [DsTapLock] ignores a second tap until the work finishes
+  /// (plus cooldown).
   final FutureOr<void> Function()? onPressed;
 
   /// Whether the button is in disabled state

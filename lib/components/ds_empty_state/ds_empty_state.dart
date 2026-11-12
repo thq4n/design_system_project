@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../design_system_project.dart';
+import '../../ds_assets.dart';
 
 /// Placeholder illustration used by [DSEmptyState].
 enum DSEmptyStateType {
